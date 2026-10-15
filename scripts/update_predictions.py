@@ -188,7 +188,123 @@ def fetch_standings(code):
         diagnostics.append(f"{code}: brak tabeli: {exc}")
         return {"TOTAL": {}, "HOME": {}, "AWAY": {}}
 
+def summarize_history(matches, team_name):
+    """Podsumowanie ostatnich meczów konkretnej drużyny."""
+    finished = []
 
+    for match in matches:
+        if match.get("status") not in (
+            "FINISHED", "AWARDED", "EXTRA_TIME", "PENALTY_SHOOTOUT"
+        ):
+            continue
+
+        home = (match.get("homeTeam") or {}).get("name")
+        away = (match.get("awayTeam") or {}).get("name")
+        score = match.get("score") or {}
+        full_time = score.get("fullTime") or {}
+        hg = full_time.get("home")
+        ag = full_time.get("away")
+
+        if home not in (team_name,) and away not in (team_name,):
+            continue
+        if hg is None or ag is None:
+            continue
+
+        finished.append({
+            "date": match.get("utcDate"),
+            "home": home,
+            "away": away,
+            "homeGoals": hg,
+            "awayGoals": ag,
+            "teamGoals": hg if home == team_name else ag,
+            "conceded": ag if home == team_name else hg,
+            "result": (
+                "W" if (hg > ag if home == team_name else ag > hg)
+                else "D" if hg == ag
+                else "L"
+            ),
+        })
+
+    finished.sort(key=lambda item: item.get("date") or "", reverse=True)
+    recent = finished[:10]
+
+    if not recent:
+        return {"matches": [], "stats": None}
+
+    count = len(recent)
+    goals_for = sum(m["teamGoals"] for m in recent)
+    goals_against = sum(m["conceded"] for m in recent)
+    btts = sum(
+        1 for m in recent
+        if m["homeGoals"] > 0 and m["awayGoals"] > 0
+    )
+
+    return {
+        "matches": recent,
+        "stats": {
+            "played": count,
+            "wins": sum(1 for m in recent if m["result"] == "W"),
+            "draws": sum(1 for m in recent if m["result"] == "D"),
+            "losses": sum(1 for m in recent if m["result"] == "L"),
+            "goalsFor": goals_for,
+            "goalsAgainst": goals_against,
+            "avgGoalsFor": round(goals_for / count, 2),
+            "avgGoalsAgainst": round(goals_against / count, 2),
+            "btts": btts,
+            "over15": sum(
+                1 for m in recent
+                if m["homeGoals"] + m["awayGoals"] >= 2
+            ),
+            "over25": sum(
+                1 for m in recent
+                if m["homeGoals"] + m["awayGoals"] >= 3
+            ),
+        },
+    }
+
+
+def build_team_history(matches, home_name, away_name):
+    """Ostatnie mecze obu drużyn i bezpośrednie starcia."""
+    home_history = summarize_history(matches, home_name)
+    away_history = summarize_history(matches, away_name)
+
+    h2h = []
+    for match in matches:
+        if match.get("status") not in (
+            "FINISHED", "AWARDED", "EXTRA_TIME", "PENALTY_SHOOTOUT"
+        ):
+            continue
+
+        home = (match.get("homeTeam") or {}).get("name")
+        away = (match.get("awayTeam") or {}).get("name")
+        if not (
+            (home == home_name and away == away_name)
+            or (home == away_name and away == home_name)
+        ):
+            continue
+
+        score = match.get("score") or {}
+        full_time = score.get("fullTime") or {}
+        hg = full_time.get("home")
+        ag = full_time.get("away")
+        if hg is None or ag is None:
+            continue
+
+        h2h.append({
+            "date": match.get("utcDate"),
+            "home": home,
+            "away": away,
+            "homeGoals": hg,
+            "awayGoals": ag,
+        })
+
+    h2h.sort(key=lambda item: item.get("date") or "", reverse=True)
+
+    return {
+        "homeLast10": home_history,
+        "awayLast10": away_history,
+        "h2h": h2h[:10],
+    }
 def main():
     now = datetime.now(WARSAW)
     date_from = now.date()
