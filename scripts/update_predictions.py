@@ -380,8 +380,8 @@ def main():
     tables = {}
     for code in sorted({m["league"] for m in selected}):
         tables[code] = fetch_standings(code)
-        
-history_by_league = {}
+
+    history_by_league = {}
     history_from = (now.date() - timedelta(days=180)).isoformat()
 
     for code in sorted({m["league"] for m in selected}):
@@ -398,7 +398,7 @@ history_by_league = {}
             match["home"],
             match["away"],
         )
-        
+
     predictions = []
     for match in selected:
         maps = tables.get(
