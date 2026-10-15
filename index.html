@@ -1400,84 +1400,7 @@ function proRenderPanel() {
   let panel = document.getElementById("proPanel");
 
   if (panel) {
-    panel.scrollIntoView({ behavior: "smooth", block: "start" });
-    return;
-  }
 
-  panel = document.createElement("section");
-  panel.id = "proPanel";
-  panel.className = "card";
-  panel.style.cssText =
-    "border:1px solid #b7f36b;margin:24px 0;padding:16px";
-
-  panel.innerHTML = `
-    <div class="eyebrow">GOAL PREDICTOR AI · PRO</div>
-    <h2>Rozszerzona analiza meczów</h2>
-    <p class="muted">
-      Wpisz oczekiwane gole (xG) obu drużyn.
-    </p>
-    <div class="formgrid">
-      <div class="field">
-        <label for="proHomeXg">xG gospodarzy</label>
-        <input id="proHomeXg" type="number" min="0.1"
-          max="5" step="0.1" value="1.6">
-      </div>
-      <div class="field">
-        <label for="proAwayXg">xG gości</label>
-        <input id="proAwayXg" type="number" min="0.1"
-          max="5" step="0.1" value="1.1">
-      </div>
-    </div>
-    <button id="proCalcBtn" class="primary"
-      style="width:100%;margin-top:12px">
-      Oblicz rynki PRO
-    </button>
-    <div id="proResults" class="grid2"
-      style="margin-top:14px"></div>
-    <p class="muted">
-      Szacunki modelu Poissona na podstawie wpisanych xG.
-      Nie są gwarancją wyniku i nie uwzględniają
-      automatycznie składów ani kursów.
-    </p>
-    <button id="proCloseBtn" class="secondary"
-      style="width:100%">Zamknij PRO</button>
-  `;
-
-  document.querySelector("main").appendChild(panel);
-
-  document.getElementById("proCalcBtn").addEventListener("click", () => {
-    const hx = Number(document.getElementById("proHomeXg").value);
-    const ax = Number(document.getElementById("proAwayXg").value);
-    const output = document.getElementById("proResults");
-
-    if (!Number.isFinite(hx) || !Number.isFinite(ax) ||
-        hx < 0.1 || ax < 0.1 || hx > 5 || ax > 5) {
-      output.textContent = "Podaj xG od 0,1 do 5,0 dla obu drużyn.";
-      return;
-    }
-
-    const m = proCalculateMarkets(hx, ax);
-    const markets = [
-      ["Over 2,5 gola", m.over25],
-      ["Over 3,5 gola", m.over35],
-      ["BTTS — TAK", m.btts],
-      ["BTTS — NIE", 1 - m.btts],
-      ["1X — gospodarze nie przegrają", m.home + m.draw],
-      ["X2 — goście nie przegrają", m.away + m.draw],
-      ["Gospodarze over 1,5", m.home15],
-      ["Goście over 1,5", m.away15],
-      ["Wygrana gospodarzy", m.home],
-      ["Remis", m.draw],
-      ["Wygrana gości", m.away]
-    ];
-
-    output.replaceChildren();
-    markets.forEach(([label, value]) => {
-      const card = document.createElement("div");
-      card.className = "metric";
-
-
- // === GOAL PREDICTOR AI PRO ===
 const PRO_PASSWORD = "MJW2010";
 let proUnlocked = false;
 
@@ -1642,7 +1565,6 @@ if (document.readyState === "loading") {
 } else {
   addProButton();
 }
-// === KONIEC GOAL PREDICTOR AI PRO ===
       
 </script>
 </body>
