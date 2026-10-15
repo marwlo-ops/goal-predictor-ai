@@ -876,50 +876,163 @@ function proRenderPanel() {
       const card = document.createElement("div");
       card.className = "metric";
 
-      const title = document.createElement("div");
-      title.className = "label";
-      title.textContent = label;
 
-      const result = document.createElement("div");
-      result.className = "value";
-      result.textContent = proPercent(value);
+ // === GOAL PREDICTOR AI PRO ===
+const PRO_PASSWORD = "MJW2010";
+let proUnlocked = false;
 
-      card.append(title, result);
-      output.appendChild(card);
-    });
-  });
+function proPoisson(lambda, goals) {
+  let p = Math.exp(-lambda);
+  for (let i = 1; i <= goals; i++) {
+    p *= lambda / i;
+  }
+  return p;
+}
 
-  document.getElementById("proCloseBtn").addEventListener("click", () => {
-    panel.remove();
-    proUnlocked = false;
-  });
+function proGoalDistribution(lambda) {
+  const probabilities = [];
+  for (let i = 0; i <= 10; i++) {
+    probabilities.push(proPoisson(lambda, i));
+  }
+  return probabilities;
+}
 
-  document.getElementById("proCalcBtn").click();
+function proCalculate() {
+  const homeXG = Number(document.getElementById("proHomeXG").value);
+  const awayXG = Number(document.getElementById("proAwayXG").value);
+  const output = document.getElementById("proOutput");
+
+  if (
+    !Number.isFinite(homeXG) ||
+    !Number.isFinite(awayXG) ||
+    homeXG < 0 ||
+    awayXG < 0 ||
+    homeXG > 8 ||
+    awayXG > 8
+  ) {
+    output.textContent = "Podaj xG od 0 do 8 dla obu drużyn.";
+    return;
+  }
+
+  const home = proGoalDistribution(homeXG);
+  const away = proGoalDistribution(awayXG);
+
+  let winHome = 0;
+  let draw = 0;
+  let winAway = 0;
+  let over15 = 0;
+  let over25 = 0;
+  let btts = 0;
+
+  for (let h = 0; h <= 10; h++) {
+    for (let a = 0; a <= 10; a++) {
+      const probability = home[h] * away[a];
+
+      if (h > a) winHome += probability;
+      else if (h === a) draw += probability;
+      else winAway += probability;
+
+      if (h + a >= 2) over15 += probability;
+      if (h + a >= 3) over25 += probability;
+      if (h >= 1 && a >= 1) btts += probability;
+    }
+  }
+
+  const pct = value => (value * 100).toFixed(1) + "%";
+
+  output.innerHTML = `
+    <h3>Wyniki modelu Poissona</h3>
+    <p><b>Wygrana gospodarzy:</b> ${pct(winHome)}</p>
+    <p><b>Remis:</b> ${pct(draw)}</p>
+    <p><b>Wygrana gości:</b> ${pct(winAway)}</p>
+    <hr>
+    <p><b>Over 1,5 gola:</b> ${pct(over15)}</p>
+    <p><b>Over 2,5 gola:</b> ${pct(over25)}</p>
+    <p><b>BTTS — obie strzelą:</b> ${pct(btts)}</p>
+    <p><b>Średnia liczba goli:</b> ${(homeXG + awayXG).toFixed(2)}</p>
+    <small>To szacunki matematyczne, nie gwarancja wyniku. Model nie uwzględnia automatycznie składów, kontuzji ani kursów bukmacherskich.</small>
+  `;
+}
+
+function proRenderPanel() {
+  let panel = document.getElementById("proPanel");
+
+  if (panel) {
+    panel.scrollIntoView({ behavior: "smooth", block: "start" });
+    return;
+  }
+
+  panel = document.createElement("section");
+  panel.id = "proPanel";
+  panel.style.cssText = `
+    margin:20px auto;padding:18px;max-width:650px;
+    background:#172033;color:#fff;border-radius:14px;
+    font-family:Arial,sans-serif;box-sizing:border-box;
+  `;
+
+  panel.innerHTML = `
+    <h2>Goal Predictor AI — PRO</h2>
+    <p>Wpisz oczekiwaną liczbę goli (xG) każdej drużyny.</p>
+
+    <label for="proHomeXG">xG gospodarzy</label>
+    <input id="proHomeXG" type="number" min="0" max="8"
+      step="0.05" value="1.50"
+      style="display:block;width:100%;padding:12px;margin:6px 0 14px;box-sizing:border-box;">
+
+    <label for="proAwayXG">xG gości</label>
+    <input id="proAwayXG" type="number" min="0" max="8"
+      step="0.05" value="1.00"
+      style="display:block;width:100%;padding:12px;margin:6px 0 14px;box-sizing:border-box;">
+
+    <button id="proCalcBtn" type="button"
+      style="padding:12px 18px;border:0;border-radius:8px;cursor:pointer;">
+      Oblicz prawdopodobieństwa
+    </button>
+
+    <div id="proOutput" style="margin-top:18px;line-height:1.6;">
+      Wyniki pojawią się po obliczeniu.
+    </div>
+  `;
+
+  document.body.appendChild(panel);
+  document.getElementById("proCalcBtn").addEventListener("click", proCalculate);
   panel.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
 function unlockPro() {
-  const entered = prompt("Podaj hasło do Goal Predictor AI PRO:");
-
-  if (entered === PRO_PASSWORD) {
-    proUnlocked = true;
-    alert("Hasło poprawne! Otwieram strefę PRO.");
+  if (proUnlocked) {
     proRenderPanel();
-  } else if (entered !== null) {
-    alert("Nieprawidłowe hasło.");
+    return;
+  }
+
+  const enteredPassword = prompt("Podaj wspólne hasło PRO:");
+
+  if (enteredPassword === null) return;
+
+  if (enteredPassword === PRO_PASSWORD) {
+    proUnlocked = true;
+    const button = document.getElementById("proAccessBtn");
+    if (button) button.textContent = "Otwórz panel PRO";
+    proRenderPanel();
+  } else {
+    alert("Nieprawidłowe hasło PRO.");
   }
 }
 
 function addProButton() {
-  if (document.getElementById("proAccessButton")) return;
+  if (document.getElementById("proAccessBtn")) return;
 
   const button = document.createElement("button");
-  button.id = "proAccessButton";
-  button.textContent = "✦ Odblokuj PRO";
-  button.className = "primary";
-  button.style.cssText =
-    "position:fixed;top:15px;right:12px;z-index:1000;" +
-    "padding:10px;border-radius:12px;";
+  button.id = "proAccessBtn";
+  button.type = "button";
+  button.textContent = "🔒 Goal Predictor AI PRO";
+  button.style.cssText = `
+    position:relative;display:block;margin:16px auto;
+    padding:12px 18px;border:0;border-radius:10px;
+    background:#d4af37;color:#111;font-weight:bold;
+    cursor:pointer;max-width:95%;
+  `;
+
   button.addEventListener("click", unlockPro);
   document.body.appendChild(button);
 }
@@ -930,6 +1043,7 @@ if (document.readyState === "loading") {
   addProButton();
 }
 // === KONIEC GOAL PREDICTOR AI PRO ===
+      
 </script>
 </body>
 </html>
