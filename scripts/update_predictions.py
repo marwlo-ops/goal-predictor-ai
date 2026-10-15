@@ -1,12 +1,14 @@
+
 import json
 import math
 import os
 import urllib.request
+import urllib.error
 from datetime import datetime
 from zoneinfo import ZoneInfo
 from pathlib import Path
 
-TOKEN = os.environ.get("FOOTBALL_DATA_TOKEN", "")
+TOKEN = os.environ.get("FOOTBALL_DATA_TOKEN", "").strip()
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "latest.json"
 TZ = ZoneInfo("Europe/Warsaw")
@@ -16,6 +18,8 @@ LEAGUES = {
     "PD": "LaLiga",
     "SA": "Serie A",
     "BL1": "Bundesliga",
+    "DED": "Eredivisie",
+    "BSA": "Brasileirao",
     "FL1": "Ligue 1",
     "CL": "Liga Mistrzów",
 }
@@ -23,10 +27,20 @@ LEAGUES = {
 def get_json(url):
     req = urllib.request.Request(
         url,
-        headers={"X-Auth-Token": TOKEN}
+        headers={
+            "X-Auth-Token": TOKEN,
+            "User-Agent": "GoalPredictorAI/1.0",
+        },
     )
-    with urllib.request.urlopen(req, timeout=25) as response:
-        return json.loads(response.read().decode("utf-8"))
+
+    try:
+        with urllib.request.urlopen(req, timeout=30) as response:
+            return json.loads(response.read().decode("utf-8"))
+    except urllib.error.HTTPError as exc:
+        details = exc.read().decode("utf-8", errors="replace")
+        raise RuntimeError(
+            f"HTTP {exc.code}: {details[:300]}"
+        ) from exc
 
 def poisson(k, x):
     return math.exp(-x) * x**k / math.factorial(k)
@@ -35,8 +49,8 @@ def predict(home_xg, away_xg):
     home = draw = away = 0.0
     over15 = over25 = btts = 0.0
 
-    for h in range(9):
-        for a in range(9):
+    for h in range(10):
+        for a in range(10):
             p = poisson(h, home_xg) * poisson(a, away_xg)
 
             if h > a:
@@ -54,32 +68,51 @@ def predict(home_xg, away_xg):
                 btts += p
 
     return {
-        "home": home,
-        "draw": draw,
-        "away": away,
-        "over15": over15,
-        "over25": over25,
-        "btts": btts,
+        "home": round(home, 4),
+        "draw": round(draw, 4),
+        "away": round(away, 4),
+        "over15": round(over15, 4),
+        "over25": round(over25, 4),
+        "btts": round(btts, 4),
     }
 
 def main():
     if not TOKEN:
-        raise RuntimeError("Brak sekretu FOOTBALL_DATA_TOKEN")
+        raise RuntimeError(
+            "Brak sekretu FOOTBALL_DATA_TOKEN w GitHub Actions."
+        )
 
     now = datetime.now(TZ)
     today = now.date().isoformat()
     matches = []
+    diagnostics = []
+
+    print("Data:", today)
+    print("Strefa czasowa: Europe/Warsaw")
+    print("Filtr godzin: 15:00–21:59")
 
     for code, league in LEAGUES.items():
-        try:
-            url = (
-                "https://api.football-data.org/v4/competitions/"
-                + code + "/matches?dateFrom=" + today
-                + "&dateTo=" + today
-            )
-            data = get_json(url)
+        url = (
+            "https://api.football-data.org/v4/competitions/"
+            + code
+            + "/matches?dateFrom="
+            + today
+            + "&dateTo="
+            + today
+        )
 
-            for match in data.get("matches", []):
+        try:
+            data = get_json(url)
+            all_matches = data.get("matches", [])
+
+            print(
+                f"DIAGNOSTYKA {league}: "
+                f"API zwróciło {len(all_matches)} meczów"
+            )
+
+            kept = 0
+
+            for match in all_matches:
                 if match.get("status") not in ("SCHEDULED", "TIMED"):
                     continue
 
@@ -94,47 +127,70 @@ def main():
                 if not (15 <= dt.hour < 22):
                     continue
 
-                # Bazowe wartości modelowe. W kolejnej wersji
-                # zastąpimy je estymacją z historii drużyn.
-                hx, ax = 1.45, 1.15
-                probs = predict(hx, ax)
+                home_team = match.get("homeTeam", {})
+                away_team = match.get("awayTeam", {})
+
+                # Tymczasowe założenia modelu, nie rzeczywiste xG.
+                home_xg = 1.45
+                away_xg = 1.15
 
                 matches.append({
                     "id": str(match.get("id", "")),
                     "league": code,
                     "leagueName": league,
-                    "time": dt.strftime("%H:%M") + " • Polska",
+                    "time": dt.strftime("%H:%M"),
                     "kickoff": dt.isoformat(),
-                    "home": match.get("homeTeam", {}).get(
-                        "name", "Gospodarze"
-                    ),
-                    "away": match.get("awayTeam", {}).get(
-                        "name", "Goście"
-                    ),
-                    "hx": hx,
-                    "ax": ax,
-                    "probabilities": probs,
+                    "home": home_team.get("name", "Gospodarze"),
+                    "away": away_team.get("name", "Goście"),
+                    "hx": home_xg,
+                    "ax": away_xg,
+                    "probabilities": predict(home_xg, away_xg),
                 })
 
+                kept += 1
+
+            diagnostics.append({
+                "league": league,
+                "apiMatches": len(all_matches),
+                "selectedMatches": kept,
+                "error": None,
+            })
+
         except Exception as exc:
-            print("Błąd ligi", code, str(exc))
+            message = str(exc)
+            print(f"BŁĄD API {league}: {message}")
+
+            diagnostics.append({
+                "league": league,
+                "apiMatches": None,
+                "selectedMatches": 0,
+                "error": message,
+            })
+
+    matches.sort(key=lambda m: m["kickoff"])
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text(json.dumps({
-        "generatedAt": now.isoformat(),
-        "date": today,
-        "timezone": "Europe/Warsaw",
-        "count": len(matches),
-        "matches": matches,
-        "note": (
-            "Terminarz z football-data.org. "
-            "Prawdopodobieństwa są orientacyjne; "
-            "wartości xG są tymczasowymi założeniami, "
-            "a nie oficjalnymi statystykami."
-        )
-    }, ensure_ascii=False, indent=2), encoding="utf-8")
+    OUT.write_text(
+        json.dumps({
+            "generatedAt": now.isoformat(),
+            "date": today,
+            "timezone": "Europe/Warsaw",
+            "count": len(matches),
+            "matches": matches,
+            "diagnostics": diagnostics,
+            "note": (
+                "Terminarz pochodzi z football-data.org. "
+                "Prognozy używają tymczasowych założeń dotyczących "
+                "goli, a nie zweryfikowanych statystyk xG. "
+                "Nie są gwarancją wyniku."
+            ),
+        }, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
 
-    print("Zapisano prognozy:", len(matches))
+    print("Łącznie wybranych meczów:", len(matches))
+    print("Zapisano plik:", OUT)
 
 if __name__ == "__main__":
     main()
+    
