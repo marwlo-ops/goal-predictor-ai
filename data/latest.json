@@ -1,58 +1,15 @@
 {
-  "generatedAt": "2026-10-15T13:53:20.557739+02:00",
+  "generatedAt": "2026-10-15T14:00:34.403534+02:00",
   "date": "2026-10-15",
   "timezone": "Europe/Warsaw",
+  "filter": {
+    "from": "15:00",
+    "to": "21:59"
+  },
   "count": 0,
   "matches": [],
   "diagnostics": [
-    {
-      "league": "Premier League",
-      "apiMatches": 0,
-      "selectedMatches": 0,
-      "error": null
-    },
-    {
-      "league": "LaLiga",
-      "apiMatches": 0,
-      "selectedMatches": 0,
-      "error": null
-    },
-    {
-      "league": "Serie A",
-      "apiMatches": 0,
-      "selectedMatches": 0,
-      "error": null
-    },
-    {
-      "league": "Bundesliga",
-      "apiMatches": 0,
-      "selectedMatches": 0,
-      "error": null
-    },
-    {
-      "league": "Eredivisie",
-      "apiMatches": 0,
-      "selectedMatches": 0,
-      "error": null
-    },
-    {
-      "league": "Brasileirao",
-      "apiMatches": 0,
-      "selectedMatches": 0,
-      "error": null
-    },
-    {
-      "league": "Ligue 1",
-      "apiMatches": 0,
-      "selectedMatches": 0,
-      "error": null
-    },
-    {
-      "league": "Liga Mistrzów",
-      "apiMatches": 0,
-      "selectedMatches": 0,
-      "error": null
-    }
+    "Terminarz zbiorczy: API zwróciło 1 meczów."
   ],
-  "note": "Terminarz pochodzi z football-data.org. Prognozy używają tymczasowych założeń dotyczących goli, a nie zweryfikowanych statystyk xG. Nie są gwarancją wyniku."
+  "note": "Prognozy są orientacyjne i oparte na dostępnych tabelach. Nie używają kursów bukmacherskich, składów, kontuzji ani zaawansowanych statystyk. Nie stanowią gwarancji wyniku."
 }
