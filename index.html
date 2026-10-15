@@ -631,6 +631,38 @@ if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {
     });
   });
 }
+  // === GOAL PREDICTOR AI PRO — WERSJA TESTOWA ===
+const PRO_PASSWORD = "MJW2010";
+
+function unlockPro() {
+  const entered = prompt("Podaj hasło do Goal Predictor AI PRO:");
+  if (entered === PRO_PASSWORD) {
+    alert("Hasło poprawne! Strefa PRO odblokowana.");
+    document.body.classList.add("pro-unlocked");
+  } else if (entered !== null) {
+    alert("Nieprawidłowe hasło.");
+  }
+}
+
+function addProButton() {
+  if (document.getElementById("proAccessButton")) return;
+
+  const button = document.createElement("button");
+  button.id = "proAccessButton";
+  button.textContent = "✦ Odblokuj PRO";
+  button.className = "primary";
+  button.style.cssText =
+    "position:fixed;top:15px;right:12px;z-index:1000;padding:10px;border-radius:12px;";
+  button.addEventListener("click", unlockPro);
+  document.body.appendChild(button);
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", addProButton);
+} else {
+  addProButton();
+}
+// === KONIEC WERSJI TESTOWEJ PRO ===
 </script>
 </body>
 </html>
