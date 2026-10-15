@@ -1,0 +1,11 @@
+{
+  "name": "Goal Predictor AI — Analiza meczów",
+  "short_name": "Goal Predictor",
+  "description": "Automatyczne prognozy meczów piłkarskich",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0b1117",
+  "theme_color": "#101820",
+  "lang": "pl"
+}
