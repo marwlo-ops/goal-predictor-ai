@@ -1,0 +1,51 @@
+name: Daily Football Predictions
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 * * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Pobierz repozytorium
+        uses: actions/checkout@v4
+
+      - name: Uruchom Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Sprawdź godzinę w Polsce
+        id: timecheck
+        run: |
+          HOUR=$(TZ=Europe/Warsaw date +%H)
+          MIN=$(TZ=Europe/Warsaw date +%M)
+
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || { [ "$HOUR" = "13" ] && [ "$MIN" -lt "25" ]; }; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Generuj prognozy
+        if: steps.timecheck.outputs.run == 'true'
+        env:
+          FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
+        run: python scripts/update_predictions.py
+
+      - name: Zapisz wyniki
+        if: steps.timecheck.outputs.run == 'true'
+        run: |
+          git config user.name "Goal Predictor Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/latest.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Aktualizacja prognoz meczowych"
+            git push
+          fi
