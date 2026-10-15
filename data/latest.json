@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-15T14:00:34.403534+02:00",
+  "generatedAt": "2026-10-15T14:05:56.346687+02:00",
   "date": "2026-10-15",
   "timezone": "Europe/Warsaw",
   "filter": {
@@ -9,7 +9,18 @@
   "count": 0,
   "matches": [],
   "diagnostics": [
-    "Terminarz zbiorczy: API zwróciło 1 meczów."
+    "Premier League (PL): API zwróciło 0 meczów.",
+    "LaLiga (PD): API zwróciło 0 meczów.",
+    "Serie A (SA): API zwróciło 0 meczów.",
+    "Bundesliga (BL1): API zwróciło 0 meczów.",
+    "Ligue 1 (FL1): API zwróciło 0 meczów.",
+    "Eredivisie (DED): API zwróciło 0 meczów.",
+    "Primeira Liga (PPL): API zwróciło 0 meczów.",
+    "Liga Mistrzów (CL): API zwróciło 0 meczów.",
+    "Championship (ELC): API zwróciło 0 meczów.",
+    "Brasileirao (BSA): API zwróciło 0 meczów.",
+    "Mistrzostwa Europy (EC): API zwróciło 0 meczów.",
+    "Mistrzostwa Świata (WC): API zwróciło 0 meczów."
   ],
-  "note": "Prognozy są orientacyjne i oparte na dostępnych tabelach. Nie używają kursów bukmacherskich, składów, kontuzji ani zaawansowanych statystyk. Nie stanowią gwarancji wyniku."
+  "note": "Prognozy orientacyjne na podstawie tabel rozgrywek. Model nie uwzględnia kursów, składów, kontuzji ani zaawansowanych statystyk. Nie gwarantuje wyników."
 }
