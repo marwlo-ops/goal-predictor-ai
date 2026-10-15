@@ -6,13 +6,17 @@ import time
 import urllib.error
 import urllib.parse
 import urllib.request
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
 BASE_URL = "https://api.football-data.org/v4"
 TOKEN = os.environ.get("FOOTBALL_DATA_TOKEN", "").strip()
 WARSAW = ZoneInfo("Europe/Warsaw")
+OUTPUT = Path("data/latest.json")
+MIN_REQUEST_INTERVAL = 6.3
+last_request_time = 0.0
+diagnostics = []
 
 LEAGUES = {
     "PL": "Premier League",
@@ -29,14 +33,8 @@ LEAGUES = {
     "WC": "Mistrzostwa Świata",
 }
 
-OUTPUT = Path("data/latest.json")
-MIN_REQUEST_INTERVAL = 6.3
-last_request_time = 0.0
-diagnostics = []
-
 
 def api_get(path, params=None):
-    """Wykonuje zapytanie z przerwą respektującą limit darmowego API."""
     global last_request_time
 
     if not TOKEN:
@@ -61,12 +59,6 @@ def api_get(path, params=None):
             return result
     except urllib.error.HTTPError as exc:
         last_request_time = time.monotonic()
-
-        if exc.code == 429:
-            raise RuntimeError("Limit zapytań API przekroczony (429).") from exc
-        if exc.code == 403:
-            raise RuntimeError("Dostęp do tego zasobu jest ograniczony (403).") from exc
-
         detail = exc.read().decode("utf-8", errors="replace")[:200]
         raise RuntimeError(f"HTTP {exc.code}: {detail}") from exc
     except urllib.error.URLError as exc:
@@ -80,22 +72,19 @@ def poisson_probability(lam, goals):
 
 
 def calculate_probabilities(home_xg, away_xg):
-    home_probs = [poisson_probability(home_xg, g) for g in range(10)]
-    away_probs = [poisson_probability(away_xg, g) for g in range(10)]
+    hp = [poisson_probability(home_xg, g) for g in range(10)]
+    ap = [poisson_probability(away_xg, g) for g in range(10)]
+    hw = draw = aw = over15 = over25 = btts = 0.0
 
-    home_win = draw = away_win = over15 = over25 = btts = 0.0
-
-    for h, ph in enumerate(home_probs):
-        for a, pa in enumerate(away_probs):
+    for h, ph in enumerate(hp):
+        for a, pa in enumerate(ap):
             p = ph * pa
-
             if h > a:
-                home_win += p
+                hw += p
             elif h == a:
                 draw += p
             else:
-                away_win += p
-
+                aw += p
             if h + a >= 2:
                 over15 += p
             if h + a >= 3:
@@ -103,16 +92,14 @@ def calculate_probabilities(home_xg, away_xg):
             if h >= 1 and a >= 1:
                 btts += p
 
-    total = home_win + draw + away_win
+    total = hw + draw + aw
     if total:
-        home_win /= total
-        draw /= total
-        away_win /= total
+        hw, draw, aw = hw / total, draw / total, aw / total
 
     return {
-        "homeWin": round(home_win * 100, 1),
+        "homeWin": round(hw * 100, 1),
         "draw": round(draw * 100, 1),
-        "awayWin": round(away_win * 100, 1),
+        "awayWin": round(aw * 100, 1),
         "over15": round(over15 * 100, 1),
         "over25": round(over25 * 100, 1),
         "btts": round(btts * 100, 1),
@@ -128,13 +115,11 @@ def table_maps(data):
             continue
 
         for row in standing.get("table", []):
-            team_name = (row.get("team") or {}).get("name")
+            name = (row.get("team") or {}).get("name")
             played = row.get("playedGames") or 0
-
-            if not team_name or played < 1:
+            if not name or played < 1:
                 continue
-
-            maps[kind][team_name] = {
+            maps[kind][name] = {
                 "played": played,
                 "for": row.get("goalsFor", 0) or 0,
                 "against": row.get("goalsAgainst", 0) or 0,
@@ -145,7 +130,6 @@ def table_maps(data):
 
 def team_stats(maps, name, venue):
     stats = maps.get(venue, {}).get(name)
-
     if stats and stats["played"] >= 3:
         return stats, "venue"
 
@@ -157,90 +141,90 @@ def team_stats(maps, name, venue):
 
 
 def estimate_goals(home_name, away_name, maps):
-    home, home_source = team_stats(maps, home_name, "HOME")
-    away, away_source = team_stats(maps, away_name, "AWAY")
+    home, hs = team_stats(maps, home_name, "HOME")
+    away, aws = team_stats(maps, away_name, "AWAY")
 
     if not home or not away:
         return None
 
-    home_for = home["for"] / home["played"]
-    home_against = home["against"] / home["played"]
-    away_for = away["for"] / away["played"]
-    away_against = away["against"] / away["played"]
+    home_xg = (home["for"] / home["played"]
+               + away["against"] / away["played"]) / 2
+    away_xg = (away["for"] / away["played"]
+               + home["against"] / home["played"]) / 2
 
-    home_xg = max(0.15, min(4.0, (home_for + away_against) / 2))
-    away_xg = max(0.15, min(4.0, (away_for + home_against) / 2))
+    home_xg = max(0.15, min(4.0, home_xg))
+    away_xg = max(0.15, min(4.0, away_xg))
 
-    if home_source == "venue" and away_source == "venue":
+    if hs == "venue" and aws == "venue":
         quality = "medium"
-        confidence = "Umiarkowana: statystyki domowe i wyjazdowe"
+        confidence = "Umiarkowana: dane domowe i wyjazdowe"
     else:
         quality = "low"
-        confidence = "Niska: wykorzystano również dane ogólne"
+        confidence = "Niska: użyto także danych ogólnych"
 
     return home_xg, away_xg, quality, confidence
 
 
-def get_matches_for_league(code, name, today):
-    """Sprawdza terminarz każdej ligi osobno."""
+def fetch_league_matches(code, name, date_from, date_to):
     try:
         data = api_get(
             f"/competitions/{code}/matches",
-            {"dateFrom": today, "dateTo": today},
+            {"dateFrom": date_from, "dateTo": date_to},
         )
         matches = data.get("matches", [])
-        diagnostics.append(f"{name} ({code}): API zwróciło {len(matches)} meczów.")
+        diagnostics.append(
+            f"{name} ({code}): {len(matches)} meczów w okresie."
+        )
         return matches
     except Exception as exc:
         diagnostics.append(f"{name} ({code}): BŁĄD TERMINARZA: {exc}")
         return []
 
 
-def get_standings(code):
+def fetch_standings(code):
     try:
-        data = api_get(f"/competitions/{code}/standings")
-        maps = table_maps(data)
-        diagnostics.append(f"{code}: pobrano tabelę rozgrywek.")
-        return maps
+        return table_maps(api_get(f"/competitions/{code}/standings"))
     except Exception as exc:
-        diagnostics.append(f"{code}: BŁĄD TABELI: {exc}")
+        diagnostics.append(f"{code}: brak tabeli: {exc}")
         return {"TOTAL": {}, "HOME": {}, "AWAY": {}}
 
 
 def main():
     now = datetime.now(WARSAW)
-    today = now.date().isoformat()
+    date_from = now.date()
+    date_to = date_from + timedelta(days=2)
 
-    print(f"Data: {today}")
+    start = date_from.isoformat()
+    end = date_to.isoformat()
+
+    print(f"Od: {start} do: {end}")
     print("Strefa czasowa: Europe/Warsaw")
-    print("Filtr godzin: 15:00–21:59")
-    print("Pobieranie terminarzy ze wszystkich 12 rozgrywek...")
+    print("Zakres godzin: cała doba")
+    print(f"Rozgrywki do sprawdzenia: {len(LEAGUES)}")
 
     if not TOKEN:
         raise RuntimeError(
-            "Brak FOOTBALL_DATA_TOKEN. Sprawdź ustawienia Secrets w GitHub."
+            "Brak FOOTBALL_DATA_TOKEN. Sprawdź sekret w GitHub Actions."
         )
 
     all_matches = []
-
     for code, name in LEAGUES.items():
-        matches = get_matches_for_league(code, name, today)
-        all_matches.extend(matches)
+        all_matches.extend(
+            fetch_league_matches(code, name, start, end)
+        )
 
     selected = []
-    seen_ids = set()
+    seen = set()
 
     for match in all_matches:
-        competition = match.get("competition") or {}
-        code = competition.get("code")
-
+        code = (match.get("competition") or {}).get("code")
         if code not in LEAGUES:
             continue
 
         match_id = match.get("id")
-        if match_id in seen_ids:
+        if match_id in seen:
             continue
-        seen_ids.add(match_id)
+        seen.add(match_id)
 
         if match.get("status") not in ("SCHEDULED", "TIMED"):
             continue
@@ -256,15 +240,11 @@ def main():
         except ValueError:
             continue
 
-        if kickoff_dt.date().isoformat() != today:
-            continue
-
-        if not (15 <= kickoff_dt.hour < 22):
+        if not (date_from <= kickoff_dt.date() <= date_to):
             continue
 
         home = (match.get("homeTeam") or {}).get("name")
         away = (match.get("awayTeam") or {}).get("name")
-
         if not home or not away:
             continue
 
@@ -272,6 +252,7 @@ def main():
             "id": match_id,
             "league": code,
             "leagueName": LEAGUES[code],
+            "date": kickoff_dt.strftime("%Y-%m-%d"),
             "time": kickoff_dt.strftime("%H:%M"),
             "kickoff": kickoff_dt.isoformat(),
             "home": home,
@@ -280,38 +261,34 @@ def main():
 
     selected.sort(key=lambda m: (m["kickoff"], m["leagueName"]))
 
-    standings_by_league = {}
+    tables = {}
     for code in sorted({m["league"] for m in selected}):
-        standings_by_league[code] = get_standings(code)
+        tables[code] = fetch_standings(code)
 
     predictions = []
-
     for match in selected:
-        maps = standings_by_league.get(
+        maps = tables.get(
             match["league"],
             {"TOTAL": {}, "HOME": {}, "AWAY": {}},
         )
-
         estimate = estimate_goals(match["home"], match["away"], maps)
 
         if estimate:
             hx, ax, quality, confidence = estimate
             probabilities = calculate_probabilities(hx, ax)
-            model = "Poisson na podstawie tabeli"
             model_status = "table_based"
         else:
             hx = ax = None
             probabilities = None
             quality = "insufficient_data"
-            confidence = "Brak danych do obliczenia prognozy"
-            model = None
+            confidence = "Za mało danych do obliczenia prognozy"
             model_status = "insufficient_data"
 
         match.update({
             "hx": round(hx, 2) if hx is not None else None,
             "ax": round(ax, 2) if ax is not None else None,
             "probabilities": probabilities,
-            "model": model,
+            "model": "Poisson na podstawie tabeli" if estimate else None,
             "quality": quality,
             "confidence": confidence,
             "modelStatus": model_status,
@@ -319,17 +296,17 @@ def main():
         predictions.append(match)
 
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
-
     result = {
         "generatedAt": now.isoformat(),
-        "date": today,
+        "dateFrom": start,
+        "dateTo": end,
         "timezone": "Europe/Warsaw",
-        "filter": {"from": "15:00", "to": "21:59"},
+        "filter": {"from": "00:00", "to": "23:59"},
         "count": len(predictions),
         "matches": predictions,
         "diagnostics": diagnostics,
         "note": (
-            "Prognozy orientacyjne na podstawie tabel rozgrywek. "
+            "Prognozy orientacyjne na podstawie dostępnych tabel. "
             "Model nie uwzględnia kursów, składów, kontuzji ani "
             "zaawansowanych statystyk. Nie gwarantuje wyników."
         ),
@@ -340,16 +317,15 @@ def main():
         encoding="utf-8",
     )
 
-    with_probabilities = sum(
-        m["probabilities"] is not None for m in predictions
+    print(f"Łącznie meczów na 3 dni: {len(predictions)}")
+    print(
+        "Mecze z obliczonymi prognozami: "
+        f"{sum(m['probabilities'] is not None for m in predictions)}"
     )
-
-    print(f"Łącznie wybranych meczów: {len(predictions)}")
-    print(f"Prognozy z wystarczającymi danymi: {with_probabilities}")
     print(f"Zapisano: {OUTPUT}")
 
-    for message in diagnostics:
-        print(message)
+    for item in diagnostics:
+        print(item)
 
 
 if __name__ == "__main__":
