@@ -634,11 +634,169 @@ if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {
   // === GOAL PREDICTOR AI PRO — WERSJA TESTOWA ===
 const PRO_PASSWORD = "MJW2010";
 
+// === GOAL PREDICTOR AI PRO ===
+const PRO_PASSWORD = "MJW2010";
+let proUnlocked = false;
+
+function proPoisson(lambda, goals) {
+  let p = Math.exp(-lambda);
+  for (let i = 1; i <= goals; i++) p *= lambda / i;
+  return p;
+}
+
+function proCalculateMarkets(homeXg, awayXg) {
+  const maxGoals = 12;
+  const home = Array.from(
+    { length: maxGoals + 1 },
+    (_, g) => proPoisson(homeXg, g)
+  );
+  const away = Array.from(
+    { length: maxGoals + 1 },
+    (_, g) => proPoisson(awayXg, g)
+  );
+
+  const result = {
+    home: 0, draw: 0, away: 0,
+    btts: 0, over25: 0, over35: 0,
+    home15: 0, away15: 0
+  };
+
+  for (let h = 0; h <= maxGoals; h++) {
+    for (let a = 0; a <= maxGoals; a++) {
+      const p = home[h] * away[a];
+
+      if (h > a) result.home += p;
+      else if (h === a) result.draw += p;
+      else result.away += p;
+
+      if (h > 0 && a > 0) result.btts += p;
+      if (h + a >= 3) result.over25 += p;
+      if (h + a >= 4) result.over35 += p;
+      if (h >= 2) result.home15 += p;
+      if (a >= 2) result.away15 += p;
+    }
+  }
+
+  return result;
+}
+
+function proPercent(value) {
+  return (value * 100).toLocaleString("pl-PL", {
+    maximumFractionDigits: 1
+  }) + "%";
+}
+
+function proRenderPanel() {
+  let panel = document.getElementById("proPanel");
+
+  if (panel) {
+    panel.scrollIntoView({ behavior: "smooth", block: "start" });
+    return;
+  }
+
+  panel = document.createElement("section");
+  panel.id = "proPanel";
+  panel.className = "card";
+  panel.style.cssText =
+    "border:1px solid #b7f36b;margin:24px 0;padding:16px;";
+
+  panel.innerHTML = `
+    <div class="eyebrow">GOAL PREDICTOR AI · PRO</div>
+    <h2>Rozszerzona analiza meczów</h2>
+    <p class="muted">
+      Wpisz oczekiwane gole (xG) obu drużyn, aby obliczyć
+      prawdopodobieństwa dodatkowych rynków.
+    </p>
+
+    <div class="formgrid">
+      <div class="field">
+        <label for="proHomeXg">xG gospodarzy</label>
+        <input id="proHomeXg" type="number"
+          min="0.1" max="5" step="0.1" value="1.6">
+      </div>
+      <div class="field">
+        <label for="proAwayXg">xG gości</label>
+        <input id="proAwayXg" type="number"
+          min="0.1" max="5" step="0.1" value="1.1">
+      </div>
+    </div>
+
+    <button id="proCalcBtn" class="primary"
+      style="width:100%;margin-top:12px">
+      Oblicz rynki PRO
+    </button>
+
+    <div id="proResults" class="grid2"
+      style="margin-top:14px"></div>
+
+    <p class="muted">
+      Wyniki są szacunkami modelu Poissona na podstawie podanych xG.
+      Nie uwzględniają automatycznie składów, kontuzji ani kursów.
+      Nie gwarantują wyniku meczu.
+    </p>
+
+    <button id="proCloseBtn" class="secondary"
+      style="width:100%">Zamknij PRO</button>
+  `;
+
+  document.querySelector("main").appendChild(panel);
+
+  document.getElementById("proCalcBtn").addEventListener("click", () => {
+    const hx = Number(document.getElementById("proHomeXg").value);
+    const ax = Number(document.getElementById("proAwayXg").value);
+    const output = document.getElementById("proResults");
+
+    if (!Number.isFinite(hx) || !Number.isFinite(ax) ||
+        hx < 0.1 || ax < 0.1 || hx > 5 || ax > 5) {
+      output.innerHTML =
+        '<p class="muted">Podaj xG od 0,1 do 5,0 dla obu drużyn.</p>';
+      return;
+    }
+
+    const m = proCalculateMarkets(hx, ax);
+    const markets = [
+      ["Over 2,5 gola", m.over25],
+      ["Over 3,5 gola", m.over35],
+      ["BTTS — TAK", m.btts],
+      ["BTTS — NIE", 1 - m.btts],
+      ["1X — gospodarze nie przegrają", m.home + m.draw],
+      ["X2 — goście nie przegrają", m.away + m.draw],
+      ["Gospodarze over 1,5", m.home15],
+      ["Goście over 1,5", m.away15],
+      ["Wygrana gospodarzy", m.home],
+      ["Remis", m.draw],
+      ["Wygrana gości", m.away]
+    ];
+
+    output.innerHTML = markets.map(([label, value]) => `
+      <div class="metric">
+        <div class="label">${label}</div>
+        <div class="value">${proPercent(value)}</div>
+      </div>
+    `).join("");
+  });
+
+  document.getElementById("proCloseBtn").addEventListener("click", () => {
+    panel.remove();
+    proUnlocked = false;
+  });
+
+  document.getElementById("proCalcBtn").click();
+  panel.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
 function unlockPro() {
+  if (proUnlocked) {
+    proRenderPanel();
+    return;
+  }
+
   const entered = prompt("Podaj hasło do Goal Predictor AI PRO:");
+
   if (entered === PRO_PASSWORD) {
-    alert("Hasło poprawne! Strefa PRO odblokowana.");
-    document.body.classList.add("pro-unlocked");
+    proUnlocked = true;
+    alert("Hasło poprawne! Otwieram strefę PRO.");
+    proRenderPanel();
   } else if (entered !== null) {
     alert("Nieprawidłowe hasło.");
   }
@@ -652,17 +810,9 @@ function addProButton() {
   button.textContent = "✦ Odblokuj PRO";
   button.className = "primary";
   button.style.cssText =
-    "position:fixed;top:15px;right:12px;z-index:1000;padding:10px;border-radius:12px;";
-  button.addEventListener("click", unlockPro);
-  document.body.appendChild(button);
-}
-
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", addProButton);
-} else {
-  addProButton();
-}
-// === KONIEC WERSJI TESTOWEJ PRO ===
+    "position:fixed;top:15px;right:12px;z-index:1000;" +
+    "padding:10px;border-radius:12px;";
+  button.addEventListener("click", unlockPro
 </script>
 </body>
 </html>
