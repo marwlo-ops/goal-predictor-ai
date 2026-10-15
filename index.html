@@ -1022,8 +1022,10 @@ function renderMatches() {
           <button class="smallbtn" data-analyze="${index}" ${hasXg ? "" : "disabled"}>Analizuj →</button>
         </div>
 
-        ${quality ? `<p class="muted" style="margin:10px 0 0">${escapeHtml(quality)}</p>` : ""}
+                ${quality ? `<p class="muted" style="margin:10px 0 0">${escapeHtml(quality)}</p>` : ""}
         ${!probabilities ? `<p class="muted" style="margin:8px 0 0">Brak danych do obliczenia prawdopodobieństw.</p>` : ""}
+
+        ${historyPanel(match)}
       </article>`;
   }).join("");
 
@@ -1233,7 +1235,65 @@ if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {
 }
 
 
+function historyPanel(match) {
+  const history = match.history;
+  if (!history) {
+    return `<p class="muted">Brak danych historycznych.</p>`;
+  }
 
+  function renderTeam(title, data) {
+    const stats = data?.stats;
+    const games = data?.matches || [];
+
+    if (!stats || !games.length) {
+      return `<p class="muted">Brak historii: ${escapeHtml(title)}</p>`;
+    }
+
+    const rows = games.map(game => {
+      const date = game.date
+        ? new Date(game.date).toLocaleDateString("pl-PL")
+        : "—";
+
+      return `
+        <div class="match-foot" style="padding:5px 0;border-bottom:1px solid var(--line)">
+          <span>${date} · ${escapeHtml(game.home)} – ${escapeHtml(game.away)}</span>
+          <b>${game.homeGoals}:${game.awayGoals}</b>
+        </div>`;
+    }).join("");
+
+    return `
+      <h4 style="margin:12px 0 6px">${escapeHtml(title)}</h4>
+      <p class="muted">
+        Mecze: ${stats.played} · W/R/P: ${stats.wins}/${stats.draws}/${stats.losses}<br>
+        Gole: ${stats.goalsFor}:${stats.goalsAgainst} ·
+        BTTS: ${stats.btts}/${stats.played} ·
+        O1,5: ${stats.over15}/${stats.played} ·
+        O2,5: ${stats.over25}/${stats.played}
+      </p>
+      ${rows}`;
+  }
+
+  const h2h = history.h2h || [];
+  const h2hHtml = h2h.length
+    ? h2h.map(game => `
+        <div class="match-foot" style="padding:5px 0;border-bottom:1px solid var(--line)">
+          <span>${game.date ? new Date(game.date).toLocaleDateString("pl-PL") : "—"}
+          · ${escapeHtml(game.home)} – ${escapeHtml(game.away)}</span>
+          <b>${game.homeGoals}:${game.awayGoals}</b>
+        </div>`).join("")
+    : `<p class="muted">Brak dostępnych bezpośrednich spotkań.</p>`;
+
+  return `
+    <details style="margin-top:12px">
+      <summary style="cursor:pointer;padding:10px 0;font-weight:700">
+        📊 Ostatnie mecze i H2H
+      </summary>
+      ${renderTeam("Ostatnie mecze — " + match.home, history.homeLast10)}
+      ${renderTeam("Ostatnie mecze — " + match.away, history.awayLast10)}
+      <h4 style="margin:14px 0 6px">Bezpośrednie spotkania H2H</h4>
+      ${h2hHtml}
+    </details>`;
+}
 </script>
 </body>
 </html>
