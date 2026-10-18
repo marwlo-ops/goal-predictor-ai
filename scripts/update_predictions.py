@@ -31,6 +31,19 @@ LEAGUES = {
     "BSA": "Brasileirao",
     "EC": "Mistrzostwa Europy",
     "WC": "Mistrzostwa Świata",
+    "EL": "Liga Europy",
+    "ECL": "Liga Konferencji",
+    "BL2": "2. Bundesliga",
+    "BL3": "3. Liga (Niemcy)",
+    "SB": "Serie B",
+    "SD": "LaLiga 2",
+    "FL2": "Ligue 2",
+    "EL1": "League One",
+    "FAC": "Puchar Anglii",
+    "DFB": "Puchar Niemiec",
+    "CDR": "Puchar Króla",
+    "GSL": "Liga grecka",
+    "MLS": "MLS",
 }
 
 
