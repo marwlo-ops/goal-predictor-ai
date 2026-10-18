@@ -822,6 +822,29 @@ body{background:radial-gradient(ellipse at 12% 0%,#173044 0,transparent 34%),rad
   <div class="card"><p class="muted">Dodawanie meczów do obserwowanych będzie dostępne w kolejnej iteracji. Na razie możesz filtrować mecze według ligi na stronie głównej.</p></div>
 </section>
 
+<section class="page" id="page-history">
+  <div class="section-head"><h3>Wyniki historyczne</h3><span class="tag" id="historyStatus">OSTATNIE 7 DNI</span></div>
+  <div class="notice">Zakończone mecze z ostatnich 7 dni. Zakres lig zależy od dostępności danych w football-data.org.</div>
+  <div class="match-tools" style="margin-top:14px"><input id="historySearch" type="search" placeholder="Szukaj drużyny lub ligi…" aria-label="Szukaj w wynikach historycznych"><button class="secondary" id="refreshHistory">↻ Odśwież</button></div>
+  <div id="historyList"></div>
+</section>
+
+<section class="page" id="page-coupon">
+  <div class="section-head"><h3>Symulator kuponu</h3><span class="tag">BEZ STAWIANIA</span></div>
+  <div class="notice">Kursy poniżej to kursy matematyczne fair wyliczone z modelu, a nie aktualne kursy bukmacherów. Symulator nie zawiera prawdziwych zakładów ani płatności.</div>
+  <div class="card">
+    <div class="field"><label for="couponStake">Stawka kuponu (zł)</label><input id="couponStake" type="number" min="1" max="100000" step="1" value="20"></div>
+    <div class="field" style="margin-top:12px"><label for="couponTax">Podatek od stawki (%)</label><input id="couponTax" type="number" min="0" max="100" step="1" value="12"></div>
+    <div id="couponList" style="margin-top:14px"></div>
+    <div class="grid2" style="margin-top:14px">
+      <div class="metric"><div class="label">Kurs łączny</div><div class="value" id="couponOdds">1.00</div></div>
+      <div class="metric"><div class="label">Szacowana wypłata po podatku</div><div class="value" id="couponPayout">0,00 zł</div></div>
+    </div>
+    <p class="muted" id="couponProfit">Zysk netto: 0,00 zł</p>
+    <button class="secondary" id="clearCoupon" type="button">Wyczyść kupon</button>
+  </div>
+</section>
+
 <section class="page" id="page-live">
   <div class="section-head"><h3>Śledzenie na żywo</h3><span class="tag" id="liveStatus">LIVE SCORE</span></div>
   <div class="notice">Wybierz gwiazdkę przy meczu, aby dodać go do obserwowanych, a następnie włącz „Śledź”. Wyniki odświeżane są z serwera co około 10 minut; nie jest to transmisja sekundowa.</div>
@@ -846,6 +869,8 @@ body{background:radial-gradient(ellipse at 12% 0%,#173044 0,transparent 34%),rad
     <button class="navitem" data-page="analyze"><strong>⌁</strong>Analizator</button>
     <button class="navitem" data-page="stats"><strong>▤</strong>Statystyki</button>
     <button class="navitem" data-page="favorites"><strong>☆</strong>Obserwowane</button>
+    <button class="navitem" data-page="history"><strong>◷</strong>Wyniki 7 dni</button>
+    <button class="navitem" data-page="coupon"><strong>▣</strong>Kupon</button>
     <button class="navitem" data-page="live"><strong>●</strong>Na żywo</button>
     <button class="navitem" data-page="method"><strong>◈</strong>Model</button>
     <button class="navitem" data-page="account"><strong>♙</strong>Konto</button>
@@ -878,6 +903,8 @@ let favoritesOnly = false;
 let searchQuery = "";
 let liveSearchQuery = "";
 let liveMatches = [];
+let historicalMatches = [];
+let couponPicks = [];
 let trackedIds = new Set(JSON.parse(localStorage.getItem("gpa_tracked") || "[]"));
 let favoriteIds = new Set(JSON.parse(localStorage.getItem("gpa_favorites") || "[]"));
 let deferredPrompt = null;
@@ -1111,6 +1138,9 @@ function renderMatches() {
     const two = probabilities ? percent(probabilities.away) : "—";
     const over15 = probabilities ? percent(probabilities.over15) : "—";
     const btts = probabilities ? percent(probabilities.btts) : "—";
+    const marketSelect = probabilities ? marketOptions(match, probabilities).map((market, marketIndex) =>
+      '<option value="' + marketIndex + '">' + escapeHtml(market.label) + ' · kurs fair ' + market.odds.toFixed(2) + '</option>'
+    ).join("") : '<option value="">Brak danych modelu</option>';
 
     return `
       <article class="card">
@@ -1142,12 +1172,29 @@ function renderMatches() {
 
                 ${quality ? `<p class="muted" style="margin:10px 0 0">${escapeHtml(quality)}</p>` : ""}
         ${!probabilities ? `<p class="muted" style="margin:8px 0 0">Brak danych do obliczenia prawdopodobieństw.</p>` : ""}
+        ${probabilities ? '<div class="match-tools" style="margin-top:12px"><select class="field" data-market-select="' + index + '" aria-label="Wybierz rynek" style="min-width:0;background:#0c1421;color:var(--text);border:1px solid var(--line);border-radius:12px;padding:10px">' + marketSelect + '</select><button class="smallbtn" data-add-coupon="' + index + '">＋ Kupon</button></div>' : ""}
 
         ${historyPanel(match)}
       </article>`;
   }).join("");
 
 
+  list.querySelectorAll("[data-add-coupon]").forEach(button => {
+    button.addEventListener("click", () => {
+      const index = Number(button.dataset.addCoupon);
+      const match = items[index];
+      const select = list.querySelector('[data-market-select="' + index + '"]');
+      const probs = match ? getMatchProbabilities(match) : null;
+      if (!match || !probs || !select) return;
+      const market = marketOptions(match, probs)[Number(select.value)];
+      if (!market) return;
+      const key = matchId(match) + "|" + market.key;
+      const existing = couponPicks.findIndex(pick => pick.key === key);
+      if (existing >= 0) couponPicks.splice(existing, 1);
+      else couponPicks.push({key, match: match.home + " – " + match.away, market: market.label, odds: market.odds});
+      renderCoupon();
+    });
+  });
   list.querySelectorAll("[data-track]").forEach(button => {
     button.addEventListener("click", () => {
       const id = String(button.dataset.track);
@@ -1208,6 +1255,64 @@ document.getElementById("showFavorites").addEventListener("click", () => {
 });
 persistFavorites();
 
+
+function marketOptions(match, p) {
+  const raw = [
+    ["1", "Wygrana gospodarzy", p.home],
+    ["X", "Remis", p.draw],
+    ["2", "Wygrana gości", p.away],
+    ["O15", "Powyżej 1,5 gola", p.over15],
+    ["O25", "Powyżej 2,5 gola", p.over25],
+    ["U25", "Poniżej 2,5 gola", 1 - p.over25],
+    ["BTTS", "Obie strzelą — TAK", p.btts],
+    ["BTTS_NO", "Obie strzelą — NIE", 1 - p.btts]
+  ];
+  return raw.filter(item => Number.isFinite(item[2]) && item[2] > 0.005).map(item => ({
+    key: item[0], label: item[1], probability: item[2], odds: Math.max(1.01, 1 / item[2])
+  }));
+}
+function renderCoupon() {
+  const root = document.getElementById("couponList");
+  if (!root) return;
+  if (!couponPicks.length) root.innerHTML = '<div class="empty">Kupon jest pusty. Wybierz rynek na karcie meczu i naciśnij „＋ Kupon”.</div>';
+  else root.innerHTML = couponPicks.map((pick, index) =>
+    '<div class="match-foot" style="padding:9px 0;border-bottom:1px solid var(--line)"><span><b>' + escapeHtml(pick.match) + '</b><br><span class="muted">' + escapeHtml(pick.market) + '</span></span><span style="display:flex;align-items:center;gap:8px"><b>' + pick.odds.toFixed(2) + '</b><button class="favbtn" data-remove-pick="' + index + '" aria-label="Usuń typ">×</button></span></div>'
+  ).join("");
+  root.querySelectorAll("[data-remove-pick]").forEach(button => button.addEventListener("click", () => {
+    couponPicks.splice(Number(button.dataset.removePick), 1); renderCoupon();
+  }));
+  const combined = couponPicks.reduce((total, pick) => total * pick.odds, 1);
+  const stake = Math.max(0, Number(document.getElementById("couponStake").value) || 0);
+  const tax = Math.max(0, Math.min(100, Number(document.getElementById("couponTax").value) || 0));
+  const payout = stake * (1 - tax / 100) * combined;
+  document.getElementById("couponOdds").textContent = combined.toFixed(2);
+  document.getElementById("couponPayout").textContent = payout.toLocaleString("pl-PL", {style:"currency",currency:"PLN"});
+  document.getElementById("couponProfit").textContent = "Zysk netto: " + (payout - stake).toLocaleString("pl-PL", {style:"currency",currency:"PLN"}) + " · podatek liczony od stawki";
+}
+async function loadHistoricalResults() {
+  const root = document.getElementById("historyList");
+  const label = document.getElementById("historyStatus");
+  if (!root || !label) return;
+  const query = (document.getElementById("historySearch")?.value || "").trim().toLocaleLowerCase("pl-PL");
+  try {
+    const response = await fetch("./data/results.json?ts=" + Date.now(), {cache:"no-store"});
+    if (!response.ok) throw new Error("Brak results.json");
+    const payload = await response.json();
+    historicalMatches = Array.isArray(payload.matches) ? payload.matches : [];
+    label.textContent = "7 DNI · " + historicalMatches.length + " MECZÓW";
+    const shown = historicalMatches.filter(m => [m.home,m.away,m.leagueName,m.league].filter(Boolean).some(v => String(v).toLocaleLowerCase("pl-PL").includes(query)));
+    root.innerHTML = shown.length ? shown.map(m => '<article class="card"><div class="match-top"><span class="league">' + escapeHtml(m.leagueName || m.league || "Piłka nożna") + '</span><span>' + escapeHtml(m.date ? new Date(m.date).toLocaleString("pl-PL",{day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit"}) : "—") + '</span></div><div class="teams"><div class="team">' + escapeHtml(m.home) + '</div><div class="vs">' + m.homeGoals + ' : ' + m.awayGoals + '</div><div class="team">' + escapeHtml(m.away) + '</div></div></article>').join("") : '<div class="empty">Brak wyników dla tego filtra lub plik nie został jeszcze zaktualizowany.</div>';
+  } catch (error) {
+    label.textContent = "BRAK DANYCH";
+    root.innerHTML = '<div class="empty">Nie udało się pobrać historii. Sprawdź działanie GitHub Actions.</div>';
+  }
+}
+document.getElementById("historySearch").addEventListener("input", loadHistoricalResults);
+document.getElementById("refreshHistory").addEventListener("click", loadHistoricalResults);
+document.getElementById("couponStake").addEventListener("input", renderCoupon);
+document.getElementById("couponTax").addEventListener("input", renderCoupon);
+document.getElementById("clearCoupon").addEventListener("click", () => { couponPicks = []; renderCoupon(); });
+renderCoupon();
 
 function renderLive() {
   const root = document.getElementById("liveList");
