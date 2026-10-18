@@ -676,7 +676,7 @@ body{background:radial-gradient(ellipse at 12% 0%,#173044 0,transparent 34%),rad
 .favbtn.saved{color:#c4ff78;border-color:#587440;background:#18271d}
 @media(min-width:650px){.navinner{justify-content:center}.navitem{flex:1;max-width:130px}.hero{min-height:240px}.matchlist{gap:15px}.quickstats{max-width:600px}}
 @media(max-width:370px){.hero:before{display:none}.quickstat{padding:10px 8px}.quickstat strong{font-size:17px}.navitem{flex-basis:72px;min-width:72px}}
-</style>
+.live-dot{color:#ff7187}@keyframes livePulse{50%{opacity:.45}} .favbtn.saved{box-shadow:0 0 0 2px #c4ff7810} </style>
 
 </head>
 <body>
@@ -822,6 +822,16 @@ body{background:radial-gradient(ellipse at 12% 0%,#173044 0,transparent 34%),rad
   <div class="card"><p class="muted">Dodawanie meczów do obserwowanych będzie dostępne w kolejnej iteracji. Na razie możesz filtrować mecze według ligi na stronie głównej.</p></div>
 </section>
 
+<section class="page" id="page-live">
+  <div class="section-head"><h3>Śledzenie na żywo</h3><span class="tag" id="liveStatus">LIVE SCORE</span></div>
+  <div class="notice">Wybierz gwiazdkę przy meczu, aby dodać go do obserwowanych, a następnie włącz „Śledź”. Wyniki odświeżane są z serwera co około 10 minut; nie jest to transmisja sekundowa.</div>
+  <div class="match-tools" style="margin-top:14px">
+    <input id="liveSearch" type="search" placeholder="Szukaj śledzonego meczu…" aria-label="Szukaj śledzonego meczu">
+    <button class="secondary" id="refreshLive" type="button">↻ Odśwież</button>
+  </div>
+  <div id="liveList"></div>
+</section>
+
 <section class="page" id="page-account">
   <div class="section-head"><h3>Konto testowe</h3><span class="tag">DEMO</span></div>
   <div class="card" id="accountPanel"><h4>Nie jesteś zalogowany</h4><p class="muted">Zaloguj się kontem demonstracyjnym, aby przetestować widok konta. To lokalna symulacja — nie chroni danych ani funkcji PRO.</p><button class="primary" onclick="document.getElementById('loginOpen').click()">Otwórz logowanie</button></div>
@@ -836,6 +846,7 @@ body{background:radial-gradient(ellipse at 12% 0%,#173044 0,transparent 34%),rad
     <button class="navitem" data-page="analyze"><strong>⌁</strong>Analizator</button>
     <button class="navitem" data-page="stats"><strong>▤</strong>Statystyki</button>
     <button class="navitem" data-page="favorites"><strong>☆</strong>Obserwowane</button>
+    <button class="navitem" data-page="live"><strong>●</strong>Na żywo</button>
     <button class="navitem" data-page="method"><strong>◈</strong>Model</button>
     <button class="navitem" data-page="account"><strong>♙</strong>Konto</button>
     <button class="navitem" data-page="settings"><strong>⚙</strong>Ustawienia</button>
@@ -865,6 +876,9 @@ let dataIsLive = false;
 let activeLeagueFilter = "all";
 let favoritesOnly = false;
 let searchQuery = "";
+let liveSearchQuery = "";
+let liveMatches = [];
+let trackedIds = new Set(JSON.parse(localStorage.getItem("gpa_tracked") || "[]"));
 let favoriteIds = new Set(JSON.parse(localStorage.getItem("gpa_favorites") || "[]"));
 let deferredPrompt = null;
 
@@ -1010,6 +1024,10 @@ function dateLabel(match) {
 function matchId(match) {
   return [match.date || match.kickoff || "", match.time || "", match.home || "", match.away || ""].join("|");
 }
+function persistTracked() {
+  localStorage.setItem("gpa_tracked", JSON.stringify([...trackedIds]));
+  renderLive();
+}
 function persistFavorites() {
   localStorage.setItem("gpa_favorites", JSON.stringify([...favoriteIds]));
   document.getElementById("quickFavCount").textContent = favoriteIds.size;
@@ -1083,6 +1101,7 @@ function renderMatches() {
           <span class="muted">O1,5: <b class="green">${over15}</b> · BTTS: <b class="green">${btts}</b></span>
           <div style="display:flex;gap:6px;align-items:center">
             <button class="favbtn ${favoriteIds.has(matchId(match)) ? "saved" : ""}" data-favorite="${escapeHtml(matchId(match))}" aria-label="Dodaj do obserwowanych">${favoriteIds.has(matchId(match)) ? "★" : "☆"}</button>
+            <button class="favbtn ${trackedIds.has(String(match.id)) ? "saved" : ""}" data-track="${escapeHtml(match.id)}" aria-label="Śledź mecz">${trackedIds.has(String(match.id)) ? "●" : "＋"}</button>
             <button class="smallbtn" data-analyze="${index}" ${hasXg ? "" : "disabled"}>Analizuj →</button>
           </div>
         </div>
@@ -1095,6 +1114,14 @@ function renderMatches() {
   }).join("");
 
 
+  list.querySelectorAll("[data-track]").forEach(button => {
+    button.addEventListener("click", () => {
+      const id = String(button.dataset.track);
+      if (trackedIds.has(id)) trackedIds.delete(id); else trackedIds.add(id);
+      persistTracked();
+      renderMatches();
+    });
+  });
   list.querySelectorAll("[data-favorite]").forEach(button => {
     button.addEventListener("click", () => {
       const id = button.dataset.favorite;
@@ -1146,6 +1173,52 @@ document.getElementById("showFavorites").addEventListener("click", () => {
   renderMatches();
 });
 persistFavorites();
+
+
+function renderLive() {
+  const root = document.getElementById("liveList");
+  if (!root) return;
+  const ids = trackedIds;
+  const query = liveSearchQuery.toLocaleLowerCase("pl-PL");
+  const allTracked = matches.filter(m => ids.has(String(m.id)));
+  const liveById = new Map(liveMatches.map(m => [String(m.id), m]));
+  const shown = allTracked.filter(m => [m.home,m.away,m.leagueName].filter(Boolean).some(v => String(v).toLocaleLowerCase("pl-PL").includes(query)));
+  if (!shown.length) {
+    root.innerHTML = '<div class="empty">Nie śledzisz jeszcze żadnego meczu. Wróć do „Główna” i naciśnij ＋ przy wybranym spotkaniu.</div>';
+    return;
+  }
+  root.innerHTML = shown.map(m => {
+    const live = liveById.get(String(m.id));
+    const status = live ? (live.status === "PAUSED" ? "PRZERWA" : live.status === "FINISHED" ? "KONIEC" : "NA ŻYWO") : "OCZEKIWANIE NA STATUS";
+    const score = live && live.score ? live.score : null;
+    const scoreText = score && score.home !== null && score.away !== null ? score.home + " : " + score.away : "— : —";
+    return '<article class="card"><div class="match-top"><span class="league">' + escapeHtml(m.leagueName || m.league || "Piłka nożna") + '</span><span>' + escapeHtml(status) + '</span></div><div class="teams"><div class="team">' + escapeHtml(m.home) + '</div><div class="vs">' + escapeHtml(scoreText) + '</div><div class="team">' + escapeHtml(m.away) + '</div></div><div class="match-foot"><span class="muted">' + escapeHtml(m.date || "") + ' · ' + escapeHtml(m.time || "") + '</span><button class="smallbtn" data-untrack="' + escapeHtml(m.id) + '">Przestań śledzić</button></div></article>';
+  }).join("");
+  root.querySelectorAll("[data-untrack]").forEach(button => button.addEventListener("click", () => {
+    trackedIds.delete(String(button.dataset.untrack)); persistTracked(); renderMatches();
+  }));
+}
+async function loadLiveScores() {
+  const label = document.getElementById("liveStatus");
+  try {
+    const response = await fetch("./data/live.json?ts=" + Date.now(), {cache:"no-store"});
+    if (!response.ok) throw new Error("Brak pliku live.json");
+    const payload = await response.json();
+    liveMatches = Array.isArray(payload.matches) ? payload.matches : [];
+    const stamp = payload.updatedAt ? new Date(payload.updatedAt).toLocaleTimeString("pl-PL",{hour:"2-digit",minute:"2-digit"}) : "";
+    label.textContent = "AKTUALIZACJA " + (stamp || "BRAK");
+  } catch (error) {
+    liveMatches = [];
+    label.textContent = "BRAK DANYCH LIVE";
+  }
+  renderLive();
+}
+document.getElementById("liveSearch").addEventListener("input", event => {
+  liveSearchQuery = event.target.value.trim(); renderLive();
+});
+document.getElementById("refreshLive").addEventListener("click", loadLiveScores);
+loadLiveScores();
+persistTracked();
 
 function showPage(name) {
   document.querySelectorAll(".page").forEach(page => {
