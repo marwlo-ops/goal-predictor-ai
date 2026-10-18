@@ -746,11 +746,11 @@ form {
 
       <div class="formgrid">
         <div class="field">
-          <label for="homeXg">Gole gospodarzy (xG)</label>
+          <label for="homeXg">Oczekiwane gole gospodarzy (λ)</label>
           <input id="homeXg" type="number" min="0.1" max="5" step="0.1" value="1.6" required>
         </div>
         <div class="field">
-          <label for="awayXg">Gole gości (xG)</label>
+          <label for="awayXg">Oczekiwane gole gości (λ)</label>
           <input id="awayXg" type="number" min="0.1" max="5" step="0.1" value="1.1" required>
         </div>
       </div>
@@ -1102,7 +1102,7 @@ function calculate() {
     homeXg > 5 ||
     awayXg > 5
   ) {
-    result.innerHTML = `<p class="muted">Podaj wartości xG od 0,1 do 5,0.</p>`;
+    result.innerHTML = `<p class="muted">Podaj oczekiwane gole od 0,1 do 5,0.</p>`;
     return;
   }
 
@@ -1122,7 +1122,7 @@ function calculate() {
         <div class="hint">${escapeHtml(outcomes[0].label)}</div>
       </div>
       <div class="metric">
-        <div class="label">Suma xG</div>
+        <div class="label">Suma oczekiwanych goli</div>
         <div class="value">${(homeXg + awayXg).toLocaleString("pl-PL", {maximumFractionDigits:1})}</div>
         <div class="hint">Założone gole oczekiwane</div>
       </div>
@@ -1135,7 +1135,7 @@ function calculate() {
       ${bar("Powyżej 2,5 gola", probabilities.over25)}
       ${bar("BTTS · tak", probabilities.btts)}
     </div>
-    <p class="muted">Szacunki matematyczne na podstawie podanych xG. Nie są gwarancją wyniku.</p>`;
+    <p class="muted">Szacunki matematyczne na podstawie oczekiwanych goli. Nie są gwarancją wyniku.</p>`;
 }
 
 document.getElementById("predictForm").addEventListener("submit", event => {
@@ -1158,20 +1158,32 @@ async function loadPublishedData() {
 
     const payload = await response.json();
     matches = Array.isArray(payload.matches) ? payload.matches : [];
-    dataIsLive = Boolean(payload.generatedAt);
 
-    if (payload.generatedAt) {
-      const generated = new Date(payload.generatedAt);
-      status.textContent = "Aktualizacja: " + generated.toLocaleTimeString("pl-PL", {
+    const generated = payload.generatedAt ? new Date(payload.generatedAt) : null;
+    const generatedMs = generated ? generated.getTime() : NaN;
+    const ageHours = (Date.now() - generatedMs) / (60 * 60 * 1000);
+    const isStale = !Number.isFinite(generatedMs) || ageHours > 24 || ageHours < -0.25;
+    dataIsLive = Boolean(payload.generatedAt) && !isStale;
+
+    if (Number.isFinite(generatedMs)) {
+      status.textContent = "Aktualizacja: " + generated.toLocaleString("pl-PL", {
+        day: "2-digit",
+        month: "2-digit",
         hour: "2-digit",
         minute: "2-digit"
       });
+      if (isStale) status.textContent += " · DANE NIEAKTUALNE";
+      status.style.color = isStale ? "var(--danger, #ff6b6b)" : "";
     } else {
       status.textContent = "Brak daty aktualizacji";
+      status.style.color = "var(--danger, #ff6b6b)";
     }
 
-    notice.textContent = payload.note ||
+    const defaultNotice = payload.note ||
       "Prognozy są orientacyjne i nie stanowią gwarancji wyniku.";
+    notice.textContent = isStale
+      ? "⚠️ UWAGA: dane mają ponad 24 godziny lub nieprawidłową datę. Nie traktuj tych prognoz jako aktualnych. " + defaultNotice
+      : defaultNotice;
 
     const aiCard = document.getElementById("aiSummaryCard");
 
