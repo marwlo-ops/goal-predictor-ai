@@ -1,0 +1,105 @@
+name: Goal Predictor Overnight Audit
+
+on:
+  workflow_dispatch:
+  schedule:
+    # GitHub cron uses UTC. In October, Warsaw is UTC+2:
+    # runs every 20 minutes from 00:00 through 05:40 Warsaw time.
+    - cron: "*/20 22-23,0-3 * * *"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: goal-predictor-overnight-audit
+  cancel-in-progress: true
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pobierz repozytorium
+        uses: actions/checkout@v4
+
+      - name: Sprawdź składnię Pythona
+        run: python -m py_compile scripts/update_predictions.py
+
+      - name: Sprawdź dane i podstawowe funkcje strony
+        run: |
+          python - <<'PY'
+          import json
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          path = Path("data/latest.json")
+          if not path.exists():
+              raise SystemExit("BŁĄD: brak data/latest.json")
+
+          data = json.loads(path.read_text(encoding="utf-8"))
+          matches = data.get("matches")
+          if not isinstance(matches, list):
+              raise SystemExit("BŁĄD: pole matches nie jest listą")
+          if data.get("count") != len(matches):
+              raise SystemExit("BŁĄD: count nie zgadza się z liczbą meczów")
+
+          stamp = data.get("generatedAt")
+          if not stamp:
+              raise SystemExit("BŁĄD: brak generatedAt")
+          generated = datetime.fromisoformat(stamp.replace("Z", "+00:00"))
+          age_hours = (datetime.now(timezone.utc) - generated.astimezone(timezone.utc)).total_seconds() / 3600
+          if age_hours < -0.25 or age_hours > 24:
+              raise SystemExit(f"BŁĄD: dane mają nieprawidłowy wiek ({age_hours:.1f} h)")
+
+          required = ("home", "away", "date", "time")
+          for index, match in enumerate(matches):
+              missing = [key for key in required if not match.get(key)]
+              if missing:
+                  raise SystemExit(f"BŁĄD: mecz {index} nie ma pól: {', '.join(missing)}")
+
+          html = Path("index.html").read_text(encoding="utf-8")
+          for required_id in ("page-analyze", "page-stats", "page-history", "page-coupon", "page-live"):
+              if f'id="{required_id}"' not in html:
+                  raise SystemExit(f"BŁĄD: brak sekcji #{required_id} w index.html")
+
+          print(f"OK: {len(matches)} meczów; dane mają {age_hours:.2f} h; podstawowe sekcje strony istnieją.")
+          PY
+
+      - name: Sprawdź składnię JavaScript w index.html
+        run: |
+          python - <<'PY'
+          from html.parser import HTMLParser
+          from pathlib import Path
+
+          class ScriptExtractor(HTMLParser):
+              def __init__(self):
+                  super().__init__()
+                  self.in_script = False
+                  self.external = False
+                  self.parts = []
+                  self.current = []
+
+              def handle_starttag(self, tag, attrs):
+                  if tag == "script":
+                      attrs = dict(attrs)
+                      self.in_script = True
+                      self.external = bool(attrs.get("src"))
+                      self.current = []
+
+              def handle_data(self, data):
+                  if self.in_script and not self.external:
+                      self.current.append(data)
+
+              def handle_endtag(self, tag):
+                  if tag == "script" and self.in_script:
+                      if not self.external:
+                          self.parts.append("".join(self.current))
+                      self.in_script = False
+                      self.external = False
+                      self.current = []
+
+          parser = ScriptExtractor()
+          parser.feed(Path("index.html").read_text(encoding="utf-8"))
+          Path("/tmp/goal-predictor-inline.js").write_text("\n;\n".join(parser.parts), encoding="utf-8")
+          print(f"Wyodrębniono {len(parser.parts)} skryptów inline.")
+          PY
+          node --check /tmp/goal-predictor-inline.js
