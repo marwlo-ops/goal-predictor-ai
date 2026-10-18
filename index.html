@@ -894,7 +894,20 @@ const leagueNames = {
   ELC: "Championship",
   BSA: "Brasileirao",
   EC: "Mistrzostwa Europy",
-  WC: "Mistrzostwa Świata"
+  WC: "Mistrzostwa Świata",
+  EL: "Liga Europy",
+  ECL: "Liga Konferencji",
+  BL2: "2. Bundesliga",
+  BL3: "3. Liga (Niemcy)",
+  SB: "Serie B",
+  SD: "LaLiga 2",
+  FL2: "Ligue 2",
+  EL1: "League One",
+  FAC: "Puchar Anglii",
+  DFB: "Puchar Niemiec",
+  CDR: "Puchar Króla",
+  GSL: "Liga grecka",
+  MLS: "MLS"
 };
 
 const leagueFilters = {
@@ -1021,6 +1034,27 @@ function dateLabel(match) {
   });
 }
 
+
+function buildLeagueTabs() {
+  const container = document.getElementById("leagueTabs");
+  const existing = new Set(Array.from(container.querySelectorAll("[data-league]")).map(button => button.dataset.league));
+  const leagues = [...new Set(matches.map(match => match.league).filter(Boolean))].sort((a,b) =>
+    (leagueNames[a] || a).localeCompare(leagueNames[b] || b, "pl")
+  );
+  for (const code of leagues) {
+    if (existing.has(code)) continue;
+    const button = document.createElement("button");
+    button.className = "tab";
+    button.dataset.league = code;
+    button.textContent = leagueNames[code] || matches.find(match => match.league === code)?.leagueName || code;
+    button.addEventListener("click", () => {
+      activeLeagueFilter = code;
+      container.querySelectorAll("[data-league]").forEach(tab => tab.classList.toggle("active", tab === button));
+      renderMatches();
+    });
+    container.appendChild(button);
+  }
+}
 function matchId(match) {
   return [match.date || match.kickoff || "", match.time || "", match.home || "", match.away || ""].join("|");
 }
@@ -1036,8 +1070,8 @@ function filteredMatches() {
   let result = matches;
   if (activeLeagueFilter === "other") result = result.filter(match => !["PL", "PD", "SA"].includes(match.league));
   else if (activeLeagueFilter !== "all") {
-    const codes = leagueFilters[activeLeagueFilter] || [];
-    result = result.filter(match => codes.includes(match.league));
+    const codes = leagueFilters[activeLeagueFilter];
+    result = result.filter(match => codes ? codes.includes(match.league) : match.league === activeLeagueFilter);
   }
   if (favoritesOnly) result = result.filter(match => favoriteIds.has(matchId(match)));
   if (searchQuery) {
@@ -1218,6 +1252,7 @@ document.getElementById("liveSearch").addEventListener("input", event => {
 });
 document.getElementById("refreshLive").addEventListener("click", loadLiveScores);
 loadLiveScores();
+setInterval(loadLiveScores, 60000);
 persistTracked();
 
 function showPage(name) {
@@ -1317,6 +1352,7 @@ async function loadPublishedData() {
 
     const payload = await response.json();
     matches = Array.isArray(payload.matches) ? payload.matches : [];
+    buildLeagueTabs();
     document.getElementById("statMatches").textContent = matches.length;
 
     const leagueCount = new Set(matches.map(m => m.leagueName || m.league).filter(Boolean)).size;
