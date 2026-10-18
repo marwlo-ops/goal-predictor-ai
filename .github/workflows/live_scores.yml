@@ -1,0 +1,54 @@
+name: Live Football Scores
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/update_live.py"
+      - ".github/workflows/live_scores.yml"
+  schedule:
+    - cron: "*/10 * * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: goal-predictor-live-scores
+  cancel-in-progress: false
+
+jobs:
+  update-live:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pobierz repozytorium
+        uses: actions/checkout@v4
+      - name: Uruchom Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Pobierz wyniki na żywo
+        env:
+          FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
+        run: python scripts/update_live.py
+      - name: Sprawdź dane live
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          data = json.loads(Path("data/live.json").read_text(encoding="utf-8"))
+          assert isinstance(data.get("matches"), list)
+          assert data.get("count") == len(data["matches"])
+          print(f"OK: {len(data['matches'])} meczów live")
+          PY
+      - name: Zapisz wyniki live
+        run: |
+          git config user.name "Goal Predictor Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/live.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Aktualizacja wyników na żywo"
+            git push
+          else
+            echo "Brak zmian w wynikach live."
+          fi
