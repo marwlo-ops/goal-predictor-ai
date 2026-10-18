@@ -1,0 +1,46 @@
+name: Validate Goal Predictor AI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pobierz repozytorium
+        uses: actions/checkout@v4
+
+      - name: Uruchom Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Sprawdź składnię Pythona
+        run: python -m py_compile scripts/update_predictions.py
+
+      - name: Sprawdź JSON z prognozami
+        run: python -m json.tool data/latest.json > /dev/null
+
+      - name: Sprawdź JavaScript aplikacji
+        run: |
+          python - <<'PY'
+          import re
+          from pathlib import Path
+
+          html = Path("index.html").read_text(encoding="utf-8")
+          scripts = re.findall(r"<script\b[^>]*>([\s\S]*?)</script>", html, re.IGNORECASE)
+          if len(scripts) != 1:
+              raise SystemExit(f"Oczekiwano jednego skryptu aplikacji, znaleziono: {len(scripts)}")
+          Path("/tmp/goal-predictor-index.js").write_text(scripts[0], encoding="utf-8")
+          PY
+          node --check /tmp/goal-predictor-index.js
+          node --check sw.js
+
+      - name: Sprawdź składnię workflow publikacji
+        run: ruby -e 'require "yaml"; YAML.load_file(".github/workflows/publish.yml")'
