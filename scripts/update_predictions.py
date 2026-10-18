@@ -315,7 +315,7 @@ def main():
 
     print(f"Od: {start} do: {end}")
     print("Strefa czasowa: Europe/Warsaw")
-    print("Zakres godzin: cała doba")
+    print("Zakres godzin: 15:00–22:00 czasu Europe/Warsaw")
     print(f"Rozgrywki do sprawdzenia: {len(LEAGUES)}")
 
     if not TOKEN:
@@ -359,6 +359,10 @@ def main():
         if not (date_from <= kickoff_dt.date() <= date_to):
             continue
 
+        kickoff_time = kickoff_dt.strftime("%H:%M")
+        if not ("15:00" <= kickoff_time <= "22:00"):
+            continue
+
         home = (match.get("homeTeam") or {}).get("name")
         away = (match.get("awayTeam") or {}).get("name")
         if not home or not away:
@@ -376,6 +380,14 @@ def main():
         })
 
     selected.sort(key=lambda m: (m["kickoff"], m["leagueName"]))
+
+    # Nie nadpisuj ostatnich poprawnych danych pustym wynikiem, gdy API terminarzy zawiodło.
+    schedule_errors = [item for item in diagnostics if "BŁĄD TERMINARZA" in item]
+    if not selected and schedule_errors:
+        raise RuntimeError(
+            "Nie znaleziono meczów, a co najmniej jedno zapytanie terminarza zakończyło się błędem. "
+            "Przerywam, aby nie opublikować pustych lub niewiarygodnych danych."
+        )
 
     tables = {}
     for code in sorted({m["league"] for m in selected}):
@@ -435,7 +447,7 @@ def main():
         "dateFrom": start,
         "dateTo": end,
         "timezone": "Europe/Warsaw",
-        "filter": {"from": "00:00", "to": "23:59"},
+        "filter": {"from": "15:00", "to": "22:00"},
         "count": len(predictions),
         "matches": predictions,
         "diagnostics": diagnostics,
@@ -451,7 +463,7 @@ def main():
         encoding="utf-8",
     )
 
-    print(f"Łącznie meczów na 3 dni: {len(predictions)}")
+    print(f"Łącznie meczów w zakresie 15:00–22:00 na 3 dni: {len(predictions)}")
     print(
         "Mecze z obliczonymi prognozami: "
         f"{sum(m['probabilities'] is not None for m in predictions)}"
