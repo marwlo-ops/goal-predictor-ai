@@ -642,6 +642,40 @@ form {
 #loginModal .card{border-radius:26px;background:linear-gradient(145deg,#18263a,#101827);border-color:#40506a}
 #loginModal .field input{border-radius:15px}
 @media(min-width:650px){.navinner{justify-content:center}.navitem{flex:1;max-width:130px}}
+
+/* Dashboard refresh */
+:root{--bg:#070b12;--panel:#101827;--panel2:#17243a;--line:#293951;--text:#f4f7fc;--muted:#9aaac0;--green:#c4ff78;--blue:#7ddcff;--orange:#ffce80;--radius:22px}
+body{background:radial-gradient(ellipse at 12% 0%,#173044 0,transparent 34%),radial-gradient(ellipse at 90% 20%,#18291f 0,transparent 28%),var(--bg)}
+.hero{background:linear-gradient(120deg,#183447 0%,#13261f 58%,#1b2638 100%);border-color:#38564e;min-height:205px;display:flex;flex-direction:column;justify-content:center}
+.hero:before{content:"MATCH INTELLIGENCE";position:absolute;right:18px;top:17px;font-size:9px;letter-spacing:2px;font-weight:900;color:#d8e7f0;opacity:.55}
+.hero:after{content:"⚽";right:15px;bottom:-22px;font-size:clamp(105px,28vw,185px);opacity:.12;filter:drop-shadow(0 8px 24px #0008)}
+.hero h2{max-width:510px;font-size:clamp(28px,7vw,42px)}
+.card{background:linear-gradient(150deg,#141f31,#0c1421 100%);border-color:#293951;border-radius:22px;box-shadow:0 12px 28px #00000022}
+.matchlist .card{position:relative;overflow:hidden}
+.matchlist .card:before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#c4ff78,#7ddcff 65%,transparent)}
+.prob{border-radius:16px;background:linear-gradient(160deg,#0a111c,#111d2c);padding:13px 4px}
+.prob:first-child b{color:#c4ff78}.prob:nth-child(2) b{color:#ffce80}.prob:nth-child(3) b{color:#7ddcff}
+.prob span{display:block;line-height:1.4;margin-top:3px}
+.smallbtn,.primary,.secondary,.tab{transition:transform .16s ease,border-color .16s ease,background .16s ease}
+.smallbtn{border-radius:13px}.notice{border-radius:17px}
+.bottomnav{padding-top:8px;background:#080e18ed;border-color:#27364a}
+.navinner{max-width:100%;overflow-x:auto;justify-content:flex-start;scrollbar-width:none}
+.navinner::-webkit-scrollbar{display:none}
+.navitem{flex:0 0 78px;min-width:78px;max-width:none;border-radius:15px;padding:9px 4px}
+.navitem strong{font-size:21px}
+.navitem.active{background:linear-gradient(180deg,#c4ff7818,#c4ff7808);outline:1px solid #c4ff7820}
+.metric{border-radius:19px;background:linear-gradient(145deg,#17243a,#101827)}
+#loginModal .card{border-radius:28px;background:linear-gradient(145deg,#192941,#0d1522);border-color:#40506a}
+#searchMatches{width:100%;padding:13px 16px;border:1px solid var(--line);border-radius:15px;background:#0c1421;color:var(--text);outline:none}
+#searchMatches:focus{border-color:var(--green);box-shadow:0 0 0 3px #c4ff7818}
+.quickstats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:0 0 16px}
+.quickstat{padding:12px;border:1px solid #2b3b51;border-radius:16px;background:linear-gradient(145deg,#131f30,#0c1420)}
+.quickstat strong{display:block;font-size:19px;letter-spacing:-.5px}.quickstat span{font-size:10px;color:var(--muted)}
+.match-tools{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;margin:0 0 14px}
+.favbtn{border:1px solid #34445a;background:#101827;color:#9aaac0;border-radius:13px;padding:9px 11px;cursor:pointer}
+.favbtn.saved{color:#c4ff78;border-color:#587440;background:#18271d}
+@media(min-width:650px){.navinner{justify-content:center}.navitem{flex:1;max-width:130px}.hero{min-height:240px}.matchlist{gap:15px}.quickstats{max-width:600px}}
+@media(max-width:370px){.hero:before{display:none}.quickstat{padding:10px 8px}.quickstat strong{font-size:17px}.navitem{flex-basis:72px;min-width:72px}}
 </style>
 
 </head>
@@ -682,6 +716,16 @@ form {
     <ul id="aiInsights" class="muted" style="padding-left:18px;margin-bottom:0"></ul>
   </div>
 
+  
+  <div class="quickstats">
+    <div class="quickstat"><strong id="quickMatchCount">—</strong><span>MECZE</span></div>
+    <div class="quickstat"><strong id="quickLeagueCount">—</strong><span>LIGI</span></div>
+    <div class="quickstat"><strong id="quickFavCount">0</strong><span>OBSERWOWANE</span></div>
+  </div>
+  <div class="match-tools">
+    <input id="searchMatches" type="search" placeholder="Szukaj drużyny lub ligi…" aria-label="Szukaj drużyny lub ligi">
+    <button class="secondary" id="showFavorites" type="button">☆ Obserwowane</button>
+  </div>
   <div class="matchlist" id="matchList"></div>
 
   <div class="notice" id="dataNotice">
@@ -754,7 +798,7 @@ form {
   <div class="section-head"><h3>Ustawienia</h3></div>
   <div class="card">
     <h4>Goal Predictor AI</h4>
-    <p class="muted">Wersja 0.2 • aplikacja webowa.</p>
+    <p class="muted">Wersja 0.4 • mobilny panel analityczny.</p>
     <button id="installBtn" class="primary" style="width:100%;display:none">Zainstaluj aplikację</button>
     <p class="muted" id="installHelp">Jeśli instalacja nie pojawi się automatycznie, otwórz menu przeglądarki i wybierz „Dodaj do ekranu głównego”.</p>
   </div>
@@ -762,6 +806,7 @@ form {
     <h4>Źródło danych</h4>
     <p class="muted">Mecze są pobierane z pliku data/latest.json publikowanego przez GitHub Actions. Dane aktualizują się po zakończeniu zadania.</p>
   </div>
+</section>
 
 <section class="page" id="page-stats">
   <div class="section-head"><h3>Centrum statystyk</h3><span class="tag">BETA</span></div>
@@ -818,6 +863,9 @@ form {
 let matches = [];
 let dataIsLive = false;
 let activeLeagueFilter = "all";
+let favoritesOnly = false;
+let searchQuery = "";
+let favoriteIds = new Set(JSON.parse(localStorage.getItem("gpa_favorites") || "[]"));
 let deferredPrompt = null;
 
 const leagueNames = {
@@ -959,17 +1007,27 @@ function dateLabel(match) {
   });
 }
 
+function matchId(match) {
+  return [match.date || match.kickoff || "", match.time || "", match.home || "", match.away || ""].join("|");
+}
+function persistFavorites() {
+  localStorage.setItem("gpa_favorites", JSON.stringify([...favoriteIds]));
+  document.getElementById("quickFavCount").textContent = favoriteIds.size;
+}
 function filteredMatches() {
-  if (activeLeagueFilter === "all") return matches;
-
-  if (activeLeagueFilter === "other") {
-    return matches.filter(match =>
-      !["PL", "PD", "SA"].includes(match.league)
-    );
+  let result = matches;
+  if (activeLeagueFilter === "other") result = result.filter(match => !["PL", "PD", "SA"].includes(match.league));
+  else if (activeLeagueFilter !== "all") {
+    const codes = leagueFilters[activeLeagueFilter] || [];
+    result = result.filter(match => codes.includes(match.league));
   }
-
-  const codes = leagueFilters[activeLeagueFilter] || [];
-  return matches.filter(match => codes.includes(match.league));
+  if (favoritesOnly) result = result.filter(match => favoriteIds.has(matchId(match)));
+  if (searchQuery) {
+    const query = searchQuery.toLocaleLowerCase("pl-PL");
+    result = result.filter(match => [match.home, match.away, match.leagueName, leagueNames[match.league], match.league]
+      .filter(Boolean).some(value => String(value).toLocaleLowerCase("pl-PL").includes(query)));
+  }
+  return result;
 }
 
 function renderMatches() {
@@ -1023,7 +1081,10 @@ function renderMatches() {
 
         <div class="match-foot">
           <span class="muted">O1,5: <b class="green">${over15}</b> · BTTS: <b class="green">${btts}</b></span>
-          <button class="smallbtn" data-analyze="${index}" ${hasXg ? "" : "disabled"}>Analizuj →</button>
+          <div style="display:flex;gap:6px;align-items:center">
+            <button class="favbtn ${favoriteIds.has(matchId(match)) ? "saved" : ""}" data-favorite="${escapeHtml(matchId(match))}" aria-label="Dodaj do obserwowanych">${favoriteIds.has(matchId(match)) ? "★" : "☆"}</button>
+            <button class="smallbtn" data-analyze="${index}" ${hasXg ? "" : "disabled"}>Analizuj →</button>
+          </div>
         </div>
 
                 ${quality ? `<p class="muted" style="margin:10px 0 0">${escapeHtml(quality)}</p>` : ""}
@@ -1033,6 +1094,15 @@ function renderMatches() {
       </article>`;
   }).join("");
 
+
+  list.querySelectorAll("[data-favorite]").forEach(button => {
+    button.addEventListener("click", () => {
+      const id = button.dataset.favorite;
+      if (favoriteIds.has(id)) favoriteIds.delete(id); else favoriteIds.add(id);
+      persistFavorites();
+      renderMatches();
+    });
+  });
   list.querySelectorAll("[data-analyze]").forEach(button => {
     button.addEventListener("click", () => {
       const match = items[Number(button.dataset.analyze)];
@@ -1064,6 +1134,18 @@ document.querySelectorAll("[data-league]").forEach(button => {
     renderMatches();
   });
 });
+
+
+document.getElementById("searchMatches").addEventListener("input", event => {
+  searchQuery = event.target.value.trim();
+  renderMatches();
+});
+document.getElementById("showFavorites").addEventListener("click", () => {
+  favoritesOnly = !favoritesOnly;
+  document.getElementById("showFavorites").textContent = favoritesOnly ? "← Wszystkie mecze" : "☆ Obserwowane";
+  renderMatches();
+});
+persistFavorites();
 
 function showPage(name) {
   document.querySelectorAll(".page").forEach(page => {
@@ -1163,7 +1245,11 @@ async function loadPublishedData() {
     const payload = await response.json();
     matches = Array.isArray(payload.matches) ? payload.matches : [];
     document.getElementById("statMatches").textContent = matches.length;
-    document.getElementById("statLeagues").textContent = new Set(matches.map(m => m.leagueName || m.league).filter(Boolean)).size;
+
+    const leagueCount = new Set(matches.map(m => m.leagueName || m.league).filter(Boolean)).size;
+    document.getElementById("statLeagues").textContent = leagueCount;
+    document.getElementById("quickMatchCount").textContent = matches.length;
+    document.getElementById("quickLeagueCount").textContent = leagueCount;
 
     const generated = payload.generatedAt ? new Date(payload.generatedAt) : null;
     const generatedMs = generated ? generated.getTime() : NaN;
