@@ -35,6 +35,3 @@ Model Poissona przelicza rozkłady liczby goli na 1X2, over 1.5, over 2.5 i BTTS
 
 ## Prywatność i bezpieczeństwo
 Nigdy nie wpisuj tokenów API w `index.html` ani nie commituj ich w kodzie. Używaj GitHub Secrets. W przypadku publicznego repozytorium wyniki prognoz w `data/latest.json` są publiczne.
-
-## Kontrola dostępu do zapisu
-Test integracji GitHub: aktualizacja README przez połączone narzędzie GitHub.
