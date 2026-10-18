@@ -2,6 +2,11 @@ name: Daily Football Predictions
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/update_predictions.py"
+      - ".github/workflows/publish.yml"
   schedule:
     - cron: "17 * * * *"
 
