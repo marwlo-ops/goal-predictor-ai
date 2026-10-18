@@ -1,0 +1,55 @@
+name: Historical Football Results
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/update_results.py"
+      - ".github/workflows/historical_results.yml"
+  schedule:
+    - cron: "25 5 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: goal-predictor-historical-results
+  cancel-in-progress: false
+
+jobs:
+  update-results:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pobierz repozytorium
+        uses: actions/checkout@v4
+      - name: Uruchom Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Pobierz wyniki z ostatnich 7 dni
+        env:
+          FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
+        run: python scripts/update_results.py
+      - name: Waliduj dane
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          data = json.loads(Path("data/results.json").read_text(encoding="utf-8"))
+          assert isinstance(data.get("matches"), list)
+          assert data.get("count") == len(data["matches"])
+          assert all(m.get("homeGoals") is not None and m.get("awayGoals") is not None for m in data["matches"])
+          print(f"OK: {data['count']} wyników historycznych")
+          PY
+      - name: Zapisz historię
+        run: |
+          git config user.name "Goal Predictor Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/results.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Aktualizacja wyników historycznych"
+            git push
+          else
+            echo "Brak zmian w wynikach."
+          fi
