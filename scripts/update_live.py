@@ -11,7 +11,7 @@ BASE_URL = "https://api.football-data.org/v4"
 TOKEN = os.environ.get("FOOTBALL_DATA_TOKEN", "").strip()
 WARSAW = ZoneInfo("Europe/Warsaw")
 OUTPUT = Path("data/live.json")
-LIVE_STATUSES = "IN_PLAY,PAUSED,EXTRA_TIME,PENALTY_SHOOTOUT"
+LIVE_STATUSES = "LIVE"
 
 
 def main():
