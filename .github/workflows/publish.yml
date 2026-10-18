@@ -8,6 +8,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: goal-predictor-publish
+  cancel-in-progress: false
+
 jobs:
   publish:
     runs-on: ubuntu-latest
@@ -21,23 +25,63 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Sprawdź godzinę w Polsce
+      - name: Sprawdź, czy publikacja jest potrzebna
         id: timecheck
         run: |
           HOUR=$(TZ=Europe/Warsaw date +%H)
-          MIN=$(TZ=Europe/Warsaw date +%M)
+          TODAY=$(TZ=Europe/Warsaw date +%F)
+          GENERATED_DATE=$(python -c 'import json; from pathlib import Path; p=Path("data/latest.json"); print((json.loads(p.read_text(encoding="utf-8")).get("generatedAt") or "")[:10] if p.exists() else "")' 2>/dev/null || true)
 
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || { [ "$HOUR" = "13" ] && [ "$MIN" -lt "25" ]; }; then
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "run=true" >> "$GITHUB_OUTPUT"
+            echo "reason=Ręczne uruchomienie" >> "$GITHUB_OUTPUT"
+          elif [ "$HOUR" -ge "13" ] && [ "$GENERATED_DATE" != "$TODAY" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+            echo "reason=Brak dzisiejszej publikacji; ponawiam próbę" >> "$GITHUB_OUTPUT"
           else
             echo "run=false" >> "$GITHUB_OUTPUT"
+            echo "reason=Dane są już opublikowane dzisiaj albo nie nadeszła jeszcze pora publikacji" >> "$GITHUB_OUTPUT"
           fi
+
+          echo "Godzina w Polsce: $HOUR"
+          echo "Dzisiejsza data: $TODAY"
+          echo "Data ostatniej publikacji: ${GENERATED_DATE:-brak}"
+          echo "Decyzja: $(grep '^run=' "$GITHUB_OUTPUT" | tail -n 1)"
 
       - name: Generuj prognozy
         if: steps.timecheck.outputs.run == 'true'
         env:
           FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
         run: python scripts/update_predictions.py
+
+      - name: Sprawdź wygenerowane dane
+        if: steps.timecheck.outputs.run == 'true'
+        run: |
+          python - <<'PY'
+          import json
+          from datetime import datetime
+          from pathlib import Path
+          from zoneinfo import ZoneInfo
+
+          path = Path("data/latest.json")
+          data = json.loads(path.read_text(encoding="utf-8"))
+          now_date = datetime.now(ZoneInfo("Europe/Warsaw")).date().isoformat()
+          generated = data.get("generatedAt", "")
+          if generated[:10] != now_date:
+              raise SystemExit(f"Nieaktualna data generatedAt: {generated}; oczekiwano {now_date}")
+          matches = data.get("matches")
+          if not isinstance(matches, list):
+              raise SystemExit("Pole matches nie jest listą")
+          outside = [
+              m for m in matches
+              if not ("15:00" <= str(m.get("time", "")) <= "22:00")
+          ]
+          if outside:
+              raise SystemExit(f"Znaleziono {len(outside)} meczów poza godzinami 15:00–22:00")
+          if data.get("count") != len(matches):
+              raise SystemExit("Pole count nie zgadza się z liczbą meczów")
+          print(f"OK: {len(matches)} meczów, generatedAt={generated}, zakres 15:00–22:00")
+          PY
 
       - name: Zapisz wyniki
         if: steps.timecheck.outputs.run == 'true'
@@ -48,4 +92,14 @@ jobs:
           if ! git diff --cached --quiet; then
             git commit -m "Aktualizacja prognoz meczowych"
             git push
+          else
+            echo "Brak zmian w danych do zapisania."
           fi
+
+      - name: Podsumowanie
+        if: always()
+        run: |
+          echo "## Publikacja Goal Predictor AI" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Decyzja: ${{ steps.timecheck.outputs.run || 'brak' }}" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Powód: ${{ steps.timecheck.outputs.reason || 'sprawdź logi wcześniejszych kroków' }}" >> "$GITHUB_STEP_SUMMARY"
