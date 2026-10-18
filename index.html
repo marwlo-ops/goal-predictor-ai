@@ -1188,10 +1188,17 @@ function renderMatches() {
       if (!match || !probs || !select) return;
       const market = marketOptions(match, probs)[Number(select.value)];
       if (!market) return;
-      const key = matchId(match) + "|" + market.key;
+      const fixtureKey = matchId(match);
+      const key = fixtureKey + "|" + market.key;
       const existing = couponPicks.findIndex(pick => pick.key === key);
-      if (existing >= 0) couponPicks.splice(existing, 1);
-      else couponPicks.push({key, match: match.home + " – " + match.away, market: market.label, odds: market.odds});
+      if (existing >= 0) {
+        couponPicks.splice(existing, 1);
+      } else if (couponPicks.some(pick => pick.fixtureKey === fixtureKey)) {
+        alert("Na kuponie może być tylko jeden rynek z danego meczu. Usuń poprzedni typ, aby wybrać inny.");
+        return;
+      } else {
+        couponPicks.push({key, fixtureKey, match: match.home + " – " + match.away, market: market.label, odds: market.odds, probability: market.probability});
+      }
       renderCoupon();
     });
   });
@@ -1282,10 +1289,12 @@ function renderCoupon() {
     couponPicks.splice(Number(button.dataset.removePick), 1); renderCoupon();
   }));
   const combined = couponPicks.reduce((total, pick) => total * pick.odds, 1);
+  const chance = couponPicks.reduce((total, pick) => total * (Number(pick.probability) || 0), 1);
   const stake = Math.max(0, Number(document.getElementById("couponStake").value) || 0);
   const tax = Math.max(0, Math.min(100, Number(document.getElementById("couponTax").value) || 0));
   const payout = stake * (1 - tax / 100) * combined;
   document.getElementById("couponOdds").textContent = combined.toFixed(2);
+  document.getElementById("couponChance").textContent = couponPicks.length ? (chance * 100).toLocaleString("pl-PL", {maximumFractionDigits:2}) + "%" : "—";
   document.getElementById("couponPayout").textContent = payout.toLocaleString("pl-PL", {style:"currency",currency:"PLN"});
   document.getElementById("couponProfit").textContent = "Zysk netto: " + (payout - stake).toLocaleString("pl-PL", {style:"currency",currency:"PLN"}) + " · podatek liczony od stawki";
 }
