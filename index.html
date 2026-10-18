@@ -9,47 +9,6 @@
 <link rel="manifest" href="./manifest.json">
 <title>Goal Predictor AI</title>
 <style>
-:root{--bg:#0b1117;--panel:#131d26;--panel2:#182530;--line:#273744;--text:#f3f7fa;--muted:#9eafbc;--green:#b7f36b;--green2:#263a20;--blue:#7fc8ff;--orange:#ffc777;--red:#ff8d8d}
-*{box-sizing:border-box}
-body{margin:0;background:radial-gradient(ellipse at top,#14232d 0,#0b1117 48%);color:var(--text);font:15px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;padding-bottom:90px}
-header{padding:22px 18px 14px;display:flex;justify-content:space-between;align-items:center;gap:12px;max-width:1000px;margin:auto}
-.brand{display:flex;align-items:center;gap:10px}
-.logo{width:44px;height:44px;border-radius:14px;background:var(--green);color:#101820;display:grid;place-items:center;font-size:23px;font-weight:900}
-.brand h1{font-size:20px;margin:0;letter-spacing:-.4px}
-.brand p{margin:2px 0 0;color:var(--muted);font-size:11px}
-.pill{border:1px solid #39513a;color:var(--green);background:#15251a;border-radius:99px;padding:7px 11px;font-size:11px;white-space:nowrap}
-main{max-width:1000px;margin:auto;padding:0 16px}
-.hero{padding:22px;background:linear-gradient(135deg,#1b2c36,#132019);border:1px solid #30443b;border-radius:22px;margin-bottom:18px;position:relative;overflow:hidden}
-.hero:after{content:"⚽";position:absolute;right:12px;bottom:-28px;font-size:110px;opacity:.08}
-.eyebrow{font-size:11px;letter-spacing:1.3px;text-transform:uppercase;color:var(--green);font-weight:800}
-.hero h2{font-size:28px;line-height:1.15;margin:9px 0}
-.hero p{margin:0;color:#b7c5ce;max-width:560px;font-size:14px}
-.section-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:22px 2px 10px}
-.section-head h3{margin:0;font-size:17px}
-.muted{color:var(--muted);font-size:12px}
-.tabs{display:flex;gap:7px;overflow:auto;margin:14px 0 16px;padding-bottom:4px}
-.tab{border:1px solid var(--line);background:var(--panel);color:var(--muted);padding:10px 14px;border-radius:99px;font-size:12px;white-space:nowrap;cursor:pointer}
-.tab.active{background:var(--green);border-color:var(--green);color:#101820;font-weight:800}
-.card{background:linear-gradient(145deg,#15212b,#111a22);border:1px solid var(--line);border-radius:18px;padding:15px;margin-bottom:11px;min-width:0}
-.match-top{display:flex;justify-content:space-between;gap:8px;align-items:center;color:var(--muted);font-size:11px}
-.league{color:var(--blue);font-weight:700}
-.teams{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:8px;margin:15px 0}
-.team{font-weight:750;font-size:14px;overflow-wrap:anywhere}
-.team:last-child{text-align:right}
-.vs{color:#8295a2;font-size:11px}
-.probrow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}
-.prob{background:#0e171e;border:1px solid #22323e;border-radius:11px;padding:10px 5px;text-align:center;min-width:0}
-.prob b{display:block;font-size:19px;overflow-wrap:anywhere}
-.prob span{color:var(--muted);font-size:10px}
-.green{color:var(--green)}
-.match-foot{display:flex;justify-content:space-between;align-items:center;margin-top:12px;gap:10px;flex-wrap:wrap}
-.smallbtn{border:1px solid #405543;color:var(--green);background:#18251d;border-radius:10px;padding:9px 11px;font-size:11px;font-weight:700;cursor:pointer}
-.smallbtn:disabled{opacity:.45;cursor:not-allowed}
-.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
-.metric{background:var(--panel);border:1px solid var(--line);border-radius:15px;padding:14px}
-.metric .label{font-size:11px;color:var(--muted)}
-
-<style>
 :root {
   color-scheme: dark;
   --bg: #080d16;
@@ -674,6 +633,15 @@ form {
     transition: none !important;
   }
 }
+
+/* Odświeżony, mniej kanciasty interfejs mobilny */
+.navinner{max-width:100%;overflow-x:auto;justify-content:flex-start;scrollbar-width:none}
+.navinner::-webkit-scrollbar{display:none}
+.navitem{flex:0 0 76px;min-width:76px}
+.bottomnav{padding-left:7px;padding-right:7px}
+#loginModal .card{border-radius:26px;background:linear-gradient(145deg,#18263a,#101827);border-color:#40506a}
+#loginModal .field input{border-radius:15px}
+@media(min-width:650px){.navinner{justify-content:center}.navitem{flex:1;max-width:130px}}
 </style>
 
 </head>
@@ -683,7 +651,7 @@ form {
     <div class="logo">G</div>
     <div><h1>Goal Predictor AI</h1><p>ANALITYKA MECZÓW PIŁKARSKICH</p></div>
   </div>
-  <span class="pill">BETA • 0.2</span>
+  <div style="display:flex;align-items:center;gap:8px"><span class="pill">BETA • 0.3</span><button class="smallbtn" id="loginOpen" style="white-space:nowrap">Zaloguj się</button></div>
 </header>
 
 <main>
@@ -794,6 +762,24 @@ form {
     <h4>Źródło danych</h4>
     <p class="muted">Mecze są pobierane z pliku data/latest.json publikowanego przez GitHub Actions. Dane aktualizują się po zakończeniu zadania.</p>
   </div>
+
+<section class="page" id="page-stats">
+  <div class="section-head"><h3>Centrum statystyk</h3><span class="tag">BETA</span></div>
+  <div class="grid2">
+    <div class="metric"><div class="label">Mecze w danych</div><div class="value" id="statMatches">—</div><div class="hint">Załadowane prognozy</div></div>
+    <div class="metric"><div class="label">Ligi</div><div class="value" id="statLeagues">—</div><div class="hint">Unikalne rozgrywki</div></div>
+  </div>
+  <div class="card"><h4>Jak czytać dane?</h4><p class="muted">Sprawdzaj datę aktualizacji, jakość danych oraz historię obu drużyn. Wysokie prawdopodobieństwo nie oznacza pewnego wyniku.</p></div>
+</section>
+
+<section class="page" id="page-favorites">
+  <div class="section-head"><h3>Obserwowane mecze</h3><span class="tag">TWOJA LISTA</span></div>
+  <div class="card"><p class="muted">Dodawanie meczów do obserwowanych będzie dostępne w kolejnej iteracji. Na razie możesz filtrować mecze według ligi na stronie głównej.</p></div>
+</section>
+
+<section class="page" id="page-account">
+  <div class="section-head"><h3>Konto testowe</h3><span class="tag">DEMO</span></div>
+  <div class="card" id="accountPanel"><h4>Nie jesteś zalogowany</h4><p class="muted">Zaloguj się kontem demonstracyjnym, aby przetestować widok konta. To lokalna symulacja — nie chroni danych ani funkcji PRO.</p><button class="primary" onclick="document.getElementById('loginOpen').click()">Otwórz logowanie</button></div>
 </section>
 
 <p class="footnote">Goal Predictor AI to narzędzie analityczne, nie gwarancja wyniku ani zysku. Graj odpowiedzialnie.</p>
@@ -803,10 +789,28 @@ form {
   <div class="navinner">
     <button class="navitem active" data-page="home"><strong>⌂</strong>Główna</button>
     <button class="navitem" data-page="analyze"><strong>⌁</strong>Analizator</button>
-    <button class="navitem" data-page="method"><strong>▥</strong>Model</button>
+    <button class="navitem" data-page="stats"><strong>▤</strong>Statystyki</button>
+    <button class="navitem" data-page="favorites"><strong>☆</strong>Obserwowane</button>
+    <button class="navitem" data-page="method"><strong>◈</strong>Model</button>
+    <button class="navitem" data-page="account"><strong>♙</strong>Konto</button>
     <button class="navitem" data-page="settings"><strong>⚙</strong>Ustawienia</button>
   </div>
 </nav>
+
+<div id="loginModal" style="display:none;position:fixed;inset:0;z-index:20;background:#050911d9;backdrop-filter:blur(12px);padding:22px;align-items:center;justify-content:center">
+  <div class="card" style="width:min(100%,390px);padding:24px;box-shadow:0 25px 80px #0009">
+    <div class="eyebrow">Dostęp testowy</div><h2 style="margin:8px 0 5px">Witaj ponownie</h2>
+    <p class="muted">Zaloguj się do demonstracyjnego konta.</p>
+    <form id="demoLoginForm">
+      <div class="field"><label for="demoUser">Login</label><input id="demoUser" autocomplete="username" placeholder="demo" required></div>
+      <div class="field"><label for="demoPass">Hasło testowe</label><input id="demoPass" type="password" autocomplete="current-password" placeholder="demo123" required></div>
+      <p id="loginError" style="display:none;color:var(--red);font-size:12px;margin:0">Nieprawidłowy login lub hasło.</p>
+      <button class="primary" type="submit">Zaloguj się</button>
+      <button class="secondary" type="button" id="loginClose">Wróć do strony</button>
+    </form>
+    <p class="muted" style="font-size:10px;margin-bottom:0">DEMO: login <b>demo</b>, hasło <b>demo123</b>. To nie jest prawdziwe zabezpieczenie konta.</p>
+  </div>
+</div>
 
 <script>
 "use strict";
@@ -1158,6 +1162,8 @@ async function loadPublishedData() {
 
     const payload = await response.json();
     matches = Array.isArray(payload.matches) ? payload.matches : [];
+    document.getElementById("statMatches").textContent = matches.length;
+    document.getElementById("statLeagues").textContent = new Set(matches.map(m => m.leagueName || m.league).filter(Boolean)).size;
 
     const generated = payload.generatedAt ? new Date(payload.generatedAt) : null;
     const generatedMs = generated ? generated.getTime() : NaN;
@@ -1220,6 +1226,40 @@ async function loadPublishedData() {
 
 calculate();
 loadPublishedData();
+
+
+const loginModal = document.getElementById("loginModal");
+const loginOpen = document.getElementById("loginOpen");
+const accountPanel = document.getElementById("accountPanel");
+function refreshDemoAccount(){
+  const user = localStorage.getItem("gpa_demo_user");
+  if(user){
+    loginOpen.textContent = "Konto: " + user;
+    accountPanel.innerHTML = '<h4>Zalogowano jako ' + escapeHtml(user) + '</h4><p class="muted">Tryb demonstracyjny aktywny na tym urządzeniu.</p><button class="secondary" id="demoLogout">Wyloguj</button>';
+    document.getElementById("demoLogout").addEventListener("click",()=>{localStorage.removeItem("gpa_demo_user");refreshDemoAccount();});
+  }else{
+    loginOpen.textContent = "Zaloguj się";
+    accountPanel.innerHTML = '<h4>Nie jesteś zalogowany</h4><p class="muted">Zaloguj się kontem demonstracyjnym, aby przetestować widok konta. To lokalna symulacja — nie chroni danych ani funkcji PRO.</p><button class="primary" id="accountLogin">Otwórz logowanie</button>';
+    document.getElementById("accountLogin").addEventListener("click",()=>loginModal.style.display="flex");
+  }
+}
+loginOpen.addEventListener("click",()=>loginModal.style.display="flex");
+document.getElementById("loginClose").addEventListener("click",()=>loginModal.style.display="none");
+loginModal.addEventListener("click",event=>{if(event.target===loginModal)loginModal.style.display="none";});
+document.getElementById("demoLoginForm").addEventListener("submit",event=>{
+  event.preventDefault();
+  const user=document.getElementById("demoUser").value.trim();
+  const pass=document.getElementById("demoPass").value;
+  if(user==="demo" && pass==="demo123"){
+    localStorage.setItem("gpa_demo_user","demo");
+    document.getElementById("loginError").style.display="none";
+    loginModal.style.display="none";
+    refreshDemoAccount();
+  }else{
+    document.getElementById("loginError").style.display="block";
+  }
+});
+refreshDemoAccount();
 
 const installBtn = document.getElementById("installBtn");
 
