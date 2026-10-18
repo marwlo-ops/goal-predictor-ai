@@ -85,8 +85,16 @@ def poisson_probability(lam, goals):
 
 
 def calculate_probabilities(home_xg, away_xg):
+    # Normalizujemy rozkłady obcięte do 0–9 goli, aby wszystkie rynki
+    # liczyły się z tej samej masy prawdopodobieństwa (bez utraty ogona Poissona).
     hp = [poisson_probability(home_xg, g) for g in range(10)]
     ap = [poisson_probability(away_xg, g) for g in range(10)]
+    home_total = sum(hp)
+    away_total = sum(ap)
+    if home_total <= 0 or away_total <= 0:
+        raise ValueError("Nieprawidłowe xG: suma prawdopodobieństw musi być dodatnia.")
+    hp = [p / home_total for p in hp]
+    ap = [p / away_total for p in ap]
     hw = draw = aw = over15 = over25 = btts = 0.0
 
     for h, ph in enumerate(hp):
