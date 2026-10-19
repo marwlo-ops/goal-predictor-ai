@@ -1,54 +1,9 @@
 {
-  "updatedAt": "2026-10-19T22:38:06.335991+02:00",
+  "updatedAt": "2026-10-19T23:08:35.560346+02:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 4,
+  "count": 1,
   "matches": [
-    {
-      "id": 558578,
-      "league": "SA",
-      "leagueName": "Serie A",
-      "home": "Parma Calcio 1913",
-      "away": "Torino FC",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 1,
-        "away": 3
-      },
-      "utcDate": "2026-10-19T18:45:00Z",
-      "updatedAt": "2026-10-19T20:37:10Z"
-    },
-    {
-      "id": 560606,
-      "league": "PL",
-      "leagueName": "Premier League",
-      "home": "Tottenham Hotspur FC",
-      "away": "Coventry City FC",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 2,
-        "away": 1
-      },
-      "utcDate": "2026-10-19T19:00:00Z",
-      "updatedAt": "2026-10-19T20:37:42Z"
-    },
-    {
-      "id": 564717,
-      "league": "PD",
-      "leagueName": "Primera Division",
-      "home": "Getafe CF",
-      "away": "Rayo Vallecano de Madrid",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 1,
-        "away": 1
-      },
-      "utcDate": "2026-10-19T19:00:00Z",
-      "updatedAt": "2026-10-19T20:37:42Z"
-    },
     {
       "id": 567271,
       "league": "PPL",
@@ -59,10 +14,10 @@
       "minute": null,
       "score": {
         "home": 1,
-        "away": 1
+        "away": 2
       },
       "utcDate": "2026-10-19T19:15:00Z",
-      "updatedAt": "2026-10-19T20:37:42Z"
+      "updatedAt": "2026-10-19T21:07:34Z"
     }
   ]
 }
