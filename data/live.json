@@ -1,23 +1,7 @@
 {
-  "updatedAt": "2026-10-19T23:08:35.560346+02:00",
+  "updatedAt": "2026-10-19T23:41:37.173881+02:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 1,
-  "matches": [
-    {
-      "id": 567271,
-      "league": "PPL",
-      "leagueName": "Primeira Liga",
-      "home": "Sporting Clube de Braga",
-      "away": "Gil Vicente FC",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 1,
-        "away": 2
-      },
-      "utcDate": "2026-10-19T19:15:00Z",
-      "updatedAt": "2026-10-19T21:07:34Z"
-    }
-  ]
+  "count": 0,
+  "matches": []
 }
