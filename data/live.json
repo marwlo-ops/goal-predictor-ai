@@ -1,23 +1,7 @@
 {
-  "updatedAt": "2026-10-19T01:41:40.380282+02:00",
+  "updatedAt": "2026-10-19T02:03:58.389226+02:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 1,
-  "matches": [
-    {
-      "id": 555048,
-      "league": "BSA",
-      "leagueName": "Campeonato Brasileiro Série A",
-      "home": "Clube do Remo",
-      "away": "RB Bragantino",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 0,
-        "away": 1
-      },
-      "utcDate": "2026-10-18T22:30:00Z",
-      "updatedAt": "2026-10-18T23:31:02Z"
-    }
-  ]
+  "count": 0,
+  "matches": []
 }
