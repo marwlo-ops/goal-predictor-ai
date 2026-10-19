@@ -1,23 +1,7 @@
 {
-  "updatedAt": "2026-10-19T20:07:08.301669+02:00",
+  "updatedAt": "2026-10-19T20:47:50.583152+02:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 1,
-  "matches": [
-    {
-      "id": 558576,
-      "league": "SA",
-      "leagueName": "Serie A",
-      "home": "AC Monza",
-      "away": "Cagliari Calcio",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 3,
-        "away": 0
-      },
-      "utcDate": "2026-10-19T16:30:00Z",
-      "updatedAt": "2026-10-19T18:06:46Z"
-    }
-  ]
+  "count": 0,
+  "matches": []
 }
