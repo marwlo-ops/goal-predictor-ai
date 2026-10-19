@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-10-18T23:46:48.997123+02:00",
-  "dateFrom": "2026-10-18",
-  "dateTo": "2026-10-20",
+  "generatedAt": "2026-10-19T14:51:36.951495+02:00",
+  "dateFrom": "2026-10-19",
+  "dateTo": "2026-10-21",
   "timezone": "Europe/Warsaw",
   "filter": {
     "from": "15:00",
     "to": "22:00"
   },
-  "count": 15,
+  "count": 25,
   "matches": [
     {
       "id": 558576,
@@ -2398,27 +2398,1197 @@
       "quality": "insufficient_data",
       "confidence": "Za mało danych do obliczenia prognozy",
       "modelStatus": "insufficient_data"
+    },
+    {
+      "id": 575368,
+      "league": "CL",
+      "leagueName": "Liga Mistrzów",
+      "date": "2026-10-21",
+      "time": "18:45",
+      "kickoff": "2026-10-21T18:45:00+02:00",
+      "home": "Como 1907",
+      "away": "Manchester United FC",
+      "history": {
+        "homeLast10": {
+          "matches": [
+            {
+              "date": "2026-10-14T16:45:00Z",
+              "home": "Feyenoord Rotterdam",
+              "away": "Como 1907",
+              "homeGoals": 3,
+              "awayGoals": 2,
+              "teamGoals": 2,
+              "conceded": 3,
+              "result": "L"
+            },
+            {
+              "date": "2026-09-10T19:00:00Z",
+              "home": "Como 1907",
+              "away": "RB Leipzig",
+              "homeGoals": 4,
+              "awayGoals": 1,
+              "teamGoals": 4,
+              "conceded": 1,
+              "result": "W"
+            }
+          ],
+          "stats": {
+            "played": 2,
+            "wins": 1,
+            "draws": 0,
+            "losses": 1,
+            "goalsFor": 6,
+            "goalsAgainst": 4,
+            "avgGoalsFor": 3.0,
+            "avgGoalsAgainst": 2.0,
+            "btts": 2,
+            "over15": 2,
+            "over25": 2
+          }
+        },
+        "awayLast10": {
+          "matches": [
+            {
+              "date": "2026-10-13T19:00:00Z",
+              "home": "Club Atlético de Madrid",
+              "away": "Manchester United FC",
+              "homeGoals": 2,
+              "awayGoals": 0,
+              "teamGoals": 0,
+              "conceded": 2,
+              "result": "L"
+            },
+            {
+              "date": "2026-09-10T19:00:00Z",
+              "home": "Manchester United FC",
+              "away": "Sabah FK",
+              "homeGoals": 4,
+              "awayGoals": 0,
+              "teamGoals": 4,
+              "conceded": 0,
+              "result": "W"
+            }
+          ],
+          "stats": {
+            "played": 2,
+            "wins": 1,
+            "draws": 0,
+            "losses": 1,
+            "goalsFor": 4,
+            "goalsAgainst": 2,
+            "avgGoalsFor": 2.0,
+            "avgGoalsAgainst": 1.0,
+            "btts": 0,
+            "over15": 2,
+            "over25": 1
+          }
+        },
+        "h2h": []
+      },
+      "hx": null,
+      "ax": null,
+      "probabilities": null,
+      "model": null,
+      "quality": "insufficient_data",
+      "confidence": "Za mało danych do obliczenia prognozy",
+      "modelStatus": "insufficient_data"
+    },
+    {
+      "id": 575369,
+      "league": "CL",
+      "leagueName": "Liga Mistrzów",
+      "date": "2026-10-21",
+      "time": "18:45",
+      "kickoff": "2026-10-21T18:45:00+02:00",
+      "home": "Lille OSC",
+      "away": "Galatasaray SK",
+      "history": {
+        "homeLast10": {
+          "matches": [
+            {
+              "date": "2026-10-13T19:00:00Z",
+              "home": "Arsenal FC",
+              "away": "Lille OSC",
+              "homeGoals": 3,
+              "awayGoals": 0,
+              "teamGoals": 0,
+              "conceded": 3,
+              "result": "L"
+            },
+            {
+              "date": "2026-09-08T19:00:00Z",
+              "home": "Lille OSC",
+              "away": "Real Betis Balompié",
+              "homeGoals": 2,
+              "awayGoals": 3,
+              "teamGoals": 2,
+              "conceded": 3,
+              "result": "L"
+            }
+          ],
+          "stats": {
+            "played": 2,
+            "wins": 0,
+            "draws": 0,
+            "losses": 2,
+            "goalsFor": 2,
+            "goalsAgainst": 6,
+            "avgGoalsFor": 1.0,
+            "avgGoalsAgainst": 3.0,
+            "btts": 1,
+            "over15": 2,
+            "over25": 2
+          }
+        },
+        "awayLast10": {
+          "matches": [
+            {
+              "date": "2026-10-13T19:00:00Z",
+              "home": "Galatasaray SK",
+              "away": "FC Barcelona",
+              "homeGoals": 1,
+              "awayGoals": 4,
+              "teamGoals": 1,
+              "conceded": 4,
+              "result": "L"
+            },
+            {
+              "date": "2026-09-09T19:00:00Z",
+              "home": "Sporting Clube de Portugal",
+              "away": "Galatasaray SK",
+              "homeGoals": 3,
+              "awayGoals": 1,
+              "teamGoals": 1,
+              "conceded": 3,
+              "result": "L"
+            }
+          ],
+          "stats": {
+            "played": 2,
+            "wins": 0,
+            "draws": 0,
+            "losses": 2,
+            "goalsFor": 2,
+            "goalsAgainst": 7,
+            "avgGoalsFor": 1.0,
+            "avgGoalsAgainst": 3.5,
+            "btts": 2,
+            "over15": 2,
+            "over25": 2
+          }
+        },
+        "h2h": []
+      },
+      "hx": null,
+      "ax": null,
+      "probabilities": null,
+      "model": null,
+      "quality": "insufficient_data",
+      "confidence": "Za mało danych do obliczenia prognozy",
+      "modelStatus": "insufficient_data"
+    },
+    {
+      "id": 564685,
+      "league": "PD",
+      "leagueName": "LaLiga",
+      "date": "2026-10-21",
+      "time": "20:00",
+      "kickoff": "2026-10-21T20:00:00+02:00",
+      "home": "Levante UD",
+      "away": "Athletic Club",
+      "history": {
+        "homeLast10": {
+          "matches": [
+            {
+              "date": "2026-10-16T19:00:00Z",
+              "home": "RC Deportivo La Coruña",
+              "away": "Levante UD",
+              "homeGoals": 1,
+              "awayGoals": 1,
+              "teamGoals": 1,
+              "conceded": 1,
+              "result": "D"
+            },
+            {
+              "date": "2026-10-12T19:00:00Z",
+              "home": "Levante UD",
+              "away": "Sevilla FC",
+              "homeGoals": 3,
+              "awayGoals": 3,
+              "teamGoals": 3,
+              "conceded": 3,
+              "result": "D"
+            },
+            {
+              "date": "2026-09-20T16:30:00Z",
+              "home": "Villarreal CF",
+              "away": "Levante UD",
+              "homeGoals": 3,
+              "awayGoals": 1,
+              "teamGoals": 1,
+              "conceded": 3,
+              "result": "L"
+            },
+            {
+              "date": "2026-09-13T14:15:00Z",
+              "home": "Levante UD",
+              "away": "FC Barcelona",
+              "homeGoals": 2,
+              "awayGoals": 4,
+              "teamGoals": 2,
+              "conceded": 4,
+              "result": "L"
+            },
+            {
+              "date": "2026-09-06T16:30:00Z",
+              "home": "Málaga CF",
+              "away": "Levante UD",
+              "homeGoals": 0,
+              "awayGoals": 0,
+              "teamGoals": 0,
+              "conceded": 0,
+              "result": "D"
+            },
+            {
+              "date": "2026-08-29T15:00:00Z",
+              "home": "Levante UD",
+              "away": "Real Betis Balompié",
+              "homeGoals": 5,
+              "awayGoals": 2,
+              "teamGoals": 5,
+              "conceded": 2,
+              "result": "W"
+            },
+            {
+              "date": "2026-08-24T17:30:00Z",
+              "home": "CA Osasuna",
+              "away": "Levante UD",
+              "homeGoals": 0,
+              "awayGoals": 0,
+              "teamGoals": 0,
+              "conceded": 0,
+              "result": "D"
+            },
+            {
+              "date": "2026-08-16T17:00:00Z",
+              "home": "RCD Espanyol de Barcelona",
+              "away": "Levante UD",
+              "homeGoals": 3,
+              "awayGoals": 0,
+              "teamGoals": 0,
+              "conceded": 3,
+              "result": "L"
+            },
+            {
+              "date": "2026-05-23T19:00:00Z",
+              "home": "Real Betis Balompié",
+              "away": "Levante UD",
+              "homeGoals": 2,
+              "awayGoals": 1,
+              "teamGoals": 1,
+              "conceded": 2,
+              "result": "L"
+            },
+            {
+              "date": "2026-05-17T17:00:00Z",
+              "home": "Levante UD",
+              "away": "RCD Mallorca",
+              "homeGoals": 2,
+              "awayGoals": 0,
+              "teamGoals": 2,
+              "conceded": 0,
+              "result": "W"
+            }
+          ],
+          "stats": {
+            "played": 10,
+            "wins": 2,
+            "draws": 4,
+            "losses": 4,
+            "goalsFor": 15,
+            "goalsAgainst": 18,
+            "avgGoalsFor": 1.5,
+            "avgGoalsAgainst": 1.8,
+            "btts": 6,
+            "over15": 8,
+            "over25": 6
+          }
+        },
+        "awayLast10": {
+          "matches": [
+            {
+              "date": "2026-10-17T19:00:00Z",
+              "home": "Valencia CF",
+              "away": "Athletic Club",
+              "homeGoals": 0,
+              "awayGoals": 0,
+              "teamGoals": 0,
+              "conceded": 0,
+              "result": "D"
+            },
+            {
+              "date": "2026-09-19T14:15:00Z",
+              "home": "Athletic Club",
+              "away": "Deportivo Alavés",
+              "homeGoals": 0,
+              "awayGoals": 0,
+              "teamGoals": 0,
+              "conceded": 0,
+              "result": "D"
+            },
+            {
+              "date": "2026-09-12T16:30:00Z",
+              "home": "Athletic Club",
+              "away": "Elche CF",
+              "homeGoals": 1,
+              "awayGoals": 1,
+              "teamGoals": 1,
+              "conceded": 1,
+              "result": "D"
+            },
+            {
+              "date": "2026-09-05T14:15:00Z",
+              "home": "Athletic Club",
+              "away": "Club Atlético de Madrid",
+              "homeGoals": 3,
+              "awayGoals": 0,
+              "teamGoals": 3,
+              "conceded": 0,
+              "result": "W"
+            },
+            {
+              "date": "2026-08-30T19:30:00Z",
+              "home": "RC Celta de Vigo",
+              "away": "Athletic Club",
+              "homeGoals": 0,
+              "awayGoals": 2,
+              "teamGoals": 2,
+              "conceded": 0,
+              "result": "W"
+            },
+            {
+              "date": "2026-08-27T19:00:00Z",
+              "home": "FC Barcelona",
+              "away": "Athletic Club",
+              "homeGoals": 2,
+              "awayGoals": 0,
+              "teamGoals": 0,
+              "conceded": 2,
+              "result": "L"
+            },
+            {
+              "date": "2026-08-22T15:00:00Z",
+              "home": "Athletic Club",
+              "away": "Sevilla FC",
+              "homeGoals": 1,
+              "awayGoals": 3,
+              "teamGoals": 1,
+              "conceded": 3,
+              "result": "L"
+            },
+            {
+              "date": "2026-05-23T19:00:00Z",
+              "home": "Real Madrid CF",
+              "away": "Athletic Club",
+              "homeGoals": 4,
+              "awayGoals": 2,
+              "teamGoals": 2,
+              "conceded": 4,
+              "result": "L"
+            },
+            {
+              "date": "2026-05-17T17:00:00Z",
+              "home": "Athletic Club",
+              "away": "RC Celta de Vigo",
+              "homeGoals": 1,
+              "awayGoals": 1,
+              "teamGoals": 1,
+              "conceded": 1,
+              "result": "D"
+            },
+            {
+              "date": "2026-05-13T17:00:00Z",
+              "home": "RCD Espanyol de Barcelona",
+              "away": "Athletic Club",
+              "homeGoals": 2,
+              "awayGoals": 0,
+              "teamGoals": 0,
+              "conceded": 2,
+              "result": "L"
+            }
+          ],
+          "stats": {
+            "played": 10,
+            "wins": 2,
+            "draws": 4,
+            "losses": 4,
+            "goalsFor": 10,
+            "goalsAgainst": 13,
+            "avgGoalsFor": 1.0,
+            "avgGoalsAgainst": 1.3,
+            "btts": 4,
+            "over15": 8,
+            "over25": 3
+          }
+        },
+        "h2h": []
+      },
+      "hx": 1.18,
+      "ax": 1.5,
+      "probabilities": {
+        "homeWin": 29.8,
+        "draw": 25.5,
+        "awayWin": 44.6,
+        "over15": 74.7,
+        "over25": 50.1,
+        "btts": 53.8
+      },
+      "model": "Poisson na podstawie tabeli",
+      "quality": "low",
+      "confidence": "Niska: użyto także danych ogólnych",
+      "modelStatus": "table_based"
+    },
+    {
+      "id": 575370,
+      "league": "CL",
+      "leagueName": "Liga Mistrzów",
+      "date": "2026-10-21",
+      "time": "21:00",
+      "kickoff": "2026-10-21T21:00:00+02:00",
+      "home": "Real Madrid CF",
+      "away": "RB Leipzig",
+      "history": {
+        "homeLast10": {
+          "matches": [
+            {
+              "date": "2026-10-14T19:00:00Z",
+              "home": "AS Roma",
+              "away": "Real Madrid CF",
+              "homeGoals": 3,
+              "awayGoals": 4,
+              "teamGoals": 4,
+              "conceded": 3,
+              "result": "W"
+            },
+            {
+              "date": "2026-09-08T19:00:00Z",
+              "home": "Real Madrid CF",
+              "away": "FC Internazionale Milano",
+              "homeGoals": 2,
+              "awayGoals": 1,
+              "teamGoals": 2,
+              "conceded": 1,
+              "result": "W"
+            }
+          ],
+          "stats": {
+            "played": 2,
+            "wins": 2,
+            "draws": 0,
+            "losses": 0,
+            "goalsFor": 6,
+            "goalsAgainst": 4,
+            "avgGoalsFor": 3.0,
+            "avgGoalsAgainst": 2.0,
+            "btts": 2,
+            "over15": 2,
+            "over25": 2
+          }
+        },
+        "awayLast10": {
+          "matches": [
+            {
+              "date": "2026-10-13T19:00:00Z",
+              "home": "RB Leipzig",
+              "away": "PSV",
+              "homeGoals": 1,
+              "awayGoals": 0,
+              "teamGoals": 1,
+              "conceded": 0,
+              "result": "W"
+            },
+            {
+              "date": "2026-09-10T19:00:00Z",
+              "home": "Como 1907",
+              "away": "RB Leipzig",
+              "homeGoals": 4,
+              "awayGoals": 1,
+              "teamGoals": 1,
+              "conceded": 4,
+              "result": "L"
+            }
+          ],
+          "stats": {
+            "played": 2,
+            "wins": 1,
+            "draws": 0,
+            "losses": 1,
+            "goalsFor": 2,
+            "goalsAgainst": 4,
+            "avgGoalsFor": 1.0,
+            "avgGoalsAgainst": 2.0,
+            "btts": 1,
+            "over15": 1,
+            "over25": 1
+          }
+        },
+        "h2h": []
+      },
+      "hx": null,
+      "ax": null,
+      "probabilities": null,
+      "model": null,
+      "quality": "insufficient_data",
+      "confidence": "Za mało danych do obliczenia prognozy",
+      "modelStatus": "insufficient_data"
+    },
+    {
+      "id": 575371,
+      "league": "CL",
+      "leagueName": "Liga Mistrzów",
+      "date": "2026-10-21",
+      "time": "21:00",
+      "kickoff": "2026-10-21T21:00:00+02:00",
+      "home": "FC Internazionale Milano",
+      "away": "FK Shakhtar Donetsk",
+      "history": {
+        "homeLast10": {
+          "matches": [
+            {
+              "date": "2026-10-13T19:00:00Z",
+              "home": "FC Internazionale Milano",
+              "away": "Club Brugge KV",
+              "homeGoals": 3,
+              "awayGoals": 4,
+              "teamGoals": 3,
+              "conceded": 4,
+              "result": "L"
+            },
+            {
+              "date": "2026-09-08T19:00:00Z",
+              "home": "Real Madrid CF",
+              "away": "FC Internazionale Milano",
+              "homeGoals": 2,
+              "awayGoals": 1,
+              "teamGoals": 1,
+              "conceded": 2,
+              "result": "L"
+            }
+          ],
+          "stats": {
+            "played": 2,
+            "wins": 0,
+            "draws": 0,
+            "losses": 2,
+            "goalsFor": 4,
+            "goalsAgainst": 6,
+            "avgGoalsFor": 2.0,
+            "avgGoalsAgainst": 3.0,
+            "btts": 2,
+            "over15": 2,
+            "over25": 2
+          }
+        },
+        "awayLast10": {
+          "matches": [
+            {
+              "date": "2026-10-14T19:00:00Z",
+              "home": "FK Shakhtar Donetsk",
+              "away": "PAE AEK",
+              "homeGoals": 3,
+              "awayGoals": 1,
+              "teamGoals": 3,
+              "conceded": 1,
+              "result": "W"
+            },
+            {
+              "date": "2026-09-10T16:45:00Z",
+              "home": "PSV",
+              "away": "FK Shakhtar Donetsk",
+              "homeGoals": 1,
+              "awayGoals": 1,
+              "teamGoals": 1,
+              "conceded": 1,
+              "result": "D"
+            }
+          ],
+          "stats": {
+            "played": 2,
+            "wins": 1,
+            "draws": 1,
+            "losses": 0,
+            "goalsFor": 4,
+            "goalsAgainst": 2,
+            "avgGoalsFor": 2.0,
+            "avgGoalsAgainst": 1.0,
+            "btts": 2,
+            "over15": 2,
+            "over25": 1
+          }
+        },
+        "h2h": []
+      },
+      "hx": null,
+      "ax": null,
+      "probabilities": null,
+      "model": null,
+      "quality": "insufficient_data",
+      "confidence": "Za mało danych do obliczenia prognozy",
+      "modelStatus": "insufficient_data"
+    },
+    {
+      "id": 575372,
+      "league": "CL",
+      "leagueName": "Liga Mistrzów",
+      "date": "2026-10-21",
+      "time": "21:00",
+      "kickoff": "2026-10-21T21:00:00+02:00",
+      "home": "FC Bayern München",
+      "away": "Arsenal FC",
+      "history": {
+        "homeLast10": {
+          "matches": [
+            {
+              "date": "2026-10-13T19:00:00Z",
+              "home": "Viking FK",
+              "away": "FC Bayern München",
+              "homeGoals": 3,
+              "awayGoals": 3,
+              "teamGoals": 3,
+              "conceded": 3,
+              "result": "D"
+            },
+            {
+              "date": "2026-09-10T19:00:00Z",
+              "home": "FC Bayern München",
+              "away": "FK Bodø/Glimt",
+              "homeGoals": 5,
+              "awayGoals": 0,
+              "teamGoals": 5,
+              "conceded": 0,
+              "result": "W"
+            },
+            {
+              "date": "2026-05-06T19:00:00Z",
+              "home": "FC Bayern München",
+              "away": "Paris Saint-Germain FC",
+              "homeGoals": 1,
+              "awayGoals": 1,
+              "teamGoals": 1,
+              "conceded": 1,
+              "result": "D"
+            },
+            {
+              "date": "2026-04-28T19:00:00Z",
+              "home": "Paris Saint-Germain FC",
+              "away": "FC Bayern München",
+              "homeGoals": 5,
+              "awayGoals": 4,
+              "teamGoals": 4,
+              "conceded": 5,
+              "result": "L"
+            }
+          ],
+          "stats": {
+            "played": 4,
+            "wins": 1,
+            "draws": 2,
+            "losses": 1,
+            "goalsFor": 13,
+            "goalsAgainst": 9,
+            "avgGoalsFor": 3.25,
+            "avgGoalsAgainst": 2.25,
+            "btts": 3,
+            "over15": 4,
+            "over25": 3
+          }
+        },
+        "awayLast10": {
+          "matches": [
+            {
+              "date": "2026-10-13T19:00:00Z",
+              "home": "Arsenal FC",
+              "away": "Lille OSC",
+              "homeGoals": 3,
+              "awayGoals": 0,
+              "teamGoals": 3,
+              "conceded": 0,
+              "result": "W"
+            },
+            {
+              "date": "2026-09-09T19:00:00Z",
+              "home": "SSC Napoli",
+              "away": "Arsenal FC",
+              "homeGoals": 0,
+              "awayGoals": 1,
+              "teamGoals": 1,
+              "conceded": 0,
+              "result": "W"
+            },
+            {
+              "date": "2026-05-30T16:00:00Z",
+              "home": "Paris Saint-Germain FC",
+              "away": "Arsenal FC",
+              "homeGoals": 5,
+              "awayGoals": 4,
+              "teamGoals": 4,
+              "conceded": 5,
+              "result": "L"
+            },
+            {
+              "date": "2026-05-05T19:00:00Z",
+              "home": "Arsenal FC",
+              "away": "Club Atlético de Madrid",
+              "homeGoals": 1,
+              "awayGoals": 0,
+              "teamGoals": 1,
+              "conceded": 0,
+              "result": "W"
+            },
+            {
+              "date": "2026-04-29T19:00:00Z",
+              "home": "Club Atlético de Madrid",
+              "away": "Arsenal FC",
+              "homeGoals": 1,
+              "awayGoals": 1,
+              "teamGoals": 1,
+              "conceded": 1,
+              "result": "D"
+            }
+          ],
+          "stats": {
+            "played": 5,
+            "wins": 3,
+            "draws": 1,
+            "losses": 1,
+            "goalsFor": 10,
+            "goalsAgainst": 6,
+            "avgGoalsFor": 2.0,
+            "avgGoalsAgainst": 1.2,
+            "btts": 2,
+            "over15": 3,
+            "over25": 2
+          }
+        },
+        "h2h": []
+      },
+      "hx": null,
+      "ax": null,
+      "probabilities": null,
+      "model": null,
+      "quality": "insufficient_data",
+      "confidence": "Za mało danych do obliczenia prognozy",
+      "modelStatus": "insufficient_data"
+    },
+    {
+      "id": 575373,
+      "league": "CL",
+      "leagueName": "Liga Mistrzów",
+      "date": "2026-10-21",
+      "time": "21:00",
+      "kickoff": "2026-10-21T21:00:00+02:00",
+      "home": "Club Brugge KV",
+      "away": "Racing Club de Lens",
+      "history": {
+        "homeLast10": {
+          "matches": [
+            {
+              "date": "2026-10-13T19:00:00Z",
+              "home": "FC Internazionale Milano",
+              "away": "Club Brugge KV",
+              "homeGoals": 3,
+              "awayGoals": 4,
+              "teamGoals": 4,
+              "conceded": 3,
+              "result": "W"
+            },
+            {
+              "date": "2026-09-08T16:45:00Z",
+              "home": "Club Brugge KV",
+              "away": "Aston Villa FC",
+              "homeGoals": 2,
+              "awayGoals": 3,
+              "teamGoals": 2,
+              "conceded": 3,
+              "result": "L"
+            }
+          ],
+          "stats": {
+            "played": 2,
+            "wins": 1,
+            "draws": 0,
+            "losses": 1,
+            "goalsFor": 6,
+            "goalsAgainst": 6,
+            "avgGoalsFor": 3.0,
+            "avgGoalsAgainst": 3.0,
+            "btts": 2,
+            "over15": 2,
+            "over25": 2
+          }
+        },
+        "awayLast10": {
+          "matches": [
+            {
+              "date": "2026-10-13T16:45:00Z",
+              "home": "Racing Club de Lens",
+              "away": "Sporting Clube de Portugal",
+              "homeGoals": 0,
+              "awayGoals": 2,
+              "teamGoals": 0,
+              "conceded": 2,
+              "result": "L"
+            },
+            {
+              "date": "2026-09-10T19:00:00Z",
+              "home": "SK Slavia Praha",
+              "away": "Racing Club de Lens",
+              "homeGoals": 2,
+              "awayGoals": 3,
+              "teamGoals": 3,
+              "conceded": 2,
+              "result": "W"
+            }
+          ],
+          "stats": {
+            "played": 2,
+            "wins": 1,
+            "draws": 0,
+            "losses": 1,
+            "goalsFor": 3,
+            "goalsAgainst": 4,
+            "avgGoalsFor": 1.5,
+            "avgGoalsAgainst": 2.0,
+            "btts": 1,
+            "over15": 2,
+            "over25": 1
+          }
+        },
+        "h2h": []
+      },
+      "hx": null,
+      "ax": null,
+      "probabilities": null,
+      "model": null,
+      "quality": "insufficient_data",
+      "confidence": "Za mało danych do obliczenia prognozy",
+      "modelStatus": "insufficient_data"
+    },
+    {
+      "id": 575374,
+      "league": "CL",
+      "leagueName": "Liga Mistrzów",
+      "date": "2026-10-21",
+      "time": "21:00",
+      "kickoff": "2026-10-21T21:00:00+02:00",
+      "home": "Aston Villa FC",
+      "away": "Viking FK",
+      "history": {
+        "homeLast10": {
+          "matches": [
+            {
+              "date": "2026-10-14T19:00:00Z",
+              "home": "Aston Villa FC",
+              "away": "Fenerbahçe SK",
+              "homeGoals": 6,
+              "awayGoals": 0,
+              "teamGoals": 6,
+              "conceded": 0,
+              "result": "W"
+            },
+            {
+              "date": "2026-09-08T16:45:00Z",
+              "home": "Club Brugge KV",
+              "away": "Aston Villa FC",
+              "homeGoals": 2,
+              "awayGoals": 3,
+              "teamGoals": 3,
+              "conceded": 2,
+              "result": "W"
+            }
+          ],
+          "stats": {
+            "played": 2,
+            "wins": 2,
+            "draws": 0,
+            "losses": 0,
+            "goalsFor": 9,
+            "goalsAgainst": 2,
+            "avgGoalsFor": 4.5,
+            "avgGoalsAgainst": 1.0,
+            "btts": 1,
+            "over15": 2,
+            "over25": 2
+          }
+        },
+        "awayLast10": {
+          "matches": [
+            {
+              "date": "2026-10-13T19:00:00Z",
+              "home": "Viking FK",
+              "away": "FC Bayern München",
+              "homeGoals": 3,
+              "awayGoals": 3,
+              "teamGoals": 3,
+              "conceded": 3,
+              "result": "D"
+            },
+            {
+              "date": "2026-09-09T16:45:00Z",
+              "home": "VfB Stuttgart",
+              "away": "Viking FK",
+              "homeGoals": 3,
+              "awayGoals": 1,
+              "teamGoals": 1,
+              "conceded": 3,
+              "result": "L"
+            }
+          ],
+          "stats": {
+            "played": 2,
+            "wins": 0,
+            "draws": 1,
+            "losses": 1,
+            "goalsFor": 4,
+            "goalsAgainst": 6,
+            "avgGoalsFor": 2.0,
+            "avgGoalsAgainst": 3.0,
+            "btts": 2,
+            "over15": 2,
+            "over25": 2
+          }
+        },
+        "h2h": []
+      },
+      "hx": null,
+      "ax": null,
+      "probabilities": null,
+      "model": null,
+      "quality": "insufficient_data",
+      "confidence": "Za mało danych do obliczenia prognozy",
+      "modelStatus": "insufficient_data"
+    },
+    {
+      "id": 575375,
+      "league": "CL",
+      "leagueName": "Liga Mistrzów",
+      "date": "2026-10-21",
+      "time": "21:00",
+      "kickoff": "2026-10-21T21:00:00+02:00",
+      "home": "Sporting Clube de Portugal",
+      "away": "LASK Linz",
+      "history": {
+        "homeLast10": {
+          "matches": [
+            {
+              "date": "2026-10-13T16:45:00Z",
+              "home": "Racing Club de Lens",
+              "away": "Sporting Clube de Portugal",
+              "homeGoals": 0,
+              "awayGoals": 2,
+              "teamGoals": 2,
+              "conceded": 0,
+              "result": "W"
+            },
+            {
+              "date": "2026-09-09T19:00:00Z",
+              "home": "Sporting Clube de Portugal",
+              "away": "Galatasaray SK",
+              "homeGoals": 3,
+              "awayGoals": 1,
+              "teamGoals": 3,
+              "conceded": 1,
+              "result": "W"
+            }
+          ],
+          "stats": {
+            "played": 2,
+            "wins": 2,
+            "draws": 0,
+            "losses": 0,
+            "goalsFor": 5,
+            "goalsAgainst": 1,
+            "avgGoalsFor": 2.5,
+            "avgGoalsAgainst": 0.5,
+            "btts": 1,
+            "over15": 2,
+            "over25": 1
+          }
+        },
+        "awayLast10": {
+          "matches": [
+            {
+              "date": "2026-10-14T16:45:00Z",
+              "home": "LASK Linz",
+              "away": "Liverpool FC",
+              "homeGoals": 3,
+              "awayGoals": 6,
+              "teamGoals": 3,
+              "conceded": 6,
+              "result": "L"
+            },
+            {
+              "date": "2026-09-08T16:45:00Z",
+              "home": "PAE AEK",
+              "away": "LASK Linz",
+              "homeGoals": 1,
+              "awayGoals": 0,
+              "teamGoals": 0,
+              "conceded": 1,
+              "result": "L"
+            }
+          ],
+          "stats": {
+            "played": 2,
+            "wins": 0,
+            "draws": 0,
+            "losses": 2,
+            "goalsFor": 3,
+            "goalsAgainst": 7,
+            "avgGoalsFor": 1.5,
+            "avgGoalsAgainst": 3.5,
+            "btts": 1,
+            "over15": 1,
+            "over25": 1
+          }
+        },
+        "h2h": []
+      },
+      "hx": null,
+      "ax": null,
+      "probabilities": null,
+      "model": null,
+      "quality": "insufficient_data",
+      "confidence": "Za mało danych do obliczenia prognozy",
+      "modelStatus": "insufficient_data"
+    },
+    {
+      "id": 575376,
+      "league": "CL",
+      "leagueName": "Liga Mistrzów",
+      "date": "2026-10-21",
+      "time": "21:00",
+      "kickoff": "2026-10-21T21:00:00+02:00",
+      "home": "Real Betis Balompié",
+      "away": "Feyenoord Rotterdam",
+      "history": {
+        "homeLast10": {
+          "matches": [
+            {
+              "date": "2026-10-14T19:00:00Z",
+              "home": "Real Betis Balompié",
+              "away": "FC Porto",
+              "homeGoals": 3,
+              "awayGoals": 2,
+              "teamGoals": 3,
+              "conceded": 2,
+              "result": "W"
+            },
+            {
+              "date": "2026-09-08T19:00:00Z",
+              "home": "Lille OSC",
+              "away": "Real Betis Balompié",
+              "homeGoals": 2,
+              "awayGoals": 3,
+              "teamGoals": 3,
+              "conceded": 2,
+              "result": "W"
+            }
+          ],
+          "stats": {
+            "played": 2,
+            "wins": 2,
+            "draws": 0,
+            "losses": 0,
+            "goalsFor": 6,
+            "goalsAgainst": 4,
+            "avgGoalsFor": 3.0,
+            "avgGoalsAgainst": 2.0,
+            "btts": 2,
+            "over15": 2,
+            "over25": 2
+          }
+        },
+        "awayLast10": {
+          "matches": [
+            {
+              "date": "2026-10-14T16:45:00Z",
+              "home": "Feyenoord Rotterdam",
+              "away": "Como 1907",
+              "homeGoals": 3,
+              "awayGoals": 2,
+              "teamGoals": 3,
+              "conceded": 2,
+              "result": "W"
+            },
+            {
+              "date": "2026-09-09T16:45:00Z",
+              "home": "FC Barcelona",
+              "away": "Feyenoord Rotterdam",
+              "homeGoals": 5,
+              "awayGoals": 1,
+              "teamGoals": 1,
+              "conceded": 5,
+              "result": "L"
+            }
+          ],
+          "stats": {
+            "played": 2,
+            "wins": 1,
+            "draws": 0,
+            "losses": 1,
+            "goalsFor": 4,
+            "goalsAgainst": 7,
+            "avgGoalsFor": 2.0,
+            "avgGoalsAgainst": 3.5,
+            "btts": 2,
+            "over15": 2,
+            "over25": 2
+          }
+        },
+        "h2h": []
+      },
+      "hx": null,
+      "ax": null,
+      "probabilities": null,
+      "model": null,
+      "quality": "insufficient_data",
+      "confidence": "Za mało danych do obliczenia prognozy",
+      "modelStatus": "insufficient_data"
     }
   ],
   "diagnostics": [
-    "Premier League (PL): 5 meczów w okresie.",
-    "LaLiga (PD): 5 meczów w okresie.",
-    "Serie A (SA): 6 meczów w okresie.",
-    "Bundesliga (BL1): 2 meczów w okresie.",
-    "Ligue 1 (FL1): 5 meczów w okresie.",
-    "Eredivisie (DED): 5 meczów w okresie.",
+    "Premier League (PL): 1 meczów w okresie.",
+    "LaLiga (PD): 2 meczów w okresie.",
+    "Serie A (SA): 2 meczów w okresie.",
+    "Bundesliga (BL1): 0 meczów w okresie.",
+    "Ligue 1 (FL1): 0 meczów w okresie.",
+    "Eredivisie (DED): 0 meczów w okresie.",
     "Primeira Liga (PPL): 1 meczów w okresie.",
-    "Liga Mistrzów (CL): 9 meczów w okresie.",
+    "Liga Mistrzów (CL): 18 meczów w okresie.",
     "Championship (ELC): 1 meczów w okresie.",
-    "Brasileirao (BSA): 6 meczów w okresie.",
+    "Brasileirao (BSA): 1 meczów w okresie.",
     "Mistrzostwa Europy (EC): 0 meczów w okresie.",
     "Mistrzostwa Świata (WC): 0 meczów w okresie.",
+    "Liga Europy (EL): BŁĄD TERMINARZA: HTTP 403: {\"message\":\"The resource you are looking for is restricted and apparently not within your permissions. Please check your subscription.\",\"errorCode\":403}",
+    "Liga Konferencji (ECL): BŁĄD TERMINARZA: HTTP 404: {\"message\":\"The resource you are looking for does not exist.\",\"error\":404}",
+    "2. Bundesliga (BL2): BŁĄD TERMINARZA: HTTP 403: {\"message\":\"The resource you are looking for is restricted and apparently not within your permissions. Please check your subscription.\",\"errorCode\":403}",
+    "3. Liga (Niemcy) (BL3): BŁĄD TERMINARZA: HTTP 403: {\"message\":\"The resource you are looking for is restricted and apparently not within your permissions. Please check your subscription.\",\"errorCode\":403}",
+    "Serie B (SB): BŁĄD TERMINARZA: HTTP 403: {\"message\":\"The resource you are looking for is restricted and apparently not within your permissions. Please check your subscription.\",\"errorCode\":403}",
+    "LaLiga 2 (SD): BŁĄD TERMINARZA: HTTP 403: {\"message\":\"The resource you are looking for is restricted and apparently not within your permissions. Please check your subscription.\",\"errorCode\":403}",
+    "Ligue 2 (FL2): BŁĄD TERMINARZA: HTTP 403: {\"message\":\"The resource you are looking for is restricted and apparently not within your permissions. Please check your subscription.\",\"errorCode\":403}",
+    "League One (EL1): BŁĄD TERMINARZA: HTTP 403: {\"message\":\"The resource you are looking for is restricted and apparently not within your permissions. Please check your subscription.\",\"errorCode\":403}",
+    "Puchar Anglii (FAC): BŁĄD TERMINARZA: HTTP 403: {\"message\":\"The resource you are looking for is restricted and apparently not within your permissions. Please check your subscription.\",\"errorCode\":403}",
+    "Puchar Niemiec (DFB): BŁĄD TERMINARZA: HTTP 403: {\"message\":\"The resource you are looking for is restricted and apparently not within your permissions. Please check your subscription.\",\"errorCode\":403}",
+    "Puchar Króla (CDR): BŁĄD TERMINARZA: HTTP 403: {\"message\":\"The resource you are looking for is restricted and apparently not within your permissions. Please check your subscription.\",\"errorCode\":403}",
+    "Liga grecka (GSL): BŁĄD TERMINARZA: HTTP 403: {\"message\":\"The resource you are looking for is restricted and apparently not within your permissions. Please check your subscription.\",\"errorCode\":403}",
+    "MLS (MLS): BŁĄD TERMINARZA: HTTP 403: {\"message\":\"The resource you are looking for is restricted and apparently not within your permissions. Please check your subscription.\",\"errorCode\":403}",
     "Liga Mistrzów — historia (CL): 41 meczów w okresie.",
-    "Championship — historia (ELC): 172 meczów w okresie.",
-    "LaLiga — historia (PD): 158 meczów w okresie.",
+    "Championship — historia (ELC): 164 meczów w okresie.",
+    "LaLiga — historia (PD): 155 meczów w okresie.",
     "Premier League — historia (PL): 120 meczów w okresie.",
-    "Primeira Liga — historia (PPL): 109 meczów w okresie.",
-    "Serie A — historia (SA): 118 meczów w okresie."
+    "Primeira Liga — historia (PPL): 110 meczów w okresie.",
+    "Serie A — historia (SA): 120 meczów w okresie."
   ],
   "note": "Prognozy orientacyjne na podstawie dostępnych tabel. Model nie uwzględnia kursów, składów, kontuzji ani zaawansowanych statystyk. Nie gwarantuje wyników."
 }
