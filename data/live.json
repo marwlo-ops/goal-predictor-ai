@@ -1,38 +1,128 @@
 {
-  "updatedAt": "2026-10-20T20:27:57.597909+02:00",
+  "updatedAt": "2026-10-20T21:11:48.543961+02:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 2,
+  "count": 8,
   "matches": [
     {
-      "id": 575360,
-      "league": "CL",
-      "leagueName": "UEFA Champions League",
-      "home": "Fenerbahçe SK",
-      "away": "SK Slavia Praha",
+      "id": 561826,
+      "league": "ELC",
+      "leagueName": "Championship",
+      "home": "Wolverhampton Wanderers FC",
+      "away": "Portsmouth FC",
       "status": "IN_PLAY",
       "minute": null,
       "score": {
-        "home": 2,
-        "away": 1
+        "home": 0,
+        "away": 0
       },
-      "utcDate": "2026-10-20T16:45:00Z",
-      "updatedAt": "2026-10-20T18:27:46Z"
+      "utcDate": "2026-10-20T18:45:00Z",
+      "updatedAt": "2026-10-20T19:11:05Z"
     },
     {
-      "id": 575359,
+      "id": 575366,
       "league": "CL",
       "leagueName": "UEFA Champions League",
-      "home": "Sabah FK",
-      "away": "Borussia Dortmund",
+      "home": "SSC Napoli",
+      "away": "FK Bodø/Glimt",
       "status": "IN_PLAY",
       "minute": null,
       "score": {
         "home": 1,
-        "away": 2
+        "away": 0
       },
-      "utcDate": "2026-10-20T16:45:00Z",
-      "updatedAt": "2026-10-20T18:27:33Z"
+      "utcDate": "2026-10-20T19:00:00Z",
+      "updatedAt": "2026-10-20T19:10:46Z"
+    },
+    {
+      "id": 575362,
+      "league": "CL",
+      "leagueName": "UEFA Champions League",
+      "home": "VfB Stuttgart",
+      "away": "Club Atlético de Madrid",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-10-20T19:00:00Z",
+      "updatedAt": "2026-10-20T19:10:46Z"
+    },
+    {
+      "id": 575364,
+      "league": "CL",
+      "leagueName": "UEFA Champions League",
+      "home": "AS Roma",
+      "away": "ŠK Slovan Bratislava",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-10-20T19:00:00Z",
+      "updatedAt": "2026-10-20T19:10:46Z"
+    },
+    {
+      "id": 575361,
+      "league": "CL",
+      "leagueName": "UEFA Champions League",
+      "home": "Manchester City FC",
+      "away": "PAE AEK",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-10-20T19:00:00Z",
+      "updatedAt": "2026-10-20T19:10:46Z"
+    },
+    {
+      "id": 575367,
+      "league": "CL",
+      "leagueName": "UEFA Champions League",
+      "home": "Paris Saint-Germain FC",
+      "away": "FC Barcelona",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-10-20T19:00:00Z",
+      "updatedAt": "2026-10-20T19:10:46Z"
+    },
+    {
+      "id": 575363,
+      "league": "CL",
+      "leagueName": "UEFA Champions League",
+      "home": "Liverpool FC",
+      "away": "Villarreal CF",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "utcDate": "2026-10-20T19:00:00Z",
+      "updatedAt": "2026-10-20T19:10:46Z"
+    },
+    {
+      "id": 575365,
+      "league": "CL",
+      "leagueName": "UEFA Champions League",
+      "home": "FC Porto",
+      "away": "PSV",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-10-20T19:00:00Z",
+      "updatedAt": "2026-10-20T19:10:46Z"
     }
   ]
 }
