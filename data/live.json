@@ -1,38 +1,7 @@
 {
-  "updatedAt": "2026-10-20T22:59:28.974190+02:00",
+  "updatedAt": "2026-10-20T23:31:45.009488+02:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 2,
-  "matches": [
-    {
-      "id": 575366,
-      "league": "CL",
-      "leagueName": "UEFA Champions League",
-      "home": "SSC Napoli",
-      "away": "FK Bodø/Glimt",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 4,
-        "away": 2
-      },
-      "utcDate": "2026-10-20T19:00:00Z",
-      "updatedAt": "2026-10-20T20:58:29Z"
-    },
-    {
-      "id": 575367,
-      "league": "CL",
-      "leagueName": "UEFA Champions League",
-      "home": "Paris Saint-Germain FC",
-      "away": "FC Barcelona",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 4,
-        "away": 2
-      },
-      "utcDate": "2026-10-20T19:00:00Z",
-      "updatedAt": "2026-10-20T20:57:26Z"
-    }
-  ]
+  "count": 0,
+  "matches": []
 }
