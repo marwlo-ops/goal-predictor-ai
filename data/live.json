@@ -1,7 +1,38 @@
 {
-  "updatedAt": "2026-10-20T18:39:13.018700+02:00",
+  "updatedAt": "2026-10-20T19:17:49.071220+02:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 0,
-  "matches": []
+  "count": 2,
+  "matches": [
+    {
+      "id": 575359,
+      "league": "CL",
+      "leagueName": "UEFA Champions League",
+      "home": "Sabah FK",
+      "away": "Borussia Dortmund",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "utcDate": "2026-10-20T16:45:00Z",
+      "updatedAt": "2026-10-20T17:17:18Z"
+    },
+    {
+      "id": 575360,
+      "league": "CL",
+      "leagueName": "UEFA Champions League",
+      "home": "Fenerbahçe SK",
+      "away": "SK Slavia Praha",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "utcDate": "2026-10-20T16:45:00Z",
+      "updatedAt": "2026-10-20T17:17:09Z"
+    }
+  ]
 }
