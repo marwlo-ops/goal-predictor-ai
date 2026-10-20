@@ -1,23 +1,7 @@
 {
-  "updatedAt": "2026-10-20T01:49:12.397556+02:00",
+  "updatedAt": "2026-10-20T02:11:06.551603+02:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 1,
-  "matches": [
-    {
-      "id": 555044,
-      "league": "BSA",
-      "leagueName": "Campeonato Brasileiro Série A",
-      "home": "SC Corinthians Paulista",
-      "away": "EC Vitória",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 0,
-        "away": 0
-      },
-      "utcDate": "2026-10-19T23:00:00Z",
-      "updatedAt": "2026-10-19T23:49:10Z"
-    }
-  ]
+  "count": 0,
+  "matches": []
 }
