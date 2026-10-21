@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-21T21:21:36.287937+02:00",
+  "updatedAt": "2026-10-21T21:59:29.880188+02:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
   "count": 8,
@@ -14,85 +14,10 @@
       "minute": null,
       "score": {
         "home": 2,
-        "away": 0
+        "away": 1
       },
       "utcDate": "2026-10-21T18:00:00Z",
-      "updatedAt": "2026-10-21T19:21:25Z"
-    },
-    {
-      "id": 575373,
-      "league": "CL",
-      "leagueName": "UEFA Champions League",
-      "home": "Club Brugge KV",
-      "away": "Racing Club de Lens",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 0,
-        "away": 0
-      },
-      "utcDate": "2026-10-21T19:00:00Z",
-      "updatedAt": "2026-10-21T19:21:25Z"
-    },
-    {
-      "id": 575375,
-      "league": "CL",
-      "leagueName": "UEFA Champions League",
-      "home": "Sporting Clube de Portugal",
-      "away": "LASK Linz",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 1,
-        "away": 0
-      },
-      "utcDate": "2026-10-21T19:00:00Z",
-      "updatedAt": "2026-10-21T19:21:25Z"
-    },
-    {
-      "id": 575371,
-      "league": "CL",
-      "leagueName": "UEFA Champions League",
-      "home": "FC Internazionale Milano",
-      "away": "FK Shakhtar Donetsk",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 0,
-        "away": 0
-      },
-      "utcDate": "2026-10-21T19:00:00Z",
-      "updatedAt": "2026-10-21T19:21:25Z"
-    },
-    {
-      "id": 575374,
-      "league": "CL",
-      "leagueName": "UEFA Champions League",
-      "home": "Aston Villa FC",
-      "away": "Viking FK",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 0,
-        "away": 0
-      },
-      "utcDate": "2026-10-21T19:00:00Z",
-      "updatedAt": "2026-10-21T19:21:25Z"
-    },
-    {
-      "id": 575370,
-      "league": "CL",
-      "leagueName": "UEFA Champions League",
-      "home": "Real Madrid CF",
-      "away": "RB Leipzig",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 0,
-        "away": 0
-      },
-      "utcDate": "2026-10-21T19:00:00Z",
-      "updatedAt": "2026-10-21T19:21:25Z"
+      "updatedAt": "2026-10-21T19:59:17Z"
     },
     {
       "id": 575376,
@@ -107,7 +32,7 @@
         "away": 0
       },
       "utcDate": "2026-10-21T19:00:00Z",
-      "updatedAt": "2026-10-21T19:21:25Z"
+      "updatedAt": "2026-10-21T19:52:22Z"
     },
     {
       "id": 575372,
@@ -118,11 +43,86 @@
       "status": "IN_PLAY",
       "minute": null,
       "score": {
+        "home": 1,
+        "away": 1
+      },
+      "utcDate": "2026-10-21T19:00:00Z",
+      "updatedAt": "2026-10-21T19:53:25Z"
+    },
+    {
+      "id": 575374,
+      "league": "CL",
+      "leagueName": "UEFA Champions League",
+      "home": "Aston Villa FC",
+      "away": "Viking FK",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "utcDate": "2026-10-21T19:00:00Z",
+      "updatedAt": "2026-10-21T19:55:33Z"
+    },
+    {
+      "id": 575370,
+      "league": "CL",
+      "leagueName": "UEFA Champions League",
+      "home": "Real Madrid CF",
+      "away": "RB Leipzig",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "utcDate": "2026-10-21T19:00:00Z",
+      "updatedAt": "2026-10-21T19:53:26Z"
+    },
+    {
+      "id": 575371,
+      "league": "CL",
+      "leagueName": "UEFA Champions League",
+      "home": "FC Internazionale Milano",
+      "away": "FK Shakhtar Donetsk",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
         "home": 0,
         "away": 0
       },
       "utcDate": "2026-10-21T19:00:00Z",
-      "updatedAt": "2026-10-21T19:21:25Z"
+      "updatedAt": "2026-10-21T19:54:29Z"
+    },
+    {
+      "id": 575373,
+      "league": "CL",
+      "leagueName": "UEFA Champions League",
+      "home": "Club Brugge KV",
+      "away": "Racing Club de Lens",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "utcDate": "2026-10-21T19:00:00Z",
+      "updatedAt": "2026-10-21T19:55:02Z"
+    },
+    {
+      "id": 575375,
+      "league": "CL",
+      "leagueName": "UEFA Champions League",
+      "home": "Sporting Clube de Portugal",
+      "away": "LASK Linz",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "utcDate": "2026-10-21T19:00:00Z",
+      "updatedAt": "2026-10-21T19:54:30Z"
     }
   ]
 }
