@@ -1,24 +1,9 @@
 {
-  "updatedAt": "2026-10-21T19:28:05.571546+02:00",
+  "updatedAt": "2026-10-21T20:01:46.581722+02:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
   "count": 2,
   "matches": [
-    {
-      "id": 575368,
-      "league": "CL",
-      "leagueName": "UEFA Champions League",
-      "home": "Como 1907",
-      "away": "Manchester United FC",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 1,
-        "away": 0
-      },
-      "utcDate": "2026-10-21T16:45:00Z",
-      "updatedAt": "2026-10-21T17:27:49Z"
-    },
     {
       "id": 575369,
       "league": "CL",
@@ -28,11 +13,26 @@
       "status": "IN_PLAY",
       "minute": null,
       "score": {
-        "home": 1,
-        "away": 1
+        "home": 2,
+        "away": 3
       },
       "utcDate": "2026-10-21T16:45:00Z",
-      "updatedAt": "2026-10-21T17:26:45Z"
+      "updatedAt": "2026-10-21T18:00:53Z"
+    },
+    {
+      "id": 575368,
+      "league": "CL",
+      "leagueName": "UEFA Champions League",
+      "home": "Como 1907",
+      "away": "Manchester United FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "utcDate": "2026-10-21T16:45:00Z",
+      "updatedAt": "2026-10-21T18:00:53Z"
     }
   ]
 }
