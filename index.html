@@ -1479,12 +1479,12 @@ function renderTeamStatsCard(name, data) {
 }
 function oddsPortalAnalysis(match, p, index) {
   if (!p) return "";
-  const fields = [["home","Kurs 1",p.home],["draw","Kurs X",p.draw],["away","Kurs 2",p.away],["over25","Over 2,5",p.over25],["btts","BTTS TAK",p.btts]];
+  const fields = [["home","Kurs 1",p.home],["draw","Kurs X",p.draw],["away","Kurs 2",p.away],["over15","Over 1,5",p.over15],["over25","Over 2,5",p.over25],["under25","Under 2,5",1-p.over25],["btts","BTTS TAK",p.btts],["bttsNo","BTTS NIE",1-p.btts]];
   const inputs = fields.map(([key,label]) => '<label class="odds-field"><span>'+label+'</span><input type="number" min="1.01" max="1000" step="0.01" inputmode="decimal" placeholder="np. 1,85" data-odd-index="'+index+'" data-odd-key="'+key+'"></label>').join("");
   return '<details class="odds-panel"><summary>📈 Analiza kursów OddsPortal</summary><p class="muted">Przepisz aktualne kursy z OddsPortal. Analiza value zostanie policzona lokalnie.</p><div class="odds-input-grid">'+inputs+'</div><button type="button" class="smallbtn" data-check-odds="'+index+'">Porównaj kursy z modelem</button><div class="odds-result" id="odds-result-'+index+'"><p class="muted">Wpisz kursy i uruchom porównanie.</p></div><a class="odds-link" href="https://www.oddsportal.com/" target="_blank" rel="noopener noreferrer">Otwórz OddsPortal ↗</a></details>';
 }
 function compareMarketOdds(match, p, index, root) {
-  const fields = [["home","Wygrana gospodarzy",p.home],["draw","Remis",p.draw],["away","Wygrana gości",p.away],["over25","Over 2,5 gola",p.over25],["btts","BTTS — TAK",p.btts]];
+  const fields = [["home","Wygrana gospodarzy",p.home],["draw","Remis",p.draw],["away","Wygrana gości",p.away],["over15","Over 1,5 gola",p.over15],["over25","Over 2,5 gola",p.over25],["under25","Under 2,5 gola",1-p.over25],["btts","BTTS — TAK",p.btts],["bttsNo","BTTS — NIE",1-p.btts]];
   const tax = 0.12;
   const entries = fields.map(([key,label,prob]) => {
     const input = root.querySelector('[data-odd-index="'+index+'"][data-odd-key="'+key+'"]');
