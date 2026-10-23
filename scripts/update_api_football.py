@@ -102,6 +102,45 @@ def main():
         if supplemental:
             verified.append({"matchId": match.get("id"), **supplemental, "source": "API-Football"})
 
+    # Add API-Football-only fixtures for requested dates and kickoff window.
+    # These are fixture-only: no probabilities or xG are invented.
+    existing_keys = {(m.get("date", ""), norm(m.get("home")), norm(m.get("away"))) for m in matches}
+    additional = []
+    for key, item in indexed.items():
+        date, home_norm, away_norm = key
+        if date not in dates[:3] or key in existing_keys:
+            continue
+        try:
+            kickoff = datetime.fromisoformat(item["kickoff"].replace("Z", "+00:00")).astimezone(WARSAW)
+        except (TypeError, ValueError):
+            continue
+        if not (15 <= kickoff.hour <= 22):
+            continue
+        api_id = "api-football-" + str(item["fixtureId"])
+        extra = {
+            "id": api_id, "source": "API-Football", "league": "API-Football",
+            "leagueName": item.get("league") or "Mecz z API-Football",
+            "date": kickoff.date().isoformat(), "time": kickoff.strftime("%H:%M"),
+            "kickoff": kickoff.isoformat(), "home": item["home"], "away": item["away"],
+            "hx": None, "ax": None, "probabilities": None,
+            "history": {"homeLast10": {"matches": [], "stats": None}, "awayLast10": {"matches": [], "stats": None}, "h2h": []},
+            "model": "Tylko terminarz API-Football", "modelStatus": "fixture_only",
+            "quality": "insufficient_data", "confidence": "Brak prognozy: brak zweryfikowanych danych modelu",
+            "apiFootballVerified": item,
+        }
+        additional.append(extra)
+        verified.append({"matchId": api_id, **item, "source": "API-Football"})
+        existing_keys.add(key)
+    additional.sort(key=lambda item: (item["date"], item["time"], item["leagueName"]))
+    latest["matches"] = matches + additional
+    latest["count"] = len(latest["matches"])
+    latest["apiFootballAdditionalCount"] = len(additional)
+    if additional:
+        note = latest.get("note", "")
+        latest["note"] = (note + " Dodano " + str(len(additional)) + " dodatkowych meczów z API-Football bez sztucznej prognozy.").strip()
+        INPUT.write_text(json.dumps(latest, ensure_ascii=False, indent=2), encoding="utf-8")
+    print("Dodatkowe mecze API-Football: " + str(len(additional)) + " (bez sztucznej prognozy).")
+
     # Only request stats for live/finished games; upcoming games have no match stats yet.
     stats_by_fixture = {}
     stat_candidates = [
