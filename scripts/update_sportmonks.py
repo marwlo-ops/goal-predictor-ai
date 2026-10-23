@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Sportmonks Football API v3 supplemental fixtures feed.
 
-Reads SPORTMONKS_API_TOKEN (GitHub Actions secret NEWAPT).
+Reads SPORTMONKS_API_TOKEN (GitHub Actions secret SPORTMONKS).
 The integration enriches matching fixtures and never invents predictions.
 """
 import json
@@ -145,7 +145,7 @@ def fixture_key(match):
 def main():
     if not TOKEN:
         raise RuntimeError(
-            "Brak SPORTMONKS_API_TOKEN. Dodaj token w GitHub Secrets jako NEWAPT; "
+            "Brak SPORTMONKS_API_TOKEN. Dodaj token w GitHub Secrets jako SPORTMONKS; "
             "nie publikuję pustego feedu."
         )
 
