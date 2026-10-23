@@ -114,8 +114,6 @@ def main():
             kickoff = datetime.fromisoformat(item["kickoff"].replace("Z", "+00:00")).astimezone(WARSAW)
         except (TypeError, ValueError):
             continue
-        if not (15 <= kickoff.hour <= 22):
-            continue
         api_id = "api-football-" + str(item["fixtureId"])
         extra = {
             "id": api_id, "source": "API-Football", "league": "API-Football",
