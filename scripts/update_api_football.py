@@ -55,10 +55,10 @@ def main():
         raise RuntimeError("Brak data/latest.json; najpierw wygeneruj terminarz.")
 
     latest = json.loads(INPUT.read_text(encoding="utf-8"))
-    # This script adds verification/statistics to model-backed fixtures only.
-    # Keep unmodelled fixtures in api-football.json rather than the prediction list.
+    raw_matches = latest.get("matches") or []
+    # Preserve existing predictions and remove stale provider-only rows from homepage data.
     matches = [
-        m for m in (latest.get("matches") or [])
+        m for m in raw_matches
         if not str(m.get("id") or "").startswith(("sportmonks-", "api-football-"))
         and isinstance(m.get("probabilities"), dict)
         and m.get("modelStatus") != "fixture_only"
