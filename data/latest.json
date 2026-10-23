@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-24T00:39:12.819131+02:00",
+  "generatedAt": "2026-10-24T01:37:43.767503+02:00",
   "dateFrom": "2026-10-24",
   "dateTo": "2026-10-30",
   "timezone": "Europe/Warsaw",
@@ -25403,15 +25403,15 @@
           }
         ]
       },
-      "hx": 1.32,
-      "ax": 1.5,
+      "hx": 1.31,
+      "ax": 1.48,
       "probabilities": {
         "homeWin": 33.5,
-        "draw": 25.1,
-        "awayWin": 41.5,
-        "over15": 77.3,
-        "over25": 53.6,
-        "btts": 57.0
+        "draw": 25.3,
+        "awayWin": 41.2,
+        "over15": 76.6,
+        "over25": 52.6,
+        "btts": 56.2
       },
       "model": "Poisson na podstawie tabeli",
       "quality": "low",
@@ -26231,15 +26231,15 @@
           }
         ]
       },
-      "hx": 1.42,
-      "ax": 1.37,
+      "hx": 1.4,
+      "ax": 1.35,
       "probabilities": {
         "homeWin": 38.4,
-        "draw": 25.3,
-        "awayWin": 36.2,
-        "over15": 76.7,
-        "over25": 52.8,
-        "btts": 56.6
+        "draw": 25.6,
+        "awayWin": 36.1,
+        "over15": 75.9,
+        "over25": 51.7,
+        "btts": 55.7
       },
       "model": "Poisson na podstawie tabeli",
       "quality": "low",
@@ -28496,7 +28496,7 @@
   ],
   "note": "Prognozy orientacyjne na podstawie dostępnych tabel. Model nie uwzględnia kursów, składów, kontuzji ani zaawansowanych statystyk. Nie gwarantuje wyników.",
   "sportmonksData": {
-    "generatedAt": "2026-10-24T01:05:37.006487+02:00",
+    "generatedAt": "2026-10-24T01:42:35.932206+02:00",
     "count": 18,
     "matchedCount": 0,
     "additionalCount": 18,
