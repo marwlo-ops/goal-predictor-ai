@@ -331,7 +331,7 @@ def main():
 
     print(f"Od: {start} do: {end}")
     print("Strefa czasowa: Europe/Warsaw")
-    print("Zakres godzin: 15:00–22:00 czasu Europe/Warsaw")
+    print("Zakres godzin: cała doba (00:00–23:59) czasu Europe/Warsaw")
     print(f"Rozgrywki do sprawdzenia: {len(LEAGUES)}")
 
     if not TOKEN:
@@ -376,8 +376,6 @@ def main():
             continue
 
         kickoff_time = kickoff_dt.strftime("%H:%M")
-        if not ("15:00" <= kickoff_time <= "22:00"):
-            continue
 
         home = (match.get("homeTeam") or {}).get("name")
         away = (match.get("awayTeam") or {}).get("name")
@@ -463,7 +461,7 @@ def main():
         "dateFrom": start,
         "dateTo": end,
         "timezone": "Europe/Warsaw",
-        "filter": {"from": "15:00", "to": "22:00"},
+        "filter": {"from": "00:00", "to": "23:59"},
         "count": len(predictions),
         "matches": predictions,
         "diagnostics": diagnostics,
@@ -479,7 +477,7 @@ def main():
         encoding="utf-8",
     )
 
-    print(f"Łącznie meczów w zakresie 15:00–22:00 na 3 dni: {len(predictions)}")
+    print(f"Łącznie meczów przez całą dobę na 3 dni: {len(predictions)}")
     print(
         "Mecze z obliczonymi prognozami: "
         f"{sum(m['probabilities'] is not None for m in predictions)}"
