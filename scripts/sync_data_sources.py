@@ -1,10 +1,5 @@
 #!/usr/bin/env python3
-"""Run the optional data providers in a consistent, deterministic order.
-
-Order matters: the base publisher creates latest.json first, then Sportmonks
-adds fixtures/stats, then API-Football enriches and verifies the consolidated list.
-Each provider is isolated so one optional provider failing does not block another.
-"""
+"""Run optional football data providers in a consistent order."""
 import os
 import subprocess
 import sys
@@ -23,7 +18,7 @@ def main():
     failures = []
     for name, token_env, script in PROVIDERS:
         if not os.environ.get(token_env, "").strip():
-            print(f"{name}: pomijam — brak skonfigurowanego sekretu {token_env}.")
+            print(f"{name}: pomijam — brak sekretu {token_env}.", flush=True)
             continue
         configured += 1
         print(f"\n===== Źródło danych: {name} =====", flush=True)
@@ -45,12 +40,12 @@ def main():
             print(failures[-1], file=sys.stderr)
 
     print("\n===== Podsumowanie integracji API =====")
-    print(f"Skonfigurowane źródła: {configured}; zakończone sukcesem: {succeeded}; błędy: {len(failures)}.")
+    print(f"Skonfigurowane źródła: {configured}; sukcesy: {succeeded}; błędy: {len(failures)}.")
     for failure in failures:
         print(f"OSTRZEŻENIE: {failure}")
-    # Optional integrations are non-blocking; preserve valid base predictions.
-    # GitHub logs still make any provider failure visible.
-    return 0
+    # Don't label a configured-but-broken integration as a clean sync.
+    # Optional feeds remain non-blocking when their secrets are not configured.
+    return 1 if failures else 0
 
 
 if __name__ == "__main__":
