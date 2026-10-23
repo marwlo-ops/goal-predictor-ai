@@ -944,6 +944,37 @@ main{max-width:1240px;padding:0 22px}
 @media(max-width:650px){header{padding:17px 16px 15px}main{padding:0 14px}.hero{min-height:0;padding:26px 22px;border-radius:23px}.hero-layout{grid-template-columns:minmax(0,1fr);gap:0}.hero-copy{position:relative;z-index:2}.hero h2{font-size:clamp(31px,8vw,43px);letter-spacing:-1.5px;max-width:420px}.hero-art{position:absolute;right:-30px;bottom:-22px;width:54%;opacity:.42;z-index:-1}.hero p{max-width:340px}.hero-badges{margin-top:18px}.quickstats{gap:7px}.quickstat{padding:12px 10px}.quickstat strong{font-size:21px}.quickstat span{font-size:8px;letter-spacing:.6px}.match-tools{grid-template-columns:minmax(0,1fr) auto}.section-head h3{font-size:18px}.card{padding:15px}.matchlist .card{margin-bottom:11px}.bottomnav{padding-left:4px;padding-right:4px}.navinner{gap:2px}.navitem{flex:0 0 69px;min-width:69px;font-size:9px}.navitem strong{font-size:20px}}
 @media(max-width:390px){header{padding-left:12px;padding-right:12px}.brand h1{font-size:17px}.brand p{font-size:8px;letter-spacing:1px}.logo{width:42px;height:42px}.hero{padding:23px 18px}.hero h2{font-size:30px}.hero-art{width:49%;right:-24px;bottom:-8px}.hero-badge{font-size:9px;padding:7px 8px}.match-tools{grid-template-columns:1fr}.quickstat strong{font-size:19px}.quickstat span{font-size:7px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* Canva-inspired match intelligence cards */
+.prediction-note{margin:14px 0 12px;padding:15px;border:1px solid #334a4b;border-radius:17px;background:linear-gradient(120deg,#12262a,#111c2c 68%,#142036);position:relative;overflow:hidden}
+.prediction-note:before{content:"";position:absolute;right:-28px;top:-34px;width:112px;height:112px;border:1px solid #c9ff7024;border-radius:50%;box-shadow:0 0 0 12px #c9ff7008,0 0 0 25px #c9ff7005;pointer-events:none}
+.prediction-kicker{font-size:9px;letter-spacing:1.35px;text-transform:uppercase;color:var(--green);font-weight:900;margin-bottom:7px}
+.prediction-title{font-size:15px;font-weight:850;line-height:1.35;margin:0 0 6px;letter-spacing:-.25px}
+.prediction-copy{font-size:12px;line-height:1.65;color:#bac9d8;margin:0;max-width:760px}
+.prediction-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:11px}
+.prediction-tag{font-size:10px;font-weight:800;padding:6px 8px;border-radius:8px;background:#0a1521;border:1px solid #293d50;color:#dce7f2}
+.prediction-tag strong{color:var(--green)}
+.team-stats-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin:12px 0}
+.team-stat-card{min-width:0;border:1px solid #293b53;border-radius:16px;background:linear-gradient(145deg,#121f31,#0c1522);padding:12px}
+.team-stat-head{font-size:11px;font-weight:850;line-height:1.4;min-height:30px;margin-bottom:8px;color:#e8f0f9}
+.form-dots{display:flex;gap:4px;align-items:center;margin:5px 0 10px}
+.form-dot{width:20px;height:20px;border-radius:6px;display:grid;place-items:center;font-size:9px;font-weight:900}
+.form-dot.win{background:#213c2a;color:#c9ff70;border:1px solid #476b3e}
+.form-dot.draw{background:#2c3442;color:#d1deed;border:1px solid #46546a}
+.form-dot.loss{background:#42252e;color:#ff9cac;border:1px solid #74404a}
+.team-stat-metrics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+.team-stat-metric{padding:8px;border-radius:10px;background:#09121e}
+.team-stat-metric b{display:block;font-size:16px;letter-spacing:-.45px;color:#f5f8fc}
+.team-stat-metric span{display:block;font-size:9px;color:var(--muted);line-height:1.4;margin-top:2px}
+.team-stat-foot{font-size:10px;line-height:1.5;color:#91a4bc;margin-top:9px}
+.stats-section-title{font-size:12px;font-weight:900;letter-spacing:.2px;margin:14px 0 7px}
+.stats-toggle{display:flex;align-items:center;justify-content:space-between;gap:10px;border-top:1px solid #29384e;margin-top:14px;padding-top:10px;color:#c9d8e8;font-size:11px;font-weight:800}
+.form-bar-row{display:grid;grid-template-columns:minmax(80px,1fr) minmax(70px,1.3fr) 35px;align-items:center;gap:8px;font-size:10px;color:#9eb0c5;margin:8px 0}
+.form-bar{height:6px;border-radius:20px;background:#243247;overflow:hidden}
+.form-bar i{display:block;height:100%;border-radius:20px;background:linear-gradient(90deg,#65e4e8,#c9ff70)}
+@media(min-width:900px){.team-stats-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.prediction-note{padding:17px}.team-stat-card{padding:14px}}
+@media(max-width:390px){.team-stats-grid{gap:6px}.team-stat-card{padding:10px}.team-stat-head{font-size:10px}.form-dot{width:18px;height:18px}.prediction-title{font-size:14px}}
+
 </style>
 
 
@@ -1406,6 +1437,71 @@ function filteredMatches() {
   return result;
 }
 
+
+function teamHistoryStats(match, side) {
+  return match?.history?.[side === "home" ? "homeLast10" : "awayLast10"] || null;
+}
+function formLetters(data) {
+  return (data?.matches || []).slice(0, 5).reverse().map(game => game.result || "D");
+}
+function renderTeamStatsCard(name, data) {
+  const stats = data?.stats;
+  const form = formLetters(data);
+  if (!stats || !stats.played) {
+    return '<div class="team-stat-card"><div class="team-stat-head">' + escapeHtml(name) + '</div><p class="muted">Brak wystarczającej historii do porównania.</p></div>';
+  }
+  const letters = {W:"Z",D:"R",L:"P"};
+  const formHtml = form.length ? form.map(result => '<span class="form-dot ' + (result === "W" ? "win" : result === "L" ? "loss" : "draw") + '" title="' + ({W:"Wygrana",D:"Remis",L:"Porażka"}[result] || "Wynik") + '">' + (letters[result] || result) + '</span>').join("") : '<span class="muted">Brak formy</span>';
+  const bttsRate = Math.round((Number(stats.btts || 0) / stats.played) * 100);
+  const over25Rate = Math.round((Number(stats.over25 || 0) / stats.played) * 100);
+  return '<div class="team-stat-card">' +
+    '<div class="team-stat-head">' + escapeHtml(name) + '</div>' +
+    '<div class="muted">FORMA · OSTATNIE ' + escapeHtml(stats.played) + '</div>' +
+    '<div class="form-dots">' + formHtml + '</div>' +
+    '<div class="team-stat-metrics">' +
+      '<div class="team-stat-metric"><b>' + escapeHtml(stats.wins) + '-' + escapeHtml(stats.draws) + '-' + escapeHtml(stats.losses) + '</b><span>W–R–P</span></div>' +
+      '<div class="team-stat-metric"><b>' + escapeHtml(Number(stats.avgGoalsFor ?? (stats.goalsFor / stats.played)).toLocaleString("pl-PL",{maximumFractionDigits:1})) + '</b><span>Gole strzelone / mecz</span></div>' +
+      '<div class="team-stat-metric"><b>' + escapeHtml(Number(stats.avgGoalsAgainst ?? (stats.goalsAgainst / stats.played)).toLocaleString("pl-PL",{maximumFractionDigits:1})) + '</b><span>Gole stracone / mecz</span></div>' +
+      '<div class="team-stat-metric"><b>' + bttsRate + '%</b><span>BTTS · ' + escapeHtml(stats.btts) + '/' + escapeHtml(stats.played) + '</span></div>' +
+    '</div>' +
+    '<div class="team-stat-foot">Powyżej 2,5 gola: ' + over25Rate + '% (' + escapeHtml(stats.over25) + '/' + escapeHtml(stats.played) + ' meczów) · łącznie goli: ' + escapeHtml(stats.goalsFor) + ':' + escapeHtml(stats.goalsAgainst) + '</div>' +
+  '</div>';
+}
+function buildPredictionNarrative(match, p) {
+  if (!p) return '<div class="prediction-note"><div class="prediction-kicker">Predykcja AI</div><p class="prediction-copy">Brak wystarczających danych do przygotowania wiarygodnego opisu. Sprawdź ponownie po aktualizacji danych.</p></div>';
+  const outcomes = [
+    {key:"1",label:"wygrana gospodarzy",value:p.home},
+    {key:"X",label:"remis",value:p.draw},
+    {key:"2",label:"wygrana gości",value:p.away}
+  ].sort((a,b)=>b.value-a.value);
+  const best = outcomes[0];
+  const hx = asNumber(match.hx);
+  const ax = asNumber(match.ax);
+  const total = hx !== null && ax !== null ? hx + ax : null;
+  const homeStats = teamHistoryStats(match,"home")?.stats;
+  const awayStats = teamHistoryStats(match,"away")?.stats;
+  const homeAvg = homeStats ? Number(homeStats.avgGoalsFor ?? homeStats.goalsFor / homeStats.played) : null;
+  const awayAvg = awayStats ? Number(awayStats.avgGoalsFor ?? awayStats.goalsFor / awayStats.played) : null;
+  const btts = p.btts >= .58 ? "Model mocno wskazuje na scenariusz, w którym obie drużyny strzelą." : p.btts >= .48 ? "BTTS jest możliwy, ale model nie daje tu mocnego sygnału." : "Model ocenia scenariusz gola obu zespołów ostrożniej.";
+  let formLine = "";
+  if (homeAvg !== null && awayAvg !== null) {
+    formLine = " W ostatnich " + Math.min(homeStats.played,awayStats.played) + "–" + Math.max(homeStats.played,awayStats.played) + " spotkaniach ujętych w danych " + match.home + " strzelało średnio " + homeAvg.toLocaleString("pl-PL",{maximumFractionDigits:1}) + " gola, a " + match.away + " " + awayAvg.toLocaleString("pl-PL",{maximumFractionDigits:1}) + ".";
+  }
+  const goalLine = total === null ? "Nie wyliczono oczekiwanej liczby goli z powodu braków w danych." :
+    "Model przewiduje średnio około " + total.toLocaleString("pl-PL",{maximumFractionDigits:1}) + " gola łącznie (" + hx.toLocaleString("pl-PL",{maximumFractionDigits:1}) + " dla gospodarzy i " + ax.toLocaleString("pl-PL",{maximumFractionDigits:1}) + " dla gości).";
+  const confidence = match.quality === "medium" ? "Dane: umiarkowana jakość." : match.quality === "low" ? "Dane: ograniczona jakość — część wskaźników może opierać się na statystykach ogólnych." : "Dane: niewystarczające do mocnego wniosku.";
+  return '<div class="prediction-note">' +
+    '<div class="prediction-kicker">✦ Predykcja Goal Predictor AI</div>' +
+    '<div class="prediction-title">Główny scenariusz: ' + escapeHtml(best.label) + ' (' + escapeHtml(percent(best.value)) + ')</div>' +
+    '<p class="prediction-copy">' + escapeHtml(goalLine + " " + btts + formLine + " " + confidence) + '</p>' +
+    '<div class="prediction-tags">' +
+      '<span class="prediction-tag">Powyżej 1,5: <strong>' + escapeHtml(percent(p.over15)) + '</strong></span>' +
+      '<span class="prediction-tag">Powyżej 2,5: <strong>' + escapeHtml(percent(p.over25)) + '</strong></span>' +
+      '<span class="prediction-tag">BTTS: <strong>' + escapeHtml(percent(p.btts)) + '</strong></span>' +
+    '</div>' +
+  '</div>';
+}
+
 function renderMatches() {
   const list = document.getElementById("matchList");
   const items = filteredMatches();
@@ -1456,6 +1552,12 @@ function renderMatches() {
           <div class="prob"><b>${one}</b><span>1 · Gospodarze</span></div>
           <div class="prob"><b>${draw}</b><span>X · Remis</span></div>
           <div class="prob"><b>${two}</b><span>2 · Goście</span></div>
+        </div>
+
+        ${buildPredictionNarrative(match, probabilities)}
+        <div class="team-stats-grid">
+          ${renderTeamStatsCard(match.home || "Gospodarze", teamHistoryStats(match, "home"))}
+          ${renderTeamStatsCard(match.away || "Goście", teamHistoryStats(match, "away"))}
         </div>
 
         <div class="match-foot">
