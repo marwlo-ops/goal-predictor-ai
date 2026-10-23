@@ -1503,6 +1503,36 @@ function renderTeamStatsCard(name, data) {
     '<div class="team-stat-foot">Powyżej 2,5 gola: ' + over25Rate + '% (' + escapeHtml(stats.over25) + '/' + escapeHtml(stats.played) + ' meczów) · łącznie goli: ' + escapeHtml(stats.goalsFor) + ':' + escapeHtml(stats.goalsAgainst) + '</div>' +
   '</div>';
 }
+function monteCarloAnalysis(match, probabilities) {
+  const hx = asNumber(match.hx), ax = asNumber(match.ax);
+  if (hx === null || ax === null || hx < 0 || ax < 0) return '<p class="muted">Monte Carlo pominięte: brak wiarygodnych parametrów xG. Nie tworzymy prognozy z powietrza.</p>';
+  const simulations = 6000, cv = match.quality === "medium" ? 0.16 : 0.25;
+  const sigma = Math.sqrt(Math.log(1 + cv * cv));
+  const counts = {home:0,draw:0,away:0,over15:0,over25:0,btts:0};
+  function poissonSample(lambda) {
+    if (lambda <= 0) return 0;
+    const limit = Math.exp(-lambda); let product = 1, k = 0;
+    do { k++; product *= Math.random(); } while (product > limit && k < 80);
+    return k - 1;
+  }
+  for (let i=0;i<simulations;i++) {
+    const hLambda = Math.max(0.05, Math.min(5.5, hx * Math.exp(-sigma*sigma/2 + sigma * (Math.random()+Math.random()+Math.random()+Math.random()+Math.random()+Math.random()-3)*0.8165)));
+    const aLambda = Math.max(0.05, Math.min(5.5, ax * Math.exp(-sigma*sigma/2 + sigma * (Math.random()+Math.random()+Math.random()+Math.random()+Math.random()+Math.random()-3)*0.8165)));
+    const h = poissonSample(hLambda), a = poissonSample(aLambda);
+    if(h>a) counts.home++; else if(h===a) counts.draw++; else counts.away++;
+    if(h+a>=2) counts.over15++; if(h+a>=3) counts.over25++; if(h>0&&a>0) counts.btts++;
+  }
+  const labels = [["home","1 · gospodarze"],["draw","X · remis"],["away","2 · goście"],["over15","Over 1,5"],["over25","Over 2,5"],["btts","BTTS — TAK"]];
+  const rows = labels.map(([key,label]) => {
+    const p = counts[key]/simulations, z=1.96, d=1+z*z/simulations;
+    const center=(p+z*z/(2*simulations))/d;
+    const half=z*Math.sqrt((p*(1-p)+z*z/(4*simulations))/simulations)/d;
+    return '<div class="full-market-row"><span>'+label+'</span><b>'+Math.round(p*1000)/10+'%</b><span>przedział 95%: '+Math.round(Math.max(0,center-half)*1000)/10+'–'+Math.round(Math.min(1,center+half)*1000)/10+'%</span></div>';
+  }).join("");
+  const gap = probabilities ? Math.max(Math.abs(counts.home/simulations-probabilities.home),Math.abs(counts.draw/simulations-probabilities.draw),Math.abs(counts.away/simulations-probabilities.away)) : 0;
+  const warning = gap > 0.12 ? '<p class="muted">Bezpiecznik: symulacja i rozkład bazowy różnią się wyraźnie. Traktuj prognozę jako niepewną i sprawdź dane / składy.</p>' : '<p class="muted">Bezpiecznik: porównanie z modelem bazowym wykonane; przedział pokazuje niepewność symulacji, nie gwarancję wyniku.</p>';
+  return '<section class="full-analysis-section"><h3>Monte Carlo · 6 000 symulacji</h3><p>W każdej próbie zmieniają się oczekiwane gole w granicach niepewności danych, a wynik meczu jest losowany z rozkładu Poissona.</p><div class="full-market-grid">'+rows+'</div>'+warning+'<p class="muted">Poziom rozrzutu: '+(match.quality === "medium" ? "umiarkowany" : "podwyższony z powodu ograniczeń danych")+'. Symulacja uzupełnia analizę, nie usuwa typów tylko dlatego, że historia jest krótka.</p></section>';
+}
 function fullMatchAnalysis(match) {
   const p = getMatchProbabilities(match);
   const homeData = teamHistoryStats(match, "home");
@@ -1541,6 +1571,7 @@ function fullMatchAnalysis(match) {
   modal.innerHTML = '<div class="full-analysis-modal"><div class="full-analysis-header"><div><div class="prediction-kicker">GOAL PREDICTOR AI · MATCH INTELLIGENCE</div><h2>'+escapeHtml(match.home)+' <span>vs</span> '+escapeHtml(match.away)+'</h2><p class="muted">'+escapeHtml(match.leagueName||match.league||"Piłka nożna")+' · '+escapeHtml(dateLabel(match))+' · '+escapeHtml(match.time||"—")+' · jakość danych: '+escapeHtml(match.quality||"nieokreślona")+'</p></div><button type="button" class="full-analysis-close" aria-label="Zamknij analizę">×</button></div>'+
     '<div class="full-analysis-body"><section class="full-analysis-section"><h3>Wniosek modelu</h3><p>'+escapeHtml(summary)+'</p>'+xgLine+'</section>'+
     '<section class="full-analysis-section"><h3>Porównanie prawdopodobieństw</h3><div class="full-market-grid">'+marketRows+'</div></section>'+
+    monteCarloAnalysis(match,p)+
     '<section class="full-analysis-section"><h3>Dokładne statystyki drużyn</h3>'+detailedStats+'</section>'+
     '<div class="full-history-grid">'+historyRows(match.home,homeData)+historyRows(match.away,awayData)+'</div>'+
     '<section class="full-analysis-section"><h3>Bezpośrednie mecze (H2H)</h3>'+h2hHtml+'</section>'+
