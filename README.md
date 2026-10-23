@@ -43,3 +43,7 @@ Model Poissona przelicza rozkłady liczby goli na 1X2, over 1.5, over 2.5 i BTTS
 
 ## Prywatność i bezpieczeństwo
 Nigdy nie wpisuj tokenów API w `index.html` ani nie commituj ich w kodzie. Używaj GitHub Secrets. W przypadku publicznego repozytorium wyniki prognoz w `data/latest.json` są publiczne.
+
+
+## Unified data pipeline
+The hourly publication pipeline generates modelled fixtures from football-data.org and then invokes `scripts/sync_data_sources.py` to run Sportmonks and API-Football adapters in sequence when their secrets are available. Optional-provider failures are reported without discarding the base predictions. Matches without valid model probabilities remain in provider feeds (`data/sportmonks.json`, `data/api-football.json`) rather than the homepage prediction cards. The homepage filters out fixture-only rows, so unavailable markets do not render as empty or misleading predictions.
