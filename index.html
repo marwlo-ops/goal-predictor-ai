@@ -2403,10 +2403,10 @@ function historyPanel(match) {
         '</span><b>' + escapeHtml(String(game.homeGoals ?? "—")) + ':' + escapeHtml(String(game.awayGoals ?? "—")) + '</b></div>'
       ).join("")
     : "";
-  const content = apiMeta + homeHtml + awayHtml + h2hHtml + h2hHtml;
-  if (!content.trim() || !(homeHtml || awayHtml || h2hHtml || apiStatsHtml || apiMeta)) return "";
+  const content = apiMeta + homeHtml + awayHtml + h2hHtml;
+  if (!content.trim()) return "";
   return '<details style="margin-top:12px"><summary style="cursor:pointer;padding:10px 0;font-weight:700">📊 Dostępne statystyki i historia</summary>' +
-    apiMeta + homeHtml + awayHtml + h2hHtml + (h2h.length ? h2hHtml : "") + '</details>';
+    content + '</details>';
 }
 </script>
 </body>
