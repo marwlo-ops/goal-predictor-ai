@@ -985,6 +985,32 @@ main{max-width:1240px;padding:0 22px}
 .odds-status{font-size:.78rem;font-weight:800;margin-top:4px}.odds-status.positive{color:#b8f34a}.odds-status.negative{color:#ffb3a7}
 .odds-link{display:inline-block;margin-top:10px;color:var(--text);font-weight:700}
 
+
+.team-name-button{font:inherit;color:inherit;background:transparent;border:0;cursor:pointer;text-align:inherit;text-decoration:underline;text-decoration-color:rgba(184,243,74,.45);text-underline-offset:4px}
+.team-name-button:hover{color:#b8f34a}
+.full-analysis-backdrop{position:fixed;inset:0;z-index:9999;background:rgba(2,6,12,.82);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;padding:clamp(8px,2vw,28px)}
+.full-analysis-modal{width:min(1280px,100%);max-height:94vh;display:flex;flex-direction:column;background:#0b1220;color:var(--text);border:1px solid var(--line);border-radius:22px;box-shadow:0 25px 90px #0009;overflow:hidden}
+.full-analysis-header{display:flex;justify-content:space-between;gap:16px;padding:22px 24px;border-bottom:1px solid var(--line);background:linear-gradient(120deg,#132b2b,#111a2a)}
+.full-analysis-header h2{margin:7px 0;font-size:clamp(1.2rem,2.5vw,2rem)}
+.full-analysis-header h2 span{color:#b8f34a}
+.full-analysis-close{flex:0 0 auto;width:42px;height:42px;border-radius:12px;border:1px solid var(--line);background:#172337;color:var(--text);font-size:28px;cursor:pointer}
+.full-analysis-body{overflow:auto;padding:20px 24px 28px;display:grid;grid-template-columns:1fr 1fr;gap:16px;align-content:start}
+.full-analysis-section{min-width:0;padding:15px;border:1px solid var(--line);border-radius:15px;background:#101a2a}
+.full-analysis-section h3{font-size:1rem;margin:0 0 12px}
+.full-analysis-section p{line-height:1.55;margin:8px 0}
+.full-market-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.full-market-row{display:grid;grid-template-columns:1fr auto;gap:5px;padding:9px;border-radius:10px;background:#0b1220;font-size:.82rem}
+.full-market-row b{color:#b8f34a}.full-market-row span:last-child{grid-column:1/-1;color:var(--muted);font-size:.72rem}
+.full-stat-table{width:100%}.full-stat-row{display:grid;grid-template-columns:minmax(120px,1.3fr) minmax(65px,1fr) minmax(65px,1fr);gap:8px;padding:9px 0;border-bottom:1px solid var(--line);font-size:.82rem;align-items:center}
+.full-stat-row span{color:var(--muted)}.full-stat-row b{text-align:right;overflow-wrap:anywhere}
+.full-stat-row.stat-head{font-weight:800}.full-stat-row.stat-head span{color:var(--text)}
+.full-history-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;min-width:0}
+.full-game-row{display:grid;grid-template-columns:68px minmax(0,1fr) auto;gap:8px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line);font-size:.78rem}
+.full-game-row span:first-child{color:var(--muted)}.full-game-row span:nth-child(2){overflow-wrap:anywhere}.full-game-row b{white-space:nowrap}
+.official-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}.official-links a{color:#b8f34a;overflow-wrap:anywhere}
+.full-analysis-disclaimer{grid-column:1/-1;color:var(--muted);font-size:.75rem;line-height:1.5;margin:0}
+@media(max-width:760px){.full-analysis-backdrop{padding:0;align-items:stretch}.full-analysis-modal{max-height:100dvh;border-radius:0;border-left:0;border-right:0}.full-analysis-header{padding:16px}.full-analysis-body{grid-template-columns:1fr;padding:12px;gap:12px}.full-history-grid{grid-template-columns:1fr}.full-analysis-disclaimer{grid-column:auto}.full-analysis-section{padding:12px}}
+
 </style>
 
 
@@ -1477,6 +1503,56 @@ function renderTeamStatsCard(name, data) {
     '<div class="team-stat-foot">Powyżej 2,5 gola: ' + over25Rate + '% (' + escapeHtml(stats.over25) + '/' + escapeHtml(stats.played) + ' meczów) · łącznie goli: ' + escapeHtml(stats.goalsFor) + ':' + escapeHtml(stats.goalsAgainst) + '</div>' +
   '</div>';
 }
+function fullMatchAnalysis(match) {
+  const p = getMatchProbabilities(match);
+  const homeData = teamHistoryStats(match, "home");
+  const awayData = teamHistoryStats(match, "away");
+  const home = homeData?.stats, away = awayData?.stats;
+  const fmt = value => Number.isFinite(Number(value)) ? Number(value).toLocaleString("pl-PL",{maximumFractionDigits:1}) : "—";
+  const stat = (label, a, b) => '<div class="full-stat-row"><span>'+label+'</span><b>'+escapeHtml(a)+'</b><b>'+escapeHtml(b)+'</b></div>';
+  const historyRows = (name, data) => {
+    const rows = data?.matches || [];
+    return '<section class="full-analysis-section"><h3>Ostatnie mecze — '+escapeHtml(name)+'</h3>' +
+      (rows.length ? rows.slice(0,10).map(game => '<div class="full-game-row"><span>'+escapeHtml(game.date ? new Date(game.date).toLocaleDateString("pl-PL",{day:"2-digit",month:"2-digit",year:"numeric"}) : "—")+'</span><span>'+escapeHtml(game.home)+' – '+escapeHtml(game.away)+'</span><b>'+escapeHtml(game.homeGoals)+':'+escapeHtml(game.awayGoals)+'</b></div>').join("") : '<p class="muted">Brak dostępnej historii.</p>') + '</section>';
+  };
+  const h2h = match.history?.h2h || [];
+  const h2hHtml = h2h.length ? h2h.slice(0,10).map(g => '<div class="full-game-row"><span>'+escapeHtml(g.date ? new Date(g.date).toLocaleDateString("pl-PL") : "—")+'</span><span>'+escapeHtml(g.home)+' – '+escapeHtml(g.away)+'</span><b>'+escapeHtml(g.homeGoals)+':'+escapeHtml(g.awayGoals)+'</b></div>').join("") : '<p class="muted">Brak bezpośrednich spotkań w załadowanych danych.</p>';
+  const marketRows = p ? [
+    ["1 · wygrana gospodarzy",p.home],["X · remis",p.draw],["2 · wygrana gości",p.away],
+    ["Over 1,5 gola",p.over15],["Over 2,5 gola",p.over25],["Under 2,5 gola",1-p.over25],
+    ["BTTS — TAK",p.btts],["BTTS — NIE",1-p.btts]
+  ].map(([label,value])=>'<div class="full-market-row"><span>'+label+'</span><b>'+percent(value)+'</b><span>Kurs fair '+(value>0?(1/value).toFixed(2):"—")+'</span></div>').join("") : '<p class="muted">Brak prawdopodobieństw.</p>';
+  const teamStats = (x) => x ? {record:x.wins+'–'+x.draws+'–'+x.losses,avgFor:fmt(x.avgGoalsFor ?? x.goalsFor/x.played),avgAgainst:fmt(x.avgGoalsAgainst ?? x.goalsAgainst/x.played),btts:Math.round(100*x.btts/x.played)+'%',over15:Math.round(100*x.over15/x.played)+'%',over25:Math.round(100*x.over25/x.played)+'%',gfga:x.goalsFor+':'+x.goalsAgainst,played:x.played} : null;
+  const hs=teamStats(home), as=teamStats(away);
+  const detailedStats = hs && as ? '<div class="full-stat-table"><div class="full-stat-row stat-head"><span>Wskaźnik · ostatnie mecze</span><b>'+escapeHtml(match.home)+'</b><b>'+escapeHtml(match.away)+'</b></div>'+
+    stat("Bilans Z–R–P",hs.record,as.record)+stat("Mecze w próbie",hs.played,as.played)+stat("Gole strzelone / mecz",hs.avgFor,as.avgFor)+stat("Gole stracone / mecz",hs.avgAgainst,as.avgAgainst)+stat("Łącznie gole",hs.gfga,as.gfga)+stat("BTTS",hs.btts,as.btts)+stat("Over 1,5",hs.over15,as.over15)+stat("Over 2,5",hs.over25,as.over25)+'</div>' : '<p class="muted">Nie ma wystarczających danych historycznych dla obu drużyn, aby porównać wszystkie wskaźniki.</p>';
+  const best = p ? [{label:"Wygrana gospodarzy",v:p.home},{label:"Remis",v:p.draw},{label:"Wygrana gości",v:p.away},{label:"Over 1,5 gola",v:p.over15},{label:"Over 2,5 gola",v:p.over25},{label:"BTTS — TAK",v:p.btts}].sort((a,b)=>b.v-a.v)[0] : null;
+  const xgLine = asNumber(match.hx)!==null && asNumber(match.ax)!==null ? '<p>Oczekiwane gole (xG modelu): <b>'+fmt(match.hx)+' – '+fmt(match.ax)+'</b>, razem '+fmt(Number(match.hx)+Number(match.ax))+'.</p>' : '<p class="muted">Brak xG w danych dla tego spotkania.</p>';
+  const officialLink = team => 'https://www.google.com/search?q='+encodeURIComponent('site:'+team.toLowerCase().replace(/[^a-z0-9]+/g,'')+'.com official team news lineup '+match.date);
+  const homeNews = 'https://www.google.com/search?q='+encodeURIComponent(match.home+' official website team news lineup '+match.date);
+  const awayNews = 'https://www.google.com/search?q='+encodeURIComponent(match.away+' official website team news lineup '+match.date);
+  const sourceLinks = '<div class="official-links"><a target="_blank" rel="noopener noreferrer" href="'+homeNews+'">Wiadomości / skład: '+escapeHtml(match.home)+' ↗</a><a target="_blank" rel="noopener noreferrer" href="'+awayNews+'">Wiadomości / skład: '+escapeHtml(match.away)+' ↗</a></div>';
+  const summary = best ? 'Najwyższe prawdopodobieństwo pojedynczego rynku w tym modelu: '+best.label+' ('+percent(best.v)+'). To nie jest gwarancja ani automatycznie najlepsze value — do oceny opłacalności potrzebny jest aktualny kurs.' : 'Brak danych modelu do przygotowania wniosku.';
+  const modal = document.createElement("div");
+  modal.className = "full-analysis-backdrop";
+  modal.setAttribute("role","dialog");
+  modal.setAttribute("aria-modal","true");
+  modal.setAttribute("aria-label","Szczegółowa analiza meczu");
+  modal.innerHTML = '<div class="full-analysis-modal"><div class="full-analysis-header"><div><div class="prediction-kicker">GOAL PREDICTOR AI · MATCH INTELLIGENCE</div><h2>'+escapeHtml(match.home)+' <span>vs</span> '+escapeHtml(match.away)+'</h2><p class="muted">'+escapeHtml(match.leagueName||match.league||"Piłka nożna")+' · '+escapeHtml(dateLabel(match))+' · '+escapeHtml(match.time||"—")+' · jakość danych: '+escapeHtml(match.quality||"nieokreślona")+'</p></div><button type="button" class="full-analysis-close" aria-label="Zamknij analizę">×</button></div>'+
+    '<div class="full-analysis-body"><section class="full-analysis-section"><h3>Wniosek modelu</h3><p>'+escapeHtml(summary)+'</p>'+xgLine+'</section>'+
+    '<section class="full-analysis-section"><h3>Porównanie prawdopodobieństw</h3><div class="full-market-grid">'+marketRows+'</div></section>'+
+    '<section class="full-analysis-section"><h3>Dokładne statystyki drużyn</h3>'+detailedStats+'</section>'+
+    '<div class="full-history-grid">'+historyRows(match.home,homeData)+historyRows(match.away,awayData)+'</div>'+
+    '<section class="full-analysis-section"><h3>Bezpośrednie mecze (H2H)</h3>'+h2hHtml+'</section>'+
+    '<section class="full-analysis-section"><h3>Składy, absencje i komunikaty klubowe</h3><p class="muted">W aktualnym zbiorze danych nie ma potwierdzonych składów ani list kontuzji. Nie oznaczamy przewidywanych składów jako oficjalnych. Otwórz wyszukiwanie komunikatów klubowych i zweryfikuj informacje przed meczem.</p>'+sourceLinks+'</section>'+
+    '<p class="full-analysis-disclaimer">Analiza automatycznie podsumowuje dane dostępne w aplikacji. Nie jest niezależnym raportem dziennikarskim ani gwarancją wyniku. Brak informacji o składzie oznacza brak danych, a nie potwierdzenie pełnej dostępności zawodników.</p></div></div>';
+  const close = () => { modal.remove(); document.removeEventListener("keydown", keyHandler); };
+  const keyHandler = event => { if(event.key==="Escape") close(); };
+  modal.addEventListener("click", event => { if(event.target===modal || event.target.closest(".full-analysis-close")) close(); });
+  document.addEventListener("keydown", keyHandler);
+  document.body.appendChild(modal);
+  modal.querySelector(".full-analysis-close")?.focus();
+}
 function oddsPortalAnalysis(match, p, index) {
   if (!p) return "";
   const fields = [["home","Kurs 1",p.home],["draw","Kurs X",p.draw],["away","Kurs 2",p.away],["over15","Over 1,5",p.over15],["over25","Over 2,5",p.over25],["under25","Under 2,5",1-p.over25],["btts","BTTS TAK",p.btts],["bttsNo","BTTS NIE",1-p.btts]];
@@ -1580,9 +1656,9 @@ function renderMatches() {
         </div>
 
         <div class="teams">
-          <div class="team">${escapeHtml(match.home || "Gospodarze")}</div>
+          <button type="button" class="team team-name-button" data-full-analysis="${index}" aria-label="Otwórz szczegółową analizę meczu ${escapeHtml(match.home || "Gospodarze")}">${escapeHtml(match.home || "Gospodarze")}</button>
           <div class="vs">VS</div>
-          <div class="team">${escapeHtml(match.away || "Goście")}</div>
+          <button type="button" class="team team-name-button" data-full-analysis="${index}" aria-label="Otwórz szczegółową analizę meczu ${escapeHtml(match.away || "Goście")}">${escapeHtml(match.away || "Goście")}</button>
         </div>
 
         <div class="probrow">
@@ -1616,6 +1692,12 @@ function renderMatches() {
   }).join("");
 
 
+  list.querySelectorAll("[data-full-analysis]").forEach(button => {
+    button.addEventListener("click", () => {
+      const match = items[Number(button.dataset.fullAnalysis)];
+      if (match) fullMatchAnalysis(match);
+    });
+  });
   list.querySelectorAll("[data-check-odds]").forEach(button => {
     button.addEventListener("click", () => {
       const index = Number(button.dataset.checkOdds), match = items[index];
