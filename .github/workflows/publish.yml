@@ -7,6 +7,8 @@ on:
     paths:
       - "scripts/update_predictions.py"
       - "scripts/update_api_football.py"
+      - "index.html"
+      - "sw.js"
       - ".github/workflows/publish.yml"
   schedule:
     - cron: "17 * * * *"
