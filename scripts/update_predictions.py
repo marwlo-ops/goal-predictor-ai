@@ -229,6 +229,8 @@ def summarize_history(matches, team_name):
             "away": away,
             "homeGoals": hg,
             "awayGoals": ag,
+            # Preserve any match statistics provided by the data source.
+            "stats": match.get("stats") or match.get("statistics") or match.get("matchStats") or None,
             "teamGoals": hg if home == team_name else ag,
             "conceded": ag if home == team_name else hg,
             "result": (
@@ -309,6 +311,7 @@ def build_team_history(matches, home_name, away_name):
             "away": away,
             "homeGoals": hg,
             "awayGoals": ag,
+            "stats": match.get("stats") or match.get("statistics") or match.get("matchStats") or None,
         })
 
     h2h.sort(key=lambda item: item.get("date") or "", reverse=True)
