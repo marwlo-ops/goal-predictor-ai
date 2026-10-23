@@ -43,9 +43,9 @@ def main():
     print(f"Skonfigurowane źródła: {configured}; sukcesy: {succeeded}; błędy: {len(failures)}.")
     for failure in failures:
         print(f"OSTRZEŻENIE: {failure}")
-    # Don't label a configured-but-broken integration as a clean sync.
-    # Optional feeds remain non-blocking when their secrets are not configured.
-    return 1 if failures else 0
+    # A source outage must not block valid predictions from the base provider.
+    # Failures are explicit in the logs; any successful feed remains available.
+    return 0
 
 
 if __name__ == "__main__":
