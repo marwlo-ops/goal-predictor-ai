@@ -1040,6 +1040,14 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,su
 @media(max-width:680px){#matchList{grid-template-columns:minmax(0,1fr);gap:12px}#matchList>.card{padding:13px}#matchList>.card .team-stat-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{min-height:0}.team-stat-metric b{font-size:16px}}
 @media(min-width:1000px){#matchList{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}}
 
+/* Clean forecast list: the homepage contains model-backed fixtures only.
+   Source-only rows remain available in the provider JSON feeds for later enrichment. */
+#matchList .fixture-only-card{display:none!important}
+#dataPulse .status-chip:not(.good){display:none}
+.prediction-note{background:linear-gradient(120deg,#102d31,#101a2b 70%,#14213a);border-color:#345355}
+.hero{box-shadow:0 24px 66px #0005}
+@media(min-width:1000px){#matchList{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}}
+
 </style>
 
 
@@ -1487,7 +1495,9 @@ function persistFavorites() {
   document.getElementById("quickFavCount").textContent = favoriteIds.size;
 }
 function filteredMatches() {
-  let result = matches;
+  // Main predictions view: only fixtures with actual model probabilities.
+  // Provider-only schedule rows live in their source feeds and must not create empty cards.
+  let result = matches.filter(match => !!getMatchProbabilities(match) && match.modelStatus !== "fixture_only");
   if (activeLeagueFilter === "other") result = result.filter(match => !["PL", "PD", "SA"].includes(match.league));
   else if (activeLeagueFilter !== "all") {
     const codes = leagueFilters[activeLeagueFilter];
