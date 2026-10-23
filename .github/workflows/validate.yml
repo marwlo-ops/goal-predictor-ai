@@ -22,7 +22,7 @@ jobs:
           python-version: "3.12"
 
       - name: Sprawdź składnię Pythona
-        run: python -m py_compile scripts/update_predictions.py scripts/update_api_football.py scripts/update_live.py scripts/update_results.py scripts/update_sportmonks.py
+        run: python -m py_compile scripts/update_predictions.py scripts/update_api_football.py scripts/update_live.py scripts/update_results.py scripts/update_sportmonks.py scripts/sync_data_sources.py
 
       - name: Sprawdź JSON z prognozami
         run: python -m json.tool data/latest.json > /dev/null
@@ -49,4 +49,4 @@ jobs:
           node --check sw.js
 
       - name: Sprawdź składnię workflow publikacji
-        run: ruby -e 'require "yaml"; YAML.load_file(".github/workflows/publish.yml")'
+        run: ruby -e 'require "yaml"; YAML.load_file(".github/workflows/publish.yml"); YAML.load_file(".github/workflows/sportmonks.yml")'
