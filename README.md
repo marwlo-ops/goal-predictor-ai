@@ -16,6 +16,14 @@ Ten projekt używa `football-data.org` jako integracji startowej, ponieważ udos
 
 Dostępny zakres lig, historii i statystyk zależy od planu API. Prototyp wylicza estymowane gole z ostatnich wyników; nie nazywa ich oficjalnym xG. Składy, kontuzje, kursy, rożne i kartki nie są jeszcze dostępne w tej wersji.
 
+## Integracja Sportmonks (Football API v3)
+
+Projekt pobiera dodatkowy terminarz ze Sportmonks i scala go z `data/latest.json`; osobny plik `data/sportmonks.json` zachowuje dane źródłowe i diagnostykę. Synchronizacja jest zaplanowana co 30 minut przez GitHub Actions. Spotkania znalezione wyłącznie w Sportmonks są dodawane jako `fixture_only` bez zmyślonych prawdopodobieństw. Dostęp do statystyk, kursów, predykcji i lig zależy od uprawnień tokena oraz wybranego planu.
+
+W repozytorium otwórz **Settings → Secrets and variables → Actions**. Na zrzucie ekranu sekret został nazwany `NEWAPT`; workflow odczytuje go jako `SPORTMONKS_API_TOKEN` przez mapowanie `secrets.NEWAPT`. Jeśli sekret ma inną nazwę, zmień mapowanie w `.github/workflows/sportmonks.yml` albo nazwij sekret `NEWAPT`. Nigdy nie umieszczaj wartości tokena w plikach strony ani w commitach.
+
+Test integracji: **Actions → Sportmonks Football Data → Run workflow**. Sprawdź logi, a potem pliki `data/sportmonks.json` i `data/latest.json`. Błąd 401 zwykle oznacza zły/brakujący token; 403 — brak uprawnień planu; 429 — limit zapytań. Nieudane zapytania do poszczególnych dat są zapisywane w diagnostyce, a całkowita awaria źródła nie powinna zastąpić feedu pustymi danymi.
+
 ## Publikacja na GitHubie
 
 1. Utwórz nowe repozytorium na https://github.com/new (np. `goal-predictor-ai`).
