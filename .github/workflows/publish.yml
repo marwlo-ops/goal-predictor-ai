@@ -7,6 +7,8 @@ on:
     paths:
       - "scripts/update_predictions.py"
       - "scripts/update_api_football.py"
+      - "scripts/update_sportmonks.py"
+      - "scripts/sync_data_sources.py"
       - "index.html"
       - "sw.js"
       - ".github/workflows/publish.yml"
@@ -67,12 +69,12 @@ jobs:
           FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
         run: python scripts/update_predictions.py
 
-      - name: Weryfikuj terminarz przez API-Football
+      - name: Połącz źródła danych (Sportmonks + API-Football)
         if: steps.timecheck.outputs.run == 'true'
-        continue-on-error: true
         env:
+          SPORTMONKS_API_TOKEN: ${{ secrets.SPORTMONKS }}
           API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
-        run: python scripts/update_api_football.py
+        run: python scripts/sync_data_sources.py
 
       - name: Sprawdź wygenerowane dane
         if: steps.timecheck.outputs.run == 'true'
@@ -104,6 +106,7 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           git add data/latest.json
           if [ -f data/api-football.json ]; then git add data/api-football.json; fi
+          if [ -f data/sportmonks.json ]; then git add data/sportmonks.json; fi
           if ! git diff --cached --quiet; then
             git commit -m "Aktualizacja prognoz i weryfikacji terminarza"
             git push
