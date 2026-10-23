@@ -199,11 +199,13 @@ def main():
 
     if LATEST.exists():
         latest = json.loads(LATEST.read_text(encoding="utf-8"))
-        # Remove only rows previously created by this integration, then rebuild them
-        # from the current feed. This keeps repeated runs idempotent and expires stale rows.
+        # Keep model-backed fixtures in latest.json. Fixture-only rows stay in the
+        # provider feed only, so they cannot clutter prediction cards or accumulate.
         matches = [
             m for m in (latest.get("matches") or [])
-            if not str(m.get("id") or "").startswith("sportmonks-")
+            if not str(m.get("id") or "").startswith(("sportmonks-", "api-football-"))
+            and isinstance(m.get("probabilities"), dict)
+            and m.get("modelStatus") != "fixture_only"
         ]
         by_key = {fixture_key(m): m for m in matches}
         extras = []
@@ -217,38 +219,20 @@ def main():
                 existing["dataSources"] = sorted(set(sources + ["Sportmonks"]))
                 matched_ids.add(str(fixture.get("fixtureId")))
             else:
-                extras.append({
-                    "id": "sportmonks-" + str(fixture.get("fixtureId")),
-                    "source": "Sportmonks",
-                    "league": "SM",
-                    "leagueName": fixture.get("league") or "Sportmonks",
-                    "date": fixture["date"],
-                    "time": fixture["time"],
-                    "kickoff": fixture["kickoff"],
-                    "home": fixture["home"],
-                    "away": fixture["away"],
-                    "hx": None,
-                    "ax": None,
-                    "probabilities": None,
-                    "model": "Tylko terminarz Sportmonks",
-                    "modelStatus": "fixture_only",
-                    "quality": "insufficient_data",
-                    "confidence": "Brak prognozy — brak danych wystarczających dla modelu",
-                    "history": {"homeLast10": {"matches": [], "stats": None}, "awayLast10": {"matches": [], "stats": None}, "h2h": []},
-                    "sportmonks": fixture,
-                    "dataSources": ["Sportmonks"],
-                })
-        latest["matches"] = matches + extras
+                # Unmatched fixture stays in the provider feed, not in modelled cards.
+                extras.append(fixture)
+        latest["matches"] = matches
         latest["count"] = len(latest["matches"])
         latest["sportmonksData"] = {
             "generatedAt": result["generatedAt"],
             "count": len(fixtures),
             "matchedCount": len(matched_ids),
             "additionalCount": len(extras),
+            "unmatchedFixturesStoredOnlyInProviderFeed": True,
             "failedDates": failed_dates,
         }
         LATEST.write_text(json.dumps(latest, ensure_ascii=False, indent=2), encoding="utf-8")
-        print(f"Sportmonks: {len(fixtures)} spotkań; {len(matched_ids)} wzbogaconych, {len(extras)} dodatkowych.")
+        print(f"Sportmonks: {len(fixtures)} spotkań; {len(matched_ids)} wzbogaconych, {len(extras)} wyłącznie w feedzie źródłowym.")
     print(f"Zapisano {OUTPUT}: {len(fixtures)} spotkań.")
     return 0
 
