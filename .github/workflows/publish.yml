@@ -87,12 +87,9 @@ jobs:
           matches = data.get("matches")
           if not isinstance(matches, list):
               raise SystemExit("Pole matches nie jest listą")
-          outside = [m for m in matches if not ("15:00" <= str(m.get("time", "")) <= "22:00")]
-          if outside:
-              raise SystemExit(f"Znaleziono {len(outside)} meczów poza godzinami 15:00–22:00")
           if data.get("count") != len(matches):
               raise SystemExit("Pole count nie zgadza się z liczbą meczów")
-          print(f"OK: {len(matches)} meczów, generatedAt={generated}, zakres 15:00–22:00")
+          print(f"OK: {len(matches)} meczów, generatedAt={generated}, filtr godzin wyłączony")
           PY
 
       - name: Zapisz wyniki
