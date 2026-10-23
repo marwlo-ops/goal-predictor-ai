@@ -2340,75 +2340,73 @@ if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {
 
 
 function historyPanel(match) {
-  const history = match.history;
-  if (!history) {
-    return `<p class="muted">Brak danych historycznych.</p>`;
-  }
+  const history = match.history || {};
 
   function renderTeam(title, data) {
     const stats = data?.stats;
     const games = data?.matches || [];
-
-    if (!stats || !games.length) {
-      return `<p class="muted">Brak historii: ${escapeHtml(title)}</p>`;
-    }
-
+    if (!stats || !games.length) return "";
     const rows = games.map(game => {
-      const date = game.date
-        ? new Date(game.date).toLocaleDateString("pl-PL")
-        : "—";
-
-      return `
-        <div class="match-foot" style="padding:5px 0;border-bottom:1px solid var(--line)">
-          <span>${date} · ${escapeHtml(game.home)} – ${escapeHtml(game.away)}</span>
-          <b>${game.homeGoals}:${game.awayGoals}</b>
-        </div>`;
+      const date = game.date ? new Date(game.date).toLocaleDateString("pl-PL") : "—";
+      return '<div class="match-foot" style="padding:5px 0;border-bottom:1px solid var(--line)"><span>' +
+        date + ' · ' + escapeHtml(game.home) + ' – ' + escapeHtml(game.away) +
+        '</span><b>' + escapeHtml(String(game.homeGoals ?? "—")) + ':' + escapeHtml(String(game.awayGoals ?? "—")) + '</b></div>';
     }).join("");
-
-    return `
-      <h4 style="margin:12px 0 6px">${escapeHtml(title)}</h4>
-      <p class="muted">
-        Mecze: ${stats.played} · W/R/P: ${stats.wins}/${stats.draws}/${stats.losses}<br>
-        Gole: ${stats.goalsFor}:${stats.goalsAgainst} ·
-        BTTS: ${stats.btts}/${stats.played} ·
-        O1,5: ${stats.over15}/${stats.played} ·
-        O2,5: ${stats.over25}/${stats.played}
-      </p>
-      ${rows}`;
+    return '<h4 style="margin:12px 0 6px">' + escapeHtml(title) + '</h4>' +
+      '<p class="muted">Mecze: ' + escapeHtml(String(stats.played ?? games.length)) +
+      ' · W/R/P: ' + escapeHtml(String(stats.wins ?? "—")) + '/' + escapeHtml(String(stats.draws ?? "—")) + '/' + escapeHtml(String(stats.losses ?? "—")) +
+      '<br>Gole: ' + escapeHtml(String(stats.goalsFor ?? "—")) + ':' + escapeHtml(String(stats.goalsAgainst ?? "—")) +
+      ' · BTTS: ' + escapeHtml(String(stats.btts ?? "—")) + '/' + escapeHtml(String(stats.played ?? games.length)) +
+      ' · O1,5: ' + escapeHtml(String(stats.over15 ?? "—")) + '/' + escapeHtml(String(stats.played ?? games.length)) +
+      ' · O2,5: ' + escapeHtml(String(stats.over25 ?? "—")) + '/' + escapeHtml(String(stats.played ?? games.length)) +
+      '</p>' + rows;
   }
 
   const verified = match.apiFootballVerified || null;
   const statNames = {"Total Shots":"Strzały","Shots on Goal":"Celne strzały","Corner Kicks":"Rożne","Yellow Cards":"Żółte kartki","Red Cards":"Czerwone kartki","Ball Possession":"Posiadanie piłki","Fouls":"Faule","Offsides":"Spalone","Shots insidebox":"Strzały w polu karnym","Shots outsidebox":"Strzały spoza pola karnego"};
   const apiStats = verified && Array.isArray(verified.statistics) ? verified.statistics : [];
-  const apiStatsHtml = apiStats.length ? "<h4 style=\"margin:14px 0 8px\">Statystyki meczowe · API-Football</h4>" + apiStats.map(team => {
-    const values = Object.entries(team.values || {}).filter(([key,value]) => statNames[key] && value !== null && value !== undefined);
-    return "<div class=\"match-foot\"><b>" + escapeHtml(team.team || "Drużyna") + "</b><span>" + (values.length ? values.map(([key,value]) => escapeHtml(statNames[key]) + ": <b>" + escapeHtml(String(value)) + "</b>").join(" · ") : "Brak danych statystycznych dla tego spotkania") + "</span></div>";
-  }).join("") : "";
+  const usefulStats = apiStats.map(team => ({
+    team: team.team,
+    values: Object.entries(team.values || {}).filter(([key,value]) => statNames[key] && value !== null && value !== undefined)
+  })).filter(team => team.values.length);
+  const apiStatsHtml = usefulStats.length
+    ? '<h4 style="margin:14px 0 8px">Statystyki meczowe · API-Football</h4>' + usefulStats.map(team =>
+        '<div class="match-foot"><b>' + escapeHtml(team.team || "Drużyna") + '</b><span>' +
+        team.values.map(([key,value]) => escapeHtml(statNames[key]) + ': <b>' + escapeHtml(String(value)) + '</b>').join(' · ') +
+        '</span></div>'
+      ).join("")
+    : "";
   const apiH2h = verified && Array.isArray(verified.h2h) ? verified.h2h : [];
-  const apiH2hHtml = apiH2h.length ? "<h4 style=\"margin:14px 0 8px\">Bezpośrednie mecze · API-Football</h4>" + apiH2h.map(game => "<div class=\"match-foot\"><span>" + (game.date ? new Date(game.date).toLocaleDateString("pl-PL") : "—") + " · " + escapeHtml(game.home || "") + " – " + escapeHtml(game.away || "") + "</span><b>" + (game.homeGoals ?? "—") + ":" + (game.awayGoals ?? "—") + "</b></div>").join("") : "";
-  const apiMeta = verified ? "<p class=\"muted\">Potwierdzenie API-Football · " + escapeHtml(verified.league || "rozgrywki") + (verified.venue ? " · Stadion: " + escapeHtml(verified.venue) : "") + (verified.referee ? " · Sędzia: " + escapeHtml(verified.referee) : "") + "</p>" + apiStatsHtml + apiH2hHtml : "";
+  const apiH2hHtml = apiH2h.length
+    ? '<h4 style="margin:14px 0 8px">Bezpośrednie mecze · API-Football</h4>' + apiH2h.map(game =>
+        '<div class="match-foot"><span>' + (game.date ? new Date(game.date).toLocaleDateString("pl-PL") : "—") +
+        ' · ' + escapeHtml(game.home || "") + ' – ' + escapeHtml(game.away || "") +
+        '</span><b>' + escapeHtml(String(game.homeGoals ?? "—")) + ':' + escapeHtml(String(game.awayGoals ?? "—")) + '</b></div>'
+      ).join("")
+    : "";
+  const apiMeta = verified && (verified.league || verified.venue || verified.referee || apiStatsHtml || apiH2hHtml)
+    ? '<p class="muted">Potwierdzenie API-Football' +
+      (verified.league ? ' · ' + escapeHtml(verified.league) : "") +
+      (verified.venue ? ' · Stadion: ' + escapeHtml(verified.venue) : "") +
+      (verified.referee ? ' · Sędzia: ' + escapeHtml(verified.referee) : "") +
+      '</p>' + apiStatsHtml + apiH2hHtml
+    : "";
 
-  const h2h = history.h2h || [];
+  const homeHtml = renderTeam("Ostatnie mecze — " + (match.home || "Gospodarze"), history.homeLast10);
+  const awayHtml = renderTeam("Ostatnie mecze — " + (match.away || "Goście"), history.awayLast10);
+  const h2h = Array.isArray(history.h2h) ? history.h2h : [];
   const h2hHtml = h2h.length
-    ? h2h.map(game => `
-        <div class="match-foot" style="padding:5px 0;border-bottom:1px solid var(--line)">
-          <span>${game.date ? new Date(game.date).toLocaleDateString("pl-PL") : "—"}
-          · ${escapeHtml(game.home)} – ${escapeHtml(game.away)}</span>
-          <b>${game.homeGoals}:${game.awayGoals}</b>
-        </div>`).join("")
-    : `<p class="muted">Brak dostępnych bezpośrednich spotkań.</p>`;
-
-  return `
-    <details style="margin-top:12px">
-      <summary style="cursor:pointer;padding:10px 0;font-weight:700">
-        📊 Ostatnie mecze i H2H
-      </summary>
-      ${apiMeta}
-      ${renderTeam("Ostatnie mecze — " + match.home, history.homeLast10)}
-      ${renderTeam("Ostatnie mecze — " + match.away, history.awayLast10)}
-      <h4 style="margin:14px 0 6px">Bezpośrednie spotkania H2H</h4>
-      ${h2hHtml}
-    </details>`;
+    ? '<h4 style="margin:14px 0 6px">Bezpośrednie spotkania H2H</h4>' + h2h.map(game =>
+        '<div class="match-foot" style="padding:5px 0;border-bottom:1px solid var(--line)"><span>' +
+        (game.date ? new Date(game.date).toLocaleDateString("pl-PL") : "—") + ' · ' +
+        escapeHtml(game.home || "") + ' – ' + escapeHtml(game.away || "") +
+        '</span><b>' + escapeHtml(String(game.homeGoals ?? "—")) + ':' + escapeHtml(String(game.awayGoals ?? "—")) + '</b></div>'
+      ).join("")
+    : "";
+  const content = apiMeta + homeHtml + awayHtml + h2hHtml + h2hHtml;
+  if (!content.trim() || !(homeHtml || awayHtml || h2hHtml || apiStatsHtml || apiMeta)) return "";
+  return '<details style="margin-top:12px"><summary style="cursor:pointer;padding:10px 0;font-weight:700">📊 Dostępne statystyki i historia</summary>' +
+    apiMeta + homeHtml + awayHtml + h2hHtml + (h2h.length ? h2hHtml : "") + '</details>';
 }
 </script>
 </body>
