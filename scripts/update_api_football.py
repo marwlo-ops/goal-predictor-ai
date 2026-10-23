@@ -224,7 +224,6 @@ def main():
                 break
 
     # Persist consolidated fixture data even if API-Football added no new fixtures.
-    INPUT.write_text(json.dumps(latest, ensure_ascii=False, indent=2), encoding="utf-8")
     result = {
         "generatedAt": datetime.now(WARSAW).isoformat(),
         "source": "API-Football",
@@ -243,6 +242,8 @@ def main():
         "note": "Weryfikacja pomocnicza. Niedopasowane spotkania nie są łączone automatycznie.",
     }
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
+    latest["apiFootballData"] = {key: result[key] for key in ("generatedAt", "source", "verifiedCount", "checkedCount", "statisticsCount", "h2hCount")}
+    INPUT.write_text(json.dumps(latest, ensure_ascii=False, indent=2), encoding="utf-8")
     OUTPUT.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
     print(
         f"API-Football: zweryfikowano {len(verified)}/{len(matches)} spotkań; "
