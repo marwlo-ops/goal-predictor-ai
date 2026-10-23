@@ -975,6 +975,16 @@ main{max-width:1240px;padding:0 22px}
 @media(min-width:900px){.team-stats-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.prediction-note{padding:17px}.team-stat-card{padding:14px}}
 @media(max-width:390px){.team-stats-grid{gap:6px}.team-stat-card{padding:10px}.team-stat-head{font-size:10px}.form-dot{width:18px;height:18px}.prediction-title{font-size:14px}}
 
+
+.odds-panel{margin-top:12px;padding:12px;border:1px solid var(--line);border-radius:14px;background:rgba(10,17,29,.75)}
+.odds-panel summary{cursor:pointer;font-weight:800;padding:4px 0}
+.odds-input-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin:12px 0}
+.odds-field{display:flex;flex-direction:column;gap:5px;font-size:.8rem;color:var(--muted)}
+.odds-field input{width:100%;box-sizing:border-box;background:#080d16;color:var(--text);border:1px solid var(--line);border-radius:9px;padding:10px;font:inherit}
+.odds-result{margin-top:10px}.odds-result-row{padding:10px 0;border-bottom:1px solid var(--line);font-size:.86rem}
+.odds-status{font-size:.78rem;font-weight:800;margin-top:4px}.odds-status.positive{color:#b8f34a}.odds-status.negative{color:#ffb3a7}
+.odds-link{display:inline-block;margin-top:10px;color:var(--text);font-weight:700}
+
 </style>
 
 
@@ -1467,6 +1477,33 @@ function renderTeamStatsCard(name, data) {
     '<div class="team-stat-foot">Powyżej 2,5 gola: ' + over25Rate + '% (' + escapeHtml(stats.over25) + '/' + escapeHtml(stats.played) + ' meczów) · łącznie goli: ' + escapeHtml(stats.goalsFor) + ':' + escapeHtml(stats.goalsAgainst) + '</div>' +
   '</div>';
 }
+function oddsPortalAnalysis(match, p, index) {
+  if (!p) return "";
+  const fields = [["home","Kurs 1",p.home],["draw","Kurs X",p.draw],["away","Kurs 2",p.away],["over25","Over 2,5",p.over25],["btts","BTTS TAK",p.btts]];
+  const inputs = fields.map(([key,label]) => '<label class="odds-field"><span>'+label+'</span><input type="number" min="1.01" max="1000" step="0.01" inputmode="decimal" placeholder="np. 1,85" data-odd-index="'+index+'" data-odd-key="'+key+'"></label>').join("");
+  return '<details class="odds-panel"><summary>📈 Analiza kursów OddsPortal</summary><p class="muted">Przepisz aktualne kursy z OddsPortal. Analiza value zostanie policzona lokalnie.</p><div class="odds-input-grid">'+inputs+'</div><button type="button" class="smallbtn" data-check-odds="'+index+'">Porównaj kursy z modelem</button><div class="odds-result" id="odds-result-'+index+'"><p class="muted">Wpisz kursy i uruchom porównanie.</p></div><a class="odds-link" href="https://www.oddsportal.com/" target="_blank" rel="noopener noreferrer">Otwórz OddsPortal ↗</a></details>';
+}
+function compareMarketOdds(match, p, index, root) {
+  const fields = [["home","Wygrana gospodarzy",p.home],["draw","Remis",p.draw],["away","Wygrana gości",p.away],["over25","Over 2,5 gola",p.over25],["btts","BTTS — TAK",p.btts]];
+  const tax = 0.12;
+  const entries = fields.map(([key,label,prob]) => {
+    const input = root.querySelector('[data-odd-index="'+index+'"][data-odd-key="'+key+'"]');
+    const odd = input ? Number(String(input.value).replace(",", ".")) : NaN;
+    if (!Number.isFinite(odd) || odd <= 1) return null;
+    const implied = 1 / odd, fair = prob > 0 ? 1 / prob : Infinity;
+    const evBeforeTax = prob * odd - 1, evAfterTax = prob * odd * (1-tax) - 1;
+    return {label,odd,prob,implied,fair,evBeforeTax,evAfterTax};
+  }).filter(Boolean);
+  const result = root.querySelector("#odds-result-"+index);
+  if (!result) return;
+  if (!entries.length) { result.innerHTML = '<p class="muted">Wpisz przynajmniej jeden prawidłowy kurs (powyżej 1,00).</p>'; return; }
+  entries.sort((a,b)=>b.evAfterTax-a.evAfterTax);
+  result.innerHTML = entries.map(item => {
+    const positive = item.evAfterTax > 0;
+    const status = item.evAfterTax > 0.03 ? "Dodatnie EV po podatku — sprawdź dane" : positive ? "Niewielka przewaga modelu" : "Brak value według modelu";
+    return '<div class="odds-result-row"><div><b>'+item.label+'</b><div class="muted">Kurs '+item.odd.toFixed(2)+' · P modelu '+percent(item.prob)+' · P implikowane '+percent(item.implied)+'</div><div class="muted">Kurs fair '+item.fair.toFixed(2)+' · EV po podatku 12%: '+(item.evAfterTax*100).toLocaleString("pl-PL",{maximumFractionDigits:1})+'%</div><div class="odds-status '+(positive?'positive':'negative')+'">'+status+'</div></div></div>';
+  }).join("");
+}
 function buildPredictionNarrative(match, p) {
   if (!p) return '<div class="prediction-note"><div class="prediction-kicker">Predykcja AI</div><p class="prediction-copy">Brak wystarczających danych do przygotowania wiarygodnego opisu. Sprawdź ponownie po aktualizacji danych.</p></div>';
   const outcomes = [
@@ -1555,6 +1592,7 @@ function renderMatches() {
         </div>
 
         ${buildPredictionNarrative(match, probabilities)}
+        ${oddsPortalAnalysis(match, probabilities, index)}
         <div class="team-stats-grid">
           ${renderTeamStatsCard(match.home || "Gospodarze", teamHistoryStats(match, "home"))}
           ${renderTeamStatsCard(match.away || "Goście", teamHistoryStats(match, "away"))}
@@ -1578,6 +1616,13 @@ function renderMatches() {
   }).join("");
 
 
+  list.querySelectorAll("[data-check-odds]").forEach(button => {
+    button.addEventListener("click", () => {
+      const index = Number(button.dataset.checkOdds), match = items[index];
+      const probs = match ? getMatchProbabilities(match) : null;
+      if (match && probs) compareMarketOdds(match, probs, index, list);
+    });
+  });
   list.querySelectorAll("[data-add-coupon]").forEach(button => {
     button.addEventListener("click", () => {
       const index = Number(button.dataset.addCoupon);
