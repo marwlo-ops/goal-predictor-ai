@@ -20,7 +20,7 @@ Dostępny zakres lig, historii i statystyk zależy od planu API. Prototyp wylicz
 
 Projekt pobiera dodatkowy terminarz ze Sportmonks i scala go z `data/latest.json`; osobny plik `data/sportmonks.json` zachowuje dane źródłowe i diagnostykę. Synchronizacja jest zaplanowana co 30 minut przez GitHub Actions. Spotkania znalezione wyłącznie w Sportmonks są dodawane jako `fixture_only` bez zmyślonych prawdopodobieństw. Dostęp do statystyk, kursów, predykcji i lig zależy od uprawnień tokena oraz wybranego planu.
 
-W repozytorium otwórz **Settings → Secrets and variables → Actions**. Na zrzucie ekranu sekret został nazwany `NEWAPT`; workflow odczytuje go jako `SPORTMONKS_API_TOKEN` przez mapowanie `secrets.NEWAPT`. Jeśli sekret ma inną nazwę, zmień mapowanie w `.github/workflows/sportmonks.yml` albo nazwij sekret `NEWAPT`. Nigdy nie umieszczaj wartości tokena w plikach strony ani w commitach.
+W repozytorium otwórz **Settings → Secrets and variables → Actions**. Dodaj sekret repozytorium o dokładnej nazwie `SPORTMONKS`; workflow przekazuje go do skryptu jako `SPORTMONKS_API_TOKEN`. Jeśli sekret ma inną nazwę, zmień mapowanie w `.github/workflows/sportmonks.yml`. Nigdy nie umieszczaj wartości tokena w plikach strony ani w commitach.
 
 Test integracji: **Actions → Sportmonks Football Data → Run workflow**. Sprawdź logi, a potem pliki `data/sportmonks.json` i `data/latest.json`. Błąd 401 zwykle oznacza zły/brakujący token; 403 — brak uprawnień planu; 429 — limit zapytań. Nieudane zapytania do poszczególnych dat są zapisywane w diagnostyce, a całkowita awaria źródła nie powinna zastąpić feedu pustymi danymi.
 
