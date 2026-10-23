@@ -209,6 +209,22 @@ def main():
         if match_id in h2h_by_match:
             item["h2h"] = h2h_by_match[match_id]
 
+    for item in verified:
+        match_id = str(item.get("matchId"))
+        if not match_id.startswith("api-football-"):
+            continue
+        for match in latest.get("matches", []):
+            if str(match.get("id")) == match_id:
+                match["apiFootballVerified"] = {
+                    "fixtureId": item.get("fixtureId"), "status": item.get("status"),
+                    "elapsed": item.get("elapsed"), "league": item.get("league"),
+                    "venue": item.get("venue"), "referee": item.get("referee"),
+                    "statistics": item.get("statistics", []), "h2h": item.get("h2h", []),
+                }
+                break
+
+    # Persist consolidated fixture data even if API-Football added no new fixtures.
+    INPUT.write_text(json.dumps(latest, ensure_ascii=False, indent=2), encoding="utf-8")
     result = {
         "generatedAt": datetime.now(WARSAW).isoformat(),
         "source": "API-Football",
