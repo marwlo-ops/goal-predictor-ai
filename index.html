@@ -2085,6 +2085,18 @@ async function loadPublishedData() {
 
     const payload = await response.json();
     matches = Array.isArray(payload.matches) ? payload.matches : [];
+
+    // Optional second-source check: only exact fixture matches are attached.
+    let apiFootballCheck = null;
+    try {
+      const checkResponse = await fetch("./data/api-football.json?ts=" + Date.now(), { cache: "no-store" });
+      if (checkResponse.ok) {
+        apiFootballCheck = await checkResponse.json();
+        const verified = new Map((apiFootballCheck.verifiedFixtures || []).map(item => [String(item.matchId), item]));
+        matches = matches.map(match => ({ ...match, apiFootballVerified: verified.get(String(match.id)) || null }));
+      }
+    } catch (ignored) { apiFootballCheck = null; }
+
     buildLeagueTabs();
     document.getElementById("statMatches").textContent = matches.length;
 
@@ -2115,9 +2127,12 @@ async function loadPublishedData() {
 
     const defaultNotice = payload.note ||
       "Prognozy są orientacyjne i nie stanowią gwarancji wyniku.";
-    notice.textContent = isStale
+    const verificationNote = apiFootballCheck
+      ? " Weryfikacja API-Football: " + (apiFootballCheck.verifiedCount || 0) + "/" + (apiFootballCheck.checkedCount || matches.length) + " spotkań dopasowanych po dacie i nazwach drużyn."
+      : " Dodatkowa weryfikacja API-Football jest niedostępna; używane jest podstawowe źródło danych.";
+    notice.textContent = (isStale
       ? "⚠️ UWAGA: dane mają ponad 24 godziny lub nieprawidłową datę. Nie traktuj tych prognoz jako aktualnych. " + defaultNotice
-      : defaultNotice;
+      : defaultNotice) + verificationNote;
 
     const aiCard = document.getElementById("aiSummaryCard");
 
