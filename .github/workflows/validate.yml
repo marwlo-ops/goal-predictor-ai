@@ -22,10 +22,13 @@ jobs:
           python-version: "3.12"
 
       - name: Sprawdź składnię Pythona
-        run: python -m py_compile scripts/update_predictions.py
+        run: python -m py_compile scripts/update_predictions.py scripts/update_api_football.py scripts/update_live.py scripts/update_results.py
 
       - name: Sprawdź JSON z prognozami
         run: python -m json.tool data/latest.json > /dev/null
+
+      - name: Sprawdź JSON API-Football, jeśli istnieje
+        run: if [ -f data/api-football.json ]; then python -m json.tool data/api-football.json > /dev/null; fi
 
       - name: Sprawdź JavaScript aplikacji
         run: |
