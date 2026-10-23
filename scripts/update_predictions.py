@@ -178,6 +178,29 @@ def estimate_goals(home_name, away_name, maps):
     return home_xg, away_xg, quality, confidence
 
 
+def estimate_goals_from_history(match):
+    """Fallback Poisson parameters from recent score history, never mislabeled as xG."""
+    history = match.get("history") or {}
+    home = (history.get("homeLast10") or {}).get("stats") or {}
+    away = (history.get("awayLast10") or {}).get("stats") or {}
+    home_played = home.get("played") or 0
+    away_played = away.get("played") or 0
+    if home_played < 3 or away_played < 3:
+        return None
+
+    home_attack = (home.get("goalsFor") or 0) / home_played
+    home_defence = (home.get("goalsAgainst") or 0) / home_played
+    away_attack = (away.get("goalsFor") or 0) / away_played
+    away_defence = (away.get("goalsAgainst") or 0) / away_played
+    home_rate = max(0.15, min(4.0, (home_attack + away_defence) / 2))
+    away_rate = max(0.15, min(4.0, (away_attack + home_defence) / 2))
+    return (
+        home_rate,
+        away_rate,
+        "low",
+        "Niska: model oparty na ostatnich wynikach, bez rzeczywistych xG",
+    )
+
 def fetch_league_matches(code, name, date_from, date_to):
     try:
         data = api_get(
@@ -432,23 +455,28 @@ def main():
             {"TOTAL": {}, "HOME": {}, "AWAY": {}},
         )
         estimate = estimate_goals(match["home"], match["away"], maps)
+        model_status = "table_based"
+        model_label = "Poisson na podstawie tabeli"
+
+        if not estimate:
+            estimate = estimate_goals_from_history(match)
+            model_status = "history_based" if estimate else "insufficient_data"
+            model_label = "Poisson na podstawie ostatnich wyników" if estimate else None
 
         if estimate:
             hx, ax, quality, confidence = estimate
             probabilities = calculate_probabilities(hx, ax)
-            model_status = "table_based"
         else:
             hx = ax = None
             probabilities = None
             quality = "insufficient_data"
             confidence = "Za mało danych do obliczenia prognozy"
-            model_status = "insufficient_data"
 
         match.update({
             "hx": round(hx, 2) if hx is not None else None,
             "ax": round(ax, 2) if ax is not None else None,
             "probabilities": probabilities,
-            "model": "Poisson na podstawie tabeli" if estimate else None,
+            "model": model_label,
             "quality": quality,
             "confidence": confidence,
             "modelStatus": model_status,
