@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-23T21:40:40.858593+02:00",
+  "generatedAt": "2026-10-23T22:42:04.744644+02:00",
   "dateFrom": "2026-10-23",
   "dateTo": "2026-10-29",
   "timezone": "Europe/Warsaw",
@@ -7,7 +7,7 @@
     "from": "00:00",
     "to": "23:59"
   },
-  "count": 98,
+  "count": 97,
   "matches": [
     {
       "id": 561894,
@@ -284,265 +284,6 @@
         "over15": 83.2,
         "over25": 62.6,
         "btts": 63.3
-      },
-      "model": "Poisson na podstawie tabeli",
-      "quality": "low",
-      "confidence": "Niska: użyto także danych ogólnych",
-      "modelStatus": "table_based"
-    },
-    {
-      "id": 567329,
-      "league": "PPL",
-      "leagueName": "Primeira Liga",
-      "date": "2026-10-23",
-      "time": "21:45",
-      "kickoff": "2026-10-23T21:45:00+02:00",
-      "home": "Vitória SC",
-      "away": "CS Marítimo",
-      "history": {
-        "homeLast10": {
-          "matches": [
-            {
-              "date": "2026-10-11T17:00:00Z",
-              "home": "Sport Lisboa e Benfica",
-              "away": "Vitória SC",
-              "homeGoals": 2,
-              "awayGoals": 0,
-              "stats": null,
-              "teamGoals": 0,
-              "conceded": 2,
-              "result": "L"
-            },
-            {
-              "date": "2026-09-20T14:30:00Z",
-              "home": "Vitória SC",
-              "away": "Moreirense FC",
-              "homeGoals": 1,
-              "awayGoals": 1,
-              "stats": null,
-              "teamGoals": 1,
-              "conceded": 1,
-              "result": "D"
-            },
-            {
-              "date": "2026-09-12T19:30:00Z",
-              "home": "Académico de Viseu FC",
-              "away": "Vitória SC",
-              "homeGoals": 2,
-              "awayGoals": 1,
-              "stats": null,
-              "teamGoals": 1,
-              "conceded": 2,
-              "result": "L"
-            },
-            {
-              "date": "2026-09-06T17:00:00Z",
-              "home": "Vitória SC",
-              "away": "Casa Pia AC",
-              "homeGoals": 0,
-              "awayGoals": 0,
-              "stats": null,
-              "teamGoals": 0,
-              "conceded": 0,
-              "result": "D"
-            },
-            {
-              "date": "2026-08-31T19:15:00Z",
-              "home": "Sporting Clube de Braga",
-              "away": "Vitória SC",
-              "homeGoals": 1,
-              "awayGoals": 0,
-              "stats": null,
-              "teamGoals": 0,
-              "conceded": 1,
-              "result": "L"
-            },
-            {
-              "date": "2026-08-23T14:30:00Z",
-              "home": "Vitória SC",
-              "away": "CD Nacional",
-              "homeGoals": 1,
-              "awayGoals": 0,
-              "stats": null,
-              "teamGoals": 1,
-              "conceded": 0,
-              "result": "W"
-            },
-            {
-              "date": "2026-08-14T19:15:00Z",
-              "home": "Sporting Clube de Portugal",
-              "away": "Vitória SC",
-              "homeGoals": 3,
-              "awayGoals": 2,
-              "stats": null,
-              "teamGoals": 2,
-              "conceded": 3,
-              "result": "L"
-            },
-            {
-              "date": "2026-08-08T17:00:00Z",
-              "home": "Vitória SC",
-              "away": "FC Arouca",
-              "homeGoals": 0,
-              "awayGoals": 1,
-              "stats": null,
-              "teamGoals": 0,
-              "conceded": 1,
-              "result": "L"
-            },
-            {
-              "date": "2026-05-16T17:00:00Z",
-              "home": "CD Nacional",
-              "away": "Vitória SC",
-              "homeGoals": 2,
-              "awayGoals": 0,
-              "stats": null,
-              "teamGoals": 0,
-              "conceded": 2,
-              "result": "L"
-            },
-            {
-              "date": "2026-05-11T19:15:00Z",
-              "home": "Vitória SC",
-              "away": "Casa Pia AC",
-              "homeGoals": 0,
-              "awayGoals": 1,
-              "stats": null,
-              "teamGoals": 0,
-              "conceded": 1,
-              "result": "L"
-            }
-          ],
-          "stats": {
-            "played": 10,
-            "wins": 1,
-            "draws": 2,
-            "losses": 7,
-            "goalsFor": 5,
-            "goalsAgainst": 13,
-            "avgGoalsFor": 0.5,
-            "avgGoalsAgainst": 1.3,
-            "btts": 3,
-            "over15": 5,
-            "over25": 2
-          }
-        },
-        "awayLast10": {
-          "matches": [
-            {
-              "date": "2026-10-10T17:00:00Z",
-              "home": "CS Marítimo",
-              "away": "FC Porto",
-              "homeGoals": 1,
-              "awayGoals": 2,
-              "stats": null,
-              "teamGoals": 1,
-              "conceded": 2,
-              "result": "L"
-            },
-            {
-              "date": "2026-09-19T14:30:00Z",
-              "home": "Gil Vicente FC",
-              "away": "CS Marítimo",
-              "homeGoals": 1,
-              "awayGoals": 1,
-              "stats": null,
-              "teamGoals": 1,
-              "conceded": 1,
-              "result": "D"
-            },
-            {
-              "date": "2026-09-14T19:15:00Z",
-              "home": "Moreirense FC",
-              "away": "CS Marítimo",
-              "homeGoals": 3,
-              "awayGoals": 1,
-              "stats": null,
-              "teamGoals": 1,
-              "conceded": 3,
-              "result": "L"
-            },
-            {
-              "date": "2026-09-05T17:00:00Z",
-              "home": "CS Marítimo",
-              "away": "Sport Lisboa e Benfica",
-              "homeGoals": 0,
-              "awayGoals": 3,
-              "stats": null,
-              "teamGoals": 0,
-              "conceded": 3,
-              "result": "L"
-            },
-            {
-              "date": "2026-08-29T14:30:00Z",
-              "home": "FC Arouca",
-              "away": "CS Marítimo",
-              "homeGoals": 2,
-              "awayGoals": 1,
-              "stats": null,
-              "teamGoals": 1,
-              "conceded": 2,
-              "result": "L"
-            },
-            {
-              "date": "2026-08-22T14:30:00Z",
-              "home": "CS Marítimo",
-              "away": "Académico de Viseu FC",
-              "homeGoals": 2,
-              "awayGoals": 2,
-              "stats": null,
-              "teamGoals": 2,
-              "conceded": 2,
-              "result": "D"
-            },
-            {
-              "date": "2026-08-16T19:30:00Z",
-              "home": "FC Famalicão",
-              "away": "CS Marítimo",
-              "homeGoals": 1,
-              "awayGoals": 2,
-              "stats": null,
-              "teamGoals": 2,
-              "conceded": 1,
-              "result": "W"
-            },
-            {
-              "date": "2026-08-08T14:30:00Z",
-              "home": "CS Marítimo",
-              "away": "Casa Pia AC",
-              "homeGoals": 1,
-              "awayGoals": 0,
-              "stats": null,
-              "teamGoals": 1,
-              "conceded": 0,
-              "result": "W"
-            }
-          ],
-          "stats": {
-            "played": 8,
-            "wins": 2,
-            "draws": 2,
-            "losses": 4,
-            "goalsFor": 9,
-            "goalsAgainst": 14,
-            "avgGoalsFor": 1.12,
-            "avgGoalsAgainst": 1.75,
-            "btts": 6,
-            "over15": 7,
-            "over25": 6
-          }
-        },
-        "h2h": []
-      },
-      "hx": 1.19,
-      "ax": 1.19,
-      "probabilities": {
-        "homeWin": 36.1,
-        "draw": 27.8,
-        "awayWin": 36.1,
-        "over15": 68.6,
-        "over25": 42.4,
-        "btts": 48.3
       },
       "model": "Poisson na podstawie tabeli",
       "quality": "low",
@@ -23276,6 +23017,17 @@
         "homeLast10": {
           "matches": [
             {
+              "date": "2026-10-23T18:45:00Z",
+              "home": "Torino FC",
+              "away": "AC Monza",
+              "homeGoals": 3,
+              "awayGoals": 2,
+              "stats": null,
+              "teamGoals": 3,
+              "conceded": 2,
+              "result": "W"
+            },
+            {
               "date": "2026-10-19T18:45:00Z",
               "home": "Parma Calcio 1913",
               "away": "Torino FC",
@@ -23373,17 +23125,6 @@
               "teamGoals": 1,
               "conceded": 2,
               "result": "L"
-            },
-            {
-              "date": "2026-05-08T18:45:00Z",
-              "home": "Torino FC",
-              "away": "US Sassuolo Calcio",
-              "homeGoals": 2,
-              "awayGoals": 1,
-              "stats": null,
-              "teamGoals": 2,
-              "conceded": 1,
-              "result": "W"
             }
           ],
           "stats": {
@@ -23391,10 +23132,10 @@
             "wins": 4,
             "draws": 2,
             "losses": 4,
-            "goalsFor": 15,
-            "goalsAgainst": 14,
-            "avgGoalsFor": 1.5,
-            "avgGoalsAgainst": 1.4,
+            "goalsFor": 16,
+            "goalsAgainst": 15,
+            "avgGoalsFor": 1.6,
+            "avgGoalsAgainst": 1.5,
             "btts": 8,
             "over15": 10,
             "over25": 8
@@ -23529,15 +23270,15 @@
         },
         "h2h": []
       },
-      "hx": 1.19,
-      "ax": 1.42,
+      "hx": 1.31,
+      "ax": 1.54,
       "probabilities": {
-        "homeWin": 31.5,
-        "draw": 26.1,
-        "awayWin": 42.4,
-        "over15": 73.4,
-        "over25": 48.3,
-        "btts": 52.7
+        "homeWin": 32.4,
+        "draw": 24.8,
+        "awayWin": 42.8,
+        "over15": 77.8,
+        "over25": 54.4,
+        "btts": 57.5
       },
       "model": "Poisson na podstawie tabeli",
       "quality": "low",
@@ -24648,6 +24389,17 @@
         "homeLast10": {
           "matches": [
             {
+              "date": "2026-10-23T18:45:00Z",
+              "home": "Torino FC",
+              "away": "AC Monza",
+              "homeGoals": 3,
+              "awayGoals": 2,
+              "stats": null,
+              "teamGoals": 2,
+              "conceded": 3,
+              "result": "L"
+            },
+            {
               "date": "2026-10-19T16:30:00Z",
               "home": "AC Monza",
               "away": "Cagliari Calcio",
@@ -24726,17 +24478,17 @@
             }
           ],
           "stats": {
-            "played": 7,
+            "played": 8,
             "wins": 2,
             "draws": 1,
-            "losses": 4,
-            "goalsFor": 13,
-            "goalsAgainst": 15,
-            "avgGoalsFor": 1.86,
-            "avgGoalsAgainst": 2.14,
-            "btts": 6,
-            "over15": 7,
-            "over25": 6
+            "losses": 5,
+            "goalsFor": 15,
+            "goalsAgainst": 18,
+            "avgGoalsFor": 1.88,
+            "avgGoalsAgainst": 2.25,
+            "btts": 7,
+            "over15": 8,
+            "over25": 7
           }
         },
         "awayLast10": {
@@ -24868,15 +24620,15 @@
         },
         "h2h": []
       },
-      "hx": 1.31,
-      "ax": 1.71,
+      "hx": 1.44,
+      "ax": 1.84,
       "probabilities": {
-        "homeWin": 29.4,
-        "draw": 23.7,
-        "awayWin": 46.9,
-        "over15": 80.5,
-        "over25": 58.3,
-        "btts": 59.9
+        "homeWin": 30.2,
+        "draw": 22.6,
+        "awayWin": 47.1,
+        "over15": 83.9,
+        "over25": 63.6,
+        "btts": 64.1
       },
       "model": "Poisson na podstawie tabeli",
       "quality": "low",
@@ -27200,7 +26952,7 @@
   ],
   "note": "Prognozy orientacyjne na podstawie dostępnych tabel. Model nie uwzględnia kursów, składów, kontuzji ani zaawansowanych statystyk. Nie gwarantuje wyników.",
   "sportmonksData": {
-    "generatedAt": "2026-10-23T22:38:04.249866+02:00",
+    "generatedAt": "2026-10-23T22:47:11.055583+02:00",
     "count": 18,
     "matchedCount": 0,
     "additionalCount": 18,
