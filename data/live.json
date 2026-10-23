@@ -1,23 +1,7 @@
 {
-  "updatedAt": "2026-10-23T23:23:42.836631+02:00",
+  "updatedAt": "2026-10-23T23:58:56.507830+02:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 1,
-  "matches": [
-    {
-      "id": 567329,
-      "league": "PPL",
-      "leagueName": "Primeira Liga",
-      "home": "Vitória SC",
-      "away": "CS Marítimo",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 3,
-        "away": 0
-      },
-      "utcDate": "2026-10-23T19:45:00Z",
-      "updatedAt": "2026-10-23T21:23:33Z"
-    }
-  ]
+  "count": 0,
+  "matches": []
 }
