@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-10-23T20:32:36.762560+02:00",
+  "updatedAt": "2026-10-23T21:14:15.819924+02:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 1,
+  "count": 6,
   "matches": [
     {
       "id": 558863,
@@ -13,11 +13,86 @@
       "status": "IN_PLAY",
       "minute": null,
       "score": {
+        "home": 2,
+        "away": 1
+      },
+      "utcDate": "2026-10-23T18:00:00Z",
+      "updatedAt": "2026-10-23T19:13:57Z"
+    },
+    {
+      "id": 565833,
+      "league": "BL1",
+      "leagueName": "Bundesliga",
+      "home": "VfB Stuttgart",
+      "away": "Borussia Mönchengladbach",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "utcDate": "2026-10-23T18:30:00Z",
+      "updatedAt": "2026-10-23T19:13:57Z"
+    },
+    {
+      "id": 559654,
+      "league": "FL1",
+      "leagueName": "Ligue 1",
+      "home": "Stade Brestois 29",
+      "away": "OGC Nice",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
         "home": 1,
         "away": 0
       },
-      "utcDate": "2026-10-23T18:00:00Z",
-      "updatedAt": "2026-10-23T18:32:21Z"
+      "utcDate": "2026-10-23T18:45:00Z",
+      "updatedAt": "2026-10-23T19:13:58Z"
+    },
+    {
+      "id": 558567,
+      "league": "SA",
+      "leagueName": "Serie A",
+      "home": "Torino FC",
+      "away": "AC Monza",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-10-23T18:45:00Z",
+      "updatedAt": "2026-10-23T19:13:58Z"
+    },
+    {
+      "id": 560620,
+      "league": "PL",
+      "leagueName": "Premier League",
+      "home": "Ipswich Town FC",
+      "away": "Nottingham Forest FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-10-23T19:00:00Z",
+      "updatedAt": "2026-10-23T19:13:58Z"
+    },
+    {
+      "id": 564719,
+      "league": "PD",
+      "leagueName": "Primera Division",
+      "home": "Deportivo Alavés",
+      "away": "Málaga CF",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-10-23T19:00:00Z",
+      "updatedAt": "2026-10-23T19:13:58Z"
     }
   ]
 }
