@@ -37,13 +37,14 @@ jobs:
           HOUR=$(TZ=Europe/Warsaw date +%H)
           TODAY=$(TZ=Europe/Warsaw date +%F)
           GENERATED_DATE=$(python -c 'import json; from pathlib import Path; p=Path("data/latest.json"); print((json.loads(p.read_text(encoding="utf-8")).get("generatedAt") or "")[:10] if p.exists() else "")' 2>/dev/null || true)
+          API_GENERATED_DATE=$(python -c 'import json; from pathlib import Path; p=Path("data/api-football.json"); print((json.loads(p.read_text(encoding="utf-8")).get("generatedAt") or "")[:10] if p.exists() else "")' 2>/dev/null || true)
 
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "run=true" >> "$GITHUB_OUTPUT"
             echo "reason=Ręczne uruchomienie" >> "$GITHUB_OUTPUT"
-          elif [ "$HOUR" -ge "13" ] && [ "$GENERATED_DATE" != "$TODAY" ]; then
+          elif [ "$HOUR" -ge "13" ] && { [ "$GENERATED_DATE" != "$TODAY" ] || [ "$API_GENERATED_DATE" != "$TODAY" ]; }; then
             echo "run=true" >> "$GITHUB_OUTPUT"
-            echo "reason=Brak dzisiejszej publikacji; ponawiam próbę" >> "$GITHUB_OUTPUT"
+            echo "reason=Brak dzisiejszej publikacji lub weryfikacji API-Football; ponawiam próbę" >> "$GITHUB_OUTPUT"
           else
             echo "run=false" >> "$GITHUB_OUTPUT"
             echo "reason=Dane są już opublikowane dzisiaj albo nie nadeszła jeszcze pora publikacji" >> "$GITHUB_OUTPUT"
@@ -52,6 +53,7 @@ jobs:
           echo "Godzina w Polsce: $HOUR"
           echo "Dzisiejsza data: $TODAY"
           echo "Data ostatniej publikacji: ${GENERATED_DATE:-brak}"
+          echo "Data weryfikacji API-Football: ${API_GENERATED_DATE:-brak}"
           echo "Decyzja: $(grep '^run=' "$GITHUB_OUTPUT" | tail -n 1)"
 
       - name: Generuj prognozy (football-data.org)
