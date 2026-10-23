@@ -29,7 +29,7 @@ jobs:
           python-version: "3.12"
       - name: Pobierz i scal dane Sportmonks
         env:
-          SPORTMONKS_API_TOKEN: ${{ secrets.NEWAPT }}
+          SPORTMONKS_API_TOKEN: ${{ secrets.SPORTMONKS }}
         run: python scripts/update_sportmonks.py
       - name: Zweryfikuj pliki danych
         run: |
