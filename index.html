@@ -1011,6 +1011,35 @@ main{max-width:1240px;padding:0 22px}
 .full-analysis-disclaimer{grid-column:1/-1;color:var(--muted);font-size:.75rem;line-height:1.5;margin:0}
 @media(max-width:760px){.full-analysis-backdrop{padding:0;align-items:stretch}.full-analysis-modal{max-height:100dvh;border-radius:0;border-left:0;border-right:0}.full-analysis-header{padding:16px}.full-analysis-body{grid-template-columns:1fr;padding:12px;gap:12px}.full-history-grid{grid-template-columns:1fr}.full-analysis-disclaimer{grid-column:auto}.full-analysis-section{padding:12px}}
 
+
+/* GP AI vNext — premium analytics refresh */
+:root{--bg:#060a12;--panel:#10192a;--panel2:#17243a;--line:#293b53;--text:#f4f7fc;--muted:#96a8c0;--green:#c8ff69;--blue:#67e6eb;--orange:#ffd087;--red:#ff8194}
+body{background:radial-gradient(ellipse at 15% 0%,#163e4a66 0,transparent 34%),radial-gradient(ellipse at 92% 12%,#214b3480 0,transparent 28%),var(--bg)}
+header{max-width:1280px;padding-top:clamp(14px,3vw,26px)}
+main{max-width:1280px}
+.hero{border-radius:28px;border:1px solid #34595b;background:linear-gradient(120deg,#102c3a 0%,#12332a 50%,#16243c 100%);box-shadow:0 22px 60px #0004}
+.card,.metric,.team-stat-card{border-radius:22px}
+#matchList{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:14px;align-items:start}
+#matchList>.card{margin:0;min-width:0}
+#matchList>.card .team-stat-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.team-stat-card{min-width:0;overflow-wrap:anywhere}
+.prob{min-width:0}
+.prob b{font-variant-numeric:tabular-nums}
+.match-top{gap:12px;flex-wrap:wrap}
+.team-name-button{cursor:pointer;border:0;background:transparent;color:var(--text);padding:0;text-align:inherit;min-width:0}
+.team-name-button:hover{color:var(--green)}
+.card.fixture-only-card{border-color:#4a6354;background:linear-gradient(150deg,#14251f,#0e1724);box-shadow:inset 3px 0 0 #c8ff69,0 12px 28px #0003}
+.fixture-only-card .team-name-button{font-weight:850}
+.fixture-only-card .match-tools{grid-template-columns:44px 44px minmax(0,1fr)}
+.fixture-only-card .match-tools .smallbtn{width:100%}
+.status-row{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 16px}
+.status-chip{display:inline-flex;align-items:center;gap:6px;padding:7px 10px;border:1px solid var(--line);border-radius:99px;background:#101b2b;color:#b6c6da;font-size:11px}
+.status-chip.good{border-color:#405d46;color:#c8ff69}
+.empty{border:1px dashed #40506a;border-radius:18px;padding:20px;color:var(--muted);background:#0d1522}
+button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+@media(max-width:680px){#matchList{grid-template-columns:minmax(0,1fr);gap:12px}#matchList>.card{padding:13px}#matchList>.card .team-stat-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{min-height:0}.team-stat-metric b{font-size:16px}}
+@media(min-width:1000px){#matchList{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}}
+
 </style>
 
 
@@ -2118,6 +2147,26 @@ async function loadPublishedData() {
     document.getElementById("quickMatchCount").textContent = matches.length;
     document.getElementById("quickLeagueCount").textContent = leagueCount;
 
+    // Consolidate the supplemental provider feed into the same match objects used by every card.
+    if (apiFootballCheck && Array.isArray(apiFootballCheck.verifiedFixtures)) {
+      const supplemental = new Map(apiFootballCheck.verifiedFixtures.map(item => [String(item.matchId), item]));
+      matches = matches.map(match => ({ ...match, apiFootballVerified: supplemental.get(String(match.id)) || match.apiFootballVerified || null }));
+    }
+    const fixtureCount = matches.length;
+    const predictionCount = matches.filter(m => !!getMatchProbabilities(m)).length;
+    const unmodelledCount = fixtureCount - predictionCount;
+    let dataPulse = document.getElementById("dataPulse");
+    if (!dataPulse) {
+      dataPulse = document.createElement("div");
+      dataPulse.id = "dataPulse";
+      dataPulse.className = "status-row";
+      const matchHeading = document.getElementById("matchList")?.parentElement;
+      if (matchHeading) matchHeading.parentElement.insertBefore(dataPulse, matchHeading);
+    }
+    if (dataPulse) {
+      dataPulse.innerHTML = '<span class="status-chip good">● ' + fixtureCount + ' meczów</span><span class="status-chip">◈ ' + predictionCount + ' prognoz</span><span class="status-chip">' + unmodelledCount + ' bez prognozy</span>' +
+        (apiFootballCheck ? '<span class="status-chip good">API-Football: ' + (apiFootballCheck.verifiedCount || 0) + ' potwierdzonych</span>' : '<span class="status-chip">Dodatkowe API: brak aktualnych danych</span>');
+    }
     const generated = payload.generatedAt ? new Date(payload.generatedAt) : null;
     const generatedMs = generated ? generated.getTime() : NaN;
     const ageHours = (Date.now() - generatedMs) / (60 * 60 * 1000);
