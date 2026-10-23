@@ -1741,6 +1741,19 @@ function renderMatches() {
       '<option value="' + marketIndex + '">' + escapeHtml(market.label) + ' · kurs fair ' + market.odds.toFixed(2) + '</option>'
     ).join("") : '<option value="">Brak danych modelu</option>';
 
+    if (!probabilities) {
+      const sourceLabel = match.source === "API-Football" || String(match.id).startsWith("api-football-") ? "API-Football" : "Źródło terminarza";
+      const status = match.apiFootballVerified?.status;
+      const statusLabels = {NS:"Zaplanowany",TBD:"Godzina do potwierdzenia",LIVE:"Na żywo","1H":"1. połowa",HT:"Przerwa","2H":"2. połowa",FT:"Zakończony",AET:"Po dogrywce",PEN:"Rzuty karne",PST:"Przełożony",CANC:"Odwołany",ABD:"Przerwany"};
+      return '<article class="card fixture-only-card">' +
+        '<div class="match-top"><span class="league">' + escapeHtml(match.leagueName || leagueNames[match.league] || match.league || "Piłka nożna") + '</span><span>' + escapeHtml(dateLabel(match)) + ' · ' + escapeHtml(match.time || "Godzina nieznana") + '</span></div>' +
+        '<div class="teams"><button type="button" class="team team-name-button" data-full-analysis="' + index + '">' + escapeHtml(match.home || "Gospodarze") + '</button><div class="vs">VS</div><button type="button" class="team team-name-button" data-full-analysis="' + index + '">' + escapeHtml(match.away || "Goście") + '</button></div>' +
+        '<div class="match-foot"><span class="muted">' + escapeHtml(sourceLabel) + (status ? ' · ' + escapeHtml(statusLabels[status] || status) : '') + '</span><span class="muted">Prognoza niedostępna</span></div>' +
+        '<p class="muted" style="margin:10px 0">Mecz jest w terminarzu, ale brakuje danych do rzetelnego wyliczenia prawdopodobieństw. Nie pokazujemy fikcyjnych procentów.</p>' +
+        '<div class="match-tools"><button class="favbtn ' + (favoriteIds.has(matchId(match)) ? "saved" : "") + '" data-favorite="' + escapeHtml(matchId(match)) + '">' + (favoriteIds.has(matchId(match)) ? "★" : "☆") + '</button><button class="favbtn ' + (trackedIds.has(String(match.id)) ? "saved" : "") + '" data-track="' + escapeHtml(match.id) + '">' + (trackedIds.has(String(match.id)) ? "●" : "＋") + '</button><button class="smallbtn" data-full-analysis="' + index + '">Szczegóły meczu →</button></div>' +
+        historyPanel(match) + '</article>';
+    }
+
     return `
       <article class="card">
         <div class="match-top">
