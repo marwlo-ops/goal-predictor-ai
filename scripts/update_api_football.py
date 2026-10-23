@@ -63,7 +63,7 @@ def main():
 
     raw_fixtures = []
     diagnostics = []
-    for date in dates[:3]:
+    for date in dates[:7]:
         payload = api_get("/fixtures", {"date": date, "timezone": "Europe/Warsaw"})
         response = payload.get("response", [])
         raw_fixtures.extend(response)
@@ -102,13 +102,13 @@ def main():
         if supplemental:
             verified.append({"matchId": match.get("id"), **supplemental, "source": "API-Football"})
 
-    # Add API-Football-only fixtures for requested dates and kickoff window.
+    # Add API-Football-only fixtures for requested dates, without time filtering.
     # These are fixture-only: no probabilities or xG are invented.
     existing_keys = {(m.get("date", ""), norm(m.get("home")), norm(m.get("away"))) for m in matches}
     additional = []
     for key, item in indexed.items():
         date, home_norm, away_norm = key
-        if date not in dates[:3] or key in existing_keys:
+        if date not in dates[:7] or key in existing_keys:
             continue
         try:
             kickoff = datetime.fromisoformat(item["kickoff"].replace("Z", "+00:00")).astimezone(WARSAW)
