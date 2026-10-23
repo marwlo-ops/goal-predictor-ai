@@ -2128,6 +2128,13 @@ async function loadPublishedData() {
     const payload = await response.json();
     matches = Array.isArray(payload.matches) ? payload.matches : [];
 
+    // Sportmonks feed is also published as a separate auditable source file.
+    let sportmonksCheck = null;
+    try {
+      const smResponse = await fetch("./data/sportmonks.json?ts=" + Date.now(), { cache: "no-store" });
+      if (smResponse.ok) sportmonksCheck = await smResponse.json();
+    } catch (ignored) { sportmonksCheck = null; }
+
     // Optional second-source check: only exact fixture matches are attached.
     let apiFootballCheck = null;
     try {
@@ -2165,7 +2172,8 @@ async function loadPublishedData() {
     }
     if (dataPulse) {
       dataPulse.innerHTML = '<span class="status-chip good">● ' + fixtureCount + ' meczów</span><span class="status-chip">◈ ' + predictionCount + ' prognoz</span><span class="status-chip">' + unmodelledCount + ' bez prognozy</span>' +
-        (apiFootballCheck ? '<span class="status-chip good">API-Football: ' + (apiFootballCheck.verifiedCount || 0) + ' potwierdzonych</span>' : '<span class="status-chip">Dodatkowe API: brak aktualnych danych</span>');
+        (apiFootballCheck ? '<span class="status-chip good">API-Football: ' + (apiFootballCheck.verifiedCount || 0) + ' potwierdzonych</span>' : '<span class="status-chip">API-Football: brak danych</span>') +
+        (sportmonksCheck ? '<span class="status-chip good">Sportmonks: ' + (sportmonksCheck.count || 0) + ' spotkań · ' + escapeHtml((sportmonksCheck.generatedAt || '').slice(11,16)) + '</span>' : '<span class="status-chip">Sportmonks: oczekiwanie na synchronizację</span>');
     }
     const generated = payload.generatedAt ? new Date(payload.generatedAt) : null;
     const generatedMs = generated ? generated.getTime() : NaN;
