@@ -2155,7 +2155,8 @@ async function loadPublishedData() {
     }
 
     const payload = await response.json();
-    matches = Array.isArray(payload.matches) ? payload.matches : [];
+    const publishedMatches = Array.isArray(payload.matches) ? payload.matches : [];
+    matches = publishedMatches;
 
     // Sportmonks feed is also published as a separate auditable source file.
     let sportmonksCheck = null;
@@ -2175,6 +2176,12 @@ async function loadPublishedData() {
       }
     } catch (ignored) { apiFootballCheck = null; }
 
+    // Only publishable, model-backed matches belong in the interactive prediction UI.
+    // Keep the raw count for diagnostics; unsupported fixture-only rows stay in source feeds.
+    matches = matches.filter(match =>
+      match.modelStatus !== "fixture_only" && !!getMatchProbabilities(match)
+    );
+
     buildLeagueTabs();
     document.getElementById("statMatches").textContent = matches.length;
 
@@ -2183,14 +2190,9 @@ async function loadPublishedData() {
     document.getElementById("quickMatchCount").textContent = matches.length;
     document.getElementById("quickLeagueCount").textContent = leagueCount;
 
-    // Consolidate the supplemental provider feed into the same match objects used by every card.
-    if (apiFootballCheck && Array.isArray(apiFootballCheck.verifiedFixtures)) {
-      const supplemental = new Map(apiFootballCheck.verifiedFixtures.map(item => [String(item.matchId), item]));
-      matches = matches.map(match => ({ ...match, apiFootballVerified: supplemental.get(String(match.id)) || match.apiFootballVerified || null }));
-    }
     const fixtureCount = matches.length;
-    const predictionCount = matches.filter(m => !!getMatchProbabilities(m)).length;
-    const unmodelledCount = fixtureCount - predictionCount;
+    const predictionCount = matches.length;
+    const unmodelledCount = Math.max(0, publishedMatches.length - matches.length);
     let dataPulse = document.getElementById("dataPulse");
     if (!dataPulse) {
       dataPulse = document.createElement("div");
@@ -2209,7 +2211,7 @@ async function loadPublishedData() {
       providerStatus.innerHTML =
         '<div class="provider-status-title">' + predictionCount + ' prognoz gotowych</div>' +
         '<div class="provider-status-subtitle">' +
-          fixtureCount + ' spotkań w źródłach · ' +
+          fixtureCount + ' spotkań w bazie prognostycznej · ' +
           (unmodelledCount ? unmodelledCount + ' bez modelu ukrytych w widoku prognoz' : 'brak pustych rekordów') +
         '</div>';
     }
