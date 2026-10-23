@@ -1,0 +1,57 @@
+name: Sportmonks Football Data
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/update_sportmonks.py"
+      - ".github/workflows/sportmonks.yml"
+  schedule:
+    - cron: "11,41 * * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: goal-predictor-publish
+  cancel-in-progress: false
+
+jobs:
+  update-sportmonks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pobierz repozytorium
+        uses: actions/checkout@v4
+      - name: Uruchom Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Pobierz i scal dane Sportmonks
+        env:
+          SPORTMONKS_API_TOKEN: ${{ secrets.NEWAPT }}
+        run: python scripts/update_sportmonks.py
+      - name: Zweryfikuj pliki danych
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          feed = json.loads(Path("data/sportmonks.json").read_text(encoding="utf-8"))
+          assert isinstance(feed.get("fixtures"), list)
+          assert feed.get("count") == len(feed["fixtures"])
+          latest = json.loads(Path("data/latest.json").read_text(encoding="utf-8"))
+          assert isinstance(latest.get("matches"), list)
+          assert latest.get("count") == len(latest["matches"])
+          print(f"OK: Sportmonks {feed['count']} fixtures; strona {latest['count']} meczów")
+          PY
+      - name: Zapisz dane
+        run: |
+          git config user.name "Goal Predictor Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/latest.json data/sportmonks.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Aktualizacja danych Sportmonks"
+            git push
+          else
+            echo "Brak zmian do zapisania."
+          fi
