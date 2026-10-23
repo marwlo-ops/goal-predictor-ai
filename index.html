@@ -865,7 +865,87 @@ body{background:radial-gradient(ellipse at 12% 0%,#173044 0,transparent 34%),rad
 .favbtn.saved{color:#c4ff78;border-color:#587440;background:#18271d}
 @media(min-width:650px){.navinner{justify-content:center}.navitem{flex:1;max-width:130px}.hero{min-height:240px}.matchlist{gap:15px}.quickstats{max-width:600px}}
 @media(max-width:370px){.hero:before{display:none}.quickstat{padding:10px 8px}.quickstat strong{font-size:17px}.navitem{flex-basis:72px;min-width:72px}}
-.live-dot{color:#ff7187}@keyframes livePulse{50%{opacity:.45}} .favbtn.saved{box-shadow:0 0 0 2px #c4ff7810} </style>
+.live-dot{color:#ff7187}@keyframes livePulse{50%{opacity:.45}} .favbtn.saved{box-shadow:0 0 0 2px #c4ff7810} 
+/* ── GP AI / premium match-centre redesign ── */
+:root{--bg:#080d17;--panel:#101a2b;--panel2:#16243a;--line:#263851;--text:#f4f8ff;--muted:#91a3bc;--green:#c9ff70;--blue:#65e4e8;--orange:#ffc879;--red:#ff8296;--radius:22px}
+html{background:var(--bg)}
+body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;background:radial-gradient(ellipse at 82% 0%,#153c3b66 0,transparent 34%),radial-gradient(ellipse at 0% 12%,#19324f77 0,transparent 36%),var(--bg);letter-spacing:-.12px}
+header{max-width:1240px;padding:22px 22px 18px}
+.brand{gap:13px}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(145deg,#e5ffad,#a6f34d);color:#101a20;box-shadow:0 8px 28px #b8ff5c30;font-size:0;position:relative}
+.logo:before{content:"";position:absolute;width:25px;height:25px;border:2px solid #142319;border-radius:50%;background:linear-gradient(90deg,transparent 45%,#142319 46%,#142319 53%,transparent 54%),linear-gradient(0deg,transparent 46%,#142319 47%,#142319 53%,transparent 54%)}
+.logo:after{content:"";position:absolute;width:7px;height:7px;border:2px solid #142319;border-radius:50%;background:#c9ff70}
+.brand h1{font-size:20px;letter-spacing:-.8px;font-weight:850}
+.brand p{font-size:9px;letter-spacing:1.65px;color:#8ea4bd}
+header .pill{padding:8px 12px;border:1px solid #42623e;background:#14251c;color:var(--green);letter-spacing:.8px}
+#loginOpen{border-radius:12px;padding:10px 13px}
+main{max-width:1240px;padding:0 22px}
+.hero{min-height:285px;padding:clamp(25px,4vw,44px);margin:0 0 23px;border:1px solid #345449;border-radius:28px;background:linear-gradient(112deg,#142a3c 0%,#102d2b 56%,#17243a 100%);box-shadow:0 25px 65px #0003;isolation:isolate}
+.hero:before{content:"";position:absolute;inset:0;background-image:radial-gradient(#d4f7ff16 1px,transparent 1px);background-size:17px 17px;mask-image:linear-gradient(90deg,transparent 12%,#000 100%);z-index:-1}
+.hero:after{content:none}
+.hero-layout{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(220px,.8fr);align-items:center;gap:14px;position:relative;z-index:1}
+.hero-copy{max-width:630px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:10px;letter-spacing:1.7px;color:var(--green);font-weight:900}
+.eyebrow:before{content:"";width:7px;height:7px;background:var(--green);border-radius:50%;box-shadow:0 0 14px #c9ff70aa}
+.hero h2{font-size:clamp(32px,4.6vw,52px);line-height:1.02;letter-spacing:-2px;margin:17px 0 14px;max-width:580px}
+.hero p{font-size:14px;line-height:1.75;color:#c1d0df;max-width:520px}
+.hero-art{width:100%;max-width:370px;justify-self:end;filter:drop-shadow(0 18px 35px #0004)}
+.hero-badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:21px}
+.hero-badge{display:inline-flex;align-items:center;gap:7px;padding:8px 11px;border-radius:10px;border:1px solid #ffffff20;background:#07121c65;color:#d5e3f1;font-size:10px;font-weight:750}
+.hero-badge em{font-style:normal;color:var(--green)}
+.section-head{margin:27px 2px 14px}
+.section-head h3{font-size:20px;letter-spacing:-.65px;font-weight:850}
+.muted{color:var(--muted)}
+.tabs{gap:8px;margin:12px 0 19px;padding:3px 1px 8px}
+.tab{border-radius:12px;background:#0e1726;border-color:#293b53;color:#9eb0c6;padding:11px 15px;font-size:11px}
+.tab.active{background:var(--green);color:#111a20;border-color:var(--green);box-shadow:0 5px 18px #c9ff7018}
+.quickstats{gap:11px;margin-bottom:17px}
+.quickstat{padding:15px 16px;border-radius:18px;background:linear-gradient(145deg,#142136,#0d1523);border-color:#2a3b53;position:relative;overflow:hidden}
+.quickstat:after{content:"";position:absolute;width:72px;height:72px;border:1px solid #c9ff7018;border-radius:50%;right:-24px;top:-26px;box-shadow:0 0 0 9px #c9ff7006,0 0 0 19px #c9ff7004}
+.quickstat strong{font-size:24px;letter-spacing:-1px}
+.quickstat span{font-size:9px;letter-spacing:1.1px;font-weight:800;color:#91a4bd}
+.match-tools{gap:9px;margin-bottom:16px}
+#searchMatches{min-height:48px;padding:13px 16px;border-radius:14px;background:#0d1624;border-color:#293b53}
+#showFavorites{border-radius:14px;background:#121e30}
+.matchlist{gap:14px}
+.card{padding:18px;background:linear-gradient(145deg,#131f31,#0d1522);border:1px solid #293b53;border-radius:21px;box-shadow:0 12px 32px #00000020}
+.matchlist .card{transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}
+.matchlist .card:hover{transform:translateY(-2px);border-color:#49644f;box-shadow:0 17px 38px #0004}
+.match-top{font-size:10px;letter-spacing:.2px}
+.league{display:inline-flex;align-items:center;gap:6px;color:#78e4e4;font-size:10px;letter-spacing:.35px}
+.league:before{content:"";display:inline-block;width:6px;height:6px;border-radius:2px;background:currentColor;opacity:.85}
+.teams{margin:22px 0;gap:11px}
+.team{font-size:15px;letter-spacing:-.3px}
+.vs{padding:7px 9px;border-radius:9px;background:#1c2b3e;color:#a7b7ca;font-size:9px}
+.probrow{gap:9px}
+.prob{padding:14px 5px;border-radius:15px;border-color:#28394f;background:linear-gradient(160deg,#0a121e,#111c2b)}
+.prob b{font-size:clamp(19px,2vw,24px);letter-spacing:-.8px}
+.prob span{font-size:9px;letter-spacing:.05px}
+.match-foot{margin-top:16px}
+.smallbtn,.favbtn{border-radius:11px}
+.smallbtn{padding:10px 12px}
+.primary{background:linear-gradient(130deg,#dfff9e,#b9f65f);box-shadow:0 7px 22px #c9ff7017}
+.secondary{border-radius:13px;background:#121e30}
+.metric{border-radius:19px;padding:18px}
+.metric .value{font-size:29px}
+.notice{border-radius:15px;background:#211e16;border-color:#51452f}
+.empty{border-radius:18px;padding:34px 20px}
+.bottomnav{background:#080e18ed;border-top-color:#25364b;padding-top:10px}
+.navinner{max-width:950px;gap:6px}
+.navitem{flex:1;min-width:70px;max-width:115px;border-radius:14px;padding:9px 5px;color:#8da0b8;font-size:10px}
+.navitem strong{font-size:21px}
+.navitem.active{color:var(--green);background:linear-gradient(180deg,#c9ff7017,#c9ff7005);outline:1px solid #c9ff7020}
+.field input,.field select{border-radius:13px;background:#0b1421;border-color:#2c3e56}
+.page.active{animation:pageRise .25s ease-out}
+@keyframes pageRise{from{opacity:.55;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
+#loginModal .card{border-radius:25px}
+.footnote{text-align:center;color:#7588a2;padding:4px 0 12px}
+@media(min-width:900px){main{padding:0 28px}.hero{padding:42px 46px}.hero-layout{grid-template-columns:minmax(0,1.15fr) minmax(300px,.85fr)}.quickstats{max-width:760px}.matchlist{grid-template-columns:repeat(2,minmax(0,1fr))}.matchlist .card{margin:0}}
+@media(max-width:650px){header{padding:17px 16px 15px}main{padding:0 14px}.hero{min-height:0;padding:26px 22px;border-radius:23px}.hero-layout{grid-template-columns:minmax(0,1fr);gap:0}.hero-copy{position:relative;z-index:2}.hero h2{font-size:clamp(31px,8vw,43px);letter-spacing:-1.5px;max-width:420px}.hero-art{position:absolute;right:-30px;bottom:-22px;width:54%;opacity:.42;z-index:-1}.hero p{max-width:340px}.hero-badges{margin-top:18px}.quickstats{gap:7px}.quickstat{padding:12px 10px}.quickstat strong{font-size:21px}.quickstat span{font-size:8px;letter-spacing:.6px}.match-tools{grid-template-columns:minmax(0,1fr) auto}.section-head h3{font-size:18px}.card{padding:15px}.matchlist .card{margin-bottom:11px}.bottomnav{padding-left:4px;padding-right:4px}.navinner{gap:2px}.navitem{flex:0 0 69px;min-width:69px;font-size:9px}.navitem strong{font-size:20px}}
+@media(max-width:390px){header{padding-left:12px;padding-right:12px}.brand h1{font-size:17px}.brand p{font-size:8px;letter-spacing:1px}.logo{width:42px;height:42px}.hero{padding:23px 18px}.hero h2{font-size:30px}.hero-art{width:49%;right:-24px;bottom:-8px}.hero-badge{font-size:9px;padding:7px 8px}.match-tools{grid-template-columns:1fr}.quickstat strong{font-size:19px}.quickstat span{font-size:7px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+
 
 </head>
 <body>
@@ -879,9 +959,36 @@ body{background:radial-gradient(ellipse at 12% 0%,#173044 0,transparent 34%),rad
 
 <main>
 <section class="hero">
-  <div class="eyebrow">Twój panel analityczny</div>
-  <h2>Decyzje oparte na prawdopodobieństwie.</h2>
-  <p>Analizuj mecze, porównuj scenariusze i sprawdzaj szacowane szanse na gole oraz wynik.</p>
+  <div class="hero-layout">
+    <div class="hero-copy">
+      <div class="eyebrow">CENTRUM ANALITYKI PIŁKARSKIEJ</div>
+      <h2>Więcej danych.<br>Lepszy obraz meczu.</h2>
+      <p>Prognozy, prawdopodobieństwa i forma drużyn w jednym miejscu. Oceniaj scenariusze na podstawie danych, nie przeczucia.</p>
+      <div class="hero-badges"><span class="hero-badge"><em>●</em> Model Poissona</span><span class="hero-badge">⌁ Analiza 1X2</span><span class="hero-badge">⚡ Rynki bramkowe</span></div>
+    </div>
+    <svg class="hero-art" viewBox="0 0 360 280" role="img" aria-label="Ilustracja boiska piłkarskiego i piłki">
+      <defs><linearGradient id="pitch" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#c9ff70" stop-opacity=".22"/><stop offset="1" stop-color="#65e4e8" stop-opacity=".05"/></linearGradient><radialGradient id="ballglow"><stop stop-color="#c9ff70" stop-opacity=".45"/><stop offset="1" stop-color="#c9ff70" stop-opacity="0"/></radialGradient></defs>
+      <circle cx="220" cy="137" r="125" fill="url(#ballglow)"/>
+      <g transform="translate(25 24) rotate(-13 155 110)">
+        <rect x="0" y="0" width="300" height="210" rx="15" fill="url(#pitch)" stroke="#c9ff70" stroke-opacity=".42" stroke-width="1.5"/>
+        <path d="M150 0V210 M0 105H300" stroke="#c9ff70" stroke-opacity=".34" stroke-width="1.5" fill="none"/>
+        <circle cx="150" cy="105" r="37" fill="none" stroke="#c9ff70" stroke-opacity=".38" stroke-width="1.5"/>
+        <rect x="0" y="53" width="43" height="104" fill="none" stroke="#c9ff70" stroke-opacity=".38" stroke-width="1.5"/>
+        <rect x="257" y="53" width="43" height="104" fill="none" stroke="#c9ff70" stroke-opacity=".38" stroke-width="1.5"/>
+        <rect x="0" y="78" width="15" height="54" fill="none" stroke="#c9ff70" stroke-opacity=".38"/>
+        <rect x="285" y="78" width="15" height="54" fill="none" stroke="#c9ff70" stroke-opacity=".38"/>
+      </g>
+      <g transform="translate(216 155) rotate(15)">
+        <circle r="47" fill="#c9ff70" fill-opacity=".11" stroke="#c9ff70" stroke-opacity=".45"/>
+        <circle r="35" fill="#e8f5f0" stroke="#ffffff" stroke-width="2"/>
+        <path d="M0 -13L12 -4 8 10 -8 10 -12 -4Z" fill="#172331"/>
+        <path d="M0 -13L0 -34 M12 -4L30 -11 M8 10L20 26 M-8 10L-20 26 M-12 -4L-30 -11" stroke="#172331" stroke-width="4" stroke-linecap="round"/>
+        <path d="M-30 -11L-35 -25 M30 -11L35 -25 M20 26L9 34 M-20 26L-9 34" stroke="#172331" stroke-width="3" stroke-linecap="round"/>
+      </g>
+      <g fill="#c9ff70"><circle cx="52" cy="39" r="3"/><circle cx="309" cy="72" r="2.5"/><circle cx="75" cy="246" r="2.5"/></g>
+      <path d="M48 245Q110 214 144 224T206 205" fill="none" stroke="#65e4e8" stroke-opacity=".55" stroke-width="2" stroke-dasharray="4 7"/>
+    </svg>
+  </div>
 </section>
 
 <div class="tabs" id="leagueTabs">
