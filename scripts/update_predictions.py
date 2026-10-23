@@ -324,7 +324,7 @@ def build_team_history(matches, home_name, away_name):
 def main():
     now = datetime.now(WARSAW)
     date_from = now.date()
-    date_to = date_from + timedelta(days=2)
+    date_to = date_from + timedelta(days=6)
 
     start = date_from.isoformat()
     end = date_to.isoformat()
