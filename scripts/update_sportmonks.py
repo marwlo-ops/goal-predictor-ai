@@ -163,7 +163,7 @@ def main():
     today = datetime.now(WARSAW).date()
     dates = [(today + timedelta(days=i)).isoformat() for i in range(7)]
     fixtures, diagnostics, failed_dates = [], [], []
-    includes = "participants;league;state;scores;statistics.type;events.type;referees;odds;predictions"
+    includes = "participants;league;state;scores;statistics.type;events.type;referees;odds"
     for day in dates:
         try:
             rows, pages = fetch_date(day, includes)
