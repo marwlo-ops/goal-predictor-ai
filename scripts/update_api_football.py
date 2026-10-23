@@ -166,7 +166,10 @@ def main():
     h2h_by_match = {}
     h2h_pairs = set()
     h2h_count = 0
-    for item in verified:
+    # Enrich fixtures lacking a model first, then existing fixtures.
+    match_lookup = {str(match.get("id")): match for match in latest.get("matches", [])}
+    ordered_for_h2h = sorted(verified, key=lambda item: 0 if match_lookup.get(str(item.get("matchId")), {}).get("modelStatus") == "fixture_only" else 1)
+    for item in ordered_for_h2h:
         home_id, away_id = item.get("homeTeamId"), item.get("awayTeamId")
         if not home_id or not away_id or h2h_count >= MAX_H2H_CALLS:
             continue
