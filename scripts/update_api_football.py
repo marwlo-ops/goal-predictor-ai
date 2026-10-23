@@ -55,7 +55,14 @@ def main():
         raise RuntimeError("Brak data/latest.json; najpierw wygeneruj terminarz.")
 
     latest = json.loads(INPUT.read_text(encoding="utf-8"))
-    matches = latest.get("matches", [])
+    # This script adds verification/statistics to model-backed fixtures only.
+    # Keep unmodelled fixtures in api-football.json rather than the prediction list.
+    matches = [
+        m for m in (latest.get("matches") or [])
+        if not str(m.get("id") or "").startswith(("sportmonks-", "api-football-"))
+        and isinstance(m.get("probabilities"), dict)
+        and m.get("modelStatus") != "fixture_only"
+    ]
     today = datetime.now(WARSAW).date()
     # Query every date in the upcoming seven-day window, including days without primary-provider fixtures.
     dates = [(today + timedelta(days=i)).isoformat() for i in range(7)]
@@ -129,14 +136,13 @@ def main():
         verified.append({"matchId": api_id, **item, "source": "API-Football"})
         existing_keys.add(key)
     additional.sort(key=lambda item: (item["date"], item["time"], item["leagueName"]))
-    latest["matches"] = matches + additional
-    latest["count"] = len(latest["matches"])
+    # Fixtures unavailable to the model stay in this feed, not in latest.json.
+    latest["matches"] = matches
+    latest["count"] = len(matches)
     latest["apiFootballAdditionalCount"] = len(additional)
-    if additional:
-        note = latest.get("note", "")
-        latest["note"] = (note + " Dodano " + str(len(additional)) + " dodatkowych meczów z API-Football bez sztucznej prognozy.").strip()
-        INPUT.write_text(json.dumps(latest, ensure_ascii=False, indent=2), encoding="utf-8")
-    print("Dodatkowe mecze API-Football: " + str(len(additional)) + " (bez sztucznej prognozy).")
+    latest["apiFootballFixtureOnlyCount"] = len(additional)
+    INPUT.write_text(json.dumps(latest, ensure_ascii=False, indent=2), encoding="utf-8")
+    print("Dodatkowe mecze API-Football przechowane tylko w feedzie źródłowym: " + str(len(additional)) + ".")
 
     # Only request stats for live/finished games; upcoming games have no match stats yet.
     stats_by_fixture = {}
@@ -230,6 +236,8 @@ def main():
         "generatedAt": datetime.now(WARSAW).isoformat(),
         "source": "API-Football",
         "verifiedFixtures": verified,
+        "fixtureOnly": additional,
+        "fixtureOnlyCount": len(additional),
         "verifiedCount": len(verified),
         "checkedCount": len(matches),
         "statisticsCount": len(stats_by_fixture),
