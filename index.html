@@ -1516,8 +1516,8 @@ function monteCarloAnalysis(match, probabilities) {
     return k - 1;
   }
   for (let i=0;i<simulations;i++) {
-    const hLambda = Math.max(0.05, Math.min(5.5, hx * Math.exp(-sigma*sigma/2 + sigma * (Math.random()+Math.random()+Math.random()+Math.random()+Math.random()+Math.random()-3)*0.8165)));
-    const aLambda = Math.max(0.05, Math.min(5.5, ax * Math.exp(-sigma*sigma/2 + sigma * (Math.random()+Math.random()+Math.random()+Math.random()+Math.random()+Math.random()-3)*0.8165)));
+    const hLambda = Math.max(0.05, Math.min(5.5, hx * Math.exp(-sigma*sigma/2 + sigma * (Math.random()+Math.random()+Math.random()+Math.random()+Math.random()+Math.random()-3)*1.41421356)));
+    const aLambda = Math.max(0.05, Math.min(5.5, ax * Math.exp(-sigma*sigma/2 + sigma * (Math.random()+Math.random()+Math.random()+Math.random()+Math.random()+Math.random()-3)*1.41421356)));
     const h = poissonSample(hLambda), a = poissonSample(aLambda);
     if(h>a) counts.home++; else if(h===a) counts.draw++; else counts.away++;
     if(h+a>=2) counts.over15++; if(h+a>=3) counts.over25++; if(h>0&&a>0) counts.btts++;
