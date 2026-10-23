@@ -57,9 +57,8 @@ def main():
     latest = json.loads(INPUT.read_text(encoding="utf-8"))
     matches = latest.get("matches", [])
     today = datetime.now(WARSAW).date()
-    dates = sorted({m.get("date") for m in matches if m.get("date")})
-    if not dates:
-        dates = [(today + timedelta(days=i)).isoformat() for i in range(3)]
+    # Query every date in the upcoming seven-day window, including days without primary-provider fixtures.
+    dates = [(today + timedelta(days=i)).isoformat() for i in range(7)]
 
     raw_fixtures = []
     diagnostics = []
