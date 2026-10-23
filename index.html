@@ -1048,6 +1048,19 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,su
 .hero{box-shadow:0 24px 66px #0005}
 @media(min-width:1000px){#matchList{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}}
 
+
+/* Clean provider health panel + Canva-inspired premium dashboard tokens */
+:root{--bg:#060a12;--panel:#10192a;--panel2:#17243a;--line:#293b53;--text:#f4f7fc;--muted:#96a8c0;--green:#c8ff69;--blue:#67e6eb;--orange:#ffd087;--red:#ff8194}
+.provider-status{display:flex;flex-direction:column;gap:4px;margin:0 0 16px;padding:13px 16px;border:1px solid #2d4654;border-radius:17px;background:linear-gradient(110deg,#10252a,#101b2b 68%,#142036);box-shadow:inset 3px 0 0 var(--green)}
+.provider-status-title{font-size:13px;font-weight:900;color:#eaf5f5;letter-spacing:-.2px}
+.provider-status-subtitle{font-size:11px;line-height:1.5;color:#a5b8cc}
+#matchList .fixture-only-card{display:none!important}
+#dataPulse .status-chip:not(.good){display:none}
+#dataPulse{gap:6px;margin-top:0}
+#dataPulse .status-chip{font-size:10px;padding:6px 9px}
+.hero{box-shadow:0 24px 66px #0005}
+@media(min-width:1000px){#matchList{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}}
+
 </style>
 
 
@@ -1107,6 +1120,10 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,su
   <div class="section-head">
     <h3>Mecze i prognozy</h3>
     <span class="muted" id="dataStatus">Wczytywanie danych…</span>
+  </div>
+  <div class="provider-status" id="providerStatus" aria-live="polite">
+    <div class="provider-status-title">Łączenie źródeł danych…</div>
+    <div class="provider-status-subtitle">Prognozy pokażemy tylko wtedy, gdy model ma wystarczające dane.</div>
   </div>
 
   <div class="card" id="aiSummaryCard" style="display:none">
@@ -1495,9 +1512,11 @@ function persistFavorites() {
   document.getElementById("quickFavCount").textContent = favoriteIds.size;
 }
 function filteredMatches() {
-  // Main predictions view: only fixtures with actual model probabilities.
-  // Provider-only schedule rows live in their source feeds and must not create empty cards.
-  let result = matches.filter(match => !!getMatchProbabilities(match) && match.modelStatus !== "fixture_only");
+  // Main predictions view: hide unsupported model rows, never fabricate probability cards.
+  let result = matches.filter(match => {
+    const p = getMatchProbabilities(match);
+    return p && match.modelStatus !== "fixture_only";
+  });
   if (activeLeagueFilter === "other") result = result.filter(match => !["PL", "PD", "SA"].includes(match.league));
   else if (activeLeagueFilter !== "all") {
     const codes = leagueFilters[activeLeagueFilter];
@@ -2181,9 +2200,18 @@ async function loadPublishedData() {
       if (matchHeading) matchHeading.parentElement.insertBefore(dataPulse, matchHeading);
     }
     if (dataPulse) {
-      dataPulse.innerHTML = '<span class="status-chip good">● ' + fixtureCount + ' meczów</span><span class="status-chip">◈ ' + predictionCount + ' prognoz</span><span class="status-chip">' + unmodelledCount + ' bez prognozy</span>' +
-        (apiFootballCheck ? '<span class="status-chip good">API-Football: ' + (apiFootballCheck.verifiedCount || 0) + ' potwierdzonych</span>' : '<span class="status-chip">API-Football: brak danych</span>') +
-        (sportmonksCheck ? '<span class="status-chip good">Sportmonks: ' + (sportmonksCheck.count || 0) + ' spotkań · ' + escapeHtml((sportmonksCheck.generatedAt || '').slice(11,16)) + '</span>' : '<span class="status-chip">Sportmonks: oczekiwanie na synchronizację</span>');
+      dataPulse.innerHTML = '<span class="status-chip good">● ' + fixtureCount + ' meczów w źródłach</span><span class="status-chip good">◈ ' + predictionCount + ' prognoz</span>' +
+        (apiFootballCheck ? '<span class="status-chip good">API-Football: ' + (apiFootballCheck.verifiedCount || 0) + ' potwierdzonych</span>' : '') +
+        (sportmonksCheck ? '<span class="status-chip good">Sportmonks: ' + (sportmonksCheck.count || 0) + ' meczów</span>' : '');
+    }
+    const providerStatus = document.getElementById("providerStatus");
+    if (providerStatus) {
+      providerStatus.innerHTML =
+        '<div class="provider-status-title">' + predictionCount + ' prognoz gotowych</div>' +
+        '<div class="provider-status-subtitle">' +
+          fixtureCount + ' spotkań w źródłach · ' +
+          (unmodelledCount ? unmodelledCount + ' bez modelu ukrytych w widoku prognoz' : 'brak pustych rekordów') +
+        '</div>';
     }
     const generated = payload.generatedAt ? new Date(payload.generatedAt) : null;
     const generatedMs = generated ? generated.getTime() : NaN;
