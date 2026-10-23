@@ -1533,6 +1533,58 @@ function monteCarloAnalysis(match, probabilities) {
   const warning = gap > 0.12 ? '<p class="muted">Bezpiecznik: symulacja i rozkład bazowy różnią się wyraźnie. Traktuj prognozę jako niepewną i sprawdź dane / składy.</p>' : '<p class="muted">Bezpiecznik: porównanie z modelem bazowym wykonane; przedział pokazuje niepewność symulacji, nie gwarancję wyniku.</p>';
   return '<section class="full-analysis-section"><h3>Monte Carlo · 6 000 symulacji</h3><p>W każdej próbie zmieniają się oczekiwane gole w granicach niepewności danych, a wynik meczu jest losowany z rozkładu Poissona.</p><div class="full-market-grid">'+rows+'</div>'+warning+'<p class="muted">Poziom rozrzutu: '+(match.quality === "medium" ? "umiarkowany" : "podwyższony z powodu ograniczeń danych")+'. Symulacja uzupełnia analizę, nie usuwa typów tylko dlatego, że historia jest krótka.</p></section>';
 }
+
+function historicalStatValue(game, side, metric) {
+  const aliases={corners:["corners","cornerKicks","corner_kicks","totalCorners"],yellowCards:["yellowCards","yellow_cards","yellow"],redCards:["redCards","red_cards","red"],shots:["shots","totalShots","total_shots"],shotsOnTarget:["shotsOnTarget","shots_on_target","shotsOnTargetTotal"]};
+  for(const source of [game?.stats,game?.statistics,game?.matchStats,game?.matchStatistics]){
+    if(!source)continue;
+    const team=source[side]||source[side==="home"?"homeTeam":"awayTeam"]||source[side==="home"?"home_team":"away_team"];
+    for(const obj of [team,source]){
+      if(!obj)continue;
+      for(const key of aliases[metric]||[metric]){
+        let value=obj[key]; if(value&&typeof value==="object")value=value.value??value.total??null;
+        if(value!==null&&value!==undefined&&value!==""&&Number.isFinite(Number(value)))return Number(value);
+      }
+    }
+  }
+  return null;
+}
+function historicalAverage(games,metric,teamName=null){
+  const values=[];
+  for(const game of games||[]){
+    const hn=game.home||game.homeTeam||"",an=game.away||game.awayTeam||"";
+    if(teamName){
+      const side=hn===teamName?"home":an===teamName?"away":null;if(!side)continue;
+      const value=historicalStatValue(game,side,metric);if(value!==null)values.push(value);
+    }else{
+      const h=historicalStatValue(game,"home",metric),a=historicalStatValue(game,"away",metric);if(h!==null&&a!==null)values.push(h+a);
+    }
+  }
+  return values.length?{value:values.reduce((a,b)=>a+b,0)/values.length,count:values.length}:null;
+}
+function historicalStatRows(games,teamName=null){
+  const metrics=[["corners","Rożne"],["yellowCards","Żółte kartki"],["redCards","Czerwone kartki"],["shots","Strzały"],["shotsOnTarget","Strzały celne"]];
+  const rows=metrics.map(([key,label])=>{
+    const avg=historicalAverage(games,key,teamName);
+    const value=avg?avg.value.toLocaleString("pl-PL",{minimumFractionDigits:1,maximumFractionDigits:1})+" · n="+avg.count:"Brak danych źródłowych";
+    return '<div class="full-stat-row"><span>'+label+'</span><b style="grid-column:2/-1">'+escapeHtml(value)+'</b></div>';
+  }).join("");
+  const any=metrics.some(([key])=>historicalAverage(games,key,teamName));
+  return '<div class="full-stat-table">'+rows+'</div>'+(!any?'<p class="muted">Aktualne źródło nie udostępnia rożnych, kartek ani strzałów dla tych meczów. Nie pokazujemy zmyślonych średnich. Po podłączeniu dostawcy statystyk wartości policzą się automatycznie.</p>':'<p class="muted">Średnia liczona tylko z meczów z dostępnymi danymi; n oznacza liczbę uwzględnionych spotkań.</p>');
+}
+function historicalH2HSummary(games,homeName,awayName){
+  const rows=(games||[]).filter(g=>Number.isFinite(Number(g.homeGoals))&&Number.isFinite(Number(g.awayGoals)));
+  if(!rows.length)return '<p class="muted">Brak bezpośrednich spotkań w załadowanych danych.</p>';
+  let hw=0,draw=0,aw=0,goals=0,btts=0,over25=0;
+  for(const g of rows){
+    const h=Number(g.homeGoals),a=Number(g.awayGoals);goals+=h+a;
+    if(h===a)draw++;else if((h>a&&g.home===homeName)||(a>h&&g.away===homeName))hw++;else aw++;
+    if(h>0&&a>0)btts++;if(h+a>=3)over25++;
+  }
+  const row=(label,value)=>'<div class="full-stat-row"><span>'+label+'</span><b style="grid-column:2/-1">'+value+'</b></div>';
+  return '<div class="full-stat-table">'+row("Liczba meczów H2H",rows.length)+row("Bilans "+escapeHtml(homeName),hw+" zwycięstw · "+draw+" remisów · "+aw+" porażek")+row("Średnia łączna goli",(goals/rows.length).toLocaleString("pl-PL",{minimumFractionDigits:1,maximumFractionDigits:1}))+row("BTTS",Math.round(100*btts/rows.length)+"%")+row("Over 2,5",Math.round(100*over25/rows.length)+"%")+'</div>';
+}
+
 function fullMatchAnalysis(match) {
   const p = getMatchProbabilities(match);
   const homeData = teamHistoryStats(match, "home");
@@ -1546,7 +1598,15 @@ function fullMatchAnalysis(match) {
       (rows.length ? rows.slice(0,10).map(game => '<div class="full-game-row"><span>'+escapeHtml(game.date ? new Date(game.date).toLocaleDateString("pl-PL",{day:"2-digit",month:"2-digit",year:"numeric"}) : "—")+'</span><span>'+escapeHtml(game.home)+' – '+escapeHtml(game.away)+'</span><b>'+escapeHtml(game.homeGoals)+':'+escapeHtml(game.awayGoals)+'</b></div>').join("") : '<p class="muted">Brak dostępnej historii.</p>') + '</section>';
   };
   const h2h = match.history?.h2h || [];
-  const h2hHtml = h2h.length ? h2h.slice(0,10).map(g => '<div class="full-game-row"><span>'+escapeHtml(g.date ? new Date(g.date).toLocaleDateString("pl-PL") : "—")+'</span><span>'+escapeHtml(g.home)+' – '+escapeHtml(g.away)+'</span><b>'+escapeHtml(g.homeGoals)+':'+escapeHtml(g.awayGoals)+'</b></div>').join("") : '<p class="muted">Brak bezpośrednich spotkań w załadowanych danych.</p>';
+  const h2hHtml = h2h.length ? h2h.slice(0,10).map(g => {
+    const metrics=[["corners","Rożne"],["yellowCards","Żółte kartki"],["shots","Strzały"]].map(([key,label])=>{
+      const home=historicalStatValue(g,"home",key),away=historicalStatValue(g,"away",key);
+      return home!==null&&away!==null?label+" "+(home+away):"";
+    }).filter(Boolean).join(" · ");
+    return '<div class="full-game-row"><span>'+escapeHtml(g.date?new Date(g.date).toLocaleDateString("pl-PL"):"—")+'</span><span>'+escapeHtml(g.home)+' – '+escapeHtml(g.away)+(metrics?'<small class="muted" style="display:block">'+escapeHtml(metrics)+'</small>':'')+'</span><b>'+escapeHtml(g.homeGoals)+':'+escapeHtml(g.awayGoals)+'</b></div>';
+  }).join("") : '<p class="muted">Brak bezpośrednich spotkań w załadowanych danych.</p>';
+  const h2hSummary=historicalH2HSummary(h2h,match.home,match.away);
+  const h2hMetrics=historicalStatRows(h2h);
   const marketRows = p ? [
     ["1 · wygrana gospodarzy",p.home],["X · remis",p.draw],["2 · wygrana gości",p.away],
     ["Over 1,5 gola",p.over15],["Over 2,5 gola",p.over25],["Under 2,5 gola",1-p.over25],
@@ -1574,7 +1634,9 @@ function fullMatchAnalysis(match) {
     monteCarloAnalysis(match,p)+
     '<section class="full-analysis-section"><h3>Dokładne statystyki drużyn</h3>'+detailedStats+'</section>'+
     '<div class="full-history-grid">'+historyRows(match.home,homeData)+historyRows(match.away,awayData)+'</div>'+
-    '<section class="full-analysis-section"><h3>Bezpośrednie mecze (H2H)</h3>'+h2hHtml+'</section>'+
+    '<section class="full-analysis-section"><h3>Średnie z ostatnich meczów — '+escapeHtml(match.home)+'</h3>'+historicalStatRows(homeData?.matches||[],match.home)+'</section>'+
+    '<section class="full-analysis-section"><h3>Średnie z ostatnich meczów — '+escapeHtml(match.away)+'</h3>'+historicalStatRows(awayData?.matches||[],match.away)+'</section>'+
+    '<section class="full-analysis-section"><h3>Bezpośrednie mecze (H2H)</h3>'+h2hSummary+h2hHtml+'<h3 style="margin-top:16px">Średnie H2H — rożne, kartki i strzały</h3>'+h2hMetrics+'</section>'+
     '<section class="full-analysis-section"><h3>Składy, absencje i komunikaty klubowe</h3><p class="muted">W aktualnym zbiorze danych nie ma potwierdzonych składów ani list kontuzji. Nie oznaczamy przewidywanych składów jako oficjalnych. Otwórz wyszukiwanie komunikatów klubowych i zweryfikuj informacje przed meczem.</p>'+sourceLinks+'</section>'+
     '<p class="full-analysis-disclaimer">Analiza automatycznie podsumowuje dane dostępne w aplikacji. Nie jest niezależnym raportem dziennikarskim ani gwarancją wyniku. Brak informacji o składzie oznacza brak danych, a nie potwierdzenie pełnej dostępności zawodników.</p></div></div>';
   const close = () => { modal.remove(); document.removeEventListener("keydown", keyHandler); };
