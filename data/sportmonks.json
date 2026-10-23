@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-23T20:42:54.108619+02:00",
+  "generatedAt": "2026-10-23T20:52:31.771283+02:00",
   "source": "Sportmonks Football API v3",
   "count": 18,
   "fixtures": [
@@ -290,7 +290,7 @@
           "type_id": 1605,
           "participant_id": 293,
           "data": {
-            "value": 27
+            "value": 25
           },
           "location": "away",
           "type": {
@@ -308,7 +308,7 @@
           "type_id": 1605,
           "participant_id": 2356,
           "data": {
-            "value": 38
+            "value": 35
           },
           "location": "home",
           "type": {
@@ -633,6 +633,134 @@
           "detailed_period_id": 7184626,
           "rescinded": null,
           "sort_order": 6,
+          "type": {
+            "id": 18,
+            "name": "Substitution",
+            "code": "substitution",
+            "developer_name": "SUBSTITUTION",
+            "model_type": "event",
+            "stat_group": null
+          }
+        },
+        {
+          "id": 158352715,
+          "fixture_id": 19713889,
+          "period_id": 7184626,
+          "participant_id": 2356,
+          "type_id": 18,
+          "section": "event",
+          "player_id": 100529,
+          "related_player_id": 28912728,
+          "player_name": "Warren Caddy",
+          "related_player_name": "Mohamed Sankoh",
+          "result": null,
+          "info": null,
+          "addition": "7th Substitution",
+          "minute": 84,
+          "extra_minute": null,
+          "injured": null,
+          "on_bench": false,
+          "coach_id": null,
+          "sub_type_id": null,
+          "detailed_period_id": 7184626,
+          "rescinded": null,
+          "sort_order": 7,
+          "type": {
+            "id": 18,
+            "name": "Substitution",
+            "code": "substitution",
+            "developer_name": "SUBSTITUTION",
+            "model_type": "event",
+            "stat_group": null
+          }
+        },
+        {
+          "id": 158352720,
+          "fixture_id": 19713889,
+          "period_id": 7184626,
+          "participant_id": 2356,
+          "type_id": 18,
+          "section": "event",
+          "player_id": 37723655,
+          "related_player_id": 37687494,
+          "player_name": "Simon Stüker",
+          "related_player_name": "Sabil Osman Hansen",
+          "result": null,
+          "info": null,
+          "addition": "8th Substitution",
+          "minute": 84,
+          "extra_minute": null,
+          "injured": null,
+          "on_bench": false,
+          "coach_id": null,
+          "sub_type_id": null,
+          "detailed_period_id": 7184626,
+          "rescinded": null,
+          "sort_order": 8,
+          "type": {
+            "id": 18,
+            "name": "Substitution",
+            "code": "substitution",
+            "developer_name": "SUBSTITUTION",
+            "model_type": "event",
+            "stat_group": null
+          }
+        },
+        {
+          "id": 158352870,
+          "fixture_id": 19713889,
+          "period_id": 7184626,
+          "participant_id": 293,
+          "type_id": 18,
+          "section": "event",
+          "player_id": 37445147,
+          "related_player_id": 19979663,
+          "player_name": "Sho Fukuda",
+          "related_player_name": "Mads Frøkjaer-Jensen",
+          "result": null,
+          "info": null,
+          "addition": "9th Substitution",
+          "minute": 89,
+          "extra_minute": null,
+          "injured": null,
+          "on_bench": false,
+          "coach_id": null,
+          "sub_type_id": null,
+          "detailed_period_id": 7184626,
+          "rescinded": null,
+          "sort_order": 9,
+          "type": {
+            "id": 18,
+            "name": "Substitution",
+            "code": "substitution",
+            "developer_name": "SUBSTITUTION",
+            "model_type": "event",
+            "stat_group": null
+          }
+        },
+        {
+          "id": 158352874,
+          "fixture_id": 19713889,
+          "period_id": 7184626,
+          "participant_id": 293,
+          "type_id": 18,
+          "section": "event",
+          "player_id": 37331699,
+          "related_player_id": 37678884,
+          "player_name": "Casper Winther",
+          "related_player_name": "Marcus Younis",
+          "result": null,
+          "info": null,
+          "addition": "10th Substitution",
+          "minute": 89,
+          "extra_minute": null,
+          "injured": null,
+          "on_bench": false,
+          "coach_id": null,
+          "sub_type_id": null,
+          "detailed_period_id": 7184626,
+          "rescinded": null,
+          "sort_order": 10,
           "type": {
             "id": 18,
             "name": "Substitution",
@@ -401994,7 +402122,7 @@
           "participants": null,
           "created_at": "2026-10-19T10:02:52.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:53"
+          "latest_bookmaker_update": "2026-10-23 18:48:02"
         },
         {
           "id": 247784978326,
@@ -402684,7 +402812,7 @@
           "participants": null,
           "created_at": "2026-10-17T12:44:59.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:20:09"
+          "latest_bookmaker_update": "2026-10-23 18:47:47"
         },
         {
           "id": 249126811183,
@@ -407100,7 +407228,7 @@
           "participants": null,
           "created_at": "2026-10-17T12:44:59.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:19:53"
+          "latest_bookmaker_update": "2026-10-23 18:46:34"
         },
         {
           "id": 247740790751,
@@ -409193,7 +409321,7 @@
           "participants": null,
           "created_at": "2026-10-23T16:06:09.000000Z",
           "original_label": "+1",
-          "latest_bookmaker_update": "2026-10-23 18:21:53"
+          "latest_bookmaker_update": "2026-10-23 18:48:02"
         },
         {
           "id": 249838919671,
@@ -409216,7 +409344,7 @@
           "participants": null,
           "created_at": "2026-10-23T16:06:09.000000Z",
           "original_label": "+1",
-          "latest_bookmaker_update": "2026-10-23 18:21:53"
+          "latest_bookmaker_update": "2026-10-23 18:48:02"
         },
         {
           "id": 249118474501,
@@ -413609,7 +413737,7 @@
           "participants": null,
           "created_at": "2026-10-19T10:02:52.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:53"
+          "latest_bookmaker_update": "2026-10-23 18:48:02"
         },
         {
           "id": 247756435721,
@@ -414046,7 +414174,7 @@
           "participants": null,
           "created_at": "2026-10-23T16:17:28.000000Z",
           "original_label": "+1",
-          "latest_bookmaker_update": "2026-10-23 18:21:09"
+          "latest_bookmaker_update": "2026-10-23 18:47:35"
         },
         {
           "id": 249840663278,
@@ -414069,7 +414197,7 @@
           "participants": null,
           "created_at": "2026-10-23T16:17:28.000000Z",
           "original_label": "+1",
-          "latest_bookmaker_update": "2026-10-23 18:21:09"
+          "latest_bookmaker_update": "2026-10-23 18:47:35"
         },
         {
           "id": 248967719713,
@@ -418853,7 +418981,7 @@
           "participants": null,
           "created_at": "2026-10-17T12:19:01.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:18"
+          "latest_bookmaker_update": "2026-10-23 18:46:25"
         },
         {
           "id": 247755575809,
@@ -428927,7 +429055,7 @@
           "participants": null,
           "created_at": "2026-10-17T12:19:01.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:18"
+          "latest_bookmaker_update": "2026-10-23 18:46:25"
         },
         {
           "id": 247748150682,
@@ -434263,7 +434391,7 @@
           "participants": null,
           "created_at": "2026-10-21T01:16:19.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:55"
+          "latest_bookmaker_update": "2026-10-23 18:47:55"
         },
         {
           "id": 248966589073,
@@ -436333,7 +436461,7 @@
           "participants": null,
           "created_at": "2026-10-21T01:16:19.000000Z",
           "original_label": "+0.75",
-          "latest_bookmaker_update": "2026-10-23 18:21:55"
+          "latest_bookmaker_update": "2026-10-23 18:47:55"
         },
         {
           "id": 247740790729,
@@ -436678,7 +436806,7 @@
           "participants": null,
           "created_at": "2026-10-11T00:43:12.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:59"
+          "latest_bookmaker_update": "2026-10-23 18:47:22"
         },
         {
           "id": 249349964346,
@@ -445625,7 +445753,7 @@
           "participants": null,
           "created_at": "2026-10-21T01:16:19.000000Z",
           "original_label": "+0.75",
-          "latest_bookmaker_update": "2026-10-23 18:21:55"
+          "latest_bookmaker_update": "2026-10-23 18:47:55"
         },
         {
           "id": 248974781887,
@@ -453537,7 +453665,7 @@
           "participants": null,
           "created_at": "2026-10-11T00:43:12.000000Z",
           "original_label": "+1.5",
-          "latest_bookmaker_update": "2026-10-23 18:21:59"
+          "latest_bookmaker_update": "2026-10-23 18:47:22"
         },
         {
           "id": 248742472564,
@@ -453560,7 +453688,7 @@
           "participants": null,
           "created_at": "2026-10-17T12:44:59.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:20:09"
+          "latest_bookmaker_update": "2026-10-23 18:47:47"
         },
         {
           "id": 247773331257,
@@ -453583,7 +453711,7 @@
           "participants": null,
           "created_at": "2026-10-11T00:43:12.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:59"
+          "latest_bookmaker_update": "2026-10-23 18:47:22"
         },
         {
           "id": 247835318606,
@@ -454227,7 +454355,7 @@
           "participants": null,
           "created_at": "2026-10-19T09:32:45.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:59"
+          "latest_bookmaker_update": "2026-10-23 18:47:22"
         },
         {
           "id": 247748150723,
@@ -455124,7 +455252,7 @@
           "participants": null,
           "created_at": "2026-10-19T10:02:52.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:53"
+          "latest_bookmaker_update": "2026-10-23 18:48:02"
         },
         {
           "id": 249126811923,
@@ -455308,7 +455436,7 @@
           "participants": null,
           "created_at": "2026-10-11T00:43:12.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:59"
+          "latest_bookmaker_update": "2026-10-23 18:47:22"
         },
         {
           "id": 247752033184,
@@ -455423,7 +455551,7 @@
           "participants": null,
           "created_at": "2026-10-17T12:19:01.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:18"
+          "latest_bookmaker_update": "2026-10-23 18:46:25"
         },
         {
           "id": 249588560863,
@@ -464393,7 +464521,7 @@
           "participants": null,
           "created_at": "2026-10-21T10:19:31.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:14:47"
+          "latest_bookmaker_update": "2026-10-23 18:37:12"
         },
         {
           "id": 248931246657,
@@ -464416,7 +464544,7 @@
           "participants": null,
           "created_at": "2026-10-19T03:02:36.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:09"
+          "latest_bookmaker_update": "2026-10-23 18:47:35"
         },
         {
           "id": 248962195879,
@@ -464439,7 +464567,7 @@
           "participants": null,
           "created_at": "2026-10-19T09:32:45.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 17:49:11"
+          "latest_bookmaker_update": "2026-10-23 18:45:41"
         },
         {
           "id": 248962195880,
@@ -464462,7 +464590,7 @@
           "participants": null,
           "created_at": "2026-10-19T09:32:45.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 17:49:11"
+          "latest_bookmaker_update": "2026-10-23 18:45:41"
         },
         {
           "id": 249276917570,
@@ -464485,7 +464613,7 @@
           "participants": null,
           "created_at": "2026-10-21T05:15:29.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:55"
+          "latest_bookmaker_update": "2026-10-23 18:47:55"
         },
         {
           "id": 249276917571,
@@ -464508,7 +464636,7 @@
           "participants": null,
           "created_at": "2026-10-21T05:15:29.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:55"
+          "latest_bookmaker_update": "2026-10-23 18:47:55"
         },
         {
           "id": 248889178482,
@@ -465037,7 +465165,7 @@
           "participants": null,
           "created_at": "2026-10-17T12:44:59.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:19:53"
+          "latest_bookmaker_update": "2026-10-23 18:46:34"
         },
         {
           "id": 249239220456,
@@ -465060,7 +465188,7 @@
           "participants": null,
           "created_at": "2026-10-21T01:16:19.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:55"
+          "latest_bookmaker_update": "2026-10-23 18:47:55"
         },
         {
           "id": 248962195889,
@@ -465083,7 +465211,7 @@
           "participants": null,
           "created_at": "2026-10-19T09:32:45.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:59"
+          "latest_bookmaker_update": "2026-10-23 18:47:22"
         },
         {
           "id": 248742472562,
@@ -465106,7 +465234,7 @@
           "participants": null,
           "created_at": "2026-10-17T12:44:59.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:20:09"
+          "latest_bookmaker_update": "2026-10-23 18:47:47"
         },
         {
           "id": 248964459856,
@@ -465129,7 +465257,7 @@
           "participants": null,
           "created_at": "2026-10-19T10:02:52.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:53"
+          "latest_bookmaker_update": "2026-10-23 18:48:02"
         },
         {
           "id": 249827814960,
@@ -467107,7 +467235,7 @@
           "participants": null,
           "created_at": "2026-10-19T09:32:45.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:18"
+          "latest_bookmaker_update": "2026-10-23 18:46:25"
         },
         {
           "id": 249322749840,
@@ -467130,7 +467258,7 @@
           "participants": null,
           "created_at": "2026-10-21T10:19:31.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:14:47"
+          "latest_bookmaker_update": "2026-10-23 18:37:12"
         },
         {
           "id": 248974781684,
@@ -472972,7 +473100,7 @@
           "participants": null,
           "created_at": "2026-10-21T05:15:29.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:55"
+          "latest_bookmaker_update": "2026-10-23 18:47:55"
         },
         {
           "id": 248974781680,
@@ -474582,7 +474710,7 @@
           "participants": null,
           "created_at": "2026-10-19T09:32:45.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:18"
+          "latest_bookmaker_update": "2026-10-23 18:46:25"
         },
         {
           "id": 248742472540,
@@ -474605,7 +474733,7 @@
           "participants": null,
           "created_at": "2026-10-17T12:44:59.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:19:53"
+          "latest_bookmaker_update": "2026-10-23 18:46:34"
         },
         {
           "id": 248742472541,
@@ -474628,7 +474756,7 @@
           "participants": null,
           "created_at": "2026-10-17T12:44:59.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:19:53"
+          "latest_bookmaker_update": "2026-10-23 18:46:34"
         },
         {
           "id": 248742472542,
@@ -474651,7 +474779,7 @@
           "participants": null,
           "created_at": "2026-10-17T12:44:59.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:19:53"
+          "latest_bookmaker_update": "2026-10-23 18:46:34"
         },
         {
           "id": 248931246656,
@@ -474674,7 +474802,7 @@
           "participants": null,
           "created_at": "2026-10-19T03:02:36.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:09"
+          "latest_bookmaker_update": "2026-10-23 18:47:35"
         },
         {
           "id": 249563783880,
@@ -476169,7 +476297,7 @@
           "participants": null,
           "created_at": "2026-10-19T09:32:45.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:20:09"
+          "latest_bookmaker_update": "2026-10-23 18:47:47"
         },
         {
           "id": 248964459860,
@@ -476215,7 +476343,7 @@
           "participants": null,
           "created_at": "2026-10-11T00:43:12.000000Z",
           "original_label": "+1.5",
-          "latest_bookmaker_update": "2026-10-23 18:21:59"
+          "latest_bookmaker_update": "2026-10-23 18:47:22"
         },
         {
           "id": 248962195894,
@@ -476238,7 +476366,7 @@
           "participants": null,
           "created_at": "2026-10-19T09:32:45.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:20:09"
+          "latest_bookmaker_update": "2026-10-23 18:47:47"
         },
         {
           "id": 248964459861,
@@ -476261,7 +476389,7 @@
           "participants": null,
           "created_at": "2026-10-19T10:02:52.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:53"
+          "latest_bookmaker_update": "2026-10-23 18:48:02"
         },
         {
           "id": 247740790550,
@@ -563473,7 +563601,7 @@
           "participants": null,
           "created_at": "2026-10-20T01:03:02.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:17:55"
+          "latest_bookmaker_update": "2026-10-23 18:40:58"
         },
         {
           "id": 249369462301,
@@ -563496,7 +563624,7 @@
           "participants": null,
           "created_at": "2026-10-21T15:33:55.000000Z",
           "original_label": "-1/-1.5",
-          "latest_bookmaker_update": "2026-10-23 18:22:52"
+          "latest_bookmaker_update": "2026-10-23 18:48:02"
         },
         {
           "id": 249369462302,
@@ -563519,7 +563647,7 @@
           "participants": null,
           "created_at": "2026-10-21T15:33:55.000000Z",
           "original_label": "-1/-1.5",
-          "latest_bookmaker_update": "2026-10-23 18:22:52"
+          "latest_bookmaker_update": "2026-10-23 18:48:02"
         },
         {
           "id": 248981657144,
@@ -564784,7 +564912,7 @@
           "participants": null,
           "created_at": "2026-10-19T13:47:58.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:47"
+          "latest_bookmaker_update": "2026-10-23 18:47:30"
         },
         {
           "id": 248976295782,
@@ -565106,7 +565234,7 @@
           "participants": null,
           "created_at": "2026-10-18T14:14:00.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:59"
+          "latest_bookmaker_update": "2026-10-23 18:47:23"
         },
         {
           "id": 248881657423,
@@ -569154,7 +569282,7 @@
           "participants": null,
           "created_at": "2026-10-18T14:14:00.000000Z",
           "original_label": "-1.5",
-          "latest_bookmaker_update": "2026-10-23 18:21:59"
+          "latest_bookmaker_update": "2026-10-23 18:47:23"
         },
         {
           "id": 248976295931,
@@ -575663,7 +575791,7 @@
           "participants": null,
           "created_at": "2026-10-21T15:33:55.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:22:52"
+          "latest_bookmaker_update": "2026-10-23 18:48:02"
         },
         {
           "id": 248976296797,
@@ -575824,7 +575952,7 @@
           "participants": null,
           "created_at": "2026-10-21T15:33:55.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:22:52"
+          "latest_bookmaker_update": "2026-10-23 18:48:02"
         },
         {
           "id": 249369462304,
@@ -575847,7 +575975,7 @@
           "participants": null,
           "created_at": "2026-10-21T15:33:55.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:22:52"
+          "latest_bookmaker_update": "2026-10-23 18:48:02"
         },
         {
           "id": 248976295809,
@@ -576997,7 +577125,7 @@
           "participants": null,
           "created_at": "2026-10-19T22:18:08.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:23:01"
+          "latest_bookmaker_update": "2026-10-23 18:47:55"
         },
         {
           "id": 248921194059,
@@ -581666,7 +581794,7 @@
           "participants": null,
           "created_at": "2026-10-21T15:33:55.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:22:52"
+          "latest_bookmaker_update": "2026-10-23 18:48:02"
         },
         {
           "id": 248981657154,
@@ -584403,7 +584531,7 @@
           "participants": null,
           "created_at": "2026-10-19T22:18:08.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:23:01"
+          "latest_bookmaker_update": "2026-10-23 18:47:55"
         },
         {
           "id": 248876661935,
@@ -584426,7 +584554,7 @@
           "participants": null,
           "created_at": "2026-10-18T14:14:00.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:59"
+          "latest_bookmaker_update": "2026-10-23 18:47:23"
         },
         {
           "id": 248976295956,
@@ -585139,7 +585267,7 @@
           "participants": null,
           "created_at": "2026-10-19T13:33:17.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:44"
+          "latest_bookmaker_update": "2026-10-23 18:46:42"
         },
         {
           "id": 248992942029,
@@ -586404,7 +586532,7 @@
           "participants": null,
           "created_at": "2026-10-19T13:33:17.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:01"
+          "latest_bookmaker_update": "2026-10-23 18:46:07"
         },
         {
           "id": 248981660112,
@@ -588796,7 +588924,7 @@
           "participants": null,
           "created_at": "2026-10-20T01:03:02.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:17:55"
+          "latest_bookmaker_update": "2026-10-23 18:40:58"
         },
         {
           "id": 248992942027,
@@ -596090,29 +596218,6 @@
           "latest_bookmaker_update": "2026-10-23 18:33:21"
         },
         {
-          "id": 248982178607,
-          "fixture_id": 19713888,
-          "market_id": 1,
-          "bookmaker_id": 32,
-          "label": "Away",
-          "value": "5.50",
-          "name": "Away",
-          "sort_order": 3,
-          "market_description": "Fulltime Result",
-          "probability": "18.18%",
-          "dp3": "5.500",
-          "fractional": "11/2",
-          "american": "450",
-          "winning": false,
-          "stopped": false,
-          "total": null,
-          "handicap": null,
-          "participants": null,
-          "created_at": "2026-10-19T13:33:17.000000Z",
-          "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:01"
-        },
-        {
           "id": 248976295757,
           "fixture_id": 19713888,
           "market_id": 105,
@@ -596134,6 +596239,29 @@
           "created_at": "2026-10-19T12:21:14.000000Z",
           "original_label": null,
           "latest_bookmaker_update": "2026-10-23 18:33:21"
+        },
+        {
+          "id": 248982178607,
+          "fixture_id": 19713888,
+          "market_id": 1,
+          "bookmaker_id": 32,
+          "label": "Away",
+          "value": "5.50",
+          "name": "Away",
+          "sort_order": 3,
+          "market_description": "Fulltime Result",
+          "probability": "18.18%",
+          "dp3": "5.500",
+          "fractional": "11/2",
+          "american": "450",
+          "winning": false,
+          "stopped": false,
+          "total": null,
+          "handicap": null,
+          "participants": null,
+          "created_at": "2026-10-19T13:33:17.000000Z",
+          "original_label": "",
+          "latest_bookmaker_update": "2026-10-23 18:46:07"
         },
         {
           "id": 248984396540,
@@ -597191,7 +597319,7 @@
           "participants": null,
           "created_at": "2026-10-18T14:14:00.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:59"
+          "latest_bookmaker_update": "2026-10-23 18:47:23"
         },
         {
           "id": 248992942048,
@@ -597329,7 +597457,7 @@
           "participants": null,
           "created_at": "2026-10-21T15:33:55.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:22:52"
+          "latest_bookmaker_update": "2026-10-23 18:48:02"
         },
         {
           "id": 249007598467,
@@ -599954,6 +600082,29 @@
           "latest_bookmaker_update": "2026-10-23 18:33:21"
         },
         {
+          "id": 248983871084,
+          "fixture_id": 19713888,
+          "market_id": 1,
+          "bookmaker_id": 13,
+          "label": "Draw",
+          "value": "4.40",
+          "name": "Draw",
+          "sort_order": 2,
+          "market_description": "Fulltime Result",
+          "probability": "22.73%",
+          "dp3": "4.400",
+          "fractional": "22/5",
+          "american": "340",
+          "winning": false,
+          "stopped": false,
+          "total": null,
+          "handicap": null,
+          "participants": null,
+          "created_at": "2026-10-19T13:47:58.000000Z",
+          "original_label": "",
+          "latest_bookmaker_update": "2026-10-23 18:47:30"
+        },
+        {
           "id": 248966068080,
           "fixture_id": 19713888,
           "market_id": 59,
@@ -600181,7 +600332,7 @@
           "participants": null,
           "created_at": "2026-10-19T13:33:17.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:01"
+          "latest_bookmaker_update": "2026-10-23 18:46:07"
         },
         {
           "id": 248982178610,
@@ -600204,7 +600355,7 @@
           "participants": null,
           "created_at": "2026-10-19T13:33:17.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:44"
+          "latest_bookmaker_update": "2026-10-23 18:46:42"
         },
         {
           "id": 249142382362,
@@ -600227,7 +600378,7 @@
           "participants": null,
           "created_at": "2026-10-20T13:33:15.000000Z",
           "original_label": "-1,-1.5",
-          "latest_bookmaker_update": "2026-10-23 18:20:03"
+          "latest_bookmaker_update": "2026-10-23 18:47:35"
         },
         {
           "id": 248876661938,
@@ -600250,7 +600401,7 @@
           "participants": null,
           "created_at": "2026-10-18T14:14:00.000000Z",
           "original_label": "-1.5",
-          "latest_bookmaker_update": "2026-10-23 18:21:59"
+          "latest_bookmaker_update": "2026-10-23 18:47:23"
         },
         {
           "id": 248998124730,
@@ -600848,7 +600999,7 @@
           "participants": null,
           "created_at": "2026-10-19T10:00:28.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:59"
+          "latest_bookmaker_update": "2026-10-23 18:47:23"
         },
         {
           "id": 248982178608,
@@ -600871,7 +601022,7 @@
           "participants": null,
           "created_at": "2026-10-19T13:33:17.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:01"
+          "latest_bookmaker_update": "2026-10-23 18:46:07"
         },
         {
           "id": 248982178611,
@@ -600894,7 +601045,7 @@
           "participants": null,
           "created_at": "2026-10-19T13:33:17.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:44"
+          "latest_bookmaker_update": "2026-10-23 18:46:42"
         },
         {
           "id": 249140832968,
@@ -600917,7 +601068,7 @@
           "participants": null,
           "created_at": "2026-10-20T13:17:47.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:20:03"
+          "latest_bookmaker_update": "2026-10-23 18:47:35"
         },
         {
           "id": 248964440507,
@@ -600940,7 +601091,7 @@
           "participants": null,
           "created_at": "2026-10-19T10:00:28.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:59"
+          "latest_bookmaker_update": "2026-10-23 18:47:23"
         },
         {
           "id": 248966068383,
@@ -601400,7 +601551,7 @@
           "participants": null,
           "created_at": "2026-10-19T22:18:08.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:23:01"
+          "latest_bookmaker_update": "2026-10-23 18:47:55"
         },
         {
           "id": 248983871083,
@@ -601423,7 +601574,7 @@
           "participants": null,
           "created_at": "2026-10-19T13:47:58.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:47"
+          "latest_bookmaker_update": "2026-10-23 18:47:30"
         },
         {
           "id": 248966067714,
@@ -601883,7 +602034,7 @@
           "participants": null,
           "created_at": "2026-10-20T13:33:15.000000Z",
           "original_label": "-1.25",
-          "latest_bookmaker_update": "2026-10-23 18:23:01"
+          "latest_bookmaker_update": "2026-10-23 18:47:55"
         },
         {
           "id": 248964440499,
@@ -601906,7 +602057,7 @@
           "participants": null,
           "created_at": "2026-10-19T10:00:28.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 17:44:33"
+          "latest_bookmaker_update": "2026-10-23 18:41:39"
         },
         {
           "id": 249002075843,
@@ -612072,7 +612223,7 @@
           "participants": null,
           "created_at": "2026-10-20T13:33:15.000000Z",
           "original_label": "-1,-1.5",
-          "latest_bookmaker_update": "2026-10-23 18:20:03"
+          "latest_bookmaker_update": "2026-10-23 18:47:35"
         },
         {
           "id": 249142382371,
@@ -612095,7 +612246,7 @@
           "participants": null,
           "created_at": "2026-10-20T13:33:15.000000Z",
           "original_label": "-1.25",
-          "latest_bookmaker_update": "2026-10-23 18:23:01"
+          "latest_bookmaker_update": "2026-10-23 18:47:55"
         },
         {
           "id": 248980790271,
@@ -614674,29 +614825,6 @@
           "latest_bookmaker_update": "2026-10-23 09:16:49"
         },
         {
-          "id": 248983871084,
-          "fixture_id": 19713888,
-          "market_id": 1,
-          "bookmaker_id": 13,
-          "label": "Draw",
-          "value": "4.40",
-          "name": "Draw",
-          "sort_order": 2,
-          "market_description": "Fulltime Result",
-          "probability": "22.73%",
-          "dp3": "4.400",
-          "fractional": "22/5",
-          "american": "340",
-          "winning": false,
-          "stopped": false,
-          "total": null,
-          "handicap": null,
-          "participants": null,
-          "created_at": "2026-10-19T13:47:58.000000Z",
-          "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:47"
-        },
-        {
           "id": 249126764350,
           "fixture_id": 19713888,
           "market_id": 348,
@@ -616741,7 +616869,7 @@
           "participants": null,
           "created_at": "2026-10-19T13:33:17.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:01"
+          "latest_bookmaker_update": "2026-10-23 18:46:07"
         },
         {
           "id": 248983871087,
@@ -616764,7 +616892,7 @@
           "participants": null,
           "created_at": "2026-10-19T13:47:58.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:47"
+          "latest_bookmaker_update": "2026-10-23 18:47:30"
         },
         {
           "id": 249126764677,
@@ -618673,7 +618801,7 @@
           "participants": null,
           "created_at": "2026-10-19T22:18:08.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:23:01"
+          "latest_bookmaker_update": "2026-10-23 18:47:55"
         },
         {
           "id": 248983871085,
@@ -618696,7 +618824,7 @@
           "participants": null,
           "created_at": "2026-10-19T13:47:58.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:47"
+          "latest_bookmaker_update": "2026-10-23 18:47:30"
         },
         {
           "id": 249768522009,
@@ -623250,7 +623378,7 @@
           "participants": null,
           "created_at": "2026-10-19T13:33:17.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:44"
+          "latest_bookmaker_update": "2026-10-23 18:46:42"
         },
         {
           "id": 249056353690,
@@ -629851,7 +629979,7 @@
           "participants": null,
           "created_at": "2026-10-20T13:17:47.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:20:03"
+          "latest_bookmaker_update": "2026-10-23 18:47:35"
         },
         {
           "id": 249036123235,
@@ -629874,7 +630002,7 @@
           "participants": null,
           "created_at": "2026-10-19T22:18:08.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:23:01"
+          "latest_bookmaker_update": "2026-10-23 18:47:55"
         },
         {
           "id": 248970858917,
@@ -631162,7 +631290,7 @@
           "participants": null,
           "created_at": "2026-10-19T13:33:17.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:44"
+          "latest_bookmaker_update": "2026-10-23 18:46:42"
         },
         {
           "id": 248976295917,
@@ -631277,7 +631405,7 @@
           "participants": null,
           "created_at": "2026-10-19T10:00:28.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 17:44:33"
+          "latest_bookmaker_update": "2026-10-23 18:41:39"
         },
         {
           "id": 248976296060,
@@ -881946,7 +882074,7 @@
           "participants": null,
           "created_at": "2026-10-19T15:00:47.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:18:21"
+          "latest_bookmaker_update": "2026-10-23 18:39:06"
         },
         {
           "id": 248977443363,
@@ -882314,7 +882442,7 @@
           "participants": null,
           "created_at": "2026-10-20T18:36:47.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:22:55"
+          "latest_bookmaker_update": "2026-10-23 18:49:24"
         },
         {
           "id": 248957118166,
@@ -882337,7 +882465,7 @@
           "participants": null,
           "created_at": "2026-10-19T08:30:12.000000Z",
           "original_label": "-1.5",
-          "latest_bookmaker_update": "2026-10-23 18:26:13"
+          "latest_bookmaker_update": "2026-10-23 18:50:13"
         },
         {
           "id": 249185008168,
@@ -882360,7 +882488,7 @@
           "participants": null,
           "created_at": "2026-10-20T18:36:47.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:25:07"
+          "latest_bookmaker_update": "2026-10-23 18:49:20"
         },
         {
           "id": 249049473125,
@@ -884315,7 +884443,7 @@
           "participants": null,
           "created_at": "2026-10-19T15:00:47.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:18:21"
+          "latest_bookmaker_update": "2026-10-23 18:39:06"
         },
         {
           "id": 249049474635,
@@ -886086,7 +886214,7 @@
           "participants": null,
           "created_at": "2026-10-18T21:32:44.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:26:13"
+          "latest_bookmaker_update": "2026-10-23 18:50:13"
         },
         {
           "id": 249049473390,
@@ -887604,7 +887732,7 @@
           "participants": null,
           "created_at": "2026-10-18T21:32:44.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:26:13"
+          "latest_bookmaker_update": "2026-10-23 18:50:13"
         },
         {
           "id": 249126901532,
@@ -888731,7 +888859,7 @@
           "participants": null,
           "created_at": "2026-10-20T18:36:47.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:25:07"
+          "latest_bookmaker_update": "2026-10-23 18:49:20"
         },
         {
           "id": 249185008167,
@@ -888754,7 +888882,7 @@
           "participants": null,
           "created_at": "2026-10-20T18:36:47.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:25:07"
+          "latest_bookmaker_update": "2026-10-23 18:49:20"
         },
         {
           "id": 249369462997,
@@ -888777,7 +888905,7 @@
           "participants": null,
           "created_at": "2026-10-21T15:33:56.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:26:16"
+          "latest_bookmaker_update": "2026-10-23 18:50:06"
         },
         {
           "id": 249049473136,
@@ -896114,7 +896242,7 @@
           "participants": null,
           "created_at": "2026-10-20T18:36:47.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:22:55"
+          "latest_bookmaker_update": "2026-10-23 18:49:24"
         },
         {
           "id": 249036102079,
@@ -896137,7 +896265,7 @@
           "participants": null,
           "created_at": "2026-10-19T22:17:03.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:26:19"
+          "latest_bookmaker_update": "2026-10-23 18:49:25"
         },
         {
           "id": 249369463001,
@@ -896160,7 +896288,7 @@
           "participants": null,
           "created_at": "2026-10-21T15:33:56.000000Z",
           "original_label": "-1/-1.5",
-          "latest_bookmaker_update": "2026-10-23 18:26:16"
+          "latest_bookmaker_update": "2026-10-23 18:50:06"
         },
         {
           "id": 248976378106,
@@ -899242,7 +899370,7 @@
           "participants": null,
           "created_at": "2026-10-21T15:33:56.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:26:16"
+          "latest_bookmaker_update": "2026-10-23 18:50:06"
         },
         {
           "id": 248976379890,
@@ -899311,7 +899439,7 @@
           "participants": null,
           "created_at": "2026-10-21T06:33:13.000000Z",
           "original_label": "-1,-1.5",
-          "latest_bookmaker_update": "2026-10-23 18:20:03"
+          "latest_bookmaker_update": "2026-10-23 18:47:35"
         },
         {
           "id": 248977443152,
@@ -899955,7 +900083,7 @@
           "participants": null,
           "created_at": "2026-10-19T22:17:03.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:26:19"
+          "latest_bookmaker_update": "2026-10-23 18:49:25"
         },
         {
           "id": 248976378022,
@@ -912950,7 +913078,7 @@
           "participants": null,
           "created_at": "2026-10-20T18:55:52.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:26:11"
+          "latest_bookmaker_update": "2026-10-23 18:49:22"
         },
         {
           "id": 249187799966,
@@ -912973,7 +913101,7 @@
           "participants": null,
           "created_at": "2026-10-20T18:55:52.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:26:11"
+          "latest_bookmaker_update": "2026-10-23 18:49:22"
         },
         {
           "id": 249288003457,
@@ -912996,7 +913124,7 @@
           "participants": null,
           "created_at": "2026-10-21T06:33:13.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:20:03"
+          "latest_bookmaker_update": "2026-10-23 18:47:35"
         },
         {
           "id": 249288003458,
@@ -913019,7 +913147,7 @@
           "participants": null,
           "created_at": "2026-10-21T06:33:13.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:20:03"
+          "latest_bookmaker_update": "2026-10-23 18:47:35"
         },
         {
           "id": 249185008169,
@@ -913042,7 +913170,7 @@
           "participants": null,
           "created_at": "2026-10-20T18:36:47.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:25:07"
+          "latest_bookmaker_update": "2026-10-23 18:49:20"
         },
         {
           "id": 249185008170,
@@ -913065,7 +913193,7 @@
           "participants": null,
           "created_at": "2026-10-20T18:36:47.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:25:07"
+          "latest_bookmaker_update": "2026-10-23 18:49:20"
         },
         {
           "id": 249049473521,
@@ -914261,7 +914389,7 @@
           "participants": null,
           "created_at": "2026-10-19T22:17:03.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:26:19"
+          "latest_bookmaker_update": "2026-10-23 18:49:25"
         },
         {
           "id": 249118590631,
@@ -917688,7 +917816,7 @@
           "participants": null,
           "created_at": "2026-10-19T22:17:03.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:26:19"
+          "latest_bookmaker_update": "2026-10-23 18:49:25"
         },
         {
           "id": 249106810557,
@@ -920517,7 +920645,7 @@
           "participants": null,
           "created_at": "2026-10-20T18:55:52.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:26:11"
+          "latest_bookmaker_update": "2026-10-23 18:49:22"
         },
         {
           "id": 249049474648,
@@ -924519,7 +924647,7 @@
           "participants": null,
           "created_at": "2026-10-20T18:55:52.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:26:11"
+          "latest_bookmaker_update": "2026-10-23 18:49:22"
         },
         {
           "id": 249369462999,
@@ -924542,7 +924670,7 @@
           "participants": null,
           "created_at": "2026-10-21T15:33:56.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:26:16"
+          "latest_bookmaker_update": "2026-10-23 18:50:06"
         },
         {
           "id": 249049473363,
@@ -929717,7 +929845,7 @@
           "participants": null,
           "created_at": "2026-10-19T10:31:56.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:26:13"
+          "latest_bookmaker_update": "2026-10-23 18:50:13"
         },
         {
           "id": 249118590606,
@@ -931925,7 +932053,7 @@
           "participants": null,
           "created_at": "2026-10-21T06:33:13.000000Z",
           "original_label": "-1,-1.5",
-          "latest_bookmaker_update": "2026-10-23 18:20:03"
+          "latest_bookmaker_update": "2026-10-23 18:47:35"
         },
         {
           "id": 249036102080,
@@ -931948,7 +932076,7 @@
           "participants": null,
           "created_at": "2026-10-19T22:17:03.000000Z",
           "original_label": "-1.25",
-          "latest_bookmaker_update": "2026-10-23 18:26:19"
+          "latest_bookmaker_update": "2026-10-23 18:49:25"
         },
         {
           "id": 249369462998,
@@ -931971,7 +932099,7 @@
           "participants": null,
           "created_at": "2026-10-21T15:33:56.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:26:16"
+          "latest_bookmaker_update": "2026-10-23 18:50:06"
         },
         {
           "id": 249684495751,
@@ -932661,7 +932789,7 @@
           "participants": null,
           "created_at": "2026-10-20T18:36:47.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:22:55"
+          "latest_bookmaker_update": "2026-10-23 18:49:24"
         },
         {
           "id": 249049473427,
@@ -933167,7 +933295,7 @@
           "participants": null,
           "created_at": "2026-10-21T15:33:56.000000Z",
           "original_label": "-1/-1.5",
-          "latest_bookmaker_update": "2026-10-23 18:26:16"
+          "latest_bookmaker_update": "2026-10-23 18:50:06"
         },
         {
           "id": 248976379693,
@@ -941631,7 +941759,7 @@
           "participants": null,
           "created_at": "2026-10-20T18:55:52.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:26:11"
+          "latest_bookmaker_update": "2026-10-23 18:49:22"
         },
         {
           "id": 249185008143,
@@ -941654,7 +941782,7 @@
           "participants": null,
           "created_at": "2026-10-20T18:36:47.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:22:55"
+          "latest_bookmaker_update": "2026-10-23 18:49:24"
         },
         {
           "id": 248976379786,
@@ -943885,7 +944013,7 @@
           "participants": null,
           "created_at": "2026-10-19T10:31:56.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:26:13"
+          "latest_bookmaker_update": "2026-10-23 18:50:13"
         },
         {
           "id": 249106810549,
@@ -945104,7 +945232,7 @@
           "participants": null,
           "created_at": "2026-10-20T18:36:47.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:22:55"
+          "latest_bookmaker_update": "2026-10-23 18:49:24"
         },
         {
           "id": 249049473117,
@@ -945196,7 +945324,7 @@
           "participants": null,
           "created_at": "2026-10-19T22:17:03.000000Z",
           "original_label": "-1.25",
-          "latest_bookmaker_update": "2026-10-23 18:26:19"
+          "latest_bookmaker_update": "2026-10-23 18:49:25"
         },
         {
           "id": 249532808920,
@@ -946898,7 +947026,7 @@
           "participants": null,
           "created_at": "2026-10-18T21:32:44.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:26:13"
+          "latest_bookmaker_update": "2026-10-23 18:50:13"
         },
         {
           "id": 248980909797,
@@ -952487,7 +952615,7 @@
           "participants": null,
           "created_at": "2026-10-19T22:17:03.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:26:19"
+          "latest_bookmaker_update": "2026-10-23 18:49:25"
         },
         {
           "id": 249369463003,
@@ -952510,7 +952638,7 @@
           "participants": null,
           "created_at": "2026-10-21T15:33:56.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:26:16"
+          "latest_bookmaker_update": "2026-10-23 18:50:06"
         },
         {
           "id": 249106810502,
@@ -956397,7 +956525,7 @@
           "participants": null,
           "created_at": "2026-10-19T10:15:31.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 17:44:33"
+          "latest_bookmaker_update": "2026-10-23 18:41:39"
         },
         {
           "id": 248966036355,
@@ -956420,7 +956548,7 @@
           "participants": null,
           "created_at": "2026-10-19T10:15:31.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 17:44:33"
+          "latest_bookmaker_update": "2026-10-23 18:41:39"
         },
         {
           "id": 249126901550,
@@ -958260,7 +958388,7 @@
           "participants": null,
           "created_at": "2026-10-19T08:30:12.000000Z",
           "original_label": "-1.5",
-          "latest_bookmaker_update": "2026-10-23 18:26:13"
+          "latest_bookmaker_update": "2026-10-23 18:50:13"
         },
         {
           "id": 248976377981,
@@ -961338,7 +961466,7 @@
           "participants": null,
           "created_at": "2026-10-20T20:09:26.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:22:03"
+          "latest_bookmaker_update": "2026-10-23 18:47:47"
         },
         {
           "id": 248782820205,
@@ -967939,7 +968067,7 @@
           "participants": null,
           "created_at": "2026-10-23T08:16:55.000000Z",
           "original_label": "+0.5",
-          "latest_bookmaker_update": "2026-10-23 18:21:09"
+          "latest_bookmaker_update": "2026-10-23 18:47:35"
         },
         {
           "id": 248782819747,
@@ -970308,7 +970436,7 @@
           "participants": null,
           "created_at": "2026-10-23T08:16:55.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:09"
+          "latest_bookmaker_update": "2026-10-23 18:47:35"
         },
         {
           "id": 249118618612,
@@ -971550,7 +971678,7 @@
           "participants": null,
           "created_at": "2026-10-17T16:43:48.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:23:23"
+          "latest_bookmaker_update": "2026-10-23 18:47:22"
         },
         {
           "id": 248782821741,
@@ -993377,7 +993505,7 @@
           "participants": null,
           "created_at": "2026-10-17T16:43:48.000000Z",
           "original_label": "+0",
-          "latest_bookmaker_update": "2026-10-23 18:23:23"
+          "latest_bookmaker_update": "2026-10-23 18:47:22"
         },
         {
           "id": 249381620531,
@@ -998897,7 +999025,7 @@
           "participants": null,
           "created_at": "2026-10-20T20:20:14.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:18"
+          "latest_bookmaker_update": "2026-10-23 18:46:25"
         },
         {
           "id": 248803003144,
@@ -999633,7 +999761,7 @@
           "participants": null,
           "created_at": "2026-10-20T19:59:49.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:20:25"
+          "latest_bookmaker_update": "2026-10-23 18:46:34"
         },
         {
           "id": 248825672432,
@@ -1004785,7 +1004913,7 @@
           "participants": null,
           "created_at": "2026-10-20T20:20:14.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:18"
+          "latest_bookmaker_update": "2026-10-23 18:46:25"
         },
         {
           "id": 249383346754,
@@ -1007154,7 +1007282,7 @@
           "participants": null,
           "created_at": "2026-10-20T20:20:14.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:18"
+          "latest_bookmaker_update": "2026-10-23 18:46:25"
         },
         {
           "id": 249194493535,
@@ -1007177,7 +1007305,7 @@
           "participants": null,
           "created_at": "2026-10-20T20:09:26.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:22:03"
+          "latest_bookmaker_update": "2026-10-23 18:47:47"
         },
         {
           "id": 249194493538,
@@ -1007200,7 +1007328,7 @@
           "participants": null,
           "created_at": "2026-10-20T20:09:26.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:22:03"
+          "latest_bookmaker_update": "2026-10-23 18:47:47"
         },
         {
           "id": 248782821711,
@@ -1011202,7 +1011330,7 @@
           "participants": null,
           "created_at": "2026-10-20T19:59:49.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:20:25"
+          "latest_bookmaker_update": "2026-10-23 18:46:34"
         },
         {
           "id": 248782820427,
@@ -1014836,7 +1014964,7 @@
           "participants": null,
           "created_at": "2026-10-17T16:43:48.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:23:23"
+          "latest_bookmaker_update": "2026-10-23 18:47:22"
         },
         {
           "id": 248756957248,
@@ -1014859,7 +1014987,7 @@
           "participants": null,
           "created_at": "2026-10-17T16:43:48.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:23:23"
+          "latest_bookmaker_update": "2026-10-23 18:47:22"
         },
         {
           "id": 249194493534,
@@ -1014882,7 +1015010,7 @@
           "participants": null,
           "created_at": "2026-10-20T20:09:26.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:22:03"
+          "latest_bookmaker_update": "2026-10-23 18:47:47"
         },
         {
           "id": 249762936035,
@@ -1014905,7 +1015033,7 @@
           "participants": null,
           "created_at": "2026-10-23T08:16:55.000000Z",
           "original_label": "+0.5",
-          "latest_bookmaker_update": "2026-10-23 18:21:09"
+          "latest_bookmaker_update": "2026-10-23 18:47:35"
         },
         {
           "id": 249762936037,
@@ -1014928,7 +1015056,7 @@
           "participants": null,
           "created_at": "2026-10-23T08:16:55.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:09"
+          "latest_bookmaker_update": "2026-10-23 18:47:35"
         },
         {
           "id": 248803003138,
@@ -1016032,7 +1016160,7 @@
           "participants": null,
           "created_at": "2026-10-17T20:55:26.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 17:49:11"
+          "latest_bookmaker_update": "2026-10-23 18:45:41"
         },
         {
           "id": 248777652097,
@@ -1016055,7 +1016183,7 @@
           "participants": null,
           "created_at": "2026-10-17T20:55:26.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 17:49:11"
+          "latest_bookmaker_update": "2026-10-23 18:45:41"
         },
         {
           "id": 248782820422,
@@ -1017320,7 +1017448,7 @@
           "participants": null,
           "created_at": "2026-10-20T19:59:49.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:20:25"
+          "latest_bookmaker_update": "2026-10-23 18:46:34"
         },
         {
           "id": 248756957243,
@@ -1017343,7 +1017471,7 @@
           "participants": null,
           "created_at": "2026-10-17T16:43:48.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:23:23"
+          "latest_bookmaker_update": "2026-10-23 18:47:22"
         },
         {
           "id": 249194493537,
@@ -1017366,7 +1017494,7 @@
           "participants": null,
           "created_at": "2026-10-20T20:09:26.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:22:03"
+          "latest_bookmaker_update": "2026-10-23 18:47:47"
         },
         {
           "id": 249118619349,
@@ -1018447,7 +1018575,7 @@
           "participants": null,
           "created_at": "2026-10-20T20:20:14.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:18"
+          "latest_bookmaker_update": "2026-10-23 18:46:25"
         },
         {
           "id": 248756957242,
@@ -1018470,7 +1018598,7 @@
           "participants": null,
           "created_at": "2026-10-17T16:43:48.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:23:23"
+          "latest_bookmaker_update": "2026-10-23 18:47:22"
         },
         {
           "id": 248756957246,
@@ -1018493,7 +1018621,7 @@
           "participants": null,
           "created_at": "2026-10-17T16:43:48.000000Z",
           "original_label": "+0",
-          "latest_bookmaker_update": "2026-10-23 18:23:23"
+          "latest_bookmaker_update": "2026-10-23 18:47:22"
         },
         {
           "id": 249446110987,
@@ -1020908,7 +1021036,7 @@
           "participants": null,
           "created_at": "2026-10-20T20:20:14.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:18"
+          "latest_bookmaker_update": "2026-10-23 18:46:25"
         },
         {
           "id": 249193964229,
@@ -1020931,7 +1021059,7 @@
           "participants": null,
           "created_at": "2026-10-20T19:59:49.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:20:25"
+          "latest_bookmaker_update": "2026-10-23 18:46:34"
         },
         {
           "id": 249193964230,
@@ -1020954,7 +1021082,7 @@
           "participants": null,
           "created_at": "2026-10-20T19:59:49.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:20:25"
+          "latest_bookmaker_update": "2026-10-23 18:46:34"
         },
         {
           "id": 248782822121,
@@ -1030081,7 +1030209,7 @@
           "participants": null,
           "created_at": "2026-10-21T10:47:00.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:19:53"
+          "latest_bookmaker_update": "2026-10-23 18:49:00"
         },
         {
           "id": 249326949753,
@@ -1030104,7 +1030232,7 @@
           "participants": null,
           "created_at": "2026-10-21T10:47:00.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:19:53"
+          "latest_bookmaker_update": "2026-10-23 18:49:00"
         },
         {
           "id": 248801268612,
@@ -1030748,7 +1030876,7 @@
           "participants": null,
           "created_at": "2026-10-17T20:55:25.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 17:49:11"
+          "latest_bookmaker_update": "2026-10-23 18:45:41"
         },
         {
           "id": 248782823844,
@@ -1034152,7 +1034280,7 @@
           "participants": null,
           "created_at": "2026-10-23T08:17:30.000000Z",
           "original_label": "0,-0.5",
-          "latest_bookmaker_update": "2026-10-23 18:21:09"
+          "latest_bookmaker_update": "2026-10-23 18:47:35"
         },
         {
           "id": 249762943629,
@@ -1034175,7 +1034303,7 @@
           "participants": null,
           "created_at": "2026-10-23T08:17:30.000000Z",
           "original_label": "0,-0.5",
-          "latest_bookmaker_update": "2026-10-23 18:21:09"
+          "latest_bookmaker_update": "2026-10-23 18:47:35"
         },
         {
           "id": 249324333702,
@@ -1034198,7 +1034326,7 @@
           "participants": null,
           "created_at": "2026-10-21T10:30:35.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:22:04"
+          "latest_bookmaker_update": "2026-10-23 18:49:10"
         },
         {
           "id": 249762980464,
@@ -1045123,7 +1045251,7 @@
           "participants": null,
           "created_at": "2026-10-23T08:17:30.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:09"
+          "latest_bookmaker_update": "2026-10-23 18:47:35"
         },
         {
           "id": 249762943630,
@@ -1045146,7 +1045274,7 @@
           "participants": null,
           "created_at": "2026-10-23T08:17:30.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:09"
+          "latest_bookmaker_update": "2026-10-23 18:47:35"
         },
         {
           "id": 248782824241,
@@ -1058785,7 +1058913,7 @@
           "participants": null,
           "created_at": "2026-10-17T16:43:03.000000Z",
           "original_label": "+0",
-          "latest_bookmaker_update": "2026-10-23 18:21:59"
+          "latest_bookmaker_update": "2026-10-23 18:48:47"
         },
         {
           "id": 249408151061,
@@ -1067893,7 +1068021,7 @@
           "participants": null,
           "created_at": "2026-10-17T16:43:03.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:59"
+          "latest_bookmaker_update": "2026-10-23 18:48:47"
         },
         {
           "id": 248756955237,
@@ -1067916,7 +1068044,7 @@
           "participants": null,
           "created_at": "2026-10-17T16:43:03.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:59"
+          "latest_bookmaker_update": "2026-10-23 18:48:47"
         },
         {
           "id": 249127257148,
@@ -1068767,7 +1068895,7 @@
           "participants": null,
           "created_at": "2026-10-21T10:15:26.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:18"
+          "latest_bookmaker_update": "2026-10-23 18:46:25"
         },
         {
           "id": 249446090213,
@@ -1068928,7 +1069056,7 @@
           "participants": null,
           "created_at": "2026-10-21T10:15:26.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:18"
+          "latest_bookmaker_update": "2026-10-23 18:46:25"
         },
         {
           "id": 249118633104,
@@ -1070400,7 +1070528,7 @@
           "participants": null,
           "created_at": "2026-10-17T16:43:03.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:59"
+          "latest_bookmaker_update": "2026-10-23 18:48:47"
         },
         {
           "id": 248782823634,
@@ -1074908,7 +1075036,7 @@
           "participants": null,
           "created_at": "2026-10-21T10:15:26.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:18"
+          "latest_bookmaker_update": "2026-10-23 18:46:25"
         },
         {
           "id": 249324333699,
@@ -1074931,7 +1075059,7 @@
           "participants": null,
           "created_at": "2026-10-21T10:30:35.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:22:04"
+          "latest_bookmaker_update": "2026-10-23 18:49:10"
         },
         {
           "id": 249446090940,
@@ -1076081,7 +1076209,7 @@
           "participants": null,
           "created_at": "2026-10-17T16:43:03.000000Z",
           "original_label": "+0",
-          "latest_bookmaker_update": "2026-10-23 18:21:59"
+          "latest_bookmaker_update": "2026-10-23 18:48:47"
         },
         {
           "id": 249324333698,
@@ -1076104,7 +1076232,7 @@
           "participants": null,
           "created_at": "2026-10-21T10:30:35.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:22:04"
+          "latest_bookmaker_update": "2026-10-23 18:49:10"
         },
         {
           "id": 249324333700,
@@ -1076127,7 +1076255,7 @@
           "participants": null,
           "created_at": "2026-10-21T10:30:35.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:22:04"
+          "latest_bookmaker_update": "2026-10-23 18:49:10"
         },
         {
           "id": 249324333701,
@@ -1076150,7 +1076278,7 @@
           "participants": null,
           "created_at": "2026-10-21T10:30:35.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:22:04"
+          "latest_bookmaker_update": "2026-10-23 18:49:10"
         },
         {
           "id": 248782822015,
@@ -1080316,29 +1080444,6 @@
           "latest_bookmaker_update": "2026-10-22 23:30:57"
         },
         {
-          "id": 248777651971,
-          "fixture_id": 19722759,
-          "market_id": 7,
-          "bookmaker_id": 16,
-          "label": "Over",
-          "value": "1.87",
-          "name": "Over",
-          "sort_order": 1,
-          "market_description": "Goal Line",
-          "probability": "53.48%",
-          "dp3": "1.870",
-          "fractional": "43/23",
-          "american": "-115",
-          "winning": false,
-          "stopped": false,
-          "total": "2.5",
-          "handicap": null,
-          "participants": null,
-          "created_at": "2026-10-17T20:55:25.000000Z",
-          "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 17:49:11"
-        },
-        {
           "id": 249322733539,
           "fixture_id": 19722759,
           "market_id": 1,
@@ -1080359,7 +1080464,7 @@
           "participants": null,
           "created_at": "2026-10-21T10:15:26.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:18"
+          "latest_bookmaker_update": "2026-10-23 18:46:25"
         },
         {
           "id": 249322733542,
@@ -1080382,7 +1080487,7 @@
           "participants": null,
           "created_at": "2026-10-21T10:15:26.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:18"
+          "latest_bookmaker_update": "2026-10-23 18:46:25"
         },
         {
           "id": 249326949751,
@@ -1080405,7 +1080510,7 @@
           "participants": null,
           "created_at": "2026-10-21T10:47:00.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:19:53"
+          "latest_bookmaker_update": "2026-10-23 18:49:00"
         },
         {
           "id": 249326949752,
@@ -1080428,7 +1080533,30 @@
           "participants": null,
           "created_at": "2026-10-21T10:47:00.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:19:53"
+          "latest_bookmaker_update": "2026-10-23 18:49:00"
+        },
+        {
+          "id": 248777651971,
+          "fixture_id": 19722759,
+          "market_id": 7,
+          "bookmaker_id": 16,
+          "label": "Over",
+          "value": "1.87",
+          "name": "Over",
+          "sort_order": 1,
+          "market_description": "Goal Line",
+          "probability": "53.48%",
+          "dp3": "1.870",
+          "fractional": "43/23",
+          "american": "-115",
+          "winning": false,
+          "stopped": false,
+          "total": "2.5",
+          "handicap": null,
+          "participants": null,
+          "created_at": "2026-10-17T20:55:25.000000Z",
+          "original_label": "",
+          "latest_bookmaker_update": "2026-10-23 18:45:41"
         },
         {
           "id": 248756955235,
@@ -1080451,7 +1080579,7 @@
           "participants": null,
           "created_at": "2026-10-17T16:43:03.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:59"
+          "latest_bookmaker_update": "2026-10-23 18:48:47"
         },
         {
           "id": 249446087271,
@@ -1082521,7 +1082649,7 @@
           "participants": null,
           "created_at": "2026-10-21T10:47:00.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:19:53"
+          "latest_bookmaker_update": "2026-10-23 18:49:00"
         },
         {
           "id": 249395072302,
@@ -1087282,7 +1087410,7 @@
           "participants": null,
           "created_at": "2026-10-17T16:43:03.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:59"
+          "latest_bookmaker_update": "2026-10-23 18:48:47"
         },
         {
           "id": 249420625494,
@@ -1091303,7 +1091431,7 @@
           "participants": null,
           "created_at": "2026-10-20T20:25:07.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:23:58"
+          "latest_bookmaker_update": "2026-10-23 18:49:41"
         },
         {
           "id": 248782830744,
@@ -1097421,7 +1097549,7 @@
           "participants": null,
           "created_at": "2026-10-17T16:41:33.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:24:48"
+          "latest_bookmaker_update": "2026-10-23 18:50:12"
         },
         {
           "id": 249424496693,
@@ -1102872,7 +1103000,7 @@
           "participants": null,
           "created_at": "2026-10-23T08:17:46.000000Z",
           "original_label": "-0.5",
-          "latest_bookmaker_update": "2026-10-23 18:21:09"
+          "latest_bookmaker_update": "2026-10-23 18:47:35"
         },
         {
           "id": 248787276105,
@@ -1104620,7 +1104748,7 @@
           "participants": null,
           "created_at": "2026-10-23T08:17:46.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:09"
+          "latest_bookmaker_update": "2026-10-23 18:47:35"
         },
         {
           "id": 249431480240,
@@ -1112969,7 +1113097,7 @@
           "participants": null,
           "created_at": "2026-10-23T08:17:46.000000Z",
           "original_label": "-0.5",
-          "latest_bookmaker_update": "2026-10-23 18:21:09"
+          "latest_bookmaker_update": "2026-10-23 18:47:35"
         },
         {
           "id": 249118616693,
@@ -1126516,7 +1126644,7 @@
           "participants": null,
           "created_at": "2026-10-20T20:25:07.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:23:58"
+          "latest_bookmaker_update": "2026-10-23 18:49:41"
         },
         {
           "id": 249195977532,
@@ -1126539,7 +1126667,7 @@
           "participants": null,
           "created_at": "2026-10-20T20:25:07.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:23:58"
+          "latest_bookmaker_update": "2026-10-23 18:49:41"
         },
         {
           "id": 248756951846,
@@ -1126562,7 +1126690,7 @@
           "participants": null,
           "created_at": "2026-10-17T16:41:33.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:24:48"
+          "latest_bookmaker_update": "2026-10-23 18:50:12"
         },
         {
           "id": 249194493871,
@@ -1126585,7 +1126713,7 @@
           "participants": null,
           "created_at": "2026-10-20T20:09:35.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:25:23"
+          "latest_bookmaker_update": "2026-10-23 18:49:10"
         },
         {
           "id": 248756951847,
@@ -1126608,7 +1126736,7 @@
           "participants": null,
           "created_at": "2026-10-17T16:41:33.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:24:48"
+          "latest_bookmaker_update": "2026-10-23 18:50:12"
         },
         {
           "id": 248756951848,
@@ -1126631,7 +1126759,7 @@
           "participants": null,
           "created_at": "2026-10-17T16:41:33.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:24:48"
+          "latest_bookmaker_update": "2026-10-23 18:50:12"
         },
         {
           "id": 249118616690,
@@ -1127597,7 +1127725,7 @@
           "participants": null,
           "created_at": "2026-10-20T20:09:35.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:24:58"
+          "latest_bookmaker_update": "2026-10-23 18:49:00"
         },
         {
           "id": 248803996077,
@@ -1128126,7 +1128254,7 @@
           "participants": null,
           "created_at": "2026-10-20T20:09:35.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:24:58"
+          "latest_bookmaker_update": "2026-10-23 18:49:00"
         },
         {
           "id": 248785733876,
@@ -1133623,7 +1133751,7 @@
           "participants": null,
           "created_at": "2026-10-17T18:53:40.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 17:49:11"
+          "latest_bookmaker_update": "2026-10-23 18:45:41"
         },
         {
           "id": 248782830965,
@@ -1142110,7 +1142238,7 @@
           "participants": null,
           "created_at": "2026-10-20T20:09:35.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:24:58"
+          "latest_bookmaker_update": "2026-10-23 18:49:00"
         },
         {
           "id": 249194493846,
@@ -1142133,7 +1142261,7 @@
           "participants": null,
           "created_at": "2026-10-20T20:09:35.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:24:58"
+          "latest_bookmaker_update": "2026-10-23 18:49:00"
         },
         {
           "id": 249194493868,
@@ -1142156,7 +1142284,7 @@
           "participants": null,
           "created_at": "2026-10-20T20:09:35.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:25:23"
+          "latest_bookmaker_update": "2026-10-23 18:49:10"
         },
         {
           "id": 249127255233,
@@ -1143927,7 +1144055,7 @@
           "participants": null,
           "created_at": "2026-10-20T20:09:35.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:24:58"
+          "latest_bookmaker_update": "2026-10-23 18:49:00"
         },
         {
           "id": 249194493867,
@@ -1143950,7 +1144078,7 @@
           "participants": null,
           "created_at": "2026-10-20T20:09:35.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:25:23"
+          "latest_bookmaker_update": "2026-10-23 18:49:10"
         },
         {
           "id": 249194493869,
@@ -1143973,7 +1144101,7 @@
           "participants": null,
           "created_at": "2026-10-20T20:09:35.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:25:23"
+          "latest_bookmaker_update": "2026-10-23 18:49:10"
         },
         {
           "id": 249194493870,
@@ -1143996,7 +1144124,7 @@
           "participants": null,
           "created_at": "2026-10-20T20:09:35.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:25:23"
+          "latest_bookmaker_update": "2026-10-23 18:49:10"
         },
         {
           "id": 249393503758,
@@ -1146894,7 +1147022,7 @@
           "participants": null,
           "created_at": "2026-10-20T20:25:07.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:23:58"
+          "latest_bookmaker_update": "2026-10-23 18:49:41"
         },
         {
           "id": 249762952683,
@@ -1146917,7 +1147045,7 @@
           "participants": null,
           "created_at": "2026-10-23T08:17:46.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:09"
+          "latest_bookmaker_update": "2026-10-23 18:47:35"
         },
         {
           "id": 249127255375,
@@ -1147768,7 +1147896,7 @@
           "participants": null,
           "created_at": "2026-10-20T20:25:07.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:23:58"
+          "latest_bookmaker_update": "2026-10-23 18:49:41"
         },
         {
           "id": 248818141684,
@@ -1149746,7 +1149874,7 @@
           "participants": null,
           "created_at": "2026-10-17T16:41:33.000000Z",
           "original_label": "+0",
-          "latest_bookmaker_update": "2026-10-23 18:24:48"
+          "latest_bookmaker_update": "2026-10-23 18:50:12"
         },
         {
           "id": 249118616689,
@@ -1151793,7 +1151921,7 @@
           "participants": null,
           "created_at": "2026-10-17T18:53:40.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 17:49:11"
+          "latest_bookmaker_update": "2026-10-23 18:45:41"
         },
         {
           "id": 248782830526,
@@ -1156462,7 +1156590,7 @@
           "participants": null,
           "created_at": "2026-10-17T16:41:33.000000Z",
           "original_label": "+0",
-          "latest_bookmaker_update": "2026-10-23 18:24:48"
+          "latest_bookmaker_update": "2026-10-23 18:50:12"
         },
         {
           "id": 248756951851,
@@ -1156485,7 +1156613,7 @@
           "participants": null,
           "created_at": "2026-10-17T16:41:33.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:24:48"
+          "latest_bookmaker_update": "2026-10-23 18:50:12"
         },
         {
           "id": 249127255191,
@@ -1163266,7 +1163394,7 @@
           "participants": null,
           "created_at": "2026-10-20T20:24:27.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:18"
+          "latest_bookmaker_update": "2026-10-23 18:46:25"
         },
         {
           "id": 249195972542,
@@ -1163289,7 +1163417,7 @@
           "participants": null,
           "created_at": "2026-10-20T20:24:27.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:18"
+          "latest_bookmaker_update": "2026-10-23 18:46:25"
         },
         {
           "id": 249195972543,
@@ -1163312,7 +1163440,7 @@
           "participants": null,
           "created_at": "2026-10-20T20:24:27.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:18"
+          "latest_bookmaker_update": "2026-10-23 18:46:25"
         },
         {
           "id": 249195972544,
@@ -1163335,7 +1163463,7 @@
           "participants": null,
           "created_at": "2026-10-20T20:24:27.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:18"
+          "latest_bookmaker_update": "2026-10-23 18:46:25"
         },
         {
           "id": 249193963896,
@@ -1163358,7 +1163486,7 @@
           "participants": null,
           "created_at": "2026-10-20T19:59:39.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:20:16"
+          "latest_bookmaker_update": "2026-10-23 18:46:10"
         },
         {
           "id": 248782826958,
@@ -1164301,7 +1164429,7 @@
           "participants": null,
           "created_at": "2026-10-20T19:59:39.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:20:16"
+          "latest_bookmaker_update": "2026-10-23 18:46:10"
         },
         {
           "id": 249127248937,
@@ -1168970,7 +1169098,7 @@
           "participants": null,
           "created_at": "2026-10-23T08:17:48.000000Z",
           "original_label": "-1.5,-2",
-          "latest_bookmaker_update": "2026-10-23 18:21:09"
+          "latest_bookmaker_update": "2026-10-23 18:27:32"
         },
         {
           "id": 249762953582,
@@ -1168993,7 +1169121,7 @@
           "participants": null,
           "created_at": "2026-10-23T08:17:48.000000Z",
           "original_label": "-1.5,-2",
-          "latest_bookmaker_update": "2026-10-23 18:21:09"
+          "latest_bookmaker_update": "2026-10-23 18:27:32"
         },
         {
           "id": 249443163117,
@@ -1176537,7 +1176665,7 @@
           "participants": null,
           "created_at": "2026-10-23T08:17:48.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:09"
+          "latest_bookmaker_update": "2026-10-23 18:27:32"
         },
         {
           "id": 249762953585,
@@ -1176560,7 +1176688,7 @@
           "participants": null,
           "created_at": "2026-10-23T08:17:48.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:09"
+          "latest_bookmaker_update": "2026-10-23 18:27:32"
         },
         {
           "id": 248761246507,
@@ -1177066,7 +1177194,7 @@
           "participants": null,
           "created_at": "2026-10-17T16:42:25.000000Z",
           "original_label": "-1.5",
-          "latest_bookmaker_update": "2026-10-23 18:23:23"
+          "latest_bookmaker_update": "2026-10-23 18:45:57"
         },
         {
           "id": 248782822235,
@@ -1191119,7 +1191247,7 @@
           "participants": null,
           "created_at": "2026-10-17T16:42:25.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:23:23"
+          "latest_bookmaker_update": "2026-10-23 18:45:57"
         },
         {
           "id": 248782827051,
@@ -1194569,7 +1194697,7 @@
           "participants": null,
           "created_at": "2026-10-17T16:42:25.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:23:23"
+          "latest_bookmaker_update": "2026-10-23 18:45:57"
         },
         {
           "id": 249193963894,
@@ -1194592,7 +1194720,7 @@
           "participants": null,
           "created_at": "2026-10-20T19:59:39.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:20:16"
+          "latest_bookmaker_update": "2026-10-23 18:46:10"
         },
         {
           "id": 249403745926,
@@ -1198341,7 +1198469,7 @@
           "participants": null,
           "created_at": "2026-10-20T20:07:48.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:22:03"
+          "latest_bookmaker_update": "2026-10-23 18:44:25"
         },
         {
           "id": 248782822186,
@@ -1204666,7 +1204794,7 @@
           "participants": null,
           "created_at": "2026-10-17T16:42:25.000000Z",
           "original_label": "-1.5",
-          "latest_bookmaker_update": "2026-10-23 18:23:23"
+          "latest_bookmaker_update": "2026-10-23 18:45:57"
         },
         {
           "id": 249193963895,
@@ -1204689,7 +1204817,7 @@
           "participants": null,
           "created_at": "2026-10-20T19:59:39.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:20:16"
+          "latest_bookmaker_update": "2026-10-23 18:46:10"
         },
         {
           "id": 249389816844,
@@ -1207886,7 +1208014,7 @@
           "participants": null,
           "created_at": "2026-10-20T20:07:48.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:22:03"
+          "latest_bookmaker_update": "2026-10-23 18:44:25"
         },
         {
           "id": 248782822265,
@@ -1208622,7 +1208750,7 @@
           "participants": null,
           "created_at": "2026-10-20T20:07:48.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:22:03"
+          "latest_bookmaker_update": "2026-10-23 18:44:25"
         },
         {
           "id": 248782822620,
@@ -1208691,7 +1208819,7 @@
           "participants": null,
           "created_at": "2026-10-17T16:42:25.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:23:23"
+          "latest_bookmaker_update": "2026-10-23 18:45:57"
         },
         {
           "id": 248782822196,
@@ -1208829,7 +1208957,7 @@
           "participants": null,
           "created_at": "2026-10-17T16:42:25.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:23:23"
+          "latest_bookmaker_update": "2026-10-23 18:45:57"
         },
         {
           "id": 249403745912,
@@ -1211083,30 +1211211,7 @@
           "participants": null,
           "created_at": "2026-10-17T18:55:40.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 17:49:11"
-        },
-        {
-          "id": 248766681398,
-          "fixture_id": 19722762,
-          "market_id": 7,
-          "bookmaker_id": 16,
-          "label": "Over",
-          "value": "1.94",
-          "name": "Over",
-          "sort_order": 1,
-          "market_description": "Goal Line",
-          "probability": "51.55%",
-          "dp3": "1.940",
-          "fractional": "33/17",
-          "american": "-107",
-          "winning": false,
-          "stopped": false,
-          "total": "3.5",
-          "handicap": null,
-          "participants": null,
-          "created_at": "2026-10-17T18:55:40.000000Z",
-          "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 17:49:11"
+          "latest_bookmaker_update": "2026-10-23 18:45:41"
         },
         {
           "id": 249193963897,
@@ -1211129,7 +1211234,30 @@
           "participants": null,
           "created_at": "2026-10-20T19:59:39.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:20:16"
+          "latest_bookmaker_update": "2026-10-23 18:46:10"
+        },
+        {
+          "id": 248766681398,
+          "fixture_id": 19722762,
+          "market_id": 7,
+          "bookmaker_id": 16,
+          "label": "Over",
+          "value": "1.94",
+          "name": "Over",
+          "sort_order": 1,
+          "market_description": "Goal Line",
+          "probability": "51.55%",
+          "dp3": "1.940",
+          "fractional": "33/17",
+          "american": "-107",
+          "winning": false,
+          "stopped": false,
+          "total": "3.5",
+          "handicap": null,
+          "participants": null,
+          "created_at": "2026-10-17T18:55:40.000000Z",
+          "original_label": "",
+          "latest_bookmaker_update": "2026-10-23 18:45:41"
         },
         {
           "id": 248756953699,
@@ -1211152,7 +1211280,7 @@
           "participants": null,
           "created_at": "2026-10-17T16:42:25.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:23:23"
+          "latest_bookmaker_update": "2026-10-23 18:45:57"
         },
         {
           "id": 248782822740,
@@ -1213728,7 +1213856,7 @@
           "participants": null,
           "created_at": "2026-10-20T20:07:48.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:22:03"
+          "latest_bookmaker_update": "2026-10-23 18:44:25"
         },
         {
           "id": 248782822198,
@@ -1218765,7 +1218893,7 @@
           "participants": null,
           "created_at": "2026-10-20T20:24:27.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:18"
+          "latest_bookmaker_update": "2026-10-23 18:46:25"
         },
         {
           "id": 249127248854,
@@ -1220927,7 +1221055,7 @@
           "participants": null,
           "created_at": "2026-10-20T20:07:48.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:22:03"
+          "latest_bookmaker_update": "2026-10-23 18:44:25"
         },
         {
           "id": 248782822308,
@@ -1229663,7 +1229791,7 @@
           "participants": null,
           "created_at": "2026-10-21T10:47:04.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:22:47"
+          "latest_bookmaker_update": "2026-10-23 18:46:34"
         },
         {
           "id": 248782828657,
@@ -1232377,7 +1232505,7 @@
           "participants": null,
           "created_at": "2026-10-23T08:18:14.000000Z",
           "original_label": "-0.5",
-          "latest_bookmaker_update": "2026-10-23 18:21:09"
+          "latest_bookmaker_update": "2026-10-23 18:47:35"
         },
         {
           "id": 249762967762,
@@ -1232400,7 +1232528,7 @@
           "participants": null,
           "created_at": "2026-10-23T08:18:14.000000Z",
           "original_label": "-0.5",
-          "latest_bookmaker_update": "2026-10-23 18:21:09"
+          "latest_bookmaker_update": "2026-10-23 18:47:35"
         },
         {
           "id": 249762967764,
@@ -1232423,7 +1232551,7 @@
           "participants": null,
           "created_at": "2026-10-23T08:18:14.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:09"
+          "latest_bookmaker_update": "2026-10-23 18:47:35"
         },
         {
           "id": 249762977666,
@@ -1234332,7 +1234460,7 @@
           "participants": null,
           "created_at": "2026-10-21T10:31:13.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:22:04"
+          "latest_bookmaker_update": "2026-10-23 18:47:47"
         },
         {
           "id": 248782829650,
@@ -1234608,7 +1234736,7 @@
           "participants": null,
           "created_at": "2026-10-23T08:18:14.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:21:09"
+          "latest_bookmaker_update": "2026-10-23 18:47:35"
         },
         {
           "id": 249322738235,
@@ -1234631,7 +1234759,7 @@
           "participants": null,
           "created_at": "2026-10-21T10:16:57.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:23:58"
+          "latest_bookmaker_update": "2026-10-23 18:46:25"
         },
         {
           "id": 248782828543,
@@ -1241393,7 +1241521,7 @@
           "participants": null,
           "created_at": "2026-10-17T18:38:35.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 17:49:11"
+          "latest_bookmaker_update": "2026-10-23 18:45:41"
         },
         {
           "id": 249118629739,
@@ -1255009,7 +1255137,7 @@
           "participants": null,
           "created_at": "2026-10-21T10:16:57.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:23:58"
+          "latest_bookmaker_update": "2026-10-23 18:46:25"
         },
         {
           "id": 249322738234,
@@ -1255032,7 +1255160,7 @@
           "participants": null,
           "created_at": "2026-10-21T10:16:57.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:23:58"
+          "latest_bookmaker_update": "2026-10-23 18:46:25"
         },
         {
           "id": 248756957419,
@@ -1255055,7 +1255183,7 @@
           "participants": null,
           "created_at": "2026-10-17T16:43:57.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:23:23"
+          "latest_bookmaker_update": "2026-10-23 18:47:22"
         },
         {
           "id": 248756957425,
@@ -1255078,7 +1255206,7 @@
           "participants": null,
           "created_at": "2026-10-17T16:43:57.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:23:23"
+          "latest_bookmaker_update": "2026-10-23 18:47:22"
         },
         {
           "id": 248782829856,
@@ -1260759,7 +1260887,7 @@
           "participants": null,
           "created_at": "2026-10-17T16:43:57.000000Z",
           "original_label": "+0",
-          "latest_bookmaker_update": "2026-10-23 18:23:23"
+          "latest_bookmaker_update": "2026-10-23 18:47:22"
         },
         {
           "id": 249446107280,
@@ -1260828,7 +1260956,7 @@
           "participants": null,
           "created_at": "2026-10-21T10:31:13.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:22:04"
+          "latest_bookmaker_update": "2026-10-23 18:47:47"
         },
         {
           "id": 248782828509,
@@ -1260920,7 +1261048,7 @@
           "participants": null,
           "created_at": "2026-10-21T10:31:13.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:22:04"
+          "latest_bookmaker_update": "2026-10-23 18:47:47"
         },
         {
           "id": 248782829695,
@@ -1270281,7 +1270409,7 @@
           "participants": null,
           "created_at": "2026-10-21T10:16:57.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:23:58"
+          "latest_bookmaker_update": "2026-10-23 18:46:25"
         },
         {
           "id": 249446104570,
@@ -1270925,7 +1271053,7 @@
           "participants": null,
           "created_at": "2026-10-21T10:47:04.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:22:47"
+          "latest_bookmaker_update": "2026-10-23 18:46:34"
         },
         {
           "id": 248756957424,
@@ -1270948,7 +1271076,7 @@
           "participants": null,
           "created_at": "2026-10-17T16:43:57.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:23:23"
+          "latest_bookmaker_update": "2026-10-23 18:47:22"
         },
         {
           "id": 248782829180,
@@ -1271477,7 +1271605,7 @@
           "participants": null,
           "created_at": "2026-10-17T18:38:35.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 17:49:11"
+          "latest_bookmaker_update": "2026-10-23 18:45:41"
         },
         {
           "id": 249127270095,
@@ -1272926,7 +1273054,7 @@
           "participants": null,
           "created_at": "2026-10-17T16:43:57.000000Z",
           "original_label": "+0",
-          "latest_bookmaker_update": "2026-10-23 18:23:23"
+          "latest_bookmaker_update": "2026-10-23 18:47:22"
         },
         {
           "id": 249324338066,
@@ -1272949,7 +1273077,7 @@
           "participants": null,
           "created_at": "2026-10-21T10:31:13.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:22:04"
+          "latest_bookmaker_update": "2026-10-23 18:47:47"
         },
         {
           "id": 248782829611,
@@ -1273685,7 +1273813,7 @@
           "participants": null,
           "created_at": "2026-10-21T10:31:13.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:22:04"
+          "latest_bookmaker_update": "2026-10-23 18:47:47"
         },
         {
           "id": 248782829596,
@@ -1275594,7 +1275722,7 @@
           "participants": null,
           "created_at": "2026-10-21T10:47:04.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:22:47"
+          "latest_bookmaker_update": "2026-10-23 18:46:34"
         },
         {
           "id": 249446107062,
@@ -1276836,7 +1276964,7 @@
           "participants": null,
           "created_at": "2026-10-21T10:16:57.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:23:58"
+          "latest_bookmaker_update": "2026-10-23 18:46:25"
         },
         {
           "id": 249326949930,
@@ -1276859,7 +1276987,7 @@
           "participants": null,
           "created_at": "2026-10-21T10:47:04.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:22:47"
+          "latest_bookmaker_update": "2026-10-23 18:46:34"
         },
         {
           "id": 248756957420,
@@ -1276882,7 +1277010,7 @@
           "participants": null,
           "created_at": "2026-10-17T16:43:57.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:23:23"
+          "latest_bookmaker_update": "2026-10-23 18:47:22"
         },
         {
           "id": 248756957421,
@@ -1276905,7 +1277033,7 @@
           "participants": null,
           "created_at": "2026-10-17T16:43:57.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:23:23"
+          "latest_bookmaker_update": "2026-10-23 18:47:22"
         },
         {
           "id": 248782829584,
@@ -1277963,7 +1278091,7 @@
           "participants": null,
           "created_at": "2026-10-21T10:47:04.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:22:47"
+          "latest_bookmaker_update": "2026-10-23 18:46:34"
         },
         {
           "id": 249118629700,
@@ -1295945,7 +1296073,7 @@
           "participants": null,
           "created_at": "2026-10-17T16:41:35.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:16:19"
+          "latest_bookmaker_update": "2026-10-23 18:41:42"
         },
         {
           "id": 249400593093,
@@ -1296773,7 +1296901,7 @@
           "participants": null,
           "created_at": "2026-10-20T20:48:37.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:15:14"
+          "latest_bookmaker_update": "2026-10-23 18:42:52"
         },
         {
           "id": 248782717273,
@@ -1297164,7 +1297292,7 @@
           "participants": null,
           "created_at": "2026-10-23T08:18:22.000000Z",
           "original_label": "0,0.5",
-          "latest_bookmaker_update": "2026-10-23 18:08:49"
+          "latest_bookmaker_update": "2026-10-23 18:27:32"
         },
         {
           "id": 249762970378,
@@ -1297187,7 +1297315,7 @@
           "participants": null,
           "created_at": "2026-10-23T08:18:22.000000Z",
           "original_label": "0,0.5",
-          "latest_bookmaker_update": "2026-10-23 18:08:49"
+          "latest_bookmaker_update": "2026-10-23 18:27:32"
         },
         {
           "id": 249762970379,
@@ -1297210,7 +1297338,7 @@
           "participants": null,
           "created_at": "2026-10-23T08:18:22.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:08:49"
+          "latest_bookmaker_update": "2026-10-23 18:27:32"
         },
         {
           "id": 249374960767,
@@ -1300016,7 +1300144,7 @@
           "participants": null,
           "created_at": "2026-10-23T08:18:22.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:08:49"
+          "latest_bookmaker_update": "2026-10-23 18:27:32"
         },
         {
           "id": 249199702757,
@@ -1300039,7 +1300167,7 @@
           "participants": null,
           "created_at": "2026-10-20T20:48:37.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:15:14"
+          "latest_bookmaker_update": "2026-10-23 18:42:52"
         },
         {
           "id": 249126951441,
@@ -1301557,7 +1301685,7 @@
           "participants": null,
           "created_at": "2026-10-17T16:41:35.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:16:19"
+          "latest_bookmaker_update": "2026-10-23 18:41:42"
         },
         {
           "id": 248782716219,
@@ -1322993,7 +1323121,7 @@
           "participants": null,
           "created_at": "2026-10-20T20:26:50.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:16:31"
+          "latest_bookmaker_update": "2026-10-23 18:42:22"
         },
         {
           "id": 248756951898,
@@ -1323016,7 +1323144,7 @@
           "participants": null,
           "created_at": "2026-10-17T16:41:35.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:16:19"
+          "latest_bookmaker_update": "2026-10-23 18:41:42"
         },
         {
           "id": 248756951899,
@@ -1323039,7 +1323167,7 @@
           "participants": null,
           "created_at": "2026-10-17T16:41:35.000000Z",
           "original_label": "+0",
-          "latest_bookmaker_update": "2026-10-23 18:16:19"
+          "latest_bookmaker_update": "2026-10-23 18:41:42"
         },
         {
           "id": 249199702760,
@@ -1323062,7 +1323190,7 @@
           "participants": null,
           "created_at": "2026-10-20T20:48:37.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:15:14"
+          "latest_bookmaker_update": "2026-10-23 18:42:52"
         },
         {
           "id": 248756951900,
@@ -1323085,7 +1323213,7 @@
           "participants": null,
           "created_at": "2026-10-17T16:41:35.000000Z",
           "original_label": "+0",
-          "latest_bookmaker_update": "2026-10-23 18:16:19"
+          "latest_bookmaker_update": "2026-10-23 18:41:42"
         },
         {
           "id": 248782716495,
@@ -1324189,7 +1324317,7 @@
           "participants": null,
           "created_at": "2026-10-20T20:37:45.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:16:38"
+          "latest_bookmaker_update": "2026-10-23 18:42:18"
         },
         {
           "id": 248782715692,
@@ -1340082,7 +1340210,7 @@
           "participants": null,
           "created_at": "2026-10-20T20:26:50.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:16:31"
+          "latest_bookmaker_update": "2026-10-23 18:42:22"
         },
         {
           "id": 249195996205,
@@ -1340105,7 +1340233,7 @@
           "participants": null,
           "created_at": "2026-10-20T20:26:50.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:16:31"
+          "latest_bookmaker_update": "2026-10-23 18:42:22"
         },
         {
           "id": 248797073276,
@@ -1341807,7 +1341935,7 @@
           "participants": null,
           "created_at": "2026-10-20T20:26:50.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:16:31"
+          "latest_bookmaker_update": "2026-10-23 18:42:22"
         },
         {
           "id": 248775421506,
@@ -1341830,7 +1341958,7 @@
           "participants": null,
           "created_at": "2026-10-17T20:39:14.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 17:49:11"
+          "latest_bookmaker_update": "2026-10-23 18:35:34"
         },
         {
           "id": 249446111167,
@@ -1342198,7 +1342326,7 @@
           "participants": null,
           "created_at": "2026-10-20T20:48:37.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:15:14"
+          "latest_bookmaker_update": "2026-10-23 18:42:52"
         },
         {
           "id": 248782716563,
@@ -1345510,7 +1345638,7 @@
           "participants": null,
           "created_at": "2026-10-17T16:41:35.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:16:19"
+          "latest_bookmaker_update": "2026-10-23 18:41:42"
         },
         {
           "id": 248756951901,
@@ -1345533,7 +1345661,7 @@
           "participants": null,
           "created_at": "2026-10-17T16:41:35.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:16:19"
+          "latest_bookmaker_update": "2026-10-23 18:41:42"
         },
         {
           "id": 249199702756,
@@ -1345556,7 +1345684,7 @@
           "participants": null,
           "created_at": "2026-10-20T20:48:37.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:15:14"
+          "latest_bookmaker_update": "2026-10-23 18:42:52"
         },
         {
           "id": 249197444756,
@@ -1345579,7 +1345707,7 @@
           "participants": null,
           "created_at": "2026-10-20T20:37:45.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:16:38"
+          "latest_bookmaker_update": "2026-10-23 18:42:18"
         },
         {
           "id": 248782715938,
@@ -1347833,7 +1347961,7 @@
           "participants": null,
           "created_at": "2026-10-20T20:37:45.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:16:38"
+          "latest_bookmaker_update": "2026-10-23 18:42:18"
         },
         {
           "id": 249197444755,
@@ -1347856,7 +1347984,7 @@
           "participants": null,
           "created_at": "2026-10-20T20:37:45.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:16:38"
+          "latest_bookmaker_update": "2026-10-23 18:42:18"
         },
         {
           "id": 249126951414,
@@ -1350133,7 +1350261,7 @@
           "participants": null,
           "created_at": "2026-10-20T20:26:50.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:16:31"
+          "latest_bookmaker_update": "2026-10-23 18:42:22"
         },
         {
           "id": 248782716148,
@@ -1353330,7 +1353458,7 @@
           "participants": null,
           "created_at": "2026-10-20T20:37:45.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 18:16:38"
+          "latest_bookmaker_update": "2026-10-23 18:42:18"
         },
         {
           "id": 248782715688,
@@ -1353514,7 +1353642,7 @@
           "participants": null,
           "created_at": "2026-10-17T20:39:14.000000Z",
           "original_label": "",
-          "latest_bookmaker_update": "2026-10-23 17:49:11"
+          "latest_bookmaker_update": "2026-10-23 18:35:34"
         },
         {
           "id": 249118634350,

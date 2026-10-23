@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-23T19:34:48.810302+02:00",
+  "generatedAt": "2026-10-23T20:47:26.467964+02:00",
   "dateFrom": "2026-10-23",
   "dateTo": "2026-10-29",
   "timezone": "Europe/Warsaw",
@@ -7,559 +7,8 @@
     "from": "00:00",
     "to": "23:59"
   },
-  "count": 104,
+  "count": 102,
   "matches": [
-    {
-      "id": 558863,
-      "league": "DED",
-      "leagueName": "Eredivisie",
-      "date": "2026-10-23",
-      "time": "20:00",
-      "kickoff": "2026-10-23T20:00:00+02:00",
-      "home": "Go Ahead Eagles",
-      "away": "Telstar 1963",
-      "history": {
-        "homeLast10": {
-          "matches": [
-            {
-              "date": "2026-10-18T10:15:00Z",
-              "home": "PEC Zwolle",
-              "away": "Go Ahead Eagles",
-              "homeGoals": 4,
-              "awayGoals": 1,
-              "stats": null,
-              "teamGoals": 1,
-              "conceded": 4,
-              "result": "L"
-            },
-            {
-              "date": "2026-10-10T14:30:00Z",
-              "home": "Go Ahead Eagles",
-              "away": "Sparta Rotterdam",
-              "homeGoals": 3,
-              "awayGoals": 3,
-              "stats": null,
-              "teamGoals": 3,
-              "conceded": 3,
-              "result": "D"
-            },
-            {
-              "date": "2026-09-20T14:45:00Z",
-              "home": "NEC",
-              "away": "Go Ahead Eagles",
-              "homeGoals": 1,
-              "awayGoals": 1,
-              "stats": null,
-              "teamGoals": 1,
-              "conceded": 1,
-              "result": "D"
-            },
-            {
-              "date": "2026-09-12T16:45:00Z",
-              "home": "Go Ahead Eagles",
-              "away": "FC Groningen",
-              "homeGoals": 1,
-              "awayGoals": 1,
-              "stats": null,
-              "teamGoals": 1,
-              "conceded": 1,
-              "result": "D"
-            },
-            {
-              "date": "2026-09-08T12:00:00Z",
-              "home": "FC Utrecht",
-              "away": "Go Ahead Eagles",
-              "homeGoals": 3,
-              "awayGoals": 3,
-              "stats": null,
-              "teamGoals": 3,
-              "conceded": 3,
-              "result": "D"
-            },
-            {
-              "date": "2026-08-29T16:45:00Z",
-              "home": "AZ",
-              "away": "Go Ahead Eagles",
-              "homeGoals": 5,
-              "awayGoals": 2,
-              "stats": null,
-              "teamGoals": 2,
-              "conceded": 5,
-              "result": "L"
-            },
-            {
-              "date": "2026-08-23T10:15:00Z",
-              "home": "Go Ahead Eagles",
-              "away": "ADO Den Haag",
-              "homeGoals": 3,
-              "awayGoals": 1,
-              "stats": null,
-              "teamGoals": 3,
-              "conceded": 1,
-              "result": "W"
-            },
-            {
-              "date": "2026-08-16T12:30:00Z",
-              "home": "Feyenoord Rotterdam",
-              "away": "Go Ahead Eagles",
-              "homeGoals": 2,
-              "awayGoals": 2,
-              "stats": null,
-              "teamGoals": 2,
-              "conceded": 2,
-              "result": "D"
-            },
-            {
-              "date": "2026-08-08T16:45:00Z",
-              "home": "Go Ahead Eagles",
-              "away": "Willem II Tilburg",
-              "homeGoals": 4,
-              "awayGoals": 1,
-              "stats": null,
-              "teamGoals": 4,
-              "conceded": 1,
-              "result": "W"
-            },
-            {
-              "date": "2026-05-17T12:30:00Z",
-              "home": "NEC",
-              "away": "Go Ahead Eagles",
-              "homeGoals": 2,
-              "awayGoals": 1,
-              "stats": null,
-              "teamGoals": 1,
-              "conceded": 2,
-              "result": "L"
-            }
-          ],
-          "stats": {
-            "played": 10,
-            "wins": 2,
-            "draws": 5,
-            "losses": 3,
-            "goalsFor": 21,
-            "goalsAgainst": 23,
-            "avgGoalsFor": 2.1,
-            "avgGoalsAgainst": 2.3,
-            "btts": 10,
-            "over15": 10,
-            "over25": 8
-          }
-        },
-        "awayLast10": {
-          "matches": [
-            {
-              "date": "2026-10-17T18:00:00Z",
-              "home": "Telstar 1963",
-              "away": "Feyenoord Rotterdam",
-              "homeGoals": 3,
-              "awayGoals": 4,
-              "stats": null,
-              "teamGoals": 3,
-              "conceded": 4,
-              "result": "L"
-            },
-            {
-              "date": "2026-10-11T12:30:00Z",
-              "home": "Telstar 1963",
-              "away": "ADO Den Haag",
-              "homeGoals": 2,
-              "awayGoals": 2,
-              "stats": null,
-              "teamGoals": 2,
-              "conceded": 2,
-              "result": "D"
-            },
-            {
-              "date": "2026-09-20T12:30:00Z",
-              "home": "AZ",
-              "away": "Telstar 1963",
-              "homeGoals": 1,
-              "awayGoals": 0,
-              "stats": null,
-              "teamGoals": 0,
-              "conceded": 1,
-              "result": "L"
-            },
-            {
-              "date": "2026-09-13T12:30:00Z",
-              "home": "SC Heerenveen",
-              "away": "Telstar 1963",
-              "homeGoals": 0,
-              "awayGoals": 0,
-              "stats": null,
-              "teamGoals": 0,
-              "conceded": 0,
-              "result": "D"
-            },
-            {
-              "date": "2026-09-09T16:45:00Z",
-              "home": "FC Twente '65",
-              "away": "Telstar 1963",
-              "homeGoals": 1,
-              "awayGoals": 0,
-              "stats": null,
-              "teamGoals": 0,
-              "conceded": 1,
-              "result": "L"
-            },
-            {
-              "date": "2026-09-06T12:30:00Z",
-              "home": "Telstar 1963",
-              "away": "SC Cambuur-Leeuwarden",
-              "homeGoals": 2,
-              "awayGoals": 2,
-              "stats": null,
-              "teamGoals": 2,
-              "conceded": 2,
-              "result": "D"
-            },
-            {
-              "date": "2026-08-30T14:45:00Z",
-              "home": "Telstar 1963",
-              "away": "AFC Ajax",
-              "homeGoals": 0,
-              "awayGoals": 4,
-              "stats": null,
-              "teamGoals": 0,
-              "conceded": 4,
-              "result": "L"
-            },
-            {
-              "date": "2026-08-14T18:00:00Z",
-              "home": "Telstar 1963",
-              "away": "Sparta Rotterdam",
-              "homeGoals": 1,
-              "awayGoals": 3,
-              "stats": null,
-              "teamGoals": 1,
-              "conceded": 3,
-              "result": "L"
-            },
-            {
-              "date": "2026-08-08T14:30:00Z",
-              "home": "NEC",
-              "away": "Telstar 1963",
-              "homeGoals": 1,
-              "awayGoals": 2,
-              "stats": null,
-              "teamGoals": 2,
-              "conceded": 1,
-              "result": "W"
-            },
-            {
-              "date": "2026-05-17T12:30:00Z",
-              "home": "FC Volendam",
-              "away": "Telstar 1963",
-              "homeGoals": 1,
-              "awayGoals": 2,
-              "stats": null,
-              "teamGoals": 2,
-              "conceded": 1,
-              "result": "W"
-            }
-          ],
-          "stats": {
-            "played": 10,
-            "wins": 2,
-            "draws": 3,
-            "losses": 5,
-            "goalsFor": 12,
-            "goalsAgainst": 19,
-            "avgGoalsFor": 1.2,
-            "avgGoalsAgainst": 1.9,
-            "btts": 6,
-            "over15": 7,
-            "over25": 7
-          }
-        },
-        "h2h": []
-      },
-      "hx": 2.11,
-      "ax": 1.72,
-      "probabilities": {
-        "homeWin": 47.2,
-        "draw": 20.8,
-        "awayWin": 32.0,
-        "over15": 89.5,
-        "over25": 73.6,
-        "btts": 72.2
-      },
-      "model": "Poisson na podstawie tabeli",
-      "quality": "low",
-      "confidence": "Niska: użyto także danych ogólnych",
-      "modelStatus": "table_based"
-    },
-    {
-      "id": 565833,
-      "league": "BL1",
-      "leagueName": "Bundesliga",
-      "date": "2026-10-23",
-      "time": "20:30",
-      "kickoff": "2026-10-23T20:30:00+02:00",
-      "home": "VfB Stuttgart",
-      "away": "Borussia Mönchengladbach",
-      "history": {
-        "homeLast10": {
-          "matches": [
-            {
-              "date": "2026-10-17T13:30:00Z",
-              "home": "Hamburger SV",
-              "away": "VfB Stuttgart",
-              "homeGoals": 1,
-              "awayGoals": 0,
-              "stats": null,
-              "teamGoals": 0,
-              "conceded": 1,
-              "result": "L"
-            },
-            {
-              "date": "2026-10-10T13:30:00Z",
-              "home": "SC Paderborn 07",
-              "away": "VfB Stuttgart",
-              "homeGoals": 0,
-              "awayGoals": 2,
-              "stats": null,
-              "teamGoals": 2,
-              "conceded": 0,
-              "result": "W"
-            },
-            {
-              "date": "2026-09-19T16:30:00Z",
-              "home": "VfB Stuttgart",
-              "away": "Borussia Dortmund",
-              "homeGoals": 0,
-              "awayGoals": 1,
-              "stats": null,
-              "teamGoals": 0,
-              "conceded": 1,
-              "result": "L"
-            },
-            {
-              "date": "2026-09-12T13:30:00Z",
-              "home": "TSG 1899 Hoffenheim",
-              "away": "VfB Stuttgart",
-              "homeGoals": 2,
-              "awayGoals": 1,
-              "stats": null,
-              "teamGoals": 1,
-              "conceded": 2,
-              "result": "L"
-            },
-            {
-              "date": "2026-09-04T18:30:00Z",
-              "home": "VfB Stuttgart",
-              "away": "1. FC Köln",
-              "homeGoals": 4,
-              "awayGoals": 1,
-              "stats": null,
-              "teamGoals": 4,
-              "conceded": 1,
-              "result": "W"
-            },
-            {
-              "date": "2026-08-28T18:30:00Z",
-              "home": "FC Bayern München",
-              "away": "VfB Stuttgart",
-              "homeGoals": 5,
-              "awayGoals": 1,
-              "stats": null,
-              "teamGoals": 1,
-              "conceded": 5,
-              "result": "L"
-            },
-            {
-              "date": "2026-05-16T13:30:00Z",
-              "home": "Eintracht Frankfurt",
-              "away": "VfB Stuttgart",
-              "homeGoals": 2,
-              "awayGoals": 2,
-              "stats": null,
-              "teamGoals": 2,
-              "conceded": 2,
-              "result": "D"
-            },
-            {
-              "date": "2026-05-09T13:30:00Z",
-              "home": "VfB Stuttgart",
-              "away": "Bayer 04 Leverkusen",
-              "homeGoals": 3,
-              "awayGoals": 1,
-              "stats": null,
-              "teamGoals": 3,
-              "conceded": 1,
-              "result": "W"
-            },
-            {
-              "date": "2026-05-02T13:30:00Z",
-              "home": "TSG 1899 Hoffenheim",
-              "away": "VfB Stuttgart",
-              "homeGoals": 3,
-              "awayGoals": 3,
-              "stats": null,
-              "teamGoals": 3,
-              "conceded": 3,
-              "result": "D"
-            },
-            {
-              "date": "2026-04-26T13:30:00Z",
-              "home": "VfB Stuttgart",
-              "away": "SV Werder Bremen",
-              "homeGoals": 1,
-              "awayGoals": 1,
-              "stats": null,
-              "teamGoals": 1,
-              "conceded": 1,
-              "result": "D"
-            }
-          ],
-          "stats": {
-            "played": 10,
-            "wins": 3,
-            "draws": 3,
-            "losses": 4,
-            "goalsFor": 17,
-            "goalsAgainst": 17,
-            "avgGoalsFor": 1.7,
-            "avgGoalsAgainst": 1.7,
-            "btts": 7,
-            "over15": 8,
-            "over25": 6
-          }
-        },
-        "awayLast10": {
-          "matches": [
-            {
-              "date": "2026-10-18T15:30:00Z",
-              "home": "Borussia Mönchengladbach",
-              "away": "TSG 1899 Hoffenheim",
-              "homeGoals": 1,
-              "awayGoals": 2,
-              "stats": null,
-              "teamGoals": 1,
-              "conceded": 2,
-              "result": "L"
-            },
-            {
-              "date": "2026-10-11T13:30:00Z",
-              "home": "1. FC Köln",
-              "away": "Borussia Mönchengladbach",
-              "homeGoals": 2,
-              "awayGoals": 1,
-              "stats": null,
-              "teamGoals": 1,
-              "conceded": 2,
-              "result": "L"
-            },
-            {
-              "date": "2026-09-19T13:30:00Z",
-              "home": "Borussia Mönchengladbach",
-              "away": "1. FSV Mainz 05",
-              "homeGoals": 3,
-              "awayGoals": 4,
-              "stats": null,
-              "teamGoals": 3,
-              "conceded": 4,
-              "result": "L"
-            },
-            {
-              "date": "2026-09-12T13:30:00Z",
-              "home": "SC Freiburg",
-              "away": "Borussia Mönchengladbach",
-              "homeGoals": 5,
-              "awayGoals": 0,
-              "stats": null,
-              "teamGoals": 0,
-              "conceded": 5,
-              "result": "L"
-            },
-            {
-              "date": "2026-09-05T13:30:00Z",
-              "home": "Borussia Mönchengladbach",
-              "away": "SV 07 Elversberg",
-              "homeGoals": 3,
-              "awayGoals": 4,
-              "stats": null,
-              "teamGoals": 3,
-              "conceded": 4,
-              "result": "L"
-            },
-            {
-              "date": "2026-08-29T13:30:00Z",
-              "home": "RB Leipzig",
-              "away": "Borussia Mönchengladbach",
-              "homeGoals": 3,
-              "awayGoals": 0,
-              "stats": null,
-              "teamGoals": 0,
-              "conceded": 3,
-              "result": "L"
-            },
-            {
-              "date": "2026-05-16T13:30:00Z",
-              "home": "Borussia Mönchengladbach",
-              "away": "TSG 1899 Hoffenheim",
-              "homeGoals": 4,
-              "awayGoals": 0,
-              "stats": null,
-              "teamGoals": 4,
-              "conceded": 0,
-              "result": "W"
-            },
-            {
-              "date": "2026-05-09T13:30:00Z",
-              "home": "FC Augsburg",
-              "away": "Borussia Mönchengladbach",
-              "homeGoals": 3,
-              "awayGoals": 1,
-              "stats": null,
-              "teamGoals": 1,
-              "conceded": 3,
-              "result": "L"
-            },
-            {
-              "date": "2026-05-03T15:30:00Z",
-              "home": "Borussia Mönchengladbach",
-              "away": "Borussia Dortmund",
-              "homeGoals": 1,
-              "awayGoals": 0,
-              "stats": null,
-              "teamGoals": 1,
-              "conceded": 0,
-              "result": "W"
-            }
-          ],
-          "stats": {
-            "played": 9,
-            "wins": 2,
-            "draws": 0,
-            "losses": 7,
-            "goalsFor": 14,
-            "goalsAgainst": 23,
-            "avgGoalsFor": 1.56,
-            "avgGoalsAgainst": 2.56,
-            "btts": 5,
-            "over15": 8,
-            "over25": 8
-          }
-        },
-        "h2h": []
-      },
-      "hx": 2.33,
-      "ax": 1.5,
-      "probabilities": {
-        "homeWin": 56.2,
-        "draw": 19.6,
-        "awayWin": 24.2,
-        "over15": 89.5,
-        "over25": 73.6,
-        "btts": 70.1
-      },
-      "model": "Poisson na podstawie tabeli",
-      "quality": "low",
-      "confidence": "Niska: użyto także danych ogólnych",
-      "modelStatus": "table_based"
-    },
     {
       "id": 559654,
       "league": "FL1",
@@ -826,15 +275,15 @@
         },
         "h2h": []
       },
-      "hx": 1.57,
-      "ax": 1.14,
+      "hx": 1.38,
+      "ax": 1.0,
       "probabilities": {
-        "homeWin": 47.2,
-        "draw": 25.1,
-        "awayWin": 27.7,
-        "over15": 75.4,
-        "over25": 51.0,
-        "btts": 54.0
+        "homeWin": 45.5,
+        "draw": 27.2,
+        "awayWin": 27.3,
+        "over15": 68.6,
+        "over25": 42.4,
+        "btts": 47.2
       },
       "model": "Poisson na podstawie tabeli",
       "quality": "low",
@@ -1074,15 +523,15 @@
         },
         "h2h": []
       },
-      "hx": 1.79,
-      "ax": 1.57,
+      "hx": 1.56,
+      "ax": 1.38,
       "probabilities": {
-        "homeWin": 43.1,
-        "draw": 22.7,
-        "awayWin": 34.2,
-        "over15": 84.8,
-        "over25": 65.2,
-        "btts": 65.9
+        "homeWin": 41.9,
+        "draw": 24.5,
+        "awayWin": 33.6,
+        "over15": 79.1,
+        "over25": 56.3,
+        "btts": 59.1
       },
       "model": "Poisson na podstawie tabeli",
       "quality": "low",
@@ -25127,15 +24576,15 @@
         },
         "h2h": []
       },
-      "hx": 1.21,
-      "ax": 1.5,
+      "hx": 1.12,
+      "ax": 1.42,
       "probabilities": {
-        "homeWin": 30.7,
-        "draw": 25.4,
+        "homeWin": 29.9,
+        "draw": 26.4,
         "awayWin": 43.8,
-        "over15": 75.4,
-        "over25": 51.0,
-        "btts": 54.6
+        "over15": 72.2,
+        "over25": 46.8,
+        "btts": 51.2
       },
       "model": "Poisson na podstawie tabeli",
       "quality": "low",
@@ -26466,15 +25915,15 @@
         },
         "h2h": []
       },
-      "hx": 1.43,
-      "ax": 1.79,
+      "hx": 1.31,
+      "ax": 1.65,
       "probabilities": {
-        "homeWin": 30.9,
-        "draw": 23.0,
-        "awayWin": 46.1,
-        "over15": 83.1,
-        "over25": 62.3,
-        "btts": 63.3
+        "homeWin": 30.5,
+        "draw": 24.1,
+        "awayWin": 45.4,
+        "over15": 79.5,
+        "over25": 56.9,
+        "btts": 59.1
       },
       "model": "Poisson na podstawie tabeli",
       "quality": "low",
@@ -28798,7 +28247,7 @@
   ],
   "note": "Prognozy orientacyjne na podstawie dostępnych tabel. Model nie uwzględnia kursów, składów, kontuzji ani zaawansowanych statystyk. Nie gwarantuje wyników.",
   "sportmonksData": {
-    "generatedAt": "2026-10-23T20:42:54.108619+02:00",
+    "generatedAt": "2026-10-23T20:52:31.771283+02:00",
     "count": 18,
     "matchedCount": 0,
     "additionalCount": 18,
