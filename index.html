@@ -2331,6 +2331,17 @@ function historyPanel(match) {
       ${rows}`;
   }
 
+  const verified = match.apiFootballVerified || null;
+  const statNames = {"Total Shots":"Strzały","Shots on Goal":"Celne strzały","Corner Kicks":"Rożne","Yellow Cards":"Żółte kartki","Red Cards":"Czerwone kartki","Ball Possession":"Posiadanie piłki","Fouls":"Faule","Offsides":"Spalone","Shots insidebox":"Strzały w polu karnym","Shots outsidebox":"Strzały spoza pola karnego"};
+  const apiStats = verified && Array.isArray(verified.statistics) ? verified.statistics : [];
+  const apiStatsHtml = apiStats.length ? "<h4 style=\"margin:14px 0 8px\">Statystyki meczowe · API-Football</h4>" + apiStats.map(team => {
+    const values = Object.entries(team.values || {}).filter(([key,value]) => statNames[key] && value !== null && value !== undefined);
+    return "<div class=\"match-foot\"><b>" + escapeHtml(team.team || "Drużyna") + "</b><span>" + (values.length ? values.map(([key,value]) => escapeHtml(statNames[key]) + ": <b>" + escapeHtml(String(value)) + "</b>").join(" · ") : "Brak danych statystycznych dla tego spotkania") + "</span></div>";
+  }).join("") : "";
+  const apiH2h = verified && Array.isArray(verified.h2h) ? verified.h2h : [];
+  const apiH2hHtml = apiH2h.length ? "<h4 style=\"margin:14px 0 8px\">Bezpośrednie mecze · API-Football</h4>" + apiH2h.map(game => "<div class=\"match-foot\"><span>" + (game.date ? new Date(game.date).toLocaleDateString("pl-PL") : "—") + " · " + escapeHtml(game.home || "") + " – " + escapeHtml(game.away || "") + "</span><b>" + (game.homeGoals ?? "—") + ":" + (game.awayGoals ?? "—") + "</b></div>").join("") : "";
+  const apiMeta = verified ? "<p class=\"muted\">Potwierdzenie API-Football · " + escapeHtml(verified.league || "rozgrywki") + (verified.venue ? " · Stadion: " + escapeHtml(verified.venue) : "") + (verified.referee ? " · Sędzia: " + escapeHtml(verified.referee) : "") + "</p>" + apiStatsHtml + apiH2hHtml : "";
+
   const h2h = history.h2h || [];
   const h2hHtml = h2h.length
     ? h2h.map(game => `
@@ -2346,6 +2357,7 @@ function historyPanel(match) {
       <summary style="cursor:pointer;padding:10px 0;font-weight:700">
         📊 Ostatnie mecze i H2H
       </summary>
+      ${apiMeta}
       ${renderTeam("Ostatnie mecze — " + match.home, history.homeLast10)}
       ${renderTeam("Ostatnie mecze — " + match.away, history.awayLast10)}
       <h4 style="margin:14px 0 6px">Bezpośrednie spotkania H2H</h4>
