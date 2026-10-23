@@ -1,576 +1,14 @@
 {
-  "generatedAt": "2026-10-23T23:40:31.826336+02:00",
-  "dateFrom": "2026-10-23",
-  "dateTo": "2026-10-29",
+  "generatedAt": "2026-10-24T00:39:12.819131+02:00",
+  "dateFrom": "2026-10-24",
+  "dateTo": "2026-10-30",
   "timezone": "Europe/Warsaw",
   "filter": {
     "from": "00:00",
     "to": "23:59"
   },
-  "count": 97,
+  "count": 103,
   "matches": [
-    {
-      "id": 561894,
-      "league": "ELC",
-      "leagueName": "Championship",
-      "date": "2026-10-23",
-      "time": "21:00",
-      "kickoff": "2026-10-23T21:00:00+02:00",
-      "home": "Bolton Wanderers FC",
-      "away": "Middlesbrough FC",
-      "history": {
-        "homeLast10": {
-          "matches": [
-            {
-              "date": "2026-10-17T14:00:00Z",
-              "home": "Southampton FC",
-              "away": "Bolton Wanderers FC",
-              "homeGoals": 0,
-              "awayGoals": 0,
-              "stats": null,
-              "teamGoals": 0,
-              "conceded": 0,
-              "result": "D"
-            },
-            {
-              "date": "2026-10-13T18:45:00Z",
-              "home": "Wolverhampton Wanderers FC",
-              "away": "Bolton Wanderers FC",
-              "homeGoals": 1,
-              "awayGoals": 3,
-              "stats": null,
-              "teamGoals": 3,
-              "conceded": 1,
-              "result": "W"
-            },
-            {
-              "date": "2026-10-10T14:00:00Z",
-              "home": "Bolton Wanderers FC",
-              "away": "Stoke City FC",
-              "homeGoals": 1,
-              "awayGoals": 2,
-              "stats": null,
-              "teamGoals": 1,
-              "conceded": 2,
-              "result": "L"
-            },
-            {
-              "date": "2026-09-20T12:30:00Z",
-              "home": "Norwich City FC",
-              "away": "Bolton Wanderers FC",
-              "homeGoals": 3,
-              "awayGoals": 4,
-              "stats": null,
-              "teamGoals": 4,
-              "conceded": 3,
-              "result": "W"
-            },
-            {
-              "date": "2026-09-12T11:30:00Z",
-              "home": "Bolton Wanderers FC",
-              "away": "Cardiff City FC",
-              "homeGoals": 1,
-              "awayGoals": 0,
-              "stats": null,
-              "teamGoals": 1,
-              "conceded": 0,
-              "result": "W"
-            },
-            {
-              "date": "2026-09-08T19:00:00Z",
-              "home": "Bolton Wanderers FC",
-              "away": "West Ham United FC",
-              "homeGoals": 2,
-              "awayGoals": 3,
-              "stats": null,
-              "teamGoals": 2,
-              "conceded": 3,
-              "result": "L"
-            },
-            {
-              "date": "2026-09-05T14:00:00Z",
-              "home": "Millwall FC",
-              "away": "Bolton Wanderers FC",
-              "homeGoals": 4,
-              "awayGoals": 0,
-              "stats": null,
-              "teamGoals": 0,
-              "conceded": 4,
-              "result": "L"
-            },
-            {
-              "date": "2026-09-01T18:45:00Z",
-              "home": "Sheffield United FC",
-              "away": "Bolton Wanderers FC",
-              "homeGoals": 3,
-              "awayGoals": 2,
-              "stats": null,
-              "teamGoals": 2,
-              "conceded": 3,
-              "result": "L"
-            },
-            {
-              "date": "2026-08-29T14:00:00Z",
-              "home": "Bolton Wanderers FC",
-              "away": "Lincoln City FC",
-              "homeGoals": 0,
-              "awayGoals": 1,
-              "stats": null,
-              "teamGoals": 0,
-              "conceded": 1,
-              "result": "L"
-            },
-            {
-              "date": "2026-08-22T14:00:00Z",
-              "home": "Queens Park Rangers FC",
-              "away": "Bolton Wanderers FC",
-              "homeGoals": 0,
-              "awayGoals": 0,
-              "stats": null,
-              "teamGoals": 0,
-              "conceded": 0,
-              "result": "D"
-            }
-          ],
-          "stats": {
-            "played": 10,
-            "wins": 3,
-            "draws": 2,
-            "losses": 5,
-            "goalsFor": 13,
-            "goalsAgainst": 17,
-            "avgGoalsFor": 1.3,
-            "avgGoalsAgainst": 1.7,
-            "btts": 5,
-            "over15": 6,
-            "over25": 6
-          }
-        },
-        "awayLast10": {
-          "matches": [
-            {
-              "date": "2026-10-17T11:30:00Z",
-              "home": "Middlesbrough FC",
-              "away": "Cardiff City FC",
-              "homeGoals": 2,
-              "awayGoals": 2,
-              "stats": null,
-              "teamGoals": 2,
-              "conceded": 2,
-              "result": "D"
-            },
-            {
-              "date": "2026-10-13T19:00:00Z",
-              "home": "Stoke City FC",
-              "away": "Middlesbrough FC",
-              "homeGoals": 2,
-              "awayGoals": 3,
-              "stats": null,
-              "teamGoals": 3,
-              "conceded": 2,
-              "result": "W"
-            },
-            {
-              "date": "2026-10-10T14:00:00Z",
-              "home": "Middlesbrough FC",
-              "away": "Wolverhampton Wanderers FC",
-              "homeGoals": 1,
-              "awayGoals": 0,
-              "stats": null,
-              "teamGoals": 1,
-              "conceded": 0,
-              "result": "W"
-            },
-            {
-              "date": "2026-09-19T14:00:00Z",
-              "home": "Birmingham City FC",
-              "away": "Middlesbrough FC",
-              "homeGoals": 2,
-              "awayGoals": 2,
-              "stats": null,
-              "teamGoals": 2,
-              "conceded": 2,
-              "result": "D"
-            },
-            {
-              "date": "2026-09-15T18:45:00Z",
-              "home": "Middlesbrough FC",
-              "away": "Millwall FC",
-              "homeGoals": 2,
-              "awayGoals": 2,
-              "stats": null,
-              "teamGoals": 2,
-              "conceded": 2,
-              "result": "D"
-            },
-            {
-              "date": "2026-09-12T14:00:00Z",
-              "home": "Middlesbrough FC",
-              "away": "Norwich City FC",
-              "homeGoals": 4,
-              "awayGoals": 3,
-              "stats": null,
-              "teamGoals": 4,
-              "conceded": 3,
-              "result": "W"
-            },
-            {
-              "date": "2026-09-05T14:00:00Z",
-              "home": "Queens Park Rangers FC",
-              "away": "Middlesbrough FC",
-              "homeGoals": 0,
-              "awayGoals": 1,
-              "stats": null,
-              "teamGoals": 1,
-              "conceded": 0,
-              "result": "W"
-            },
-            {
-              "date": "2026-09-02T19:00:00Z",
-              "home": "Burnley FC",
-              "away": "Middlesbrough FC",
-              "homeGoals": 1,
-              "awayGoals": 1,
-              "stats": null,
-              "teamGoals": 1,
-              "conceded": 1,
-              "result": "D"
-            },
-            {
-              "date": "2026-08-29T11:30:00Z",
-              "home": "Middlesbrough FC",
-              "away": "West Bromwich Albion FC",
-              "homeGoals": 3,
-              "awayGoals": 1,
-              "stats": null,
-              "teamGoals": 3,
-              "conceded": 1,
-              "result": "W"
-            },
-            {
-              "date": "2026-08-22T14:00:00Z",
-              "home": "Blackburn Rovers FC",
-              "away": "Middlesbrough FC",
-              "homeGoals": 2,
-              "awayGoals": 1,
-              "stats": null,
-              "teamGoals": 1,
-              "conceded": 2,
-              "result": "L"
-            }
-          ],
-          "stats": {
-            "played": 10,
-            "wins": 5,
-            "draws": 4,
-            "losses": 1,
-            "goalsFor": 20,
-            "goalsAgainst": 15,
-            "avgGoalsFor": 2.0,
-            "avgGoalsAgainst": 1.5,
-            "btts": 8,
-            "over15": 8,
-            "over25": 7
-          }
-        },
-        "h2h": []
-      },
-      "hx": 1.41,
-      "ax": 1.82,
-      "probabilities": {
-        "homeWin": 29.9,
-        "draw": 22.8,
-        "awayWin": 47.2,
-        "over15": 83.2,
-        "over25": 62.6,
-        "btts": 63.3
-      },
-      "model": "Poisson na podstawie tabeli",
-      "quality": "low",
-      "confidence": "Niska: użyto także danych ogólnych",
-      "modelStatus": "table_based"
-    },
-    {
-      "id": 555052,
-      "league": "BSA",
-      "leagueName": "Brasileirao",
-      "date": "2026-10-24",
-      "time": "01:00",
-      "kickoff": "2026-10-24T01:00:00+02:00",
-      "home": "Cruzeiro EC",
-      "away": "Clube do Remo",
-      "history": {
-        "homeLast10": {
-          "matches": [
-            {
-              "date": "2026-10-18T19:00:00Z",
-              "home": "Grêmio FBPA",
-              "away": "Cruzeiro EC",
-              "homeGoals": 2,
-              "awayGoals": 4,
-              "stats": null,
-              "teamGoals": 4,
-              "conceded": 2,
-              "result": "W"
-            },
-            {
-              "date": "2026-10-13T00:00:00Z",
-              "home": "RB Bragantino",
-              "away": "Cruzeiro EC",
-              "homeGoals": 4,
-              "awayGoals": 2,
-              "stats": null,
-              "teamGoals": 2,
-              "conceded": 4,
-              "result": "L"
-            },
-            {
-              "date": "2026-10-08T00:30:00Z",
-              "home": "Cruzeiro EC",
-              "away": "São Paulo FC",
-              "homeGoals": 2,
-              "awayGoals": 0,
-              "stats": null,
-              "teamGoals": 2,
-              "conceded": 0,
-              "result": "W"
-            },
-            {
-              "date": "2026-09-20T19:00:00Z",
-              "home": "EC Vitória",
-              "away": "Cruzeiro EC",
-              "homeGoals": 1,
-              "awayGoals": 3,
-              "stats": null,
-              "teamGoals": 3,
-              "conceded": 1,
-              "result": "W"
-            },
-            {
-              "date": "2026-09-13T00:00:00Z",
-              "home": "Santos FC",
-              "away": "Cruzeiro EC",
-              "homeGoals": 2,
-              "awayGoals": 1,
-              "stats": null,
-              "teamGoals": 1,
-              "conceded": 2,
-              "result": "L"
-            },
-            {
-              "date": "2026-09-06T19:00:00Z",
-              "home": "Cruzeiro EC",
-              "away": "CA Paranaense",
-              "homeGoals": 3,
-              "awayGoals": 1,
-              "stats": null,
-              "teamGoals": 3,
-              "conceded": 1,
-              "result": "W"
-            },
-            {
-              "date": "2026-08-30T00:20:00Z",
-              "home": "CR Vasco da Gama",
-              "away": "Cruzeiro EC",
-              "homeGoals": 3,
-              "awayGoals": 1,
-              "stats": null,
-              "teamGoals": 1,
-              "conceded": 3,
-              "result": "L"
-            },
-            {
-              "date": "2026-08-22T23:30:00Z",
-              "home": "Cruzeiro EC",
-              "away": "CR Flamengo",
-              "homeGoals": 2,
-              "awayGoals": 1,
-              "stats": null,
-              "teamGoals": 2,
-              "conceded": 1,
-              "result": "W"
-            },
-            {
-              "date": "2026-08-16T22:30:00Z",
-              "home": "SC Corinthians Paulista",
-              "away": "Cruzeiro EC",
-              "homeGoals": 1,
-              "awayGoals": 2,
-              "stats": null,
-              "teamGoals": 2,
-              "conceded": 1,
-              "result": "W"
-            },
-            {
-              "date": "2026-08-09T14:00:00Z",
-              "home": "Cruzeiro EC",
-              "away": "Mirassol FC",
-              "homeGoals": 3,
-              "awayGoals": 1,
-              "stats": null,
-              "teamGoals": 3,
-              "conceded": 1,
-              "result": "W"
-            }
-          ],
-          "stats": {
-            "played": 10,
-            "wins": 7,
-            "draws": 0,
-            "losses": 3,
-            "goalsFor": 23,
-            "goalsAgainst": 16,
-            "avgGoalsFor": 2.3,
-            "avgGoalsAgainst": 1.6,
-            "btts": 9,
-            "over15": 10,
-            "over25": 9
-          }
-        },
-        "awayLast10": {
-          "matches": [
-            {
-              "date": "2026-10-18T22:30:00Z",
-              "home": "Clube do Remo",
-              "away": "RB Bragantino",
-              "homeGoals": 1,
-              "awayGoals": 1,
-              "stats": null,
-              "teamGoals": 1,
-              "conceded": 1,
-              "result": "D"
-            },
-            {
-              "date": "2026-10-10T21:00:00Z",
-              "home": "CR Vasco da Gama",
-              "away": "Clube do Remo",
-              "homeGoals": 0,
-              "awayGoals": 0,
-              "stats": null,
-              "teamGoals": 0,
-              "conceded": 0,
-              "result": "D"
-            },
-            {
-              "date": "2026-10-07T22:30:00Z",
-              "home": "Clube do Remo",
-              "away": "Grêmio FBPA",
-              "homeGoals": 1,
-              "awayGoals": 1,
-              "stats": null,
-              "teamGoals": 1,
-              "conceded": 1,
-              "result": "D"
-            },
-            {
-              "date": "2026-09-19T21:30:00Z",
-              "home": "Clube do Remo",
-              "away": "Santos FC",
-              "homeGoals": 1,
-              "awayGoals": 2,
-              "stats": null,
-              "teamGoals": 1,
-              "conceded": 2,
-              "result": "L"
-            },
-            {
-              "date": "2026-09-14T23:00:00Z",
-              "home": "EC Bahia",
-              "away": "Clube do Remo",
-              "homeGoals": 2,
-              "awayGoals": 1,
-              "stats": null,
-              "teamGoals": 1,
-              "conceded": 2,
-              "result": "L"
-            },
-            {
-              "date": "2026-09-06T19:00:00Z",
-              "home": "Clube do Remo",
-              "away": "CR Flamengo",
-              "homeGoals": 0,
-              "awayGoals": 1,
-              "stats": null,
-              "teamGoals": 0,
-              "conceded": 1,
-              "result": "L"
-            },
-            {
-              "date": "2026-08-31T23:00:00Z",
-              "home": "Clube do Remo",
-              "away": "Coritiba FBC",
-              "homeGoals": 2,
-              "awayGoals": 3,
-              "stats": null,
-              "teamGoals": 2,
-              "conceded": 3,
-              "result": "L"
-            },
-            {
-              "date": "2026-08-22T19:00:00Z",
-              "home": "Fluminense FC",
-              "away": "Clube do Remo",
-              "homeGoals": 2,
-              "awayGoals": 1,
-              "stats": null,
-              "teamGoals": 1,
-              "conceded": 2,
-              "result": "L"
-            },
-            {
-              "date": "2026-08-17T23:00:00Z",
-              "home": "SC Internacional",
-              "away": "Clube do Remo",
-              "homeGoals": 1,
-              "awayGoals": 1,
-              "stats": null,
-              "teamGoals": 1,
-              "conceded": 1,
-              "result": "D"
-            },
-            {
-              "date": "2026-08-08T21:30:00Z",
-              "home": "Clube do Remo",
-              "away": "CA Mineiro",
-              "homeGoals": 2,
-              "awayGoals": 2,
-              "stats": null,
-              "teamGoals": 2,
-              "conceded": 2,
-              "result": "D"
-            }
-          ],
-          "stats": {
-            "played": 10,
-            "wins": 0,
-            "draws": 5,
-            "losses": 5,
-            "goalsFor": 10,
-            "goalsAgainst": 15,
-            "avgGoalsFor": 1.0,
-            "avgGoalsAgainst": 1.5,
-            "btts": 8,
-            "over15": 8,
-            "over25": 5
-          }
-        },
-        "h2h": []
-      },
-      "hx": 1.6,
-      "ax": 1.29,
-      "probabilities": {
-        "homeWin": 44.6,
-        "draw": 24.5,
-        "awayWin": 30.9,
-        "over15": 78.3,
-        "over25": 55.1,
-        "btts": 57.8
-      },
-      "model": "Poisson na podstawie tabeli",
-      "quality": "low",
-      "confidence": "Niska: użyto także danych ogólnych",
-      "modelStatus": "table_based"
-    },
     {
       "id": 561895,
       "league": "ELC",
@@ -2791,30 +2229,19 @@
               "teamGoals": 1,
               "conceded": 3,
               "result": "L"
-            },
-            {
-              "date": "2026-04-26T13:30:00Z",
-              "home": "VfB Stuttgart",
-              "away": "SV Werder Bremen",
-              "homeGoals": 1,
-              "awayGoals": 1,
-              "stats": null,
-              "teamGoals": 1,
-              "conceded": 1,
-              "result": "D"
             }
           ],
           "stats": {
-            "played": 10,
+            "played": 9,
             "wins": 2,
-            "draws": 4,
+            "draws": 3,
             "losses": 4,
-            "goalsFor": 14,
-            "goalsAgainst": 19,
-            "avgGoalsFor": 1.4,
-            "avgGoalsAgainst": 1.9,
-            "btts": 8,
-            "over15": 9,
+            "goalsFor": 13,
+            "goalsAgainst": 18,
+            "avgGoalsFor": 1.44,
+            "avgGoalsAgainst": 2.0,
+            "btts": 7,
+            "over15": 8,
             "over25": 6
           }
         },
@@ -7790,31 +7217,20 @@
               "teamGoals": 0,
               "conceded": 1,
               "result": "L"
-            },
-            {
-              "date": "2026-04-26T15:30:00Z",
-              "home": "Borussia Dortmund",
-              "away": "SC Freiburg",
-              "homeGoals": 4,
-              "awayGoals": 0,
-              "stats": null,
-              "teamGoals": 4,
-              "conceded": 0,
-              "result": "W"
             }
           ],
           "stats": {
-            "played": 10,
-            "wins": 7,
+            "played": 9,
+            "wins": 6,
             "draws": 2,
             "losses": 1,
-            "goalsFor": 20,
+            "goalsFor": 16,
             "goalsAgainst": 7,
-            "avgGoalsFor": 2.0,
-            "avgGoalsAgainst": 0.7,
+            "avgGoalsFor": 1.78,
+            "avgGoalsAgainst": 0.78,
             "btts": 3,
-            "over15": 7,
-            "over25": 5
+            "over15": 6,
+            "over25": 4
           }
         },
         "awayLast10": {
@@ -10717,16 +10133,7 @@
             "over25": 3
           }
         },
-        "h2h": [
-          {
-            "date": "2026-04-26T00:00:00Z",
-            "home": "São Paulo FC",
-            "away": "Mirassol FC",
-            "homeGoals": 1,
-            "awayGoals": 0,
-            "stats": null
-          }
-        ]
+        "h2h": []
       },
       "hx": 1.15,
       "ax": 1.29,
@@ -11007,16 +10414,7 @@
             "over25": 7
           }
         },
-        "h2h": [
-          {
-            "date": "2026-04-26T21:30:00Z",
-            "home": "CA Paranaense",
-            "away": "EC Vitória",
-            "homeGoals": 3,
-            "awayGoals": 1,
-            "stats": null
-          }
-        ]
+        "h2h": []
       },
       "hx": 1.15,
       "ax": 1.52,
@@ -11578,16 +10976,7 @@
             "over25": 4
           }
         },
-        "h2h": [
-          {
-            "date": "2026-04-26T21:30:00Z",
-            "home": "RB Bragantino",
-            "away": "SE Palmeiras",
-            "homeGoals": 0,
-            "awayGoals": 1,
-            "stats": null
-          }
-        ]
+        "h2h": []
       },
       "hx": 1.45,
       "ax": 0.98,
@@ -11868,16 +11257,7 @@
             "over25": 7
           }
         },
-        "h2h": [
-          {
-            "date": "2026-04-26T19:00:00Z",
-            "home": "SC Corinthians Paulista",
-            "away": "CR Vasco da Gama",
-            "homeGoals": 1,
-            "awayGoals": 0,
-            "stats": null
-          }
-        ]
+        "h2h": []
       },
       "hx": 1.23,
       "ax": 1.23,
@@ -12158,16 +11538,7 @@
             "over25": 7
           }
         },
-        "h2h": [
-          {
-            "date": "2026-04-26T23:30:00Z",
-            "home": "Fluminense FC",
-            "away": "Chapecoense AF",
-            "homeGoals": 2,
-            "awayGoals": 1,
-            "stats": null
-          }
-        ]
+        "h2h": []
       },
       "hx": 1.13,
       "ax": 1.82,
@@ -18316,31 +17687,20 @@
               "teamGoals": 1,
               "conceded": 1,
               "result": "D"
-            },
-            {
-              "date": "2026-04-26T15:30:00Z",
-              "home": "Borussia Dortmund",
-              "away": "SC Freiburg",
-              "homeGoals": 4,
-              "awayGoals": 0,
-              "stats": null,
-              "teamGoals": 0,
-              "conceded": 4,
-              "result": "L"
             }
           ],
           "stats": {
-            "played": 10,
+            "played": 9,
             "wins": 5,
             "draws": 2,
-            "losses": 3,
+            "losses": 2,
             "goalsFor": 22,
-            "goalsAgainst": 15,
-            "avgGoalsFor": 2.2,
-            "avgGoalsAgainst": 1.5,
+            "goalsAgainst": 11,
+            "avgGoalsFor": 2.44,
+            "avgGoalsAgainst": 1.22,
             "btts": 7,
-            "over15": 9,
-            "over25": 8
+            "over15": 8,
+            "over25": 7
           }
         },
         "awayLast10": {
@@ -21836,16 +21196,7 @@
             "over25": 4
           }
         },
-        "h2h": [
-          {
-            "date": "2026-04-26T16:30:00Z",
-            "home": "CA Osasuna",
-            "away": "Sevilla FC",
-            "homeGoals": 2,
-            "awayGoals": 1,
-            "stats": null
-          }
-        ]
+        "h2h": []
       },
       "hx": 1.78,
       "ax": 1.44,
@@ -22126,16 +21477,7 @@
             "over25": 5
           }
         },
-        "h2h": [
-          {
-            "date": "2026-04-26T19:00:00Z",
-            "home": "Grêmio FBPA",
-            "away": "Coritiba FBC",
-            "homeGoals": 1,
-            "awayGoals": 0,
-            "stats": null
-          }
-        ]
+        "h2h": []
       },
       "hx": 1.32,
       "ax": 1.34,
@@ -22416,16 +21758,7 @@
             "over25": 5
           }
         },
-        "h2h": [
-          {
-            "date": "2026-04-26T23:30:00Z",
-            "home": "CA Mineiro",
-            "away": "CR Flamengo",
-            "homeGoals": 0,
-            "awayGoals": 4,
-            "stats": null
-          }
-        ]
+        "h2h": []
       },
       "hx": 1.55,
       "ax": 1.08,
@@ -26912,19 +26245,2230 @@
       "quality": "low",
       "confidence": "Niska: użyto także danych ogólnych",
       "modelStatus": "table_based"
+    },
+    {
+      "id": 555069,
+      "league": "BSA",
+      "leagueName": "Brasileirao",
+      "date": "2026-10-30",
+      "time": "00:00",
+      "kickoff": "2026-10-30T00:00:00+01:00",
+      "home": "CR Vasco da Gama",
+      "away": "CR Flamengo",
+      "history": {
+        "homeLast10": {
+          "matches": [
+            {
+              "date": "2026-10-18T00:00:00Z",
+              "home": "São Paulo FC",
+              "away": "CR Vasco da Gama",
+              "homeGoals": 1,
+              "awayGoals": 0,
+              "stats": null,
+              "teamGoals": 0,
+              "conceded": 1,
+              "result": "L"
+            },
+            {
+              "date": "2026-10-10T21:00:00Z",
+              "home": "CR Vasco da Gama",
+              "away": "Clube do Remo",
+              "homeGoals": 0,
+              "awayGoals": 0,
+              "stats": null,
+              "teamGoals": 0,
+              "conceded": 0,
+              "result": "D"
+            },
+            {
+              "date": "2026-10-07T23:30:00Z",
+              "home": "Botafogo FR",
+              "away": "CR Vasco da Gama",
+              "homeGoals": 1,
+              "awayGoals": 2,
+              "stats": null,
+              "teamGoals": 2,
+              "conceded": 1,
+              "result": "W"
+            },
+            {
+              "date": "2026-09-19T23:30:00Z",
+              "home": "CR Vasco da Gama",
+              "away": "Coritiba FBC",
+              "homeGoals": 5,
+              "awayGoals": 0,
+              "stats": null,
+              "teamGoals": 5,
+              "conceded": 0,
+              "result": "W"
+            },
+            {
+              "date": "2026-09-12T19:00:00Z",
+              "home": "Grêmio FBPA",
+              "away": "CR Vasco da Gama",
+              "homeGoals": 1,
+              "awayGoals": 2,
+              "stats": null,
+              "teamGoals": 2,
+              "conceded": 1,
+              "result": "W"
+            },
+            {
+              "date": "2026-09-06T00:00:00Z",
+              "home": "Fluminense FC",
+              "away": "CR Vasco da Gama",
+              "homeGoals": 1,
+              "awayGoals": 0,
+              "stats": null,
+              "teamGoals": 0,
+              "conceded": 1,
+              "result": "L"
+            },
+            {
+              "date": "2026-08-30T00:20:00Z",
+              "home": "CR Vasco da Gama",
+              "away": "Cruzeiro EC",
+              "homeGoals": 3,
+              "awayGoals": 1,
+              "stats": null,
+              "teamGoals": 3,
+              "conceded": 1,
+              "result": "W"
+            },
+            {
+              "date": "2026-08-23T19:00:00Z",
+              "home": "SE Palmeiras",
+              "away": "CR Vasco da Gama",
+              "homeGoals": 4,
+              "awayGoals": 1,
+              "stats": null,
+              "teamGoals": 1,
+              "conceded": 4,
+              "result": "L"
+            },
+            {
+              "date": "2026-08-16T19:00:00Z",
+              "home": "CR Vasco da Gama",
+              "away": "Santos FC",
+              "homeGoals": 0,
+              "awayGoals": 3,
+              "stats": null,
+              "teamGoals": 0,
+              "conceded": 3,
+              "result": "L"
+            },
+            {
+              "date": "2026-08-09T19:00:00Z",
+              "home": "EC Bahia",
+              "away": "CR Vasco da Gama",
+              "homeGoals": 0,
+              "awayGoals": 0,
+              "stats": null,
+              "teamGoals": 0,
+              "conceded": 0,
+              "result": "D"
+            }
+          ],
+          "stats": {
+            "played": 10,
+            "wins": 4,
+            "draws": 2,
+            "losses": 4,
+            "goalsFor": 13,
+            "goalsAgainst": 12,
+            "avgGoalsFor": 1.3,
+            "avgGoalsAgainst": 1.2,
+            "btts": 4,
+            "over15": 6,
+            "over25": 6
+          }
+        },
+        "awayLast10": {
+          "matches": [
+            {
+              "date": "2026-10-18T21:30:00Z",
+              "home": "EC Bahia",
+              "away": "CR Flamengo",
+              "homeGoals": 0,
+              "awayGoals": 3,
+              "stats": null,
+              "teamGoals": 3,
+              "conceded": 0,
+              "result": "W"
+            },
+            {
+              "date": "2026-10-11T20:30:00Z",
+              "home": "CR Flamengo",
+              "away": "Fluminense FC",
+              "homeGoals": 1,
+              "awayGoals": 0,
+              "stats": null,
+              "teamGoals": 1,
+              "conceded": 0,
+              "result": "W"
+            },
+            {
+              "date": "2026-10-08T22:30:00Z",
+              "home": "Santos FC",
+              "away": "CR Flamengo",
+              "homeGoals": 2,
+              "awayGoals": 2,
+              "stats": null,
+              "teamGoals": 2,
+              "conceded": 2,
+              "result": "D"
+            },
+            {
+              "date": "2026-09-20T21:30:00Z",
+              "home": "CR Flamengo",
+              "away": "RB Bragantino",
+              "homeGoals": 2,
+              "awayGoals": 1,
+              "stats": null,
+              "teamGoals": 2,
+              "conceded": 1,
+              "result": "W"
+            },
+            {
+              "date": "2026-09-13T20:30:00Z",
+              "home": "CR Flamengo",
+              "away": "SC Corinthians Paulista",
+              "homeGoals": 2,
+              "awayGoals": 1,
+              "stats": null,
+              "teamGoals": 2,
+              "conceded": 1,
+              "result": "W"
+            },
+            {
+              "date": "2026-09-06T19:00:00Z",
+              "home": "Clube do Remo",
+              "away": "CR Flamengo",
+              "homeGoals": 0,
+              "awayGoals": 1,
+              "stats": null,
+              "teamGoals": 1,
+              "conceded": 0,
+              "result": "W"
+            },
+            {
+              "date": "2026-09-02T22:30:00Z",
+              "home": "CR Flamengo",
+              "away": "Mirassol FC",
+              "homeGoals": 2,
+              "awayGoals": 0,
+              "stats": null,
+              "teamGoals": 2,
+              "conceded": 0,
+              "result": "W"
+            },
+            {
+              "date": "2026-08-30T19:00:00Z",
+              "home": "CR Flamengo",
+              "away": "Botafogo FR",
+              "homeGoals": 3,
+              "awayGoals": 0,
+              "stats": null,
+              "teamGoals": 3,
+              "conceded": 0,
+              "result": "W"
+            },
+            {
+              "date": "2026-08-22T23:30:00Z",
+              "home": "Cruzeiro EC",
+              "away": "CR Flamengo",
+              "homeGoals": 2,
+              "awayGoals": 1,
+              "stats": null,
+              "teamGoals": 1,
+              "conceded": 2,
+              "result": "L"
+            },
+            {
+              "date": "2026-08-16T21:30:00Z",
+              "home": "Mirassol FC",
+              "away": "CR Flamengo",
+              "homeGoals": 1,
+              "awayGoals": 5,
+              "stats": null,
+              "teamGoals": 5,
+              "conceded": 1,
+              "result": "W"
+            }
+          ],
+          "stats": {
+            "played": 10,
+            "wins": 8,
+            "draws": 1,
+            "losses": 1,
+            "goalsFor": 22,
+            "goalsAgainst": 7,
+            "avgGoalsFor": 2.2,
+            "avgGoalsAgainst": 0.7,
+            "btts": 5,
+            "over15": 8,
+            "over25": 7
+          }
+        },
+        "h2h": [
+          {
+            "date": "2026-05-03T19:00:00Z",
+            "home": "CR Flamengo",
+            "away": "CR Vasco da Gama",
+            "homeGoals": 2,
+            "awayGoals": 2,
+            "stats": null
+          }
+        ]
+      },
+      "hx": 1.0,
+      "ax": 1.7,
+      "probabilities": {
+        "homeWin": 22.3,
+        "draw": 24.0,
+        "awayWin": 53.7,
+        "over15": 75.2,
+        "over25": 50.7,
+        "btts": 51.8
+      },
+      "model": "Poisson na podstawie tabeli",
+      "quality": "low",
+      "confidence": "Niska: użyto także danych ogólnych",
+      "modelStatus": "table_based"
+    },
+    {
+      "id": 555066,
+      "league": "BSA",
+      "leagueName": "Brasileirao",
+      "date": "2026-10-30",
+      "time": "01:30",
+      "kickoff": "2026-10-30T01:30:00+01:00",
+      "home": "Grêmio FBPA",
+      "away": "CA Paranaense",
+      "history": {
+        "homeLast10": {
+          "matches": [
+            {
+              "date": "2026-10-18T19:00:00Z",
+              "home": "Grêmio FBPA",
+              "away": "Cruzeiro EC",
+              "homeGoals": 2,
+              "awayGoals": 4,
+              "stats": null,
+              "teamGoals": 2,
+              "conceded": 4,
+              "result": "L"
+            },
+            {
+              "date": "2026-10-11T20:30:00Z",
+              "home": "Grêmio FBPA",
+              "away": "SC Internacional",
+              "homeGoals": 1,
+              "awayGoals": 1,
+              "stats": null,
+              "teamGoals": 1,
+              "conceded": 1,
+              "result": "D"
+            },
+            {
+              "date": "2026-10-07T22:30:00Z",
+              "home": "Clube do Remo",
+              "away": "Grêmio FBPA",
+              "homeGoals": 1,
+              "awayGoals": 1,
+              "stats": null,
+              "teamGoals": 1,
+              "conceded": 1,
+              "result": "D"
+            },
+            {
+              "date": "2026-09-20T14:00:00Z",
+              "home": "Grêmio FBPA",
+              "away": "SE Palmeiras",
+              "homeGoals": 0,
+              "awayGoals": 0,
+              "stats": null,
+              "teamGoals": 0,
+              "conceded": 0,
+              "result": "D"
+            },
+            {
+              "date": "2026-09-16T22:30:00Z",
+              "home": "Botafogo FR",
+              "away": "Grêmio FBPA",
+              "homeGoals": 3,
+              "awayGoals": 2,
+              "stats": null,
+              "teamGoals": 2,
+              "conceded": 3,
+              "result": "L"
+            },
+            {
+              "date": "2026-09-12T19:00:00Z",
+              "home": "Grêmio FBPA",
+              "away": "CR Vasco da Gama",
+              "homeGoals": 1,
+              "awayGoals": 2,
+              "stats": null,
+              "teamGoals": 1,
+              "conceded": 2,
+              "result": "L"
+            },
+            {
+              "date": "2026-09-07T23:00:00Z",
+              "home": "EC Vitória",
+              "away": "Grêmio FBPA",
+              "homeGoals": 1,
+              "awayGoals": 0,
+              "stats": null,
+              "teamGoals": 0,
+              "conceded": 1,
+              "result": "L"
+            },
+            {
+              "date": "2026-08-30T21:30:00Z",
+              "home": "Grêmio FBPA",
+              "away": "Chapecoense AF",
+              "homeGoals": 3,
+              "awayGoals": 1,
+              "stats": null,
+              "teamGoals": 3,
+              "conceded": 1,
+              "result": "W"
+            },
+            {
+              "date": "2026-08-23T19:00:00Z",
+              "home": "RB Bragantino",
+              "away": "Grêmio FBPA",
+              "homeGoals": 1,
+              "awayGoals": 0,
+              "stats": null,
+              "teamGoals": 0,
+              "conceded": 1,
+              "result": "L"
+            },
+            {
+              "date": "2026-08-16T19:00:00Z",
+              "home": "CA Mineiro",
+              "away": "Grêmio FBPA",
+              "homeGoals": 3,
+              "awayGoals": 0,
+              "stats": null,
+              "teamGoals": 0,
+              "conceded": 3,
+              "result": "L"
+            }
+          ],
+          "stats": {
+            "played": 10,
+            "wins": 1,
+            "draws": 3,
+            "losses": 6,
+            "goalsFor": 10,
+            "goalsAgainst": 17,
+            "avgGoalsFor": 1.0,
+            "avgGoalsAgainst": 1.7,
+            "btts": 6,
+            "over15": 7,
+            "over25": 5
+          }
+        },
+        "awayLast10": {
+          "matches": [
+            {
+              "date": "2026-10-17T22:30:00Z",
+              "home": "CA Paranaense",
+              "away": "SE Palmeiras",
+              "homeGoals": 0,
+              "awayGoals": 2,
+              "stats": null,
+              "teamGoals": 0,
+              "conceded": 2,
+              "result": "L"
+            },
+            {
+              "date": "2026-10-12T22:30:00Z",
+              "home": "Chapecoense AF",
+              "away": "CA Paranaense",
+              "homeGoals": 1,
+              "awayGoals": 4,
+              "stats": null,
+              "teamGoals": 4,
+              "conceded": 1,
+              "result": "W"
+            },
+            {
+              "date": "2026-10-08T23:00:00Z",
+              "home": "CA Paranaense",
+              "away": "CA Mineiro",
+              "homeGoals": 2,
+              "awayGoals": 2,
+              "stats": null,
+              "teamGoals": 2,
+              "conceded": 2,
+              "result": "D"
+            },
+            {
+              "date": "2026-09-20T22:30:00Z",
+              "home": "CA Paranaense",
+              "away": "EC Bahia",
+              "homeGoals": 2,
+              "awayGoals": 1,
+              "stats": null,
+              "teamGoals": 2,
+              "conceded": 1,
+              "result": "W"
+            },
+            {
+              "date": "2026-09-12T00:00:00Z",
+              "home": "Coritiba FBC",
+              "away": "CA Paranaense",
+              "homeGoals": 3,
+              "awayGoals": 3,
+              "stats": null,
+              "teamGoals": 3,
+              "conceded": 3,
+              "result": "D"
+            },
+            {
+              "date": "2026-09-06T19:00:00Z",
+              "home": "Cruzeiro EC",
+              "away": "CA Paranaense",
+              "homeGoals": 3,
+              "awayGoals": 1,
+              "stats": null,
+              "teamGoals": 1,
+              "conceded": 3,
+              "result": "L"
+            },
+            {
+              "date": "2026-08-30T14:00:00Z",
+              "home": "CA Paranaense",
+              "away": "Fluminense FC",
+              "homeGoals": 3,
+              "awayGoals": 3,
+              "stats": null,
+              "teamGoals": 3,
+              "conceded": 3,
+              "result": "D"
+            },
+            {
+              "date": "2026-08-24T23:00:00Z",
+              "home": "Botafogo FR",
+              "away": "CA Paranaense",
+              "homeGoals": 2,
+              "awayGoals": 3,
+              "stats": null,
+              "teamGoals": 3,
+              "conceded": 2,
+              "result": "W"
+            },
+            {
+              "date": "2026-08-15T21:30:00Z",
+              "home": "CA Paranaense",
+              "away": "RB Bragantino",
+              "homeGoals": 1,
+              "awayGoals": 1,
+              "stats": null,
+              "teamGoals": 1,
+              "conceded": 1,
+              "result": "D"
+            },
+            {
+              "date": "2026-08-09T21:30:00Z",
+              "home": "Santos FC",
+              "away": "CA Paranaense",
+              "homeGoals": 0,
+              "awayGoals": 2,
+              "stats": null,
+              "teamGoals": 2,
+              "conceded": 0,
+              "result": "W"
+            }
+          ],
+          "stats": {
+            "played": 10,
+            "wins": 4,
+            "draws": 4,
+            "losses": 2,
+            "goalsFor": 21,
+            "goalsAgainst": 18,
+            "avgGoalsFor": 2.1,
+            "avgGoalsAgainst": 1.8,
+            "btts": 8,
+            "over15": 10,
+            "over25": 7
+          }
+        },
+        "h2h": [
+          {
+            "date": "2026-05-02T23:30:00Z",
+            "home": "CA Paranaense",
+            "away": "Grêmio FBPA",
+            "homeGoals": 0,
+            "awayGoals": 0,
+            "stats": null
+          }
+        ]
+      },
+      "hx": 1.15,
+      "ax": 1.5,
+      "probabilities": {
+        "homeWin": 29.0,
+        "draw": 25.6,
+        "awayWin": 45.4,
+        "over15": 74.1,
+        "over25": 49.3,
+        "btts": 53.0
+      },
+      "model": "Poisson na podstawie tabeli",
+      "quality": "low",
+      "confidence": "Niska: użyto także danych ogólnych",
+      "modelStatus": "table_based"
+    },
+    {
+      "id": 559644,
+      "league": "FL1",
+      "leagueName": "Ligue 1",
+      "date": "2026-10-30",
+      "time": "19:00",
+      "kickoff": "2026-10-30T19:00:00+01:00",
+      "home": "Le Havre AC",
+      "away": "Paris Saint-Germain FC",
+      "history": {
+        "homeLast10": {
+          "matches": [
+            {
+              "date": "2026-10-18T15:15:00Z",
+              "home": "Le Havre AC",
+              "away": "AJ Auxerre",
+              "homeGoals": 1,
+              "awayGoals": 3,
+              "stats": null,
+              "teamGoals": 1,
+              "conceded": 3,
+              "result": "L"
+            },
+            {
+              "date": "2026-10-10T15:15:00Z",
+              "home": "Lille OSC",
+              "away": "Le Havre AC",
+              "homeGoals": 1,
+              "awayGoals": 0,
+              "stats": null,
+              "teamGoals": 0,
+              "conceded": 1,
+              "result": "L"
+            },
+            {
+              "date": "2026-09-19T18:45:00Z",
+              "home": "Toulouse FC",
+              "away": "Le Havre AC",
+              "homeGoals": 3,
+              "awayGoals": 2,
+              "stats": null,
+              "teamGoals": 2,
+              "conceded": 3,
+              "result": "L"
+            },
+            {
+              "date": "2026-09-12T18:45:00Z",
+              "home": "Le Havre AC",
+              "away": "Angers SCO",
+              "homeGoals": 0,
+              "awayGoals": 0,
+              "stats": null,
+              "teamGoals": 0,
+              "conceded": 0,
+              "result": "D"
+            },
+            {
+              "date": "2026-09-05T18:45:00Z",
+              "home": "Le Havre AC",
+              "away": "Stade Brestois 29",
+              "homeGoals": 1,
+              "awayGoals": 2,
+              "stats": null,
+              "teamGoals": 1,
+              "conceded": 2,
+              "result": "L"
+            },
+            {
+              "date": "2026-08-29T18:45:00Z",
+              "home": "Olympique Lyonnais",
+              "away": "Le Havre AC",
+              "homeGoals": 1,
+              "awayGoals": 1,
+              "stats": null,
+              "teamGoals": 1,
+              "conceded": 1,
+              "result": "D"
+            },
+            {
+              "date": "2026-08-23T15:15:00Z",
+              "home": "Le Havre AC",
+              "away": "AS Monaco FC",
+              "homeGoals": 0,
+              "awayGoals": 1,
+              "stats": null,
+              "teamGoals": 0,
+              "conceded": 1,
+              "result": "L"
+            },
+            {
+              "date": "2026-05-17T19:00:00Z",
+              "home": "FC Lorient",
+              "away": "Le Havre AC",
+              "homeGoals": 0,
+              "awayGoals": 2,
+              "stats": null,
+              "teamGoals": 2,
+              "conceded": 0,
+              "result": "W"
+            },
+            {
+              "date": "2026-05-10T19:00:00Z",
+              "home": "Le Havre AC",
+              "away": "Olympique de Marseille",
+              "homeGoals": 0,
+              "awayGoals": 1,
+              "stats": null,
+              "teamGoals": 0,
+              "conceded": 1,
+              "result": "L"
+            },
+            {
+              "date": "2026-05-03T13:00:00Z",
+              "home": "Lille OSC",
+              "away": "Le Havre AC",
+              "homeGoals": 1,
+              "awayGoals": 1,
+              "stats": null,
+              "teamGoals": 1,
+              "conceded": 1,
+              "result": "D"
+            }
+          ],
+          "stats": {
+            "played": 10,
+            "wins": 1,
+            "draws": 3,
+            "losses": 6,
+            "goalsFor": 8,
+            "goalsAgainst": 13,
+            "avgGoalsFor": 0.8,
+            "avgGoalsAgainst": 1.3,
+            "btts": 5,
+            "over15": 6,
+            "over25": 3
+          }
+        },
+        "awayLast10": {
+          "matches": [
+            {
+              "date": "2026-10-17T15:15:00Z",
+              "home": "RC Strasbourg Alsace",
+              "away": "Paris Saint-Germain FC",
+              "homeGoals": 1,
+              "awayGoals": 3,
+              "stats": null,
+              "teamGoals": 3,
+              "conceded": 1,
+              "result": "W"
+            },
+            {
+              "date": "2026-10-10T18:45:00Z",
+              "home": "Paris Saint-Germain FC",
+              "away": "Le Mans FC",
+              "homeGoals": 3,
+              "awayGoals": 1,
+              "stats": null,
+              "teamGoals": 3,
+              "conceded": 1,
+              "result": "W"
+            },
+            {
+              "date": "2026-09-20T18:45:00Z",
+              "home": "Olympique de Marseille",
+              "away": "Paris Saint-Germain FC",
+              "homeGoals": 1,
+              "awayGoals": 2,
+              "stats": null,
+              "teamGoals": 2,
+              "conceded": 1,
+              "result": "W"
+            },
+            {
+              "date": "2026-09-13T18:45:00Z",
+              "home": "Stade Brestois 29",
+              "away": "Paris Saint-Germain FC",
+              "homeGoals": 0,
+              "awayGoals": 1,
+              "stats": null,
+              "teamGoals": 1,
+              "conceded": 0,
+              "result": "W"
+            },
+            {
+              "date": "2026-09-04T19:05:00Z",
+              "home": "Paris Saint-Germain FC",
+              "away": "AS Monaco FC",
+              "homeGoals": 1,
+              "awayGoals": 2,
+              "stats": null,
+              "teamGoals": 1,
+              "conceded": 2,
+              "result": "L"
+            },
+            {
+              "date": "2026-08-28T18:45:00Z",
+              "home": "Lille OSC",
+              "away": "Paris Saint-Germain FC",
+              "homeGoals": 2,
+              "awayGoals": 2,
+              "stats": null,
+              "teamGoals": 2,
+              "conceded": 2,
+              "result": "D"
+            },
+            {
+              "date": "2026-08-23T18:45:00Z",
+              "home": "Stade Rennais FC 1901",
+              "away": "Paris Saint-Germain FC",
+              "homeGoals": 2,
+              "awayGoals": 2,
+              "stats": null,
+              "teamGoals": 2,
+              "conceded": 2,
+              "result": "D"
+            },
+            {
+              "date": "2026-05-17T19:00:00Z",
+              "home": "Paris FC",
+              "away": "Paris Saint-Germain FC",
+              "homeGoals": 2,
+              "awayGoals": 1,
+              "stats": null,
+              "teamGoals": 1,
+              "conceded": 2,
+              "result": "L"
+            },
+            {
+              "date": "2026-05-13T19:00:00Z",
+              "home": "Racing Club de Lens",
+              "away": "Paris Saint-Germain FC",
+              "homeGoals": 0,
+              "awayGoals": 2,
+              "stats": null,
+              "teamGoals": 2,
+              "conceded": 0,
+              "result": "W"
+            },
+            {
+              "date": "2026-05-10T19:00:00Z",
+              "home": "Paris Saint-Germain FC",
+              "away": "Stade Brestois 29",
+              "homeGoals": 1,
+              "awayGoals": 0,
+              "stats": null,
+              "teamGoals": 1,
+              "conceded": 0,
+              "result": "W"
+            }
+          ],
+          "stats": {
+            "played": 10,
+            "wins": 6,
+            "draws": 2,
+            "losses": 2,
+            "goalsFor": 18,
+            "goalsAgainst": 11,
+            "avgGoalsFor": 1.8,
+            "avgGoalsAgainst": 1.1,
+            "btts": 7,
+            "over15": 8,
+            "over25": 7
+          }
+        },
+        "h2h": []
+      },
+      "hx": 1.0,
+      "ax": 1.79,
+      "probabilities": {
+        "homeWin": 21.0,
+        "draw": 23.2,
+        "awayWin": 55.8,
+        "over15": 76.6,
+        "over25": 52.7,
+        "btts": 52.6
+      },
+      "model": "Poisson na podstawie tabeli",
+      "quality": "low",
+      "confidence": "Niska: użyto także danych ogólnych",
+      "modelStatus": "table_based"
+    },
+    {
+      "id": 565846,
+      "league": "BL1",
+      "leagueName": "Bundesliga",
+      "date": "2026-10-30",
+      "time": "20:30",
+      "kickoff": "2026-10-30T20:30:00+01:00",
+      "home": "SV 07 Elversberg",
+      "away": "1. FSV Mainz 05",
+      "history": {
+        "homeLast10": {
+          "matches": [
+            {
+              "date": "2026-10-17T13:30:00Z",
+              "home": "SV 07 Elversberg",
+              "away": "FC Augsburg",
+              "homeGoals": 4,
+              "awayGoals": 3,
+              "stats": null,
+              "teamGoals": 4,
+              "conceded": 3,
+              "result": "W"
+            },
+            {
+              "date": "2026-10-10T13:30:00Z",
+              "home": "1. FC Union Berlin",
+              "away": "SV 07 Elversberg",
+              "homeGoals": 1,
+              "awayGoals": 0,
+              "stats": null,
+              "teamGoals": 0,
+              "conceded": 1,
+              "result": "L"
+            },
+            {
+              "date": "2026-09-20T15:30:00Z",
+              "home": "FC Schalke 04",
+              "away": "SV 07 Elversberg",
+              "homeGoals": 0,
+              "awayGoals": 0,
+              "stats": null,
+              "teamGoals": 0,
+              "conceded": 0,
+              "result": "D"
+            },
+            {
+              "date": "2026-09-13T15:30:00Z",
+              "home": "SV 07 Elversberg",
+              "away": "FC Bayern München",
+              "homeGoals": 1,
+              "awayGoals": 2,
+              "stats": null,
+              "teamGoals": 1,
+              "conceded": 2,
+              "result": "L"
+            },
+            {
+              "date": "2026-09-05T13:30:00Z",
+              "home": "Borussia Mönchengladbach",
+              "away": "SV 07 Elversberg",
+              "homeGoals": 3,
+              "awayGoals": 4,
+              "stats": null,
+              "teamGoals": 4,
+              "conceded": 3,
+              "result": "W"
+            },
+            {
+              "date": "2026-08-29T13:30:00Z",
+              "home": "SV 07 Elversberg",
+              "away": "Bayer 04 Leverkusen",
+              "homeGoals": 3,
+              "awayGoals": 2,
+              "stats": null,
+              "teamGoals": 3,
+              "conceded": 2,
+              "result": "W"
+            }
+          ],
+          "stats": {
+            "played": 6,
+            "wins": 3,
+            "draws": 1,
+            "losses": 2,
+            "goalsFor": 12,
+            "goalsAgainst": 11,
+            "avgGoalsFor": 2.0,
+            "avgGoalsAgainst": 1.83,
+            "btts": 4,
+            "over15": 4,
+            "over25": 4
+          }
+        },
+        "awayLast10": {
+          "matches": [
+            {
+              "date": "2026-10-17T13:30:00Z",
+              "home": "FC Schalke 04",
+              "away": "1. FSV Mainz 05",
+              "homeGoals": 0,
+              "awayGoals": 1,
+              "stats": null,
+              "teamGoals": 1,
+              "conceded": 0,
+              "result": "W"
+            },
+            {
+              "date": "2026-10-10T13:30:00Z",
+              "home": "1. FSV Mainz 05",
+              "away": "Bayer 04 Leverkusen",
+              "homeGoals": 3,
+              "awayGoals": 4,
+              "stats": null,
+              "teamGoals": 3,
+              "conceded": 4,
+              "result": "L"
+            },
+            {
+              "date": "2026-09-19T13:30:00Z",
+              "home": "Borussia Mönchengladbach",
+              "away": "1. FSV Mainz 05",
+              "homeGoals": 3,
+              "awayGoals": 4,
+              "stats": null,
+              "teamGoals": 4,
+              "conceded": 3,
+              "result": "W"
+            },
+            {
+              "date": "2026-09-12T13:30:00Z",
+              "home": "1. FSV Mainz 05",
+              "away": "Eintracht Frankfurt",
+              "homeGoals": 1,
+              "awayGoals": 3,
+              "stats": null,
+              "teamGoals": 1,
+              "conceded": 3,
+              "result": "L"
+            },
+            {
+              "date": "2026-09-06T13:30:00Z",
+              "home": "Hamburger SV",
+              "away": "1. FSV Mainz 05",
+              "homeGoals": 0,
+              "awayGoals": 5,
+              "stats": null,
+              "teamGoals": 5,
+              "conceded": 0,
+              "result": "W"
+            },
+            {
+              "date": "2026-08-29T13:30:00Z",
+              "home": "1. FSV Mainz 05",
+              "away": "SC Paderborn 07",
+              "homeGoals": 0,
+              "awayGoals": 0,
+              "stats": null,
+              "teamGoals": 0,
+              "conceded": 0,
+              "result": "D"
+            },
+            {
+              "date": "2026-05-16T13:30:00Z",
+              "home": "1. FC Heidenheim 1846",
+              "away": "1. FSV Mainz 05",
+              "homeGoals": 0,
+              "awayGoals": 2,
+              "stats": null,
+              "teamGoals": 2,
+              "conceded": 0,
+              "result": "W"
+            },
+            {
+              "date": "2026-05-10T17:30:00Z",
+              "home": "1. FSV Mainz 05",
+              "away": "1. FC Union Berlin",
+              "homeGoals": 1,
+              "awayGoals": 3,
+              "stats": null,
+              "teamGoals": 1,
+              "conceded": 3,
+              "result": "L"
+            },
+            {
+              "date": "2026-05-03T13:30:00Z",
+              "home": "FC St. Pauli 1910",
+              "away": "1. FSV Mainz 05",
+              "homeGoals": 1,
+              "awayGoals": 2,
+              "stats": null,
+              "teamGoals": 2,
+              "conceded": 1,
+              "result": "W"
+            }
+          ],
+          "stats": {
+            "played": 9,
+            "wins": 5,
+            "draws": 1,
+            "losses": 3,
+            "goalsFor": 19,
+            "goalsAgainst": 14,
+            "avgGoalsFor": 2.11,
+            "avgGoalsAgainst": 1.56,
+            "btts": 5,
+            "over15": 7,
+            "over25": 6
+          }
+        },
+        "h2h": []
+      },
+      "hx": 1.83,
+      "ax": 2.08,
+      "probabilities": {
+        "homeWin": 34.7,
+        "draw": 20.8,
+        "awayWin": 44.5,
+        "over15": 90.2,
+        "over25": 74.9,
+        "btts": 73.5
+      },
+      "model": "Poisson na podstawie tabeli",
+      "quality": "low",
+      "confidence": "Niska: użyto także danych ogólnych",
+      "modelStatus": "table_based"
+    },
+    {
+      "id": 561916,
+      "league": "ELC",
+      "leagueName": "Championship",
+      "date": "2026-10-30",
+      "time": "21:00",
+      "kickoff": "2026-10-30T21:00:00+01:00",
+      "home": "Sheffield United FC",
+      "away": "Wrexham AFC",
+      "history": {
+        "homeLast10": {
+          "matches": [
+            {
+              "date": "2026-10-17T14:00:00Z",
+              "home": "Bristol City FC",
+              "away": "Sheffield United FC",
+              "homeGoals": 0,
+              "awayGoals": 1,
+              "stats": null,
+              "teamGoals": 1,
+              "conceded": 0,
+              "result": "W"
+            },
+            {
+              "date": "2026-10-14T18:45:00Z",
+              "home": "Portsmouth FC",
+              "away": "Sheffield United FC",
+              "homeGoals": 3,
+              "awayGoals": 2,
+              "stats": null,
+              "teamGoals": 2,
+              "conceded": 3,
+              "result": "L"
+            },
+            {
+              "date": "2026-10-10T14:00:00Z",
+              "home": "Sheffield United FC",
+              "away": "Lincoln City FC",
+              "homeGoals": 3,
+              "awayGoals": 0,
+              "stats": null,
+              "teamGoals": 3,
+              "conceded": 0,
+              "result": "W"
+            },
+            {
+              "date": "2026-09-19T11:30:00Z",
+              "home": "Stoke City FC",
+              "away": "Sheffield United FC",
+              "homeGoals": 2,
+              "awayGoals": 1,
+              "stats": null,
+              "teamGoals": 1,
+              "conceded": 2,
+              "result": "L"
+            },
+            {
+              "date": "2026-09-13T11:00:00Z",
+              "home": "Sheffield United FC",
+              "away": "Wolverhampton Wanderers FC",
+              "homeGoals": 0,
+              "awayGoals": 1,
+              "stats": null,
+              "teamGoals": 0,
+              "conceded": 1,
+              "result": "L"
+            },
+            {
+              "date": "2026-09-08T18:45:00Z",
+              "home": "Blackburn Rovers FC",
+              "away": "Sheffield United FC",
+              "homeGoals": 1,
+              "awayGoals": 2,
+              "stats": null,
+              "teamGoals": 2,
+              "conceded": 1,
+              "result": "W"
+            },
+            {
+              "date": "2026-09-05T14:00:00Z",
+              "home": "Sheffield United FC",
+              "away": "Norwich City FC",
+              "homeGoals": 1,
+              "awayGoals": 3,
+              "stats": null,
+              "teamGoals": 1,
+              "conceded": 3,
+              "result": "L"
+            },
+            {
+              "date": "2026-09-01T18:45:00Z",
+              "home": "Sheffield United FC",
+              "away": "Bolton Wanderers FC",
+              "homeGoals": 3,
+              "awayGoals": 2,
+              "stats": null,
+              "teamGoals": 3,
+              "conceded": 2,
+              "result": "W"
+            },
+            {
+              "date": "2026-08-29T14:00:00Z",
+              "home": "Cardiff City FC",
+              "away": "Sheffield United FC",
+              "homeGoals": 2,
+              "awayGoals": 2,
+              "stats": null,
+              "teamGoals": 2,
+              "conceded": 2,
+              "result": "D"
+            },
+            {
+              "date": "2026-08-22T14:00:00Z",
+              "home": "Swansea City AFC",
+              "away": "Sheffield United FC",
+              "homeGoals": 0,
+              "awayGoals": 0,
+              "stats": null,
+              "teamGoals": 0,
+              "conceded": 0,
+              "result": "D"
+            }
+          ],
+          "stats": {
+            "played": 10,
+            "wins": 4,
+            "draws": 2,
+            "losses": 4,
+            "goalsFor": 15,
+            "goalsAgainst": 14,
+            "avgGoalsFor": 1.5,
+            "avgGoalsAgainst": 1.4,
+            "btts": 6,
+            "over15": 7,
+            "over25": 7
+          }
+        },
+        "awayLast10": {
+          "matches": [
+            {
+              "date": "2026-10-17T14:00:00Z",
+              "home": "Wrexham AFC",
+              "away": "Preston North End FC",
+              "homeGoals": 4,
+              "awayGoals": 1,
+              "stats": null,
+              "teamGoals": 4,
+              "conceded": 1,
+              "result": "W"
+            },
+            {
+              "date": "2026-10-13T18:45:00Z",
+              "home": "Wrexham AFC",
+              "away": "West Bromwich Albion FC",
+              "homeGoals": 1,
+              "awayGoals": 2,
+              "stats": null,
+              "teamGoals": 1,
+              "conceded": 2,
+              "result": "L"
+            },
+            {
+              "date": "2026-10-10T14:00:00Z",
+              "home": "Derby County FC",
+              "away": "Wrexham AFC",
+              "homeGoals": 1,
+              "awayGoals": 1,
+              "stats": null,
+              "teamGoals": 1,
+              "conceded": 1,
+              "result": "D"
+            },
+            {
+              "date": "2026-09-19T14:00:00Z",
+              "home": "Wrexham AFC",
+              "away": "Southampton FC",
+              "homeGoals": 2,
+              "awayGoals": 1,
+              "stats": null,
+              "teamGoals": 2,
+              "conceded": 1,
+              "result": "W"
+            },
+            {
+              "date": "2026-09-11T19:00:00Z",
+              "home": "West Ham United FC",
+              "away": "Wrexham AFC",
+              "homeGoals": 6,
+              "awayGoals": 0,
+              "stats": null,
+              "teamGoals": 0,
+              "conceded": 6,
+              "result": "L"
+            },
+            {
+              "date": "2026-09-08T18:45:00Z",
+              "home": "Wrexham AFC",
+              "away": "Burnley FC",
+              "homeGoals": 1,
+              "awayGoals": 1,
+              "stats": null,
+              "teamGoals": 1,
+              "conceded": 1,
+              "result": "D"
+            },
+            {
+              "date": "2026-09-05T19:00:00Z",
+              "home": "Swansea City AFC",
+              "away": "Wrexham AFC",
+              "homeGoals": 0,
+              "awayGoals": 0,
+              "stats": null,
+              "teamGoals": 0,
+              "conceded": 0,
+              "result": "D"
+            },
+            {
+              "date": "2026-09-02T18:45:00Z",
+              "home": "Millwall FC",
+              "away": "Wrexham AFC",
+              "homeGoals": 0,
+              "awayGoals": 3,
+              "stats": null,
+              "teamGoals": 3,
+              "conceded": 0,
+              "result": "W"
+            },
+            {
+              "date": "2026-08-28T19:00:00Z",
+              "home": "Wrexham AFC",
+              "away": "Birmingham City FC",
+              "homeGoals": 1,
+              "awayGoals": 2,
+              "stats": null,
+              "teamGoals": 1,
+              "conceded": 2,
+              "result": "L"
+            },
+            {
+              "date": "2026-08-22T14:00:00Z",
+              "home": "Wrexham AFC",
+              "away": "Watford FC",
+              "homeGoals": 1,
+              "awayGoals": 1,
+              "stats": null,
+              "teamGoals": 1,
+              "conceded": 1,
+              "result": "D"
+            }
+          ],
+          "stats": {
+            "played": 10,
+            "wins": 3,
+            "draws": 4,
+            "losses": 3,
+            "goalsFor": 14,
+            "goalsAgainst": 15,
+            "avgGoalsFor": 1.4,
+            "avgGoalsAgainst": 1.5,
+            "btts": 7,
+            "over15": 9,
+            "over25": 6
+          }
+        },
+        "h2h": []
+      },
+      "hx": 1.41,
+      "ax": 1.32,
+      "probabilities": {
+        "homeWin": 39.3,
+        "draw": 25.6,
+        "awayWin": 35.1,
+        "over15": 75.6,
+        "over25": 51.3,
+        "btts": 55.3
+      },
+      "model": "Poisson na podstawie tabeli",
+      "quality": "low",
+      "confidence": "Niska: użyto także danych ogólnych",
+      "modelStatus": "table_based"
+    },
+    {
+      "id": 564737,
+      "league": "PD",
+      "leagueName": "LaLiga",
+      "date": "2026-10-30",
+      "time": "21:00",
+      "kickoff": "2026-10-30T21:00:00+01:00",
+      "home": "Villarreal CF",
+      "away": "RCD Espanyol de Barcelona",
+      "history": {
+        "homeLast10": {
+          "matches": [
+            {
+              "date": "2026-10-17T14:15:00Z",
+              "home": "Villarreal CF",
+              "away": "Elche CF",
+              "homeGoals": 0,
+              "awayGoals": 0,
+              "stats": null,
+              "teamGoals": 0,
+              "conceded": 0,
+              "result": "D"
+            },
+            {
+              "date": "2026-10-10T19:00:00Z",
+              "home": "Real Madrid CF",
+              "away": "Villarreal CF",
+              "homeGoals": 1,
+              "awayGoals": 0,
+              "stats": null,
+              "teamGoals": 0,
+              "conceded": 1,
+              "result": "L"
+            },
+            {
+              "date": "2026-09-20T16:30:00Z",
+              "home": "Villarreal CF",
+              "away": "Levante UD",
+              "homeGoals": 3,
+              "awayGoals": 1,
+              "stats": null,
+              "teamGoals": 3,
+              "conceded": 1,
+              "result": "W"
+            },
+            {
+              "date": "2026-09-17T19:30:00Z",
+              "home": "Málaga CF",
+              "away": "Villarreal CF",
+              "homeGoals": 1,
+              "awayGoals": 3,
+              "stats": null,
+              "teamGoals": 3,
+              "conceded": 1,
+              "result": "W"
+            },
+            {
+              "date": "2026-09-14T19:00:00Z",
+              "home": "Villarreal CF",
+              "away": "Real Betis Balompié",
+              "homeGoals": 1,
+              "awayGoals": 2,
+              "stats": null,
+              "teamGoals": 1,
+              "conceded": 2,
+              "result": "L"
+            },
+            {
+              "date": "2026-09-05T19:00:00Z",
+              "home": "Villarreal CF",
+              "away": "RC Deportivo La Coruña",
+              "homeGoals": 2,
+              "awayGoals": 3,
+              "stats": null,
+              "teamGoals": 2,
+              "conceded": 3,
+              "result": "L"
+            },
+            {
+              "date": "2026-08-28T19:30:00Z",
+              "home": "Deportivo Alavés",
+              "away": "Villarreal CF",
+              "homeGoals": 1,
+              "awayGoals": 0,
+              "stats": null,
+              "teamGoals": 0,
+              "conceded": 1,
+              "result": "L"
+            },
+            {
+              "date": "2026-08-23T15:00:00Z",
+              "home": "Club Atlético de Madrid",
+              "away": "Villarreal CF",
+              "homeGoals": 2,
+              "awayGoals": 2,
+              "stats": null,
+              "teamGoals": 2,
+              "conceded": 2,
+              "result": "D"
+            },
+            {
+              "date": "2026-08-16T15:00:00Z",
+              "home": "Real Racing Club de Santander",
+              "away": "Villarreal CF",
+              "homeGoals": 2,
+              "awayGoals": 2,
+              "stats": null,
+              "teamGoals": 2,
+              "conceded": 2,
+              "result": "D"
+            },
+            {
+              "date": "2026-05-24T19:00:00Z",
+              "home": "Villarreal CF",
+              "away": "Club Atlético de Madrid",
+              "homeGoals": 5,
+              "awayGoals": 1,
+              "stats": null,
+              "teamGoals": 5,
+              "conceded": 1,
+              "result": "W"
+            }
+          ],
+          "stats": {
+            "played": 10,
+            "wins": 3,
+            "draws": 3,
+            "losses": 4,
+            "goalsFor": 18,
+            "goalsAgainst": 14,
+            "avgGoalsFor": 1.8,
+            "avgGoalsAgainst": 1.4,
+            "btts": 7,
+            "over15": 7,
+            "over25": 7
+          }
+        },
+        "awayLast10": {
+          "matches": [
+            {
+              "date": "2026-10-17T12:00:00Z",
+              "home": "RCD Espanyol de Barcelona",
+              "away": "Club Atlético de Madrid",
+              "homeGoals": 0,
+              "awayGoals": 1,
+              "stats": null,
+              "teamGoals": 0,
+              "conceded": 1,
+              "result": "L"
+            },
+            {
+              "date": "2026-10-09T19:00:00Z",
+              "home": "Málaga CF",
+              "away": "RCD Espanyol de Barcelona",
+              "homeGoals": 1,
+              "awayGoals": 1,
+              "stats": null,
+              "teamGoals": 1,
+              "conceded": 1,
+              "result": "D"
+            },
+            {
+              "date": "2026-09-18T19:00:00Z",
+              "home": "RCD Espanyol de Barcelona",
+              "away": "Elche CF",
+              "homeGoals": 1,
+              "awayGoals": 3,
+              "stats": null,
+              "teamGoals": 1,
+              "conceded": 3,
+              "result": "L"
+            },
+            {
+              "date": "2026-09-15T17:00:00Z",
+              "home": "Rayo Vallecano de Madrid",
+              "away": "RCD Espanyol de Barcelona",
+              "homeGoals": 2,
+              "awayGoals": 1,
+              "stats": null,
+              "teamGoals": 1,
+              "conceded": 2,
+              "result": "L"
+            },
+            {
+              "date": "2026-09-12T14:15:00Z",
+              "home": "CA Osasuna",
+              "away": "RCD Espanyol de Barcelona",
+              "homeGoals": 0,
+              "awayGoals": 2,
+              "stats": null,
+              "teamGoals": 2,
+              "conceded": 0,
+              "result": "W"
+            },
+            {
+              "date": "2026-09-06T19:00:00Z",
+              "home": "RCD Espanyol de Barcelona",
+              "away": "Sevilla FC",
+              "homeGoals": 1,
+              "awayGoals": 1,
+              "stats": null,
+              "teamGoals": 1,
+              "conceded": 1,
+              "result": "D"
+            },
+            {
+              "date": "2026-08-29T17:00:00Z",
+              "home": "Real Sociedad de Fútbol",
+              "away": "RCD Espanyol de Barcelona",
+              "homeGoals": 2,
+              "awayGoals": 1,
+              "stats": null,
+              "teamGoals": 1,
+              "conceded": 2,
+              "result": "L"
+            },
+            {
+              "date": "2026-08-22T19:30:00Z",
+              "home": "RCD Espanyol de Barcelona",
+              "away": "Real Madrid CF",
+              "homeGoals": 1,
+              "awayGoals": 2,
+              "stats": null,
+              "teamGoals": 1,
+              "conceded": 2,
+              "result": "L"
+            },
+            {
+              "date": "2026-08-16T17:00:00Z",
+              "home": "RCD Espanyol de Barcelona",
+              "away": "Levante UD",
+              "homeGoals": 3,
+              "awayGoals": 0,
+              "stats": null,
+              "teamGoals": 3,
+              "conceded": 0,
+              "result": "W"
+            },
+            {
+              "date": "2026-05-23T19:00:00Z",
+              "home": "RCD Espanyol de Barcelona",
+              "away": "Real Sociedad de Fútbol",
+              "homeGoals": 1,
+              "awayGoals": 1,
+              "stats": null,
+              "teamGoals": 1,
+              "conceded": 1,
+              "result": "D"
+            }
+          ],
+          "stats": {
+            "played": 10,
+            "wins": 2,
+            "draws": 3,
+            "losses": 5,
+            "goalsFor": 12,
+            "goalsAgainst": 13,
+            "avgGoalsFor": 1.2,
+            "avgGoalsAgainst": 1.3,
+            "btts": 7,
+            "over15": 9,
+            "over25": 5
+          }
+        },
+        "h2h": []
+      },
+      "hx": 1.39,
+      "ax": 1.33,
+      "probabilities": {
+        "homeWin": 38.4,
+        "draw": 25.7,
+        "awayWin": 35.9,
+        "over15": 75.5,
+        "over25": 51.2,
+        "btts": 55.3
+      },
+      "model": "Poisson na podstawie tabeli",
+      "quality": "low",
+      "confidence": "Niska: użyto także danych ogólnych",
+      "modelStatus": "table_based"
+    },
+    {
+      "id": 559639,
+      "league": "FL1",
+      "leagueName": "Ligue 1",
+      "date": "2026-10-30",
+      "time": "21:05",
+      "kickoff": "2026-10-30T21:05:00+01:00",
+      "home": "Lille OSC",
+      "away": "Racing Club de Lens",
+      "history": {
+        "homeLast10": {
+          "matches": [
+            {
+              "date": "2026-10-17T18:45:00Z",
+              "home": "Lille OSC",
+              "away": "Stade Brestois 29",
+              "homeGoals": 1,
+              "awayGoals": 1,
+              "stats": null,
+              "teamGoals": 1,
+              "conceded": 1,
+              "result": "D"
+            },
+            {
+              "date": "2026-10-10T15:15:00Z",
+              "home": "Lille OSC",
+              "away": "Le Havre AC",
+              "homeGoals": 1,
+              "awayGoals": 0,
+              "stats": null,
+              "teamGoals": 1,
+              "conceded": 0,
+              "result": "W"
+            },
+            {
+              "date": "2026-09-20T15:15:00Z",
+              "home": "OGC Nice",
+              "away": "Lille OSC",
+              "homeGoals": 2,
+              "awayGoals": 1,
+              "stats": null,
+              "teamGoals": 1,
+              "conceded": 2,
+              "result": "L"
+            },
+            {
+              "date": "2026-09-13T13:00:00Z",
+              "home": "Lille OSC",
+              "away": "ES Troyes AC",
+              "homeGoals": 2,
+              "awayGoals": 0,
+              "stats": null,
+              "teamGoals": 2,
+              "conceded": 0,
+              "result": "W"
+            },
+            {
+              "date": "2026-09-03T18:45:00Z",
+              "home": "Toulouse FC",
+              "away": "Lille OSC",
+              "homeGoals": 0,
+              "awayGoals": 1,
+              "stats": null,
+              "teamGoals": 1,
+              "conceded": 0,
+              "result": "W"
+            },
+            {
+              "date": "2026-08-28T18:45:00Z",
+              "home": "Lille OSC",
+              "away": "Paris Saint-Germain FC",
+              "homeGoals": 2,
+              "awayGoals": 2,
+              "stats": null,
+              "teamGoals": 2,
+              "conceded": 2,
+              "result": "D"
+            },
+            {
+              "date": "2026-08-23T13:00:00Z",
+              "home": "Angers SCO",
+              "away": "Lille OSC",
+              "homeGoals": 0,
+              "awayGoals": 2,
+              "stats": null,
+              "teamGoals": 2,
+              "conceded": 0,
+              "result": "W"
+            },
+            {
+              "date": "2026-05-17T19:00:00Z",
+              "home": "Lille OSC",
+              "away": "AJ Auxerre",
+              "homeGoals": 0,
+              "awayGoals": 2,
+              "stats": null,
+              "teamGoals": 0,
+              "conceded": 2,
+              "result": "L"
+            },
+            {
+              "date": "2026-05-10T19:00:00Z",
+              "home": "AS Monaco FC",
+              "away": "Lille OSC",
+              "homeGoals": 0,
+              "awayGoals": 1,
+              "stats": null,
+              "teamGoals": 1,
+              "conceded": 0,
+              "result": "W"
+            },
+            {
+              "date": "2026-05-03T13:00:00Z",
+              "home": "Lille OSC",
+              "away": "Le Havre AC",
+              "homeGoals": 1,
+              "awayGoals": 1,
+              "stats": null,
+              "teamGoals": 1,
+              "conceded": 1,
+              "result": "D"
+            }
+          ],
+          "stats": {
+            "played": 10,
+            "wins": 5,
+            "draws": 3,
+            "losses": 2,
+            "goalsFor": 12,
+            "goalsAgainst": 8,
+            "avgGoalsFor": 1.2,
+            "avgGoalsAgainst": 0.8,
+            "btts": 4,
+            "over15": 7,
+            "over25": 2
+          }
+        },
+        "awayLast10": {
+          "matches": [
+            {
+              "date": "2026-10-17T18:45:00Z",
+              "home": "ES Troyes AC",
+              "away": "Racing Club de Lens",
+              "homeGoals": 1,
+              "awayGoals": 3,
+              "stats": null,
+              "teamGoals": 3,
+              "conceded": 1,
+              "result": "W"
+            },
+            {
+              "date": "2026-10-09T18:45:00Z",
+              "home": "Racing Club de Lens",
+              "away": "Olympique Lyonnais",
+              "homeGoals": 2,
+              "awayGoals": 1,
+              "stats": null,
+              "teamGoals": 2,
+              "conceded": 1,
+              "result": "W"
+            },
+            {
+              "date": "2026-09-18T18:45:00Z",
+              "home": "AS Monaco FC",
+              "away": "Racing Club de Lens",
+              "homeGoals": 2,
+              "awayGoals": 1,
+              "stats": null,
+              "teamGoals": 1,
+              "conceded": 2,
+              "result": "L"
+            },
+            {
+              "date": "2026-09-13T15:15:00Z",
+              "home": "Le Mans FC",
+              "away": "Racing Club de Lens",
+              "homeGoals": 2,
+              "awayGoals": 2,
+              "stats": null,
+              "teamGoals": 2,
+              "conceded": 2,
+              "result": "D"
+            },
+            {
+              "date": "2026-09-05T15:15:00Z",
+              "home": "Racing Club de Lens",
+              "away": "FC Lorient",
+              "homeGoals": 0,
+              "awayGoals": 1,
+              "stats": null,
+              "teamGoals": 0,
+              "conceded": 1,
+              "result": "L"
+            },
+            {
+              "date": "2026-08-29T15:15:00Z",
+              "home": "RC Strasbourg Alsace",
+              "away": "Racing Club de Lens",
+              "homeGoals": 2,
+              "awayGoals": 1,
+              "stats": null,
+              "teamGoals": 1,
+              "conceded": 2,
+              "result": "L"
+            },
+            {
+              "date": "2026-08-22T15:15:00Z",
+              "home": "Racing Club de Lens",
+              "away": "AJ Auxerre",
+              "homeGoals": 5,
+              "awayGoals": 2,
+              "stats": null,
+              "teamGoals": 5,
+              "conceded": 2,
+              "result": "W"
+            },
+            {
+              "date": "2026-05-17T19:00:00Z",
+              "home": "Olympique Lyonnais",
+              "away": "Racing Club de Lens",
+              "homeGoals": 0,
+              "awayGoals": 4,
+              "stats": null,
+              "teamGoals": 4,
+              "conceded": 0,
+              "result": "W"
+            },
+            {
+              "date": "2026-05-13T19:00:00Z",
+              "home": "Racing Club de Lens",
+              "away": "Paris Saint-Germain FC",
+              "homeGoals": 0,
+              "awayGoals": 2,
+              "stats": null,
+              "teamGoals": 0,
+              "conceded": 2,
+              "result": "L"
+            },
+            {
+              "date": "2026-05-08T18:45:00Z",
+              "home": "Racing Club de Lens",
+              "away": "FC Nantes",
+              "homeGoals": 1,
+              "awayGoals": 0,
+              "stats": null,
+              "teamGoals": 1,
+              "conceded": 0,
+              "result": "W"
+            }
+          ],
+          "stats": {
+            "played": 10,
+            "wins": 5,
+            "draws": 1,
+            "losses": 4,
+            "goalsFor": 19,
+            "goalsAgainst": 13,
+            "avgGoalsFor": 1.9,
+            "avgGoalsAgainst": 1.3,
+            "btts": 6,
+            "over15": 8,
+            "over25": 7
+          }
+        },
+        "h2h": []
+      },
+      "hx": 1.5,
+      "ax": 1.36,
+      "probabilities": {
+        "homeWin": 40.7,
+        "draw": 24.9,
+        "awayWin": 34.3,
+        "over15": 77.8,
+        "over25": 54.4,
+        "btts": 57.7
+      },
+      "model": "Poisson na podstawie tabeli",
+      "quality": "low",
+      "confidence": "Niska: użyto także danych ogólnych",
+      "modelStatus": "table_based"
+    },
+    {
+      "id": 567344,
+      "league": "PPL",
+      "leagueName": "Primeira Liga",
+      "date": "2026-10-30",
+      "time": "21:15",
+      "kickoff": "2026-10-30T21:15:00+01:00",
+      "home": "Casa Pia AC",
+      "away": "Sporting Clube de Portugal",
+      "history": {
+        "homeLast10": {
+          "matches": [
+            {
+              "date": "2026-10-10T19:30:00Z",
+              "home": "Casa Pia AC",
+              "away": "CD Santa Clara",
+              "homeGoals": 0,
+              "awayGoals": 1,
+              "stats": null,
+              "teamGoals": 0,
+              "conceded": 1,
+              "result": "L"
+            },
+            {
+              "date": "2026-09-20T17:00:00Z",
+              "home": "GD Estoril Praia",
+              "away": "Casa Pia AC",
+              "homeGoals": 1,
+              "awayGoals": 2,
+              "stats": null,
+              "teamGoals": 2,
+              "conceded": 1,
+              "result": "W"
+            },
+            {
+              "date": "2026-09-12T17:00:00Z",
+              "home": "Casa Pia AC",
+              "away": "FC Porto",
+              "homeGoals": 1,
+              "awayGoals": 4,
+              "stats": null,
+              "teamGoals": 1,
+              "conceded": 4,
+              "result": "L"
+            },
+            {
+              "date": "2026-09-06T17:00:00Z",
+              "home": "Vitória SC",
+              "away": "Casa Pia AC",
+              "homeGoals": 0,
+              "awayGoals": 0,
+              "stats": null,
+              "teamGoals": 0,
+              "conceded": 0,
+              "result": "D"
+            },
+            {
+              "date": "2026-08-30T17:00:00Z",
+              "home": "Casa Pia AC",
+              "away": "Moreirense FC",
+              "homeGoals": 0,
+              "awayGoals": 1,
+              "stats": null,
+              "teamGoals": 0,
+              "conceded": 1,
+              "result": "L"
+            },
+            {
+              "date": "2026-08-24T19:15:00Z",
+              "home": "Gil Vicente FC",
+              "away": "Casa Pia AC",
+              "homeGoals": 2,
+              "awayGoals": 0,
+              "stats": null,
+              "teamGoals": 0,
+              "conceded": 2,
+              "result": "L"
+            },
+            {
+              "date": "2026-08-17T19:15:00Z",
+              "home": "Casa Pia AC",
+              "away": "Sport Lisboa e Benfica",
+              "homeGoals": 0,
+              "awayGoals": 7,
+              "stats": null,
+              "teamGoals": 0,
+              "conceded": 7,
+              "result": "L"
+            },
+            {
+              "date": "2026-08-08T14:30:00Z",
+              "home": "CS Marítimo",
+              "away": "Casa Pia AC",
+              "homeGoals": 1,
+              "awayGoals": 0,
+              "stats": null,
+              "teamGoals": 0,
+              "conceded": 1,
+              "result": "L"
+            },
+            {
+              "date": "2026-05-16T17:00:00Z",
+              "home": "Casa Pia AC",
+              "away": "Rio Ave FC",
+              "homeGoals": 1,
+              "awayGoals": 1,
+              "stats": null,
+              "teamGoals": 1,
+              "conceded": 1,
+              "result": "D"
+            },
+            {
+              "date": "2026-05-11T19:15:00Z",
+              "home": "Vitória SC",
+              "away": "Casa Pia AC",
+              "homeGoals": 0,
+              "awayGoals": 1,
+              "stats": null,
+              "teamGoals": 1,
+              "conceded": 0,
+              "result": "W"
+            }
+          ],
+          "stats": {
+            "played": 10,
+            "wins": 2,
+            "draws": 2,
+            "losses": 6,
+            "goalsFor": 5,
+            "goalsAgainst": 18,
+            "avgGoalsFor": 0.5,
+            "avgGoalsAgainst": 1.8,
+            "btts": 3,
+            "over15": 5,
+            "over25": 3
+          }
+        },
+        "awayLast10": {
+          "matches": [
+            {
+              "date": "2026-10-09T19:15:00Z",
+              "home": "Sporting Clube de Braga",
+              "away": "Sporting Clube de Portugal",
+              "homeGoals": 1,
+              "awayGoals": 3,
+              "stats": null,
+              "teamGoals": 3,
+              "conceded": 1,
+              "result": "W"
+            },
+            {
+              "date": "2026-09-19T19:30:00Z",
+              "home": "Sporting Clube de Portugal",
+              "away": "FC Arouca",
+              "homeGoals": 2,
+              "awayGoals": 2,
+              "stats": null,
+              "teamGoals": 2,
+              "conceded": 2,
+              "result": "D"
+            },
+            {
+              "date": "2026-09-13T19:30:00Z",
+              "home": "FC Famalicão",
+              "away": "Sporting Clube de Portugal",
+              "homeGoals": 1,
+              "awayGoals": 1,
+              "stats": null,
+              "teamGoals": 1,
+              "conceded": 1,
+              "result": "D"
+            },
+            {
+              "date": "2026-09-05T19:30:00Z",
+              "home": "Sporting Clube de Portugal",
+              "away": "CD Nacional",
+              "homeGoals": 2,
+              "awayGoals": 0,
+              "stats": null,
+              "teamGoals": 2,
+              "conceded": 0,
+              "result": "W"
+            },
+            {
+              "date": "2026-08-28T19:15:00Z",
+              "home": "Rio Ave FC",
+              "away": "Sporting Clube de Portugal",
+              "homeGoals": 0,
+              "awayGoals": 4,
+              "stats": null,
+              "teamGoals": 4,
+              "conceded": 0,
+              "result": "W"
+            },
+            {
+              "date": "2026-08-22T19:30:00Z",
+              "home": "Sporting Clube de Portugal",
+              "away": "FC Alverca",
+              "homeGoals": 3,
+              "awayGoals": 1,
+              "stats": null,
+              "teamGoals": 3,
+              "conceded": 1,
+              "result": "W"
+            },
+            {
+              "date": "2026-08-14T19:15:00Z",
+              "home": "Sporting Clube de Portugal",
+              "away": "Vitória SC",
+              "homeGoals": 3,
+              "awayGoals": 2,
+              "stats": null,
+              "teamGoals": 3,
+              "conceded": 2,
+              "result": "W"
+            },
+            {
+              "date": "2026-08-08T19:30:00Z",
+              "home": "CF Estrela da Amadora",
+              "away": "Sporting Clube de Portugal",
+              "homeGoals": 2,
+              "awayGoals": 2,
+              "stats": null,
+              "teamGoals": 2,
+              "conceded": 2,
+              "result": "D"
+            },
+            {
+              "date": "2026-05-16T19:30:00Z",
+              "home": "Sporting Clube de Portugal",
+              "away": "Gil Vicente FC",
+              "homeGoals": 3,
+              "awayGoals": 0,
+              "stats": null,
+              "teamGoals": 3,
+              "conceded": 0,
+              "result": "W"
+            },
+            {
+              "date": "2026-05-11T19:15:00Z",
+              "home": "Rio Ave FC",
+              "away": "Sporting Clube de Portugal",
+              "homeGoals": 1,
+              "awayGoals": 4,
+              "stats": null,
+              "teamGoals": 4,
+              "conceded": 1,
+              "result": "W"
+            }
+          ],
+          "stats": {
+            "played": 10,
+            "wins": 7,
+            "draws": 3,
+            "losses": 0,
+            "goalsFor": 27,
+            "goalsAgainst": 10,
+            "avgGoalsFor": 2.7,
+            "avgGoalsAgainst": 1.0,
+            "btts": 7,
+            "over15": 10,
+            "over25": 8
+          }
+        },
+        "h2h": []
+      },
+      "hx": 0.75,
+      "ax": 2.31,
+      "probabilities": {
+        "homeWin": 10.4,
+        "draw": 17.1,
+        "awayWin": 72.5,
+        "over15": 81.0,
+        "over25": 59.1,
+        "btts": 47.5
+      },
+      "model": "Poisson na podstawie tabeli",
+      "quality": "low",
+      "confidence": "Niska: użyto także danych ogólnych",
+      "modelStatus": "table_based"
     }
   ],
   "diagnostics": [
-    "Premier League (PL): 10 meczów w okresie.",
+    "Premier League (PL): 9 meczów w okresie.",
     "LaLiga (PD): 10 meczów w okresie.",
-    "Serie A (SA): 20 meczów w okresie.",
+    "Serie A (SA): 19 meczów w okresie.",
     "Bundesliga (BL1): 9 meczów w okresie.",
-    "Ligue 1 (FL1): 9 meczów w okresie.",
-    "Eredivisie (DED): 9 meczów w okresie.",
+    "Ligue 1 (FL1): 10 meczów w okresie.",
+    "Eredivisie (DED): 8 meczów w okresie.",
     "Primeira Liga (PPL): 9 meczów w okresie.",
     "Liga Mistrzów (CL): 0 meczów w okresie.",
     "Championship (ELC): 12 meczów w okresie.",
-    "Brasileirao (BSA): 17 meczów w okresie.",
+    "Brasileirao (BSA): 18 meczów w okresie.",
     "Mistrzostwa Europy (EC): 0 meczów w okresie.",
     "Mistrzostwa Świata (WC): 0 meczów w okresie.",
     "Liga Europy (EL): BŁĄD TERMINARZA: HTTP 403: {\"message\":\"The resource you are looking for is restricted and apparently not within your permissions. Please check your subscription.\",\"errorCode\":403}",
@@ -26940,19 +28484,19 @@
     "Puchar Króla (CDR): BŁĄD TERMINARZA: HTTP 403: {\"message\":\"The resource you are looking for is restricted and apparently not within your permissions. Please check your subscription.\",\"errorCode\":403}",
     "Liga grecka (GSL): BŁĄD TERMINARZA: HTTP 403: {\"message\":\"The resource you are looking for is restricted and apparently not within your permissions. Please check your subscription.\",\"errorCode\":403}",
     "MLS (MLS): BŁĄD TERMINARZA: HTTP 403: {\"message\":\"The resource you are looking for is restricted and apparently not within your permissions. Please check your subscription.\",\"errorCode\":403}",
-    "Bundesliga — historia (BL1): 84 meczów w okresie.",
-    "Brasileirao — historia (BSA): 191 meczów w okresie.",
-    "Eredivisie — historia (DED): 111 meczów w okresie.",
-    "Championship — historia (ELC): 152 meczów w okresie.",
-    "Ligue 1 — historia (FL1): 98 meczów w okresie.",
+    "Bundesliga — historia (BL1): 88 meczów w okresie.",
+    "Brasileirao — historia (BSA): 190 meczów w okresie.",
+    "Eredivisie — historia (DED): 112 meczów w okresie.",
+    "Championship — historia (ELC): 162 meczów w okresie.",
+    "Ligue 1 — historia (FL1): 94 meczów w okresie.",
     "LaLiga — historia (PD): 146 meczów w okresie.",
-    "Premier League — historia (PL): 113 meczów w okresie.",
-    "Primeira Liga — historia (PPL): 106 meczów w okresie.",
+    "Premier League — historia (PL): 117 meczów w okresie.",
+    "Primeira Liga — historia (PPL): 105 meczów w okresie.",
     "Serie A — historia (SA): 117 meczów w okresie."
   ],
   "note": "Prognozy orientacyjne na podstawie dostępnych tabel. Model nie uwzględnia kursów, składów, kontuzji ani zaawansowanych statystyk. Nie gwarantuje wyników.",
   "sportmonksData": {
-    "generatedAt": "2026-10-24T00:36:39.540561+02:00",
+    "generatedAt": "2026-10-24T00:44:14.702470+02:00",
     "count": 18,
     "matchedCount": 0,
     "additionalCount": 18,
