@@ -24,6 +24,47 @@ jobs:
       - name: Sprawdź składnię Pythona
         run: python -m py_compile scripts/update_predictions.py scripts/update_api_football.py scripts/update_live.py scripts/update_results.py scripts/update_sportmonks.py scripts/sync_data_sources.py
 
+      - name: Testy integracji źródeł danych (bez wywołań API)
+        run: |
+          python - <<'PY'
+          import importlib.util
+          import json
+          from pathlib import Path
+
+          def load_module(name, path):
+              spec = importlib.util.spec_from_file_location(name, path)
+              module = importlib.util.module_from_spec(spec)
+              spec.loader.exec_module(module)
+              return module
+
+          sm = load_module("sportmonks", "scripts/update_sportmonks.py")
+          api = load_module("api_football", "scripts/update_api_football.py")
+          fixture = sm.parse_fixture({
+              "id": 123,
+              "starting_at": "2026-10-24T10:00:00Z",
+              "participants": [
+                  {"id": 10, "name": "São Paulo FC", "meta": {"location": "home"}},
+                  {"id": 20, "name": "Racing Club", "meta": {"location": "away"}},
+              ],
+              "league": {"id": 4, "name": "Test League"},
+              "state": {"name": "NS"},
+              "scores": [{"description": "CURRENT", "score": {"goals": 1, "participant": "home"}}],
+              "statistics": [{"type": {"name": "Shots Total"}, "data": {"value": 5}, "participant_id": 10}],
+              "odds": [{"payload": "must not be saved"}],
+              "events": [{"payload": "must not be saved"}],
+              "referees": [{"payload": "must not be saved"}],
+          })
+          assert fixture and fixture["homeId"] == 10 and fixture["awayId"] == 20
+          assert fixture["kickoff"].endswith("+02:00")
+          assert fixture["statistics"] == [{"type": "Shots Total", "value": 5, "participantId": 10}]
+          assert not {"odds", "events", "referees", "predictions"}.intersection(fixture)
+          compact = sm.compact_saved_fixture({**fixture, "odds": [{"large": "x"}], "events": [{"large": "x"}]})
+          assert "odds" not in compact and "events" not in compact
+          assert len(json.dumps(compact)) < 3000
+          assert api.norm("São Paulo FC") == "sao paulo"
+          print("OK: kompaktowe dane Sportmonks, strefa czasowa i normalizacja nazw")
+          PY
+
       - name: Sprawdź JSON z prognozami
         run: python -m json.tool data/latest.json > /dev/null
 
