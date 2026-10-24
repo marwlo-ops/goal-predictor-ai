@@ -1,7 +1,68 @@
 {
-  "updatedAt": "2026-10-24T23:08:38.233193+02:00",
+  "updatedAt": "2026-10-24T23:39:08.306519+02:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 0,
-  "matches": []
+  "count": 4,
+  "matches": [
+    {
+      "id": 555055,
+      "league": "BSA",
+      "leagueName": "Campeonato Brasileiro Série A",
+      "home": "Mirassol FC",
+      "away": "São Paulo FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "utcDate": "2026-10-24T19:30:00Z",
+      "updatedAt": "2026-10-24T21:38:29Z"
+    },
+    {
+      "id": 555059,
+      "league": "BSA",
+      "leagueName": "Campeonato Brasileiro Série A",
+      "home": "EC Vitória",
+      "away": "CA Paranaense",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "utcDate": "2026-10-24T19:30:00Z",
+      "updatedAt": "2026-10-24T21:38:29Z"
+    },
+    {
+      "id": 555058,
+      "league": "BSA",
+      "leagueName": "Campeonato Brasileiro Série A",
+      "home": "CR Vasco da Gama",
+      "away": "SC Corinthians Paulista",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-10-24T21:30:00Z",
+      "updatedAt": "2026-10-24T21:39:02Z"
+    },
+    {
+      "id": 555056,
+      "league": "BSA",
+      "leagueName": "Campeonato Brasileiro Série A",
+      "home": "SE Palmeiras",
+      "away": "RB Bragantino",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-10-24T21:30:00Z",
+      "updatedAt": "2026-10-24T21:39:01Z"
+    }
+  ]
 }
