@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-24T14:41:46.048600+02:00",
+  "generatedAt": "2026-10-24T15:35:51.059106+02:00",
   "source": "Sportmonks Football API v3",
   "count": 18,
   "fixtures": [
@@ -15,7 +15,38 @@
       "league": "Premiership",
       "leagueId": 501,
       "status": "Not Started",
-      "scores": [],
+      "scores": [
+        {
+          "description": "1ST_HALF",
+          "participant": "away",
+          "goals": 0
+        },
+        {
+          "description": "1ST_HALF",
+          "participant": "home",
+          "goals": 0
+        },
+        {
+          "description": "2ND_HALF",
+          "participant": "away",
+          "goals": 0
+        },
+        {
+          "description": "2ND_HALF",
+          "participant": "home",
+          "goals": 0
+        },
+        {
+          "description": "CURRENT",
+          "participant": "away",
+          "goals": 0
+        },
+        {
+          "description": "CURRENT",
+          "participant": "home",
+          "goals": 0
+        }
+      ],
       "statistics": [],
       "source": "Sportmonks"
     },
@@ -31,7 +62,38 @@
       "league": "Premiership",
       "leagueId": 501,
       "status": "Not Started",
-      "scores": [],
+      "scores": [
+        {
+          "description": "1ST_HALF",
+          "participant": "home",
+          "goals": 0
+        },
+        {
+          "description": "1ST_HALF",
+          "participant": "away",
+          "goals": 0
+        },
+        {
+          "description": "2ND_HALF",
+          "participant": "home",
+          "goals": 0
+        },
+        {
+          "description": "2ND_HALF",
+          "participant": "away",
+          "goals": 0
+        },
+        {
+          "description": "CURRENT",
+          "participant": "home",
+          "goals": 0
+        },
+        {
+          "description": "CURRENT",
+          "participant": "away",
+          "goals": 0
+        }
+      ],
       "statistics": [],
       "source": "Sportmonks"
     },
@@ -47,7 +109,38 @@
       "league": "Premiership",
       "leagueId": 501,
       "status": "Not Started",
-      "scores": [],
+      "scores": [
+        {
+          "description": "1ST_HALF",
+          "participant": "away",
+          "goals": 0
+        },
+        {
+          "description": "1ST_HALF",
+          "participant": "home",
+          "goals": 0
+        },
+        {
+          "description": "2ND_HALF",
+          "participant": "away",
+          "goals": 0
+        },
+        {
+          "description": "2ND_HALF",
+          "participant": "home",
+          "goals": 0
+        },
+        {
+          "description": "CURRENT",
+          "participant": "away",
+          "goals": 0
+        },
+        {
+          "description": "CURRENT",
+          "participant": "home",
+          "goals": 0
+        }
+      ],
       "statistics": [],
       "source": "Sportmonks"
     },
@@ -63,7 +156,38 @@
       "league": "Premiership",
       "leagueId": 501,
       "status": "Not Started",
-      "scores": [],
+      "scores": [
+        {
+          "description": "1ST_HALF",
+          "participant": "away",
+          "goals": 0
+        },
+        {
+          "description": "1ST_HALF",
+          "participant": "home",
+          "goals": 0
+        },
+        {
+          "description": "2ND_HALF",
+          "participant": "away",
+          "goals": 0
+        },
+        {
+          "description": "2ND_HALF",
+          "participant": "home",
+          "goals": 0
+        },
+        {
+          "description": "CURRENT",
+          "participant": "away",
+          "goals": 0
+        },
+        {
+          "description": "CURRENT",
+          "participant": "home",
+          "goals": 0
+        }
+      ],
       "statistics": [],
       "source": "Sportmonks"
     },
