@@ -2,7 +2,7 @@
 """Supplemental API-Football fixture verification and match-statistics feed.
 
 API key is read only from the API_FOOTBALL_KEY environment variable.
-Budget guard: up to 3 date calls, 4 H2H calls, and 6 statistics calls per run.
+Budget guard: up to 1 date call, 4 H2H calls, and 6 statistics calls per run.
 """
 import json
 import os
@@ -142,7 +142,7 @@ def main():
     additional = []
     for key, item in indexed.items():
         date, home_norm, away_norm = key
-        if date not in dates[:7] or key in existing_keys:
+        if date not in dates or key in existing_keys:
             continue
         try:
             kickoff = datetime.fromisoformat(item["kickoff"].replace("Z", "+00:00")).astimezone(WARSAW)
