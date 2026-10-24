@@ -2158,12 +2158,37 @@ async function loadPublishedData() {
     const publishedMatches = Array.isArray(payload.matches) ? payload.matches : [];
     matches = publishedMatches;
 
-    // Sportmonks feed is also published as a separate auditable source file.
+    // Sportmonks is an independent compact feed. Join only exact same-day fixtures;
+    // never replace a model prediction or invent missing match probabilities.
     let sportmonksCheck = null;
     try {
       const smResponse = await fetch("./data/sportmonks.json?ts=" + Date.now(), { cache: "no-store" });
       if (smResponse.ok) sportmonksCheck = await smResponse.json();
     } catch (ignored) { sportmonksCheck = null; }
+
+    const normalizeSourceTeam = value => String(value || "")
+      .normalize("NFKD")
+      .replace(/[\\u0300-\\u036f]/g, "")
+      .toLowerCase()
+      .replace(/&/g, " and ")
+      .replace(/\\b(fc|cf|afc|sc|club)\\b/g, " ")
+      .replace(/[^a-z0-9]+/g, " ")
+      .trim()
+      .replace(/\\s+/g, " ");
+    const sourceFixtureKey = fixture => [
+      String(fixture.date || ""),
+      normalizeSourceTeam(fixture.home),
+      normalizeSourceTeam(fixture.away)
+    ].join("|");
+    const sportmonksByKey = new Map(
+      (Array.isArray(sportmonksCheck?.fixtures) ? sportmonksCheck.fixtures : [])
+        .filter(fixture => fixture && fixture.home && fixture.away && fixture.date)
+        .map(fixture => [sourceFixtureKey(fixture), fixture])
+    );
+    matches = matches.map(match => {
+      const fixture = sportmonksByKey.get(sourceFixtureKey(match));
+      return fixture ? { ...match, sportmonks: fixture } : match;
+    });
 
     // Optional second-source check: only exact fixture matches are attached.
     let apiFootballCheck = null;
@@ -2394,6 +2419,56 @@ function historyPanel(match) {
       '</p>' + apiStatsHtml + apiH2hHtml
     : "";
 
+  const sportmonks = match.sportmonks || null;
+  const sportmonksStats = Array.isArray(sportmonks?.statistics) ? sportmonks.statistics : [];
+  const sportmonksMeta = sportmonks
+    ? '<p class="muted">Dodatkowe źródło: Sportmonks' +
+      (sportmonks.league ? ' · ' + escapeHtml(sportmonks.league) : '') +
+      (sportmonks.status ? ' · ' + escapeHtml(sportmonks.status) : '') +
+      '</p>'
+    : "";
+  const sportmonksStatNames = {
+    "shots total":"Strzały",
+    "shots on target":"Celne strzały",
+    "shots off target":"Niecelne strzały",
+    "corner kicks":"Rzuty rożne",
+    "yellow cards":"Żółte kartki",
+    "red cards":"Czerwone kartki",
+    "offsides":"Spalone",
+    "fouls":"Faule",
+    "ball possession":"Posiadanie piłki",
+    "saves":"Obrony bramkarza",
+    "attacks":"Ataki"
+  };
+  const sportmonksStatsHtml = sportmonksStats.length
+    ? '<h4 style="margin:14px 0 8px">Dostępne statystyki · Sportmonks</h4>' +
+      sportmonksStats.map(stat => {
+        const participant = String(stat.participantId ?? "");
+        const team = participant && participant === String(sportmonks.homeId ?? "")
+          ? (match.home || "Gospodarze")
+          : participant && participant === String(sportmonks.awayId ?? "")
+            ? (match.away || "Goście")
+            : "Drużyna";
+        const key = String(stat.type || "").toLowerCase();
+        const label = sportmonksStatNames[key] || stat.type || "Statystyka";
+        return '<div class="match-foot"><span>' + escapeHtml(team) + '</span><b>' +
+          escapeHtml(String(label)) + ': ' + escapeHtml(String(stat.value ?? "—")) + '</b></div>';
+      }).join("")
+    : "";
+  const sportmonksScores = Array.isArray(sportmonks?.scores) ? sportmonks.scores : [];
+  const sportmonksScoresHtml = sportmonksScores.length
+    ? '<h4 style="margin:14px 0 8px">Wynik z feedu Sportmonks</h4>' +
+      sportmonksScores.map(score => {
+        const participant = String(score.participant ?? "");
+        const team = participant && participant === String(sportmonks.homeId ?? "")
+          ? (match.home || "Gospodarze")
+          : participant && participant === String(sportmonks.awayId ?? "")
+            ? (match.away || "Goście")
+            : (score.description || "Wynik");
+        return '<div class="match-foot"><span>' + escapeHtml(String(team)) + '</span><b>' +
+          escapeHtml(String(score.goals ?? "—")) + '</b></div>';
+      }).join("")
+    : "";
   const homeHtml = renderTeam("Ostatnie mecze — " + (match.home || "Gospodarze"), history.homeLast10);
   const awayHtml = renderTeam("Ostatnie mecze — " + (match.away || "Goście"), history.awayLast10);
   const h2h = Array.isArray(history.h2h) ? history.h2h : [];
@@ -2405,7 +2480,7 @@ function historyPanel(match) {
         '</span><b>' + escapeHtml(String(game.homeGoals ?? "—")) + ':' + escapeHtml(String(game.awayGoals ?? "—")) + '</b></div>'
       ).join("")
     : "";
-  const content = apiMeta + homeHtml + awayHtml + h2hHtml;
+  const content = sportmonksMeta + sportmonksScoresHtml + sportmonksStatsHtml + apiMeta + homeHtml + awayHtml + h2hHtml;
   if (!content.trim()) return "";
   return '<details style="margin-top:12px"><summary style="cursor:pointer;padding:10px 0;font-weight:700">📊 Dostępne statystyki i historia</summary>' +
     content + '</details>';
