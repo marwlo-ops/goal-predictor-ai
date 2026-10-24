@@ -48,6 +48,7 @@ jobs:
           git add data/live.json
           if ! git diff --cached --quiet; then
             git commit -m "Aktualizacja wyników na żywo"
+            git pull --rebase origin main
             git push
           else
             echo "Brak zmian w wynikach live."
