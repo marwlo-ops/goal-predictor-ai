@@ -2460,9 +2460,9 @@ function historyPanel(match) {
     ? '<h4 style="margin:14px 0 8px">Wynik z feedu Sportmonks</h4>' +
       sportmonksScores.map(score => {
         const participant = String(score.participant ?? "");
-        const team = participant && participant === String(sportmonks.homeId ?? "")
+        const team = participant && (participant === String(sportmonks.homeId ?? "") || participant.toLowerCase() === "home")
           ? (match.home || "Gospodarze")
-          : participant && participant === String(sportmonks.awayId ?? "")
+          : participant && (participant === String(sportmonks.awayId ?? "") || participant.toLowerCase() === "away")
             ? (match.away || "Goście")
             : (score.description || "Wynik");
         return '<div class="match-foot"><span>' + escapeHtml(String(team)) + '</span><b>' +
