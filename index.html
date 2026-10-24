@@ -2168,10 +2168,10 @@ async function loadPublishedData() {
 
     const normalizeSourceTeam = value => String(value || "")
       .normalize("NFKD")
-      .replace(/[\\u0300-\\u036f]/g, "")
+      .replace(/[\u0300-\u036f]/g, "")
       .toLowerCase()
       .replace(/&/g, " and ")
-      .replace(/\\b(fc|cf|afc|sc|club)\\b/g, " ")
+      .replace(/\b(fc|cf|afc|sc|club)\b/g, " ")
       .replace(/[^a-z0-9]+/g, " ")
       .trim()
       .replace(/\\s+/g, " ");
