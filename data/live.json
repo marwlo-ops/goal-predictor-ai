@@ -1,7 +1,98 @@
 {
-  "updatedAt": "2026-10-24T18:57:02.229162+02:00",
+  "updatedAt": "2026-10-24T19:22:58.852624+02:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 0,
-  "matches": []
+  "count": 6,
+  "matches": [
+    {
+      "id": 558564,
+      "league": "SA",
+      "leagueName": "Serie A",
+      "home": "SSC Napoli",
+      "away": "AS Roma",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "utcDate": "2026-10-24T16:00:00Z",
+      "updatedAt": "2026-10-24T17:21:57Z"
+    },
+    {
+      "id": 564722,
+      "league": "PD",
+      "leagueName": "Primera Division",
+      "home": "Valencia CF",
+      "away": "Villarreal CF",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "utcDate": "2026-10-24T16:30:00Z",
+      "updatedAt": "2026-10-24T17:22:30Z"
+    },
+    {
+      "id": 560617,
+      "league": "PL",
+      "leagueName": "Premier League",
+      "home": "Chelsea FC",
+      "away": "Tottenham Hotspur FC",
+      "status": "PAUSED",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-10-24T16:30:00Z",
+      "updatedAt": "2026-10-24T17:21:26Z"
+    },
+    {
+      "id": 565837,
+      "league": "BL1",
+      "leagueName": "Bundesliga",
+      "home": "Borussia Dortmund",
+      "away": "Eintracht Frankfurt",
+      "status": "PAUSED",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-10-24T16:30:00Z",
+      "updatedAt": "2026-10-24T17:21:25Z"
+    },
+    {
+      "id": 558861,
+      "league": "DED",
+      "leagueName": "Eredivisie",
+      "home": "Willem II Tilburg",
+      "away": "SC Cambuur-Leeuwarden",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 3
+      },
+      "utcDate": "2026-10-24T16:45:00Z",
+      "updatedAt": "2026-10-24T17:22:30Z"
+    },
+    {
+      "id": 567333,
+      "league": "PPL",
+      "leagueName": "Primeira Liga",
+      "home": "FC Alverca",
+      "away": "FC Arouca",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-10-24T17:00:00Z",
+      "updatedAt": "2026-10-24T17:21:57Z"
+    }
+  ]
 }
