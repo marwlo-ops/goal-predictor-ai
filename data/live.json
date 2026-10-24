@@ -1,7 +1,113 @@
 {
-  "updatedAt": "2026-10-24T14:41:40.423136+02:00",
+  "updatedAt": "2026-10-24T15:20:38.166139+02:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 0,
-  "matches": []
+  "count": 7,
+  "matches": [
+    {
+      "id": 561895,
+      "league": "ELC",
+      "leagueName": "Championship",
+      "home": "Sheffield United FC",
+      "away": "Derby County FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "utcDate": "2026-10-24T11:30:00Z",
+      "updatedAt": "2026-10-24T13:19:39Z"
+    },
+    {
+      "id": 561901,
+      "league": "ELC",
+      "leagueName": "Championship",
+      "home": "Charlton Athletic FC",
+      "away": "Norwich City FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 1,
+        "away": 3
+      },
+      "utcDate": "2026-10-24T11:30:00Z",
+      "updatedAt": "2026-10-24T13:19:37Z"
+    },
+    {
+      "id": 561904,
+      "league": "ELC",
+      "leagueName": "Championship",
+      "home": "Portsmouth FC",
+      "away": "Millwall FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "utcDate": "2026-10-24T11:30:00Z",
+      "updatedAt": "2026-10-24T13:20:21Z"
+    },
+    {
+      "id": 560614,
+      "league": "PL",
+      "leagueName": "Premier League",
+      "home": "Aston Villa FC",
+      "away": "Manchester City FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "utcDate": "2026-10-24T11:30:00Z",
+      "updatedAt": "2026-10-24T13:19:50Z"
+    },
+    {
+      "id": 564718,
+      "league": "PD",
+      "leagueName": "Primera Division",
+      "home": "Rayo Vallecano de Madrid",
+      "away": "Elche CF",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 2
+      },
+      "utcDate": "2026-10-24T12:00:00Z",
+      "updatedAt": "2026-10-24T13:20:22Z"
+    },
+    {
+      "id": 558561,
+      "league": "SA",
+      "leagueName": "Serie A",
+      "home": "Como 1907",
+      "away": "US Sassuolo Calcio",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-10-24T13:00:00Z",
+      "updatedAt": "2026-10-24T13:20:22Z"
+    },
+    {
+      "id": 558560,
+      "league": "SA",
+      "leagueName": "Serie A",
+      "home": "Cagliari Calcio",
+      "away": "Bologna FC 1909",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-10-24T13:00:00Z",
+      "updatedAt": "2026-10-24T13:20:22Z"
+    }
+  ]
 }
