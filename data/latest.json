@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-24T01:37:43.767503+02:00",
+  "generatedAt": "2026-10-24T02:05:33.143057+02:00",
   "dateFrom": "2026-10-24",
   "dateTo": "2026-10-30",
   "timezone": "Europe/Warsaw",
@@ -25404,14 +25404,14 @@
         ]
       },
       "hx": 1.31,
-      "ax": 1.48,
+      "ax": 1.49,
       "probabilities": {
-        "homeWin": 33.5,
-        "draw": 25.3,
-        "awayWin": 41.2,
-        "over15": 76.6,
-        "over25": 52.6,
-        "btts": 56.2
+        "homeWin": 33.2,
+        "draw": 25.2,
+        "awayWin": 41.6,
+        "over15": 76.8,
+        "over25": 53.0,
+        "btts": 56.5
       },
       "model": "Poisson na podstawie tabeli",
       "quality": "low",
@@ -26232,14 +26232,14 @@
         ]
       },
       "hx": 1.4,
-      "ax": 1.35,
+      "ax": 1.36,
       "probabilities": {
-        "homeWin": 38.4,
-        "draw": 25.6,
-        "awayWin": 36.1,
-        "over15": 75.9,
-        "over25": 51.7,
-        "btts": 55.7
+        "homeWin": 38.0,
+        "draw": 25.5,
+        "awayWin": 36.5,
+        "over15": 76.2,
+        "over25": 52.0,
+        "btts": 56.0
       },
       "model": "Poisson na podstawie tabeli",
       "quality": "low",
@@ -28495,12 +28495,14 @@
     "Serie A — historia (SA): 117 meczów w okresie."
   ],
   "note": "Prognozy orientacyjne na podstawie dostępnych tabel. Model nie uwzględnia kursów, składów, kontuzji ani zaawansowanych statystyk. Nie gwarantuje wyników.",
-  "sportmonksData": {
-    "generatedAt": "2026-10-24T02:01:30.193718+02:00",
-    "count": 18,
-    "matchedCount": 0,
-    "additionalCount": 18,
-    "unmatchedFixturesStoredOnlyInProviderFeed": true,
-    "failedDates": []
+  "apiFootballAdditionalCount": 1623,
+  "apiFootballFixtureOnlyCount": 1623,
+  "apiFootballData": {
+    "generatedAt": "2026-10-24T02:15:23.712289+02:00",
+    "source": "API-Football",
+    "verifiedCount": 1636,
+    "checkedCount": 103,
+    "statisticsCount": 6,
+    "h2hCount": 0
   }
 }
