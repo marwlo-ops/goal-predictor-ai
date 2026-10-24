@@ -1,24 +1,9 @@
 {
-  "updatedAt": "2026-10-24T20:59:06.437562+02:00",
+  "updatedAt": "2026-10-24T21:25:49.981369+02:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 3,
+  "count": 4,
   "matches": [
-    {
-      "id": 567333,
-      "league": "PPL",
-      "leagueName": "Primeira Liga",
-      "home": "FC Alverca",
-      "away": "FC Arouca",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 0,
-        "away": 1
-      },
-      "utcDate": "2026-10-24T17:00:00Z",
-      "updatedAt": "2026-10-24T18:59:02Z"
-    },
     {
       "id": 558565,
       "league": "SA",
@@ -32,7 +17,7 @@
         "away": 0
       },
       "utcDate": "2026-10-24T18:45:00Z",
-      "updatedAt": "2026-10-24T18:59:02Z"
+      "updatedAt": "2026-10-24T19:25:41Z"
     },
     {
       "id": 559652,
@@ -47,7 +32,37 @@
         "away": 0
       },
       "utcDate": "2026-10-24T18:45:00Z",
-      "updatedAt": "2026-10-24T18:59:02Z"
+      "updatedAt": "2026-10-24T19:25:41Z"
+    },
+    {
+      "id": 558860,
+      "league": "DED",
+      "leagueName": "Eredivisie",
+      "home": "ADO Den Haag",
+      "away": "SC Heerenveen",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-10-24T19:00:00Z",
+      "updatedAt": "2026-10-24T19:25:41Z"
+    },
+    {
+      "id": 564724,
+      "league": "PD",
+      "leagueName": "Primera Division",
+      "home": "Club Atlético de Madrid",
+      "away": "RC Deportivo La Coruña",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-10-24T19:00:00Z",
+      "updatedAt": "2026-10-24T19:25:41Z"
     }
   ]
 }
