@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-24T15:35:51.059106+02:00",
+  "generatedAt": "2026-10-24T16:03:26.813913+02:00",
   "source": "Sportmonks Football API v3",
   "count": 18,
   "fixtures": [
@@ -14,7 +14,7 @@
       "time": "16:00",
       "league": "Premiership",
       "leagueId": 501,
-      "status": "Not Started",
+      "status": "1st Half",
       "scores": [
         {
           "description": "1ST_HALF",
@@ -47,7 +47,18 @@
           "goals": 0
         }
       ],
-      "statistics": [],
+      "statistics": [
+        {
+          "type": "Ball Possession %",
+          "value": 39,
+          "participantId": 284
+        },
+        {
+          "type": "Ball Possession %",
+          "value": 61,
+          "participantId": 496
+        }
+      ],
       "source": "Sportmonks"
     },
     {
@@ -94,7 +105,18 @@
           "goals": 0
         }
       ],
-      "statistics": [],
+      "statistics": [
+        {
+          "type": "Ball Possession %",
+          "value": 50,
+          "participantId": 734
+        },
+        {
+          "type": "Ball Possession %",
+          "value": 50,
+          "participantId": 62
+        }
+      ],
       "source": "Sportmonks"
     },
     {
@@ -108,7 +130,7 @@
       "time": "16:00",
       "league": "Premiership",
       "leagueId": 501,
-      "status": "Not Started",
+      "status": "1st Half",
       "scores": [
         {
           "description": "1ST_HALF",
@@ -141,7 +163,18 @@
           "goals": 0
         }
       ],
-      "statistics": [],
+      "statistics": [
+        {
+          "type": "Ball Possession %",
+          "value": 56,
+          "participantId": 180
+        },
+        {
+          "type": "Ball Possession %",
+          "value": 44,
+          "participantId": 770
+        }
+      ],
       "source": "Sportmonks"
     },
     {
@@ -155,7 +188,7 @@
       "time": "16:00",
       "league": "Premiership",
       "leagueId": 501,
-      "status": "Not Started",
+      "status": "1st Half",
       "scores": [
         {
           "description": "1ST_HALF",
@@ -188,7 +221,28 @@
           "goals": 0
         }
       ],
-      "statistics": [],
+      "statistics": [
+        {
+          "type": "Corners",
+          "value": 1,
+          "participantId": 273
+        },
+        {
+          "type": "Corners",
+          "value": 0,
+          "participantId": 282
+        },
+        {
+          "type": "Ball Possession %",
+          "value": 61,
+          "participantId": 273
+        },
+        {
+          "type": "Ball Possession %",
+          "value": 39,
+          "participantId": 282
+        }
+      ],
       "source": "Sportmonks"
     },
     {
