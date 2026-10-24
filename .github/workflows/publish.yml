@@ -71,6 +71,7 @@ jobs:
 
       - name: Uzupełnij terminarz i statystyki (API-Football)
         if: steps.timecheck.outputs.run == 'true'
+        continue-on-error: true
         env:
           API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
         run: python scripts/update_api_football.py
