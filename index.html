@@ -2174,7 +2174,7 @@ async function loadPublishedData() {
       .replace(/\b(fc|cf|afc|sc|club)\b/g, " ")
       .replace(/[^a-z0-9]+/g, " ")
       .trim()
-      .replace(/\\s+/g, " ");
+      .replace(/\s+/g, " ");
     const sourceFixtureKey = fixture => [
       String(fixture.date || ""),
       normalizeSourceTeam(fixture.home),
