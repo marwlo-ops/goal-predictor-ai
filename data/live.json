@@ -1,7 +1,263 @@
 {
-  "updatedAt": "2026-10-24T15:55:34.107429+02:00",
+  "updatedAt": "2026-10-24T16:21:18.479949+02:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 0,
-  "matches": []
+  "count": 17,
+  "matches": [
+    {
+      "id": 558560,
+      "league": "SA",
+      "leagueName": "Serie A",
+      "home": "Cagliari Calcio",
+      "away": "Bologna FC 1909",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "utcDate": "2026-10-24T13:00:00Z",
+      "updatedAt": "2026-10-24T14:21:10Z"
+    },
+    {
+      "id": 558561,
+      "league": "SA",
+      "leagueName": "Serie A",
+      "home": "Como 1907",
+      "away": "US Sassuolo Calcio",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "utcDate": "2026-10-24T13:00:00Z",
+      "updatedAt": "2026-10-24T14:21:09Z"
+    },
+    {
+      "id": 565830,
+      "league": "BL1",
+      "leagueName": "Bundesliga",
+      "home": "1. FSV Mainz 05",
+      "away": "SV Werder Bremen",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 1,
+        "away": 2
+      },
+      "utcDate": "2026-10-24T13:30:00Z",
+      "updatedAt": "2026-10-24T14:21:10Z"
+    },
+    {
+      "id": 565832,
+      "league": "BL1",
+      "leagueName": "Bundesliga",
+      "home": "RB Leipzig",
+      "away": "SV 07 Elversberg",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-10-24T13:30:00Z",
+      "updatedAt": "2026-10-24T14:20:38Z"
+    },
+    {
+      "id": 565838,
+      "league": "BL1",
+      "leagueName": "Bundesliga",
+      "home": "FC Augsburg",
+      "away": "1. FC Union Berlin",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-10-24T13:30:00Z",
+      "updatedAt": "2026-10-24T14:20:38Z"
+    },
+    {
+      "id": 565831,
+      "league": "BL1",
+      "leagueName": "Bundesliga",
+      "home": "1. FC Köln",
+      "away": "FC Schalke 04",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-10-24T13:30:00Z",
+      "updatedAt": "2026-10-24T14:20:37Z"
+    },
+    {
+      "id": 565834,
+      "league": "BL1",
+      "leagueName": "Bundesliga",
+      "home": "SC Paderborn 07",
+      "away": "Hamburger SV",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-10-24T13:30:00Z",
+      "updatedAt": "2026-10-24T14:20:37Z"
+    },
+    {
+      "id": 561893,
+      "league": "ELC",
+      "leagueName": "Championship",
+      "home": "Cardiff City FC",
+      "away": "Birmingham City FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-10-24T14:00:00Z",
+      "updatedAt": "2026-10-24T14:21:06Z"
+    },
+    {
+      "id": 561896,
+      "league": "ELC",
+      "leagueName": "Championship",
+      "home": "Queens Park Rangers FC",
+      "away": "Swansea City AFC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 3,
+        "away": 0
+      },
+      "utcDate": "2026-10-24T14:00:00Z",
+      "updatedAt": "2026-10-24T14:21:11Z"
+    },
+    {
+      "id": 561902,
+      "league": "ELC",
+      "leagueName": "Championship",
+      "home": "Blackburn Rovers FC",
+      "away": "Wrexham AFC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-10-24T14:00:00Z",
+      "updatedAt": "2026-10-24T14:20:39Z"
+    },
+    {
+      "id": 561900,
+      "league": "ELC",
+      "leagueName": "Championship",
+      "home": "West Ham United FC",
+      "away": "Southampton FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 2
+      },
+      "utcDate": "2026-10-24T14:00:00Z",
+      "updatedAt": "2026-10-24T14:20:42Z"
+    },
+    {
+      "id": 561897,
+      "league": "ELC",
+      "leagueName": "Championship",
+      "home": "Stoke City FC",
+      "away": "Bristol City FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-10-24T14:00:00Z",
+      "updatedAt": "2026-10-24T14:21:06Z"
+    },
+    {
+      "id": 561903,
+      "league": "ELC",
+      "leagueName": "Championship",
+      "home": "Wolverhampton Wanderers FC",
+      "away": "Watford FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-10-24T14:00:00Z",
+      "updatedAt": "2026-10-24T14:20:35Z"
+    },
+    {
+      "id": 561899,
+      "league": "ELC",
+      "leagueName": "Championship",
+      "home": "Lincoln City FC",
+      "away": "Burnley FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-10-24T14:00:00Z",
+      "updatedAt": "2026-10-24T14:20:35Z"
+    },
+    {
+      "id": 560618,
+      "league": "PL",
+      "leagueName": "Premier League",
+      "home": "Coventry City FC",
+      "away": "Fulham FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-10-24T14:00:00Z",
+      "updatedAt": "2026-10-24T14:20:38Z"
+    },
+    {
+      "id": 560616,
+      "league": "PL",
+      "leagueName": "Premier League",
+      "home": "Arsenal FC",
+      "away": "Everton FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "utcDate": "2026-10-24T14:00:00Z",
+      "updatedAt": "2026-10-24T14:20:38Z"
+    },
+    {
+      "id": 564727,
+      "league": "PD",
+      "leagueName": "Primera Division",
+      "home": "Real Racing Club de Santander",
+      "away": "RCD Espanyol de Barcelona",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-10-24T14:15:00Z",
+      "updatedAt": "2026-10-24T14:20:38Z"
+    }
+  ]
 }
