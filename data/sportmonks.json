@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T00:02:45.081513+02:00",
+  "generatedAt": "2026-10-25T00:33:12.454489+02:00",
   "source": "Sportmonks Football API v3",
   "count": 17,
   "fixtures": [
@@ -291,8 +291,15 @@
     },
     {
       "date": "2026-10-26",
-      "ok": false,
-      "error": "Sportmonks connection error: [Errno 104] Connection reset by peer"
+      "count": 1,
+      "parsed": 1,
+      "pages": [
+        {
+          "page": 1,
+          "count": 1
+        }
+      ],
+      "ok": true
     },
     {
       "date": "2026-10-27",
@@ -355,7 +362,5 @@
       "ok": true
     }
   ],
-  "failedDates": [
-    "2026-10-26"
-  ]
+  "failedDates": []
 }
