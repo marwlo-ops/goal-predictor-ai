@@ -2,6 +2,11 @@ name: Sportmonks Football Data
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/update_sportmonks.py"
+      - ".github/workflows/sportmonks.yml"
   schedule:
     - cron: "11,41 * * * *"
 
