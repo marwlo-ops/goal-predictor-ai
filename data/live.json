@@ -1,7 +1,53 @@
 {
-  "updatedAt": "2026-10-24T20:20:38.660179+02:00",
+  "updatedAt": "2026-10-24T20:59:06.437562+02:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 0,
-  "matches": []
+  "count": 3,
+  "matches": [
+    {
+      "id": 567333,
+      "league": "PPL",
+      "leagueName": "Primeira Liga",
+      "home": "FC Alverca",
+      "away": "FC Arouca",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "utcDate": "2026-10-24T17:00:00Z",
+      "updatedAt": "2026-10-24T18:59:02Z"
+    },
+    {
+      "id": 558565,
+      "league": "SA",
+      "leagueName": "Serie A",
+      "home": "SS Lazio",
+      "away": "Parma Calcio 1913",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-10-24T18:45:00Z",
+      "updatedAt": "2026-10-24T18:59:02Z"
+    },
+    {
+      "id": 559652,
+      "league": "FL1",
+      "leagueName": "Ligue 1",
+      "home": "Racing Club de Lens",
+      "away": "Paris FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-10-24T18:45:00Z",
+      "updatedAt": "2026-10-24T18:59:02Z"
+    }
+  ]
 }
