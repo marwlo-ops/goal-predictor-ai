@@ -1512,10 +1512,10 @@ function persistFavorites() {
   document.getElementById("quickFavCount").textContent = favoriteIds.size;
 }
 function filteredMatches() {
-  // Main predictions view: hide unsupported model rows, never fabricate probability cards.
+  // Show source-only fixtures as clearly labelled schedule entries; never invent probabilities.
   let result = matches.filter(match => {
     const p = getMatchProbabilities(match);
-    return p && match.modelStatus !== "fixture_only";
+    return !!p || match.modelStatus === "fixture_only";
   });
   if (activeLeagueFilter === "other") result = result.filter(match => !["PL", "PD", "SA"].includes(match.league));
   else if (activeLeagueFilter !== "all") {
@@ -1812,7 +1812,9 @@ function renderMatches() {
         '<div class="teams"><button type="button" class="team team-name-button" data-full-analysis="' + index + '">' + escapeHtml(match.home || "Gospodarze") + '</button><div class="vs">VS</div><button type="button" class="team team-name-button" data-full-analysis="' + index + '">' + escapeHtml(match.away || "Goście") + '</button></div>' +
         '<div class="match-foot"><span class="muted">' + escapeHtml(sourceLabel) + (status ? ' · ' + escapeHtml(statusLabels[status] || status) : '') + '</span><span class="muted">Prognoza niedostępna</span></div>' +
         '<p class="muted" style="margin:10px 0">Mecz jest w terminarzu, ale brakuje danych do rzetelnego wyliczenia prawdopodobieństw. Nie pokazujemy fikcyjnych procentów.</p>' +
-        '<div class="match-tools"><button class="favbtn ' + (favoriteIds.has(matchId(match)) ? "saved" : "") + '" data-favorite="' + escapeHtml(matchId(match)) + '">' + (favoriteIds.has(matchId(match)) ? "★" : "☆") + '</button><button class="favbtn ' + (trackedIds.has(String(match.id)) ? "saved" : "") + '" data-track="' + escapeHtml(match.id) + '">' + (trackedIds.has(String(match.id)) ? "●" : "＋") + '</button><button class="smallbtn" data-full-analysis="' + index + '">Szczegóły meczu →</button></div>' +
+        '<div class="match-tools"><button class="favbtn ' + (favoriteIds.has(matchId(match)) ? "saved" : "") + '" data-favorite="' + escapeHtml(matchId(match)) + '">' + (favoriteIds.has(matchId(match)) ? "★" : "☆") + '</button>' +
+        (match.modelStatus === "fixture_only" ? "" : '<button class="favbtn ' + (trackedIds.has(String(match.id)) ? "saved" : "") + '" data-track="' + escapeHtml(match.id) + '">' + (trackedIds.has(String(match.id)) ? "●" : "＋") + '</button>') +
+        '<button class="smallbtn" data-full-analysis="' + index + '">Szczegóły meczu →</button></div>' +
         historyPanel(match) + '</article>';
     }
 
@@ -2206,7 +2208,7 @@ async function loadPublishedData() {
       sportmonksOnly.push({
         id: "sportmonks-" + String(fixture.fixtureId ?? key),
         source: "Sportmonks",
-        league: "SPORTMONKS",
+        league: "SPORTMONKS-" + normalizeSourceTeam(fixture.league || "Piłka nożna").replace(/\s+/g, "-"),
         leagueName: fixture.league || "Piłka nożna",
         date: fixture.date,
         time: fixture.time || "—",
