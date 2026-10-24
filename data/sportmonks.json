@@ -1,370 +1,8 @@
 {
-  "generatedAt": "2026-10-24T23:34:09.525234+02:00",
+  "generatedAt": "2026-10-25T00:02:45.081513+02:00",
   "source": "Sportmonks Football API v3",
-  "count": 18,
+  "count": 17,
   "fixtures": [
-    {
-      "fixtureId": 19722764,
-      "home": "St. Mirren",
-      "away": "Dundee",
-      "homeId": 496,
-      "awayId": 284,
-      "kickoff": "2026-10-24T16:00:00+02:00",
-      "date": "2026-10-24",
-      "time": "16:00",
-      "league": "Premiership",
-      "leagueId": 501,
-      "status": "Full Time",
-      "scores": [
-        {
-          "description": "1ST_HALF",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "1ST_HALF",
-          "participant": "home",
-          "goals": 1
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "away",
-          "goals": 1
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "home",
-          "goals": 2
-        },
-        {
-          "description": "CURRENT",
-          "participant": "away",
-          "goals": 1
-        },
-        {
-          "description": "CURRENT",
-          "participant": "home",
-          "goals": 2
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "away",
-          "goals": 1
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "home",
-          "goals": 1
-        }
-      ],
-      "statistics": [
-        {
-          "type": "Corners",
-          "value": 5,
-          "participantId": 284
-        },
-        {
-          "type": "Corners",
-          "value": 2,
-          "participantId": 496
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 55,
-          "participantId": 284
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 45,
-          "participantId": 496
-        },
-        {
-          "type": "Yellowcards",
-          "value": 3,
-          "participantId": 284
-        },
-        {
-          "type": "Yellowcards",
-          "value": 4,
-          "participantId": 496
-        }
-      ],
-      "source": "Sportmonks"
-    },
-    {
-      "fixtureId": 19722765,
-      "home": "Rangers",
-      "away": "St. Johnstone",
-      "homeId": 62,
-      "awayId": 734,
-      "kickoff": "2026-10-24T16:00:00+02:00",
-      "date": "2026-10-24",
-      "time": "16:00",
-      "league": "Premiership",
-      "leagueId": 501,
-      "status": "Full Time",
-      "scores": [
-        {
-          "description": "1ST_HALF",
-          "participant": "home",
-          "goals": 1
-        },
-        {
-          "description": "1ST_HALF",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "home",
-          "goals": 4
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "CURRENT",
-          "participant": "home",
-          "goals": 4
-        },
-        {
-          "description": "CURRENT",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "home",
-          "goals": 3
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "away",
-          "goals": 0
-        }
-      ],
-      "statistics": [
-        {
-          "type": "Corners",
-          "value": 2,
-          "participantId": 734
-        },
-        {
-          "type": "Corners",
-          "value": 12,
-          "participantId": 62
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 39,
-          "participantId": 734
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 61,
-          "participantId": 62
-        },
-        {
-          "type": "Redcards",
-          "value": 1,
-          "participantId": 734
-        },
-        {
-          "type": "Redcards",
-          "value": 0,
-          "participantId": 62
-        },
-        {
-          "type": "Yellowcards",
-          "value": 1,
-          "participantId": 734
-        },
-        {
-          "type": "Yellowcards",
-          "value": 1,
-          "participantId": 62
-        }
-      ],
-      "source": "Sportmonks"
-    },
-    {
-      "fixtureId": 19722768,
-      "home": "Falkirk",
-      "away": "Kilmarnock",
-      "homeId": 770,
-      "awayId": 180,
-      "kickoff": "2026-10-24T16:00:00+02:00",
-      "date": "2026-10-24",
-      "time": "16:00",
-      "league": "Premiership",
-      "leagueId": 501,
-      "status": "Full Time",
-      "scores": [
-        {
-          "description": "1ST_HALF",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "1ST_HALF",
-          "participant": "home",
-          "goals": 2
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "home",
-          "goals": 3
-        },
-        {
-          "description": "CURRENT",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "CURRENT",
-          "participant": "home",
-          "goals": 3
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "home",
-          "goals": 1
-        }
-      ],
-      "statistics": [
-        {
-          "type": "Corners",
-          "value": 7,
-          "participantId": 180
-        },
-        {
-          "type": "Corners",
-          "value": 9,
-          "participantId": 770
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 51,
-          "participantId": 180
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 49,
-          "participantId": 770
-        },
-        {
-          "type": "Yellowcards",
-          "value": 2,
-          "participantId": 180
-        },
-        {
-          "type": "Yellowcards",
-          "value": 0,
-          "participantId": 770
-        }
-      ],
-      "source": "Sportmonks"
-    },
-    {
-      "fixtureId": 19722769,
-      "home": "Dundee United",
-      "away": "Aberdeen",
-      "homeId": 282,
-      "awayId": 273,
-      "kickoff": "2026-10-24T16:00:00+02:00",
-      "date": "2026-10-24",
-      "time": "16:00",
-      "league": "Premiership",
-      "leagueId": 501,
-      "status": "Full Time",
-      "scores": [
-        {
-          "description": "1ST_HALF",
-          "participant": "away",
-          "goals": 1
-        },
-        {
-          "description": "1ST_HALF",
-          "participant": "home",
-          "goals": 2
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "away",
-          "goals": 2
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "home",
-          "goals": 3
-        },
-        {
-          "description": "CURRENT",
-          "participant": "away",
-          "goals": 2
-        },
-        {
-          "description": "CURRENT",
-          "participant": "home",
-          "goals": 3
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "away",
-          "goals": 1
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "home",
-          "goals": 1
-        }
-      ],
-      "statistics": [
-        {
-          "type": "Corners",
-          "value": 8,
-          "participantId": 273
-        },
-        {
-          "type": "Corners",
-          "value": 3,
-          "participantId": 282
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 55,
-          "participantId": 273
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 45,
-          "participantId": 282
-        },
-        {
-          "type": "Yellowcards",
-          "value": 1,
-          "participantId": 273
-        },
-        {
-          "type": "Yellowcards",
-          "value": 0,
-          "participantId": 282
-        }
-      ],
-      "source": "Sportmonks"
-    },
     {
       "fixtureId": 19722767,
       "home": "Hibernian",
@@ -588,21 +226,57 @@
       "scores": [],
       "statistics": [],
       "source": "Sportmonks"
+    },
+    {
+      "fixtureId": 19722753,
+      "home": "Motherwell",
+      "away": "St. Mirren",
+      "homeId": 309,
+      "awayId": 496,
+      "kickoff": "2026-10-31T16:00:00+01:00",
+      "date": "2026-10-31",
+      "time": "16:00",
+      "league": "Premiership",
+      "leagueId": 501,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
+    },
+    {
+      "fixtureId": 19722754,
+      "home": "Kilmarnock",
+      "away": "St. Johnstone",
+      "homeId": 180,
+      "awayId": 734,
+      "kickoff": "2026-10-31T16:00:00+01:00",
+      "date": "2026-10-31",
+      "time": "16:00",
+      "league": "Premiership",
+      "leagueId": 501,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
+    },
+    {
+      "fixtureId": 19722757,
+      "home": "Dundee United",
+      "away": "Hearts",
+      "homeId": 282,
+      "awayId": 314,
+      "kickoff": "2026-10-31T16:00:00+01:00",
+      "date": "2026-10-31",
+      "time": "16:00",
+      "league": "Premiership",
+      "leagueId": 501,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
     }
   ],
   "diagnostics": [
-    {
-      "date": "2026-10-24",
-      "count": 4,
-      "parsed": 4,
-      "pages": [
-        {
-          "page": 1,
-          "count": 4
-        }
-      ],
-      "ok": true
-    },
     {
       "date": "2026-10-25",
       "count": 6,
@@ -617,15 +291,8 @@
     },
     {
       "date": "2026-10-26",
-      "count": 1,
-      "parsed": 1,
-      "pages": [
-        {
-          "page": 1,
-          "count": 1
-        }
-      ],
-      "ok": true
+      "ok": false,
+      "error": "Sportmonks connection error: [Errno 104] Connection reset by peer"
     },
     {
       "date": "2026-10-27",
@@ -674,7 +341,21 @@
         }
       ],
       "ok": true
+    },
+    {
+      "date": "2026-10-31",
+      "count": 3,
+      "parsed": 3,
+      "pages": [
+        {
+          "page": 1,
+          "count": 3
+        }
+      ],
+      "ok": true
     }
   ],
-  "failedDates": []
+  "failedDates": [
+    "2026-10-26"
+  ]
 }
