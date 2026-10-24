@@ -2,16 +2,17 @@
 """Supplemental API-Football fixture verification and match-statistics feed.
 
 API key is read only from the API_FOOTBALL_KEY environment variable.
-Budget guard: up to 3 date calls, 4 H2H calls, and 6 statistics calls per run.
+Budget guard: up to 1 date call, 4 H2H calls, and 6 statistics calls per run.
 """
 import json
 import os
 import re
 import sys
+import unicodedata
 import urllib.error
 import urllib.parse
 import urllib.request
-from datetime import datetime, timedelta
+from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -42,7 +43,10 @@ def api_get(path, params):
 
 
 def norm(value):
-    value = (value or "").lower().replace("&", " and ")
+    value = unicodedata.normalize("NFKD", str(value or ""))
+    value = "".join(ch for ch in value if not unicodedata.combining(ch))
+    value = value.lower().replace("&", " and ")
+    value = re.sub(r"\b(fc|cf|afc|sc|club)\b", " ", value)
     value = re.sub(r"[^a-z0-9]+", " ", value)
     return " ".join(value.split())
 
@@ -64,16 +68,32 @@ def main():
         and m.get("modelStatus") != "fixture_only"
     ]
     today = datetime.now(WARSAW).date()
-    # Query every date in the upcoming seven-day window, including days without primary-provider fixtures.
-    dates = [(today + timedelta(days=i)).isoformat() for i in range(7)]
+    # API-Football Free restricts the accessible fixture-date window. Query only
+    # today's local fixtures rather than failing the entire feed on future dates.
+    dates = [today.isoformat()]
 
     raw_fixtures = []
     diagnostics = []
-    for date in dates[:7]:
-        payload = api_get("/fixtures", {"date": date, "timezone": "Europe/Warsaw"})
-        response = payload.get("response", [])
-        raw_fixtures.extend(response)
-        diagnostics.append(f"{date}: {len(response)} spotkań w API-Football")
+    successful_dates = 0
+    for date in dates:
+        try:
+            payload = api_get("/fixtures", {"date": date, "timezone": "Europe/Warsaw"})
+            response = payload.get("response", [])
+            if not isinstance(response, list):
+                raise RuntimeError("API-Football returned a non-list response.")
+            raw_fixtures.extend(response)
+            successful_dates += 1
+            diagnostics.append(f"{date}: {len(response)} spotkań w API-Football")
+        except Exception as exc:
+            message = f"{date}: BŁĄD TERMINARZA: {str(exc)[:220]}"
+            diagnostics.append(message)
+            print("API-Football: " + message, file=sys.stderr)
+
+    if not successful_dates:
+        raise RuntimeError(
+            "API-Football nie udostępnił terminarza dla dozwolonej daty; "
+            "zachowuję poprzednie dane zamiast publikować pusty feed."
+        )
 
     indexed = {}
     for raw in raw_fixtures:
@@ -84,9 +104,17 @@ def main():
         kickoff = fixture.get("date")
         if not home.get("name") or not away.get("name") or not kickoff:
             continue
-        indexed[(kickoff[:10], norm(home["name"]), norm(away["name"]))] = {
+        try:
+            kickoff_dt = datetime.fromisoformat(str(kickoff).replace("Z", "+00:00"))
+            if kickoff_dt.tzinfo is None:
+                kickoff_dt = kickoff_dt.replace(tzinfo=ZoneInfo("UTC"))
+            local_kickoff = kickoff_dt.astimezone(WARSAW)
+        except (TypeError, ValueError):
+            continue
+        kickoff_local = local_kickoff.isoformat()
+        indexed[(local_kickoff.date().isoformat(), norm(home["name"]), norm(away["name"]))] = {
             "fixtureId": fixture.get("id"),
-            "kickoff": kickoff,
+            "kickoff": kickoff_local,
             "status": (fixture.get("status") or {}).get("short"),
             "elapsed": (fixture.get("status") or {}).get("elapsed"),
             "home": home["name"],
@@ -114,7 +142,7 @@ def main():
     additional = []
     for key, item in indexed.items():
         date, home_norm, away_norm = key
-        if date not in dates[:7] or key in existing_keys:
+        if date not in dates or key in existing_keys:
             continue
         try:
             kickoff = datetime.fromisoformat(item["kickoff"].replace("Z", "+00:00")).astimezone(WARSAW)
