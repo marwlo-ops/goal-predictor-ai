@@ -1800,7 +1800,11 @@ function renderMatches() {
     ).join("") : '<option value="">Brak danych modelu</option>';
 
     if (!probabilities) {
-      const sourceLabel = match.source === "API-Football" || String(match.id).startsWith("api-football-") ? "API-Football" : "Źródło terminarza";
+      const sourceLabel = match.source === "Sportmonks" || String(match.id).startsWith("sportmonks-")
+        ? "Sportmonks"
+        : match.source === "API-Football" || String(match.id).startsWith("api-football-")
+          ? "API-Football"
+          : "Źródło terminarza";
       const status = match.apiFootballVerified?.status;
       const statusLabels = {NS:"Zaplanowany",TBD:"Godzina do potwierdzenia",LIVE:"Na żywo","1H":"1. połowa",HT:"Przerwa","2H":"2. połowa",FT:"Zakończony",AET:"Po dogrywce",PEN:"Rzuty karne",PST:"Przełożony",CANC:"Odwołany",ABD:"Przerwany"};
       return '<article class="card fixture-only-card">' +
@@ -2190,6 +2194,45 @@ async function loadPublishedData() {
       return fixture ? { ...match, sportmonks: fixture } : match;
     });
 
+    // Sportmonks may provide competitions absent from the primary prediction feed.
+    // Show these fixtures explicitly without manufacturing xG or probabilities.
+    const knownFixtureKeys = new Set(matches.map(sourceFixtureKey));
+    const sportmonksOnly = [];
+    for (const fixture of (Array.isArray(sportmonksCheck?.fixtures) ? sportmonksCheck.fixtures : [])) {
+      if (!fixture || !fixture.home || !fixture.away || !fixture.date) continue;
+      const key = sourceFixtureKey(fixture);
+      if (knownFixtureKeys.has(key)) continue;
+      knownFixtureKeys.add(key);
+      sportmonksOnly.push({
+        id: "sportmonks-" + String(fixture.fixtureId ?? key),
+        source: "Sportmonks",
+        league: "SPORTMONKS",
+        leagueName: fixture.league || "Piłka nożna",
+        date: fixture.date,
+        time: fixture.time || "—",
+        kickoff: fixture.kickoff || (fixture.date + "T" + (fixture.time || "00:00") + ":00"),
+        home: fixture.home,
+        away: fixture.away,
+        hx: null,
+        ax: null,
+        probabilities: null,
+        history: {
+          homeLast10: { matches: [], stats: null },
+          awayLast10: { matches: [], stats: null },
+          h2h: []
+        },
+        model: "Tylko terminarz Sportmonks",
+        modelStatus: "fixture_only",
+        quality: "insufficient_data",
+        confidence: "Brak prognozy: brak zweryfikowanych danych modelu",
+        sportmonks: fixture
+      });
+    }
+    matches = [...matches, ...sportmonksOnly].sort((a, b) =>
+      String(a.kickoff || (a.date + "T" + (a.time || "00:00")))
+        .localeCompare(String(b.kickoff || (b.date + "T" + (b.time || "00:00"))))
+    );
+
     // Optional second-source check: only exact fixture matches are attached.
     let apiFootballCheck = null;
     try {
@@ -2204,7 +2247,7 @@ async function loadPublishedData() {
     // Only publishable, model-backed matches belong in the interactive prediction UI.
     // Keep the raw count for diagnostics; unsupported fixture-only rows stay in source feeds.
     matches = matches.filter(match =>
-      match.modelStatus !== "fixture_only" && !!getMatchProbabilities(match)
+      match.modelStatus === "fixture_only" || !!getMatchProbabilities(match)
     );
 
     buildLeagueTabs();
@@ -2216,8 +2259,8 @@ async function loadPublishedData() {
     document.getElementById("quickLeagueCount").textContent = leagueCount;
 
     const fixtureCount = matches.length;
-    const predictionCount = matches.length;
-    const unmodelledCount = Math.max(0, publishedMatches.length - matches.length);
+    const predictionCount = matches.filter(match => !!getMatchProbabilities(match)).length;
+    const unmodelledCount = Math.max(0, fixtureCount - predictionCount);
     let dataPulse = document.getElementById("dataPulse");
     if (!dataPulse) {
       dataPulse = document.createElement("div");
@@ -2237,7 +2280,7 @@ async function loadPublishedData() {
         '<div class="provider-status-title">' + predictionCount + ' prognoz gotowych</div>' +
         '<div class="provider-status-subtitle">' +
           fixtureCount + ' spotkań w bazie prognostycznej · ' +
-          (unmodelledCount ? unmodelledCount + ' bez modelu ukrytych w widoku prognoz' : 'brak pustych rekordów') +
+          (unmodelledCount ? unmodelledCount + " spotkań z terminarza bez prognozy" : 'wszystkie spotkania mają model') +
         '</div>';
     }
     const generated = payload.generatedAt ? new Date(payload.generatedAt) : null;
