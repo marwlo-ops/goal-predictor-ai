@@ -1,7 +1,23 @@
 {
-  "updatedAt": "2026-10-25T04:23:45.543287+01:00",
+  "updatedAt": "2026-10-25T05:02:10.923107+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 0,
-  "matches": []
+  "count": 1,
+  "matches": [
+    {
+      "id": 555057,
+      "league": "BSA",
+      "leagueName": "Campeonato Brasileiro Série A",
+      "home": "Santos FC",
+      "away": "EC Bahia",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "utcDate": "2026-10-25T01:00:00Z",
+      "updatedAt": "2026-10-25T00:09:57Z"
+    }
+  ]
 }
