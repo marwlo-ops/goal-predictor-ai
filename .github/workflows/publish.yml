@@ -9,6 +9,7 @@ on:
       - "scripts/update_api_football.py"
       - "scripts/update_sportmonks.py"
       - "scripts/sync_data_sources.py"
+      - "tests/**"
       - "index.html"
       - "sw.js"
       - ".github/workflows/publish.yml"
