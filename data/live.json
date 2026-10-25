@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-10-25T23:00:40.512799+01:00",
+  "updatedAt": "2026-10-25T23:31:44.072642+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 3,
+  "count": 2,
   "matches": [
     {
       "id": 555057,
@@ -20,21 +20,6 @@
       "updatedAt": "2026-10-25T02:06:33Z"
     },
     {
-      "id": 564723,
-      "league": "PD",
-      "leagueName": "Primera Division",
-      "home": "FC Barcelona",
-      "away": "Real Madrid CF",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 1,
-        "away": 2
-      },
-      "utcDate": "2026-10-25T20:00:00Z",
-      "updatedAt": "2026-10-25T21:59:49Z"
-    },
-    {
       "id": 567332,
       "league": "PPL",
       "leagueName": "Primeira Liga",
@@ -43,11 +28,11 @@
       "status": "IN_PLAY",
       "minute": null,
       "score": {
-        "home": 0,
-        "away": 1
+        "home": 1,
+        "away": 2
       },
       "utcDate": "2026-10-25T20:30:00Z",
-      "updatedAt": "2026-10-25T21:59:49Z"
+      "updatedAt": "2026-10-25T22:30:45Z"
     }
   ]
 }
