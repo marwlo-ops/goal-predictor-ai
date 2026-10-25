@@ -1,23 +1,38 @@
 {
-  "updatedAt": "2026-10-25T12:21:51.221890+01:00",
+  "updatedAt": "2026-10-25T12:54:50.221265+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 1,
+  "count": 2,
   "matches": [
     {
-      "id": 555057,
-      "league": "BSA",
-      "leagueName": "Campeonato Brasileiro Série A",
-      "home": "Santos FC",
-      "away": "EC Bahia",
+      "id": 558859,
+      "league": "DED",
+      "leagueName": "Eredivisie",
+      "home": "Fortuna Sittard",
+      "away": "SBV Excelsior",
       "status": "IN_PLAY",
       "minute": null,
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
-      "utcDate": "2026-10-25T01:00:00Z",
-      "updatedAt": "2026-10-25T00:13:09Z"
+      "utcDate": "2026-10-25T11:15:00Z",
+      "updatedAt": "2026-10-25T11:53:25Z"
+    },
+    {
+      "id": 558563,
+      "league": "SA",
+      "leagueName": "Serie A",
+      "home": "FC Internazionale Milano",
+      "away": "ACF Fiorentina",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-10-25T11:30:00Z",
+      "updatedAt": "2026-10-25T11:53:57Z"
     }
   ]
 }
