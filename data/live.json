@@ -1,173 +1,23 @@
 {
-  "updatedAt": "2026-10-25T01:56:37.380708+02:00",
+  "updatedAt": "2026-10-25T02:29:05.264419+02:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 11,
+  "count": 1,
   "matches": [
     {
-      "id": 560614,
-      "league": "PL",
-      "leagueName": "Premier League",
-      "home": "Aston Villa FC",
-      "away": "Manchester City FC",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": null,
-        "away": null
-      },
-      "utcDate": "2026-10-24T11:30:00Z",
-      "updatedAt": "2026-10-24T11:35:18Z"
-    },
-    {
-      "id": 564718,
-      "league": "PD",
-      "leagueName": "Primera Division",
-      "home": "Rayo Vallecano de Madrid",
-      "away": "Elche CF",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": null,
-        "away": null
-      },
-      "utcDate": "2026-10-24T12:00:00Z",
-      "updatedAt": "2026-10-24T12:05:42Z"
-    },
-    {
-      "id": 565832,
-      "league": "BL1",
-      "leagueName": "Bundesliga",
-      "home": "RB Leipzig",
-      "away": "SV 07 Elversberg",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": null,
-        "away": null
-      },
-      "utcDate": "2026-10-24T13:30:00Z",
-      "updatedAt": "2026-10-24T13:35:50Z"
-    },
-    {
-      "id": 561899,
-      "league": "ELC",
-      "leagueName": "Championship",
-      "home": "Lincoln City FC",
-      "away": "Burnley FC",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": null,
-        "away": null
-      },
-      "utcDate": "2026-10-24T14:00:00Z",
-      "updatedAt": "2026-10-24T14:05:40Z"
-    },
-    {
-      "id": 565837,
-      "league": "BL1",
-      "leagueName": "Bundesliga",
-      "home": "Borussia Dortmund",
-      "away": "Eintracht Frankfurt",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": null,
-        "away": null
-      },
-      "utcDate": "2026-10-24T16:30:00Z",
-      "updatedAt": "2026-10-24T16:35:33Z"
-    },
-    {
-      "id": 567333,
-      "league": "PPL",
-      "leagueName": "Primeira Liga",
-      "home": "FC Alverca",
-      "away": "FC Arouca",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": null,
-        "away": null
-      },
-      "utcDate": "2026-10-24T17:00:00Z",
-      "updatedAt": "2026-10-24T17:05:58Z"
-    },
-    {
-      "id": 559652,
-      "league": "FL1",
-      "leagueName": "Ligue 1",
-      "home": "Racing Club de Lens",
-      "away": "Paris FC",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": null,
-        "away": null
-      },
-      "utcDate": "2026-10-24T18:45:00Z",
-      "updatedAt": "2026-10-24T18:50:29Z"
-    },
-    {
-      "id": 558860,
-      "league": "DED",
-      "leagueName": "Eredivisie",
-      "home": "ADO Den Haag",
-      "away": "SC Heerenveen",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": null,
-        "away": null
-      },
-      "utcDate": "2026-10-24T19:00:00Z",
-      "updatedAt": "2026-10-24T19:05:25Z"
-    },
-    {
-      "id": 567335,
-      "league": "PPL",
-      "leagueName": "Primeira Liga",
-      "home": "Gil Vicente FC",
-      "away": "FC Porto",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": null,
-        "away": null
-      },
-      "utcDate": "2026-10-24T19:30:00Z",
-      "updatedAt": "2026-10-24T19:35:49Z"
-    },
-    {
-      "id": 555056,
+      "id": 555057,
       "league": "BSA",
       "leagueName": "Campeonato Brasileiro Série A",
-      "home": "SE Palmeiras",
-      "away": "RB Bragantino",
+      "home": "Santos FC",
+      "away": "EC Bahia",
       "status": "IN_PLAY",
       "minute": null,
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
-      "utcDate": "2026-10-24T21:30:00Z",
-      "updatedAt": "2026-10-24T21:35:49Z"
-    },
-    {
-      "id": 555050,
-      "league": "BSA",
-      "leagueName": "Campeonato Brasileiro Série A",
-      "home": "Chapecoense AF",
-      "away": "Fluminense FC",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": null,
-        "away": null
-      },
-      "utcDate": "2026-10-24T22:30:00Z",
-      "updatedAt": "2026-10-24T22:44:13Z"
+      "utcDate": "2026-10-25T01:00:00Z",
+      "updatedAt": "2026-10-25T00:28:05Z"
     }
   ]
 }
