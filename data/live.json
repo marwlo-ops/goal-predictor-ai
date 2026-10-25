@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-10-25T22:33:51.093295+01:00",
+  "updatedAt": "2026-10-25T23:00:40.512799+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 4,
+  "count": 3,
   "matches": [
     {
       "id": 555057,
@@ -20,21 +20,6 @@
       "updatedAt": "2026-10-25T02:06:33Z"
     },
     {
-      "id": 558559,
-      "league": "SA",
-      "leagueName": "Serie A",
-      "home": "Udinese Calcio",
-      "away": "AC Milan",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 0,
-        "away": 2
-      },
-      "utcDate": "2026-10-25T19:45:00Z",
-      "updatedAt": "2026-10-25T21:32:05Z"
-    },
-    {
       "id": 564723,
       "league": "PD",
       "leagueName": "Primera Division",
@@ -44,10 +29,10 @@
       "minute": null,
       "score": {
         "home": 1,
-        "away": 1
+        "away": 2
       },
       "utcDate": "2026-10-25T20:00:00Z",
-      "updatedAt": "2026-10-25T21:33:09Z"
+      "updatedAt": "2026-10-25T21:59:49Z"
     },
     {
       "id": 567332,
@@ -62,7 +47,7 @@
         "away": 1
       },
       "utcDate": "2026-10-25T20:30:00Z",
-      "updatedAt": "2026-10-25T21:32:05Z"
+      "updatedAt": "2026-10-25T21:59:49Z"
     }
   ]
 }
