@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T18:33:42.260572+01:00",
+  "generatedAt": "2026-10-25T19:01:11.753039+01:00",
   "source": "Sportmonks Football API v3",
   "count": 17,
   "fixtures": [
@@ -454,7 +454,7 @@
       "time": "18:00",
       "league": "Superliga",
       "leagueId": 271,
-      "status": "1st Half",
+      "status": "Half Time",
       "scores": [
         {
           "description": "1ST_HALF",
@@ -495,17 +495,17 @@
         },
         {
           "type": "Corners",
-          "value": 3,
+          "value": 6,
           "participantId": 2905
         },
         {
           "type": "Ball Possession %",
-          "value": 44,
+          "value": 42,
           "participantId": 2447
         },
         {
           "type": "Ball Possession %",
-          "value": 56,
+          "value": 58,
           "participantId": 2905
         },
         {
