@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T16:04:05.581642+01:00",
+  "generatedAt": "2026-10-25T16:35:32.883905+01:00",
   "source": "Sportmonks Football API v3",
   "count": 17,
   "fixtures": [
@@ -246,12 +246,12 @@
         },
         {
           "type": "Ball Possession %",
-          "value": 48,
+          "value": 49,
           "participantId": 2650
         },
         {
           "type": "Ball Possession %",
-          "value": 52,
+          "value": 51,
           "participantId": 939
         },
         {
@@ -324,27 +324,27 @@
       "statistics": [
         {
           "type": "Corners",
-          "value": 3,
+          "value": 4,
           "participantId": 314
         },
         {
           "type": "Corners",
-          "value": 3,
+          "value": 6,
           "participantId": 309
         },
         {
           "type": "Ball Possession %",
-          "value": 48,
+          "value": 46,
           "participantId": 314
         },
         {
           "type": "Ball Possession %",
-          "value": 52,
+          "value": 54,
           "participantId": 309
         },
         {
           "type": "Yellowcards",
-          "value": 1,
+          "value": 4,
           "participantId": 314
         },
         {
@@ -371,43 +371,53 @@
         {
           "description": "1ST_HALF",
           "participant": "home",
-          "goals": 0
+          "goals": 2
         },
         {
           "description": "1ST_HALF",
           "participant": "away",
-          "goals": 0
+          "goals": 1
         },
         {
           "description": "2ND_HALF",
           "participant": "home",
-          "goals": 0
+          "goals": 2
         },
         {
           "description": "2ND_HALF",
           "participant": "away",
-          "goals": 0
+          "goals": 1
         },
         {
           "description": "CURRENT",
           "participant": "home",
-          "goals": 0
+          "goals": 2
         },
         {
           "description": "CURRENT",
           "participant": "away",
-          "goals": 0
+          "goals": 1
         }
       ],
       "statistics": [
         {
           "type": "Ball Possession %",
-          "value": 25,
+          "value": 50,
           "participantId": 390
         },
         {
           "type": "Ball Possession %",
-          "value": 75,
+          "value": 50,
+          "participantId": 211
+        },
+        {
+          "type": "Yellowcards",
+          "value": 0,
+          "participantId": 390
+        },
+        {
+          "type": "Yellowcards",
+          "value": 1,
           "participantId": 211
         }
       ],
