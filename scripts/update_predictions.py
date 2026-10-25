@@ -85,8 +85,9 @@ def poisson_probability(lam, goals):
 
 
 def calculate_probabilities(home_xg, away_xg):
-    hp = [poisson_probability(home_xg, g) for g in range(10)]
-    ap = [poisson_probability(away_xg, g) for g in range(10)]
+    # Extend the score matrix to reduce truncation for high-total-goal fixtures.
+    hp = [poisson_probability(home_xg, g) for g in range(16)]
+    ap = [poisson_probability(away_xg, g) for g in range(16)]
     hw = draw = aw = over15 = over25 = btts = 0.0
 
     for h, ph in enumerate(hp):
@@ -105,9 +106,13 @@ def calculate_probabilities(home_xg, away_xg):
             if h >= 1 and a >= 1:
                 btts += p
 
+    # The finite score matrix omits a tiny Poisson tail; normalize every market
+    # against the same probability mass so displayed markets stay calibrated.
     total = hw + draw + aw
     if total:
-        hw, draw, aw = hw / total, draw / total, aw / total
+        hw, draw, aw, over15, over25, btts = (
+            value / total for value in (hw, draw, aw, over15, over25, btts)
+        )
 
     return {
         "homeWin": round(hw * 100, 1),
