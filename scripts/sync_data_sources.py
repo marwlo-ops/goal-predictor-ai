@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 """Run optional football data providers in a consistent order."""
+import json
 import os
 import subprocess
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -12,6 +14,23 @@ PROVIDERS = [
 ]
 
 
+def sportmonks_feed_is_fresh(max_age_minutes=25):
+    """Avoid duplicate provider calls when the dedicated Sportmonks job just ran."""
+    path = ROOT / "data/sportmonks.json"
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+        stamp_text = payload.get("generatedAt")
+        if not stamp_text:
+            return False
+        stamp = datetime.fromisoformat(str(stamp_text).replace("Z", "+00:00"))
+        if stamp.tzinfo is None:
+            stamp = stamp.replace(tzinfo=timezone.utc)
+        age_seconds = (datetime.now(timezone.utc) - stamp.astimezone(timezone.utc)).total_seconds()
+        return -300 <= age_seconds < max_age_minutes * 60
+    except (OSError, ValueError, TypeError, json.JSONDecodeError):
+        return False
+
+
 def main():
     configured = 0
     succeeded = 0
@@ -19,6 +38,9 @@ def main():
     for name, token_env, script in PROVIDERS:
         if not os.environ.get(token_env, "").strip():
             print(f"{name}: pomijam — brak sekretu {token_env}.", flush=True)
+            continue
+        if name == "Sportmonks" and sportmonks_feed_is_fresh():
+            print("Sportmonks: pomijam — feed jest świeży (mniej niż 25 minut).", flush=True)
             continue
         configured += 1
         print(f"\n===== Źródło danych: {name} =====", flush=True)
