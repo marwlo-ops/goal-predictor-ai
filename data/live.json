@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-25T21:04:16.416632+01:00",
+  "updatedAt": "2026-10-25T21:32:59.522409+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
   "count": 4,
@@ -20,21 +20,6 @@
       "updatedAt": "2026-10-25T02:06:33Z"
     },
     {
-      "id": 567334,
-      "league": "PPL",
-      "leagueName": "Primeira Liga",
-      "home": "CD Nacional",
-      "away": "Sporting Clube de Braga",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 1,
-        "away": 0
-      },
-      "utcDate": "2026-10-25T18:00:00Z",
-      "updatedAt": "2026-10-25T20:03:33Z"
-    },
-    {
       "id": 558855,
       "league": "DED",
       "leagueName": "Eredivisie",
@@ -47,7 +32,7 @@
         "away": 0
       },
       "utcDate": "2026-10-25T19:00:00Z",
-      "updatedAt": "2026-10-25T19:52:53Z"
+      "updatedAt": "2026-10-25T20:32:21Z"
     },
     {
       "id": 558559,
@@ -62,7 +47,22 @@
         "away": 1
       },
       "utcDate": "2026-10-25T19:45:00Z",
-      "updatedAt": "2026-10-25T20:03:33Z"
+      "updatedAt": "2026-10-25T20:32:21Z"
+    },
+    {
+      "id": 564723,
+      "league": "PD",
+      "leagueName": "Primera Division",
+      "home": "FC Barcelona",
+      "away": "Real Madrid CF",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-10-25T20:00:00Z",
+      "updatedAt": "2026-10-25T20:32:21Z"
     }
   ]
 }
