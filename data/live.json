@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-10-25T17:04:53.068613+01:00",
+  "updatedAt": "2026-10-25T17:36:09.371971+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 5,
+  "count": 10,
   "matches": [
     {
       "id": 555057,
@@ -28,11 +28,11 @@
       "status": "IN_PLAY",
       "minute": null,
       "score": {
-        "home": 0,
+        "home": 3,
         "away": 0
       },
       "utcDate": "2026-10-25T14:30:00Z",
-      "updatedAt": "2026-10-25T16:04:05Z"
+      "updatedAt": "2026-10-25T16:35:02Z"
     },
     {
       "id": 564725,
@@ -47,7 +47,7 @@
         "away": 0
       },
       "utcDate": "2026-10-25T15:15:00Z",
-      "updatedAt": "2026-10-25T16:03:33Z"
+      "updatedAt": "2026-10-25T16:34:29Z"
     },
     {
       "id": 567336,
@@ -59,10 +59,10 @@
       "minute": null,
       "score": {
         "home": 0,
-        "away": 2
+        "away": 3
       },
       "utcDate": "2026-10-25T15:30:00Z",
-      "updatedAt": "2026-10-25T16:03:33Z"
+      "updatedAt": "2026-10-25T16:24:53Z"
     },
     {
       "id": 558856,
@@ -74,10 +74,85 @@
       "minute": null,
       "score": {
         "home": 0,
-        "away": 0
+        "away": 1
       },
       "utcDate": "2026-10-25T15:45:00Z",
-      "updatedAt": "2026-10-25T16:03:34Z"
+      "updatedAt": "2026-10-25T16:34:29Z"
+    },
+    {
+      "id": 559653,
+      "league": "FL1",
+      "leagueName": "Ligue 1",
+      "home": "Angers SCO",
+      "away": "FC Lorient",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-10-25T16:15:00Z",
+      "updatedAt": "2026-10-25T16:34:29Z"
+    },
+    {
+      "id": 559656,
+      "league": "FL1",
+      "leagueName": "Ligue 1",
+      "home": "AJ Auxerre",
+      "away": "Le Mans FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-10-25T16:15:00Z",
+      "updatedAt": "2026-10-25T16:34:30Z"
+    },
+    {
+      "id": 559655,
+      "league": "FL1",
+      "leagueName": "Ligue 1",
+      "home": "Toulouse FC",
+      "away": "ES Troyes AC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-10-25T16:15:00Z",
+      "updatedAt": "2026-10-25T16:34:30Z"
+    },
+    {
+      "id": 559649,
+      "league": "FL1",
+      "leagueName": "Ligue 1",
+      "home": "Olympique de Marseille",
+      "away": "Le Havre AC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "utcDate": "2026-10-25T16:15:00Z",
+      "updatedAt": "2026-10-25T16:34:30Z"
+    },
+    {
+      "id": 559651,
+      "league": "FL1",
+      "leagueName": "Ligue 1",
+      "home": "Stade Rennais FC 1901",
+      "away": "RC Strasbourg Alsace",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-10-25T16:15:00Z",
+      "updatedAt": "2026-10-25T16:34:30Z"
     }
   ]
 }
