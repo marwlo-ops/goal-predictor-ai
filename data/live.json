@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-10-25T13:24:21.656903+01:00",
+  "updatedAt": "2026-10-25T14:07:30.582907+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 1,
+  "count": 4,
   "matches": [
     {
       "id": 555057,
@@ -18,6 +18,51 @@
       },
       "utcDate": "2026-10-25T01:00:00Z",
       "updatedAt": "2026-10-25T02:06:33Z"
+    },
+    {
+      "id": 558859,
+      "league": "DED",
+      "leagueName": "Eredivisie",
+      "home": "Fortuna Sittard",
+      "away": "SBV Excelsior",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "utcDate": "2026-10-25T11:15:00Z",
+      "updatedAt": "2026-10-25T13:07:02Z"
+    },
+    {
+      "id": 558563,
+      "league": "SA",
+      "leagueName": "Serie A",
+      "home": "FC Internazionale Milano",
+      "away": "ACF Fiorentina",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "utcDate": "2026-10-25T11:30:00Z",
+      "updatedAt": "2026-10-25T13:06:29Z"
+    },
+    {
+      "id": 564720,
+      "league": "PD",
+      "leagueName": "Primera Division",
+      "home": "Athletic Club",
+      "away": "Getafe CF",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-10-25T13:00:00Z",
+      "updatedAt": "2026-10-25T13:05:26Z"
     }
   ]
 }
