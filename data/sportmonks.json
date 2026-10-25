@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T15:03:49.976606+01:00",
+  "generatedAt": "2026-10-25T15:34:25.569337+01:00",
   "source": "Sportmonks Football API v3",
   "count": 17,
   "fixtures": [
@@ -102,7 +102,7 @@
       "time": "14:00",
       "league": "Superliga",
       "leagueId": 271,
-      "status": "Half Time",
+      "status": "2nd Half",
       "scores": [
         {
           "description": "1ST_HALF",
@@ -122,7 +122,7 @@
         {
           "description": "2ND_HALF",
           "participant": "away",
-          "goals": 0
+          "goals": 1
         },
         {
           "description": "CURRENT",
@@ -132,7 +132,17 @@
         {
           "description": "CURRENT",
           "participant": "away",
+          "goals": 1
+        },
+        {
+          "description": "2ND_HALF_ONLY",
+          "participant": "home",
           "goals": 0
+        },
+        {
+          "description": "2ND_HALF_ONLY",
+          "participant": "away",
+          "goals": 1
         }
       ],
       "statistics": [
@@ -148,12 +158,12 @@
         },
         {
           "type": "Ball Possession %",
-          "value": 55,
+          "value": 54,
           "participantId": 2394
         },
         {
           "type": "Ball Possession %",
-          "value": 45,
+          "value": 46,
           "participantId": 86
         },
         {
@@ -163,7 +173,7 @@
         },
         {
           "type": "Yellowcards",
-          "value": 2,
+          "value": 3,
           "participantId": 86
         }
       ],
@@ -180,7 +190,7 @@
       "time": "14:00",
       "league": "Superliga",
       "leagueId": 271,
-      "status": "Half Time",
+      "status": "2nd Half",
       "scores": [
         {
           "description": "1ST_HALF",
@@ -195,7 +205,7 @@
         {
           "description": "2ND_HALF",
           "participant": "home",
-          "goals": 2
+          "goals": 3
         },
         {
           "description": "2ND_HALF",
@@ -205,33 +215,43 @@
         {
           "description": "CURRENT",
           "participant": "home",
-          "goals": 2
+          "goals": 3
         },
         {
           "description": "CURRENT",
           "participant": "away",
           "goals": 1
+        },
+        {
+          "description": "2ND_HALF_ONLY",
+          "participant": "home",
+          "goals": 1
+        },
+        {
+          "description": "2ND_HALF_ONLY",
+          "participant": "away",
+          "goals": 0
         }
       ],
       "statistics": [
         {
           "type": "Corners",
-          "value": 0,
+          "value": 1,
           "participantId": 2650
         },
         {
           "type": "Corners",
-          "value": 3,
+          "value": 5,
           "participantId": 939
         },
         {
           "type": "Ball Possession %",
-          "value": 31,
+          "value": 39,
           "participantId": 2650
         },
         {
           "type": "Ball Possession %",
-          "value": 69,
+          "value": 61,
           "participantId": 939
         },
         {
@@ -268,7 +288,7 @@
         {
           "description": "1ST_HALF",
           "participant": "away",
-          "goals": 0
+          "goals": 1
         },
         {
           "description": "2ND_HALF",
@@ -278,7 +298,7 @@
         {
           "description": "2ND_HALF",
           "participant": "away",
-          "goals": 0
+          "goals": 1
         },
         {
           "description": "CURRENT",
@@ -288,18 +308,38 @@
         {
           "description": "CURRENT",
           "participant": "away",
-          "goals": 0
+          "goals": 1
         }
       ],
       "statistics": [
         {
+          "type": "Corners",
+          "value": 3,
+          "participantId": 314
+        },
+        {
+          "type": "Corners",
+          "value": 1,
+          "participantId": 309
+        },
+        {
           "type": "Ball Possession %",
-          "value": 64,
+          "value": 49,
           "participantId": 314
         },
         {
           "type": "Ball Possession %",
-          "value": 36,
+          "value": 51,
+          "participantId": 309
+        },
+        {
+          "type": "Yellowcards",
+          "value": 1,
+          "participantId": 314
+        },
+        {
+          "type": "Yellowcards",
+          "value": 0,
           "participantId": 309
         }
       ],
