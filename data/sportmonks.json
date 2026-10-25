@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T08:41:17.907549+01:00",
+  "generatedAt": "2026-10-25T09:36:17.464894+01:00",
   "source": "Sportmonks Football API v3",
   "count": 17,
   "fixtures": [
@@ -270,7 +270,7 @@
       "time": "16:00",
       "league": "Premiership",
       "leagueId": 501,
-      "status": "Not Started",
+      "status": "Postponed",
       "scores": [],
       "statistics": [],
       "source": "Sportmonks"
