@@ -1,536 +1,8 @@
 {
-  "generatedAt": "2026-10-25T23:59:36.068640+01:00",
+  "generatedAt": "2026-10-26T00:30:40.129587+01:00",
   "source": "Sportmonks Football API v3",
-  "count": 17,
+  "count": 16,
   "fixtures": [
-    {
-      "fixtureId": 19722767,
-      "home": "Hibernian",
-      "away": "Celtic",
-      "homeId": 66,
-      "awayId": 53,
-      "kickoff": "2026-10-25T13:00:00+01:00",
-      "date": "2026-10-25",
-      "time": "13:00",
-      "league": "Premiership",
-      "leagueId": 501,
-      "status": "Full Time",
-      "scores": [
-        {
-          "description": "1ST_HALF",
-          "participant": "away",
-          "goals": 2
-        },
-        {
-          "description": "1ST_HALF",
-          "participant": "home",
-          "goals": 1
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "away",
-          "goals": 2
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "home",
-          "goals": 1
-        },
-        {
-          "description": "CURRENT",
-          "participant": "away",
-          "goals": 2
-        },
-        {
-          "description": "CURRENT",
-          "participant": "home",
-          "goals": 1
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "home",
-          "goals": 0
-        }
-      ],
-      "statistics": [
-        {
-          "type": "Corners",
-          "value": 6,
-          "participantId": 53
-        },
-        {
-          "type": "Corners",
-          "value": 2,
-          "participantId": 66
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 61,
-          "participantId": 53
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 39,
-          "participantId": 66
-        },
-        {
-          "type": "Yellowcards",
-          "value": 3,
-          "participantId": 53
-        },
-        {
-          "type": "Yellowcards",
-          "value": 2,
-          "participantId": 66
-        }
-      ],
-      "source": "Sportmonks"
-    },
-    {
-      "fixtureId": 19713884,
-      "home": "Silkeborg IF",
-      "away": "Nordsjælland",
-      "homeId": 86,
-      "awayId": 2394,
-      "kickoff": "2026-10-25T14:00:00+01:00",
-      "date": "2026-10-25",
-      "time": "14:00",
-      "league": "Superliga",
-      "leagueId": 271,
-      "status": "Full Time",
-      "scores": [
-        {
-          "description": "1ST_HALF",
-          "participant": "home",
-          "goals": 1
-        },
-        {
-          "description": "1ST_HALF",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "home",
-          "goals": 1
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "away",
-          "goals": 1
-        },
-        {
-          "description": "CURRENT",
-          "participant": "home",
-          "goals": 1
-        },
-        {
-          "description": "CURRENT",
-          "participant": "away",
-          "goals": 1
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "home",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "away",
-          "goals": 1
-        }
-      ],
-      "statistics": [
-        {
-          "type": "Corners",
-          "value": 7,
-          "participantId": 2394
-        },
-        {
-          "type": "Corners",
-          "value": 1,
-          "participantId": 86
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 53,
-          "participantId": 2394
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 47,
-          "participantId": 86
-        },
-        {
-          "type": "Yellowcards",
-          "value": 2,
-          "participantId": 2394
-        },
-        {
-          "type": "Yellowcards",
-          "value": 5,
-          "participantId": 86
-        }
-      ],
-      "source": "Sportmonks"
-    },
-    {
-      "fixtureId": 19713888,
-      "home": "FC Midtjylland",
-      "away": "Lyngby Boldklub",
-      "homeId": 939,
-      "awayId": 2650,
-      "kickoff": "2026-10-25T14:00:00+01:00",
-      "date": "2026-10-25",
-      "time": "14:00",
-      "league": "Superliga",
-      "leagueId": 271,
-      "status": "Full Time",
-      "scores": [
-        {
-          "description": "1ST_HALF",
-          "participant": "home",
-          "goals": 2
-        },
-        {
-          "description": "1ST_HALF",
-          "participant": "away",
-          "goals": 1
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "home",
-          "goals": 3
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "away",
-          "goals": 2
-        },
-        {
-          "description": "CURRENT",
-          "participant": "home",
-          "goals": 3
-        },
-        {
-          "description": "CURRENT",
-          "participant": "away",
-          "goals": 2
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "home",
-          "goals": 1
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "away",
-          "goals": 1
-        }
-      ],
-      "statistics": [
-        {
-          "type": "Corners",
-          "value": 2,
-          "participantId": 2650
-        },
-        {
-          "type": "Corners",
-          "value": 5,
-          "participantId": 939
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 49,
-          "participantId": 2650
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 51,
-          "participantId": 939
-        },
-        {
-          "type": "Yellowcards",
-          "value": 0,
-          "participantId": 2650
-        },
-        {
-          "type": "Yellowcards",
-          "value": 1,
-          "participantId": 939
-        }
-      ],
-      "source": "Sportmonks"
-    },
-    {
-      "fixtureId": 19722766,
-      "home": "Motherwell",
-      "away": "Hearts",
-      "homeId": 309,
-      "awayId": 314,
-      "kickoff": "2026-10-25T15:00:00+01:00",
-      "date": "2026-10-25",
-      "time": "15:00",
-      "league": "Premiership",
-      "leagueId": 501,
-      "status": "Full Time",
-      "scores": [
-        {
-          "description": "1ST_HALF",
-          "participant": "home",
-          "goals": 0
-        },
-        {
-          "description": "1ST_HALF",
-          "participant": "away",
-          "goals": 1
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "home",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "away",
-          "goals": 2
-        },
-        {
-          "description": "CURRENT",
-          "participant": "home",
-          "goals": 0
-        },
-        {
-          "description": "CURRENT",
-          "participant": "away",
-          "goals": 2
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "home",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "away",
-          "goals": 1
-        }
-      ],
-      "statistics": [
-        {
-          "type": "Corners",
-          "value": 5,
-          "participantId": 314
-        },
-        {
-          "type": "Corners",
-          "value": 6,
-          "participantId": 309
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 46,
-          "participantId": 314
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 54,
-          "participantId": 309
-        },
-        {
-          "type": "Yellowcards",
-          "value": 5,
-          "participantId": 314
-        },
-        {
-          "type": "Yellowcards",
-          "value": 3,
-          "participantId": 309
-        }
-      ],
-      "source": "Sportmonks"
-    },
-    {
-      "fixtureId": 19713882,
-      "home": "Horsens",
-      "away": "Sønderjyske Fodbold",
-      "homeId": 211,
-      "awayId": 390,
-      "kickoff": "2026-10-25T16:00:00+01:00",
-      "date": "2026-10-25",
-      "time": "16:00",
-      "league": "Superliga",
-      "leagueId": 271,
-      "status": "Full Time",
-      "scores": [
-        {
-          "description": "1ST_HALF",
-          "participant": "home",
-          "goals": 3
-        },
-        {
-          "description": "1ST_HALF",
-          "participant": "away",
-          "goals": 1
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "home",
-          "goals": 5
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "away",
-          "goals": 1
-        },
-        {
-          "description": "CURRENT",
-          "participant": "home",
-          "goals": 5
-        },
-        {
-          "description": "CURRENT",
-          "participant": "away",
-          "goals": 1
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "home",
-          "goals": 2
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "away",
-          "goals": 0
-        }
-      ],
-      "statistics": [
-        {
-          "type": "Corners",
-          "value": 4,
-          "participantId": 390
-        },
-        {
-          "type": "Corners",
-          "value": 2,
-          "participantId": 211
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 53,
-          "participantId": 390
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 47,
-          "participantId": 211
-        },
-        {
-          "type": "Yellowcards",
-          "value": 1,
-          "participantId": 390
-        },
-        {
-          "type": "Yellowcards",
-          "value": 3,
-          "participantId": 211
-        }
-      ],
-      "source": "Sportmonks"
-    },
-    {
-      "fixtureId": 19713886,
-      "home": "AGF",
-      "away": "Viborg FF",
-      "homeId": 2905,
-      "awayId": 2447,
-      "kickoff": "2026-10-25T18:00:00+01:00",
-      "date": "2026-10-25",
-      "time": "18:00",
-      "league": "Superliga",
-      "leagueId": 271,
-      "status": "Full Time",
-      "scores": [
-        {
-          "description": "1ST_HALF",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "1ST_HALF",
-          "participant": "home",
-          "goals": 1
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "away",
-          "goals": 1
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "home",
-          "goals": 2
-        },
-        {
-          "description": "CURRENT",
-          "participant": "away",
-          "goals": 1
-        },
-        {
-          "description": "CURRENT",
-          "participant": "home",
-          "goals": 2
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "away",
-          "goals": 1
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "home",
-          "goals": 1
-        }
-      ],
-      "statistics": [
-        {
-          "type": "Corners",
-          "value": 3,
-          "participantId": 2447
-        },
-        {
-          "type": "Corners",
-          "value": 10,
-          "participantId": 2905
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 47,
-          "participantId": 2447
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 53,
-          "participantId": 2905
-        },
-        {
-          "type": "Yellowcards",
-          "value": 3,
-          "participantId": 2447
-        },
-        {
-          "type": "Yellowcards",
-          "value": 4,
-          "participantId": 2905
-        }
-      ],
-      "source": "Sportmonks"
-    },
     {
       "fixtureId": 19713891,
       "home": "FC København",
@@ -706,21 +178,89 @@
       "scores": [],
       "statistics": [],
       "source": "Sportmonks"
+    },
+    {
+      "fixtureId": 19722756,
+      "home": "Falkirk",
+      "away": "Celtic",
+      "homeId": 770,
+      "awayId": 53,
+      "kickoff": "2026-11-01T14:00:00+01:00",
+      "date": "2026-11-01",
+      "time": "14:00",
+      "league": "Premiership",
+      "leagueId": 501,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
+    },
+    {
+      "fixtureId": 19713872,
+      "home": "Viborg FF",
+      "away": "Horsens",
+      "homeId": 2447,
+      "awayId": 211,
+      "kickoff": "2026-11-01T14:00:00+01:00",
+      "date": "2026-11-01",
+      "time": "14:00",
+      "league": "Superliga",
+      "leagueId": 271,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
+    },
+    {
+      "fixtureId": 19713880,
+      "home": "Odense BK",
+      "away": "Silkeborg IF",
+      "homeId": 1789,
+      "awayId": 86,
+      "kickoff": "2026-11-01T14:00:00+01:00",
+      "date": "2026-11-01",
+      "time": "14:00",
+      "league": "Superliga",
+      "leagueId": 271,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
+    },
+    {
+      "fixtureId": 19713870,
+      "home": "Nordsjælland",
+      "away": "FC Midtjylland",
+      "homeId": 2394,
+      "awayId": 939,
+      "kickoff": "2026-11-01T16:00:00+01:00",
+      "date": "2026-11-01",
+      "time": "16:00",
+      "league": "Superliga",
+      "leagueId": 271,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
+    },
+    {
+      "fixtureId": 19713874,
+      "home": "Brøndby IF",
+      "away": "AGF",
+      "homeId": 293,
+      "awayId": 2905,
+      "kickoff": "2026-11-01T18:00:00+01:00",
+      "date": "2026-11-01",
+      "time": "18:00",
+      "league": "Superliga",
+      "leagueId": 271,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
     }
   ],
   "diagnostics": [
-    {
-      "date": "2026-10-25",
-      "count": 6,
-      "parsed": 6,
-      "pages": [
-        {
-          "page": 1,
-          "count": 6
-        }
-      ],
-      "ok": true
-    },
     {
       "date": "2026-10-26",
       "count": 1,
@@ -789,6 +329,18 @@
         {
           "page": 1,
           "count": 3
+        }
+      ],
+      "ok": true
+    },
+    {
+      "date": "2026-11-01",
+      "count": 5,
+      "parsed": 5,
+      "pages": [
+        {
+          "page": 1,
+          "count": 5
         }
       ],
       "ok": true
