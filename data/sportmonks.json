@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T17:05:01.516379+01:00",
+  "generatedAt": "2026-10-25T17:36:23.820363+01:00",
   "source": "Sportmonks Football API v3",
   "count": 17,
   "fixtures": [
@@ -366,7 +366,7 @@
       "time": "16:00",
       "league": "Superliga",
       "leagueId": 271,
-      "status": "Half Time",
+      "status": "2nd Half",
       "scores": [
         {
           "description": "1ST_HALF",
@@ -381,7 +381,7 @@
         {
           "description": "2ND_HALF",
           "participant": "home",
-          "goals": 3
+          "goals": 4
         },
         {
           "description": "2ND_HALF",
@@ -391,33 +391,53 @@
         {
           "description": "CURRENT",
           "participant": "home",
-          "goals": 3
+          "goals": 4
         },
         {
           "description": "CURRENT",
           "participant": "away",
           "goals": 1
+        },
+        {
+          "description": "2ND_HALF_ONLY",
+          "participant": "home",
+          "goals": 1
+        },
+        {
+          "description": "2ND_HALF_ONLY",
+          "participant": "away",
+          "goals": 0
         }
       ],
       "statistics": [
         {
+          "type": "Corners",
+          "value": 3,
+          "participantId": 390
+        },
+        {
+          "type": "Corners",
+          "value": 1,
+          "participantId": 211
+        },
+        {
           "type": "Ball Possession %",
-          "value": 51,
+          "value": 54,
           "participantId": 390
         },
         {
           "type": "Ball Possession %",
-          "value": 49,
+          "value": 46,
           "participantId": 211
         },
         {
           "type": "Yellowcards",
-          "value": 0,
+          "value": 1,
           "participantId": 390
         },
         {
           "type": "Yellowcards",
-          "value": 2,
+          "value": 3,
           "participantId": 211
         }
       ],
