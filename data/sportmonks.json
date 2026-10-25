@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T14:18:20.936624+01:00",
+  "generatedAt": "2026-10-25T15:03:49.976606+01:00",
   "source": "Sportmonks Football API v3",
   "count": 17,
   "fixtures": [
@@ -14,7 +14,7 @@
       "time": "13:00",
       "league": "Premiership",
       "leagueId": 501,
-      "status": "2nd Half",
+      "status": "Full Time",
       "scores": [
         {
           "description": "1ST_HALF",
@@ -60,7 +60,7 @@
       "statistics": [
         {
           "type": "Corners",
-          "value": 3,
+          "value": 6,
           "participantId": 53
         },
         {
@@ -70,22 +70,22 @@
         },
         {
           "type": "Ball Possession %",
-          "value": 62,
+          "value": 61,
           "participantId": 53
         },
         {
           "type": "Ball Possession %",
-          "value": 38,
+          "value": 39,
           "participantId": 66
         },
         {
           "type": "Yellowcards",
-          "value": 1,
+          "value": 3,
           "participantId": 53
         },
         {
           "type": "Yellowcards",
-          "value": 1,
+          "value": 2,
           "participantId": 66
         }
       ],
@@ -102,12 +102,12 @@
       "time": "14:00",
       "league": "Superliga",
       "leagueId": 271,
-      "status": "1st Half",
+      "status": "Half Time",
       "scores": [
         {
           "description": "1ST_HALF",
           "participant": "home",
-          "goals": 0
+          "goals": 1
         },
         {
           "description": "1ST_HALF",
@@ -117,7 +117,7 @@
         {
           "description": "2ND_HALF",
           "participant": "home",
-          "goals": 0
+          "goals": 1
         },
         {
           "description": "2ND_HALF",
@@ -127,7 +127,7 @@
         {
           "description": "CURRENT",
           "participant": "home",
-          "goals": 0
+          "goals": 1
         },
         {
           "description": "CURRENT",
@@ -138,22 +138,32 @@
       "statistics": [
         {
           "type": "Corners",
-          "value": 2,
+          "value": 6,
           "participantId": 2394
         },
         {
           "type": "Corners",
-          "value": 0,
+          "value": 1,
           "participantId": 86
         },
         {
           "type": "Ball Possession %",
-          "value": 50,
+          "value": 55,
           "participantId": 2394
         },
         {
           "type": "Ball Possession %",
-          "value": 50,
+          "value": 45,
+          "participantId": 86
+        },
+        {
+          "type": "Yellowcards",
+          "value": 2,
+          "participantId": 2394
+        },
+        {
+          "type": "Yellowcards",
+          "value": 2,
           "participantId": 86
         }
       ],
@@ -170,37 +180,37 @@
       "time": "14:00",
       "league": "Superliga",
       "leagueId": 271,
-      "status": "1st Half",
+      "status": "Half Time",
       "scores": [
         {
           "description": "1ST_HALF",
           "participant": "home",
-          "goals": 1
+          "goals": 2
         },
         {
           "description": "1ST_HALF",
           "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "home",
           "goals": 1
         },
         {
           "description": "2ND_HALF",
-          "participant": "away",
-          "goals": 0
+          "participant": "home",
+          "goals": 2
         },
         {
-          "description": "CURRENT",
-          "participant": "home",
+          "description": "2ND_HALF",
+          "participant": "away",
           "goals": 1
         },
         {
           "description": "CURRENT",
+          "participant": "home",
+          "goals": 2
+        },
+        {
+          "description": "CURRENT",
           "participant": "away",
-          "goals": 0
+          "goals": 1
         }
       ],
       "statistics": [
@@ -211,17 +221,27 @@
         },
         {
           "type": "Corners",
-          "value": 2,
+          "value": 3,
           "participantId": 939
         },
         {
           "type": "Ball Possession %",
-          "value": 21,
+          "value": 31,
           "participantId": 2650
         },
         {
           "type": "Ball Possession %",
-          "value": 79,
+          "value": 69,
+          "participantId": 939
+        },
+        {
+          "type": "Yellowcards",
+          "value": 0,
+          "participantId": 2650
+        },
+        {
+          "type": "Yellowcards",
+          "value": 1,
           "participantId": 939
         }
       ],
@@ -238,6 +258,64 @@
       "time": "15:00",
       "league": "Premiership",
       "leagueId": 501,
+      "status": "1st Half",
+      "scores": [
+        {
+          "description": "1ST_HALF",
+          "participant": "home",
+          "goals": 0
+        },
+        {
+          "description": "1ST_HALF",
+          "participant": "away",
+          "goals": 0
+        },
+        {
+          "description": "2ND_HALF",
+          "participant": "home",
+          "goals": 0
+        },
+        {
+          "description": "2ND_HALF",
+          "participant": "away",
+          "goals": 0
+        },
+        {
+          "description": "CURRENT",
+          "participant": "home",
+          "goals": 0
+        },
+        {
+          "description": "CURRENT",
+          "participant": "away",
+          "goals": 0
+        }
+      ],
+      "statistics": [
+        {
+          "type": "Ball Possession %",
+          "value": 64,
+          "participantId": 314
+        },
+        {
+          "type": "Ball Possession %",
+          "value": 36,
+          "participantId": 309
+        }
+      ],
+      "source": "Sportmonks"
+    },
+    {
+      "fixtureId": 19713882,
+      "home": "Horsens",
+      "away": "Sønderjyske Fodbold",
+      "homeId": 211,
+      "awayId": 390,
+      "kickoff": "2026-10-25T16:00:00+01:00",
+      "date": "2026-10-25",
+      "time": "16:00",
+      "league": "Superliga",
+      "leagueId": 271,
       "status": "Not Started",
       "scores": [
         {
@@ -271,22 +349,6 @@
           "goals": 0
         }
       ],
-      "statistics": [],
-      "source": "Sportmonks"
-    },
-    {
-      "fixtureId": 19713882,
-      "home": "Horsens",
-      "away": "Sønderjyske Fodbold",
-      "homeId": 211,
-      "awayId": 390,
-      "kickoff": "2026-10-25T16:00:00+01:00",
-      "date": "2026-10-25",
-      "time": "16:00",
-      "league": "Superliga",
-      "leagueId": 271,
-      "status": "Not Started",
-      "scores": [],
       "statistics": [],
       "source": "Sportmonks"
     },
