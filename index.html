@@ -1071,7 +1071,7 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,su
     <div class="logo">G</div>
     <div><h1>Goal Predictor AI</h1><p>ANALITYKA MECZÓW PIŁKARSKICH</p></div>
   </div>
-  <div style="display:flex;align-items:center;gap:8px"><span class="pill">BETA • 0.3</span><button class="smallbtn" id="loginOpen" style="white-space:nowrap">Zaloguj się</button></div>
+  <div style="display:flex;align-items:center;gap:8px"><span class="pill">BETA • 0.4</span><button class="smallbtn" id="loginOpen" style="white-space:nowrap">Zaloguj się</button></div>
 </header>
 
 <main>
@@ -1314,6 +1314,24 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,su
 <script>
 "use strict";
 
+function safeStorageGet(key) {
+  try { return window.localStorage.getItem(key); } catch (error) { return null; }
+}
+function safeStorageSet(key, value) {
+  try { window.localStorage.setItem(key, value); return true; } catch (error) { return false; }
+}
+function safeStorageRemove(key) {
+  try { window.localStorage.removeItem(key); } catch (error) { /* Storage can be disabled. */ }
+}
+function readStoredSet(key) {
+  try {
+    const parsed = JSON.parse(safeStorageGet(key) || "[]");
+    return new Set(Array.isArray(parsed) ? parsed.map(value => String(value)) : []);
+  } catch (error) {
+    return new Set();
+  }
+}
+
 let matches = [];
 let dataIsLive = false;
 let activeLeagueFilter = "all";
@@ -1323,8 +1341,8 @@ let liveSearchQuery = "";
 let liveMatches = [];
 let historicalMatches = [];
 let couponPicks = [];
-let trackedIds = new Set(JSON.parse(localStorage.getItem("gpa_tracked") || "[]"));
-let favoriteIds = new Set(JSON.parse(localStorage.getItem("gpa_favorites") || "[]"));
+let trackedIds = readStoredSet("gpa_tracked");
+let favoriteIds = readStoredSet("gpa_favorites");
 let deferredPrompt = null;
 
 const leagueNames = {
@@ -1372,6 +1390,8 @@ function escapeHtml(value) {
 }
 
 function asNumber(value) {
+  if (value === null || value === undefined || typeof value === "boolean") return null;
+  if (typeof value === "string" && value.trim() === "") return null;
   const number = Number(value);
   return Number.isFinite(number) ? number : null;
 }
@@ -1392,7 +1412,8 @@ function model(homeXg, awayXg) {
   const home = [];
   const away = [];
 
-  for (let i = 0; i <= 10; i++) {
+  // Include a wider score range, then renormalize the tiny omitted tail.
+  for (let i = 0; i <= 15; i++) {
     home[i] = poisson(i, homeXg);
     away[i] = poisson(i, awayXg);
   }
@@ -1418,42 +1439,65 @@ function model(homeXg, awayXg) {
     }
   }
 
+  const totalMass = home.reduce((sum, value) => sum + value, 0) *
+    away.reduce((sum, value) => sum + value, 0);
+  if (totalMass > 0) {
+    homeWin /= totalMass;
+    draw /= totalMass;
+    awayWin /= totalMass;
+    over15 /= totalMass;
+    over25 /= totalMass;
+    btts /= totalMass;
+  }
   return { home: homeWin, draw, away: awayWin, over15, over25, btts };
 }
 
-function toProbability(value) {
+function toProbability(value, divisor) {
   const number = asNumber(value);
-  if (number === null) return null;
-
-  // API zapisuje procenty jako 35.8, a lokalny model ułamki 0.358.
-  return number > 1 ? number / 100 : number;
+  return number === null ? null : number / divisor;
 }
 
 function getMatchProbabilities(match) {
-  const raw = match.probabilities;
-
-  if (raw && raw.homeWin !== undefined) {
-    const values = {
-      home: toProbability(raw.homeWin),
-      draw: toProbability(raw.draw),
-      away: toProbability(raw.awayWin),
-      over15: toProbability(raw.over15),
-      over25: toProbability(raw.over25),
-      btts: toProbability(raw.btts)
-    };
-
-    if (Object.values(values).every(value => value !== null)) {
-      return values;
+  const raw = match?.probabilities;
+  if (raw && raw.homeWin !== undefined && raw.draw !== undefined && raw.awayWin !== undefined) {
+    const keys = ["homeWin", "draw", "awayWin", "over15", "over25", "btts"];
+    const rawValues = keys.map(key => asNumber(raw[key]));
+    const outcomes = rawValues.slice(0, 3);
+    const outcomeTotal = outcomes.every(value => value !== null)
+      ? outcomes.reduce((sum, value) => sum + value, 0)
+      : NaN;
+    // Detect the units from the combined 1X2 total, so 0.5% or 1.0% are not
+    // accidentally interpreted as fractions equivalent to 50% or 100%.
+    const divisor = outcomeTotal >= 90 && outcomeTotal <= 110 ? 100
+      : outcomeTotal >= 0.9 && outcomeTotal <= 1.1 ? 1 : null;
+    if (divisor !== null) {
+      const values = {
+        home: toProbability(raw.homeWin, divisor),
+        draw: toProbability(raw.draw, divisor),
+        away: toProbability(raw.awayWin, divisor),
+        over15: toProbability(raw.over15, divisor),
+        over25: toProbability(raw.over25, divisor),
+        btts: toProbability(raw.btts, divisor)
+      };
+      const valid = Object.values(values).every(value =>
+        value !== null && value >= 0 && value <= 1.001
+      );
+      const total = values.home + values.draw + values.away;
+      if (valid && total >= 0.9 && total <= 1.1) {
+        values.home /= total;
+        values.draw /= total;
+        values.away /= total;
+        return values;
+      }
     }
   }
 
-  const homeXg = asNumber(match.hx);
-  const awayXg = asNumber(match.ax);
-
-  if (homeXg !== null && awayXg !== null) {
+  const homeXg = asNumber(match?.hx);
+  const awayXg = asNumber(match?.ax);
+  if (homeXg !== null && awayXg !== null &&
+      homeXg >= 0 && awayXg >= 0 && homeXg <= 5 && awayXg <= 5) {
     return model(homeXg, awayXg);
   }
-
   return null;
 }
 
@@ -1483,7 +1527,8 @@ function dateLabel(match) {
 function buildLeagueTabs() {
   const container = document.getElementById("leagueTabs");
   const existing = new Set(Array.from(container.querySelectorAll("[data-league]")).map(button => button.dataset.league));
-  const leagues = [...new Set(matches.map(match => match.league).filter(Boolean))].sort((a,b) =>
+  const predictionMatches = modelBackedMatches();
+  const leagues = [...new Set(predictionMatches.map(match => match.league).filter(Boolean))].sort((a,b) =>
     (leagueNames[a] || a).localeCompare(leagueNames[b] || b, "pl")
   );
   for (const code of leagues) {
@@ -1491,7 +1536,7 @@ function buildLeagueTabs() {
     const button = document.createElement("button");
     button.className = "tab";
     button.dataset.league = code;
-    button.textContent = leagueNames[code] || matches.find(match => match.league === code)?.leagueName || code;
+    button.textContent = leagueNames[code] || predictionMatches.find(match => match.league === code)?.leagueName || code;
     button.addEventListener("click", () => {
       activeLeagueFilter = code;
       container.querySelectorAll("[data-league]").forEach(tab => tab.classList.toggle("active", tab === button));
@@ -1504,19 +1549,22 @@ function matchId(match) {
   return [match.date || match.kickoff || "", match.time || "", match.home || "", match.away || ""].join("|");
 }
 function persistTracked() {
-  localStorage.setItem("gpa_tracked", JSON.stringify([...trackedIds]));
+  safeStorageSet("gpa_tracked", JSON.stringify([...trackedIds]));
   renderLive();
 }
 function persistFavorites() {
-  localStorage.setItem("gpa_favorites", JSON.stringify([...favoriteIds]));
+  safeStorageSet("gpa_favorites", JSON.stringify([...favoriteIds]));
   document.getElementById("quickFavCount").textContent = favoriteIds.size;
 }
+function modelBackedMatches() {
+  return matches.filter(match =>
+    match.modelStatus !== "fixture_only" && !!getMatchProbabilities(match)
+  );
+}
+
 function filteredMatches() {
-  // Show source-only fixtures as clearly labelled schedule entries; never invent probabilities.
-  let result = matches.filter(match => {
-    const p = getMatchProbabilities(match);
-    return !!p || match.modelStatus === "fixture_only";
-  });
+  // Schedule-only fixtures remain in provider feeds; prediction cards require a valid model.
+  let result = modelBackedMatches();
   if (activeLeagueFilter === "other") result = result.filter(match => !["PL", "PD", "SA"].includes(match.league));
   else if (activeLeagueFilter !== "all") {
     const codes = leagueFilters[activeLeagueFilter];
@@ -1771,10 +1819,13 @@ function renderMatches() {
   const items = filteredMatches();
 
   if (!items.length) {
+    const hasPredictions = modelBackedMatches().length > 0;
     list.innerHTML = `<div class="empty">${
-      dataIsLive
-        ? "Brak meczów w wybranym filtrze i okresie."
-        : "Nie udało się wczytać danych. Sprawdź publikację GitHub Actions i plik data/latest.json."
+      !dataIsLive
+        ? "Nie udało się wczytać danych. Sprawdź publikację GitHub Actions i plik data/latest.json."
+        : hasPredictions
+          ? "Brak meczów w wybranym filtrze i okresie."
+          : "Terminarz został wczytany, ale brakuje wystarczających danych do rzetelnych prognoz. Nie pokazujemy fikcyjnych prawdopodobieństw."
     }</div>`;
     return;
   }
@@ -2253,15 +2304,16 @@ async function loadPublishedData() {
     );
 
     buildLeagueTabs();
-    document.getElementById("statMatches").textContent = matches.length;
+    const predictionMatches = modelBackedMatches();
+    const predictionCount = predictionMatches.length;
+    document.getElementById("statMatches").textContent = predictionCount;
 
-    const leagueCount = new Set(matches.map(m => m.leagueName || m.league).filter(Boolean)).size;
+    const leagueCount = new Set(predictionMatches.map(m => m.leagueName || m.league).filter(Boolean)).size;
     document.getElementById("statLeagues").textContent = leagueCount;
-    document.getElementById("quickMatchCount").textContent = matches.length;
+    document.getElementById("quickMatchCount").textContent = predictionCount;
     document.getElementById("quickLeagueCount").textContent = leagueCount;
 
     const fixtureCount = matches.length;
-    const predictionCount = matches.filter(match => !!getMatchProbabilities(match)).length;
     const unmodelledCount = Math.max(0, fixtureCount - predictionCount);
     let dataPulse = document.getElementById("dataPulse");
     if (!dataPulse) {
@@ -2272,7 +2324,8 @@ async function loadPublishedData() {
       if (matchHeading) matchHeading.parentElement.insertBefore(dataPulse, matchHeading);
     }
     if (dataPulse) {
-      dataPulse.innerHTML = '<span class="status-chip good">● ' + fixtureCount + ' meczów w źródłach</span><span class="status-chip good">◈ ' + predictionCount + ' prognoz</span>' +
+      dataPulse.innerHTML = '<span class="status-chip good">◈ ' + predictionCount + ' prognoz gotowych</span>' +
+        (unmodelledCount ? '<span class="status-chip good">Terminarz bez modelu: ' + unmodelledCount + '</span>' : '') +
         (apiFootballCheck ? '<span class="status-chip good">API-Football: ' + (apiFootballCheck.verifiedCount || 0) + ' potwierdzonych</span>' : '') +
         (sportmonksCheck ? '<span class="status-chip good">Sportmonks: ' + (sportmonksCheck.count || 0) + ' meczów</span>' : '');
     }
@@ -2281,7 +2334,7 @@ async function loadPublishedData() {
       providerStatus.innerHTML =
         '<div class="provider-status-title">' + predictionCount + ' prognoz gotowych</div>' +
         '<div class="provider-status-subtitle">' +
-          fixtureCount + ' spotkań w bazie prognostycznej · ' +
+          predictionCount + ' spotkań z prawdopodobieństwami · ' +
           (unmodelledCount ? unmodelledCount + " spotkań z terminarza bez prognozy" : 'wszystkie spotkania mają model') +
         '</div>';
     }
@@ -2356,11 +2409,11 @@ const loginModal = document.getElementById("loginModal");
 const loginOpen = document.getElementById("loginOpen");
 const accountPanel = document.getElementById("accountPanel");
 function refreshDemoAccount(){
-  const user = localStorage.getItem("gpa_demo_user");
+  const user = safeStorageGet("gpa_demo_user");
   if(user){
     loginOpen.textContent = "Konto: " + user;
     accountPanel.innerHTML = '<h4>Zalogowano jako ' + escapeHtml(user) + '</h4><p class="muted">Tryb demonstracyjny aktywny na tym urządzeniu.</p><button class="secondary" id="demoLogout">Wyloguj</button>';
-    document.getElementById("demoLogout").addEventListener("click",()=>{localStorage.removeItem("gpa_demo_user");refreshDemoAccount();});
+    document.getElementById("demoLogout").addEventListener("click",()=>{safeStorageRemove("gpa_demo_user");refreshDemoAccount();});
   }else{
     loginOpen.textContent = "Zaloguj się";
     accountPanel.innerHTML = '<h4>Nie jesteś zalogowany</h4><p class="muted">Zaloguj się kontem demonstracyjnym, aby przetestować widok konta. To lokalna symulacja — nie chroni danych ani funkcji PRO.</p><button class="primary" id="accountLogin">Otwórz logowanie</button>';
@@ -2375,7 +2428,7 @@ document.getElementById("demoLoginForm").addEventListener("submit",event=>{
   const user=document.getElementById("demoUser").value.trim();
   const pass=document.getElementById("demoPass").value;
   if(user==="demo" && pass==="demo123"){
-    localStorage.setItem("gpa_demo_user","demo");
+    safeStorageSet("gpa_demo_user","demo");
     document.getElementById("loginError").style.display="none";
     loginModal.style.display="none";
     refreshDemoAccount();
