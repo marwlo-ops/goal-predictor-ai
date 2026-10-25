@@ -35,8 +35,33 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Sprawdź testy modelu
+        run: python -m unittest discover -s tests -v
+
+      - name: Sprawdź składnię JavaScript
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Zweryfikuj JavaScript osadzony w stronie
+        run: |
+          python - <<'PY'
+          import re
+          from pathlib import Path
+          html = Path("index.html").read_text(encoding="utf-8")
+          scripts = re.findall(r"<script(?:\s[^>]*)?>(.*?)</script>", html, re.I | re.S)
+          if not scripts:
+              raise SystemExit("Nie znaleziono skryptów JavaScript w index.html")
+          for i, source in enumerate(scripts):
+              Path(f"/tmp/goal-predictor-inline-{i}.js").write_text(source, encoding="utf-8")
+          print(f"Znaleziono {len(scripts)} osadzonych skryptów JavaScript.")
+          PY
+          for script in /tmp/goal-predictor-inline-*.js; do node --check "$script"; done
+
       - name: Sprawdź, czy publikacja jest potrzebna
         id: timecheck
+        env:
+          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
         run: |
           HOUR=$(TZ=Europe/Warsaw date +%H)
           TODAY=$(TZ=Europe/Warsaw date +%F)
@@ -44,11 +69,13 @@ jobs:
           API_GENERATED_DATE=$(python -c 'import json; from pathlib import Path; p=Path("data/api-football.json"); print((json.loads(p.read_text(encoding="utf-8")).get("generatedAt") or "")[:10] if p.exists() else "")' 2>/dev/null || true)
           GENERATED_TO=$(python -c 'import json; from pathlib import Path; p=Path("data/latest.json"); print((json.loads(p.read_text(encoding="utf-8")).get("dateTo") or "") if p.exists() else "")' 2>/dev/null || true)
           TARGET_TO=$(TZ=Europe/Warsaw date -d "+6 days" +%F)
+          API_KEY_CONFIGURED=false
+          if [ -n "${API_FOOTBALL_KEY:-}" ]; then API_KEY_CONFIGURED=true; fi
 
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "run=true" >> "$GITHUB_OUTPUT"
             echo "reason=Ręczne uruchomienie" >> "$GITHUB_OUTPUT"
-          elif [ "$HOUR" -ge "0" ] && { [ "$GENERATED_DATE" != "$TODAY" ] || [ "$API_GENERATED_DATE" != "$TODAY" ] || [[ "$GENERATED_TO" < "$TARGET_TO" ]]; }; then
+          elif [ "$HOUR" = "13" ] && { [ "$GENERATED_DATE" != "$TODAY" ] || [[ "$GENERATED_TO" < "$TARGET_TO" ]] || { [ "$API_KEY_CONFIGURED" = "true" ] && [ "$API_GENERATED_DATE" != "$TODAY" ]; }; }; then
             echo "run=true" >> "$GITHUB_OUTPUT"
             echo "reason=Brak dzisiejszej publikacji lub weryfikacji API-Football; ponawiam próbę" >> "$GITHUB_OUTPUT"
           else
@@ -69,12 +96,13 @@ jobs:
           FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
         run: python scripts/update_predictions.py
 
-      - name: Uzupełnij terminarz i statystyki (API-Football)
+      - name: Zsynchronizuj źródła uzupełniające (Sportmonks + API-Football)
         if: steps.timecheck.outputs.run == 'true'
         continue-on-error: true
         env:
+          SPORTMONKS_API_TOKEN: ${{ secrets.SPORTMONKS }}
           API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
-        run: python scripts/update_api_football.py
+        run: python scripts/sync_data_sources.py
 
       - name: Sprawdź wygenerowane dane
         if: steps.timecheck.outputs.run == 'true'
@@ -106,6 +134,7 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           git add data/latest.json
           if [ -f data/api-football.json ]; then git add data/api-football.json; fi
+          if [ -f data/sportmonks.json ]; then git add data/sportmonks.json; fi
           if ! git diff --cached --quiet; then
             git commit -m "Aktualizacja prognoz i weryfikacji terminarza"
             git pull --rebase origin main
