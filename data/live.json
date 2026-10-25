@@ -1,54 +1,9 @@
 {
-  "updatedAt": "2026-10-25T20:10:38.894714+01:00",
+  "updatedAt": "2026-10-25T20:43:56.395812+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 5,
+  "count": 3,
   "matches": [
-    {
-      "id": 555057,
-      "league": "BSA",
-      "leagueName": "Campeonato Brasileiro Série A",
-      "home": "Santos FC",
-      "away": "EC Bahia",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 0,
-        "away": 0
-      },
-      "utcDate": "2026-10-25T01:00:00Z",
-      "updatedAt": "2026-10-25T02:06:33Z"
-    },
-    {
-      "id": 564726,
-      "league": "PD",
-      "leagueName": "Primera Division",
-      "home": "Real Sociedad de Fútbol",
-      "away": "Levante UD",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 2,
-        "away": 1
-      },
-      "utcDate": "2026-10-25T17:30:00Z",
-      "updatedAt": "2026-10-25T19:10:13Z"
-    },
-    {
-      "id": 567330,
-      "league": "PPL",
-      "leagueName": "Primeira Liga",
-      "home": "Rio Ave FC",
-      "away": "FC Famalicão",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 0,
-        "away": 0
-      },
-      "utcDate": "2026-10-25T18:00:00Z",
-      "updatedAt": "2026-10-25T18:53:41Z"
-    },
     {
       "id": 567334,
       "league": "PPL",
@@ -62,7 +17,22 @@
         "away": 0
       },
       "utcDate": "2026-10-25T18:00:00Z",
-      "updatedAt": "2026-10-25T18:57:58Z"
+      "updatedAt": "2026-10-25T19:43:17Z"
+    },
+    {
+      "id": 567330,
+      "league": "PPL",
+      "leagueName": "Primeira Liga",
+      "home": "Rio Ave FC",
+      "away": "FC Famalicão",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "utcDate": "2026-10-25T18:00:00Z",
+      "updatedAt": "2026-10-25T19:43:17Z"
     },
     {
       "id": 558855,
@@ -77,7 +47,7 @@
         "away": 0
       },
       "utcDate": "2026-10-25T19:00:00Z",
-      "updatedAt": "2026-10-25T19:09:41Z"
+      "updatedAt": "2026-10-25T19:43:17Z"
     }
   ]
 }
