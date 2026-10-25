@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-10-25T16:03:55.682098+01:00",
+  "updatedAt": "2026-10-25T16:35:09.288995+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 11,
+  "count": 10,
   "matches": [
     {
       "id": 555057,
@@ -20,79 +20,19 @@
       "updatedAt": "2026-10-25T02:06:33Z"
     },
     {
-      "id": 558858,
-      "league": "DED",
-      "leagueName": "Eredivisie",
-      "home": "PSV",
-      "away": "Feyenoord Rotterdam",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 1,
-        "away": 1
-      },
-      "utcDate": "2026-10-25T13:30:00Z",
-      "updatedAt": "2026-10-25T15:03:17Z"
-    },
-    {
-      "id": 558857,
-      "league": "DED",
-      "leagueName": "Eredivisie",
-      "home": "NEC",
-      "away": "FC Groningen",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 1,
-        "away": 2
-      },
-      "utcDate": "2026-10-25T13:30:00Z",
-      "updatedAt": "2026-10-25T15:03:18Z"
-    },
-    {
-      "id": 558568,
-      "league": "SA",
-      "leagueName": "Serie A",
-      "home": "Genoa CFC",
-      "away": "Venezia FC",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 1,
-        "away": 0
-      },
-      "utcDate": "2026-10-25T14:00:00Z",
-      "updatedAt": "2026-10-25T14:53:42Z"
-    },
-    {
-      "id": 560613,
+      "id": 560615,
       "league": "PL",
       "leagueName": "Premier League",
-      "home": "Crystal Palace FC",
-      "away": "Newcastle United FC",
+      "home": "Manchester United FC",
+      "away": "AFC Bournemouth",
       "status": "IN_PLAY",
       "minute": null,
       "score": {
         "home": 0,
-        "away": 0
+        "away": 2
       },
       "utcDate": "2026-10-25T14:00:00Z",
-      "updatedAt": "2026-10-25T14:51:34Z"
-    },
-    {
-      "id": 560619,
-      "league": "PL",
-      "leagueName": "Premier League",
-      "home": "Hull City AFC",
-      "away": "Brentford FC",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 1,
-        "away": 0
-      },
-      "utcDate": "2026-10-25T14:00:00Z",
-      "updatedAt": "2026-10-25T14:53:42Z"
+      "updatedAt": "2026-10-25T15:33:41Z"
     },
     {
       "id": 560612,
@@ -107,7 +47,7 @@
         "away": 0
       },
       "utcDate": "2026-10-25T14:00:00Z",
-      "updatedAt": "2026-10-25T14:54:46Z"
+      "updatedAt": "2026-10-25T15:34:14Z"
     },
     {
       "id": 559650,
@@ -122,7 +62,7 @@
         "away": 1
       },
       "utcDate": "2026-10-25T14:00:00Z",
-      "updatedAt": "2026-10-25T14:53:42Z"
+      "updatedAt": "2026-10-25T15:34:14Z"
     },
     {
       "id": 558562,
@@ -133,18 +73,48 @@
       "status": "IN_PLAY",
       "minute": null,
       "score": {
-        "home": 3,
-        "away": 2
+        "home": 4,
+        "away": 3
       },
       "utcDate": "2026-10-25T14:00:00Z",
-      "updatedAt": "2026-10-25T14:54:14Z"
+      "updatedAt": "2026-10-25T15:33:42Z"
     },
     {
-      "id": 560615,
+      "id": 560619,
       "league": "PL",
       "leagueName": "Premier League",
-      "home": "Manchester United FC",
-      "away": "AFC Bournemouth",
+      "home": "Hull City AFC",
+      "away": "Brentford FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "utcDate": "2026-10-25T14:00:00Z",
+      "updatedAt": "2026-10-25T15:34:14Z"
+    },
+    {
+      "id": 558568,
+      "league": "SA",
+      "leagueName": "Serie A",
+      "home": "Genoa CFC",
+      "away": "Venezia FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "utcDate": "2026-10-25T14:00:00Z",
+      "updatedAt": "2026-10-25T15:34:13Z"
+    },
+    {
+      "id": 560613,
+      "league": "PL",
+      "leagueName": "Premier League",
+      "home": "Crystal Palace FC",
+      "away": "Newcastle United FC",
       "status": "IN_PLAY",
       "minute": null,
       "score": {
@@ -152,7 +122,7 @@
         "away": 2
       },
       "utcDate": "2026-10-25T14:00:00Z",
-      "updatedAt": "2026-10-25T14:54:46Z"
+      "updatedAt": "2026-10-25T15:34:14Z"
     },
     {
       "id": 565835,
@@ -167,7 +137,22 @@
         "away": 0
       },
       "utcDate": "2026-10-25T14:30:00Z",
-      "updatedAt": "2026-10-25T15:03:18Z"
+      "updatedAt": "2026-10-25T15:22:30Z"
+    },
+    {
+      "id": 564725,
+      "league": "PD",
+      "leagueName": "Primera Division",
+      "home": "RC Celta de Vigo",
+      "away": "Real Betis Balompié",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-10-25T15:15:00Z",
+      "updatedAt": "2026-10-25T15:33:42Z"
     }
   ]
 }
