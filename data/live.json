@@ -1,7 +1,23 @@
 {
-  "updatedAt": "2026-10-26T23:27:04.767039+01:00",
+  "updatedAt": "2026-10-27T00:04:22.394639+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 0,
-  "matches": []
+  "count": 1,
+  "matches": [
+    {
+      "id": 555051,
+      "league": "BSA",
+      "leagueName": "Campeonato Brasileiro Série A",
+      "home": "Coritiba FBC",
+      "away": "Grêmio FBPA",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-10-26T22:30:00Z",
+      "updatedAt": "2026-10-26T23:03:25Z"
+    }
+  ]
 }
