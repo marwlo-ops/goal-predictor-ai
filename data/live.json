@@ -1,23 +1,7 @@
 {
-  "updatedAt": "2026-10-26T22:54:11.897880+01:00",
+  "updatedAt": "2026-10-26T23:27:04.767039+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 1,
-  "matches": [
-    {
-      "id": 564721,
-      "league": "PD",
-      "leagueName": "Primera Division",
-      "home": "Sevilla FC",
-      "away": "CA Osasuna",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 2,
-        "away": 0
-      },
-      "utcDate": "2026-10-26T20:00:00Z",
-      "updatedAt": "2026-10-26T21:53:01Z"
-    }
-  ]
+  "count": 0,
+  "matches": []
 }
