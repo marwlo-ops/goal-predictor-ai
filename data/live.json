@@ -1,24 +1,9 @@
 {
-  "updatedAt": "2026-10-26T22:17:32.407853+01:00",
+  "updatedAt": "2026-10-26T22:54:11.897880+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 2,
+  "count": 1,
   "matches": [
-    {
-      "id": 559648,
-      "league": "FL1",
-      "leagueName": "Ligue 1",
-      "home": "Paris Saint-Germain FC",
-      "away": "Olympique Lyonnais",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 1,
-        "away": 0
-      },
-      "utcDate": "2026-10-26T19:30:00Z",
-      "updatedAt": "2026-10-26T21:15:41Z"
-    },
     {
       "id": 564721,
       "league": "PD",
@@ -28,11 +13,11 @@
       "status": "IN_PLAY",
       "minute": null,
       "score": {
-        "home": 1,
+        "home": 2,
         "away": 0
       },
       "utcDate": "2026-10-26T20:00:00Z",
-      "updatedAt": "2026-10-26T21:16:13Z"
+      "updatedAt": "2026-10-26T21:53:01Z"
     }
   ]
 }
