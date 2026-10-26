@@ -1,7 +1,23 @@
 {
-  "updatedAt": "2026-10-26T19:43:06.955432+01:00",
+  "updatedAt": "2026-10-26T20:28:33.683164+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 0,
-  "matches": []
+  "count": 1,
+  "matches": [
+    {
+      "id": 567331,
+      "league": "PPL",
+      "leagueName": "Primeira Liga",
+      "home": "CD Santa Clara",
+      "away": "Sport Lisboa e Benfica",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "utcDate": "2026-10-26T18:45:00Z",
+      "updatedAt": "2026-10-26T19:26:53Z"
+    }
+  ]
 }
