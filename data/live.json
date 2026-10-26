@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-10-26T20:28:33.683164+01:00",
+  "updatedAt": "2026-10-26T21:06:14.598039+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 1,
+  "count": 3,
   "matches": [
     {
       "id": 567331,
@@ -17,7 +17,37 @@
         "away": 0
       },
       "utcDate": "2026-10-26T18:45:00Z",
-      "updatedAt": "2026-10-26T19:26:53Z"
+      "updatedAt": "2026-10-26T20:05:17Z"
+    },
+    {
+      "id": 559648,
+      "league": "FL1",
+      "leagueName": "Ligue 1",
+      "home": "Paris Saint-Germain FC",
+      "away": "Olympique Lyonnais",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-10-26T19:30:00Z",
+      "updatedAt": "2026-10-26T20:05:17Z"
+    },
+    {
+      "id": 564721,
+      "league": "PD",
+      "leagueName": "Primera Division",
+      "home": "Sevilla FC",
+      "away": "CA Osasuna",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-10-26T20:00:00Z",
+      "updatedAt": "2026-10-26T20:05:17Z"
     }
   ]
 }
