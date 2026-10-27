@@ -1,7 +1,38 @@
 {
-  "updatedAt": "2026-10-27T20:43:37.369875+01:00",
+  "updatedAt": "2026-10-27T21:22:18.494677+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 0,
-  "matches": []
+  "count": 2,
+  "matches": [
+    {
+      "id": 558557,
+      "league": "SA",
+      "leagueName": "Serie A",
+      "home": "Torino FC",
+      "away": "Como 1907",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "utcDate": "2026-10-27T19:45:00Z",
+      "updatedAt": "2026-10-27T20:20:35Z"
+    },
+    {
+      "id": 558555,
+      "league": "SA",
+      "leagueName": "Serie A",
+      "home": "AS Roma",
+      "away": "Cagliari Calcio",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "utcDate": "2026-10-27T19:45:00Z",
+      "updatedAt": "2026-10-27T20:21:07Z"
+    }
+  ]
 }
