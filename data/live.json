@@ -1,38 +1,7 @@
 {
-  "updatedAt": "2026-10-27T00:34:57.187027+01:00",
+  "updatedAt": "2026-10-27T01:04:22.707800+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 2,
-  "matches": [
-    {
-      "id": 555051,
-      "league": "BSA",
-      "leagueName": "Campeonato Brasileiro Série A",
-      "home": "Coritiba FBC",
-      "away": "Grêmio FBPA",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 0,
-        "away": 0
-      },
-      "utcDate": "2026-10-26T22:30:00Z",
-      "updatedAt": "2026-10-26T23:26:53Z"
-    },
-    {
-      "id": 555053,
-      "league": "BSA",
-      "leagueName": "Campeonato Brasileiro Série A",
-      "home": "CR Flamengo",
-      "away": "CA Mineiro",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 0,
-        "away": 1
-      },
-      "utcDate": "2026-10-26T23:00:00Z",
-      "updatedAt": "2026-10-26T23:34:21Z"
-    }
-  ]
+  "count": 0,
+  "matches": []
 }
