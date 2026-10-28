@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <title>Goal Predictor AI</title>
+  <defs>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#38d9ff"/>
+      <stop offset=".52" stop-color="#9a72ff"/>
+      <stop offset="1" stop-color="#35f2bd"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop offset="0" stop-color="#38d9ff" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#38d9ff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ball" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#b5d8f0"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="#070b18"/>
+  <circle cx="256" cy="256" r="238" fill="url(#glow)"/>
+  <circle cx="256" cy="256" r="210" fill="#0b1425" stroke="url(#ring)" stroke-width="16"/>
+  <circle cx="256" cy="256" r="177" fill="none" stroke="#38d9ff" stroke-opacity=".22" stroke-width="4"/>
+  <g transform="translate(256 256)">
+    <circle r="130" fill="url(#ball)" stroke="#e5f7ff" stroke-width="5"/>
+    <path d="M0-49 47-15 29 40-29 40-47-15Z" fill="#101d35"/>
+    <path d="M0-49 0-119 M47-15 113-37 M29 40 70 96 M-29 40-70 96 M-47-15-113-37" fill="none" stroke="#101d35" stroke-width="15" stroke-linecap="round"/>
+    <path d="M-113-37-122-83 M113-37 122-83 M70 96 28 121 M-70 96-28 121" fill="none" stroke="#101d35" stroke-width="11" stroke-linecap="round"/>
+  </g>
+  <path d="M78 352Q168 434 291 420T430 362" fill="none" stroke="#35f2bd" stroke-width="7" stroke-linecap="round" stroke-dasharray="2 24" opacity=".9"/>
+</svg>
