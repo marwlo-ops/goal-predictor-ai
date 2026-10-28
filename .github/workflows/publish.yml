@@ -81,9 +81,9 @@ jobs:
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "run=true" >> "$GITHUB_OUTPUT"
             echo "reason=Ręczne uruchomienie" >> "$GITHUB_OUTPUT"
-          elif [ "${{ github.event_name }}" = "push" ] && { [ "$MODEL_VERSION" != "dixon-coles-mc-v1" ] || [ "$PERFORMANCE_FORECAST_COUNT" -lt "$ARCHIVED_COUNT" ]; }; then
+          elif [ "${{ github.event_name }}" = "push" ]; then
             echo "run=true" >> "$GITHUB_OUTPUT"
-            echo "reason=Migracja modelu lub nieaktualny raport skuteczności" >> "$GITHUB_OUTPUT"
+            echo "reason=Zmiana kodu modelu lub workflow; odświeżam feed i raport" >> "$GITHUB_OUTPUT"
           elif [ "$HOUR" = "13" ] && { [ "$GENERATED_DATE" != "$TODAY" ] || [[ "$GENERATED_TO" < "$TARGET_TO" ]] || { [ "$API_KEY_CONFIGURED" = "true" ] && [ "$API_GENERATED_DATE" != "$TODAY" ]; }; }; then
             echo "run=true" >> "$GITHUB_OUTPUT"
             echo "reason=Brak dzisiejszej publikacji lub weryfikacji API-Football; ponawiam próbę" >> "$GITHUB_OUTPUT"
