@@ -1,4 +1,6 @@
-# Goal Predictor AI ⚽
+# Goal Predictor AI — Football Intelligence ⚽
+
+Nowa oprawa wizualna: neonowy granat, elektryczny błękit, turkus i fiolet; odświeżone logo SVG, responsywny interfejs i aktualizacja cache PWA. Aplikacja nadal korzysta z istniejącego HTML/CSS/JavaScript — zmiana wyglądu nie wymaga przebudowy pipeline danych.
 
 Mobilna aplikacja PWA do analizy meczów piłkarskich. Projekt jest przygotowany do wrzucenia do repozytorium GitHub.
 
