@@ -2719,7 +2719,23 @@ function historyPanel(match) {
         '</span><b>' + escapeHtml(String(game.homeGoals ?? "—")) + ':' + escapeHtml(String(game.awayGoals ?? "—")) + '</b></div>'
       ).join("")
     : "";
-  const content = sportmonksMeta + sportmonksScoresHtml + sportmonksStatsHtml + apiMeta + homeHtml + awayHtml + h2hHtml;
+  const analysis = match.analytics || null;
+  const analysisMarkets = analysis && analysis.markets ? analysis.markets : null;
+  const mcMarkets = analysis && analysis.monteCarlo && analysis.monteCarlo.markets ? analysis.monteCarlo.markets : null;
+  const marketLabels = {over15:"Over 1,5 gola",over25:"Over 2,5 gola",over35:"Over 3,5 gola",btts:"BTTS",homeOver05:"Gospodarze strzelą 1+",awayOver05:"Goście strzelą 1+",homeOver15:"Gospodarze strzelą 2+",awayOver15:"Goście strzelą 2+"};
+  const formatModelPct = value => Number.isFinite(Number(value)) ? Number(value).toLocaleString("pl-PL",{maximumFractionDigits:1}) + "%" : "—";
+  const modelMarketsHtml = analysisMarkets ? Object.entries(marketLabels).filter(([key])=>analysisMarkets[key] !== undefined).map(([key,label])=>
+    '<div class="match-foot"><span>' + escapeHtml(label) + '</span><b>' + formatModelPct(analysisMarkets[key]) + '</b></div>'
+  ).join("") : "";
+  const mcCompareHtml = mcMarkets ? '<p class="muted">Monte Carlo · ' + escapeHtml(String(analysis.monteCarlo.samples || "—")) + ' symulacji. To symulacja tego samego modelu, nie niezależna prognoza.</p>' +
+    ["homeWin","draw","awayWin","over25","btts"].map(key=>'<div class="match-foot"><span>' + escapeHtml(({homeWin:"1 · Gospodarze",draw:"X · Remis",awayWin:"2 · Goście",over25:"Over 2,5",btts:"BTTS"})[key]) + '</span><b>' + formatModelPct(mcMarkets[key]) + '</b></div>').join("") : "";
+  const topScores = Array.isArray(analysis && analysis.topScorelines) ? analysis.topScorelines : [];
+  const scorelinesHtml = topScores.length ? '<div class="stats-section-title">Najbardziej prawdopodobne wyniki</div><div class="prediction-tags">' + topScores.map(item=>
+    '<span class="prediction-tag">' + escapeHtml(item.score || "—") + ' <strong>' + formatModelPct(item.probability) + '</strong></span>'
+  ).join("") + '</div>' : "";
+  const advancedAnalyticsHtml = analysisMarkets ? '<div class="stats-section-title">Dodatkowe rynki · Dixon–Coles</div>' + modelMarketsHtml +
+    scorelinesHtml + '<p class="muted">rho=' + escapeHtml(String(analysis.rho ?? "—")) + ' · ' + escapeHtml(analysis.method || "Dixon–Coles") + '</p>' + mcCompareHtml : "";
+  const content = advancedAnalyticsHtml + sportmonksMeta + sportmonksScoresHtml + sportmonksStatsHtml + apiMeta + homeHtml + awayHtml + h2hHtml;
   if (!content.trim()) return "";
   return '<details style="margin-top:12px"><summary style="cursor:pointer;padding:10px 0;font-weight:700">📊 Dostępne statystyki i historia</summary>' +
     content + '</details>';
