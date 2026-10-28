@@ -1068,6 +1068,19 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,su
 <style>
 .performance-markets{display:grid;gap:8px}.performance-market{display:grid;grid-template-columns:minmax(80px,1fr) auto auto;gap:10px;align-items:center;padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:#0b1421;font-size:12px}.performance-market strong{font-size:13px;color:var(--green)}.performance-market small{font-size:10px;color:var(--muted)}.calibration-row{display:grid;grid-template-columns:55px minmax(0,1fr) 90px;gap:8px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line);font-size:11px}.calibration-bar{height:7px;background:#28364b;border-radius:99px;overflow:hidden}.calibration-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--blue),var(--green));border-radius:99px}.favorite-match{margin:10px 0;padding:15px;border:1px solid var(--line);border-radius:17px;background:linear-gradient(145deg,#142136,#0c1421)}.favorite-match-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.favorite-match-teams{font-size:14px;font-weight:850;line-height:1.45}.favorite-match-meta{font-size:10px;color:var(--muted);margin-top:5px}.favorite-match-probs{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}.favorite-match-probs span{font-size:10px;padding:6px 8px;border-radius:8px;background:#07121c;border:1px solid var(--line)}.favorite-match-probs b{color:var(--green)}@media(max-width:390px){.performance-market{grid-template-columns:1fr auto;gap:4px}.performance-market small{grid-column:1/-1}.calibration-row{grid-template-columns:47px minmax(0,1fr) 78px}}
 </style>
+<style>
+.best-picks-card{background:linear-gradient(145deg,#132333,#0b1420)}
+.best-picks-note{font-size:11px;line-height:1.6;margin:0 0 12px}
+.best-picks-list{display:grid;gap:8px}
+.best-pick{display:grid;grid-template-columns:34px minmax(0,1fr) auto;gap:10px;align-items:center;padding:11px;border:1px solid var(--line);background:#0a121e;border-radius:14px}
+.best-pick-rank{height:30px;width:30px;display:grid;place-items:center;border-radius:10px;background:#1b2b3b;color:var(--green);font-size:11px;font-weight:900}
+.best-pick-title{font-size:12px;font-weight:850;line-height:1.45}
+.best-pick-meta{font-size:10px;color:var(--muted);margin-top:3px;line-height:1.4}
+.best-pick-prob{text-align:right;font-weight:900;font-size:17px;color:var(--green);white-space:nowrap}
+.best-pick-prob small{display:block;font-size:9px;color:var(--muted);font-weight:650}
+.best-pick-status{font-size:9px;letter-spacing:.25px;color:var(--muted);margin-top:2px}
+@media(max-width:390px){.best-pick{grid-template-columns:28px minmax(0,1fr) auto;gap:7px;padding:9px}.best-pick-rank{height:27px;width:27px}.best-pick-prob{font-size:15px}.best-pick-title{font-size:11px}}
+</style>
 </head>
 <body>
 <header>
@@ -1142,6 +1155,11 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,su
     <div class="quickstat"><strong id="quickMatchCount">—</strong><span>MECZE</span></div>
     <div class="quickstat"><strong id="quickLeagueCount">—</strong><span>LIGI</span></div>
     <div class="quickstat"><strong id="quickFavCount">0</strong><span>OBSERWOWANE</span></div>
+  </div>
+  <div class="card best-picks-card" style="margin-bottom:16px">
+    <div class="section-head" style="margin-top:0"><h3>Ranking rynków modelu</h3><span class="tag">BEZ KURSÓW LIVE</span></div>
+    <p class="muted best-picks-note">Ranking prawdopodobieństw z korektą za jakość danych i ostatnią formę, gdy statystyki są dostępne. Kurs fair jest matematyczny, a nie kursem bukmachera. Przed grą sprawdź rzeczywisty kurs, w tym próg 1,40.</p>
+    <div id="bestPicks"><div class="empty">Ranking pojawi się po wczytaniu prognoz.</div></div>
   </div>
   <div class="match-tools">
     <input id="searchMatches" type="search" placeholder="Szukaj drużyny lub ligi…" aria-label="Szukaj drużyny lub ligi">
@@ -1866,6 +1884,73 @@ function renderFavoriteMatches() {
   }));
 }
 
+function renderBestPicks() {
+  const root = document.getElementById("bestPicks");
+  if (!root) return;
+  const candidates = [];
+  for (const match of modelBackedMatches()) {
+    const p = getMatchProbabilities(match);
+    if (!p) continue;
+    const extra = match.analytics && match.analytics.markets ? match.analytics.markets : {};
+    const history = match.history || {};
+    const hs = history.homeLast10 && history.homeLast10.stats;
+    const as = history.awayLast10 && history.awayLast10.stats;
+    const markets = [
+      {key:"homeWin",label:"1 · Wygrana gospodarzy",value:p.home},
+      {key:"awayWin",label:"2 · Wygrana gości",value:p.away},
+      {key:"over15",label:"Over 1,5 gola",value:p.over15},
+      {key:"over25",label:"Over 2,5 gola",value:p.over25},
+      {key:"over35",label:"Over 3,5 gola",value:Number(extra.over35)/100},
+      {key:"btts",label:"BTTS · obie strzelą",value:p.btts},
+      {key:"homeOver05",label:"Gospodarze strzelą 1+",value:Number(extra.homeOver05)/100},
+      {key:"awayOver05",label:"Goście strzelą 1+",value:Number(extra.awayOver05)/100},
+      {key:"homeOver15",label:"Gospodarze strzelą 2+",value:Number(extra.homeOver15)/100},
+      {key:"awayOver15",label:"Goście strzelą 2+",value:Number(extra.awayOver15)/100}
+    ];
+    for (const market of markets) {
+      if (!Number.isFinite(market.value) || market.value < 0.50 || market.value > 0.90) continue;
+      let adjusted = market.value;
+      let formSupported = false;
+      if ((market.key === "over15" || market.key === "over25" || market.key === "btts") &&
+          hs && as && Number(hs.played) >= 5 && Number(as.played) >= 5) {
+        const homeRate = Number(hs[market.key] || 0) / Number(hs.played);
+        const awayRate = Number(as[market.key] || 0) / Number(as.played);
+        const historyRate = (homeRate + awayRate) / 2;
+        if (Number.isFinite(historyRate)) {
+          adjusted = 0.75 * adjusted + 0.25 * historyRate;
+          formSupported = true;
+        }
+      }
+      const penalty = match.quality === "low" ? 0.035 : match.quality === "insufficient_data" ? 0.08 : 0;
+      candidates.push({match:match,key:market.key,label:market.label,probability:Math.max(0,Math.min(1,adjusted-penalty)),formSupported:formSupported});
+    }
+  }
+  candidates.sort((a,b)=>b.probability-a.probability);
+  const selected = [];
+  const perMatch = new Map();
+  for (const item of candidates) {
+    const id = matchId(item.match);
+    const count = perMatch.get(id) || 0;
+    if (count >= 2) continue;
+    perMatch.set(id,count+1);
+    selected.push(item);
+    if (selected.length >= 10) break;
+  }
+  if (!selected.length) {
+    root.innerHTML = '<div class="empty">Brak wystarczających prognoz do rankingu. Nie dodajemy fikcyjnych typów ani kursów.</div>';
+    return;
+  }
+  root.innerHTML = '<div class="best-picks-list">' + selected.map((item,index)=>{
+    const m=item.match;
+    const date=[m.date,m.time].filter(Boolean).join(" · ");
+    const probability=item.probability*100;
+    const fair=probability>0?100/probability:null;
+    const quality=m.quality==="low"?"niższa jakość danych":m.quality==="medium"?"umiarkowana jakość danych":"jakość: "+(m.quality||"nieznana");
+    const form=item.formSupported?" · uwzględniono formę":"";
+    return '<div class="best-pick"><div class="best-pick-rank">'+(index+1)+'</div><div><div class="best-pick-title">'+escapeHtml(m.home)+' — '+escapeHtml(m.away)+'</div><div class="best-pick-meta">'+escapeHtml(m.leagueName||m.league||"Piłka nożna")+' · '+escapeHtml(date||"termin nieznany")+'</div><div class="best-pick-title" style="margin-top:6px">'+escapeHtml(item.label)+'</div><div class="best-pick-status">'+escapeHtml(quality+form)+'</div></div><div class="best-pick-prob">'+probability.toLocaleString("pl-PL",{maximumFractionDigits:1})+'%<small>kurs fair '+(fair?fair.toLocaleString("pl-PL",{minimumFractionDigits:2,maximumFractionDigits:2}):"—")+'</small></div></div>';
+  }).join("") + '</div>';
+}
+
 function renderMatches() {
   const list = document.getElementById("matchList");
   const items = filteredMatches();
@@ -2486,6 +2571,7 @@ async function loadPublishedData() {
 
     renderMatches();
     renderFavoriteMatches();
+    renderBestPicks();
 
     if (!matches.length) {
       status.textContent += " · Brak meczów";
@@ -2497,6 +2583,7 @@ async function loadPublishedData() {
     notice.textContent = "Nie udało się pobrać data/latest.json. Sprawdź, czy plik istnieje i został opublikowany.";
     renderMatches();
     renderFavoriteMatches();
+    renderBestPicks();
     console.error("Goal Predictor data error:", error);
   }
 }
