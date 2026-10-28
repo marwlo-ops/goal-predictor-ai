@@ -8,6 +8,7 @@
 <meta name="color-scheme" content="dark">
 <meta name="description" content="Goal Predictor AI — nowoczesne centrum analityki piłkarskiej. Prognozy, modele Dixon–Coles i Monte Carlo, statystyki oraz historia skuteczności.">
 <link rel="manifest" href="./manifest.json">
+<link rel="icon" type="image/svg+xml" href="./icons/goal-predictor-icon.svg">
 <title>Goal Predictor AI — Football Intelligence</title>
 <style>
 :root {
@@ -2276,7 +2277,7 @@ async function loadHistoricalResults() {
     if (!response.ok) throw new Error("Brak results.json");
     const payload = await response.json();
     historicalMatches = Array.isArray(payload.matches) ? payload.matches : [];
-    label.textContent = "7 DNI · " + historicalMatches.length + " MECZÓW";
+    label.textContent = "HISTORIA · " + historicalMatches.length + " MECZÓW";
     const shown = historicalMatches.filter(m => [m.home,m.away,m.leagueName,m.league].filter(Boolean).some(v => String(v).toLocaleLowerCase("pl-PL").includes(query)));
     root.innerHTML = shown.length ? shown.map(m => '<article class="card"><div class="match-top"><span class="league">' + escapeHtml(m.leagueName || m.league || "Piłka nożna") + '</span><span>' + escapeHtml(m.date ? new Date(m.date).toLocaleString("pl-PL",{day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit"}) : "—") + '</span></div><div class="teams"><div class="team">' + escapeHtml(m.home) + '</div><div class="vs">' + m.homeGoals + ' : ' + m.awayGoals + '</div><div class="team">' + escapeHtml(m.away) + '</div></div></article>').join("") : '<div class="empty">Brak wyników dla tego filtra lub plik nie został jeszcze zaktualizowany.</div>';
   } catch (error) {
