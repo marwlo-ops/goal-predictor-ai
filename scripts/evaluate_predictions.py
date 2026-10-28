@@ -60,9 +60,11 @@ def main():
                 row["hit"][market] = int((p >= 0.5) == bool(target)) if market not in ("homeWin", "draw", "awayWin") else None
         evaluations.append((row, result))
 
+    # 1X2 is evaluated as one mutually-exclusive classification below.
+    # Single outcome classes are not treated as independent yes/no bets.
     markets = sorted({market for row, _ in evaluations for market in row["forecast"]["probabilities"]
-                      if market in ("homeWin", "draw", "awayWin", "over15", "over25", "over35",
-                                    "btts", "homeOver05", "awayOver05", "homeOver15", "awayOver15")})
+                      if market in ("over15", "over25", "over35", "btts",
+                                    "homeOver05", "awayOver05", "homeOver15", "awayOver15")})
     report = {}
     resolved = len(evaluations)
     for market in markets:

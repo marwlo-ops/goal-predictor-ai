@@ -497,6 +497,7 @@ def main():
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     result = {
         "generatedAt": now.isoformat(),
+        "modelVersion": "dixon-coles-mc-v1",
         "dateFrom": start,
         "dateTo": end,
         "timezone": "Europe/Warsaw",

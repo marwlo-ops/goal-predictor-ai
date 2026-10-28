@@ -2284,7 +2284,10 @@ function calculate() {
       ${bar("2 · Goście", probabilities.away)}
       ${bar("Powyżej 1,5 gola", probabilities.over15)}
       ${bar("Powyżej 2,5 gola", probabilities.over25)}
+      ${bar("Powyżej 3,5 gola", probabilities.over35)}
       ${bar("BTTS · tak", probabilities.btts)}
+      ${bar(homeName + " · gol drużyny 1+", probabilities.homeOver05)}
+      ${bar(awayName + " · gol drużyny 1+", probabilities.awayOver05)}
     </div>
     <p class="muted">Dixon–Coles z domyślnym rho = ${probabilities.rho}. Parametr nie jest dopasowany do konkretnej ligi. Nie traktuj wyniku jako gwarancji.</p>`;
 }
