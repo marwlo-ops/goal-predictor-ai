@@ -12,6 +12,7 @@ on:
       - "scripts/update_api_football.py"
       - "scripts/update_sportmonks.py"
       - "scripts/sync_data_sources.py"
+      - ".github/workflows/publish.yml"
       - "tests/**"
   schedule:
     - cron: "17 * * * *"
@@ -71,6 +72,8 @@ jobs:
           API_GENERATED_DATE=$(python -c 'import json; from pathlib import Path; p=Path("data/api-football.json"); print((json.loads(p.read_text(encoding="utf-8")).get("generatedAt") or "")[:10] if p.exists() else "")' 2>/dev/null || true)
           GENERATED_TO=$(python -c 'import json; from pathlib import Path; p=Path("data/latest.json"); print((json.loads(p.read_text(encoding="utf-8")).get("dateTo") or "") if p.exists() else "")' 2>/dev/null || true)
           MODEL_VERSION=$(python -c 'import json; from pathlib import Path; p=Path("data/latest.json"); print((json.loads(p.read_text(encoding="utf-8")).get("modelVersion") or "") if p.exists() else "")' 2>/dev/null || true)
+          ARCHIVED_COUNT=$(python -c 'import json; from pathlib import Path; p=Path("data/prediction-history.json"); print(int(json.loads(p.read_text(encoding="utf-8")).get("count", 0)) if p.exists() else 0)' 2>/dev/null || echo 0)
+          PERFORMANCE_FORECAST_COUNT=$(python -c 'import json; from pathlib import Path; p=Path("data/model-performance.json"); print(int(json.loads(p.read_text(encoding="utf-8")).get("forecastCount", 0)) if p.exists() else 0)' 2>/dev/null || echo 0)
           TARGET_TO=$(TZ=Europe/Warsaw date -d "+6 days" +%F)
           API_KEY_CONFIGURED=false
           if [ -n "${API_FOOTBALL_KEY:-}" ]; then API_KEY_CONFIGURED=true; fi
@@ -78,9 +81,9 @@ jobs:
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "run=true" >> "$GITHUB_OUTPUT"
             echo "reason=Ręczne uruchomienie" >> "$GITHUB_OUTPUT"
-          elif [ "${{ github.event_name }}" = "push" ] && [ "$MODEL_VERSION" != "dixon-coles-mc-v1" ]; then
+          elif [ "${{ github.event_name }}" = "push" ] && { [ "$MODEL_VERSION" != "dixon-coles-mc-v1" ] || [ "$PERFORMANCE_FORECAST_COUNT" -lt "$ARCHIVED_COUNT" ]; }; then
             echo "run=true" >> "$GITHUB_OUTPUT"
-            echo "reason=Jednorazowa migracja istniejącego feedu do nowej wersji modelu" >> "$GITHUB_OUTPUT"
+            echo "reason=Migracja modelu lub nieaktualny raport skuteczności" >> "$GITHUB_OUTPUT"
           elif [ "$HOUR" = "13" ] && { [ "$GENERATED_DATE" != "$TODAY" ] || [[ "$GENERATED_TO" < "$TARGET_TO" ]] || { [ "$API_KEY_CONFIGURED" = "true" ] && [ "$API_GENERATED_DATE" != "$TODAY" ]; }; }; then
             echo "run=true" >> "$GITHUB_OUTPUT"
             echo "reason=Brak dzisiejszej publikacji lub weryfikacji API-Football; ponawiam próbę" >> "$GITHUB_OUTPUT"
@@ -95,6 +98,7 @@ jobs:
           echo "Data weryfikacji API-Football: ${API_GENERATED_DATE:-brak}"
           echo "Zakres terminarza do: ${GENERATED_TO:-brak}; wymagany do: $TARGET_TO"
           echo "Wersja modelu w pliku danych: ${MODEL_VERSION:-brak}; wymagana: dixon-coles-mc-v1"
+          echo "Prognozy w archiwum: ${ARCHIVED_COUNT:-0}; prognozy w raporcie: ${PERFORMANCE_FORECAST_COUNT:-0}"
           echo "Decyzja: $(grep '^run=' "$GITHUB_OUTPUT" | tail -n 1)"
 
       - name: Generuj prognozy (football-data.org)
@@ -114,6 +118,33 @@ jobs:
           SPORTMONKS_API_TOKEN: ${{ secrets.SPORTMONKS }}
           API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
         run: python scripts/sync_data_sources.py
+
+      - name: Oblicz historyczną skuteczność modeli
+        if: steps.timecheck.outputs.run == 'true'
+        run: python scripts/evaluate_predictions.py
+
+      - name: Zmniejsz rozmiar publicznych plików JSON
+        if: steps.timecheck.outputs.run == 'true'
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          names = (
+              "latest.json", "api-football.json", "sportmonks.json",
+              "prediction-history.json", "results.json", "model-performance.json",
+              "live.json",
+          )
+          for name in names:
+              path = Path("data") / name
+              if not path.exists():
+                  continue
+              payload = json.loads(path.read_text(encoding="utf-8"))
+              path.write_text(
+                  json.dumps(payload, ensure_ascii=False, separators=(",", ":")) + "\n",
+                  encoding="utf-8",
+              )
+              print(f"{name}: {path.stat().st_size:,} B")
+          PY
 
       - name: Sprawdź wygenerowane dane
         if: steps.timecheck.outputs.run == 'true'
@@ -144,6 +175,7 @@ jobs:
           git config user.name "Goal Predictor Bot"
           git config user.email "actions@users.noreply.github.com"
           git add data/latest.json
+          if [ -f data/model-performance.json ]; then git add data/model-performance.json; fi
           if [ -f data/prediction-history.json ]; then git add data/prediction-history.json; fi
           if [ -f data/api-football.json ]; then git add data/api-football.json; fi
           if [ -f data/sportmonks.json ]; then git add data/sportmonks.json; fi

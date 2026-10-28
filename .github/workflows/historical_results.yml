@@ -8,6 +8,7 @@ on:
       - "scripts/update_results.py"
       - "scripts/evaluate_predictions.py"
       - "scripts/archive_predictions.py"
+      - "data/prediction-history.json"
       - ".github/workflows/historical_results.yml"
   schedule:
     - cron: "25 5 * * *"
@@ -54,7 +55,7 @@ jobs:
           if [ -f data/model-performance.json ]; then git add data/model-performance.json; fi
           if ! git diff --cached --quiet; then
             git commit -m "Aktualizacja wyników historycznych"
-            git pull --rebase origin main
+            git pull --rebase -X theirs origin main
             git push
           else
             echo "Brak zmian w wynikach."
