@@ -2272,7 +2272,7 @@ async function loadHistoricalResults() {
   if (!root || !label) return;
   const query = (document.getElementById("historySearch")?.value || "").trim().toLocaleLowerCase("pl-PL");
   try {
-    const response = await fetch("./data/results.json?ts=" + Date.now(), {cache:"no-store"});
+    const response = await fetch("./data/results.json", {cache:"no-cache"});
     if (!response.ok) throw new Error("Brak results.json");
     const payload = await response.json();
     historicalMatches = Array.isArray(payload.matches) ? payload.matches : [];
@@ -2317,7 +2317,7 @@ function renderLive() {
 async function loadLiveScores() {
   const label = document.getElementById("liveStatus");
   try {
-    const response = await fetch("./data/live.json?ts=" + Date.now(), {cache:"no-store"});
+    const response = await fetch("./data/live.json", {cache:"no-cache"});
     if (!response.ok) throw new Error("Brak pliku live.json");
     const payload = await response.json();
     liveMatches = Array.isArray(payload.matches) ? payload.matches : [];
@@ -2471,8 +2471,8 @@ async function loadPublishedData() {
   const notice = document.getElementById("dataNotice");
 
   try {
-    const response = await fetch("./data/latest.json?ts=" + Date.now(), {
-      cache: "no-store"
+    const response = await fetch("./data/latest.json", {
+      cache: "no-cache"
     });
 
     if (!response.ok) {
@@ -2487,7 +2487,7 @@ async function loadPublishedData() {
     // never replace a model prediction or invent missing match probabilities.
     let sportmonksCheck = null;
     try {
-      const smResponse = await fetch("./data/sportmonks.json?ts=" + Date.now(), { cache: "no-store" });
+      const smResponse = await fetch("./data/sportmonks.json", { cache: "no-cache" });
       if (smResponse.ok) sportmonksCheck = await smResponse.json();
     } catch (ignored) { sportmonksCheck = null; }
 
@@ -2557,7 +2557,7 @@ async function loadPublishedData() {
     // Optional second-source check: only exact fixture matches are attached.
     let apiFootballCheck = null;
     try {
-      const checkResponse = await fetch("./data/api-football.json?ts=" + Date.now(), { cache: "no-store" });
+      const checkResponse = await fetch("./data/api-football.json", { cache: "no-cache" });
       if (checkResponse.ok) {
         apiFootballCheck = await checkResponse.json();
         const verified = new Map((apiFootballCheck.verifiedFixtures || []).map(item => [String(item.matchId), item]));
@@ -2677,7 +2677,7 @@ async function loadModelPerformance() {
   if (!status) return;
   const show = (id, value) => { const node = document.getElementById(id); if (node) node.textContent = value; };
   try {
-    const response = await fetch("./data/model-performance.json?ts=" + Date.now(), {cache:"no-store"});
+    const response = await fetch("./data/model-performance.json", {cache:"no-cache"});
     if (!response.ok) throw new Error("Raport nie jest jeszcze opublikowany.");
     const data = await response.json();
     show("performanceResolved", Number(data.resolvedCount || 0).toLocaleString("pl-PL"));
