@@ -498,6 +498,7 @@ def main():
     result = {
         "generatedAt": now.isoformat(),
         "modelVersion": "dixon-coles-mc-v1",
+        "modelEngine": "Dixon-Coles + Monte Carlo",
         "dateFrom": start,
         "dateTo": end,
         "timezone": "Europe/Warsaw",
