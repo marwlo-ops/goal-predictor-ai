@@ -1084,7 +1084,7 @@ header{max-width:1240px;padding:20px 22px 18px}
 .logo{width:52px;height:52px;border-radius:17px;background:linear-gradient(145deg,#10223a,#09111f);border:1px solid #3c8aff80;color:#fff;box-shadow:0 0 0 4px #3c8aff0d,0 0 26px #3c8aff30,inset 0 0 18px #35f2bd12}
 .logo svg{width:100%;height:100%;padding:4px;filter:drop-shadow(0 0 8px #38d9ff50)}
 .brand h1{font-size:clamp(18px,4vw,24px);font-weight:900;letter-spacing:-.8px}
-.brand h1:after{content:" AI";background:linear-gradient(90deg,#38d9ff,#9a72ff,#35f2bd);-webkit-background-clip:text;background-clip:text;color:transparent}
+.brand-ai{background:linear-gradient(90deg,#38d9ff,#9a72ff,#35f2bd);-webkit-background-clip:text;background-clip:text;color:transparent}
 .brand p{letter-spacing:1.45px;color:#8ea9d0;font-size:9px}
 .header-actions{display:flex;align-items:center;gap:9px}
 .pill{border:1px solid #2d5075;background:#0b1c31;color:#8eeaff;border-radius:999px;padding:8px 12px;box-shadow:inset 0 0 15px #38d9ff08}
@@ -1166,7 +1166,7 @@ main{max-width:1240px;padding:0 22px}
 <header>
   <div class="brand">
     <div class="logo" aria-label="Logo Goal Predictor AI"><svg viewBox="0 0 64 64" role="img" aria-hidden="true"><defs><linearGradient id="brandOrb" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#41e8ff"/><stop offset=".52" stop-color="#7c5cff"/><stop offset="1" stop-color="#25ffc6"/></linearGradient></defs><circle cx="32" cy="32" r="29" fill="#07111f" stroke="url(#brandOrb)" stroke-width="3"/><circle cx="32" cy="32" r="21" fill="none" stroke="#45dfff" stroke-opacity=".38"/><path d="M32 18l10 7-4 12H26l-4-12z" fill="url(#brandOrb)"/><path d="M32 18V9M42 25l10-3M38 37l6 10M26 37l-6 10M22 25l-10-3" stroke="#f3fbff" stroke-width="3" stroke-linecap="round"/><path d="M8 43Q23 58 43 52" fill="none" stroke="#25ffc6" stroke-width="2.5" stroke-linecap="round"/></svg></div>
-    <div><h1>Goal Predictor AI</h1><p>ANALITYKA MECZÓW PIŁKARSKICH</p></div>
+    <div><h1>Goal Predictor <span class="brand-ai">AI</span></h1><p>ANALITYKA MECZÓW PIŁKARSKICH</p></div>
   </div>
   <div class="header-actions"><span class="pill"><span class="live-dot"></span> AI • FOOTBALL INTELLIGENCE</span><button class="smallbtn" id="loginOpen" style="white-space:nowrap">Zaloguj się</button></div>
 </header>
@@ -2689,7 +2689,7 @@ async function loadModelPerformance() {
     status.textContent = "Raport zaktualizowano: " + generatedText + ". Wyniki wyliczono tylko z prognoz zapisanych przed rozpoczęciem meczu.";
     const marketsNode = document.getElementById("performanceMarkets");
     if (marketsNode) {
-      const names = {homeWin:"Wygrana gospodarzy",draw:"Remis",awayWin:"Wygrana gości",over15:"Over 1,5",over25:"Over 2,5",over35:"Over 3,5",btts:"BTTS",homeOver05:"Gospodarze gol 1+",awayOver05:"Goście gol 1+"};
+      const names = {homeWin:"Wygrana gospodarzy",draw:"Remis",awayWin:"Wygrana gości",over15:"Over 1,5",over25:"Over 2,5",over35:"Over 3,5",btts:"BTTS",homeOver05:"Gospodarze gol 1+",awayOver05:"Goście gol 1+",homeOver15:"Gospodarze gole 2+",awayOver15:"Goście gole 2+"};
       const entries = Object.entries(data.markets || {}).filter(([key,value]) => names[key] && value && value.count > 0);
       marketsNode.innerHTML = entries.length ? entries.map(([key,value]) =>
         '<div class="performance-market"><span>' + escapeHtml(names[key]) + '</span><strong>' +
