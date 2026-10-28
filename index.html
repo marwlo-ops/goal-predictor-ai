@@ -1157,7 +1157,7 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,su
     <div class="quickstat"><strong id="quickFavCount">0</strong><span>OBSERWOWANE</span></div>
   </div>
   <div class="card best-picks-card" style="margin-bottom:16px">
-    <div class="section-head" style="margin-top:0"><h3>Ranking rynków modelu</h3><span class="tag">BEZ KURSÓW LIVE</span></div>
+    <div class="section-head" style="margin-top:0"><h3>Ranking rynków modelu</h3><span class="tag" id="bestPicksLimit">WYBORY DNIA</span></div>
     <p class="muted best-picks-note">Ranking prawdopodobieństw z korektą za jakość danych i ostatnią formę, gdy statystyki są dostępne. Kurs fair jest matematyczny, a nie kursem bukmachera. Przed grą sprawdź rzeczywisty kurs, w tym próg 1,40.</p>
     <div id="bestPicks"><div class="empty">Ranking pojawi się po wczytaniu prognoz.</div></div>
   </div>
@@ -1927,6 +1927,10 @@ function renderBestPicks() {
   }
   candidates.sort((a,b)=>b.probability-a.probability);
   const selected = [];
+  const localWeekday = new Intl.DateTimeFormat("en-US", {timeZone:"Europe/Warsaw",weekday:"short"}).format(new Date());
+  const pickLimit = ["Fri","Sat","Sun"].includes(localWeekday) ? 30 : 10;
+  const limitBadge = document.getElementById("bestPicksLimit");
+  if (limitBadge) limitBadge.textContent = pickLimit + (pickLimit === 30 ? " WYBORÓW · WEEKEND" : " WYBORÓW DNIA");
   const perMatch = new Map();
   for (const item of candidates) {
     const id = matchId(item.match);
@@ -1934,7 +1938,7 @@ function renderBestPicks() {
     if (count >= 2) continue;
     perMatch.set(id,count+1);
     selected.push(item);
-    if (selected.length >= 10) break;
+    if (selected.length >= pickLimit) break;
   }
   if (!selected.length) {
     root.innerHTML = '<div class="empty">Brak wystarczających prognoz do rankingu. Nie dodajemy fikcyjnych typów ani kursów.</div>';
