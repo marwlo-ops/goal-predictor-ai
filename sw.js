@@ -1,4 +1,4 @@
-const CACHE = "goal-predictor-ai-v9";
+const CACHE = "goal-predictor-ai-v10";
 const CORE_ASSETS = ["./", "./index.html", "./manifest.json"];
 
 self.addEventListener("install", event => {

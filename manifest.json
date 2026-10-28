@@ -1,11 +1,11 @@
 {
-  "name": "Goal Predictor AI — Analiza meczów",
-  "short_name": "Goal Predictor",
-  "description": "Automatyczne prognozy meczów piłkarskich",
+  "name": "Goal Predictor AI — Football Intelligence",
+  "short_name": "Goal Predictor AI",
+  "description": "Analityka piłkarska, modele Dixon–Coles i Monte Carlo, statystyki oraz prognozy meczów.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#060a12",
-  "theme_color": "#060a12",
+  "background_color": "#060914",
+  "theme_color": "#070b18",
   "lang": "pl"
 }
