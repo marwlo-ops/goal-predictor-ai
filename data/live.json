@@ -1,7 +1,53 @@
 {
-  "updatedAt": "2026-10-28T23:18:45.644706+01:00",
+  "updatedAt": "2026-10-28T23:58:35.829796+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 0,
-  "matches": []
+  "count": 3,
+  "matches": [
+    {
+      "id": 555062,
+      "league": "BSA",
+      "leagueName": "Campeonato Brasileiro Série A",
+      "home": "RB Bragantino",
+      "away": "Chapecoense AF",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-10-28T22:30:00Z",
+      "updatedAt": "2026-10-28T22:56:51Z"
+    },
+    {
+      "id": 555068,
+      "league": "BSA",
+      "leagueName": "Campeonato Brasileiro Série A",
+      "home": "Santos FC",
+      "away": "SE Palmeiras",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-10-28T22:30:00Z",
+      "updatedAt": "2026-10-28T22:56:51Z"
+    },
+    {
+      "id": 555065,
+      "league": "BSA",
+      "leagueName": "Campeonato Brasileiro Série A",
+      "home": "Fluminense FC",
+      "away": "SC Internacional",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-10-28T22:30:00Z",
+      "updatedAt": "2026-10-28T22:57:23Z"
+    }
+  ]
 }
