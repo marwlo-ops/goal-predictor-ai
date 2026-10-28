@@ -2321,8 +2321,23 @@ async function loadLiveScores() {
     if (!response.ok) throw new Error("Brak pliku live.json");
     const payload = await response.json();
     liveMatches = Array.isArray(payload.matches) ? payload.matches : [];
-    const stamp = payload.updatedAt ? new Date(payload.updatedAt).toLocaleTimeString("pl-PL",{hour:"2-digit",minute:"2-digit"}) : "";
-    label.textContent = "AKTUALIZACJA " + (stamp || "BRAK");
+    const updated = payload.updatedAt ? new Date(payload.updatedAt) : null;
+    const validStamp = updated && Number.isFinite(updated.getTime());
+    const stamp = validStamp
+      ? updated.toLocaleTimeString("pl-PL", {hour:"2-digit",minute:"2-digit"})
+      : "";
+    const ageMinutes = validStamp ? (Date.now() - updated.getTime()) / 60000 : Infinity;
+    const stale = ageMinutes > 25 || ageMinutes < -5;
+    if (stale) {
+      label.textContent = "DANE LIVE OPÓŹNIONE · " + (stamp || "BRAK DATY");
+      label.style.color = "var(--danger, #ff668d)";
+      label.title = "Ostatnia aktualizacja źródła live: " + (validStamp ? updated.toLocaleString("pl-PL") : "brak poprawnej daty");
+    } else {
+      label.style.color = "";
+      label.title = validStamp ? "Ostatnia aktualizacja: " + updated.toLocaleString("pl-PL") : "";
+      label.textContent = "AKTUALIZACJA " + (stamp || "BRAK DATY") +
+        (liveMatches.length ? " · " + liveMatches.length + " MECZÓW LIVE" : " · BRAK MECZÓW LIVE");
+    }
   } catch (error) {
     liveMatches = [];
     label.textContent = "BRAK DANYCH LIVE";
