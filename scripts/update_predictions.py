@@ -10,6 +10,8 @@ from datetime import datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
+from model_analytics import analyze_match
+
 BASE_URL = "https://api.football-data.org/v4"
 TOKEN = os.environ.get("FOOTBALL_DATA_TOKEN", "").strip()
 WARSAW = ZoneInfo("Europe/Warsaw")
@@ -461,16 +463,19 @@ def main():
         )
         estimate = estimate_goals(match["home"], match["away"], maps)
         model_status = "table_based"
-        model_label = "Poisson na podstawie tabeli"
+        model_label = "Dixon-Coles + Monte Carlo — dane tabeli"
 
         if not estimate:
             estimate = estimate_goals_from_history(match)
             model_status = "history_based" if estimate else "insufficient_data"
-            model_label = "Poisson na podstawie ostatnich wyników" if estimate else None
+            model_label = "Dixon-Coles + Monte Carlo — ostatnie wyniki" if estimate else None
 
+        analytics = None
         if estimate:
             hx, ax, quality, confidence = estimate
-            probabilities = calculate_probabilities(hx, ax)
+            stable_seed = sum(ord(char) for char in str(match.get("id") or ""))
+            analytics = analyze_match(hx, ax, seed=stable_seed)
+            probabilities = analytics["markets"]
         else:
             hx = ax = None
             probabilities = None
@@ -481,6 +486,7 @@ def main():
             "hx": round(hx, 2) if hx is not None else None,
             "ax": round(ax, 2) if ax is not None else None,
             "probabilities": probabilities,
+            "analytics": analytics,
             "model": model_label,
             "quality": quality,
             "confidence": confidence,
@@ -499,9 +505,10 @@ def main():
         "matches": predictions,
         "diagnostics": diagnostics,
         "note": (
-            "Prognozy orientacyjne na podstawie dostępnych tabel. "
-            "Model nie uwzględnia kursów, składów, kontuzji ani "
-            "zaawansowanych statystyk. Nie gwarantuje wyników."
+            "Prognozy orientacyjne z modelu Dixon-Coles i symulacji Monte Carlo. "
+            "Parametr korekty niskich wyników rho nie jest dopasowany do ligi. "
+            "Model nie uwzględnia automatycznie składów, kontuzji, pogody ani kursów. "
+            "Nie gwarantuje wyników."
         ),
     }
 

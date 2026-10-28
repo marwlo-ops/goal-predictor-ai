@@ -1064,6 +1064,10 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,su
 </style>
 
 
+
+<style>
+.performance-markets{display:grid;gap:8px}.performance-market{display:grid;grid-template-columns:minmax(80px,1fr) auto auto;gap:10px;align-items:center;padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:#0b1421;font-size:12px}.performance-market strong{font-size:13px;color:var(--green)}.performance-market small{font-size:10px;color:var(--muted)}.calibration-row{display:grid;grid-template-columns:55px minmax(0,1fr) 90px;gap:8px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line);font-size:11px}.calibration-bar{height:7px;background:#28364b;border-radius:99px;overflow:hidden}.calibration-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--blue),var(--green));border-radius:99px}.favorite-match{margin:10px 0;padding:15px;border:1px solid var(--line);border-radius:17px;background:linear-gradient(145deg,#142136,#0c1421)}.favorite-match-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.favorite-match-teams{font-size:14px;font-weight:850;line-height:1.45}.favorite-match-meta{font-size:10px;color:var(--muted);margin-top:5px}.favorite-match-probs{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}.favorite-match-probs span{font-size:10px;padding:6px 8px;border-radius:8px;background:#07121c;border:1px solid var(--line)}.favorite-match-probs b{color:var(--green)}@media(max-width:390px){.performance-market{grid-template-columns:1fr auto;gap:4px}.performance-market small{grid-column:1/-1}.calibration-row{grid-template-columns:47px minmax(0,1fr) 78px}}
+</style>
 </head>
 <body>
 <header>
@@ -1153,7 +1157,7 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,su
 <section class="page" id="page-analyze">
   <div class="section-head">
     <h3>Analizator meczu</h3>
-    <span class="tag">MODEL POISSONA</span>
+    <span class="tag">DIXON–COLES + MONTE CARLO</span>
   </div>
 
   <div class="card">
@@ -1226,17 +1230,33 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,su
 </section>
 
 <section class="page" id="page-stats">
-  <div class="section-head"><h3>Centrum statystyk</h3><span class="tag">BETA</span></div>
+  <div class="section-head"><h3>Centrum statystyk</h3><span class="tag">ANALITYKA MODELU</span></div>
   <div class="grid2">
-    <div class="metric"><div class="label">Mecze w danych</div><div class="value" id="statMatches">—</div><div class="hint">Załadowane prognozy</div></div>
+    <div class="metric"><div class="label">Mecze w danych</div><div class="value" id="statMatches">—</div><div class="hint">Prognozy z dostępnym modelem</div></div>
     <div class="metric"><div class="label">Ligi</div><div class="value" id="statLeagues">—</div><div class="hint">Unikalne rozgrywki</div></div>
   </div>
-  <div class="card"><h4>Jak czytać dane?</h4><p class="muted">Sprawdzaj datę aktualizacji, jakość danych oraz historię obu drużyn. Wysokie prawdopodobieństwo nie oznacza pewnego wyniku.</p></div>
+  <div class="card" style="margin-top:12px">
+    <div class="section-head" style="margin-top:0"><h3>Historyczna skuteczność</h3><span class="tag">BACKTEST</span></div>
+    <p id="modelPerformanceStatus" class="muted" aria-live="polite">Wczytywanie raportu skuteczności…</p>
+    <div class="grid2">
+      <div class="metric"><div class="label">Rozstrzygnięte prognozy</div><div class="value" id="performanceResolved">—</div><div class="hint">Prognoza zapisana przed meczem</div></div>
+      <div class="metric"><div class="label">Trafność wyboru 1X2</div><div class="value" id="performanceAccuracy">—</div><div class="hint">Wybór najbardziej prawdopodobnego wyniku</div></div>
+      <div class="metric"><div class="label">Brier Score 1X2</div><div class="value" id="performanceBrier">—</div><div class="hint">Niżej oznacza lepiej; zakres 0–1</div></div>
+      <div class="metric"><div class="label">Zarchiwizowane prognozy</div><div class="value" id="performanceForecastCount">—</div><div class="hint">Pierwsza prognoza nie jest nadpisywana</div></div>
+    </div>
+    <h4 style="margin:18px 0 8px">Wyniki według rynku</h4>
+    <div id="performanceMarkets" class="performance-markets"><p class="muted">Raport będzie dostępny, gdy historia prognoz zostanie porównana z wynikami końcowymi.</p></div>
+    <h4 style="margin:18px 0 8px">Kalibracja prawdopodobieństw 1X2</h4>
+    <div id="modelCalibration"><p class="muted">Brak wystarczającej historii do kalibracji.</p></div>
+    <p class="muted" style="font-size:11px">Skuteczność i kalibracja są miarodajne dopiero przy odpowiednio dużej próbie. Symulacja Monte Carlo korzysta z rozkładu tego samego modelu i nie stanowi niezależnego potwierdzenia.</p>
+  </div>
+  <div class="card" style="margin-top:12px"><h4>Jak działa model?</h4><p class="muted">Rozkład Dixon–Coles koryguje prawdopodobieństwa niskich wyników, a Monte Carlo symuluje scenariusze z tego rozkładu. Parametr rho jest jawnie oznaczony jako domyślny — nie jest jeszcze dopasowany do konkretnej ligi. Jakość prognozy nadal zależy od danych wejściowych i nie jest gwarancją wyniku.</p></div>
 </section>
 
 <section class="page" id="page-favorites">
-  <div class="section-head"><h3>Obserwowane mecze</h3><span class="tag">TWOJA LISTA</span></div>
-  <div class="card"><p class="muted">Dodawanie meczów do obserwowanych będzie dostępne w kolejnej iteracji. Na razie możesz filtrować mecze według ligi na stronie głównej.</p></div>
+  <div class="section-head"><h3>Obserwowane mecze</h3><span class="tag" id="favoriteCountTag">0 ZAPISANYCH</span></div>
+  <p class="muted">Lista jest przechowywana lokalnie na tym urządzeniu. Wybierz gwiazdkę na karcie meczu, aby go dodać.</p>
+  <div id="favoriteMatches"></div>
 </section>
 
 <section class="page" id="page-history">
@@ -1555,6 +1575,7 @@ function persistTracked() {
 function persistFavorites() {
   safeStorageSet("gpa_favorites", JSON.stringify([...favoriteIds]));
   document.getElementById("quickFavCount").textContent = favoriteIds.size;
+  renderFavoriteMatches();
 }
 function modelBackedMatches() {
   return matches.filter(match =>
@@ -1812,6 +1833,37 @@ function buildPredictionNarrative(match, p) {
       '<span class="prediction-tag">BTTS: <strong>' + escapeHtml(percent(p.btts)) + '</strong></span>' +
     '</div>' +
   '</div>';
+}
+
+function renderFavoriteMatches() {
+  const root = document.getElementById("favoriteMatches");
+  if (!root) return;
+  const items = modelBackedMatches().filter(match => favoriteIds.has(matchId(match)));
+  const count = document.getElementById("favoriteCountTag");
+  if (count) count.textContent = items.length + (items.length === 1 ? " ZAPISANY" : " ZAPISANYCH");
+  if (!items.length) {
+    root.innerHTML = '<div class="empty">Nie masz jeszcze zapisanych meczów. Wróć do strony głównej i naciśnij ☆ na karcie wybranego meczu.</div>';
+    return;
+  }
+  root.innerHTML = items.map(match => {
+    const p = match.probabilities || {};
+    const id = matchId(match);
+    const date = [match.date, match.time].filter(Boolean).join(" · ");
+    const entries = [["1",p.homeWin],["X",p.draw],["2",p.awayWin],["O1,5",p.over15],["O2,5",p.over25],["BTTS",p.btts]];
+    const tags = entries.filter(item => Number.isFinite(Number(item[1]))).map(item =>
+      '<span>' + escapeHtml(item[0]) + ' <b>' + Number(item[1]).toFixed(1) + '%</b></span>'
+    ).join("");
+    return '<div class="favorite-match"><div class="favorite-match-head"><div><div class="favorite-match-teams">' +
+      escapeHtml(match.home) + ' — ' + escapeHtml(match.away) + '</div><div class="favorite-match-meta">' +
+      escapeHtml(match.leagueName || match.league || "Piłka nożna") + ' · ' + escapeHtml(date || "Termin nieznany") +
+      '</div></div><button class="favbtn saved" type="button" data-unfavorite="' + escapeHtml(id) + '" aria-label="Usuń z obserwowanych">★</button></div>' +
+      '<div class="favorite-match-probs">' + tags + '</div></div>';
+  }).join("");
+  root.querySelectorAll("[data-unfavorite]").forEach(button => button.addEventListener("click", () => {
+    favoriteIds.delete(button.dataset.unfavorite);
+    persistFavorites();
+    renderMatches();
+  }));
 }
 
 function renderMatches() {
@@ -2125,6 +2177,8 @@ function showPage(name) {
     button.classList.toggle("active", button.dataset.page === name);
   });
 
+  if (name === "favorites") renderFavoriteMatches();
+  if (name === "stats") loadModelPerformance();
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
@@ -2140,6 +2194,48 @@ function bar(label, value) {
       <div class="bar"><div class="fill" style="width:${width}%"></div></div>
       <b>${percent(value)}</b>
     </div>`;
+}
+
+function dixonColesBrowser(homeRate, awayRate) {
+  const maxGoals = 12, rho = -0.08;
+  const pmf = rate => {
+    const values = [Math.exp(-rate)];
+    for (let goals = 1; goals <= maxGoals; goals++) values.push(values[goals - 1] * rate / goals);
+    const sum = values.reduce((a, b) => a + b, 0);
+    return values.map(value => value / sum);
+  };
+  const hp = pmf(homeRate), ap = pmf(awayRate), rows = [];
+  const markets = {home:0,draw:0,away:0,over15:0,over25:0,over35:0,btts:0,homeOver05:0,awayOver05:0,homeOver15:0,awayOver15:0};
+  let mass = 0;
+  for (let h = 0; h <= maxGoals; h++) {
+    rows[h] = [];
+    for (let a = 0; a <= maxGoals; a++) {
+      let tau = 1;
+      if (h === 0 && a === 0) tau = 1 - homeRate * awayRate * rho;
+      else if (h === 0 && a === 1) tau = 1 + homeRate * rho;
+      else if (h === 1 && a === 0) tau = 1 + awayRate * rho;
+      else if (h === 1 && a === 1) tau = 1 - rho;
+      const probability = Math.max(0, hp[h] * ap[a] * tau);
+      rows[h][a] = probability;
+      mass += probability;
+    }
+  }
+  const scores = [];
+  for (let h = 0; h <= maxGoals; h++) for (let a = 0; a <= maxGoals; a++) {
+    const p = rows[h][a] / mass, total = h + a;
+    if (h > a) markets.home += p; else if (h === a) markets.draw += p; else markets.away += p;
+    if (total >= 2) markets.over15 += p;
+    if (total >= 3) markets.over25 += p;
+    if (total >= 4) markets.over35 += p;
+    if (h > 0 && a > 0) markets.btts += p;
+    if (h >= 1) markets.homeOver05 += p;
+    if (a >= 1) markets.awayOver05 += p;
+    if (h >= 2) markets.homeOver15 += p;
+    if (a >= 2) markets.awayOver15 += p;
+    scores.push({score:h+":"+a, probability:p});
+  }
+  scores.sort((a,b)=>b.probability-a.probability);
+  return {...markets,topScorelines:scores.slice(0,5),rho};
 }
 
 function calculate() {
@@ -2161,7 +2257,7 @@ function calculate() {
     return;
   }
 
-  const probabilities = model(homeXg, awayXg);
+  const probabilities = dixonColesBrowser(homeXg, awayXg);
   const outcomes = [
     { label: "Wygrana gospodarzy", value: probabilities.home },
     { label: "Remis", value: probabilities.draw },
@@ -2190,7 +2286,7 @@ function calculate() {
       ${bar("Powyżej 2,5 gola", probabilities.over25)}
       ${bar("BTTS · tak", probabilities.btts)}
     </div>
-    <p class="muted">Szacunki matematyczne na podstawie oczekiwanych goli. Nie są gwarancją wyniku.</p>`;
+    <p class="muted">Dixon–Coles z domyślnym rho = ${probabilities.rho}. Parametr nie jest dopasowany do konkretnej ligi. Nie traktuj wyniku jako gwarancji.</p>`;
 }
 
 document.getElementById("predictForm").addEventListener("submit", event => {
@@ -2386,6 +2482,7 @@ async function loadPublishedData() {
     }
 
     renderMatches();
+    renderFavoriteMatches();
 
     if (!matches.length) {
       status.textContent += " · Brak meczów";
@@ -2396,13 +2493,57 @@ async function loadPublishedData() {
     status.textContent = "Błąd wczytywania danych";
     notice.textContent = "Nie udało się pobrać data/latest.json. Sprawdź, czy plik istnieje i został opublikowany.";
     renderMatches();
+    renderFavoriteMatches();
     console.error("Goal Predictor data error:", error);
+  }
+}
+
+async function loadModelPerformance() {
+  const status = document.getElementById("modelPerformanceStatus");
+  if (!status) return;
+  const show = (id, value) => { const node = document.getElementById(id); if (node) node.textContent = value; };
+  try {
+    const response = await fetch("./data/model-performance.json?ts=" + Date.now(), {cache:"no-store"});
+    if (!response.ok) throw new Error("Raport nie jest jeszcze opublikowany.");
+    const data = await response.json();
+    show("performanceResolved", Number(data.resolvedCount || 0).toLocaleString("pl-PL"));
+    show("performanceForecastCount", Number(data.forecastCount || 0).toLocaleString("pl-PL"));
+    show("performanceAccuracy", Number.isFinite(data.oneXTwoAccuracy) ? Number(data.oneXTwoAccuracy).toLocaleString("pl-PL",{maximumFractionDigits:1}) + "%" : "—");
+    show("performanceBrier", Number.isFinite(data.oneXTwoBrierScore) ? Number(data.oneXTwoBrierScore).toLocaleString("pl-PL",{minimumFractionDigits:3,maximumFractionDigits:3}) : "—");
+    const generated = data.generatedAt ? new Date(data.generatedAt) : null;
+    const generatedText = generated && !Number.isNaN(generated.getTime()) ? generated.toLocaleString("pl-PL") : "brak daty";
+    status.textContent = "Raport zaktualizowano: " + generatedText + ". Wyniki wyliczono tylko z prognoz zapisanych przed rozpoczęciem meczu.";
+    const marketsNode = document.getElementById("performanceMarkets");
+    if (marketsNode) {
+      const names = {homeWin:"Wygrana gospodarzy",draw:"Remis",awayWin:"Wygrana gości",over15:"Over 1,5",over25:"Over 2,5",over35:"Over 3,5",btts:"BTTS",homeOver05:"Gospodarze gol 1+",awayOver05:"Goście gol 1+"};
+      const entries = Object.entries(data.markets || {}).filter(([key,value]) => names[key] && value && value.count > 0);
+      marketsNode.innerHTML = entries.length ? entries.map(([key,value]) =>
+        '<div class="performance-market"><span>' + escapeHtml(names[key]) + '</span><strong>' +
+        (Number.isFinite(value.hitRate) ? Number(value.hitRate).toLocaleString("pl-PL",{maximumFractionDigits:1}) + "%" : "—") +
+        '</strong><small>n=' + Number(value.count) + ' · Brier ' +
+        (Number.isFinite(value.brierScore) ? Number(value.brierScore).toFixed(3) : "—") + '</small></div>'
+      ).join("") : '<p class="muted">Raport nie ma jeszcze rozstrzygniętych prognoz.</p>';
+    }
+    const calibrationNode = document.getElementById("modelCalibration");
+    if (calibrationNode) {
+      const bins = Array.isArray(data.calibration) ? data.calibration : [];
+      calibrationNode.innerHTML = bins.length ? bins.map(item => {
+        const predicted = Math.max(0,Math.min(100,Number(item.predicted)||0));
+        const observed = Math.max(0,Math.min(100,Number(item.observed)||0));
+        return '<div class="calibration-row"><span>' + escapeHtml(item.range) + '</span><div><div class="calibration-bar"><i style="width:' + observed + '%"></i></div><small class="muted">przewidywane ' + predicted.toFixed(1) + '%</small></div><strong>' + observed.toFixed(1) + '% · n=' + Number(item.count||0) + '</strong></div>';
+      }).join("") : '<p class="muted">Kalibracja pojawi się po zebraniu rozstrzygniętych prognoz.</p>';
+    }
+  } catch (error) {
+    show("performanceResolved","—"); show("performanceForecastCount","—");
+    show("performanceAccuracy","—"); show("performanceBrier","—");
+    const marketsNode = document.getElementById("performanceMarkets");
+    if (marketsNode) marketsNode.innerHTML = '<p class="muted">Raport jest chwilowo niedostępny. Zostanie utworzony przez zadania GitHub Actions po archiwizacji prognoz i pobraniu wyników.</p>';
+    status.textContent = "Brak raportu historycznej skuteczności — nie pokazujemy sztucznych statystyk.";
   }
 }
 
 calculate();
 loadPublishedData();
-loadHistoricalResults();
 
 
 const loginModal = document.getElementById("loginModal");
@@ -2578,7 +2719,23 @@ function historyPanel(match) {
         '</span><b>' + escapeHtml(String(game.homeGoals ?? "—")) + ':' + escapeHtml(String(game.awayGoals ?? "—")) + '</b></div>'
       ).join("")
     : "";
-  const content = sportmonksMeta + sportmonksScoresHtml + sportmonksStatsHtml + apiMeta + homeHtml + awayHtml + h2hHtml;
+  const analysis = match.analytics || null;
+  const analysisMarkets = analysis && analysis.markets ? analysis.markets : null;
+  const mcMarkets = analysis && analysis.monteCarlo && analysis.monteCarlo.markets ? analysis.monteCarlo.markets : null;
+  const marketLabels = {over15:"Over 1,5 gola",over25:"Over 2,5 gola",over35:"Over 3,5 gola",btts:"BTTS",homeOver05:"Gospodarze strzelą 1+",awayOver05:"Goście strzelą 1+",homeOver15:"Gospodarze strzelą 2+",awayOver15:"Goście strzelą 2+"};
+  const formatModelPct = value => Number.isFinite(Number(value)) ? Number(value).toLocaleString("pl-PL",{maximumFractionDigits:1}) + "%" : "—";
+  const modelMarketsHtml = analysisMarkets ? Object.entries(marketLabels).filter(([key])=>analysisMarkets[key] !== undefined).map(([key,label])=>
+    '<div class="match-foot"><span>' + escapeHtml(label) + '</span><b>' + formatModelPct(analysisMarkets[key]) + '</b></div>'
+  ).join("") : "";
+  const mcCompareHtml = mcMarkets ? '<p class="muted">Monte Carlo · ' + escapeHtml(String(analysis.monteCarlo.samples || "—")) + ' symulacji. To symulacja tego samego modelu, nie niezależna prognoza.</p>' +
+    ["homeWin","draw","awayWin","over25","btts"].map(key=>'<div class="match-foot"><span>' + escapeHtml(({homeWin:"1 · Gospodarze",draw:"X · Remis",awayWin:"2 · Goście",over25:"Over 2,5",btts:"BTTS"})[key]) + '</span><b>' + formatModelPct(mcMarkets[key]) + '</b></div>').join("") : "";
+  const topScores = Array.isArray(analysis && analysis.topScorelines) ? analysis.topScorelines : [];
+  const scorelinesHtml = topScores.length ? '<div class="stats-section-title">Najbardziej prawdopodobne wyniki</div><div class="prediction-tags">' + topScores.map(item=>
+    '<span class="prediction-tag">' + escapeHtml(item.score || "—") + ' <strong>' + formatModelPct(item.probability) + '</strong></span>'
+  ).join("") + '</div>' : "";
+  const advancedAnalyticsHtml = analysisMarkets ? '<div class="stats-section-title">Dodatkowe rynki · Dixon–Coles</div>' + modelMarketsHtml +
+    scorelinesHtml + '<p class="muted">rho=' + escapeHtml(String(analysis.rho ?? "—")) + ' · ' + escapeHtml(analysis.method || "Dixon–Coles") + '</p>' + mcCompareHtml : "";
+  const content = advancedAnalyticsHtml + sportmonksMeta + sportmonksScoresHtml + sportmonksStatsHtml + apiMeta + homeHtml + awayHtml + h2hHtml;
   if (!content.trim()) return "";
   return '<details style="margin-top:12px"><summary style="cursor:pointer;padding:10px 0;font-weight:700">📊 Dostępne statystyki i historia</summary>' +
     content + '</details>';

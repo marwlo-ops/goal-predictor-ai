@@ -6,6 +6,8 @@ on:
     branches: [main]
     paths:
       - "scripts/update_results.py"
+      - "scripts/evaluate_predictions.py"
+      - "scripts/archive_predictions.py"
       - ".github/workflows/historical_results.yml"
   schedule:
     - cron: "25 5 * * *"
@@ -42,11 +44,14 @@ jobs:
           assert all(m.get("homeGoals") is not None and m.get("awayGoals") is not None for m in data["matches"])
           print(f"OK: {data['count']} wyników historycznych")
           PY
+      - name: Przelicz jakość wcześniejszych prognoz
+        run: python scripts/evaluate_predictions.py
       - name: Zapisz historię
         run: |
           git config user.name "Goal Predictor Bot"
           git config user.email "actions@users.noreply.github.com"
           git add data/results.json
+          if [ -f data/model-performance.json ]; then git add data/model-performance.json; fi
           if ! git diff --cached --quiet; then
             git commit -m "Aktualizacja wyników historycznych"
             git pull --rebase origin main

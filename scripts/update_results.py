@@ -52,7 +52,37 @@ def main():
             "awayGoals": away_goals,
             "status": item.get("status"),
         })
+    # Zachowaj starsze wyniki pobrane przy wcześniejszych uruchomieniach.
+    # Endpoint jest pobierany za ostatnie 7 dni, ale raport skuteczności potrzebuje
+    # wyników dla wszystkich wcześniej zarchiwizowanych prognoz.
+    try:
+        previous_payload = json.loads(OUTPUT.read_text(encoding="utf-8"))
+        previous_matches = previous_payload.get("matches", [])
+    except (OSError, json.JSONDecodeError, AttributeError):
+        previous_matches = []
+
+    merged = {}
+    for item in previous_matches:
+        if not isinstance(item, dict) or item.get("homeGoals") is None or item.get("awayGoals") is None:
+            continue
+        key = ("id:" + str(item["id"])) if item.get("id") is not None else "|".join(
+            str(item.get(part) or "") for part in ("date", "home", "away")
+        )
+        merged[key] = item
+    for item in matches:
+        key = ("id:" + str(item["id"])) if item.get("id") is not None else "|".join(
+            str(item.get(part) or "") for part in ("date", "home", "away")
+        )
+        merged[key] = item
+
+    cutoff = (today - timedelta(days=365)).isoformat()
+    matches = [
+        item for item in merged.values()
+        if str(item.get("date") or "")[:10] >= cutoff
+    ]
     matches.sort(key=lambda match: match.get("date") or "", reverse=True)
+    matches = matches[:10000]
+
     result = {
         "updatedAt": datetime.now(WARSAW).isoformat(),
         "dateFrom": date_from,
