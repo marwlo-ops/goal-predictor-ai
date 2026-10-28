@@ -1,5 +1,5 @@
-const CACHE = "goal-predictor-ai-v10";
-const CORE_ASSETS = ["./", "./index.html", "./manifest.json"];
+const CACHE = "goal-predictor-ai-v11";
+const CORE_ASSETS = ["./", "./index.html", "./manifest.json", "./icons/goal-predictor-icon.svg"];
 
 self.addEventListener("install", event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(CORE_ASSETS)).then(() => self.skipWaiting()));
