@@ -2498,9 +2498,52 @@ async function loadPublishedData() {
   }
 }
 
+async function loadModelPerformance() {
+  const status = document.getElementById("modelPerformanceStatus");
+  if (!status) return;
+  const show = (id, value) => { const node = document.getElementById(id); if (node) node.textContent = value; };
+  try {
+    const response = await fetch("./data/model-performance.json?ts=" + Date.now(), {cache:"no-store"});
+    if (!response.ok) throw new Error("Raport nie jest jeszcze opublikowany.");
+    const data = await response.json();
+    show("performanceResolved", Number(data.resolvedCount || 0).toLocaleString("pl-PL"));
+    show("performanceForecastCount", Number(data.forecastCount || 0).toLocaleString("pl-PL"));
+    show("performanceAccuracy", Number.isFinite(data.oneXTwoAccuracy) ? Number(data.oneXTwoAccuracy).toLocaleString("pl-PL",{maximumFractionDigits:1}) + "%" : "—");
+    show("performanceBrier", Number.isFinite(data.oneXTwoBrierScore) ? Number(data.oneXTwoBrierScore).toLocaleString("pl-PL",{minimumFractionDigits:3,maximumFractionDigits:3}) : "—");
+    const generated = data.generatedAt ? new Date(data.generatedAt) : null;
+    const generatedText = generated && !Number.isNaN(generated.getTime()) ? generated.toLocaleString("pl-PL") : "brak daty";
+    status.textContent = "Raport zaktualizowano: " + generatedText + ". Wyniki wyliczono tylko z prognoz zapisanych przed rozpoczęciem meczu.";
+    const marketsNode = document.getElementById("performanceMarkets");
+    if (marketsNode) {
+      const names = {homeWin:"Wygrana gospodarzy",draw:"Remis",awayWin:"Wygrana gości",over15:"Over 1,5",over25:"Over 2,5",over35:"Over 3,5",btts:"BTTS",homeOver05:"Gospodarze gol 1+",awayOver05:"Goście gol 1+"};
+      const entries = Object.entries(data.markets || {}).filter(([key,value]) => names[key] && value && value.count > 0);
+      marketsNode.innerHTML = entries.length ? entries.map(([key,value]) =>
+        '<div class="performance-market"><span>' + escapeHtml(names[key]) + '</span><strong>' +
+        (Number.isFinite(value.hitRate) ? Number(value.hitRate).toLocaleString("pl-PL",{maximumFractionDigits:1}) + "%" : "—") +
+        '</strong><small>n=' + Number(value.count) + ' · Brier ' +
+        (Number.isFinite(value.brierScore) ? Number(value.brierScore).toFixed(3) : "—") + '</small></div>'
+      ).join("") : '<p class="muted">Raport nie ma jeszcze rozstrzygniętych prognoz.</p>';
+    }
+    const calibrationNode = document.getElementById("modelCalibration");
+    if (calibrationNode) {
+      const bins = Array.isArray(data.calibration) ? data.calibration : [];
+      calibrationNode.innerHTML = bins.length ? bins.map(item => {
+        const predicted = Math.max(0,Math.min(100,Number(item.predicted)||0));
+        const observed = Math.max(0,Math.min(100,Number(item.observed)||0));
+        return '<div class="calibration-row"><span>' + escapeHtml(item.range) + '</span><div><div class="calibration-bar"><i style="width:' + observed + '%"></i></div><small class="muted">przewidywane ' + predicted.toFixed(1) + '%</small></div><strong>' + observed.toFixed(1) + '% · n=' + Number(item.count||0) + '</strong></div>';
+      }).join("") : '<p class="muted">Kalibracja pojawi się po zebraniu rozstrzygniętych prognoz.</p>';
+    }
+  } catch (error) {
+    show("performanceResolved","—"); show("performanceForecastCount","—");
+    show("performanceAccuracy","—"); show("performanceBrier","—");
+    const marketsNode = document.getElementById("performanceMarkets");
+    if (marketsNode) marketsNode.innerHTML = '<p class="muted">Raport jest chwilowo niedostępny. Zostanie utworzony przez zadania GitHub Actions po archiwizacji prognoz i pobraniu wyników.</p>';
+    status.textContent = "Brak raportu historycznej skuteczności — nie pokazujemy sztucznych statystyk.";
+  }
+}
+
 calculate();
 loadPublishedData();
-loadHistoricalResults();
 
 
 const loginModal = document.getElementById("loginModal");
