@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-28T20:51:19.280481+01:00",
+  "generatedAt": "2026-10-28T21:46:40.874758+01:00",
   "source": "Sportmonks Football API v3",
   "count": 16,
   "fixtures": [
@@ -14,7 +14,7 @@
       "time": "20:45",
       "league": "Premiership",
       "leagueId": 501,
-      "status": "1st Half",
+      "status": "2nd Half",
       "scores": [
         {
           "description": "1ST_HALF",
@@ -45,17 +45,47 @@
           "description": "CURRENT",
           "participant": "home",
           "goals": 0
+        },
+        {
+          "description": "2ND_HALF_ONLY",
+          "participant": "away",
+          "goals": 0
+        },
+        {
+          "description": "2ND_HALF_ONLY",
+          "participant": "home",
+          "goals": 0
         }
       ],
       "statistics": [
         {
+          "type": "Corners",
+          "value": 1,
+          "participantId": 66
+        },
+        {
+          "type": "Corners",
+          "value": 2,
+          "participantId": 496
+        },
+        {
           "type": "Ball Possession %",
-          "value": 54,
+          "value": 56,
           "participantId": 66
         },
         {
           "type": "Ball Possession %",
-          "value": 46,
+          "value": 44,
+          "participantId": 496
+        },
+        {
+          "type": "Yellowcards",
+          "value": 1,
+          "participantId": 66
+        },
+        {
+          "type": "Yellowcards",
+          "value": 1,
           "participantId": 496
         }
       ],
@@ -72,43 +102,43 @@
       "time": "20:45",
       "league": "Premiership",
       "leagueId": 501,
-      "status": "1st Half",
+      "status": "Half Time",
       "scores": [
         {
           "description": "1ST_HALF",
           "participant": "away",
-          "goals": 0
+          "goals": 1
         },
         {
           "description": "1ST_HALF",
           "participant": "home",
-          "goals": 0
+          "goals": 1
         },
         {
           "description": "2ND_HALF",
           "participant": "away",
-          "goals": 0
+          "goals": 1
         },
         {
           "description": "2ND_HALF",
           "participant": "home",
-          "goals": 0
+          "goals": 1
         },
         {
           "description": "CURRENT",
           "participant": "away",
-          "goals": 0
+          "goals": 1
         },
         {
           "description": "CURRENT",
           "participant": "home",
-          "goals": 0
+          "goals": 1
         }
       ],
       "statistics": [
         {
           "type": "Corners",
-          "value": 1,
+          "value": 4,
           "participantId": 309
         },
         {
@@ -118,12 +148,12 @@
         },
         {
           "type": "Ball Possession %",
-          "value": 26,
+          "value": 43,
           "participantId": 309
         },
         {
           "type": "Ball Possession %",
-          "value": 74,
+          "value": 57,
           "participantId": 734
         }
       ],
@@ -140,7 +170,7 @@
       "time": "20:45",
       "league": "Premiership",
       "leagueId": 501,
-      "status": "1st Half",
+      "status": "Half Time",
       "scores": [
         {
           "description": "1ST_HALF",
@@ -150,7 +180,7 @@
         {
           "description": "1ST_HALF",
           "participant": "home",
-          "goals": 0
+          "goals": 1
         },
         {
           "description": "2ND_HALF",
@@ -160,7 +190,7 @@
         {
           "description": "2ND_HALF",
           "participant": "home",
-          "goals": 0
+          "goals": 1
         },
         {
           "description": "CURRENT",
@@ -170,28 +200,28 @@
         {
           "description": "CURRENT",
           "participant": "home",
-          "goals": 0
+          "goals": 1
         }
       ],
       "statistics": [
         {
           "type": "Corners",
-          "value": 0,
+          "value": 3,
           "participantId": 180
         },
         {
           "type": "Corners",
-          "value": 1,
+          "value": 4,
           "participantId": 284
         },
         {
           "type": "Ball Possession %",
-          "value": 68,
+          "value": 47,
           "participantId": 180
         },
         {
           "type": "Ball Possession %",
-          "value": 32,
+          "value": 53,
           "participantId": 284
         }
       ],
@@ -208,58 +238,68 @@
       "time": "20:45",
       "league": "Premiership",
       "leagueId": 501,
-      "status": "1st Half",
+      "status": "Half Time",
       "scores": [
         {
           "description": "1ST_HALF",
           "participant": "home",
-          "goals": 0
+          "goals": 1
         },
         {
           "description": "1ST_HALF",
           "participant": "away",
-          "goals": 0
+          "goals": 2
         },
         {
           "description": "2ND_HALF",
           "participant": "home",
-          "goals": 0
+          "goals": 1
         },
         {
           "description": "2ND_HALF",
           "participant": "away",
-          "goals": 0
+          "goals": 2
         },
         {
           "description": "CURRENT",
           "participant": "home",
-          "goals": 0
+          "goals": 1
         },
         {
           "description": "CURRENT",
           "participant": "away",
-          "goals": 0
+          "goals": 2
         }
       ],
       "statistics": [
         {
           "type": "Corners",
-          "value": 0,
+          "value": 5,
           "participantId": 282
         },
         {
           "type": "Corners",
-          "value": 1,
+          "value": 3,
           "participantId": 53
         },
         {
           "type": "Ball Possession %",
-          "value": 41,
+          "value": 35,
           "participantId": 282
         },
         {
           "type": "Ball Possession %",
-          "value": 59,
+          "value": 65,
+          "participantId": 53
+        },
+        {
+          "type": "Yellowcards",
+          "value": 0,
+          "participantId": 282
+        },
+        {
+          "type": "Yellowcards",
+          "value": 2,
           "participantId": 53
         }
       ],
@@ -276,7 +316,7 @@
       "time": "20:45",
       "league": "Premiership",
       "leagueId": 501,
-      "status": "1st Half",
+      "status": "Half Time",
       "scores": [
         {
           "description": "1ST_HALF",
@@ -311,13 +351,33 @@
       ],
       "statistics": [
         {
+          "type": "Corners",
+          "value": 3,
+          "participantId": 770
+        },
+        {
+          "type": "Corners",
+          "value": 5,
+          "participantId": 273
+        },
+        {
           "type": "Ball Possession %",
-          "value": 44,
+          "value": 52,
           "participantId": 770
         },
         {
           "type": "Ball Possession %",
-          "value": 56,
+          "value": 48,
+          "participantId": 273
+        },
+        {
+          "type": "Yellowcards",
+          "value": 0,
+          "participantId": 770
+        },
+        {
+          "type": "Yellowcards",
+          "value": 1,
           "participantId": 273
         }
       ],
@@ -334,12 +394,12 @@
       "time": "21:00",
       "league": "Premiership",
       "leagueId": 501,
-      "status": "Not Started",
+      "status": "1st Half",
       "scores": [
         {
           "description": "1ST_HALF",
           "participant": "away",
-          "goals": 0
+          "goals": 1
         },
         {
           "description": "1ST_HALF",
@@ -349,7 +409,7 @@
         {
           "description": "2ND_HALF",
           "participant": "away",
-          "goals": 0
+          "goals": 1
         },
         {
           "description": "2ND_HALF",
@@ -359,7 +419,7 @@
         {
           "description": "CURRENT",
           "participant": "away",
-          "goals": 0
+          "goals": 1
         },
         {
           "description": "CURRENT",
@@ -367,7 +427,38 @@
           "goals": 0
         }
       ],
-      "statistics": [],
+      "statistics": [
+        {
+          "type": "Corners",
+          "value": 1,
+          "participantId": 62
+        },
+        {
+          "type": "Corners",
+          "value": 1,
+          "participantId": 314
+        },
+        {
+          "type": "Ball Possession %",
+          "value": 46,
+          "participantId": 62
+        },
+        {
+          "type": "Ball Possession %",
+          "value": 54,
+          "participantId": 314
+        },
+        {
+          "type": "Yellowcards",
+          "value": 2,
+          "participantId": 62
+        },
+        {
+          "type": "Yellowcards",
+          "value": 0,
+          "participantId": 314
+        }
+      ],
       "source": "Sportmonks"
     },
     {
