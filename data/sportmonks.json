@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-28T19:51:58.768809+01:00",
+  "generatedAt": "2026-10-28T20:51:19.280481+01:00",
   "source": "Sportmonks Football API v3",
   "count": 16,
   "fixtures": [
@@ -14,7 +14,7 @@
       "time": "20:45",
       "league": "Premiership",
       "leagueId": 501,
-      "status": "Not Started",
+      "status": "1st Half",
       "scores": [
         {
           "description": "1ST_HALF",
@@ -47,7 +47,18 @@
           "goals": 0
         }
       ],
-      "statistics": [],
+      "statistics": [
+        {
+          "type": "Ball Possession %",
+          "value": 54,
+          "participantId": 66
+        },
+        {
+          "type": "Ball Possession %",
+          "value": 46,
+          "participantId": 496
+        }
+      ],
       "source": "Sportmonks"
     },
     {
@@ -61,7 +72,7 @@
       "time": "20:45",
       "league": "Premiership",
       "leagueId": 501,
-      "status": "Not Started",
+      "status": "1st Half",
       "scores": [
         {
           "description": "1ST_HALF",
@@ -94,7 +105,28 @@
           "goals": 0
         }
       ],
-      "statistics": [],
+      "statistics": [
+        {
+          "type": "Corners",
+          "value": 1,
+          "participantId": 309
+        },
+        {
+          "type": "Corners",
+          "value": 0,
+          "participantId": 734
+        },
+        {
+          "type": "Ball Possession %",
+          "value": 26,
+          "participantId": 309
+        },
+        {
+          "type": "Ball Possession %",
+          "value": 74,
+          "participantId": 734
+        }
+      ],
       "source": "Sportmonks"
     },
     {
@@ -108,7 +140,7 @@
       "time": "20:45",
       "league": "Premiership",
       "leagueId": 501,
-      "status": "Not Started",
+      "status": "1st Half",
       "scores": [
         {
           "description": "1ST_HALF",
@@ -141,7 +173,28 @@
           "goals": 0
         }
       ],
-      "statistics": [],
+      "statistics": [
+        {
+          "type": "Corners",
+          "value": 0,
+          "participantId": 180
+        },
+        {
+          "type": "Corners",
+          "value": 1,
+          "participantId": 284
+        },
+        {
+          "type": "Ball Possession %",
+          "value": 68,
+          "participantId": 180
+        },
+        {
+          "type": "Ball Possession %",
+          "value": 32,
+          "participantId": 284
+        }
+      ],
       "source": "Sportmonks"
     },
     {
@@ -155,7 +208,7 @@
       "time": "20:45",
       "league": "Premiership",
       "leagueId": 501,
-      "status": "Not Started",
+      "status": "1st Half",
       "scores": [
         {
           "description": "1ST_HALF",
@@ -188,7 +241,28 @@
           "goals": 0
         }
       ],
-      "statistics": [],
+      "statistics": [
+        {
+          "type": "Corners",
+          "value": 0,
+          "participantId": 282
+        },
+        {
+          "type": "Corners",
+          "value": 1,
+          "participantId": 53
+        },
+        {
+          "type": "Ball Possession %",
+          "value": 41,
+          "participantId": 282
+        },
+        {
+          "type": "Ball Possession %",
+          "value": 59,
+          "participantId": 53
+        }
+      ],
       "source": "Sportmonks"
     },
     {
@@ -202,7 +276,7 @@
       "time": "20:45",
       "league": "Premiership",
       "leagueId": 501,
-      "status": "Not Started",
+      "status": "1st Half",
       "scores": [
         {
           "description": "1ST_HALF",
@@ -235,7 +309,18 @@
           "goals": 0
         }
       ],
-      "statistics": [],
+      "statistics": [
+        {
+          "type": "Ball Possession %",
+          "value": 44,
+          "participantId": 770
+        },
+        {
+          "type": "Ball Possession %",
+          "value": 56,
+          "participantId": 273
+        }
+      ],
       "source": "Sportmonks"
     },
     {
