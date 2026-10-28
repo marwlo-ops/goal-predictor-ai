@@ -2162,6 +2162,48 @@ function bar(label, value) {
     </div>`;
 }
 
+function dixonColesBrowser(homeRate, awayRate) {
+  const maxGoals = 12, rho = -0.08;
+  const pmf = rate => {
+    const values = [Math.exp(-rate)];
+    for (let goals = 1; goals <= maxGoals; goals++) values.push(values[goals - 1] * rate / goals);
+    const sum = values.reduce((a, b) => a + b, 0);
+    return values.map(value => value / sum);
+  };
+  const hp = pmf(homeRate), ap = pmf(awayRate), rows = [];
+  const markets = {home:0,draw:0,away:0,over15:0,over25:0,over35:0,btts:0,homeOver05:0,awayOver05:0,homeOver15:0,awayOver15:0};
+  let mass = 0;
+  for (let h = 0; h <= maxGoals; h++) {
+    rows[h] = [];
+    for (let a = 0; a <= maxGoals; a++) {
+      let tau = 1;
+      if (h === 0 && a === 0) tau = 1 - homeRate * awayRate * rho;
+      else if (h === 0 && a === 1) tau = 1 + homeRate * rho;
+      else if (h === 1 && a === 0) tau = 1 + awayRate * rho;
+      else if (h === 1 && a === 1) tau = 1 - rho;
+      const probability = Math.max(0, hp[h] * ap[a] * tau);
+      rows[h][a] = probability;
+      mass += probability;
+    }
+  }
+  const scores = [];
+  for (let h = 0; h <= maxGoals; h++) for (let a = 0; a <= maxGoals; a++) {
+    const p = rows[h][a] / mass, total = h + a;
+    if (h > a) markets.home += p; else if (h === a) markets.draw += p; else markets.away += p;
+    if (total >= 2) markets.over15 += p;
+    if (total >= 3) markets.over25 += p;
+    if (total >= 4) markets.over35 += p;
+    if (h > 0 && a > 0) markets.btts += p;
+    if (h >= 1) markets.homeOver05 += p;
+    if (a >= 1) markets.awayOver05 += p;
+    if (h >= 2) markets.homeOver15 += p;
+    if (a >= 2) markets.awayOver15 += p;
+    scores.push({score:h+":"+a, probability:p});
+  }
+  scores.sort((a,b)=>b.probability-a.probability);
+  return {...markets,topScorelines:scores.slice(0,5),rho};
+}
+
 function calculate() {
   const homeName = document.getElementById("homeName").value || "Gospodarze";
   const awayName = document.getElementById("awayName").value || "Goście";
@@ -2181,7 +2223,7 @@ function calculate() {
     return;
   }
 
-  const probabilities = model(homeXg, awayXg);
+  const probabilities = dixonColesBrowser(homeXg, awayXg);
   const outcomes = [
     { label: "Wygrana gospodarzy", value: probabilities.home },
     { label: "Remis", value: probabilities.draw },
@@ -2210,7 +2252,7 @@ function calculate() {
       ${bar("Powyżej 2,5 gola", probabilities.over25)}
       ${bar("BTTS · tak", probabilities.btts)}
     </div>
-    <p class="muted">Szacunki matematyczne na podstawie oczekiwanych goli. Nie są gwarancją wyniku.</p>`;
+    <p class="muted">Dixon–Coles z domyślnym rho = ${probabilities.rho}. Parametr nie jest dopasowany do konkretnej ligi. Nie traktuj wyniku jako gwarancji.</p>`;
 }
 
 document.getElementById("predictForm").addEventListener("submit", event => {
