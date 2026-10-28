@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-10-28T19:36:56.812971+01:00",
+  "updatedAt": "2026-10-28T20:28:39.936736+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 3,
+  "count": 2,
   "matches": [
     {
       "id": 558549,
@@ -14,10 +14,10 @@
       "minute": null,
       "score": {
         "home": 2,
-        "away": 1
+        "away": 4
       },
       "utcDate": "2026-10-28T17:30:00Z",
-      "updatedAt": "2026-10-28T18:22:43Z"
+      "updatedAt": "2026-10-28T19:26:43Z"
     },
     {
       "id": 558550,
@@ -29,25 +29,10 @@
       "minute": null,
       "score": {
         "home": 0,
-        "away": 0
+        "away": 2
       },
       "utcDate": "2026-10-28T17:30:00Z",
-      "updatedAt": "2026-10-28T18:22:43Z"
-    },
-    {
-      "id": 558553,
-      "league": "SA",
-      "leagueName": "Serie A",
-      "home": "Parma Calcio 1913",
-      "away": "Udinese Calcio",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 0,
-        "away": 0
-      },
-      "utcDate": "2026-10-28T17:30:00Z",
-      "updatedAt": "2026-10-28T18:22:43Z"
+      "updatedAt": "2026-10-28T19:26:43Z"
     }
   ]
 }
