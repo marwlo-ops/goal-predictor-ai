@@ -1,38 +1,7 @@
 {
-  "updatedAt": "2026-10-28T22:39:28.581327+01:00",
+  "updatedAt": "2026-10-28T23:18:45.644706+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 2,
-  "matches": [
-    {
-      "id": 558554,
-      "league": "SA",
-      "leagueName": "Serie A",
-      "home": "AC Monza",
-      "away": "SSC Napoli",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 1,
-        "away": 4
-      },
-      "utcDate": "2026-10-28T19:45:00Z",
-      "updatedAt": "2026-10-28T21:38:27Z"
-    },
-    {
-      "id": 558552,
-      "league": "SA",
-      "leagueName": "Serie A",
-      "home": "Genoa CFC",
-      "away": "Juventus FC",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 2,
-        "away": 0
-      },
-      "utcDate": "2026-10-28T19:45:00Z",
-      "updatedAt": "2026-10-28T21:38:27Z"
-    }
-  ]
+  "count": 0,
+  "matches": []
 }
