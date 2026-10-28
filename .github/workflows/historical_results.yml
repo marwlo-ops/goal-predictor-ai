@@ -8,6 +8,7 @@ on:
       - "scripts/update_results.py"
       - "scripts/evaluate_predictions.py"
       - "scripts/archive_predictions.py"
+      - "data/prediction-history.json"
       - ".github/workflows/historical_results.yml"
   schedule:
     - cron: "25 5 * * *"
