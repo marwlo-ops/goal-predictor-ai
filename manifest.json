@@ -7,5 +7,13 @@
   "display": "standalone",
   "background_color": "#060914",
   "theme_color": "#070b18",
-  "lang": "pl"
+  "lang": "pl",
+  "icons": [
+    {
+      "src": "./icons/goal-predictor-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
 }
