@@ -22,7 +22,10 @@ jobs:
           python-version: "3.12"
 
       - name: Sprawdź składnię Pythona
-        run: python -m py_compile scripts/update_predictions.py scripts/update_api_football.py scripts/update_live.py scripts/update_results.py scripts/update_sportmonks.py scripts/sync_data_sources.py
+        run: python -m py_compile scripts/update_predictions.py scripts/update_api_football.py scripts/update_live.py scripts/update_results.py scripts/update_sportmonks.py scripts/sync_data_sources.py scripts/model_analytics.py scripts/archive_predictions.py scripts/evaluate_predictions.py
+
+      - name: Testy jednostkowe modeli i archiwum
+        run: python -m unittest discover -s tests -v
 
       - name: Testy integracji źródeł danych (bez wywołań API)
         run: |
