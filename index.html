@@ -1064,6 +1064,10 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,su
 </style>
 
 
+
+<style>
+.performance-markets{display:grid;gap:8px}.performance-market{display:grid;grid-template-columns:minmax(80px,1fr) auto auto;gap:10px;align-items:center;padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:#0b1421;font-size:12px}.performance-market strong{font-size:13px;color:var(--green)}.performance-market small{font-size:10px;color:var(--muted)}.calibration-row{display:grid;grid-template-columns:55px minmax(0,1fr) 90px;gap:8px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line);font-size:11px}.calibration-bar{height:7px;background:#28364b;border-radius:99px;overflow:hidden}.calibration-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--blue),var(--green));border-radius:99px}.favorite-match{margin:10px 0;padding:15px;border:1px solid var(--line);border-radius:17px;background:linear-gradient(145deg,#142136,#0c1421)}.favorite-match-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.favorite-match-teams{font-size:14px;font-weight:850;line-height:1.45}.favorite-match-meta{font-size:10px;color:var(--muted);margin-top:5px}.favorite-match-probs{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}.favorite-match-probs span{font-size:10px;padding:6px 8px;border-radius:8px;background:#07121c;border:1px solid var(--line)}.favorite-match-probs b{color:var(--green)}@media(max-width:390px){.performance-market{grid-template-columns:1fr auto;gap:4px}.performance-market small{grid-column:1/-1}.calibration-row{grid-template-columns:47px minmax(0,1fr) 78px}}
+</style>
 </head>
 <body>
 <header>
@@ -1153,7 +1157,7 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,su
 <section class="page" id="page-analyze">
   <div class="section-head">
     <h3>Analizator meczu</h3>
-    <span class="tag">MODEL POISSONA</span>
+    <span class="tag">DIXON–COLES + MONTE CARLO</span>
   </div>
 
   <div class="card">
@@ -1226,17 +1230,33 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,su
 </section>
 
 <section class="page" id="page-stats">
-  <div class="section-head"><h3>Centrum statystyk</h3><span class="tag">BETA</span></div>
+  <div class="section-head"><h3>Centrum statystyk</h3><span class="tag">ANALITYKA MODELU</span></div>
   <div class="grid2">
-    <div class="metric"><div class="label">Mecze w danych</div><div class="value" id="statMatches">—</div><div class="hint">Załadowane prognozy</div></div>
+    <div class="metric"><div class="label">Mecze w danych</div><div class="value" id="statMatches">—</div><div class="hint">Prognozy z dostępnym modelem</div></div>
     <div class="metric"><div class="label">Ligi</div><div class="value" id="statLeagues">—</div><div class="hint">Unikalne rozgrywki</div></div>
   </div>
-  <div class="card"><h4>Jak czytać dane?</h4><p class="muted">Sprawdzaj datę aktualizacji, jakość danych oraz historię obu drużyn. Wysokie prawdopodobieństwo nie oznacza pewnego wyniku.</p></div>
+  <div class="card" style="margin-top:12px">
+    <div class="section-head" style="margin-top:0"><h3>Historyczna skuteczność</h3><span class="tag">BACKTEST</span></div>
+    <p id="modelPerformanceStatus" class="muted" aria-live="polite">Wczytywanie raportu skuteczności…</p>
+    <div class="grid2">
+      <div class="metric"><div class="label">Rozstrzygnięte prognozy</div><div class="value" id="performanceResolved">—</div><div class="hint">Prognoza zapisana przed meczem</div></div>
+      <div class="metric"><div class="label">Trafność wyboru 1X2</div><div class="value" id="performanceAccuracy">—</div><div class="hint">Wybór najbardziej prawdopodobnego wyniku</div></div>
+      <div class="metric"><div class="label">Brier Score 1X2</div><div class="value" id="performanceBrier">—</div><div class="hint">Niżej oznacza lepiej; zakres 0–1</div></div>
+      <div class="metric"><div class="label">Zarchiwizowane prognozy</div><div class="value" id="performanceForecastCount">—</div><div class="hint">Pierwsza prognoza nie jest nadpisywana</div></div>
+    </div>
+    <h4 style="margin:18px 0 8px">Wyniki według rynku</h4>
+    <div id="performanceMarkets" class="performance-markets"><p class="muted">Raport będzie dostępny, gdy historia prognoz zostanie porównana z wynikami końcowymi.</p></div>
+    <h4 style="margin:18px 0 8px">Kalibracja prawdopodobieństw 1X2</h4>
+    <div id="modelCalibration"><p class="muted">Brak wystarczającej historii do kalibracji.</p></div>
+    <p class="muted" style="font-size:11px">Skuteczność i kalibracja są miarodajne dopiero przy odpowiednio dużej próbie. Symulacja Monte Carlo korzysta z rozkładu tego samego modelu i nie stanowi niezależnego potwierdzenia.</p>
+  </div>
+  <div class="card" style="margin-top:12px"><h4>Jak działa model?</h4><p class="muted">Rozkład Dixon–Coles koryguje prawdopodobieństwa niskich wyników, a Monte Carlo symuluje scenariusze z tego rozkładu. Parametr rho jest jawnie oznaczony jako domyślny — nie jest jeszcze dopasowany do konkretnej ligi. Jakość prognozy nadal zależy od danych wejściowych i nie jest gwarancją wyniku.</p></div>
 </section>
 
 <section class="page" id="page-favorites">
-  <div class="section-head"><h3>Obserwowane mecze</h3><span class="tag">TWOJA LISTA</span></div>
-  <div class="card"><p class="muted">Dodawanie meczów do obserwowanych będzie dostępne w kolejnej iteracji. Na razie możesz filtrować mecze według ligi na stronie głównej.</p></div>
+  <div class="section-head"><h3>Obserwowane mecze</h3><span class="tag" id="favoriteCountTag">0 ZAPISANYCH</span></div>
+  <p class="muted">Lista jest przechowywana lokalnie na tym urządzeniu. Wybierz gwiazdkę na karcie meczu, aby go dodać.</p>
+  <div id="favoriteMatches"></div>
 </section>
 
 <section class="page" id="page-history">
