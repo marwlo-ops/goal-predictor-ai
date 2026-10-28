@@ -1575,6 +1575,7 @@ function persistTracked() {
 function persistFavorites() {
   safeStorageSet("gpa_favorites", JSON.stringify([...favoriteIds]));
   document.getElementById("quickFavCount").textContent = favoriteIds.size;
+  renderFavoriteMatches();
 }
 function modelBackedMatches() {
   return matches.filter(match =>
@@ -1832,6 +1833,37 @@ function buildPredictionNarrative(match, p) {
       '<span class="prediction-tag">BTTS: <strong>' + escapeHtml(percent(p.btts)) + '</strong></span>' +
     '</div>' +
   '</div>';
+}
+
+function renderFavoriteMatches() {
+  const root = document.getElementById("favoriteMatches");
+  if (!root) return;
+  const items = modelBackedMatches().filter(match => favoriteIds.has(matchId(match)));
+  const count = document.getElementById("favoriteCountTag");
+  if (count) count.textContent = items.length + (items.length === 1 ? " ZAPISANY" : " ZAPISANYCH");
+  if (!items.length) {
+    root.innerHTML = '<div class="empty">Nie masz jeszcze zapisanych meczów. Wróć do strony głównej i naciśnij ☆ na karcie wybranego meczu.</div>';
+    return;
+  }
+  root.innerHTML = items.map(match => {
+    const p = match.probabilities || {};
+    const id = matchId(match);
+    const date = [match.date, match.time].filter(Boolean).join(" · ");
+    const entries = [["1",p.homeWin],["X",p.draw],["2",p.awayWin],["O1,5",p.over15],["O2,5",p.over25],["BTTS",p.btts]];
+    const tags = entries.filter(item => Number.isFinite(Number(item[1]))).map(item =>
+      '<span>' + escapeHtml(item[0]) + ' <b>' + Number(item[1]).toFixed(1) + '%</b></span>'
+    ).join("");
+    return '<div class="favorite-match"><div class="favorite-match-head"><div><div class="favorite-match-teams">' +
+      escapeHtml(match.home) + ' — ' + escapeHtml(match.away) + '</div><div class="favorite-match-meta">' +
+      escapeHtml(match.leagueName || match.league || "Piłka nożna") + ' · ' + escapeHtml(date || "Termin nieznany") +
+      '</div></div><button class="favbtn saved" type="button" data-unfavorite="' + escapeHtml(id) + '" aria-label="Usuń z obserwowanych">★</button></div>' +
+      '<div class="favorite-match-probs">' + tags + '</div></div>';
+  }).join("");
+  root.querySelectorAll("[data-unfavorite]").forEach(button => button.addEventListener("click", () => {
+    favoriteIds.delete(button.dataset.unfavorite);
+    persistFavorites();
+    renderMatches();
+  }));
 }
 
 function renderMatches() {
@@ -2145,6 +2177,8 @@ function showPage(name) {
     button.classList.toggle("active", button.dataset.page === name);
   });
 
+  if (name === "favorites") renderFavoriteMatches();
+  if (name === "stats") loadModelPerformance();
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
@@ -2448,6 +2482,7 @@ async function loadPublishedData() {
     }
 
     renderMatches();
+    renderFavoriteMatches();
 
     if (!matches.length) {
       status.textContent += " · Brak meczów";
@@ -2458,6 +2493,7 @@ async function loadPublishedData() {
     status.textContent = "Błąd wczytywania danych";
     notice.textContent = "Nie udało się pobrać data/latest.json. Sprawdź, czy plik istnieje i został opublikowany.";
     renderMatches();
+    renderFavoriteMatches();
     console.error("Goal Predictor data error:", error);
   }
 }
