@@ -21,7 +21,8 @@ permissions:
 
 concurrency:
   group: goal-predictor-publish
-  cancel-in-progress: false
+  # Newer model/data commits supersede slow pending refreshes.
+  cancel-in-progress: true
 
 jobs:
   publish:

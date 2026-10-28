@@ -13,6 +13,8 @@ from zoneinfo import ZoneInfo
 from model_analytics import analyze_match
 
 BASE_URL = "https://api.football-data.org/v4"
+MODEL_VERSION = "dixon-coles-mc-v1"
+MODEL_ENGINE = "Dixon-Coles + Monte Carlo"
 TOKEN = os.environ.get("FOOTBALL_DATA_TOKEN", "").strip()
 WARSAW = ZoneInfo("Europe/Warsaw")
 OUTPUT = Path("data/latest.json")
@@ -497,8 +499,8 @@ def main():
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     result = {
         "generatedAt": now.isoformat(),
-        "modelVersion": "dixon-coles-mc-v1",
-        "modelEngine": "Dixon-Coles + Monte Carlo",
+        "modelVersion": MODEL_VERSION,
+        "modelEngine": MODEL_ENGINE,
         "dateFrom": start,
         "dateTo": end,
         "timezone": "Europe/Warsaw",
