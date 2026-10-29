@@ -1,23 +1,7 @@
 {
-  "updatedAt": "2026-10-29T22:25:08.707024+01:00",
+  "updatedAt": "2026-10-29T23:09:35.051728+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 1,
-  "matches": [
-    {
-      "id": 558551,
-      "league": "SA",
-      "leagueName": "Serie A",
-      "home": "ACF Fiorentina",
-      "away": "Atalanta BC",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 2,
-        "away": 1
-      },
-      "utcDate": "2026-10-29T19:45:00Z",
-      "updatedAt": "2026-10-29T21:23:31Z"
-    }
-  ]
+  "count": 0,
+  "matches": []
 }
