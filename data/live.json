@@ -1,7 +1,23 @@
 {
-  "updatedAt": "2026-10-29T18:20:20.204251+01:00",
+  "updatedAt": "2026-10-29T19:12:16.383623+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 0,
-  "matches": []
+  "count": 1,
+  "matches": [
+    {
+      "id": 558558,
+      "league": "SA",
+      "leagueName": "Serie A",
+      "home": "Frosinone Calcio",
+      "away": "US Lecce",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "utcDate": "2026-10-29T17:30:00Z",
+      "updatedAt": "2026-10-29T18:12:03Z"
+    }
+  ]
 }
