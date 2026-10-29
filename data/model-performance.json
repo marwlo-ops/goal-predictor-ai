@@ -1,1 +1,97 @@
-{"generatedAt":"2026-10-28T17:51:51.317146+00:00","source":"Pierwsze zapisane prognozy przedmeczowe porównane z wynikami końcowymi","forecastCount":115,"resolvedCount":0,"oneXTwoAccuracy":null,"oneXTwoBrierScore":null,"markets":{},"calibration":[],"note":"Próba może być mała lub niepełna. Wyniki historyczne nie gwarantują przyszłej skuteczności; prawdopodobieństwa nie są zweryfikowane do momentu zebrania dostatecznej próby."}
+{
+  "generatedAt": "2026-10-29T06:06:50.056829+00:00",
+  "source": "Pierwsze zapisane prognozy przedmeczowe porównane z wynikami końcowymi",
+  "forecastCount": 115,
+  "resolvedCount": 8,
+  "oneXTwoAccuracy": 50.0,
+  "oneXTwoBrierScore": 0.2122,
+  "markets": {
+    "awayOver05": {
+      "count": 8,
+      "hitRate": 50.0,
+      "brierScore": 0.321,
+      "logLoss": 0.8519
+    },
+    "awayOver15": {
+      "count": 8,
+      "hitRate": 87.5,
+      "brierScore": 0.208,
+      "logLoss": 0.6131
+    },
+    "btts": {
+      "count": 8,
+      "hitRate": 37.5,
+      "brierScore": 0.2603,
+      "logLoss": 0.7129
+    },
+    "homeOver05": {
+      "count": 8,
+      "hitRate": 62.5,
+      "brierScore": 0.2232,
+      "logLoss": 0.6301
+    },
+    "homeOver15": {
+      "count": 8,
+      "hitRate": 50.0,
+      "brierScore": 0.2558,
+      "logLoss": 0.7131
+    },
+    "over15": {
+      "count": 8,
+      "hitRate": 75.0,
+      "brierScore": 0.1926,
+      "logLoss": 0.5705
+    },
+    "over25": {
+      "count": 8,
+      "hitRate": 37.5,
+      "brierScore": 0.2627,
+      "logLoss": 0.7197
+    },
+    "over35": {
+      "count": 8,
+      "hitRate": 75.0,
+      "brierScore": 0.1824,
+      "logLoss": 0.5514
+    }
+  },
+  "calibration": [
+    {
+      "range": "10-20%",
+      "count": 2,
+      "predicted": 15.28,
+      "observed": 0.0
+    },
+    {
+      "range": "20-30%",
+      "count": 11,
+      "predicted": 25.27,
+      "observed": 36.36
+    },
+    {
+      "range": "30-40%",
+      "count": 4,
+      "predicted": 33.86,
+      "observed": 0.0
+    },
+    {
+      "range": "40-50%",
+      "count": 4,
+      "predicted": 45.77,
+      "observed": 75.0
+    },
+    {
+      "range": "50-60%",
+      "count": 2,
+      "predicted": 51.73,
+      "observed": 0.0
+    },
+    {
+      "range": "60-70%",
+      "count": 1,
+      "predicted": 69.44,
+      "observed": 100.0
+    }
+  ],
+  "note": "Próba może być mała lub niepełna. Wyniki historyczne nie gwarantują przyszłej skuteczności; prawdopodobieństwa nie są zweryfikowane do momentu zebrania dostatecznej próby."
+}
