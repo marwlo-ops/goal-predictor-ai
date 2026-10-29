@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-10-29T23:50:58.769161+01:00",
+  "updatedAt": "2026-10-30T00:28:28.230788+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 1,
+  "count": 2,
   "matches": [
     {
       "id": 555060,
@@ -17,7 +17,22 @@
         "away": 1
       },
       "utcDate": "2026-10-29T22:30:00Z",
-      "updatedAt": "2026-10-29T22:49:23Z"
+      "updatedAt": "2026-10-29T23:26:43Z"
+    },
+    {
+      "id": 555069,
+      "league": "BSA",
+      "leagueName": "Campeonato Brasileiro Série A",
+      "home": "CR Vasco da Gama",
+      "away": "CR Flamengo",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "utcDate": "2026-10-29T23:00:00Z",
+      "updatedAt": "2026-10-29T23:27:15Z"
     }
   ]
 }
