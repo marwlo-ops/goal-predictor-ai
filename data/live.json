@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-29T02:21:26.507227+01:00",
+  "updatedAt": "2026-10-29T03:17:51.018167+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
   "count": 2,
@@ -14,10 +14,10 @@
       "minute": null,
       "score": {
         "home": 2,
-        "away": 0
+        "away": 2
       },
       "utcDate": "2026-10-29T00:30:00Z",
-      "updatedAt": "2026-10-29T01:11:15Z"
+      "updatedAt": "2026-10-29T02:16:19Z"
     },
     {
       "id": 555067,
@@ -28,11 +28,11 @@
       "status": "IN_PLAY",
       "minute": null,
       "score": {
-        "home": 1,
+        "home": 2,
         "away": 0
       },
       "utcDate": "2026-10-29T00:30:00Z",
-      "updatedAt": "2026-10-29T02:06:47Z"
+      "updatedAt": "2026-10-29T02:15:47Z"
     }
   ]
 }
