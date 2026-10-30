@@ -1,23 +1,7 @@
 {
-  "updatedAt": "2026-10-30T02:55:46.883471+01:00",
+  "updatedAt": "2026-10-30T03:41:45.314745+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 1,
-  "matches": [
-    {
-      "id": 555066,
-      "league": "BSA",
-      "leagueName": "Campeonato Brasileiro Série A",
-      "home": "Grêmio FBPA",
-      "away": "CA Paranaense",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 2,
-        "away": 0
-      },
-      "utcDate": "2026-10-30T00:30:00Z",
-      "updatedAt": "2026-10-30T01:54:27Z"
-    }
-  ]
+  "count": 0,
+  "matches": []
 }
