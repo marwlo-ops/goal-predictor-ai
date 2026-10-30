@@ -1,10 +1,76 @@
 {
-  "updatedAt": "2026-10-29T07:06:49.965529+01:00",
-  "dateFrom": "2026-10-22",
-  "dateTo": "2026-10-29",
+  "updatedAt": "2026-10-30T07:07:02.584191+01:00",
+  "dateFrom": "2026-10-23",
+  "dateTo": "2026-10-30",
   "source": "football-data.org",
-  "count": 111,
+  "count": 117,
   "matches": [
+    {
+      "id": 555069,
+      "date": "2026-10-29T23:00:00Z",
+      "league": "BSA",
+      "leagueName": "Campeonato Brasileiro Série A",
+      "home": "CR Vasco da Gama",
+      "away": "CR Flamengo",
+      "homeGoals": 1,
+      "awayGoals": 4,
+      "status": "FINISHED"
+    },
+    {
+      "id": 555060,
+      "date": "2026-10-29T22:30:00Z",
+      "league": "BSA",
+      "leagueName": "Campeonato Brasileiro Série A",
+      "home": "CA Mineiro",
+      "away": "Cruzeiro EC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "status": "FINISHED"
+    },
+    {
+      "id": 558551,
+      "date": "2026-10-29T19:45:00Z",
+      "league": "SA",
+      "leagueName": "Serie A",
+      "home": "ACF Fiorentina",
+      "away": "Atalanta BC",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "status": "FINISHED"
+    },
+    {
+      "id": 558558,
+      "date": "2026-10-29T17:30:00Z",
+      "league": "SA",
+      "leagueName": "Serie A",
+      "home": "Frosinone Calcio",
+      "away": "US Lecce",
+      "homeGoals": 5,
+      "awayGoals": 1,
+      "status": "FINISHED"
+    },
+    {
+      "id": 555067,
+      "date": "2026-10-29T00:30:00Z",
+      "league": "BSA",
+      "leagueName": "Campeonato Brasileiro Série A",
+      "home": "Clube do Remo",
+      "away": "Botafogo FR",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "status": "FINISHED"
+    },
+    {
+      "id": 555061,
+      "date": "2026-10-29T00:30:00Z",
+      "league": "BSA",
+      "leagueName": "Campeonato Brasileiro Série A",
+      "home": "EC Bahia",
+      "away": "São Paulo FC",
+      "homeGoals": 3,
+      "awayGoals": 2,
+      "status": "FINISHED"
+    },
     {
       "id": 555065,
       "date": "2026-10-28T22:30:00Z",
