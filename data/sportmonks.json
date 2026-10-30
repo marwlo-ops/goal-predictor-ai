@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-30T19:17:18.057659+01:00",
+  "generatedAt": "2026-10-30T20:25:42.023140+01:00",
   "source": "Sportmonks Football API v3",
   "count": 10,
   "fixtures": [
@@ -14,35 +14,45 @@
       "time": "19:00",
       "league": "Superliga",
       "leagueId": 271,
-      "status": "1st Half",
+      "status": "2nd Half",
       "scores": [
         {
           "description": "1ST_HALF",
           "participant": "away",
-          "goals": 0
+          "goals": 1
         },
         {
           "description": "1ST_HALF",
           "participant": "home",
-          "goals": 0
+          "goals": 1
         },
         {
           "description": "2ND_HALF",
           "participant": "away",
-          "goals": 0
+          "goals": 1
         },
         {
           "description": "2ND_HALF",
           "participant": "home",
-          "goals": 0
+          "goals": 1
         },
         {
           "description": "CURRENT",
           "participant": "away",
-          "goals": 0
+          "goals": 1
         },
         {
           "description": "CURRENT",
+          "participant": "home",
+          "goals": 1
+        },
+        {
+          "description": "2ND_HALF_ONLY",
+          "participant": "away",
+          "goals": 0
+        },
+        {
+          "description": "2ND_HALF_ONLY",
           "participant": "home",
           "goals": 0
         }
@@ -50,22 +60,32 @@
       "statistics": [
         {
           "type": "Corners",
-          "value": 0,
+          "value": 1,
           "participantId": 2356
         },
         {
           "type": "Corners",
-          "value": 1,
+          "value": 2,
           "participantId": 2650
         },
         {
           "type": "Ball Possession %",
-          "value": 26,
+          "value": 43,
           "participantId": 2356
         },
         {
           "type": "Ball Possession %",
-          "value": 74,
+          "value": 57,
+          "participantId": 2650
+        },
+        {
+          "type": "Yellowcards",
+          "value": 2,
+          "participantId": 2356
+        },
+        {
+          "type": "Yellowcards",
+          "value": 0,
           "participantId": 2650
         }
       ],
