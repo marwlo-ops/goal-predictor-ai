@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-30T17:26:08.679651+01:00",
+  "generatedAt": "2026-10-30T18:22:55.699389+01:00",
   "source": "Sportmonks Football API v3",
   "count": 10,
   "fixtures": [
@@ -15,7 +15,38 @@
       "league": "Superliga",
       "leagueId": 271,
       "status": "Not Started",
-      "scores": [],
+      "scores": [
+        {
+          "description": "1ST_HALF",
+          "participant": "away",
+          "goals": 0
+        },
+        {
+          "description": "1ST_HALF",
+          "participant": "home",
+          "goals": 0
+        },
+        {
+          "description": "2ND_HALF",
+          "participant": "away",
+          "goals": 0
+        },
+        {
+          "description": "2ND_HALF",
+          "participant": "home",
+          "goals": 0
+        },
+        {
+          "description": "CURRENT",
+          "participant": "away",
+          "goals": 0
+        },
+        {
+          "description": "CURRENT",
+          "participant": "home",
+          "goals": 0
+        }
+      ],
       "statistics": [],
       "source": "Sportmonks"
     },
