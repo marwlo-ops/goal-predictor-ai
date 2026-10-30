@@ -1,96 +1,8 @@
 {
-  "generatedAt": "2026-10-30T23:14:11.625027+01:00",
+  "generatedAt": "2026-10-31T00:12:16.068903+01:00",
   "source": "Sportmonks Football API v3",
   "count": 10,
   "fixtures": [
-    {
-      "fixtureId": 19713876,
-      "home": "Lyngby Boldklub",
-      "away": "Randers FC",
-      "homeId": 2650,
-      "awayId": 2356,
-      "kickoff": "2026-10-30T19:00:00+01:00",
-      "date": "2026-10-30",
-      "time": "19:00",
-      "league": "Superliga",
-      "leagueId": 271,
-      "status": "Full Time",
-      "scores": [
-        {
-          "description": "1ST_HALF",
-          "participant": "away",
-          "goals": 1
-        },
-        {
-          "description": "1ST_HALF",
-          "participant": "home",
-          "goals": 1
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "away",
-          "goals": 1
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "home",
-          "goals": 2
-        },
-        {
-          "description": "CURRENT",
-          "participant": "away",
-          "goals": 1
-        },
-        {
-          "description": "CURRENT",
-          "participant": "home",
-          "goals": 2
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "home",
-          "goals": 1
-        }
-      ],
-      "statistics": [
-        {
-          "type": "Corners",
-          "value": 4,
-          "participantId": 2356
-        },
-        {
-          "type": "Corners",
-          "value": 3,
-          "participantId": 2650
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 49,
-          "participantId": 2356
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 51,
-          "participantId": 2650
-        },
-        {
-          "type": "Yellowcards",
-          "value": 3,
-          "participantId": 2356
-        },
-        {
-          "type": "Yellowcards",
-          "value": 1,
-          "participantId": 2650
-        }
-      ],
-      "source": "Sportmonks"
-    },
     {
       "fixtureId": 19722753,
       "home": "Motherwell",
@@ -234,21 +146,25 @@
       "scores": [],
       "statistics": [],
       "source": "Sportmonks"
+    },
+    {
+      "fixtureId": 19713858,
+      "home": "Silkeborg IF",
+      "away": "Lyngby Boldklub",
+      "homeId": 86,
+      "awayId": 2650,
+      "kickoff": "2026-11-06T19:00:00+01:00",
+      "date": "2026-11-06",
+      "time": "19:00",
+      "league": "Superliga",
+      "leagueId": 271,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
     }
   ],
   "diagnostics": [
-    {
-      "date": "2026-10-30",
-      "count": 1,
-      "parsed": 1,
-      "pages": [
-        {
-          "page": 1,
-          "count": 1
-        }
-      ],
-      "ok": true
-    },
     {
       "date": "2026-10-31",
       "count": 3,
@@ -317,6 +233,18 @@
         {
           "page": 1,
           "count": 0
+        }
+      ],
+      "ok": true
+    },
+    {
+      "date": "2026-11-06",
+      "count": 1,
+      "parsed": 1,
+      "pages": [
+        {
+          "page": 1,
+          "count": 1
         }
       ],
       "ok": true
