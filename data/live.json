@@ -1,38 +1,53 @@
 {
-  "updatedAt": "2026-10-30T20:30:25.677803+01:00",
+  "updatedAt": "2026-10-30T21:15:53.210899+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 2,
+  "count": 3,
   "matches": [
     {
-      "id": 559644,
-      "league": "FL1",
-      "leagueName": "Ligue 1",
-      "home": "Le Havre AC",
-      "away": "Paris Saint-Germain FC",
+      "id": 565846,
+      "league": "BL1",
+      "leagueName": "Bundesliga",
+      "home": "SV 07 Elversberg",
+      "away": "1. FSV Mainz 05",
       "status": "IN_PLAY",
       "minute": null,
       "score": {
-        "home": 1,
-        "away": 4
+        "home": 2,
+        "away": 0
       },
-      "utcDate": "2026-10-30T18:00:00Z",
-      "updatedAt": "2026-10-30T19:28:51Z"
+      "utcDate": "2026-10-30T19:30:00Z",
+      "updatedAt": "2026-10-30T20:14:11Z"
     },
     {
-      "id": 559646,
-      "league": "FL1",
-      "leagueName": "Ligue 1",
-      "home": "OGC Nice",
-      "away": "Stade Rennais FC 1901",
+      "id": 564737,
+      "league": "PD",
+      "leagueName": "Primera Division",
+      "home": "Villarreal CF",
+      "away": "RCD Espanyol de Barcelona",
       "status": "IN_PLAY",
       "minute": null,
       "score": {
-        "home": 4,
-        "away": 2
+        "home": 0,
+        "away": 0
       },
-      "utcDate": "2026-10-30T18:00:00Z",
-      "updatedAt": "2026-10-30T19:29:23Z"
+      "utcDate": "2026-10-30T20:00:00Z",
+      "updatedAt": "2026-10-30T20:14:11Z"
+    },
+    {
+      "id": 559639,
+      "league": "FL1",
+      "leagueName": "Ligue 1",
+      "home": "Lille OSC",
+      "away": "Racing Club de Lens",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-10-30T20:05:00Z",
+      "updatedAt": "2026-10-30T20:14:11Z"
     }
   ]
 }
