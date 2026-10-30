@@ -1,7 +1,23 @@
 {
-  "updatedAt": "2026-10-30T23:54:46.006700+01:00",
+  "updatedAt": "2026-10-31T00:27:17.823411+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 0,
-  "matches": []
+  "count": 1,
+  "matches": [
+    {
+      "id": 555063,
+      "league": "BSA",
+      "leagueName": "Campeonato Brasileiro Série A",
+      "home": "SC Corinthians Paulista",
+      "away": "Mirassol FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-10-30T23:00:00Z",
+      "updatedAt": "2026-10-30T23:25:39Z"
+    }
+  ]
 }
