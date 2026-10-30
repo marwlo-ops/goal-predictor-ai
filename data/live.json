@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-10-30T21:15:53.210899+01:00",
+  "updatedAt": "2026-10-30T21:58:16.972761+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 3,
+  "count": 4,
   "matches": [
     {
       "id": 565846,
@@ -13,11 +13,11 @@
       "status": "IN_PLAY",
       "minute": null,
       "score": {
-        "home": 2,
+        "home": 3,
         "away": 0
       },
       "utcDate": "2026-10-30T19:30:00Z",
-      "updatedAt": "2026-10-30T20:14:11Z"
+      "updatedAt": "2026-10-30T20:56:51Z"
     },
     {
       "id": 564737,
@@ -32,7 +32,7 @@
         "away": 0
       },
       "utcDate": "2026-10-30T20:00:00Z",
-      "updatedAt": "2026-10-30T20:14:11Z"
+      "updatedAt": "2026-10-30T20:52:35Z"
     },
     {
       "id": 559639,
@@ -47,7 +47,22 @@
         "away": 0
       },
       "utcDate": "2026-10-30T20:05:00Z",
-      "updatedAt": "2026-10-30T20:14:11Z"
+      "updatedAt": "2026-10-30T20:56:51Z"
+    },
+    {
+      "id": 567344,
+      "league": "PPL",
+      "leagueName": "Primeira Liga",
+      "home": "Casa Pia AC",
+      "away": "Sporting Clube de Portugal",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "utcDate": "2026-10-30T20:15:00Z",
+      "updatedAt": "2026-10-30T20:57:23Z"
     }
   ]
 }
