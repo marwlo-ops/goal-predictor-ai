@@ -1,23 +1,7 @@
 {
-  "updatedAt": "2026-10-30T23:14:20.542311+01:00",
+  "updatedAt": "2026-10-30T23:54:46.006700+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 1,
-  "matches": [
-    {
-      "id": 567344,
-      "league": "PPL",
-      "leagueName": "Primeira Liga",
-      "home": "Casa Pia AC",
-      "away": "Sporting Clube de Portugal",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 0,
-        "away": 1
-      },
-      "utcDate": "2026-10-30T20:15:00Z",
-      "updatedAt": "2026-10-30T22:12:35Z"
-    }
-  ]
+  "count": 0,
+  "matches": []
 }
