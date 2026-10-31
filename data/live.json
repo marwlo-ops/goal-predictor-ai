@@ -1,7 +1,98 @@
 {
-  "updatedAt": "2026-10-31T19:31:57.604418+01:00",
+  "updatedAt": "2026-10-31T20:19:53.859193+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 0,
-  "matches": []
+  "count": 6,
+  "matches": [
+    {
+      "id": 565845,
+      "league": "BL1",
+      "leagueName": "Bundesliga",
+      "home": "FC Bayern München",
+      "away": "Borussia Dortmund",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "utcDate": "2026-10-31T17:30:00Z",
+      "updatedAt": "2026-10-31T19:18:43Z"
+    },
+    {
+      "id": 560627,
+      "league": "PL",
+      "leagueName": "Premier League",
+      "home": "Tottenham Hotspur FC",
+      "away": "Crystal Palace FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "utcDate": "2026-10-31T17:30:00Z",
+      "updatedAt": "2026-10-31T19:19:15Z"
+    },
+    {
+      "id": 564736,
+      "league": "PD",
+      "leagueName": "Primera Division",
+      "home": "Real Betis Balompié",
+      "away": "Málaga CF",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "utcDate": "2026-10-31T17:30:00Z",
+      "updatedAt": "2026-10-31T19:19:47Z"
+    },
+    {
+      "id": 558852,
+      "league": "DED",
+      "leagueName": "Eredivisie",
+      "home": "SC Heerenveen",
+      "away": "NEC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "utcDate": "2026-10-31T17:45:00Z",
+      "updatedAt": "2026-10-31T19:19:15Z"
+    },
+    {
+      "id": 558853,
+      "league": "DED",
+      "leagueName": "Eredivisie",
+      "home": "PSV",
+      "away": "Willem II Tilburg",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 4,
+        "away": 0
+      },
+      "utcDate": "2026-10-31T17:45:00Z",
+      "updatedAt": "2026-10-31T19:19:47Z"
+    },
+    {
+      "id": 555064,
+      "league": "BSA",
+      "leagueName": "Campeonato Brasileiro Série A",
+      "home": "Coritiba FBC",
+      "away": "EC Vitória",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-10-31T19:00:00Z",
+      "updatedAt": "2026-10-31T19:19:15Z"
+    }
+  ]
 }
