@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-31T16:12:24.026686+01:00",
+  "generatedAt": "2026-10-31T17:12:13.000314+01:00",
   "source": "Sportmonks Football API v3",
   "count": 10,
   "fixtures": [
@@ -14,7 +14,7 @@
       "time": "16:00",
       "league": "Premiership",
       "leagueId": 501,
-      "status": "1st Half",
+      "status": "2nd Half",
       "scores": [
         {
           "description": "1ST_HALF",
@@ -45,27 +45,47 @@
           "description": "CURRENT",
           "participant": "away",
           "goals": 0
+        },
+        {
+          "description": "2ND_HALF_ONLY",
+          "participant": "home",
+          "goals": 0
+        },
+        {
+          "description": "2ND_HALF_ONLY",
+          "participant": "away",
+          "goals": 0
         }
       ],
       "statistics": [
         {
           "type": "Corners",
-          "value": 0,
+          "value": 2,
           "participantId": 496
         },
         {
           "type": "Corners",
-          "value": 1,
+          "value": 5,
           "participantId": 309
         },
         {
           "type": "Ball Possession %",
-          "value": 36,
+          "value": 46,
           "participantId": 496
         },
         {
           "type": "Ball Possession %",
-          "value": 64,
+          "value": 54,
+          "participantId": 309
+        },
+        {
+          "type": "Yellowcards",
+          "value": 2,
+          "participantId": 496
+        },
+        {
+          "type": "Yellowcards",
+          "value": 1,
           "participantId": 309
         }
       ],
@@ -82,35 +102,45 @@
       "time": "16:00",
       "league": "Premiership",
       "leagueId": 501,
-      "status": "1st Half",
+      "status": "2nd Half",
       "scores": [
         {
           "description": "1ST_HALF",
           "participant": "home",
-          "goals": 0
+          "goals": 2
         },
         {
           "description": "1ST_HALF",
           "participant": "away",
-          "goals": 0
+          "goals": 1
         },
         {
           "description": "2ND_HALF",
           "participant": "home",
-          "goals": 0
+          "goals": 2
         },
         {
           "description": "2ND_HALF",
           "participant": "away",
-          "goals": 0
+          "goals": 1
         },
         {
           "description": "CURRENT",
           "participant": "home",
-          "goals": 0
+          "goals": 2
         },
         {
           "description": "CURRENT",
+          "participant": "away",
+          "goals": 1
+        },
+        {
+          "description": "2ND_HALF_ONLY",
+          "participant": "home",
+          "goals": 0
+        },
+        {
+          "description": "2ND_HALF_ONLY",
           "participant": "away",
           "goals": 0
         }
@@ -118,22 +148,42 @@
       "statistics": [
         {
           "type": "Corners",
-          "value": 0,
+          "value": 1,
           "participantId": 734
         },
         {
           "type": "Corners",
-          "value": 3,
+          "value": 6,
           "participantId": 180
         },
         {
           "type": "Ball Possession %",
-          "value": 57,
+          "value": 40,
           "participantId": 734
         },
         {
           "type": "Ball Possession %",
-          "value": 43,
+          "value": 60,
+          "participantId": 180
+        },
+        {
+          "type": "Redcards",
+          "value": 1,
+          "participantId": 734
+        },
+        {
+          "type": "Redcards",
+          "value": 0,
+          "participantId": 180
+        },
+        {
+          "type": "Yellowcards",
+          "value": 2,
+          "participantId": 734
+        },
+        {
+          "type": "Yellowcards",
+          "value": 1,
           "participantId": 180
         }
       ],
