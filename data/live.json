@@ -1,23 +1,7 @@
 {
-  "updatedAt": "2026-10-31T23:53:01.039519+01:00",
+  "updatedAt": "2026-11-01T00:27:24.909025+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 1,
-  "matches": [
-    {
-      "id": 558850,
-      "league": "DED",
-      "leagueName": "Eredivisie",
-      "home": "SC Cambuur-Leeuwarden",
-      "away": "Go Ahead Eagles",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 4,
-        "away": 0
-      },
-      "utcDate": "2026-10-31T20:00:00Z",
-      "updatedAt": "2026-10-31T22:52:03Z"
-    }
-  ]
+  "count": 0,
+  "matches": []
 }
