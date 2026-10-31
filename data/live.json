@@ -1,1 +1,83 @@
-{"updatedAt":"2026-10-31T13:51:04.096022+01:00","source":"football-data.org","refreshIntervalMinutes":10,"count":1,"matches":[{"id":560626,"league":"PL","leagueName":"Premier League","home":"Chelsea FC","away":"Manchester United FC","status":"IN_PLAY","minute":null,"score":{"home":0,"away":0},"utcDate":"2026-10-31T12:30:00Z","updatedAt":"2026-10-31T12:49:55Z"}]}
+{
+  "updatedAt": "2026-10-31T14:39:45.135577+01:00",
+  "source": "football-data.org",
+  "refreshIntervalMinutes": 10,
+  "count": 5,
+  "matches": [
+    {
+      "id": 561915,
+      "league": "ELC",
+      "leagueName": "Championship",
+      "home": "Lincoln City FC",
+      "away": "Birmingham City FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "utcDate": "2026-10-31T12:30:00Z",
+      "updatedAt": "2026-10-31T13:29:25Z"
+    },
+    {
+      "id": 561910,
+      "league": "ELC",
+      "leagueName": "Championship",
+      "home": "Norwich City FC",
+      "away": "Watford FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 2
+      },
+      "utcDate": "2026-10-31T12:30:00Z",
+      "updatedAt": "2026-10-31T13:38:59Z"
+    },
+    {
+      "id": 560626,
+      "league": "PL",
+      "leagueName": "Premier League",
+      "home": "Chelsea FC",
+      "away": "Manchester United FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-10-31T12:30:00Z",
+      "updatedAt": "2026-10-31T13:24:03Z"
+    },
+    {
+      "id": 561908,
+      "league": "ELC",
+      "leagueName": "Championship",
+      "home": "Stoke City FC",
+      "away": "Preston North End FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "utcDate": "2026-10-31T12:30:00Z",
+      "updatedAt": "2026-10-31T13:24:37Z"
+    },
+    {
+      "id": 564730,
+      "league": "PD",
+      "leagueName": "Primera Division",
+      "home": "Levante UD",
+      "away": "Club Atlético de Madrid",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "utcDate": "2026-10-31T13:00:00Z",
+      "updatedAt": "2026-10-31T13:38:59Z"
+    }
+  ]
+}
