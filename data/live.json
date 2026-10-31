@@ -1,39 +1,9 @@
 {
-  "updatedAt": "2026-10-31T22:04:50.716883+01:00",
+  "updatedAt": "2026-10-31T22:38:56.097326+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 8,
+  "count": 7,
   "matches": [
-    {
-      "id": 555064,
-      "league": "BSA",
-      "leagueName": "Campeonato Brasileiro Série A",
-      "home": "Coritiba FBC",
-      "away": "EC Vitória",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 2,
-        "away": 0
-      },
-      "utcDate": "2026-10-31T19:00:00Z",
-      "updatedAt": "2026-10-31T21:03:15Z"
-    },
-    {
-      "id": 559643,
-      "league": "FL1",
-      "leagueName": "Ligue 1",
-      "home": "ES Troyes AC",
-      "away": "Le Mans FC",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 1,
-        "away": 0
-      },
-      "utcDate": "2026-10-31T19:45:00Z",
-      "updatedAt": "2026-10-31T21:03:15Z"
-    },
     {
       "id": 558548,
       "league": "SA",
@@ -47,7 +17,22 @@
         "away": 1
       },
       "utcDate": "2026-10-31T19:45:00Z",
-      "updatedAt": "2026-10-31T21:03:15Z"
+      "updatedAt": "2026-10-31T21:38:27Z"
+    },
+    {
+      "id": 559643,
+      "league": "FL1",
+      "leagueName": "Ligue 1",
+      "home": "ES Troyes AC",
+      "away": "Le Mans FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "utcDate": "2026-10-31T19:45:00Z",
+      "updatedAt": "2026-10-31T21:37:23Z"
     },
     {
       "id": 560628,
@@ -55,14 +40,14 @@
       "leagueName": "Premier League",
       "home": "Aston Villa FC",
       "away": "Fulham FC",
-      "status": "PAUSED",
+      "status": "IN_PLAY",
       "minute": null,
       "score": {
         "home": 1,
-        "away": 0
+        "away": 1
       },
       "utcDate": "2026-10-31T20:00:00Z",
-      "updatedAt": "2026-10-31T20:55:47Z"
+      "updatedAt": "2026-10-31T21:38:27Z"
     },
     {
       "id": 558850,
@@ -70,14 +55,14 @@
       "leagueName": "Eredivisie",
       "home": "SC Cambuur-Leeuwarden",
       "away": "Go Ahead Eagles",
-      "status": "PAUSED",
+      "status": "IN_PLAY",
       "minute": null,
       "score": {
         "home": 3,
         "away": 0
       },
       "utcDate": "2026-10-31T20:00:00Z",
-      "updatedAt": "2026-10-31T20:51:31Z"
+      "updatedAt": "2026-10-31T21:38:27Z"
     },
     {
       "id": 558851,
@@ -85,14 +70,14 @@
       "leagueName": "Eredivisie",
       "home": "AFC Ajax",
       "away": "AZ",
-      "status": "PAUSED",
+      "status": "IN_PLAY",
       "minute": null,
       "score": {
         "home": 1,
         "away": 0
       },
       "utcDate": "2026-10-31T20:00:00Z",
-      "updatedAt": "2026-10-31T20:54:43Z"
+      "updatedAt": "2026-10-31T21:38:27Z"
     },
     {
       "id": 564732,
@@ -100,14 +85,14 @@
       "leagueName": "Primera Division",
       "home": "FC Barcelona",
       "away": "Deportivo Alavés",
-      "status": "PAUSED",
+      "status": "IN_PLAY",
       "minute": null,
       "score": {
-        "home": 4,
+        "home": 5,
         "away": 0
       },
       "utcDate": "2026-10-31T20:00:00Z",
-      "updatedAt": "2026-10-31T20:57:55Z"
+      "updatedAt": "2026-10-31T21:38:27Z"
     },
     {
       "id": 567338,
@@ -122,7 +107,7 @@
         "away": 0
       },
       "utcDate": "2026-10-31T20:30:00Z",
-      "updatedAt": "2026-10-31T21:03:15Z"
+      "updatedAt": "2026-10-31T21:26:43Z"
     }
   ]
 }
