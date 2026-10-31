@@ -1,54 +1,9 @@
 {
-  "updatedAt": "2026-10-31T18:15:39.799825+01:00",
+  "updatedAt": "2026-10-31T18:50:44.472421+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
   "count": 4,
   "matches": [
-    {
-      "id": 564735,
-      "league": "PD",
-      "leagueName": "Primera Division",
-      "home": "Rayo Vallecano de Madrid",
-      "away": "RC Celta de Vigo",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 3,
-        "away": 0
-      },
-      "utcDate": "2026-10-31T15:15:00Z",
-      "updatedAt": "2026-10-31T17:14:59Z"
-    },
-    {
-      "id": 567343,
-      "league": "PPL",
-      "leagueName": "Primeira Liga",
-      "home": "Moreirense FC",
-      "away": "CF Estrela da Amadora",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 1,
-        "away": 1
-      },
-      "utcDate": "2026-10-31T15:30:00Z",
-      "updatedAt": "2026-10-31T17:14:59Z"
-    },
-    {
-      "id": 558854,
-      "league": "DED",
-      "leagueName": "Eredivisie",
-      "home": "Feyenoord Rotterdam",
-      "away": "Fortuna Sittard",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 1,
-        "away": 0
-      },
-      "utcDate": "2026-10-31T15:30:00Z",
-      "updatedAt": "2026-10-31T17:14:59Z"
-    },
     {
       "id": 558542,
       "league": "SA",
@@ -59,10 +14,55 @@
       "minute": null,
       "score": {
         "home": 0,
-        "away": 0
+        "away": 4
       },
       "utcDate": "2026-10-31T17:00:00Z",
-      "updatedAt": "2026-10-31T17:14:59Z"
+      "updatedAt": "2026-10-31T17:49:07Z"
+    },
+    {
+      "id": 564736,
+      "league": "PD",
+      "leagueName": "Primera Division",
+      "home": "Real Betis Balompié",
+      "away": "Málaga CF",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-10-31T17:30:00Z",
+      "updatedAt": "2026-10-31T17:49:07Z"
+    },
+    {
+      "id": 560627,
+      "league": "PL",
+      "leagueName": "Premier League",
+      "home": "Tottenham Hotspur FC",
+      "away": "Crystal Palace FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-10-31T17:30:00Z",
+      "updatedAt": "2026-10-31T17:49:39Z"
+    },
+    {
+      "id": 565845,
+      "league": "BL1",
+      "leagueName": "Bundesliga",
+      "home": "FC Bayern München",
+      "away": "Borussia Dortmund",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-10-31T17:30:00Z",
+      "updatedAt": "2026-10-31T17:49:07Z"
     }
   ]
 }
