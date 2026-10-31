@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-31T19:08:43.355981+01:00",
+  "generatedAt": "2026-10-31T19:50:22.689826+01:00",
   "source": "Sportmonks Football API v3",
   "count": 10,
   "fixtures": [
@@ -201,7 +201,38 @@
       "league": "Premiership",
       "leagueId": 501,
       "status": "Postponed",
-      "scores": [],
+      "scores": [
+        {
+          "description": "1ST_HALF",
+          "participant": "home",
+          "goals": 0
+        },
+        {
+          "description": "1ST_HALF",
+          "participant": "away",
+          "goals": 0
+        },
+        {
+          "description": "2ND_HALF",
+          "participant": "home",
+          "goals": 0
+        },
+        {
+          "description": "2ND_HALF",
+          "participant": "away",
+          "goals": 0
+        },
+        {
+          "description": "CURRENT",
+          "participant": "home",
+          "goals": 0
+        },
+        {
+          "description": "CURRENT",
+          "participant": "away",
+          "goals": 0
+        }
+      ],
       "statistics": [],
       "source": "Sportmonks"
     },
