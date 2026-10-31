@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-10-31T23:14:11.125641+01:00",
+  "updatedAt": "2026-10-31T23:53:01.039519+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 2,
+  "count": 1,
   "matches": [
     {
       "id": 558850,
@@ -17,22 +17,7 @@
         "away": 0
       },
       "utcDate": "2026-10-31T20:00:00Z",
-      "updatedAt": "2026-10-31T22:12:35Z"
-    },
-    {
-      "id": 567338,
-      "league": "PPL",
-      "leagueName": "Primeira Liga",
-      "home": "FC Porto",
-      "away": "GD Estoril Praia",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 4,
-        "away": 0
-      },
-      "utcDate": "2026-10-31T20:30:00Z",
-      "updatedAt": "2026-10-31T22:11:31Z"
+      "updatedAt": "2026-10-31T22:52:03Z"
     }
   ]
 }
