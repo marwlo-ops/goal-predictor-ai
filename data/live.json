@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-10-31T20:55:15.363272+01:00",
+  "updatedAt": "2026-10-31T21:27:03.423414+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 3,
+  "count": 7,
   "matches": [
     {
       "id": 555064,
@@ -13,11 +13,11 @@
       "status": "IN_PLAY",
       "minute": null,
       "score": {
-        "home": 0,
+        "home": 1,
         "away": 0
       },
       "utcDate": "2026-10-31T19:00:00Z",
-      "updatedAt": "2026-10-31T19:53:23Z"
+      "updatedAt": "2026-10-31T20:25:23Z"
     },
     {
       "id": 559643,
@@ -28,11 +28,11 @@
       "status": "IN_PLAY",
       "minute": null,
       "score": {
-        "home": 0,
+        "home": 1,
         "away": 0
       },
       "utcDate": "2026-10-31T19:45:00Z",
-      "updatedAt": "2026-10-31T19:54:59Z"
+      "updatedAt": "2026-10-31T20:25:55Z"
     },
     {
       "id": 558548,
@@ -43,11 +43,71 @@
       "status": "IN_PLAY",
       "minute": null,
       "score": {
+        "home": 2,
+        "away": 1
+      },
+      "utcDate": "2026-10-31T19:45:00Z",
+      "updatedAt": "2026-10-31T20:25:55Z"
+    },
+    {
+      "id": 558850,
+      "league": "DED",
+      "leagueName": "Eredivisie",
+      "home": "SC Cambuur-Leeuwarden",
+      "away": "Go Ahead Eagles",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "utcDate": "2026-10-31T20:00:00Z",
+      "updatedAt": "2026-10-31T20:25:55Z"
+    },
+    {
+      "id": 560628,
+      "league": "PL",
+      "leagueName": "Premier League",
+      "home": "Aston Villa FC",
+      "away": "Fulham FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
         "home": 0,
         "away": 0
       },
-      "utcDate": "2026-10-31T19:45:00Z",
-      "updatedAt": "2026-10-31T19:50:43Z"
+      "utcDate": "2026-10-31T20:00:00Z",
+      "updatedAt": "2026-10-31T20:25:55Z"
+    },
+    {
+      "id": 558851,
+      "league": "DED",
+      "leagueName": "Eredivisie",
+      "home": "AFC Ajax",
+      "away": "AZ",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "utcDate": "2026-10-31T20:00:00Z",
+      "updatedAt": "2026-10-31T20:25:23Z"
+    },
+    {
+      "id": 564732,
+      "league": "PD",
+      "leagueName": "Primera Division",
+      "home": "FC Barcelona",
+      "away": "Deportivo Alavés",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "utcDate": "2026-10-31T20:00:00Z",
+      "updatedAt": "2026-10-31T20:25:55Z"
     }
   ]
 }
