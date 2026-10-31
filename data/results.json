@@ -1,10 +1,98 @@
 {
-  "updatedAt": "2026-10-30T07:07:02.584191+01:00",
-  "dateFrom": "2026-10-23",
-  "dateTo": "2026-10-30",
+  "updatedAt": "2026-10-31T07:03:12.425968+01:00",
+  "dateFrom": "2026-10-24",
+  "dateTo": "2026-10-31",
   "source": "football-data.org",
-  "count": 117,
+  "count": 125,
   "matches": [
+    {
+      "id": 555063,
+      "date": "2026-10-30T23:00:00Z",
+      "league": "BSA",
+      "leagueName": "Campeonato Brasileiro Série A",
+      "home": "SC Corinthians Paulista",
+      "away": "Mirassol FC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "status": "FINISHED"
+    },
+    {
+      "id": 567344,
+      "date": "2026-10-30T20:15:00Z",
+      "league": "PPL",
+      "leagueName": "Primeira Liga",
+      "home": "Casa Pia AC",
+      "away": "Sporting Clube de Portugal",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "status": "FINISHED"
+    },
+    {
+      "id": 559639,
+      "date": "2026-10-30T20:05:00Z",
+      "league": "FL1",
+      "leagueName": "Ligue 1",
+      "home": "Lille OSC",
+      "away": "Racing Club de Lens",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "status": "FINISHED"
+    },
+    {
+      "id": 564737,
+      "date": "2026-10-30T20:00:00Z",
+      "league": "PD",
+      "leagueName": "Primera Division",
+      "home": "Villarreal CF",
+      "away": "RCD Espanyol de Barcelona",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "status": "FINISHED"
+    },
+    {
+      "id": 565846,
+      "date": "2026-10-30T19:30:00Z",
+      "league": "BL1",
+      "leagueName": "Bundesliga",
+      "home": "SV 07 Elversberg",
+      "away": "1. FSV Mainz 05",
+      "homeGoals": 4,
+      "awayGoals": 1,
+      "status": "FINISHED"
+    },
+    {
+      "id": 559644,
+      "date": "2026-10-30T18:00:00Z",
+      "league": "FL1",
+      "leagueName": "Ligue 1",
+      "home": "Le Havre AC",
+      "away": "Paris Saint-Germain FC",
+      "homeGoals": 1,
+      "awayGoals": 5,
+      "status": "FINISHED"
+    },
+    {
+      "id": 559646,
+      "date": "2026-10-30T18:00:00Z",
+      "league": "FL1",
+      "leagueName": "Ligue 1",
+      "home": "OGC Nice",
+      "away": "Stade Rennais FC 1901",
+      "homeGoals": 5,
+      "awayGoals": 2,
+      "status": "FINISHED"
+    },
+    {
+      "id": 555066,
+      "date": "2026-10-30T00:30:00Z",
+      "league": "BSA",
+      "leagueName": "Campeonato Brasileiro Série A",
+      "home": "Grêmio FBPA",
+      "away": "CA Paranaense",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "status": "FINISHED"
+    },
     {
       "id": 555069,
       "date": "2026-10-29T23:00:00Z",
