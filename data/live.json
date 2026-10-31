@@ -1,204 +1,9 @@
 {
-  "updatedAt": "2026-10-31T17:41:21.509072+01:00",
+  "updatedAt": "2026-10-31T18:15:39.799825+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 16,
+  "count": 4,
   "matches": [
-    {
-      "id": 561907,
-      "league": "ELC",
-      "leagueName": "Championship",
-      "home": "Swansea City AFC",
-      "away": "Blackburn Rovers FC",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 4,
-        "away": 0
-      },
-      "utcDate": "2026-10-31T15:00:00Z",
-      "updatedAt": "2026-10-31T16:40:01Z"
-    },
-    {
-      "id": 560623,
-      "league": "PL",
-      "leagueName": "Premier League",
-      "home": "Manchester City FC",
-      "away": "Brighton & Hove Albion FC",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 0,
-        "away": 1
-      },
-      "utcDate": "2026-10-31T15:00:00Z",
-      "updatedAt": "2026-10-31T16:39:47Z"
-    },
-    {
-      "id": 561913,
-      "league": "ELC",
-      "leagueName": "Championship",
-      "home": "Millwall FC",
-      "away": "Derby County FC",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 3,
-        "away": 0
-      },
-      "utcDate": "2026-10-31T15:00:00Z",
-      "updatedAt": "2026-10-31T16:39:37Z"
-    },
-    {
-      "id": 560629,
-      "league": "PL",
-      "leagueName": "Premier League",
-      "home": "Hull City AFC",
-      "away": "Ipswich Town FC",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 2,
-        "away": 2
-      },
-      "utcDate": "2026-10-31T15:00:00Z",
-      "updatedAt": "2026-10-31T16:39:47Z"
-    },
-    {
-      "id": 561909,
-      "league": "ELC",
-      "leagueName": "Championship",
-      "home": "Bolton Wanderers FC",
-      "away": "Bristol City FC",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 2,
-        "away": 1
-      },
-      "utcDate": "2026-10-31T15:00:00Z",
-      "updatedAt": "2026-10-31T16:39:23Z"
-    },
-    {
-      "id": 560625,
-      "league": "PL",
-      "leagueName": "Premier League",
-      "home": "Coventry City FC",
-      "away": "Sunderland AFC",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 3,
-        "away": 1
-      },
-      "utcDate": "2026-10-31T15:00:00Z",
-      "updatedAt": "2026-10-31T16:39:47Z"
-    },
-    {
-      "id": 561905,
-      "league": "ELC",
-      "leagueName": "Championship",
-      "home": "Wolverhampton Wanderers FC",
-      "away": "Cardiff City FC",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 3,
-        "away": 0
-      },
-      "utcDate": "2026-10-31T15:00:00Z",
-      "updatedAt": "2026-10-31T16:39:20Z"
-    },
-    {
-      "id": 561911,
-      "league": "ELC",
-      "leagueName": "Championship",
-      "home": "Middlesbrough FC",
-      "away": "Charlton Athletic FC",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 2,
-        "away": 0
-      },
-      "utcDate": "2026-10-31T15:00:00Z",
-      "updatedAt": "2026-10-31T16:39:40Z"
-    },
-    {
-      "id": 561912,
-      "league": "ELC",
-      "leagueName": "Championship",
-      "home": "Burnley FC",
-      "away": "Portsmouth FC",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 0,
-        "away": 0
-      },
-      "utcDate": "2026-10-31T15:00:00Z",
-      "updatedAt": "2026-10-31T16:39:55Z"
-    },
-    {
-      "id": 560624,
-      "league": "PL",
-      "leagueName": "Premier League",
-      "home": "AFC Bournemouth",
-      "away": "Leeds United FC",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 1,
-        "away": 0
-      },
-      "utcDate": "2026-10-31T15:00:00Z",
-      "updatedAt": "2026-10-31T16:39:47Z"
-    },
-    {
-      "id": 561914,
-      "league": "ELC",
-      "leagueName": "Championship",
-      "home": "Southampton FC",
-      "away": "Queens Park Rangers FC",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 3,
-        "away": 1
-      },
-      "utcDate": "2026-10-31T15:00:00Z",
-      "updatedAt": "2026-10-31T16:39:49Z"
-    },
-    {
-      "id": 560630,
-      "league": "PL",
-      "leagueName": "Premier League",
-      "home": "Brentford FC",
-      "away": "Nottingham Forest FC",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 2,
-        "away": 0
-      },
-      "utcDate": "2026-10-31T15:00:00Z",
-      "updatedAt": "2026-10-31T16:39:47Z"
-    },
-    {
-      "id": 561906,
-      "league": "ELC",
-      "leagueName": "Championship",
-      "home": "West Ham United FC",
-      "away": "West Bromwich Albion FC",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 1,
-        "away": 3
-      },
-      "utcDate": "2026-10-31T15:00:00Z",
-      "updatedAt": "2026-10-31T16:39:13Z"
-    },
     {
       "id": 564735,
       "league": "PD",
@@ -208,11 +13,11 @@
       "status": "IN_PLAY",
       "minute": null,
       "score": {
-        "home": 2,
+        "home": 3,
         "away": 0
       },
       "utcDate": "2026-10-31T15:15:00Z",
-      "updatedAt": "2026-10-31T16:39:15Z"
+      "updatedAt": "2026-10-31T17:14:59Z"
     },
     {
       "id": 567343,
@@ -223,11 +28,11 @@
       "status": "IN_PLAY",
       "minute": null,
       "score": {
-        "home": 0,
-        "away": 0
+        "home": 1,
+        "away": 1
       },
       "utcDate": "2026-10-31T15:30:00Z",
-      "updatedAt": "2026-10-31T16:28:04Z"
+      "updatedAt": "2026-10-31T17:14:59Z"
     },
     {
       "id": 558854,
@@ -238,11 +43,26 @@
       "status": "IN_PLAY",
       "minute": null,
       "score": {
-        "home": 0,
+        "home": 1,
         "away": 0
       },
       "utcDate": "2026-10-31T15:30:00Z",
-      "updatedAt": "2026-10-31T16:25:55Z"
+      "updatedAt": "2026-10-31T17:14:59Z"
+    },
+    {
+      "id": 558542,
+      "league": "SA",
+      "leagueName": "Serie A",
+      "home": "Udinese Calcio",
+      "away": "AS Roma",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-10-31T17:00:00Z",
+      "updatedAt": "2026-10-31T17:14:59Z"
     }
   ]
 }
