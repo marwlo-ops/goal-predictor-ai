@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-11-01T14:59:29.371892+01:00",
+  "updatedAt": "2026-11-01T15:37:17.986247+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 3,
+  "count": 7,
   "matches": [
     {
       "id": 564733,
@@ -17,7 +17,22 @@
         "away": 1
       },
       "utcDate": "2026-11-01T13:00:00Z",
-      "updatedAt": "2026-11-01T13:58:11Z"
+      "updatedAt": "2026-11-01T14:35:31Z"
+    },
+    {
+      "id": 558848,
+      "league": "DED",
+      "leagueName": "Eredivisie",
+      "home": "Telstar 1963",
+      "away": "FC Utrecht",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 3,
+        "away": 1
+      },
+      "utcDate": "2026-11-01T13:30:00Z",
+      "updatedAt": "2026-11-01T14:22:43Z"
     },
     {
       "id": 558847,
@@ -29,25 +44,70 @@
       "minute": null,
       "score": {
         "home": 0,
-        "away": 1
+        "away": 5
       },
       "utcDate": "2026-11-01T13:30:00Z",
-      "updatedAt": "2026-11-01T13:58:11Z"
+      "updatedAt": "2026-11-01T14:23:47Z"
     },
     {
-      "id": 558848,
-      "league": "DED",
-      "leagueName": "Eredivisie",
-      "home": "Telstar 1963",
-      "away": "FC Utrecht",
+      "id": 559647,
+      "league": "FL1",
+      "leagueName": "Ligue 1",
+      "home": "RC Strasbourg Alsace",
+      "away": "AJ Auxerre",
       "status": "IN_PLAY",
       "minute": null,
       "score": {
-        "home": 1,
+        "home": 0,
         "away": 0
       },
-      "utcDate": "2026-11-01T13:30:00Z",
-      "updatedAt": "2026-11-01T13:58:11Z"
+      "utcDate": "2026-11-01T14:00:00Z",
+      "updatedAt": "2026-11-01T14:35:31Z"
+    },
+    {
+      "id": 558546,
+      "league": "SA",
+      "leagueName": "Serie A",
+      "home": "SS Lazio",
+      "away": "Cagliari Calcio",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "utcDate": "2026-11-01T14:00:00Z",
+      "updatedAt": "2026-11-01T14:35:31Z"
+    },
+    {
+      "id": 558544,
+      "league": "SA",
+      "leagueName": "Serie A",
+      "home": "Frosinone Calcio",
+      "away": "Torino FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-11-01T14:00:00Z",
+      "updatedAt": "2026-11-01T14:35:31Z"
+    },
+    {
+      "id": 565841,
+      "league": "BL1",
+      "leagueName": "Bundesliga",
+      "home": "1. FC Union Berlin",
+      "away": "1. FC Köln",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-11-01T14:30:00Z",
+      "updatedAt": "2026-11-01T14:35:31Z"
     }
   ]
 }
