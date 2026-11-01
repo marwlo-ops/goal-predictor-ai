@@ -1,7 +1,38 @@
 {
-  "updatedAt": "2026-11-01T12:06:24.598740+01:00",
+  "updatedAt": "2026-11-01T12:39:55.933191+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 0,
-  "matches": []
+  "count": 2,
+  "matches": [
+    {
+      "id": 558849,
+      "league": "DED",
+      "leagueName": "Eredivisie",
+      "home": "PEC Zwolle",
+      "away": "ADO Den Haag",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-11-01T11:15:00Z",
+      "updatedAt": "2026-11-01T11:38:59Z"
+    },
+    {
+      "id": 558543,
+      "league": "SA",
+      "leagueName": "Serie A",
+      "home": "Como 1907",
+      "away": "Venezia FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-11-01T11:30:00Z",
+      "updatedAt": "2026-11-01T11:38:59Z"
+    }
+  ]
 }
