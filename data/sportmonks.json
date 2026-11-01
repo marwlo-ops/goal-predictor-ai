@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T14:28:33.240280+01:00",
+  "generatedAt": "2026-11-01T15:17:44.113259+01:00",
   "source": "Sportmonks Football API v3",
   "count": 12,
   "fixtures": [
@@ -14,7 +14,7 @@
       "time": "14:00",
       "league": "Premiership",
       "leagueId": 501,
-      "status": "1st Half",
+      "status": "2nd Half",
       "scores": [
         {
           "description": "1ST_HALF",
@@ -24,7 +24,7 @@
         {
           "description": "1ST_HALF",
           "participant": "home",
-          "goals": 1
+          "goals": 2
         },
         {
           "description": "2ND_HALF",
@@ -34,7 +34,7 @@
         {
           "description": "2ND_HALF",
           "participant": "home",
-          "goals": 1
+          "goals": 2
         },
         {
           "description": "CURRENT",
@@ -44,13 +44,23 @@
         {
           "description": "CURRENT",
           "participant": "home",
-          "goals": 1
+          "goals": 2
+        },
+        {
+          "description": "2ND_HALF_ONLY",
+          "participant": "away",
+          "goals": 0
+        },
+        {
+          "description": "2ND_HALF_ONLY",
+          "participant": "home",
+          "goals": 0
         }
       ],
       "statistics": [
         {
           "type": "Corners",
-          "value": 1,
+          "value": 6,
           "participantId": 53
         },
         {
@@ -60,12 +70,22 @@
         },
         {
           "type": "Ball Possession %",
-          "value": 65,
+          "value": 64,
           "participantId": 53
         },
         {
           "type": "Ball Possession %",
-          "value": 35,
+          "value": 36,
+          "participantId": 770
+        },
+        {
+          "type": "Yellowcards",
+          "value": 1,
+          "participantId": 53
+        },
+        {
+          "type": "Yellowcards",
+          "value": 1,
           "participantId": 770
         }
       ],
@@ -82,7 +102,7 @@
       "time": "14:00",
       "league": "Superliga",
       "leagueId": 271,
-      "status": "1st Half",
+      "status": "2nd Half",
       "scores": [
         {
           "description": "1ST_HALF",
@@ -113,37 +133,47 @@
           "description": "CURRENT",
           "participant": "home",
           "goals": 0
+        },
+        {
+          "description": "2ND_HALF_ONLY",
+          "participant": "away",
+          "goals": 0
+        },
+        {
+          "description": "2ND_HALF_ONLY",
+          "participant": "home",
+          "goals": 0
         }
       ],
       "statistics": [
         {
           "type": "Corners",
-          "value": 2,
+          "value": 3,
           "participantId": 211
         },
         {
           "type": "Corners",
-          "value": 1,
+          "value": 6,
           "participantId": 2447
         },
         {
           "type": "Ball Possession %",
-          "value": 46,
+          "value": 41,
           "participantId": 211
         },
         {
           "type": "Ball Possession %",
-          "value": 54,
+          "value": 59,
           "participantId": 2447
         },
         {
           "type": "Yellowcards",
-          "value": 0,
+          "value": 1,
           "participantId": 211
         },
         {
           "type": "Yellowcards",
-          "value": 1,
+          "value": 2,
           "participantId": 2447
         }
       ],
@@ -160,7 +190,7 @@
       "time": "14:00",
       "league": "Superliga",
       "leagueId": 271,
-      "status": "1st Half",
+      "status": "2nd Half",
       "scores": [
         {
           "description": "1ST_HALF",
@@ -170,7 +200,7 @@
         {
           "description": "1ST_HALF",
           "participant": "home",
-          "goals": 0
+          "goals": 1
         },
         {
           "description": "2ND_HALF",
@@ -180,7 +210,7 @@
         {
           "description": "2ND_HALF",
           "participant": "home",
-          "goals": 0
+          "goals": 2
         },
         {
           "description": "CURRENT",
@@ -190,28 +220,48 @@
         {
           "description": "CURRENT",
           "participant": "home",
+          "goals": 2
+        },
+        {
+          "description": "2ND_HALF_ONLY",
+          "participant": "away",
           "goals": 0
+        },
+        {
+          "description": "2ND_HALF_ONLY",
+          "participant": "home",
+          "goals": 1
         }
       ],
       "statistics": [
         {
           "type": "Corners",
-          "value": 4,
+          "value": 6,
           "participantId": 86
         },
         {
           "type": "Corners",
-          "value": 3,
+          "value": 5,
           "participantId": 1789
         },
         {
           "type": "Ball Possession %",
-          "value": 53,
+          "value": 52,
           "participantId": 86
         },
         {
           "type": "Ball Possession %",
-          "value": 47,
+          "value": 48,
+          "participantId": 1789
+        },
+        {
+          "type": "Yellowcards",
+          "value": 1,
+          "participantId": 86
+        },
+        {
+          "type": "Yellowcards",
+          "value": 0,
           "participantId": 1789
         }
       ],
@@ -229,7 +279,38 @@
       "league": "Superliga",
       "leagueId": 271,
       "status": "Not Started",
-      "scores": [],
+      "scores": [
+        {
+          "description": "1ST_HALF",
+          "participant": "away",
+          "goals": 0
+        },
+        {
+          "description": "1ST_HALF",
+          "participant": "home",
+          "goals": 0
+        },
+        {
+          "description": "2ND_HALF",
+          "participant": "away",
+          "goals": 0
+        },
+        {
+          "description": "2ND_HALF",
+          "participant": "home",
+          "goals": 0
+        },
+        {
+          "description": "CURRENT",
+          "participant": "away",
+          "goals": 0
+        },
+        {
+          "description": "CURRENT",
+          "participant": "home",
+          "goals": 0
+        }
+      ],
       "statistics": [],
       "source": "Sportmonks"
     },
