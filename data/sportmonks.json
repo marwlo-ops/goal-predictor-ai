@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T18:12:36.949529+01:00",
+  "generatedAt": "2026-11-01T19:09:11.210705+01:00",
   "source": "Sportmonks Football API v3",
   "count": 12,
   "fixtures": [
@@ -366,12 +366,12 @@
       "time": "18:00",
       "league": "Superliga",
       "leagueId": 271,
-      "status": "1st Half",
+      "status": "2nd Half",
       "scores": [
         {
           "description": "1ST_HALF",
           "participant": "home",
-          "goals": 0
+          "goals": 1
         },
         {
           "description": "1ST_HALF",
@@ -381,7 +381,7 @@
         {
           "description": "2ND_HALF",
           "participant": "home",
-          "goals": 0
+          "goals": 1
         },
         {
           "description": "2ND_HALF",
@@ -391,10 +391,20 @@
         {
           "description": "CURRENT",
           "participant": "home",
-          "goals": 0
+          "goals": 1
         },
         {
           "description": "CURRENT",
+          "participant": "away",
+          "goals": 0
+        },
+        {
+          "description": "2ND_HALF_ONLY",
+          "participant": "home",
+          "goals": 0
+        },
+        {
+          "description": "2ND_HALF_ONLY",
           "participant": "away",
           "goals": 0
         }
@@ -402,22 +412,22 @@
       "statistics": [
         {
           "type": "Corners",
-          "value": 1,
+          "value": 4,
           "participantId": 2905
         },
         {
           "type": "Corners",
-          "value": 2,
+          "value": 6,
           "participantId": 293
         },
         {
           "type": "Ball Possession %",
-          "value": 40,
+          "value": 46,
           "participantId": 2905
         },
         {
           "type": "Ball Possession %",
-          "value": 60,
+          "value": 54,
           "participantId": 293
         }
       ],
