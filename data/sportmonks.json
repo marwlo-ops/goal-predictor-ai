@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T16:13:16.733658+01:00",
+  "generatedAt": "2026-11-01T17:12:45.108251+01:00",
   "source": "Sportmonks Football API v3",
   "count": 12,
   "fixtures": [
@@ -278,7 +278,7 @@
       "time": "16:00",
       "league": "Superliga",
       "leagueId": 271,
-      "status": "1st Half",
+      "status": "2nd Half",
       "scores": [
         {
           "description": "1ST_HALF",
@@ -288,7 +288,7 @@
         {
           "description": "1ST_HALF",
           "participant": "home",
-          "goals": 1
+          "goals": 2
         },
         {
           "description": "2ND_HALF",
@@ -298,7 +298,7 @@
         {
           "description": "2ND_HALF",
           "participant": "home",
-          "goals": 1
+          "goals": 2
         },
         {
           "description": "CURRENT",
@@ -308,28 +308,38 @@
         {
           "description": "CURRENT",
           "participant": "home",
-          "goals": 1
+          "goals": 2
+        },
+        {
+          "description": "2ND_HALF_ONLY",
+          "participant": "away",
+          "goals": 0
+        },
+        {
+          "description": "2ND_HALF_ONLY",
+          "participant": "home",
+          "goals": 0
         }
       ],
       "statistics": [
         {
           "type": "Corners",
-          "value": 0,
+          "value": 1,
           "participantId": 939
         },
         {
           "type": "Corners",
-          "value": 1,
+          "value": 3,
           "participantId": 2394
         },
         {
           "type": "Ball Possession %",
-          "value": 41,
+          "value": 45,
           "participantId": 939
         },
         {
           "type": "Ball Possession %",
-          "value": 59,
+          "value": 55,
           "participantId": 2394
         }
       ],
@@ -347,7 +357,38 @@
       "league": "Superliga",
       "leagueId": 271,
       "status": "Not Started",
-      "scores": [],
+      "scores": [
+        {
+          "description": "1ST_HALF",
+          "participant": "home",
+          "goals": 0
+        },
+        {
+          "description": "1ST_HALF",
+          "participant": "away",
+          "goals": 0
+        },
+        {
+          "description": "2ND_HALF",
+          "participant": "home",
+          "goals": 0
+        },
+        {
+          "description": "2ND_HALF",
+          "participant": "away",
+          "goals": 0
+        },
+        {
+          "description": "CURRENT",
+          "participant": "home",
+          "goals": 0
+        },
+        {
+          "description": "CURRENT",
+          "participant": "away",
+          "goals": 0
+        }
+      ],
       "statistics": [],
       "source": "Sportmonks"
     },
