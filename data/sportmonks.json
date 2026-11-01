@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T17:12:45.108251+01:00",
+  "generatedAt": "2026-11-01T18:12:36.949529+01:00",
   "source": "Sportmonks Football API v3",
   "count": 12,
   "fixtures": [
@@ -278,7 +278,7 @@
       "time": "16:00",
       "league": "Superliga",
       "leagueId": 271,
-      "status": "2nd Half",
+      "status": "Full Time",
       "scores": [
         {
           "description": "1ST_HALF",
@@ -293,7 +293,7 @@
         {
           "description": "2ND_HALF",
           "participant": "away",
-          "goals": 0
+          "goals": 3
         },
         {
           "description": "2ND_HALF",
@@ -303,7 +303,7 @@
         {
           "description": "CURRENT",
           "participant": "away",
-          "goals": 0
+          "goals": 3
         },
         {
           "description": "CURRENT",
@@ -313,7 +313,7 @@
         {
           "description": "2ND_HALF_ONLY",
           "participant": "away",
-          "goals": 0
+          "goals": 3
         },
         {
           "description": "2ND_HALF_ONLY",
@@ -324,22 +324,32 @@
       "statistics": [
         {
           "type": "Corners",
-          "value": 1,
+          "value": 2,
           "participantId": 939
         },
         {
           "type": "Corners",
-          "value": 3,
+          "value": 6,
           "participantId": 2394
         },
         {
           "type": "Ball Possession %",
-          "value": 45,
+          "value": 48,
           "participantId": 939
         },
         {
           "type": "Ball Possession %",
-          "value": 55,
+          "value": 52,
+          "participantId": 2394
+        },
+        {
+          "type": "Yellowcards",
+          "value": 1,
+          "participantId": 939
+        },
+        {
+          "type": "Yellowcards",
+          "value": 1,
           "participantId": 2394
         }
       ],
@@ -356,7 +366,7 @@
       "time": "18:00",
       "league": "Superliga",
       "leagueId": 271,
-      "status": "Not Started",
+      "status": "1st Half",
       "scores": [
         {
           "description": "1ST_HALF",
@@ -389,7 +399,28 @@
           "goals": 0
         }
       ],
-      "statistics": [],
+      "statistics": [
+        {
+          "type": "Corners",
+          "value": 1,
+          "participantId": 2905
+        },
+        {
+          "type": "Corners",
+          "value": 2,
+          "participantId": 293
+        },
+        {
+          "type": "Ball Possession %",
+          "value": 40,
+          "participantId": 2905
+        },
+        {
+          "type": "Ball Possession %",
+          "value": 60,
+          "participantId": 293
+        }
+      ],
       "source": "Sportmonks"
     },
     {
