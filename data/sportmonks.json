@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T19:09:11.210705+01:00",
+  "generatedAt": "2026-11-01T19:51:05.208325+01:00",
   "source": "Sportmonks Football API v3",
   "count": 12,
   "fixtures": [
@@ -381,7 +381,7 @@
         {
           "description": "2ND_HALF",
           "participant": "home",
-          "goals": 1
+          "goals": 2
         },
         {
           "description": "2ND_HALF",
@@ -391,7 +391,7 @@
         {
           "description": "CURRENT",
           "participant": "home",
-          "goals": 1
+          "goals": 2
         },
         {
           "description": "CURRENT",
@@ -401,7 +401,7 @@
         {
           "description": "2ND_HALF_ONLY",
           "participant": "home",
-          "goals": 0
+          "goals": 1
         },
         {
           "description": "2ND_HALF_ONLY",
@@ -412,22 +412,32 @@
       "statistics": [
         {
           "type": "Corners",
-          "value": 4,
+          "value": 6,
           "participantId": 2905
         },
         {
           "type": "Corners",
-          "value": 6,
+          "value": 9,
           "participantId": 293
         },
         {
           "type": "Ball Possession %",
-          "value": 46,
+          "value": 52,
           "participantId": 2905
         },
         {
           "type": "Ball Possession %",
-          "value": 54,
+          "value": 48,
+          "participantId": 293
+        },
+        {
+          "type": "Yellowcards",
+          "value": 1,
+          "participantId": 2905
+        },
+        {
+          "type": "Yellowcards",
+          "value": 2,
           "participantId": 293
         }
       ],
