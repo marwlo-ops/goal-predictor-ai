@@ -1,39 +1,9 @@
 {
-  "updatedAt": "2026-11-01T14:14:26.307347+01:00",
+  "updatedAt": "2026-11-01T14:59:29.371892+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
   "count": 3,
   "matches": [
-    {
-      "id": 558849,
-      "league": "DED",
-      "leagueName": "Eredivisie",
-      "home": "PEC Zwolle",
-      "away": "ADO Den Haag",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 1,
-        "away": 0
-      },
-      "utcDate": "2026-11-01T11:15:00Z",
-      "updatedAt": "2026-11-01T13:12:51Z"
-    },
-    {
-      "id": 558543,
-      "league": "SA",
-      "leagueName": "Serie A",
-      "home": "Como 1907",
-      "away": "Venezia FC",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 1,
-        "away": 0
-      },
-      "utcDate": "2026-11-01T11:30:00Z",
-      "updatedAt": "2026-11-01T13:13:23Z"
-    },
     {
       "id": 564733,
       "league": "PD",
@@ -44,10 +14,40 @@
       "minute": null,
       "score": {
         "home": 0,
-        "away": 0
+        "away": 1
       },
       "utcDate": "2026-11-01T13:00:00Z",
-      "updatedAt": "2026-11-01T13:13:23Z"
+      "updatedAt": "2026-11-01T13:58:11Z"
+    },
+    {
+      "id": 558847,
+      "league": "DED",
+      "leagueName": "Eredivisie",
+      "home": "SBV Excelsior",
+      "away": "FC Twente '65",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "utcDate": "2026-11-01T13:30:00Z",
+      "updatedAt": "2026-11-01T13:58:11Z"
+    },
+    {
+      "id": 558848,
+      "league": "DED",
+      "leagueName": "Eredivisie",
+      "home": "Telstar 1963",
+      "away": "FC Utrecht",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "utcDate": "2026-11-01T13:30:00Z",
+      "updatedAt": "2026-11-01T13:58:11Z"
     }
   ]
 }
