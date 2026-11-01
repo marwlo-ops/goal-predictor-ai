@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T15:17:44.113259+01:00",
+  "generatedAt": "2026-11-01T16:13:16.733658+01:00",
   "source": "Sportmonks Football API v3",
   "count": 12,
   "fixtures": [
@@ -14,7 +14,7 @@
       "time": "14:00",
       "league": "Premiership",
       "leagueId": 501,
-      "status": "2nd Half",
+      "status": "Full Time",
       "scores": [
         {
           "description": "1ST_HALF",
@@ -60,7 +60,7 @@
       "statistics": [
         {
           "type": "Corners",
-          "value": 6,
+          "value": 14,
           "participantId": 53
         },
         {
@@ -70,17 +70,17 @@
         },
         {
           "type": "Ball Possession %",
-          "value": 64,
+          "value": 70,
           "participantId": 53
         },
         {
           "type": "Ball Possession %",
-          "value": 36,
+          "value": 30,
           "participantId": 770
         },
         {
           "type": "Yellowcards",
-          "value": 1,
+          "value": 3,
           "participantId": 53
         },
         {
@@ -102,7 +102,7 @@
       "time": "14:00",
       "league": "Superliga",
       "leagueId": 271,
-      "status": "2nd Half",
+      "status": "Full Time",
       "scores": [
         {
           "description": "1ST_HALF",
@@ -122,7 +122,7 @@
         {
           "description": "2ND_HALF",
           "participant": "home",
-          "goals": 0
+          "goals": 1
         },
         {
           "description": "CURRENT",
@@ -132,7 +132,7 @@
         {
           "description": "CURRENT",
           "participant": "home",
-          "goals": 0
+          "goals": 1
         },
         {
           "description": "2ND_HALF_ONLY",
@@ -142,7 +142,7 @@
         {
           "description": "2ND_HALF_ONLY",
           "participant": "home",
-          "goals": 0
+          "goals": 1
         }
       ],
       "statistics": [
@@ -153,17 +153,17 @@
         },
         {
           "type": "Corners",
-          "value": 6,
+          "value": 10,
           "participantId": 2447
         },
         {
           "type": "Ball Possession %",
-          "value": 41,
+          "value": 45,
           "participantId": 211
         },
         {
           "type": "Ball Possession %",
-          "value": 59,
+          "value": 55,
           "participantId": 2447
         },
         {
@@ -190,7 +190,7 @@
       "time": "14:00",
       "league": "Superliga",
       "leagueId": 271,
-      "status": "2nd Half",
+      "status": "Full Time",
       "scores": [
         {
           "description": "1ST_HALF",
@@ -210,7 +210,7 @@
         {
           "description": "2ND_HALF",
           "participant": "home",
-          "goals": 2
+          "goals": 4
         },
         {
           "description": "CURRENT",
@@ -220,7 +220,7 @@
         {
           "description": "CURRENT",
           "participant": "home",
-          "goals": 2
+          "goals": 4
         },
         {
           "description": "2ND_HALF_ONLY",
@@ -230,7 +230,7 @@
         {
           "description": "2ND_HALF_ONLY",
           "participant": "home",
-          "goals": 1
+          "goals": 3
         }
       ],
       "statistics": [
@@ -241,7 +241,7 @@
         },
         {
           "type": "Corners",
-          "value": 5,
+          "value": 10,
           "participantId": 1789
         },
         {
@@ -256,7 +256,7 @@
         },
         {
           "type": "Yellowcards",
-          "value": 1,
+          "value": 3,
           "participantId": 86
         },
         {
@@ -278,7 +278,7 @@
       "time": "16:00",
       "league": "Superliga",
       "leagueId": 271,
-      "status": "Not Started",
+      "status": "1st Half",
       "scores": [
         {
           "description": "1ST_HALF",
@@ -288,7 +288,7 @@
         {
           "description": "1ST_HALF",
           "participant": "home",
-          "goals": 0
+          "goals": 1
         },
         {
           "description": "2ND_HALF",
@@ -298,7 +298,7 @@
         {
           "description": "2ND_HALF",
           "participant": "home",
-          "goals": 0
+          "goals": 1
         },
         {
           "description": "CURRENT",
@@ -308,10 +308,31 @@
         {
           "description": "CURRENT",
           "participant": "home",
-          "goals": 0
+          "goals": 1
         }
       ],
-      "statistics": [],
+      "statistics": [
+        {
+          "type": "Corners",
+          "value": 0,
+          "participantId": 939
+        },
+        {
+          "type": "Corners",
+          "value": 1,
+          "participantId": 2394
+        },
+        {
+          "type": "Ball Possession %",
+          "value": 41,
+          "participantId": 939
+        },
+        {
+          "type": "Ball Possession %",
+          "value": 59,
+          "participantId": 2394
+        }
+      ],
       "source": "Sportmonks"
     },
     {
