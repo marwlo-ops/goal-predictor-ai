@@ -1,38 +1,53 @@
 {
-  "updatedAt": "2026-11-01T20:44:41.149673+01:00",
+  "updatedAt": "2026-11-01T21:16:10.838783+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 2,
+  "count": 3,
   "matches": [
     {
-      "id": 567345,
-      "league": "PPL",
-      "leagueName": "Primeira Liga",
-      "home": "Académico de Viseu FC",
-      "away": "Rio Ave FC",
+      "id": 559645,
+      "league": "FL1",
+      "leagueName": "Ligue 1",
+      "home": "Olympique de Marseille",
+      "away": "Toulouse FC",
       "status": "IN_PLAY",
       "minute": null,
       "score": {
         "home": 1,
-        "away": 1
+        "away": 0
       },
-      "utcDate": "2026-11-01T18:00:00Z",
-      "updatedAt": "2026-11-01T19:43:47Z"
+      "utcDate": "2026-11-01T19:45:00Z",
+      "updatedAt": "2026-11-01T20:15:15Z"
     },
     {
-      "id": 567340,
-      "league": "PPL",
-      "leagueName": "Primeira Liga",
-      "home": "CS Marítimo",
-      "away": "CD Santa Clara",
+      "id": 558547,
+      "league": "SA",
+      "leagueName": "Serie A",
+      "home": "Juventus FC",
+      "away": "SSC Napoli",
       "status": "IN_PLAY",
       "minute": null,
       "score": {
         "home": 0,
-        "away": 2
+        "away": 0
       },
-      "utcDate": "2026-11-01T18:00:00Z",
-      "updatedAt": "2026-11-01T19:43:47Z"
+      "utcDate": "2026-11-01T19:45:00Z",
+      "updatedAt": "2026-11-01T20:14:43Z"
+    },
+    {
+      "id": 564729,
+      "league": "PD",
+      "leagueName": "Primera Division",
+      "home": "Athletic Club",
+      "away": "Real Sociedad de Fútbol",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-11-01T20:00:00Z",
+      "updatedAt": "2026-11-01T20:15:15Z"
     }
   ]
 }
