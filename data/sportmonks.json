@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T19:51:05.208325+01:00",
+  "generatedAt": "2026-11-01T20:42:56.289454+01:00",
   "source": "Sportmonks Football API v3",
   "count": 12,
   "fixtures": [
@@ -366,7 +366,7 @@
       "time": "18:00",
       "league": "Superliga",
       "leagueId": 271,
-      "status": "2nd Half",
+      "status": "Full Time",
       "scores": [
         {
           "description": "1ST_HALF",
@@ -422,12 +422,12 @@
         },
         {
           "type": "Ball Possession %",
-          "value": 52,
+          "value": 53,
           "participantId": 2905
         },
         {
           "type": "Ball Possession %",
-          "value": 48,
+          "value": 47,
           "participantId": 293
         },
         {
@@ -437,7 +437,7 @@
         },
         {
           "type": "Yellowcards",
-          "value": 2,
+          "value": 3,
           "participantId": 293
         }
       ],
