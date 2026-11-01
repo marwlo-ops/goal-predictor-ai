@@ -1,1 +1,53 @@
-{"updatedAt":"2026-11-01T13:16:49.750891+01:00","source":"football-data.org","refreshIntervalMinutes":10,"count":2,"matches":[{"id":558849,"league":"DED","leagueName":"Eredivisie","home":"PEC Zwolle","away":"ADO Den Haag","status":"IN_PLAY","minute":null,"score":{"home":1,"away":0},"utcDate":"2026-11-01T11:15:00Z","updatedAt":"2026-11-01T12:09:55Z"},{"id":558543,"league":"SA","leagueName":"Serie A","home":"Como 1907","away":"Venezia FC","status":"IN_PLAY","minute":null,"score":{"home":0,"away":0},"utcDate":"2026-11-01T11:30:00Z","updatedAt":"2026-11-01T12:15:47Z"}]}
+{
+  "updatedAt": "2026-11-01T14:14:26.307347+01:00",
+  "source": "football-data.org",
+  "refreshIntervalMinutes": 10,
+  "count": 3,
+  "matches": [
+    {
+      "id": 558849,
+      "league": "DED",
+      "leagueName": "Eredivisie",
+      "home": "PEC Zwolle",
+      "away": "ADO Den Haag",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "utcDate": "2026-11-01T11:15:00Z",
+      "updatedAt": "2026-11-01T13:12:51Z"
+    },
+    {
+      "id": 558543,
+      "league": "SA",
+      "leagueName": "Serie A",
+      "home": "Como 1907",
+      "away": "Venezia FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "utcDate": "2026-11-01T11:30:00Z",
+      "updatedAt": "2026-11-01T13:13:23Z"
+    },
+    {
+      "id": 564733,
+      "league": "PD",
+      "leagueName": "Primera Division",
+      "home": "Getafe CF",
+      "away": "Sevilla FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-11-01T13:00:00Z",
+      "updatedAt": "2026-11-01T13:13:23Z"
+    }
+  ]
+}
