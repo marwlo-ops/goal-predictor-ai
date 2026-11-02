@@ -1,23 +1,68 @@
 {
-  "updatedAt": "2026-11-02T20:24:09.657971+01:00",
+  "updatedAt": "2026-11-02T21:14:38.274110+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 1,
+  "count": 4,
   "matches": [
     {
-      "id": 558541,
+      "id": 558545,
       "league": "SA",
       "leagueName": "Serie A",
-      "home": "US Sassuolo Calcio",
-      "away": "ACF Fiorentina",
+      "home": "Atalanta BC",
+      "away": "Parma Calcio 1913",
       "status": "IN_PLAY",
       "minute": null,
       "score": {
-        "home": 2,
-        "away": 3
+        "home": 0,
+        "away": 0
       },
-      "utcDate": "2026-11-02T17:30:00Z",
-      "updatedAt": "2026-11-02T19:22:27Z"
+      "utcDate": "2026-11-02T19:45:00Z",
+      "updatedAt": "2026-11-02T20:13:07Z"
+    },
+    {
+      "id": 559641,
+      "league": "FL1",
+      "leagueName": "Ligue 1",
+      "home": "FC Lorient",
+      "away": "Stade Brestois 29",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-11-02T19:45:00Z",
+      "updatedAt": "2026-11-02T20:13:07Z"
+    },
+    {
+      "id": 564731,
+      "league": "PD",
+      "leagueName": "Primera Division",
+      "home": "RC Deportivo La Coruña",
+      "away": "CA Osasuna",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-11-02T20:00:00Z",
+      "updatedAt": "2026-11-02T20:13:07Z"
+    },
+    {
+      "id": 560622,
+      "league": "PL",
+      "leagueName": "Premier League",
+      "home": "Newcastle United FC",
+      "away": "Everton FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-11-02T20:00:00Z",
+      "updatedAt": "2026-11-02T20:13:07Z"
     }
   ]
 }
