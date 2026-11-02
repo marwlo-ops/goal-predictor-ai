@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-11-02T21:14:38.274110+01:00",
+  "updatedAt": "2026-11-02T21:59:57.664591+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 4,
+  "count": 6,
   "matches": [
     {
       "id": 558545,
@@ -14,10 +14,10 @@
       "minute": null,
       "score": {
         "home": 0,
-        "away": 0
+        "away": 2
       },
       "utcDate": "2026-11-02T19:45:00Z",
-      "updatedAt": "2026-11-02T20:13:07Z"
+      "updatedAt": "2026-11-02T20:58:59Z"
     },
     {
       "id": 559641,
@@ -32,7 +32,7 @@
         "away": 0
       },
       "utcDate": "2026-11-02T19:45:00Z",
-      "updatedAt": "2026-11-02T20:13:07Z"
+      "updatedAt": "2026-11-02T20:58:59Z"
     },
     {
       "id": 564731,
@@ -44,10 +44,10 @@
       "minute": null,
       "score": {
         "home": 0,
-        "away": 0
+        "away": 1
       },
       "utcDate": "2026-11-02T20:00:00Z",
-      "updatedAt": "2026-11-02T20:13:07Z"
+      "updatedAt": "2026-11-02T20:54:43Z"
     },
     {
       "id": 560622,
@@ -62,7 +62,37 @@
         "away": 0
       },
       "utcDate": "2026-11-02T20:00:00Z",
-      "updatedAt": "2026-11-02T20:13:07Z"
+      "updatedAt": "2026-11-02T20:53:39Z"
+    },
+    {
+      "id": 567346,
+      "league": "PPL",
+      "leagueName": "Primeira Liga",
+      "home": "Gil Vicente FC",
+      "away": "Vitória SC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-11-02T20:15:00Z",
+      "updatedAt": "2026-11-02T20:58:59Z"
+    },
+    {
+      "id": 567342,
+      "league": "PPL",
+      "leagueName": "Primeira Liga",
+      "home": "Sport Lisboa e Benfica",
+      "away": "FC Alverca",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "utcDate": "2026-11-02T20:15:00Z",
+      "updatedAt": "2026-11-02T20:58:59Z"
     }
   ]
 }
