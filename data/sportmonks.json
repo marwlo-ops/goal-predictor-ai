@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T20:32:34.073354+01:00",
+  "generatedAt": "2026-11-02T21:22:33.395786+01:00",
   "source": "Sportmonks Football API v3",
   "count": 13,
   "fixtures": [
@@ -14,7 +14,7 @@
       "time": "19:00",
       "league": "Superliga",
       "leagueId": 271,
-      "status": "2nd Half",
+      "status": "Full Time",
       "scores": [
         {
           "description": "1ST_HALF",
@@ -60,7 +60,7 @@
       "statistics": [
         {
           "type": "Corners",
-          "value": 3,
+          "value": 5,
           "participantId": 85
         },
         {
@@ -85,7 +85,7 @@
         },
         {
           "type": "Yellowcards",
-          "value": 2,
+          "value": 3,
           "participantId": 390
         }
       ],
