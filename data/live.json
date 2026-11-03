@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-04T00:13:53.572302+01:00",
+  "updatedAt": "2026-11-04T00:54:59.971413+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
   "count": 1,
@@ -14,10 +14,10 @@
       "minute": null,
       "score": {
         "home": 1,
-        "away": 0
+        "away": 1
       },
       "utcDate": "2026-11-03T22:30:00Z",
-      "updatedAt": "2026-11-03T23:13:23Z"
+      "updatedAt": "2026-11-03T23:52:51Z"
     }
   ]
 }
