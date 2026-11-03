@@ -1,7 +1,38 @@
 {
-  "updatedAt": "2026-11-03T18:23:46.166526+01:00",
+  "updatedAt": "2026-11-03T19:15:24.087900+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 0,
-  "matches": []
+  "count": 2,
+  "matches": [
+    {
+      "id": 575377,
+      "league": "CL",
+      "leagueName": "UEFA Champions League",
+      "home": "FK Shakhtar Donetsk",
+      "away": "Sporting Clube de Portugal",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-11-03T17:45:00Z",
+      "updatedAt": "2026-11-03T18:14:11Z"
+    },
+    {
+      "id": 575378,
+      "league": "CL",
+      "leagueName": "UEFA Champions League",
+      "home": "Galatasaray SK",
+      "away": "VfB Stuttgart",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "utcDate": "2026-11-03T17:45:00Z",
+      "updatedAt": "2026-11-03T18:14:43Z"
+    }
+  ]
 }
