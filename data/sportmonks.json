@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-03T23:48:07.698546+01:00",
+  "generatedAt": "2026-11-04T00:43:36.425515+01:00",
   "source": "Sportmonks Football API v3",
   "count": 12,
   "fixtures": [
@@ -198,18 +198,6 @@
   ],
   "diagnostics": [
     {
-      "date": "2026-11-03",
-      "count": 0,
-      "parsed": 0,
-      "pages": [
-        {
-          "page": 1,
-          "count": 0
-        }
-      ],
-      "ok": true
-    },
-    {
       "date": "2026-11-04",
       "count": 0,
       "parsed": 0,
@@ -271,6 +259,18 @@
     },
     {
       "date": "2026-11-09",
+      "count": 0,
+      "parsed": 0,
+      "pages": [
+        {
+          "page": 1,
+          "count": 0
+        }
+      ],
+      "ok": true
+    },
+    {
+      "date": "2026-11-10",
       "count": 0,
       "parsed": 0,
       "pages": [
