@@ -1,7 +1,248 @@
 {
-  "updatedAt": "2026-11-03T21:55:02.060844+01:00",
+  "updatedAt": "2026-11-03T22:35:39.502024+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 0,
-  "matches": []
+  "count": 16,
+  "matches": [
+    {
+      "id": 561919,
+      "league": "ELC",
+      "leagueName": "Championship",
+      "home": "Preston North End FC",
+      "away": "Sheffield United FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 2,
+        "away": 3
+      },
+      "utcDate": "2026-11-03T19:45:00Z",
+      "updatedAt": "2026-11-03T21:33:49Z"
+    },
+    {
+      "id": 561928,
+      "league": "ELC",
+      "leagueName": "Championship",
+      "home": "Charlton Athletic FC",
+      "away": "Bolton Wanderers FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "utcDate": "2026-11-03T19:45:00Z",
+      "updatedAt": "2026-11-03T21:33:54Z"
+    },
+    {
+      "id": 561921,
+      "league": "ELC",
+      "leagueName": "Championship",
+      "home": "Derby County FC",
+      "away": "Norwich City FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 4
+      },
+      "utcDate": "2026-11-03T19:45:00Z",
+      "updatedAt": "2026-11-03T21:34:41Z"
+    },
+    {
+      "id": 561918,
+      "league": "ELC",
+      "leagueName": "Championship",
+      "home": "Portsmouth FC",
+      "away": "Swansea City AFC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "utcDate": "2026-11-03T19:45:00Z",
+      "updatedAt": "2026-11-03T21:34:36Z"
+    },
+    {
+      "id": 561924,
+      "league": "ELC",
+      "leagueName": "Championship",
+      "home": "Watford FC",
+      "away": "Lincoln City FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "utcDate": "2026-11-03T19:45:00Z",
+      "updatedAt": "2026-11-03T21:33:57Z"
+    },
+    {
+      "id": 561920,
+      "league": "ELC",
+      "leagueName": "Championship",
+      "home": "Queens Park Rangers FC",
+      "away": "Burnley FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "utcDate": "2026-11-03T19:45:00Z",
+      "updatedAt": "2026-11-03T21:33:53Z"
+    },
+    {
+      "id": 561922,
+      "league": "ELC",
+      "leagueName": "Championship",
+      "home": "Blackburn Rovers FC",
+      "away": "Stoke City FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 2
+      },
+      "utcDate": "2026-11-03T19:45:00Z",
+      "updatedAt": "2026-11-03T21:34:03Z"
+    },
+    {
+      "id": 575383,
+      "league": "CL",
+      "leagueName": "UEFA Champions League",
+      "home": "Manchester United FC",
+      "away": "AS Roma",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 1,
+        "away": 2
+      },
+      "utcDate": "2026-11-03T20:00:00Z",
+      "updatedAt": "2026-11-03T21:34:11Z"
+    },
+    {
+      "id": 561923,
+      "league": "ELC",
+      "leagueName": "Championship",
+      "home": "West Bromwich Albion FC",
+      "away": "Southampton FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "utcDate": "2026-11-03T20:00:00Z",
+      "updatedAt": "2026-11-03T21:34:09Z"
+    },
+    {
+      "id": 575379,
+      "league": "CL",
+      "leagueName": "UEFA Champions League",
+      "home": "Feyenoord Rotterdam",
+      "away": "FC Internazionale Milano",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 3
+      },
+      "utcDate": "2026-11-03T20:00:00Z",
+      "updatedAt": "2026-11-03T21:34:11Z"
+    },
+    {
+      "id": 575385,
+      "league": "CL",
+      "leagueName": "UEFA Champions League",
+      "home": "LASK Linz",
+      "away": "ŠK Slovan Bratislava",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 4,
+        "away": 0
+      },
+      "utcDate": "2026-11-03T20:00:00Z",
+      "updatedAt": "2026-11-03T21:34:11Z"
+    },
+    {
+      "id": 575381,
+      "league": "CL",
+      "leagueName": "UEFA Champions League",
+      "home": "Club Atlético de Madrid",
+      "away": "FC Bayern München",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "utcDate": "2026-11-03T20:00:00Z",
+      "updatedAt": "2026-11-03T21:34:11Z"
+    },
+    {
+      "id": 561917,
+      "league": "ELC",
+      "leagueName": "Championship",
+      "home": "Birmingham City FC",
+      "away": "Millwall FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 3,
+        "away": 0
+      },
+      "utcDate": "2026-11-03T20:00:00Z",
+      "updatedAt": "2026-11-03T21:34:30Z"
+    },
+    {
+      "id": 575384,
+      "league": "CL",
+      "leagueName": "UEFA Champions League",
+      "home": "FK Bodø/Glimt",
+      "away": "Lille OSC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-11-03T20:00:00Z",
+      "updatedAt": "2026-11-03T21:34:11Z"
+    },
+    {
+      "id": 575380,
+      "league": "CL",
+      "leagueName": "UEFA Champions League",
+      "home": "FC Barcelona",
+      "away": "Aston Villa FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 3,
+        "away": 0
+      },
+      "utcDate": "2026-11-03T20:00:00Z",
+      "updatedAt": "2026-11-03T21:34:11Z"
+    },
+    {
+      "id": 575382,
+      "league": "CL",
+      "leagueName": "UEFA Champions League",
+      "home": "Villarreal CF",
+      "away": "Paris Saint-Germain FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 5
+      },
+      "utcDate": "2026-11-03T20:00:00Z",
+      "updatedAt": "2026-11-03T21:34:11Z"
+    }
+  ]
 }
