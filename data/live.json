@@ -1,7 +1,38 @@
 {
-  "updatedAt": "2026-11-04T23:15:16.410707+01:00",
+  "updatedAt": "2026-11-05T00:02:34.650625+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 0,
-  "matches": []
+  "count": 2,
+  "matches": [
+    {
+      "id": 555075,
+      "league": "BSA",
+      "leagueName": "Campeonato Brasileiro Série A",
+      "home": "CR Flamengo",
+      "away": "Grêmio FBPA",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-11-04T22:30:00Z",
+      "updatedAt": "2026-11-04T23:01:07Z"
+    },
+    {
+      "id": 555070,
+      "league": "BSA",
+      "leagueName": "Campeonato Brasileiro Série A",
+      "home": "CA Paranaense",
+      "away": "CR Vasco da Gama",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "utcDate": "2026-11-04T22:30:00Z",
+      "updatedAt": "2026-11-04T23:00:35Z"
+    }
+  ]
 }
