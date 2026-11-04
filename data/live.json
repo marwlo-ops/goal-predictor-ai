@@ -1,7 +1,38 @@
 {
-  "updatedAt": "2026-11-04T18:37:55.578982+01:00",
+  "updatedAt": "2026-11-04T19:32:20.932331+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 0,
-  "matches": []
+  "count": 2,
+  "matches": [
+    {
+      "id": 575387,
+      "league": "CL",
+      "leagueName": "UEFA Champions League",
+      "home": "Fenerbahçe SK",
+      "away": "Liverpool FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "utcDate": "2026-11-04T17:45:00Z",
+      "updatedAt": "2026-11-04T18:30:43Z"
+    },
+    {
+      "id": 575386,
+      "league": "CL",
+      "leagueName": "UEFA Champions League",
+      "home": "PAE AEK",
+      "away": "Real Madrid CF",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "utcDate": "2026-11-04T17:45:00Z",
+      "updatedAt": "2026-11-04T18:31:15Z"
+    }
+  ]
 }
