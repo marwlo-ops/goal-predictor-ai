@@ -1,23 +1,23 @@
 {
-  "updatedAt": "2026-11-04T00:54:59.971413+01:00",
+  "updatedAt": "2026-11-04T01:45:21.503380+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
   "count": 1,
   "matches": [
     {
-      "id": 555073,
+      "id": 555076,
       "league": "BSA",
       "leagueName": "Campeonato Brasileiro Série A",
-      "home": "Chapecoense AF",
-      "away": "Mirassol FC",
+      "home": "SC Internacional",
+      "away": "Coritiba FBC",
       "status": "IN_PLAY",
       "minute": null,
       "score": {
-        "home": 1,
-        "away": 1
+        "home": 0,
+        "away": 0
       },
-      "utcDate": "2026-11-03T22:30:00Z",
-      "updatedAt": "2026-11-03T23:52:51Z"
+      "utcDate": "2026-11-04T00:30:00Z",
+      "updatedAt": "2026-11-04T00:44:35Z"
     }
   ]
 }
