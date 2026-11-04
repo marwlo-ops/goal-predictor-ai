@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-04T02:45:07.715016+01:00",
+  "updatedAt": "2026-11-04T03:31:47.124473+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
   "count": 1,
@@ -17,7 +17,7 @@
         "away": 0
       },
       "utcDate": "2026-11-04T00:30:00Z",
-      "updatedAt": "2026-11-04T01:29:23Z"
+      "updatedAt": "2026-11-04T02:29:07Z"
     }
   ]
 }
