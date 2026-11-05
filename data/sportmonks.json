@@ -1,1 +1,286 @@
-{"generatedAt":"2026-11-05T13:07:15.952686+01:00","source":"Sportmonks Football API v3","count":12,"fixtures":[{"fixtureId":19713858,"home":"Silkeborg IF","away":"Lyngby Boldklub","homeId":86,"awayId":2650,"kickoff":"2026-11-06T19:00:00+01:00","date":"2026-11-06","time":"19:00","league":"Superliga","leagueId":271,"status":"Not Started","scores":[],"statistics":[],"source":"Sportmonks"},{"fixtureId":19722748,"home":"St. Johnstone","away":"Dundee","homeId":734,"awayId":284,"kickoff":"2026-11-07T16:00:00+01:00","date":"2026-11-07","time":"16:00","league":"Premiership","leagueId":501,"status":"Not Started","scores":[],"statistics":[],"source":"Sportmonks"},{"fixtureId":19722749,"home":"Dundee United","away":"Motherwell","homeId":282,"awayId":309,"kickoff":"2026-11-07T16:00:00+01:00","date":"2026-11-07","time":"16:00","league":"Premiership","leagueId":501,"status":"Not Started","scores":[],"statistics":[],"source":"Sportmonks"},{"fixtureId":19713868,"home":"Odense BK","away":"Viborg FF","homeId":1789,"awayId":2447,"kickoff":"2026-11-07T18:00:00+01:00","date":"2026-11-07","time":"18:00","league":"Superliga","leagueId":271,"status":"Not Started","scores":[],"statistics":[],"source":"Sportmonks"},{"fixtureId":19722751,"home":"Aberdeen","away":"Hibernian","homeId":273,"awayId":66,"kickoff":"2026-11-07T18:45:00+01:00","date":"2026-11-07","time":"18:45","league":"Premiership","leagueId":501,"status":"Not Started","scores":[],"statistics":[],"source":"Sportmonks"},{"fixtureId":19722747,"home":"St. Mirren","away":"Rangers","homeId":496,"awayId":62,"kickoff":"2026-11-07T21:00:00+01:00","date":"2026-11-07","time":"21:00","league":"Premiership","leagueId":501,"status":"Not Started","scores":[],"statistics":[],"source":"Sportmonks"},{"fixtureId":19713866,"home":"FC København","away":"Brøndby IF","homeId":85,"awayId":293,"kickoff":"2026-11-08T12:00:00+01:00","date":"2026-11-08","time":"12:00","league":"Superliga","leagueId":271,"status":"Not Started","scores":[],"statistics":[],"source":"Sportmonks"},{"fixtureId":19713860,"home":"AGF","away":"Horsens","homeId":2905,"awayId":211,"kickoff":"2026-11-08T14:00:00+01:00","date":"2026-11-08","time":"14:00","league":"Superliga","leagueId":271,"status":"Not Started","scores":[],"statistics":[],"source":"Sportmonks"},{"fixtureId":19722746,"home":"Hearts","away":"Falkirk","homeId":314,"awayId":770,"kickoff":"2026-11-08T16:00:00+01:00","date":"2026-11-08","time":"16:00","league":"Premiership","leagueId":501,"status":"Not Started","scores":[],"statistics":[],"source":"Sportmonks"},{"fixtureId":19713864,"home":"Randers FC","away":"Nordsjælland","homeId":2356,"awayId":2394,"kickoff":"2026-11-08T16:00:00+01:00","date":"2026-11-08","time":"16:00","league":"Superliga","leagueId":271,"status":"Not Started","scores":[],"statistics":[],"source":"Sportmonks"},{"fixtureId":19722750,"home":"Celtic","away":"Kilmarnock","homeId":53,"awayId":180,"kickoff":"2026-11-08T17:00:00+01:00","date":"2026-11-08","time":"17:00","league":"Premiership","leagueId":501,"status":"Not Started","scores":[],"statistics":[],"source":"Sportmonks"},{"fixtureId":19713862,"home":"FC Midtjylland","away":"Sønderjyske Fodbold","homeId":939,"awayId":390,"kickoff":"2026-11-08T18:00:00+01:00","date":"2026-11-08","time":"18:00","league":"Superliga","leagueId":271,"status":"Not Started","scores":[],"statistics":[],"source":"Sportmonks"}],"diagnostics":[{"date":"2026-11-05","count":0,"parsed":0,"pages":[{"page":1,"count":0}],"ok":true},{"date":"2026-11-06","count":1,"parsed":1,"pages":[{"page":1,"count":1}],"ok":true},{"date":"2026-11-07","count":5,"parsed":5,"pages":[{"page":1,"count":5}],"ok":true},{"date":"2026-11-08","count":6,"parsed":6,"pages":[{"page":1,"count":6}],"ok":true},{"date":"2026-11-09","count":0,"parsed":0,"pages":[{"page":1,"count":0}],"ok":true},{"date":"2026-11-10","count":0,"parsed":0,"pages":[{"page":1,"count":0}],"ok":true},{"date":"2026-11-11","count":0,"parsed":0,"pages":[{"page":1,"count":0}],"ok":true}],"failedDates":[]}
+{
+  "generatedAt": "2026-11-05T13:34:23.604373+01:00",
+  "source": "Sportmonks Football API v3",
+  "count": 12,
+  "fixtures": [
+    {
+      "fixtureId": 19713858,
+      "home": "Silkeborg IF",
+      "away": "Lyngby Boldklub",
+      "homeId": 86,
+      "awayId": 2650,
+      "kickoff": "2026-11-06T19:00:00+01:00",
+      "date": "2026-11-06",
+      "time": "19:00",
+      "league": "Superliga",
+      "leagueId": 271,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
+    },
+    {
+      "fixtureId": 19722748,
+      "home": "St. Johnstone",
+      "away": "Dundee",
+      "homeId": 734,
+      "awayId": 284,
+      "kickoff": "2026-11-07T16:00:00+01:00",
+      "date": "2026-11-07",
+      "time": "16:00",
+      "league": "Premiership",
+      "leagueId": 501,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
+    },
+    {
+      "fixtureId": 19722749,
+      "home": "Dundee United",
+      "away": "Motherwell",
+      "homeId": 282,
+      "awayId": 309,
+      "kickoff": "2026-11-07T16:00:00+01:00",
+      "date": "2026-11-07",
+      "time": "16:00",
+      "league": "Premiership",
+      "leagueId": 501,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
+    },
+    {
+      "fixtureId": 19713868,
+      "home": "Odense BK",
+      "away": "Viborg FF",
+      "homeId": 1789,
+      "awayId": 2447,
+      "kickoff": "2026-11-07T18:00:00+01:00",
+      "date": "2026-11-07",
+      "time": "18:00",
+      "league": "Superliga",
+      "leagueId": 271,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
+    },
+    {
+      "fixtureId": 19722751,
+      "home": "Aberdeen",
+      "away": "Hibernian",
+      "homeId": 273,
+      "awayId": 66,
+      "kickoff": "2026-11-07T18:45:00+01:00",
+      "date": "2026-11-07",
+      "time": "18:45",
+      "league": "Premiership",
+      "leagueId": 501,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
+    },
+    {
+      "fixtureId": 19722747,
+      "home": "St. Mirren",
+      "away": "Rangers",
+      "homeId": 496,
+      "awayId": 62,
+      "kickoff": "2026-11-07T21:00:00+01:00",
+      "date": "2026-11-07",
+      "time": "21:00",
+      "league": "Premiership",
+      "leagueId": 501,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
+    },
+    {
+      "fixtureId": 19713866,
+      "home": "FC København",
+      "away": "Brøndby IF",
+      "homeId": 85,
+      "awayId": 293,
+      "kickoff": "2026-11-08T12:00:00+01:00",
+      "date": "2026-11-08",
+      "time": "12:00",
+      "league": "Superliga",
+      "leagueId": 271,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
+    },
+    {
+      "fixtureId": 19713860,
+      "home": "AGF",
+      "away": "Horsens",
+      "homeId": 2905,
+      "awayId": 211,
+      "kickoff": "2026-11-08T14:00:00+01:00",
+      "date": "2026-11-08",
+      "time": "14:00",
+      "league": "Superliga",
+      "leagueId": 271,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
+    },
+    {
+      "fixtureId": 19722746,
+      "home": "Hearts",
+      "away": "Falkirk",
+      "homeId": 314,
+      "awayId": 770,
+      "kickoff": "2026-11-08T16:00:00+01:00",
+      "date": "2026-11-08",
+      "time": "16:00",
+      "league": "Premiership",
+      "leagueId": 501,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
+    },
+    {
+      "fixtureId": 19713864,
+      "home": "Randers FC",
+      "away": "Nordsjælland",
+      "homeId": 2356,
+      "awayId": 2394,
+      "kickoff": "2026-11-08T16:00:00+01:00",
+      "date": "2026-11-08",
+      "time": "16:00",
+      "league": "Superliga",
+      "leagueId": 271,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
+    },
+    {
+      "fixtureId": 19722750,
+      "home": "Celtic",
+      "away": "Kilmarnock",
+      "homeId": 53,
+      "awayId": 180,
+      "kickoff": "2026-11-08T17:00:00+01:00",
+      "date": "2026-11-08",
+      "time": "17:00",
+      "league": "Premiership",
+      "leagueId": 501,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
+    },
+    {
+      "fixtureId": 19713862,
+      "home": "FC Midtjylland",
+      "away": "Sønderjyske Fodbold",
+      "homeId": 939,
+      "awayId": 390,
+      "kickoff": "2026-11-08T18:00:00+01:00",
+      "date": "2026-11-08",
+      "time": "18:00",
+      "league": "Superliga",
+      "leagueId": 271,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
+    }
+  ],
+  "diagnostics": [
+    {
+      "date": "2026-11-05",
+      "count": 0,
+      "parsed": 0,
+      "pages": [
+        {
+          "page": 1,
+          "count": 0
+        }
+      ],
+      "ok": true
+    },
+    {
+      "date": "2026-11-06",
+      "count": 1,
+      "parsed": 1,
+      "pages": [
+        {
+          "page": 1,
+          "count": 1
+        }
+      ],
+      "ok": true
+    },
+    {
+      "date": "2026-11-07",
+      "count": 5,
+      "parsed": 5,
+      "pages": [
+        {
+          "page": 1,
+          "count": 5
+        }
+      ],
+      "ok": true
+    },
+    {
+      "date": "2026-11-08",
+      "count": 6,
+      "parsed": 6,
+      "pages": [
+        {
+          "page": 1,
+          "count": 6
+        }
+      ],
+      "ok": true
+    },
+    {
+      "date": "2026-11-09",
+      "count": 0,
+      "parsed": 0,
+      "pages": [
+        {
+          "page": 1,
+          "count": 0
+        }
+      ],
+      "ok": true
+    },
+    {
+      "date": "2026-11-10",
+      "count": 0,
+      "parsed": 0,
+      "pages": [
+        {
+          "page": 1,
+          "count": 0
+        }
+      ],
+      "ok": true
+    },
+    {
+      "date": "2026-11-11",
+      "count": 0,
+      "parsed": 0,
+      "pages": [
+        {
+          "page": 1,
+          "count": 0
+        }
+      ],
+      "ok": true
+    }
+  ],
+  "failedDates": []
+}
