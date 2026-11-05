@@ -1,38 +1,7 @@
 {
-  "updatedAt": "2026-11-05T03:39:18.195626+01:00",
+  "updatedAt": "2026-11-05T04:32:48.971373+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 2,
-  "matches": [
-    {
-      "id": 555071,
-      "league": "BSA",
-      "leagueName": "Campeonato Brasileiro Série A",
-      "home": "Botafogo FR",
-      "away": "CA Mineiro",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 1,
-        "away": 0
-      },
-      "utcDate": "2026-11-05T00:30:00Z",
-      "updatedAt": "2026-11-05T02:06:46Z"
-    },
-    {
-      "id": 555078,
-      "league": "BSA",
-      "leagueName": "Campeonato Brasileiro Série A",
-      "home": "São Paulo FC",
-      "away": "SC Corinthians Paulista",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 0,
-        "away": 0
-      },
-      "utcDate": "2026-11-05T00:30:00Z",
-      "updatedAt": "2026-11-05T02:06:47Z"
-    }
-  ]
+  "count": 0,
+  "matches": []
 }
