@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-11-06T21:06:44.172203+01:00",
+  "updatedAt": "2026-11-06T21:51:14.209758+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 6,
+  "count": 7,
   "matches": [
     {
       "id": 558845,
@@ -17,7 +17,7 @@
         "away": 1
       },
       "utcDate": "2026-11-06T19:00:00Z",
-      "updatedAt": "2026-11-06T19:54:59Z"
+      "updatedAt": "2026-11-06T20:49:55Z"
     },
     {
       "id": 565852,
@@ -29,10 +29,10 @@
       "minute": null,
       "score": {
         "home": 1,
-        "away": 0
+        "away": 1
       },
       "utcDate": "2026-11-06T19:30:00Z",
-      "updatedAt": "2026-11-06T20:05:39Z"
+      "updatedAt": "2026-11-06T20:50:27Z"
     },
     {
       "id": 558537,
@@ -40,14 +40,14 @@
       "leagueName": "Serie A",
       "home": "Venezia FC",
       "away": "Udinese Calcio",
-      "status": "IN_PLAY",
+      "status": "PAUSED",
       "minute": null,
       "score": {
         "home": 0,
         "away": 0
       },
       "utcDate": "2026-11-06T19:45:00Z",
-      "updatedAt": "2026-11-06T20:05:39Z"
+      "updatedAt": "2026-11-06T20:38:43Z"
     },
     {
       "id": 559638,
@@ -55,14 +55,14 @@
       "leagueName": "Ligue 1",
       "home": "Toulouse FC",
       "away": "RC Strasbourg Alsace",
-      "status": "IN_PLAY",
+      "status": "PAUSED",
       "minute": null,
       "score": {
-        "home": 0,
+        "home": 1,
         "away": 0
       },
       "utcDate": "2026-11-06T19:45:00Z",
-      "updatedAt": "2026-11-06T20:05:39Z"
+      "updatedAt": "2026-11-06T20:40:51Z"
     },
     {
       "id": 564740,
@@ -77,14 +77,14 @@
         "away": 0
       },
       "utcDate": "2026-11-06T20:00:00Z",
-      "updatedAt": "2026-11-06T20:05:39Z"
+      "updatedAt": "2026-11-06T20:50:27Z"
     },
     {
-      "id": 561932,
-      "league": "ELC",
-      "leagueName": "Championship",
-      "home": "Derby County FC",
-      "away": "Bolton Wanderers FC",
+      "id": 560634,
+      "league": "PL",
+      "leagueName": "Premier League",
+      "home": "Everton FC",
+      "away": "Coventry City FC",
       "status": "IN_PLAY",
       "minute": null,
       "score": {
@@ -92,7 +92,22 @@
         "away": 0
       },
       "utcDate": "2026-11-06T20:00:00Z",
-      "updatedAt": "2026-11-06T20:05:30Z"
+      "updatedAt": "2026-11-06T20:49:55Z"
+    },
+    {
+      "id": 567353,
+      "league": "PPL",
+      "leagueName": "Primeira Liga",
+      "home": "FC Famalicão",
+      "away": "FC Arouca",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-11-06T20:45:00Z",
+      "updatedAt": "2026-11-06T20:50:27Z"
     }
   ]
 }
