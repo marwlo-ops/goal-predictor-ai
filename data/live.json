@@ -1,23 +1,7 @@
 {
-  "updatedAt": "2026-11-06T23:19:44.656935+01:00",
+  "updatedAt": "2026-11-07T00:01:44.804208+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 1,
-  "matches": [
-    {
-      "id": 567353,
-      "league": "PPL",
-      "leagueName": "Primeira Liga",
-      "home": "FC Famalicão",
-      "away": "FC Arouca",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 0,
-        "away": 0
-      },
-      "utcDate": "2026-11-06T20:45:00Z",
-      "updatedAt": "2026-11-06T22:17:55Z"
-    }
-  ]
+  "count": 0,
+  "matches": []
 }
