@@ -1,7 +1,23 @@
 {
-  "updatedAt": "2026-11-06T13:40:35.987188+01:00",
+  "updatedAt": "2026-11-06T14:56:02.430973+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 0,
-  "matches": []
+  "count": 1,
+  "matches": [
+    {
+      "id": 555074,
+      "league": "BSA",
+      "leagueName": "Campeonato Brasileiro Série A",
+      "home": "Cruzeiro EC",
+      "away": "EC Bahia",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "utcDate": "2026-11-06T00:30:00Z",
+      "updatedAt": "2026-11-06T02:06:47Z"
+    }
+  ]
 }
