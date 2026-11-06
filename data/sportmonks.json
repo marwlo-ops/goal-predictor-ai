@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-06T18:51:51.613412+01:00",
+  "generatedAt": "2026-11-06T19:55:02.875789+01:00",
   "source": "Sportmonks Football API v3",
   "count": 12,
   "fixtures": [
@@ -14,7 +14,7 @@
       "time": "19:00",
       "league": "Superliga",
       "leagueId": 271,
-      "status": "Not Started",
+      "status": "Half Time",
       "scores": [
         {
           "description": "1ST_HALF",
@@ -47,7 +47,18 @@
           "goals": 0
         }
       ],
-      "statistics": [],
+      "statistics": [
+        {
+          "type": "Ball Possession %",
+          "value": 47,
+          "participantId": 2650
+        },
+        {
+          "type": "Ball Possession %",
+          "value": 53,
+          "participantId": 86
+        }
+      ],
       "source": "Sportmonks"
     },
     {
