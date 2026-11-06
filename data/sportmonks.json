@@ -1,96 +1,8 @@
 {
-  "generatedAt": "2026-11-06T23:44:39.098032+01:00",
+  "generatedAt": "2026-11-07T00:42:01.193465+01:00",
   "source": "Sportmonks Football API v3",
-  "count": 12,
+  "count": 11,
   "fixtures": [
-    {
-      "fixtureId": 19713858,
-      "home": "Silkeborg IF",
-      "away": "Lyngby Boldklub",
-      "homeId": 86,
-      "awayId": 2650,
-      "kickoff": "2026-11-06T19:00:00+01:00",
-      "date": "2026-11-06",
-      "time": "19:00",
-      "league": "Superliga",
-      "leagueId": 271,
-      "status": "Full Time",
-      "scores": [
-        {
-          "description": "1ST_HALF",
-          "participant": "home",
-          "goals": 0
-        },
-        {
-          "description": "1ST_HALF",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "home",
-          "goals": 1
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "CURRENT",
-          "participant": "home",
-          "goals": 1
-        },
-        {
-          "description": "CURRENT",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "home",
-          "goals": 1
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "away",
-          "goals": 0
-        }
-      ],
-      "statistics": [
-        {
-          "type": "Corners",
-          "value": 1,
-          "participantId": 2650
-        },
-        {
-          "type": "Corners",
-          "value": 0,
-          "participantId": 86
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 52,
-          "participantId": 2650
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 48,
-          "participantId": 86
-        },
-        {
-          "type": "Yellowcards",
-          "value": 1,
-          "participantId": 2650
-        },
-        {
-          "type": "Yellowcards",
-          "value": 3,
-          "participantId": 86
-        }
-      ],
-      "source": "Sportmonks"
-    },
     {
       "fixtureId": 19722748,
       "home": "St. Johnstone",
@@ -270,18 +182,6 @@
   ],
   "diagnostics": [
     {
-      "date": "2026-11-06",
-      "count": 1,
-      "parsed": 1,
-      "pages": [
-        {
-          "page": 1,
-          "count": 1
-        }
-      ],
-      "ok": true
-    },
-    {
       "date": "2026-11-07",
       "count": 5,
       "parsed": 5,
@@ -343,6 +243,18 @@
     },
     {
       "date": "2026-11-12",
+      "count": 0,
+      "parsed": 0,
+      "pages": [
+        {
+          "page": 1,
+          "count": 0
+        }
+      ],
+      "ok": true
+    },
+    {
+      "date": "2026-11-13",
       "count": 0,
       "parsed": 0,
       "pages": [
