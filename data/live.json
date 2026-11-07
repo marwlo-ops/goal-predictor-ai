@@ -1,174 +1,9 @@
 {
-  "updatedAt": "2026-11-07T17:45:51.311230+01:00",
+  "updatedAt": "2026-11-07T18:21:56.024079+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 12,
+  "count": 2,
   "matches": [
-    {
-      "id": 561931,
-      "league": "ELC",
-      "leagueName": "Championship",
-      "home": "Charlton Athletic FC",
-      "away": "Sheffield United FC",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 2,
-        "away": 1
-      },
-      "utcDate": "2026-11-07T15:00:00Z",
-      "updatedAt": "2026-11-07T16:44:12Z"
-    },
-    {
-      "id": 560633,
-      "league": "PL",
-      "leagueName": "Premier League",
-      "home": "Fulham FC",
-      "away": "Newcastle United FC",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 0,
-        "away": 0
-      },
-      "utcDate": "2026-11-07T15:00:00Z",
-      "updatedAt": "2026-11-07T16:44:04Z"
-    },
-    {
-      "id": 561934,
-      "league": "ELC",
-      "leagueName": "Championship",
-      "home": "Watford FC",
-      "away": "Middlesbrough FC",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 0,
-        "away": 0
-      },
-      "utcDate": "2026-11-07T15:00:00Z",
-      "updatedAt": "2026-11-07T16:44:15Z"
-    },
-    {
-      "id": 561929,
-      "league": "ELC",
-      "leagueName": "Championship",
-      "home": "Queens Park Rangers FC",
-      "away": "Lincoln City FC",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 2,
-        "away": 1
-      },
-      "utcDate": "2026-11-07T15:00:00Z",
-      "updatedAt": "2026-11-07T16:44:14Z"
-    },
-    {
-      "id": 561940,
-      "league": "ELC",
-      "leagueName": "Championship",
-      "home": "Birmingham City FC",
-      "away": "Swansea City AFC",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 1,
-        "away": 1
-      },
-      "utcDate": "2026-11-07T15:00:00Z",
-      "updatedAt": "2026-11-07T16:44:41Z"
-    },
-    {
-      "id": 561936,
-      "league": "ELC",
-      "leagueName": "Championship",
-      "home": "West Bromwich Albion FC",
-      "away": "Millwall FC",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 2,
-        "away": 0
-      },
-      "utcDate": "2026-11-07T15:00:00Z",
-      "updatedAt": "2026-11-07T16:44:02Z"
-    },
-    {
-      "id": 561937,
-      "league": "ELC",
-      "leagueName": "Championship",
-      "home": "Preston North End FC",
-      "away": "Southampton FC",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 1,
-        "away": 0
-      },
-      "utcDate": "2026-11-07T15:00:00Z",
-      "updatedAt": "2026-11-07T16:44:21Z"
-    },
-    {
-      "id": 560640,
-      "league": "PL",
-      "leagueName": "Premier League",
-      "home": "Arsenal FC",
-      "away": "Hull City AFC",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 1,
-        "away": 0
-      },
-      "utcDate": "2026-11-07T15:00:00Z",
-      "updatedAt": "2026-11-07T16:44:03Z"
-    },
-    {
-      "id": 561935,
-      "league": "ELC",
-      "leagueName": "Championship",
-      "home": "Blackburn Rovers FC",
-      "away": "West Ham United FC",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 2,
-        "away": 1
-      },
-      "utcDate": "2026-11-07T15:00:00Z",
-      "updatedAt": "2026-11-07T16:44:41Z"
-    },
-    {
-      "id": 561930,
-      "league": "ELC",
-      "leagueName": "Championship",
-      "home": "Cardiff City FC",
-      "away": "Burnley FC",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 3,
-        "away": 4
-      },
-      "utcDate": "2026-11-07T15:00:00Z",
-      "updatedAt": "2026-11-07T16:44:15Z"
-    },
-    {
-      "id": 564745,
-      "league": "PD",
-      "leagueName": "Primera Division",
-      "home": "RCD Espanyol de Barcelona",
-      "away": "RC Deportivo La Coruña",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 0,
-        "away": 0
-      },
-      "utcDate": "2026-11-07T15:15:00Z",
-      "updatedAt": "2026-11-07T16:44:04Z"
-    },
     {
       "id": 558844,
       "league": "DED",
@@ -182,7 +17,22 @@
         "away": 2
       },
       "utcDate": "2026-11-07T15:30:00Z",
-      "updatedAt": "2026-11-07T16:44:05Z"
+      "updatedAt": "2026-11-07T17:21:23Z"
+    },
+    {
+      "id": 558535,
+      "league": "SA",
+      "leagueName": "Serie A",
+      "home": "Parma Calcio 1913",
+      "away": "Bologna FC 1909",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-11-07T17:00:00Z",
+      "updatedAt": "2026-11-07T17:20:51Z"
     }
   ]
 }
