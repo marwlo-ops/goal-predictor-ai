@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-07T22:14:33.212847+01:00",
+  "generatedAt": "2026-11-07T23:14:30.887699+01:00",
   "source": "Sportmonks Football API v3",
   "count": 11,
   "fixtures": [
@@ -366,7 +366,7 @@
       "time": "21:00",
       "league": "Premiership",
       "leagueId": 501,
-      "status": "2nd Half",
+      "status": "Full Time",
       "scores": [
         {
           "description": "1ST_HALF",
@@ -381,7 +381,7 @@
         {
           "description": "2ND_HALF",
           "participant": "away",
-          "goals": 1
+          "goals": 2
         },
         {
           "description": "2ND_HALF",
@@ -391,7 +391,7 @@
         {
           "description": "CURRENT",
           "participant": "away",
-          "goals": 1
+          "goals": 2
         },
         {
           "description": "CURRENT",
@@ -401,7 +401,7 @@
         {
           "description": "2ND_HALF_ONLY",
           "participant": "away",
-          "goals": 0
+          "goals": 1
         },
         {
           "description": "2ND_HALF_ONLY",
@@ -412,32 +412,32 @@
       "statistics": [
         {
           "type": "Corners",
-          "value": 3,
+          "value": 4,
           "participantId": 62
         },
         {
           "type": "Corners",
-          "value": 5,
+          "value": 7,
           "participantId": 496
         },
         {
           "type": "Ball Possession %",
-          "value": 50,
+          "value": 45,
           "participantId": 62
         },
         {
           "type": "Ball Possession %",
-          "value": 50,
+          "value": 55,
           "participantId": 496
-        },
-        {
-          "type": "Yellowcards",
-          "value": 0,
-          "participantId": 62
         },
         {
           "type": "Yellowcards",
           "value": 2,
+          "participantId": 62
+        },
+        {
+          "type": "Yellowcards",
+          "value": 3,
           "participantId": 496
         }
       ],
