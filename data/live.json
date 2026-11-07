@@ -1,38 +1,7 @@
 {
-  "updatedAt": "2026-11-07T23:04:05.411596+01:00",
+  "updatedAt": "2026-11-07T23:41:07.470608+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 2,
-  "matches": [
-    {
-      "id": 564741,
-      "league": "PD",
-      "leagueName": "Primera Division",
-      "home": "Valencia CF",
-      "away": "Real Madrid CF",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 0,
-        "away": 3
-      },
-      "utcDate": "2026-11-07T20:00:00Z",
-      "updatedAt": "2026-11-07T22:02:59Z"
-    },
-    {
-      "id": 567350,
-      "league": "PPL",
-      "leagueName": "Primeira Liga",
-      "home": "Sporting Clube de Portugal",
-      "away": "Moreirense FC",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 1,
-        "away": 0
-      },
-      "utcDate": "2026-11-07T20:30:00Z",
-      "updatedAt": "2026-11-07T22:02:27Z"
-    }
-  ]
+  "count": 0,
+  "matches": []
 }
