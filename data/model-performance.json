@@ -1,58 +1,58 @@
 {
-  "generatedAt": "2026-11-06T06:24:22.539719+00:00",
+  "generatedAt": "2026-11-07T06:10:08.717291+00:00",
   "source": "Pierwsze zapisane prognozy przedmeczowe porównane z wynikami końcowymi",
   "forecastCount": 213,
-  "resolvedCount": 133,
-  "oneXTwoAccuracy": 57.14,
-  "oneXTwoBrierScore": 0.1878,
+  "resolvedCount": 143,
+  "oneXTwoAccuracy": 56.64,
+  "oneXTwoBrierScore": 0.1892,
   "markets": {
     "awayOver05": {
-      "count": 133,
-      "hitRate": 65.41,
-      "brierScore": 0.2343,
-      "logLoss": 0.6732
+      "count": 143,
+      "hitRate": 66.43,
+      "brierScore": 0.2289,
+      "logLoss": 0.6599
     },
     "awayOver15": {
-      "count": 133,
-      "hitRate": 74.44,
-      "brierScore": 0.2029,
-      "logLoss": 0.5939
+      "count": 143,
+      "hitRate": 73.43,
+      "brierScore": 0.2053,
+      "logLoss": 0.5987
     },
     "btts": {
-      "count": 133,
-      "hitRate": 52.63,
-      "brierScore": 0.2631,
-      "logLoss": 0.7263
+      "count": 143,
+      "hitRate": 53.15,
+      "brierScore": 0.2583,
+      "logLoss": 0.7157
     },
     "homeOver05": {
-      "count": 133,
-      "hitRate": 78.95,
-      "brierScore": 0.1568,
-      "logLoss": 0.4875
+      "count": 143,
+      "hitRate": 79.02,
+      "brierScore": 0.156,
+      "logLoss": 0.4853
     },
     "homeOver15": {
-      "count": 133,
-      "hitRate": 54.89,
-      "brierScore": 0.2447,
-      "logLoss": 0.6824
+      "count": 143,
+      "hitRate": 55.24,
+      "brierScore": 0.2442,
+      "logLoss": 0.6813
     },
     "over15": {
-      "count": 133,
-      "hitRate": 80.45,
-      "brierScore": 0.1526,
-      "logLoss": 0.4795
+      "count": 143,
+      "hitRate": 80.42,
+      "brierScore": 0.152,
+      "logLoss": 0.4773
     },
     "over25": {
-      "count": 133,
-      "hitRate": 60.9,
-      "brierScore": 0.2295,
-      "logLoss": 0.6486
+      "count": 143,
+      "hitRate": 61.54,
+      "brierScore": 0.2302,
+      "logLoss": 0.6504
     },
     "over35": {
-      "count": 133,
-      "hitRate": 66.92,
-      "brierScore": 0.2157,
-      "logLoss": 0.6226
+      "count": 143,
+      "hitRate": 65.73,
+      "brierScore": 0.2193,
+      "logLoss": 0.6304
     }
   },
   "calibration": [
@@ -70,21 +70,21 @@
     },
     {
       "range": "20-30%",
-      "count": 171,
-      "predicted": 25.39,
-      "observed": 17.54
+      "count": 185,
+      "predicted": 25.47,
+      "observed": 17.3
     },
     {
       "range": "30-40%",
-      "count": 90,
-      "predicted": 35.14,
-      "observed": 43.33
+      "count": 99,
+      "predicted": 35.17,
+      "observed": 43.43
     },
     {
       "range": "40-50%",
-      "count": 55,
-      "predicted": 44.92,
-      "observed": 50.91
+      "count": 62,
+      "predicted": 44.86,
+      "observed": 51.61
     },
     {
       "range": "50-60%",
