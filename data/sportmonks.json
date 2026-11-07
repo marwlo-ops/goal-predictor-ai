@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-07T20:22:45.357947+01:00",
+  "generatedAt": "2026-11-07T21:13:20.976533+01:00",
   "source": "Sportmonks Football API v3",
   "count": 11,
   "fixtures": [
@@ -278,7 +278,7 @@
       "time": "18:45",
       "league": "Premiership",
       "leagueId": 501,
-      "status": "2nd Half",
+      "status": "Full Time",
       "scores": [
         {
           "description": "1ST_HALF",
@@ -293,7 +293,7 @@
         {
           "description": "2ND_HALF",
           "participant": "away",
-          "goals": 2
+          "goals": 4
         },
         {
           "description": "2ND_HALF",
@@ -303,7 +303,7 @@
         {
           "description": "CURRENT",
           "participant": "away",
-          "goals": 2
+          "goals": 4
         },
         {
           "description": "CURRENT",
@@ -313,7 +313,7 @@
         {
           "description": "2ND_HALF_ONLY",
           "participant": "away",
-          "goals": 2
+          "goals": 4
         },
         {
           "description": "2ND_HALF_ONLY",
@@ -334,12 +334,12 @@
         },
         {
           "type": "Ball Possession %",
-          "value": 55,
+          "value": 58,
           "participantId": 66
         },
         {
           "type": "Ball Possession %",
-          "value": 45,
+          "value": 42,
           "participantId": 273
         },
         {
@@ -366,7 +366,7 @@
       "time": "21:00",
       "league": "Premiership",
       "leagueId": 501,
-      "status": "Not Started",
+      "status": "1st Half",
       "scores": [
         {
           "description": "1ST_HALF",
@@ -399,7 +399,38 @@
           "goals": 0
         }
       ],
-      "statistics": [],
+      "statistics": [
+        {
+          "type": "Corners",
+          "value": 1,
+          "participantId": 62
+        },
+        {
+          "type": "Corners",
+          "value": 0,
+          "participantId": 496
+        },
+        {
+          "type": "Ball Possession %",
+          "value": 85,
+          "participantId": 62
+        },
+        {
+          "type": "Ball Possession %",
+          "value": 15,
+          "participantId": 496
+        },
+        {
+          "type": "Yellowcards",
+          "value": 0,
+          "participantId": 62
+        },
+        {
+          "type": "Yellowcards",
+          "value": 1,
+          "participantId": 496
+        }
+      ],
       "source": "Sportmonks"
     },
     {
