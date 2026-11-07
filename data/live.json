@@ -1,24 +1,9 @@
 {
-  "updatedAt": "2026-11-07T22:20:33.792884+01:00",
+  "updatedAt": "2026-11-07T23:04:05.411596+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 5,
+  "count": 2,
   "matches": [
-    {
-      "id": 558531,
-      "league": "SA",
-      "leagueName": "Serie A",
-      "home": "AS Roma",
-      "away": "US Sassuolo Calcio",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 3,
-        "away": 0
-      },
-      "utcDate": "2026-11-07T19:45:00Z",
-      "updatedAt": "2026-11-07T21:18:43Z"
-    },
     {
       "id": 564741,
       "league": "PD",
@@ -29,40 +14,10 @@
       "minute": null,
       "score": {
         "home": 0,
-        "away": 2
+        "away": 3
       },
       "utcDate": "2026-11-07T20:00:00Z",
-      "updatedAt": "2026-11-07T21:18:11Z"
-    },
-    {
-      "id": 558843,
-      "league": "DED",
-      "leagueName": "Eredivisie",
-      "home": "SBV Excelsior",
-      "away": "Go Ahead Eagles",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 0,
-        "away": 0
-      },
-      "utcDate": "2026-11-07T20:00:00Z",
-      "updatedAt": "2026-11-07T21:18:43Z"
-    },
-    {
-      "id": 559635,
-      "league": "FL1",
-      "leagueName": "Ligue 1",
-      "home": "Paris Saint-Germain FC",
-      "away": "ES Troyes AC",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 1,
-        "away": 0
-      },
-      "utcDate": "2026-11-07T20:05:00Z",
-      "updatedAt": "2026-11-07T21:18:43Z"
+      "updatedAt": "2026-11-07T22:02:59Z"
     },
     {
       "id": 567350,
@@ -73,11 +28,11 @@
       "status": "IN_PLAY",
       "minute": null,
       "score": {
-        "home": 0,
+        "home": 1,
         "away": 0
       },
       "utcDate": "2026-11-07T20:30:00Z",
-      "updatedAt": "2026-11-07T21:19:15Z"
+      "updatedAt": "2026-11-07T22:02:27Z"
     }
   ]
 }
