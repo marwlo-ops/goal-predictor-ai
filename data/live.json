@@ -1,38 +1,83 @@
 {
-  "updatedAt": "2026-11-07T18:21:56.024079+01:00",
+  "updatedAt": "2026-11-07T19:00:29.576451+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 2,
+  "count": 5,
   "matches": [
-    {
-      "id": 558844,
-      "league": "DED",
-      "leagueName": "Eredivisie",
-      "home": "Fortuna Sittard",
-      "away": "Telstar 1963",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 2,
-        "away": 2
-      },
-      "utcDate": "2026-11-07T15:30:00Z",
-      "updatedAt": "2026-11-07T17:21:23Z"
-    },
     {
       "id": 558535,
       "league": "SA",
       "leagueName": "Serie A",
       "home": "Parma Calcio 1913",
       "away": "Bologna FC 1909",
-      "status": "IN_PLAY",
+      "status": "PAUSED",
       "minute": null,
       "score": {
         "home": 0,
         "away": 0
       },
       "utcDate": "2026-11-07T17:00:00Z",
-      "updatedAt": "2026-11-07T17:20:51Z"
+      "updatedAt": "2026-11-07T17:56:03Z"
+    },
+    {
+      "id": 564739,
+      "league": "PD",
+      "leagueName": "Primera Division",
+      "home": "CA Osasuna",
+      "away": "Athletic Club",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-11-07T17:30:00Z",
+      "updatedAt": "2026-11-07T17:58:11Z"
+    },
+    {
+      "id": 560641,
+      "league": "PL",
+      "leagueName": "Premier League",
+      "home": "Nottingham Forest FC",
+      "away": "Manchester City FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "utcDate": "2026-11-07T17:30:00Z",
+      "updatedAt": "2026-11-07T17:58:11Z"
+    },
+    {
+      "id": 565849,
+      "league": "BL1",
+      "leagueName": "Bundesliga",
+      "home": "VfB Stuttgart",
+      "away": "SV Werder Bremen",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "utcDate": "2026-11-07T17:30:00Z",
+      "updatedAt": "2026-11-07T17:58:11Z"
+    },
+    {
+      "id": 558841,
+      "league": "DED",
+      "leagueName": "Eredivisie",
+      "home": "ADO Den Haag",
+      "away": "Sparta Rotterdam",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-11-07T17:45:00Z",
+      "updatedAt": "2026-11-07T17:58:11Z"
     }
   ]
 }
