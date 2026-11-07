@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-11-07T21:08:38.111607+01:00",
+  "updatedAt": "2026-11-07T21:45:37.924089+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 3,
+  "count": 5,
   "matches": [
     {
       "id": 558531,
@@ -13,11 +13,26 @@
       "status": "IN_PLAY",
       "minute": null,
       "score": {
-        "home": 0,
+        "home": 2,
         "away": 0
       },
       "utcDate": "2026-11-07T19:45:00Z",
-      "updatedAt": "2026-11-07T20:07:15Z"
+      "updatedAt": "2026-11-07T20:37:39Z"
+    },
+    {
+      "id": 564741,
+      "league": "PD",
+      "leagueName": "Primera Division",
+      "home": "Valencia CF",
+      "away": "Real Madrid CF",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 2
+      },
+      "utcDate": "2026-11-07T20:00:00Z",
+      "updatedAt": "2026-11-07T20:44:35Z"
     },
     {
       "id": 558843,
@@ -32,22 +47,37 @@
         "away": 0
       },
       "utcDate": "2026-11-07T20:00:00Z",
-      "updatedAt": "2026-11-07T20:07:15Z"
+      "updatedAt": "2026-11-07T20:44:35Z"
     },
     {
-      "id": 564741,
-      "league": "PD",
-      "leagueName": "Primera Division",
-      "home": "Valencia CF",
-      "away": "Real Madrid CF",
+      "id": 559635,
+      "league": "FL1",
+      "leagueName": "Ligue 1",
+      "home": "Paris Saint-Germain FC",
+      "away": "ES Troyes AC",
       "status": "IN_PLAY",
       "minute": null,
       "score": {
         "home": 0,
         "away": 0
       },
-      "utcDate": "2026-11-07T20:00:00Z",
-      "updatedAt": "2026-11-07T20:05:07Z"
+      "utcDate": "2026-11-07T20:05:00Z",
+      "updatedAt": "2026-11-07T20:44:35Z"
+    },
+    {
+      "id": 567350,
+      "league": "PPL",
+      "leagueName": "Primeira Liga",
+      "home": "Sporting Clube de Portugal",
+      "away": "Moreirense FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-11-07T20:30:00Z",
+      "updatedAt": "2026-11-07T20:44:35Z"
     }
   ]
 }
