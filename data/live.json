@@ -1,39 +1,9 @@
 {
-  "updatedAt": "2026-11-08T20:11:13.607162+01:00",
+  "updatedAt": "2026-11-08T20:58:48.404124+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
   "count": 5,
   "matches": [
-    {
-      "id": 564747,
-      "league": "PD",
-      "leagueName": "Primera Division",
-      "home": "Villarreal CF",
-      "away": "Getafe CF",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 0,
-        "away": 0
-      },
-      "utcDate": "2026-11-08T17:30:00Z",
-      "updatedAt": "2026-11-08T19:09:39Z"
-    },
-    {
-      "id": 564742,
-      "league": "PD",
-      "leagueName": "Primera Division",
-      "home": "RC Celta de Vigo",
-      "away": "Levante UD",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 0,
-        "away": 0
-      },
-      "utcDate": "2026-11-08T17:30:00Z",
-      "updatedAt": "2026-11-08T19:09:39Z"
-    },
     {
       "id": 567349,
       "league": "PPL",
@@ -43,11 +13,11 @@
       "status": "IN_PLAY",
       "minute": null,
       "score": {
-        "home": 0,
-        "away": 1
+        "home": 1,
+        "away": 2
       },
       "utcDate": "2026-11-08T18:00:00Z",
-      "updatedAt": "2026-11-08T18:54:43Z"
+      "updatedAt": "2026-11-08T19:57:39Z"
     },
     {
       "id": 565856,
@@ -62,7 +32,7 @@
         "away": 0
       },
       "utcDate": "2026-11-08T18:30:00Z",
-      "updatedAt": "2026-11-08T19:09:39Z"
+      "updatedAt": "2026-11-08T19:57:39Z"
     },
     {
       "id": 558838,
@@ -74,10 +44,40 @@
       "minute": null,
       "score": {
         "home": 0,
-        "away": 0
+        "away": 2
       },
       "utcDate": "2026-11-08T19:00:00Z",
-      "updatedAt": "2026-11-08T19:09:39Z"
+      "updatedAt": "2026-11-08T19:53:55Z"
+    },
+    {
+      "id": 558529,
+      "league": "SA",
+      "leagueName": "Serie A",
+      "home": "ACF Fiorentina",
+      "away": "Juventus FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-11-08T19:45:00Z",
+      "updatedAt": "2026-11-08T19:57:07Z"
+    },
+    {
+      "id": 559630,
+      "league": "FL1",
+      "leagueName": "Ligue 1",
+      "home": "Racing Club de Lens",
+      "away": "Olympique de Marseille",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "utcDate": "2026-11-08T19:45:00Z",
+      "updatedAt": "2026-11-08T19:57:07Z"
     }
   ]
 }
