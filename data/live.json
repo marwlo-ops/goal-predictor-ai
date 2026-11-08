@@ -1,24 +1,9 @@
 {
-  "updatedAt": "2026-11-08T17:21:46.830918+01:00",
+  "updatedAt": "2026-11-08T18:07:14.806111+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 10,
+  "count": 12,
   "matches": [
-    {
-      "id": 565855,
-      "league": "BL1",
-      "leagueName": "Bundesliga",
-      "home": "1. FC Köln",
-      "away": "Bayer 04 Leverkusen",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 0,
-        "away": 2
-      },
-      "utcDate": "2026-11-08T14:30:00Z",
-      "updatedAt": "2026-11-08T16:21:07Z"
-    },
     {
       "id": 564743,
       "league": "PD",
@@ -28,11 +13,11 @@
       "status": "IN_PLAY",
       "minute": null,
       "score": {
-        "home": 0,
+        "home": 1,
         "away": 0
       },
       "utcDate": "2026-11-08T15:15:00Z",
-      "updatedAt": "2026-11-08T16:10:59Z"
+      "updatedAt": "2026-11-08T17:06:27Z"
     },
     {
       "id": 567352,
@@ -47,7 +32,7 @@
         "away": 0
       },
       "utcDate": "2026-11-08T15:30:00Z",
-      "updatedAt": "2026-11-08T16:21:07Z"
+      "updatedAt": "2026-11-08T17:05:55Z"
     },
     {
       "id": 567351,
@@ -59,10 +44,10 @@
       "minute": null,
       "score": {
         "home": 1,
-        "away": 0
+        "away": 1
       },
       "utcDate": "2026-11-08T15:30:00Z",
-      "updatedAt": "2026-11-08T16:21:07Z"
+      "updatedAt": "2026-11-08T17:06:27Z"
     },
     {
       "id": 558842,
@@ -73,11 +58,11 @@
       "status": "IN_PLAY",
       "minute": null,
       "score": {
-        "home": 0,
+        "home": 1,
         "away": 3
       },
       "utcDate": "2026-11-08T15:45:00Z",
-      "updatedAt": "2026-11-08T16:21:07Z"
+      "updatedAt": "2026-11-08T17:05:55Z"
     },
     {
       "id": 558837,
@@ -89,10 +74,10 @@
       "minute": null,
       "score": {
         "home": 1,
-        "away": 1
+        "away": 3
       },
       "utcDate": "2026-11-08T15:45:00Z",
-      "updatedAt": "2026-11-08T16:21:07Z"
+      "updatedAt": "2026-11-08T17:05:55Z"
     },
     {
       "id": 559633,
@@ -104,10 +89,10 @@
       "minute": null,
       "score": {
         "home": 0,
-        "away": 0
+        "away": 1
       },
       "utcDate": "2026-11-08T16:15:00Z",
-      "updatedAt": "2026-11-08T16:20:35Z"
+      "updatedAt": "2026-11-08T17:05:55Z"
     },
     {
       "id": 559631,
@@ -119,10 +104,10 @@
       "minute": null,
       "score": {
         "home": 0,
-        "away": 0
+        "away": 1
       },
       "utcDate": "2026-11-08T16:15:00Z",
-      "updatedAt": "2026-11-08T16:20:35Z"
+      "updatedAt": "2026-11-08T17:05:55Z"
     },
     {
       "id": 559634,
@@ -134,10 +119,10 @@
       "minute": null,
       "score": {
         "home": 0,
-        "away": 0
+        "away": 1
       },
       "utcDate": "2026-11-08T16:15:00Z",
-      "updatedAt": "2026-11-08T16:20:35Z"
+      "updatedAt": "2026-11-08T17:05:55Z"
     },
     {
       "id": 559632,
@@ -148,11 +133,56 @@
       "status": "IN_PLAY",
       "minute": null,
       "score": {
-        "home": 0,
+        "home": 1,
         "away": 0
       },
       "utcDate": "2026-11-08T16:15:00Z",
-      "updatedAt": "2026-11-08T16:20:35Z"
+      "updatedAt": "2026-11-08T17:05:55Z"
+    },
+    {
+      "id": 565854,
+      "league": "BL1",
+      "leagueName": "Bundesliga",
+      "home": "SC Freiburg",
+      "away": "1. FC Union Berlin",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-11-08T16:30:00Z",
+      "updatedAt": "2026-11-08T17:05:55Z"
+    },
+    {
+      "id": 560639,
+      "league": "PL",
+      "leagueName": "Premier League",
+      "home": "Manchester United FC",
+      "away": "Aston Villa FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 1,
+        "away": 2
+      },
+      "utcDate": "2026-11-08T16:30:00Z",
+      "updatedAt": "2026-11-08T17:05:55Z"
+    },
+    {
+      "id": 558530,
+      "league": "SA",
+      "leagueName": "Serie A",
+      "home": "FC Internazionale Milano",
+      "away": "Como 1907",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-11-08T17:00:00Z",
+      "updatedAt": "2026-11-08T17:05:23Z"
     }
   ]
 }
