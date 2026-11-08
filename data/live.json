@@ -1,24 +1,9 @@
 {
-  "updatedAt": "2026-11-08T16:09:57.914440+01:00",
+  "updatedAt": "2026-11-08T16:47:00.129808+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 9,
+  "count": 10,
   "matches": [
-    {
-      "id": 558839,
-      "league": "DED",
-      "leagueName": "Eredivisie",
-      "home": "FC Twente '65",
-      "away": "AFC Ajax",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 1,
-        "away": 2
-      },
-      "utcDate": "2026-11-08T13:30:00Z",
-      "updatedAt": "2026-11-08T15:08:35Z"
-    },
     {
       "id": 560636,
       "league": "PL",
@@ -32,7 +17,7 @@
         "away": 0
       },
       "utcDate": "2026-11-08T14:00:00Z",
-      "updatedAt": "2026-11-08T14:58:59Z"
+      "updatedAt": "2026-11-08T15:45:55Z"
     },
     {
       "id": 559636,
@@ -44,10 +29,10 @@
       "minute": null,
       "score": {
         "home": 1,
-        "away": 1
+        "away": 2
       },
       "utcDate": "2026-11-08T14:00:00Z",
-      "updatedAt": "2026-11-08T15:08:35Z"
+      "updatedAt": "2026-11-08T15:45:55Z"
     },
     {
       "id": 558536,
@@ -62,7 +47,7 @@
         "away": 2
       },
       "utcDate": "2026-11-08T14:00:00Z",
-      "updatedAt": "2026-11-08T14:54:43Z"
+      "updatedAt": "2026-11-08T15:45:55Z"
     },
     {
       "id": 560638,
@@ -77,22 +62,7 @@
         "away": 0
       },
       "utcDate": "2026-11-08T14:00:00Z",
-      "updatedAt": "2026-11-08T14:56:19Z"
-    },
-    {
-      "id": 560635,
-      "league": "PL",
-      "leagueName": "Premier League",
-      "home": "Crystal Palace FC",
-      "away": "Liverpool FC",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 0,
-        "away": 1
-      },
-      "utcDate": "2026-11-08T14:00:00Z",
-      "updatedAt": "2026-11-08T14:55:47Z"
+      "updatedAt": "2026-11-08T15:46:27Z"
     },
     {
       "id": 560637,
@@ -103,11 +73,11 @@
       "status": "IN_PLAY",
       "minute": null,
       "score": {
-        "home": 0,
-        "away": 1
+        "home": 1,
+        "away": 2
       },
       "utcDate": "2026-11-08T14:00:00Z",
-      "updatedAt": "2026-11-08T15:08:35Z"
+      "updatedAt": "2026-11-08T15:45:55Z"
     },
     {
       "id": 558538,
@@ -119,10 +89,25 @@
       "minute": null,
       "score": {
         "home": 0,
-        "away": 0
+        "away": 1
       },
       "utcDate": "2026-11-08T14:00:00Z",
-      "updatedAt": "2026-11-08T14:54:11Z"
+      "updatedAt": "2026-11-08T15:45:23Z"
+    },
+    {
+      "id": 560635,
+      "league": "PL",
+      "leagueName": "Premier League",
+      "home": "Crystal Palace FC",
+      "away": "Liverpool FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 2
+      },
+      "utcDate": "2026-11-08T14:00:00Z",
+      "updatedAt": "2026-11-08T15:45:55Z"
     },
     {
       "id": 565855,
@@ -137,7 +122,37 @@
         "away": 1
       },
       "utcDate": "2026-11-08T14:30:00Z",
-      "updatedAt": "2026-11-08T15:08:35Z"
+      "updatedAt": "2026-11-08T15:45:55Z"
+    },
+    {
+      "id": 564743,
+      "league": "PD",
+      "leagueName": "Primera Division",
+      "home": "Real Sociedad de Fútbol",
+      "away": "Rayo Vallecano de Madrid",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-11-08T15:15:00Z",
+      "updatedAt": "2026-11-08T15:46:27Z"
+    },
+    {
+      "id": 567351,
+      "league": "PPL",
+      "leagueName": "Primeira Liga",
+      "home": "CD Santa Clara",
+      "away": "Gil Vicente FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-11-08T15:30:00Z",
+      "updatedAt": "2026-11-08T15:46:27Z"
     }
   ]
 }
