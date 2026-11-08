@@ -1,1 +1,38 @@
-{"updatedAt":"2026-11-08T13:54:20.638320+01:00","source":"football-data.org","refreshIntervalMinutes":10,"count":2,"matches":[{"id":558840,"league":"DED","leagueName":"Eredivisie","home":"SC Heerenveen","away":"Feyenoord Rotterdam","status":"IN_PLAY","minute":null,"score":{"home":3,"away":3},"utcDate":"2026-11-08T11:15:00Z","updatedAt":"2026-11-08T12:53:07Z"},{"id":558533,"league":"SA","leagueName":"Serie A","home":"SSC Napoli","away":"SS Lazio","status":"IN_PLAY","minute":null,"score":{"home":1,"away":1},"utcDate":"2026-11-08T11:30:00Z","updatedAt":"2026-11-08T12:53:39Z"}]}
+{
+  "updatedAt": "2026-11-08T14:42:41.116677+01:00",
+  "source": "football-data.org",
+  "refreshIntervalMinutes": 10,
+  "count": 2,
+  "matches": [
+    {
+      "id": 564738,
+      "league": "PD",
+      "leagueName": "Primera Division",
+      "home": "Elche CF",
+      "away": "Real Betis Balompié",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-11-08T13:00:00Z",
+      "updatedAt": "2026-11-08T13:41:07Z"
+    },
+    {
+      "id": 558839,
+      "league": "DED",
+      "leagueName": "Eredivisie",
+      "home": "FC Twente '65",
+      "away": "AFC Ajax",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "utcDate": "2026-11-08T13:30:00Z",
+      "updatedAt": "2026-11-08T13:41:39Z"
+    }
+  ]
+}
