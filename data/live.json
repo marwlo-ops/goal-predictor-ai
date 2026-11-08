@@ -1,39 +1,9 @@
 {
-  "updatedAt": "2026-11-08T20:58:48.404124+01:00",
+  "updatedAt": "2026-11-08T21:36:24.585357+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 5,
+  "count": 6,
   "matches": [
-    {
-      "id": 567349,
-      "league": "PPL",
-      "leagueName": "Primeira Liga",
-      "home": "Vitória SC",
-      "away": "FC Porto",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 1,
-        "away": 2
-      },
-      "utcDate": "2026-11-08T18:00:00Z",
-      "updatedAt": "2026-11-08T19:57:39Z"
-    },
-    {
-      "id": 565856,
-      "league": "BL1",
-      "leagueName": "Bundesliga",
-      "home": "TSG 1899 Hoffenheim",
-      "away": "FC Schalke 04",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 2,
-        "away": 0
-      },
-      "utcDate": "2026-11-08T18:30:00Z",
-      "updatedAt": "2026-11-08T19:57:39Z"
-    },
     {
       "id": 558838,
       "league": "DED",
@@ -43,26 +13,11 @@
       "status": "IN_PLAY",
       "minute": null,
       "score": {
-        "home": 0,
-        "away": 2
+        "home": 2,
+        "away": 3
       },
       "utcDate": "2026-11-08T19:00:00Z",
-      "updatedAt": "2026-11-08T19:53:55Z"
-    },
-    {
-      "id": 558529,
-      "league": "SA",
-      "leagueName": "Serie A",
-      "home": "ACF Fiorentina",
-      "away": "Juventus FC",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 0,
-        "away": 0
-      },
-      "utcDate": "2026-11-08T19:45:00Z",
-      "updatedAt": "2026-11-08T19:57:07Z"
+      "updatedAt": "2026-11-08T20:34:59Z"
     },
     {
       "id": 559630,
@@ -73,11 +28,71 @@
       "status": "IN_PLAY",
       "minute": null,
       "score": {
-        "home": 0,
+        "home": 1,
         "away": 1
       },
       "utcDate": "2026-11-08T19:45:00Z",
-      "updatedAt": "2026-11-08T19:57:07Z"
+      "updatedAt": "2026-11-08T20:35:31Z"
+    },
+    {
+      "id": 558529,
+      "league": "SA",
+      "leagueName": "Serie A",
+      "home": "ACF Fiorentina",
+      "away": "Juventus FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "utcDate": "2026-11-08T19:45:00Z",
+      "updatedAt": "2026-11-08T20:35:31Z"
+    },
+    {
+      "id": 564746,
+      "league": "PD",
+      "leagueName": "Primera Division",
+      "home": "Club Atlético de Madrid",
+      "away": "FC Barcelona",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "utcDate": "2026-11-08T20:00:00Z",
+      "updatedAt": "2026-11-08T20:34:59Z"
+    },
+    {
+      "id": 567355,
+      "league": "PPL",
+      "leagueName": "Primeira Liga",
+      "home": "CF Estrela da Amadora",
+      "away": "Sport Lisboa e Benfica",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-11-08T20:30:00Z",
+      "updatedAt": "2026-11-08T20:35:31Z"
+    },
+    {
+      "id": 567354,
+      "league": "PPL",
+      "leagueName": "Primeira Liga",
+      "home": "Rio Ave FC",
+      "away": "Sporting Clube de Braga",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-11-08T20:30:00Z",
+      "updatedAt": "2026-11-08T20:35:31Z"
     }
   ]
 }
