@@ -1,7 +1,53 @@
 {
-  "updatedAt": "2026-11-08T22:15:18.389337+01:00",
+  "updatedAt": "2026-11-08T22:54:36.722012+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 0,
-  "matches": []
+  "count": 3,
+  "matches": [
+    {
+      "id": 564746,
+      "league": "PD",
+      "leagueName": "Primera Division",
+      "home": "Club Atlético de Madrid",
+      "away": "FC Barcelona",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 1,
+        "away": 2
+      },
+      "utcDate": "2026-11-08T20:00:00Z",
+      "updatedAt": "2026-11-08T21:53:23Z"
+    },
+    {
+      "id": 567355,
+      "league": "PPL",
+      "leagueName": "Primeira Liga",
+      "home": "CF Estrela da Amadora",
+      "away": "Sport Lisboa e Benfica",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "utcDate": "2026-11-08T20:30:00Z",
+      "updatedAt": "2026-11-08T21:53:23Z"
+    },
+    {
+      "id": 567354,
+      "league": "PPL",
+      "leagueName": "Primeira Liga",
+      "home": "Rio Ave FC",
+      "away": "Sporting Clube de Braga",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-11-08T20:30:00Z",
+      "updatedAt": "2026-11-08T21:53:55Z"
+    }
+  ]
 }
