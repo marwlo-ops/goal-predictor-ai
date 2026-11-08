@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-11-08T12:21:38.136321+01:00",
+  "updatedAt": "2026-11-08T13:06:18.564435+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 1,
+  "count": 2,
   "matches": [
     {
       "id": 558840,
@@ -14,10 +14,25 @@
       "minute": null,
       "score": {
         "home": 0,
-        "away": 0
+        "away": 2
       },
       "utcDate": "2026-11-08T11:15:00Z",
-      "updatedAt": "2026-11-08T11:20:19Z"
+      "updatedAt": "2026-11-08T12:04:35Z"
+    },
+    {
+      "id": 558533,
+      "league": "SA",
+      "leagueName": "Serie A",
+      "home": "SSC Napoli",
+      "away": "SS Lazio",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-11-08T11:30:00Z",
+      "updatedAt": "2026-11-08T12:04:35Z"
     }
   ]
 }
