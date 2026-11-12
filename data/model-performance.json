@@ -1,1 +1,109 @@
-{"generatedAt":"2026-11-11T12:04:26.300276+00:00","source":"Pierwsze zapisane prognozy przedmeczowe porównane z wynikami końcowymi","forecastCount":215,"resolvedCount":212,"oneXTwoAccuracy":57.55,"oneXTwoBrierScore":0.1912,"markets":{"awayOver05":{"count":212,"hitRate":67.92,"brierScore":0.2183,"logLoss":0.6338},"awayOver15":{"count":212,"hitRate":70.28,"brierScore":0.2119,"logLoss":0.6134},"btts":{"count":212,"hitRate":53.77,"brierScore":0.2531,"logLoss":0.7034},"homeOver05":{"count":212,"hitRate":80.19,"brierScore":0.1524,"logLoss":0.4779},"homeOver15":{"count":212,"hitRate":59.91,"brierScore":0.2339,"logLoss":0.6592},"over15":{"count":212,"hitRate":78.77,"brierScore":0.1652,"logLoss":0.5125},"over25":{"count":212,"hitRate":58.96,"brierScore":0.2344,"logLoss":0.6595},"over35":{"count":212,"hitRate":69.34,"brierScore":0.2077,"logLoss":0.6047}},"calibration":[{"range":"0-10%","count":1,"predicted":7.53,"observed":0.0},{"range":"10-20%","count":49,"predicted":16.52,"observed":10.2},{"range":"20-30%","count":279,"predicted":25.2,"observed":19.35},{"range":"30-40%","count":140,"predicted":35.04,"observed":37.86},{"range":"40-50%","count":95,"predicted":45.01,"observed":54.74},{"range":"50-60%","count":47,"predicted":53.53,"observed":55.32},{"range":"60-70%","count":21,"predicted":65.02,"observed":90.48},{"range":"70-80%","count":4,"predicted":72.29,"observed":75.0}],"note":"Próba może być mała lub niepełna. Wyniki historyczne nie gwarantują przyszłej skuteczności; prawdopodobieństwa nie są zweryfikowane do momentu zebrania dostatecznej próby."}
+{
+  "generatedAt": "2026-11-12T06:25:40.866859+00:00",
+  "source": "Pierwsze zapisane prognozy przedmeczowe porównane z wynikami końcowymi",
+  "forecastCount": 215,
+  "resolvedCount": 212,
+  "oneXTwoAccuracy": 57.55,
+  "oneXTwoBrierScore": 0.1912,
+  "markets": {
+    "awayOver05": {
+      "count": 212,
+      "hitRate": 67.92,
+      "brierScore": 0.2183,
+      "logLoss": 0.6338
+    },
+    "awayOver15": {
+      "count": 212,
+      "hitRate": 70.28,
+      "brierScore": 0.2119,
+      "logLoss": 0.6134
+    },
+    "btts": {
+      "count": 212,
+      "hitRate": 53.77,
+      "brierScore": 0.2531,
+      "logLoss": 0.7034
+    },
+    "homeOver05": {
+      "count": 212,
+      "hitRate": 80.19,
+      "brierScore": 0.1524,
+      "logLoss": 0.4779
+    },
+    "homeOver15": {
+      "count": 212,
+      "hitRate": 59.91,
+      "brierScore": 0.2339,
+      "logLoss": 0.6592
+    },
+    "over15": {
+      "count": 212,
+      "hitRate": 78.77,
+      "brierScore": 0.1652,
+      "logLoss": 0.5125
+    },
+    "over25": {
+      "count": 212,
+      "hitRate": 58.96,
+      "brierScore": 0.2344,
+      "logLoss": 0.6595
+    },
+    "over35": {
+      "count": 212,
+      "hitRate": 69.34,
+      "brierScore": 0.2077,
+      "logLoss": 0.6047
+    }
+  },
+  "calibration": [
+    {
+      "range": "0-10%",
+      "count": 1,
+      "predicted": 7.53,
+      "observed": 0.0
+    },
+    {
+      "range": "10-20%",
+      "count": 49,
+      "predicted": 16.52,
+      "observed": 10.2
+    },
+    {
+      "range": "20-30%",
+      "count": 279,
+      "predicted": 25.2,
+      "observed": 19.35
+    },
+    {
+      "range": "30-40%",
+      "count": 140,
+      "predicted": 35.04,
+      "observed": 37.86
+    },
+    {
+      "range": "40-50%",
+      "count": 95,
+      "predicted": 45.01,
+      "observed": 54.74
+    },
+    {
+      "range": "50-60%",
+      "count": 47,
+      "predicted": 53.53,
+      "observed": 55.32
+    },
+    {
+      "range": "60-70%",
+      "count": 21,
+      "predicted": 65.02,
+      "observed": 90.48
+    },
+    {
+      "range": "70-80%",
+      "count": 4,
+      "predicted": 72.29,
+      "observed": 75.0
+    }
+  ],
+  "note": "Próba może być mała lub niepełna. Wyniki historyczne nie gwarantują przyszłej skuteczności; prawdopodobieństwa nie są zweryfikowane do momentu zebrania dostatecznej próby."
+}
