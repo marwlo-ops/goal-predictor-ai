@@ -1,21 +1,26 @@
 {
-  "generatedAt": "2026-11-13T23:24:05.339440+01:00",
+  "generatedAt": "2026-11-14T00:21:02.666959+01:00",
   "source": "Sportmonks Football API v3",
-  "count": 0,
-  "fixtures": [],
-  "diagnostics": [
+  "count": 1,
+  "fixtures": [
     {
-      "date": "2026-11-13",
-      "count": 0,
-      "parsed": 0,
-      "pages": [
-        {
-          "page": 1,
-          "count": 0
-        }
-      ],
-      "ok": true
-    },
+      "fixtureId": 19713849,
+      "home": "AGF",
+      "away": "Lyngby Boldklub",
+      "homeId": 2905,
+      "awayId": 2650,
+      "kickoff": "2026-11-20T19:00:00+01:00",
+      "date": "2026-11-20",
+      "time": "19:00",
+      "league": "Superliga",
+      "leagueId": 271,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
+    }
+  ],
+  "diagnostics": [
     {
       "date": "2026-11-14",
       "count": 0,
@@ -84,6 +89,18 @@
         {
           "page": 1,
           "count": 0
+        }
+      ],
+      "ok": true
+    },
+    {
+      "date": "2026-11-20",
+      "count": 1,
+      "parsed": 1,
+      "pages": [
+        {
+          "page": 1,
+          "count": 1
         }
       ],
       "ok": true
