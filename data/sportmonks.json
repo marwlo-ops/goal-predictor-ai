@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-15T22:43:50.974217+01:00",
+  "generatedAt": "2026-11-16T02:58:17.572220+01:00",
   "source": "Sportmonks Football API v3",
-  "count": 7,
+  "count": 11,
   "fixtures": [
     {
       "fixtureId": 19713849,
@@ -114,21 +114,73 @@
       "scores": [],
       "statistics": [],
       "source": "Sportmonks"
+    },
+    {
+      "fixtureId": 19713845,
+      "home": "Horsens",
+      "away": "Silkeborg IF",
+      "homeId": 211,
+      "awayId": 86,
+      "kickoff": "2026-11-22T14:00:00+01:00",
+      "date": "2026-11-22",
+      "time": "14:00",
+      "league": "Superliga",
+      "leagueId": 271,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
+    },
+    {
+      "fixtureId": 19713851,
+      "home": "Viborg FF",
+      "away": "Randers FC",
+      "homeId": 2447,
+      "awayId": 2356,
+      "kickoff": "2026-11-22T14:00:00+01:00",
+      "date": "2026-11-22",
+      "time": "14:00",
+      "league": "Superliga",
+      "leagueId": 271,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
+    },
+    {
+      "fixtureId": 19713855,
+      "home": "Sønderjyske Fodbold",
+      "away": "Odense BK",
+      "homeId": 390,
+      "awayId": 1789,
+      "kickoff": "2026-11-22T16:00:00+01:00",
+      "date": "2026-11-22",
+      "time": "16:00",
+      "league": "Superliga",
+      "leagueId": 271,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
+    },
+    {
+      "fixtureId": 19713848,
+      "home": "Nordsjælland",
+      "away": "FC København",
+      "homeId": 2394,
+      "awayId": 85,
+      "kickoff": "2026-11-22T18:00:00+01:00",
+      "date": "2026-11-22",
+      "time": "18:00",
+      "league": "Superliga",
+      "leagueId": 271,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
     }
   ],
   "diagnostics": [
-    {
-      "date": "2026-11-15",
-      "count": 0,
-      "parsed": 0,
-      "pages": [
-        {
-          "page": 1,
-          "count": 0
-        }
-      ],
-      "ok": true
-    },
     {
       "date": "2026-11-16",
       "count": 0,
@@ -197,6 +249,18 @@
         {
           "page": 1,
           "count": 6
+        }
+      ],
+      "ok": true
+    },
+    {
+      "date": "2026-11-22",
+      "count": 4,
+      "parsed": 4,
+      "pages": [
+        {
+          "page": 1,
+          "count": 4
         }
       ],
       "ok": true
