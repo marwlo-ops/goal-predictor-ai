@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-16T20:50:25.218738+01:00",
+  "generatedAt": "2026-11-17T03:53:58.739422+01:00",
   "source": "Sportmonks Football API v3",
-  "count": 11,
+  "count": 12,
   "fixtures": [
     {
       "fixtureId": 19713849,
@@ -178,21 +178,25 @@
       "scores": [],
       "statistics": [],
       "source": "Sportmonks"
+    },
+    {
+      "fixtureId": 19713853,
+      "home": "Brøndby IF",
+      "away": "FC Midtjylland",
+      "homeId": 293,
+      "awayId": 939,
+      "kickoff": "2026-11-23T19:00:00+01:00",
+      "date": "2026-11-23",
+      "time": "19:00",
+      "league": "Superliga",
+      "leagueId": 271,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
     }
   ],
   "diagnostics": [
-    {
-      "date": "2026-11-16",
-      "count": 0,
-      "parsed": 0,
-      "pages": [
-        {
-          "page": 1,
-          "count": 0
-        }
-      ],
-      "ok": true
-    },
     {
       "date": "2026-11-17",
       "count": 0,
@@ -261,6 +265,18 @@
         {
           "page": 1,
           "count": 4
+        }
+      ],
+      "ok": true
+    },
+    {
+      "date": "2026-11-23",
+      "count": 1,
+      "parsed": 1,
+      "pages": [
+        {
+          "page": 1,
+          "count": 1
         }
       ],
       "ok": true
