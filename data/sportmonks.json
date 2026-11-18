@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-17T21:50:13.656026+01:00",
+  "generatedAt": "2026-11-18T03:52:08.975736+01:00",
   "source": "Sportmonks Football API v3",
-  "count": 31,
+  "count": 33,
   "fixtures": [
     {
       "fixtureId": 19713849,
@@ -498,21 +498,41 @@
       "scores": [],
       "statistics": [],
       "source": "Sportmonks"
+    },
+    {
+      "fixtureId": 19722755,
+      "home": "Hibernian",
+      "away": "Dundee",
+      "homeId": 66,
+      "awayId": 284,
+      "kickoff": "2026-11-24T20:45:00+01:00",
+      "date": "2026-11-24",
+      "time": "20:45",
+      "league": "Premiership",
+      "leagueId": 501,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
+    },
+    {
+      "fixtureId": 19722752,
+      "home": "Rangers",
+      "away": "Aberdeen",
+      "homeId": 62,
+      "awayId": 273,
+      "kickoff": "2026-11-24T21:00:00+01:00",
+      "date": "2026-11-24",
+      "time": "21:00",
+      "league": "Premiership",
+      "leagueId": 501,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
     }
   ],
   "diagnostics": [
-    {
-      "date": "2026-11-17",
-      "count": 0,
-      "parsed": 0,
-      "pages": [
-        {
-          "page": 1,
-          "count": 0
-        }
-      ],
-      "ok": true
-    },
     {
       "date": "2026-11-18",
       "count": 0,
@@ -575,6 +595,18 @@
     },
     {
       "date": "2026-11-23",
+      "count": 2,
+      "parsed": 2,
+      "pages": [
+        {
+          "page": 1,
+          "count": 2
+        }
+      ],
+      "ok": true
+    },
+    {
+      "date": "2026-11-24",
       "count": 2,
       "parsed": 2,
       "pages": [
