@@ -1,71 +1,8 @@
 {
-  "generatedAt": "2026-11-20T18:15:05.685596+01:00",
+  "generatedAt": "2026-11-21T00:20:14.840575+01:00",
   "source": "Sportmonks Football API v3",
-  "count": 33,
+  "count": 34,
   "fixtures": [
-    {
-      "fixtureId": 19713849,
-      "home": "AGF",
-      "away": "Lyngby Boldklub",
-      "homeId": 2905,
-      "awayId": 2650,
-      "kickoff": "2026-11-20T19:00:00+01:00",
-      "date": "2026-11-20",
-      "time": "19:00",
-      "league": "Superliga",
-      "leagueId": 271,
-      "status": "Not Started",
-      "scores": [
-        {
-          "description": "1ST_HALF",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "1ST_HALF",
-          "participant": "home",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "home",
-          "goals": 0
-        },
-        {
-          "description": "CURRENT",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "CURRENT",
-          "participant": "home",
-          "goals": 0
-        }
-      ],
-      "statistics": [],
-      "source": "Sportmonks"
-    },
-    {
-      "fixtureId": 19735116,
-      "home": "FC Bayern München",
-      "away": "FC Köln",
-      "homeId": 503,
-      "awayId": 3320,
-      "kickoff": "2026-11-20T20:30:00+01:00",
-      "date": "2026-11-20",
-      "time": "20:30",
-      "league": "Bundesliga",
-      "leagueId": 82,
-      "status": "Not Started",
-      "scores": [],
-      "statistics": [],
-      "source": "Sportmonks"
-    },
     {
       "fixtureId": 19722096,
       "home": "Manchester City",
@@ -561,21 +498,57 @@
       "scores": [],
       "statistics": [],
       "source": "Sportmonks"
+    },
+    {
+      "fixtureId": 19713841,
+      "home": "Sønderjyske Fodbold",
+      "away": "Brøndby IF",
+      "homeId": 390,
+      "awayId": 293,
+      "kickoff": "2026-11-27T19:00:00+01:00",
+      "date": "2026-11-27",
+      "time": "19:00",
+      "league": "Superliga",
+      "leagueId": 271,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
+    },
+    {
+      "fixtureId": 19735100,
+      "home": "Werder Bremen",
+      "away": "Borussia Mönchengladbach",
+      "homeId": 82,
+      "awayId": 683,
+      "kickoff": "2026-11-27T20:30:00+01:00",
+      "date": "2026-11-27",
+      "time": "20:30",
+      "league": "Bundesliga",
+      "leagueId": 82,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
+    },
+    {
+      "fixtureId": 19722085,
+      "home": "Nottingham Forest",
+      "away": "Chelsea",
+      "homeId": 63,
+      "awayId": 18,
+      "kickoff": "2026-11-27T21:00:00+01:00",
+      "date": "2026-11-27",
+      "time": "21:00",
+      "league": "Premier League",
+      "leagueId": 8,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
     }
   ],
   "diagnostics": [
-    {
-      "date": "2026-11-20",
-      "count": 2,
-      "parsed": 2,
-      "pages": [
-        {
-          "page": 1,
-          "count": 2
-        }
-      ],
-      "ok": true
-    },
     {
       "date": "2026-11-21",
       "count": 19,
@@ -644,6 +617,18 @@
         {
           "page": 1,
           "count": 0
+        }
+      ],
+      "ok": true
+    },
+    {
+      "date": "2026-11-27",
+      "count": 3,
+      "parsed": 3,
+      "pages": [
+        {
+          "page": 1,
+          "count": 3
         }
       ],
       "ok": true
