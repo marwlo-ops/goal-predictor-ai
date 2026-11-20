@@ -1,10 +1,54 @@
 {
-  "updatedAt": "2026-11-19T15:35:21.421021+01:00",
-  "dateFrom": "2026-11-12",
-  "dateTo": "2026-11-19",
+  "updatedAt": "2026-11-20T15:13:44.168436+01:00",
+  "dateFrom": "2026-11-13",
+  "dateTo": "2026-11-20",
   "source": "football-data.org",
-  "count": 321,
+  "count": 325,
   "matches": [
+    {
+      "id": 555088,
+      "date": "2026-11-19T22:30:00Z",
+      "league": "BSA",
+      "leagueName": "Campeonato Brasileiro Série A",
+      "home": "CR Vasco da Gama",
+      "away": "SC Internacional",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "status": "FINISHED"
+    },
+    {
+      "id": 555089,
+      "date": "2026-11-19T22:30:00Z",
+      "league": "BSA",
+      "leagueName": "Campeonato Brasileiro Série A",
+      "home": "EC Vitória",
+      "away": "RB Bragantino",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "status": "FINISHED"
+    },
+    {
+      "id": 555084,
+      "date": "2026-11-19T00:30:00Z",
+      "league": "BSA",
+      "leagueName": "Campeonato Brasileiro Série A",
+      "home": "Grêmio FBPA",
+      "away": "EC Bahia",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "status": "FINISHED"
+    },
+    {
+      "id": 555080,
+      "date": "2026-11-19T00:30:00Z",
+      "league": "BSA",
+      "leagueName": "Campeonato Brasileiro Série A",
+      "home": "SC Corinthians Paulista",
+      "away": "Botafogo FR",
+      "homeGoals": 4,
+      "awayGoals": 0,
+      "status": "FINISHED"
+    },
     {
       "id": 555082,
       "date": "2026-11-18T23:30:00Z",
