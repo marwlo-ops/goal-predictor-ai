@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-21T05:15:46.768819+01:00",
+  "generatedAt": "2026-11-21T13:59:22.381473+01:00",
   "source": "Sportmonks Football API v3",
   "count": 34,
   "fixtures": [
@@ -14,9 +14,71 @@
       "time": "13:30",
       "league": "Premier League",
       "leagueId": 8,
-      "status": "Not Started",
-      "scores": [],
-      "statistics": [],
+      "status": "1st Half",
+      "scores": [
+        {
+          "description": "1ST_HALF",
+          "participant": "home",
+          "goals": 0
+        },
+        {
+          "description": "1ST_HALF",
+          "participant": "away",
+          "goals": 1
+        },
+        {
+          "description": "2ND_HALF",
+          "participant": "home",
+          "goals": 0
+        },
+        {
+          "description": "2ND_HALF",
+          "participant": "away",
+          "goals": 1
+        },
+        {
+          "description": "CURRENT",
+          "participant": "home",
+          "goals": 0
+        },
+        {
+          "description": "CURRENT",
+          "participant": "away",
+          "goals": 1
+        }
+      ],
+      "statistics": [
+        {
+          "type": "Corners",
+          "value": 2,
+          "participantId": 11
+        },
+        {
+          "type": "Corners",
+          "value": 2,
+          "participantId": 9
+        },
+        {
+          "type": "Ball Possession %",
+          "value": 38,
+          "participantId": 11
+        },
+        {
+          "type": "Ball Possession %",
+          "value": 62,
+          "participantId": 9
+        },
+        {
+          "type": "Yellowcards",
+          "value": 2,
+          "participantId": 11
+        },
+        {
+          "type": "Yellowcards",
+          "value": 0,
+          "participantId": 9
+        }
+      ],
       "source": "Sportmonks"
     },
     {
