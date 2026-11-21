@@ -1,10 +1,54 @@
 {
-  "updatedAt": "2026-11-20T15:13:44.168436+01:00",
-  "dateFrom": "2026-11-13",
-  "dateTo": "2026-11-20",
+  "updatedAt": "2026-11-21T14:37:24.872373+01:00",
+  "dateFrom": "2026-11-14",
+  "dateTo": "2026-11-21",
   "source": "football-data.org",
-  "count": 325,
+  "count": 329,
   "matches": [
+    {
+      "id": 564748,
+      "date": "2026-11-20T20:00:00Z",
+      "league": "PD",
+      "leagueName": "Primera Division",
+      "home": "Athletic Club",
+      "away": "RCD Espanyol de Barcelona",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "status": "FINISHED"
+    },
+    {
+      "id": 559622,
+      "date": "2026-11-20T19:45:00Z",
+      "league": "FL1",
+      "leagueName": "Ligue 1",
+      "home": "ES Troyes AC",
+      "away": "Le Havre AC",
+      "homeGoals": 3,
+      "awayGoals": 1,
+      "status": "FINISHED"
+    },
+    {
+      "id": 565859,
+      "date": "2026-11-20T19:30:00Z",
+      "league": "BL1",
+      "leagueName": "Bundesliga",
+      "home": "FC Bayern München",
+      "away": "1. FC Köln",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "status": "FINISHED"
+    },
+    {
+      "id": 555087,
+      "date": "2026-11-20T00:30:00Z",
+      "league": "BSA",
+      "leagueName": "Campeonato Brasileiro Série A",
+      "home": "São Paulo FC",
+      "away": "Fluminense FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "status": "FINISHED"
+    },
     {
       "id": 555088,
       "date": "2026-11-19T22:30:00Z",
