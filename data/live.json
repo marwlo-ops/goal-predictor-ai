@@ -1,7 +1,338 @@
 {
-  "updatedAt": "2026-11-21T08:45:54.387163+01:00",
+  "updatedAt": "2026-11-21T16:40:23.259037+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 0,
-  "matches": []
+  "count": 22,
+  "matches": [
+    {
+      "id": 558525,
+      "league": "SA",
+      "leagueName": "Serie A",
+      "home": "Como 1907",
+      "away": "Cagliari Calcio",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "utcDate": "2026-11-21T14:00:00Z",
+      "updatedAt": "2026-11-21T15:39:23Z"
+    },
+    {
+      "id": 558528,
+      "league": "SA",
+      "leagueName": "Serie A",
+      "home": "SS Lazio",
+      "away": "US Lecce",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "utcDate": "2026-11-21T14:00:00Z",
+      "updatedAt": "2026-11-21T15:39:23Z"
+    },
+    {
+      "id": 565865,
+      "league": "BL1",
+      "leagueName": "Bundesliga",
+      "home": "Eintracht Frankfurt",
+      "away": "TSG 1899 Hoffenheim",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "utcDate": "2026-11-21T14:30:00Z",
+      "updatedAt": "2026-11-21T15:23:23Z"
+    },
+    {
+      "id": 565858,
+      "league": "BL1",
+      "leagueName": "Bundesliga",
+      "home": "1. FC Union Berlin",
+      "away": "RB Leipzig",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "utcDate": "2026-11-21T14:30:00Z",
+      "updatedAt": "2026-11-21T15:25:31Z"
+    },
+    {
+      "id": 565860,
+      "league": "BL1",
+      "leagueName": "Bundesliga",
+      "home": "SV 07 Elversberg",
+      "away": "SC Freiburg",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-11-21T14:30:00Z",
+      "updatedAt": "2026-11-21T15:39:23Z"
+    },
+    {
+      "id": 565862,
+      "league": "BL1",
+      "leagueName": "Bundesliga",
+      "home": "Borussia Mönchengladbach",
+      "away": "Borussia Dortmund",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-11-21T14:30:00Z",
+      "updatedAt": "2026-11-21T15:39:23Z"
+    },
+    {
+      "id": 565857,
+      "league": "BL1",
+      "leagueName": "Bundesliga",
+      "home": "Bayer 04 Leverkusen",
+      "away": "SC Paderborn 07",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "utcDate": "2026-11-21T14:30:00Z",
+      "updatedAt": "2026-11-21T15:39:55Z"
+    },
+    {
+      "id": 561949,
+      "league": "ELC",
+      "leagueName": "Championship",
+      "home": "Lincoln City FC",
+      "away": "Wrexham AFC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-11-21T15:00:00Z",
+      "updatedAt": "2026-11-21T15:39:06Z"
+    },
+    {
+      "id": 560650,
+      "league": "PL",
+      "leagueName": "Premier League",
+      "home": "Coventry City FC",
+      "away": "Crystal Palace FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "utcDate": "2026-11-21T15:00:00Z",
+      "updatedAt": "2026-11-21T15:39:23Z"
+    },
+    {
+      "id": 561951,
+      "league": "ELC",
+      "leagueName": "Championship",
+      "home": "West Ham United FC",
+      "away": "Preston North End FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "utcDate": "2026-11-21T15:00:00Z",
+      "updatedAt": "2026-11-21T15:39:20Z"
+    },
+    {
+      "id": 561946,
+      "league": "ELC",
+      "leagueName": "Championship",
+      "home": "Stoke City FC",
+      "away": "Birmingham City FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-11-21T15:00:00Z",
+      "updatedAt": "2026-11-21T15:39:54Z"
+    },
+    {
+      "id": 561942,
+      "league": "ELC",
+      "leagueName": "Championship",
+      "home": "Swansea City AFC",
+      "away": "West Bromwich Albion FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "utcDate": "2026-11-21T15:00:00Z",
+      "updatedAt": "2026-11-21T15:39:28Z"
+    },
+    {
+      "id": 560647,
+      "league": "PL",
+      "leagueName": "Premier League",
+      "home": "AFC Bournemouth",
+      "away": "Nottingham Forest FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "utcDate": "2026-11-21T15:00:00Z",
+      "updatedAt": "2026-11-21T15:39:23Z"
+    },
+    {
+      "id": 560648,
+      "league": "PL",
+      "leagueName": "Premier League",
+      "home": "Tottenham Hotspur FC",
+      "away": "Ipswich Town FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "utcDate": "2026-11-21T15:00:00Z",
+      "updatedAt": "2026-11-21T15:39:23Z"
+    },
+    {
+      "id": 560642,
+      "league": "PL",
+      "leagueName": "Premier League",
+      "home": "Chelsea FC",
+      "away": "Leeds United FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "utcDate": "2026-11-21T15:00:00Z",
+      "updatedAt": "2026-11-21T15:39:55Z"
+    },
+    {
+      "id": 561945,
+      "league": "ELC",
+      "leagueName": "Championship",
+      "home": "Bolton Wanderers FC",
+      "away": "Portsmouth FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "utcDate": "2026-11-21T15:00:00Z",
+      "updatedAt": "2026-11-21T15:39:16Z"
+    },
+    {
+      "id": 561941,
+      "league": "ELC",
+      "leagueName": "Championship",
+      "home": "Sheffield United FC",
+      "away": "Watford FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "utcDate": "2026-11-21T15:00:00Z",
+      "updatedAt": "2026-11-21T15:39:28Z"
+    },
+    {
+      "id": 561952,
+      "league": "ELC",
+      "leagueName": "Championship",
+      "home": "Wolverhampton Wanderers FC",
+      "away": "Charlton Athletic FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-11-21T15:00:00Z",
+      "updatedAt": "2026-11-21T15:39:06Z"
+    },
+    {
+      "id": 560644,
+      "league": "PL",
+      "leagueName": "Premier League",
+      "home": "Aston Villa FC",
+      "away": "Sunderland AFC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-11-21T15:00:00Z",
+      "updatedAt": "2026-11-21T15:39:23Z"
+    },
+    {
+      "id": 561943,
+      "league": "ELC",
+      "leagueName": "Championship",
+      "home": "Middlesbrough FC",
+      "away": "Bristol City FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-11-21T15:00:00Z",
+      "updatedAt": "2026-11-21T15:39:19Z"
+    },
+    {
+      "id": 564751,
+      "league": "PD",
+      "leagueName": "Primera Division",
+      "home": "Rayo Vallecano de Madrid",
+      "away": "Valencia CF",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-11-21T15:15:00Z",
+      "updatedAt": "2026-11-21T15:39:23Z"
+    },
+    {
+      "id": 558833,
+      "league": "DED",
+      "leagueName": "Eredivisie",
+      "home": "NEC",
+      "away": "PSV",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-11-21T15:30:00Z",
+      "updatedAt": "2026-11-21T15:39:24Z"
+    }
+  ]
 }
