@@ -1,83 +1,23 @@
 {
-  "updatedAt": "2026-11-22T17:37:22.224214+01:00",
+  "updatedAt": "2026-11-22T23:01:35.981367+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 5,
+  "count": 1,
   "matches": [
     {
-      "id": 564750,
-      "league": "PD",
-      "leagueName": "Primera Division",
-      "home": "Real Racing Club de Santander",
-      "away": "Real Sociedad de Fútbol",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 2,
-        "away": 1
-      },
-      "utcDate": "2026-11-22T15:15:00Z",
-      "updatedAt": "2026-11-22T16:36:26Z"
-    },
-    {
-      "id": 558829,
-      "league": "DED",
-      "leagueName": "Eredivisie",
-      "home": "Go Ahead Eagles",
-      "away": "Fortuna Sittard",
+      "id": 555095,
+      "league": "BSA",
+      "leagueName": "Campeonato Brasileiro Série A",
+      "home": "Chapecoense AF",
+      "away": "Cruzeiro EC",
       "status": "IN_PLAY",
       "minute": null,
       "score": {
         "home": 0,
         "away": 0
       },
-      "utcDate": "2026-11-22T15:45:00Z",
-      "updatedAt": "2026-11-22T16:36:27Z"
-    },
-    {
-      "id": 559626,
-      "league": "FL1",
-      "leagueName": "Ligue 1",
-      "home": "FC Lorient",
-      "away": "Stade Rennais FC 1901",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 0,
-        "away": 0
-      },
-      "utcDate": "2026-11-22T16:15:00Z",
-      "updatedAt": "2026-11-22T16:35:54Z"
-    },
-    {
-      "id": 560645,
-      "league": "PL",
-      "leagueName": "Premier League",
-      "home": "Liverpool FC",
-      "away": "Manchester United FC",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 0,
-        "away": 0
-      },
-      "utcDate": "2026-11-22T16:30:00Z",
-      "updatedAt": "2026-11-22T16:35:55Z"
-    },
-    {
-      "id": 565863,
-      "league": "BL1",
-      "leagueName": "Bundesliga",
-      "home": "SV Werder Bremen",
-      "away": "Hamburger SV",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 0,
-        "away": 0
-      },
-      "utcDate": "2026-11-22T16:30:00Z",
-      "updatedAt": "2026-11-22T16:35:23Z"
+      "utcDate": "2026-11-22T00:00:00Z",
+      "updatedAt": "2026-11-22T02:06:38Z"
     }
   ]
 }
