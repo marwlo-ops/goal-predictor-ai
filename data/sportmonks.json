@@ -1,1680 +1,8 @@
 {
-  "generatedAt": "2026-11-21T21:03:39.027216+01:00",
+  "generatedAt": "2026-11-22T01:18:48.115884+01:00",
   "source": "Sportmonks Football API v3",
-  "count": 34,
+  "count": 28,
   "fixtures": [
-    {
-      "fixtureId": 19722096,
-      "home": "Manchester City",
-      "away": "Fulham",
-      "homeId": 9,
-      "awayId": 11,
-      "kickoff": "2026-11-21T13:30:00+01:00",
-      "date": "2026-11-21",
-      "time": "13:30",
-      "league": "Premier League",
-      "leagueId": 8,
-      "status": "Full Time",
-      "scores": [
-        {
-          "description": "1ST_HALF",
-          "participant": "home",
-          "goals": 0
-        },
-        {
-          "description": "1ST_HALF",
-          "participant": "away",
-          "goals": 1
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "home",
-          "goals": 1
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "away",
-          "goals": 1
-        },
-        {
-          "description": "CURRENT",
-          "participant": "home",
-          "goals": 1
-        },
-        {
-          "description": "CURRENT",
-          "participant": "away",
-          "goals": 1
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "home",
-          "goals": 1
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "away",
-          "goals": 0
-        }
-      ],
-      "statistics": [
-        {
-          "type": "Corners",
-          "value": 6,
-          "participantId": 11
-        },
-        {
-          "type": "Corners",
-          "value": 8,
-          "participantId": 9
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 41,
-          "participantId": 11
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 59,
-          "participantId": 9
-        },
-        {
-          "type": "Yellowcards",
-          "value": 3,
-          "participantId": 11
-        },
-        {
-          "type": "Yellowcards",
-          "value": 1,
-          "participantId": 9
-        }
-      ],
-      "source": "Sportmonks"
-    },
-    {
-      "fixtureId": 19735108,
-      "home": "Elversberg",
-      "away": "SC Freiburg",
-      "homeId": 3588,
-      "awayId": 3543,
-      "kickoff": "2026-11-21T15:30:00+01:00",
-      "date": "2026-11-21",
-      "time": "15:30",
-      "league": "Bundesliga",
-      "leagueId": 82,
-      "status": "Full Time",
-      "scores": [
-        {
-          "description": "1ST_HALF",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "1ST_HALF",
-          "participant": "home",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "away",
-          "goals": 1
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "home",
-          "goals": 0
-        },
-        {
-          "description": "CURRENT",
-          "participant": "away",
-          "goals": 1
-        },
-        {
-          "description": "CURRENT",
-          "participant": "home",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "away",
-          "goals": 1
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "home",
-          "goals": 0
-        }
-      ],
-      "statistics": [
-        {
-          "type": "Corners",
-          "value": 3,
-          "participantId": 3543
-        },
-        {
-          "type": "Corners",
-          "value": 5,
-          "participantId": 3588
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 42,
-          "participantId": 3543
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 58,
-          "participantId": 3588
-        },
-        {
-          "type": "Yellowcards",
-          "value": 3,
-          "participantId": 3543
-        },
-        {
-          "type": "Yellowcards",
-          "value": 0,
-          "participantId": 3588
-        }
-      ],
-      "source": "Sportmonks"
-    },
-    {
-      "fixtureId": 19735111,
-      "home": "Borussia Mönchengladbach",
-      "away": "Borussia Dortmund",
-      "homeId": 683,
-      "awayId": 68,
-      "kickoff": "2026-11-21T15:30:00+01:00",
-      "date": "2026-11-21",
-      "time": "15:30",
-      "league": "Bundesliga",
-      "leagueId": 82,
-      "status": "Full Time",
-      "scores": [
-        {
-          "description": "1ST_HALF",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "1ST_HALF",
-          "participant": "home",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "away",
-          "goals": 1
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "home",
-          "goals": 0
-        },
-        {
-          "description": "CURRENT",
-          "participant": "away",
-          "goals": 1
-        },
-        {
-          "description": "CURRENT",
-          "participant": "home",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "away",
-          "goals": 1
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "home",
-          "goals": 0
-        }
-      ],
-      "statistics": [
-        {
-          "type": "Corners",
-          "value": 7,
-          "participantId": 68
-        },
-        {
-          "type": "Corners",
-          "value": 7,
-          "participantId": 683
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 57,
-          "participantId": 68
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 43,
-          "participantId": 683
-        },
-        {
-          "type": "Yellowcards",
-          "value": 1,
-          "participantId": 68
-        },
-        {
-          "type": "Yellowcards",
-          "value": 2,
-          "participantId": 683
-        }
-      ],
-      "source": "Sportmonks"
-    },
-    {
-      "fixtureId": 19735112,
-      "home": "FC Union Berlin",
-      "away": "RB Leipzig",
-      "homeId": 1079,
-      "awayId": 277,
-      "kickoff": "2026-11-21T15:30:00+01:00",
-      "date": "2026-11-21",
-      "time": "15:30",
-      "league": "Bundesliga",
-      "leagueId": 82,
-      "status": "Full Time",
-      "scores": [
-        {
-          "description": "1ST_HALF",
-          "participant": "away",
-          "goals": 1
-        },
-        {
-          "description": "1ST_HALF",
-          "participant": "home",
-          "goals": 1
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "away",
-          "goals": 5
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "home",
-          "goals": 1
-        },
-        {
-          "description": "CURRENT",
-          "participant": "away",
-          "goals": 5
-        },
-        {
-          "description": "CURRENT",
-          "participant": "home",
-          "goals": 1
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "away",
-          "goals": 4
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "home",
-          "goals": 0
-        }
-      ],
-      "statistics": [
-        {
-          "type": "Corners",
-          "value": 8,
-          "participantId": 277
-        },
-        {
-          "type": "Corners",
-          "value": 4,
-          "participantId": 1079
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 67,
-          "participantId": 277
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 33,
-          "participantId": 1079
-        },
-        {
-          "type": "Yellowcards",
-          "value": 2,
-          "participantId": 277
-        },
-        {
-          "type": "Yellowcards",
-          "value": 2,
-          "participantId": 1079
-        }
-      ],
-      "source": "Sportmonks"
-    },
-    {
-      "fixtureId": 19735114,
-      "home": "Eintracht Frankfurt",
-      "away": "TSG Hoffenheim",
-      "homeId": 366,
-      "awayId": 2726,
-      "kickoff": "2026-11-21T15:30:00+01:00",
-      "date": "2026-11-21",
-      "time": "15:30",
-      "league": "Bundesliga",
-      "leagueId": 82,
-      "status": "Full Time",
-      "scores": [
-        {
-          "description": "1ST_HALF",
-          "participant": "home",
-          "goals": 1
-        },
-        {
-          "description": "1ST_HALF",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "home",
-          "goals": 1
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "CURRENT",
-          "participant": "home",
-          "goals": 1
-        },
-        {
-          "description": "CURRENT",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "home",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "away",
-          "goals": 0
-        }
-      ],
-      "statistics": [
-        {
-          "type": "Corners",
-          "value": 5,
-          "participantId": 2726
-        },
-        {
-          "type": "Corners",
-          "value": 9,
-          "participantId": 366
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 58,
-          "participantId": 2726
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 42,
-          "participantId": 366
-        },
-        {
-          "type": "Redcards",
-          "value": 1,
-          "participantId": 2726
-        },
-        {
-          "type": "Redcards",
-          "value": 0,
-          "participantId": 366
-        },
-        {
-          "type": "Yellowcards",
-          "value": 2,
-          "participantId": 2726
-        },
-        {
-          "type": "Yellowcards",
-          "value": 2,
-          "participantId": 366
-        }
-      ],
-      "source": "Sportmonks"
-    },
-    {
-      "fixtureId": 19735115,
-      "home": "Bayer 04 Leverkusen",
-      "away": "Paderborn",
-      "homeId": 3321,
-      "awayId": 2642,
-      "kickoff": "2026-11-21T15:30:00+01:00",
-      "date": "2026-11-21",
-      "time": "15:30",
-      "league": "Bundesliga",
-      "leagueId": 82,
-      "status": "Full Time",
-      "scores": [
-        {
-          "description": "1ST_HALF",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "1ST_HALF",
-          "participant": "home",
-          "goals": 1
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "home",
-          "goals": 4
-        },
-        {
-          "description": "CURRENT",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "CURRENT",
-          "participant": "home",
-          "goals": 4
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "home",
-          "goals": 3
-        }
-      ],
-      "statistics": [
-        {
-          "type": "Corners",
-          "value": 3,
-          "participantId": 2642
-        },
-        {
-          "type": "Corners",
-          "value": 8,
-          "participantId": 3321
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 36,
-          "participantId": 2642
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 64,
-          "participantId": 3321
-        },
-        {
-          "type": "Yellowcards",
-          "value": 0,
-          "participantId": 2642
-        },
-        {
-          "type": "Yellowcards",
-          "value": 2,
-          "participantId": 3321
-        }
-      ],
-      "source": "Sportmonks"
-    },
-    {
-      "fixtureId": 19722094,
-      "home": "Tottenham Hotspur",
-      "away": "Ipswich Town",
-      "homeId": 6,
-      "awayId": 116,
-      "kickoff": "2026-11-21T16:00:00+01:00",
-      "date": "2026-11-21",
-      "time": "16:00",
-      "league": "Premier League",
-      "leagueId": 8,
-      "status": "Full Time",
-      "scores": [
-        {
-          "description": "1ST_HALF",
-          "participant": "home",
-          "goals": 1
-        },
-        {
-          "description": "1ST_HALF",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "home",
-          "goals": 2
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "CURRENT",
-          "participant": "home",
-          "goals": 2
-        },
-        {
-          "description": "CURRENT",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "home",
-          "goals": 1
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "away",
-          "goals": 0
-        }
-      ],
-      "statistics": [
-        {
-          "type": "Corners",
-          "value": 6,
-          "participantId": 116
-        },
-        {
-          "type": "Corners",
-          "value": 8,
-          "participantId": 6
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 37,
-          "participantId": 116
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 63,
-          "participantId": 6
-        },
-        {
-          "type": "Yellowcards",
-          "value": 1,
-          "participantId": 116
-        },
-        {
-          "type": "Yellowcards",
-          "value": 4,
-          "participantId": 6
-        }
-      ],
-      "source": "Sportmonks"
-    },
-    {
-      "fixtureId": 19722099,
-      "home": "Coventry City",
-      "away": "Crystal Palace",
-      "homeId": 117,
-      "awayId": 51,
-      "kickoff": "2026-11-21T16:00:00+01:00",
-      "date": "2026-11-21",
-      "time": "16:00",
-      "league": "Premier League",
-      "leagueId": 8,
-      "status": "Full Time",
-      "scores": [
-        {
-          "description": "1ST_HALF",
-          "participant": "away",
-          "goals": 2
-        },
-        {
-          "description": "1ST_HALF",
-          "participant": "home",
-          "goals": 2
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "away",
-          "goals": 2
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "home",
-          "goals": 3
-        },
-        {
-          "description": "CURRENT",
-          "participant": "away",
-          "goals": 2
-        },
-        {
-          "description": "CURRENT",
-          "participant": "home",
-          "goals": 3
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "home",
-          "goals": 1
-        }
-      ],
-      "statistics": [
-        {
-          "type": "Corners",
-          "value": 6,
-          "participantId": 51
-        },
-        {
-          "type": "Corners",
-          "value": 4,
-          "participantId": 117
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 58,
-          "participantId": 51
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 42,
-          "participantId": 117
-        },
-        {
-          "type": "Yellowcards",
-          "value": 2,
-          "participantId": 51
-        },
-        {
-          "type": "Yellowcards",
-          "value": 1,
-          "participantId": 117
-        }
-      ],
-      "source": "Sportmonks"
-    },
-    {
-      "fixtureId": 19722100,
-      "home": "Chelsea",
-      "away": "Leeds United",
-      "homeId": 18,
-      "awayId": 71,
-      "kickoff": "2026-11-21T16:00:00+01:00",
-      "date": "2026-11-21",
-      "time": "16:00",
-      "league": "Premier League",
-      "leagueId": 8,
-      "status": "Full Time",
-      "scores": [
-        {
-          "description": "1ST_HALF",
-          "participant": "home",
-          "goals": 1
-        },
-        {
-          "description": "1ST_HALF",
-          "participant": "away",
-          "goals": 1
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "home",
-          "goals": 1
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "away",
-          "goals": 4
-        },
-        {
-          "description": "CURRENT",
-          "participant": "home",
-          "goals": 1
-        },
-        {
-          "description": "CURRENT",
-          "participant": "away",
-          "goals": 4
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "home",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "away",
-          "goals": 3
-        }
-      ],
-      "statistics": [
-        {
-          "type": "Corners",
-          "value": 2,
-          "participantId": 71
-        },
-        {
-          "type": "Corners",
-          "value": 3,
-          "participantId": 18
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 43,
-          "participantId": 71
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 57,
-          "participantId": 18
-        },
-        {
-          "type": "Yellowcards",
-          "value": 3,
-          "participantId": 71
-        },
-        {
-          "type": "Yellowcards",
-          "value": 1,
-          "participantId": 18
-        }
-      ],
-      "source": "Sportmonks"
-    },
-    {
-      "fixtureId": 19722102,
-      "home": "Aston Villa",
-      "away": "Sunderland",
-      "homeId": 15,
-      "awayId": 3,
-      "kickoff": "2026-11-21T16:00:00+01:00",
-      "date": "2026-11-21",
-      "time": "16:00",
-      "league": "Premier League",
-      "leagueId": 8,
-      "status": "Full Time",
-      "scores": [
-        {
-          "description": "1ST_HALF",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "1ST_HALF",
-          "participant": "home",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "home",
-          "goals": 0
-        },
-        {
-          "description": "CURRENT",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "CURRENT",
-          "participant": "home",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "home",
-          "goals": 0
-        }
-      ],
-      "statistics": [
-        {
-          "type": "Corners",
-          "value": 2,
-          "participantId": 3
-        },
-        {
-          "type": "Corners",
-          "value": 7,
-          "participantId": 15
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 27,
-          "participantId": 3
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 73,
-          "participantId": 15
-        },
-        {
-          "type": "Yellowcards",
-          "value": 2,
-          "participantId": 3
-        },
-        {
-          "type": "Yellowcards",
-          "value": 2,
-          "participantId": 15
-        }
-      ],
-      "source": "Sportmonks"
-    },
-    {
-      "fixtureId": 19722103,
-      "home": "AFC Bournemouth",
-      "away": "Nottingham Forest",
-      "homeId": 52,
-      "awayId": 63,
-      "kickoff": "2026-11-21T16:00:00+01:00",
-      "date": "2026-11-21",
-      "time": "16:00",
-      "league": "Premier League",
-      "leagueId": 8,
-      "status": "Full Time",
-      "scores": [
-        {
-          "description": "1ST_HALF",
-          "participant": "home",
-          "goals": 2
-        },
-        {
-          "description": "1ST_HALF",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "home",
-          "goals": 2
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "CURRENT",
-          "participant": "home",
-          "goals": 2
-        },
-        {
-          "description": "CURRENT",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "home",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "away",
-          "goals": 0
-        }
-      ],
-      "statistics": [
-        {
-          "type": "Corners",
-          "value": 4,
-          "participantId": 63
-        },
-        {
-          "type": "Corners",
-          "value": 6,
-          "participantId": 52
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 49,
-          "participantId": 63
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 51,
-          "participantId": 52
-        },
-        {
-          "type": "Yellowcards",
-          "value": 3,
-          "participantId": 63
-        },
-        {
-          "type": "Yellowcards",
-          "value": 1,
-          "participantId": 52
-        }
-      ],
-      "source": "Sportmonks"
-    },
-    {
-      "fixtureId": 19722741,
-      "home": "Kilmarnock",
-      "away": "Aberdeen",
-      "homeId": 180,
-      "awayId": 273,
-      "kickoff": "2026-11-21T16:00:00+01:00",
-      "date": "2026-11-21",
-      "time": "16:00",
-      "league": "Premiership",
-      "leagueId": 501,
-      "status": "Full Time",
-      "scores": [
-        {
-          "description": "1ST_HALF",
-          "participant": "home",
-          "goals": 1
-        },
-        {
-          "description": "1ST_HALF",
-          "participant": "away",
-          "goals": 3
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "home",
-          "goals": 2
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "away",
-          "goals": 4
-        },
-        {
-          "description": "CURRENT",
-          "participant": "home",
-          "goals": 2
-        },
-        {
-          "description": "CURRENT",
-          "participant": "away",
-          "goals": 4
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "home",
-          "goals": 1
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "away",
-          "goals": 1
-        }
-      ],
-      "statistics": [
-        {
-          "type": "Corners",
-          "value": 1,
-          "participantId": 273
-        },
-        {
-          "type": "Corners",
-          "value": 14,
-          "participantId": 180
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 44,
-          "participantId": 273
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 56,
-          "participantId": 180
-        },
-        {
-          "type": "Yellowcards",
-          "value": 0,
-          "participantId": 273
-        },
-        {
-          "type": "Yellowcards",
-          "value": 2,
-          "participantId": 180
-        }
-      ],
-      "source": "Sportmonks"
-    },
-    {
-      "fixtureId": 19722742,
-      "home": "Hibernian",
-      "away": "Dundee United",
-      "homeId": 66,
-      "awayId": 282,
-      "kickoff": "2026-11-21T16:00:00+01:00",
-      "date": "2026-11-21",
-      "time": "16:00",
-      "league": "Premiership",
-      "leagueId": 501,
-      "status": "Full Time",
-      "scores": [
-        {
-          "description": "1ST_HALF",
-          "participant": "home",
-          "goals": 0
-        },
-        {
-          "description": "1ST_HALF",
-          "participant": "away",
-          "goals": 2
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "home",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "away",
-          "goals": 4
-        },
-        {
-          "description": "CURRENT",
-          "participant": "home",
-          "goals": 0
-        },
-        {
-          "description": "CURRENT",
-          "participant": "away",
-          "goals": 4
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "home",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "away",
-          "goals": 2
-        }
-      ],
-      "statistics": [
-        {
-          "type": "Corners",
-          "value": 5,
-          "participantId": 282
-        },
-        {
-          "type": "Corners",
-          "value": 4,
-          "participantId": 66
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 52,
-          "participantId": 282
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 48,
-          "participantId": 66
-        },
-        {
-          "type": "Yellowcards",
-          "value": 3,
-          "participantId": 282
-        },
-        {
-          "type": "Yellowcards",
-          "value": 2,
-          "participantId": 66
-        }
-      ],
-      "source": "Sportmonks"
-    },
-    {
-      "fixtureId": 19722743,
-      "home": "Falkirk",
-      "away": "St. Johnstone",
-      "homeId": 770,
-      "awayId": 734,
-      "kickoff": "2026-11-21T16:00:00+01:00",
-      "date": "2026-11-21",
-      "time": "16:00",
-      "league": "Premiership",
-      "leagueId": 501,
-      "status": "Full Time",
-      "scores": [
-        {
-          "description": "1ST_HALF",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "1ST_HALF",
-          "participant": "home",
-          "goals": 1
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "away",
-          "goals": 1
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "home",
-          "goals": 2
-        },
-        {
-          "description": "CURRENT",
-          "participant": "away",
-          "goals": 1
-        },
-        {
-          "description": "CURRENT",
-          "participant": "home",
-          "goals": 2
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "away",
-          "goals": 1
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "home",
-          "goals": 1
-        }
-      ],
-      "statistics": [
-        {
-          "type": "Corners",
-          "value": 6,
-          "participantId": 734
-        },
-        {
-          "type": "Corners",
-          "value": 3,
-          "participantId": 770
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 60,
-          "participantId": 734
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 40,
-          "participantId": 770
-        },
-        {
-          "type": "Yellowcards",
-          "value": 3,
-          "participantId": 734
-        },
-        {
-          "type": "Yellowcards",
-          "value": 1,
-          "participantId": 770
-        }
-      ],
-      "source": "Sportmonks"
-    },
-    {
-      "fixtureId": 19722745,
-      "home": "Celtic",
-      "away": "St. Mirren",
-      "homeId": 53,
-      "awayId": 496,
-      "kickoff": "2026-11-21T16:00:00+01:00",
-      "date": "2026-11-21",
-      "time": "16:00",
-      "league": "Premiership",
-      "leagueId": 501,
-      "status": "Full Time",
-      "scores": [
-        {
-          "description": "1ST_HALF",
-          "participant": "home",
-          "goals": 3
-        },
-        {
-          "description": "1ST_HALF",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "home",
-          "goals": 4
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "away",
-          "goals": 1
-        },
-        {
-          "description": "CURRENT",
-          "participant": "home",
-          "goals": 4
-        },
-        {
-          "description": "CURRENT",
-          "participant": "away",
-          "goals": 1
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "home",
-          "goals": 1
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "away",
-          "goals": 1
-        }
-      ],
-      "statistics": [
-        {
-          "type": "Corners",
-          "value": 5,
-          "participantId": 496
-        },
-        {
-          "type": "Corners",
-          "value": 4,
-          "participantId": 53
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 50,
-          "participantId": 496
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 50,
-          "participantId": 53
-        },
-        {
-          "type": "Yellowcards",
-          "value": 1,
-          "participantId": 496
-        },
-        {
-          "type": "Yellowcards",
-          "value": 1,
-          "participantId": 53
-        }
-      ],
-      "source": "Sportmonks"
-    },
-    {
-      "fixtureId": 19735109,
-      "home": "Schalke 04",
-      "away": "VfB Stuttgart",
-      "homeId": 67,
-      "awayId": 3319,
-      "kickoff": "2026-11-21T18:30:00+01:00",
-      "date": "2026-11-21",
-      "time": "18:30",
-      "league": "Bundesliga",
-      "leagueId": 82,
-      "status": "Full Time",
-      "scores": [
-        {
-          "description": "1ST_HALF",
-          "participant": "home",
-          "goals": 0
-        },
-        {
-          "description": "1ST_HALF",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "home",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "CURRENT",
-          "participant": "home",
-          "goals": 0
-        },
-        {
-          "description": "CURRENT",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "home",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "away",
-          "goals": 0
-        }
-      ],
-      "statistics": [
-        {
-          "type": "Corners",
-          "value": 5,
-          "participantId": 3319
-        },
-        {
-          "type": "Corners",
-          "value": 4,
-          "participantId": 67
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 57,
-          "participantId": 3319
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 43,
-          "participantId": 67
-        },
-        {
-          "type": "Yellowcards",
-          "value": 1,
-          "participantId": 3319
-        },
-        {
-          "type": "Yellowcards",
-          "value": 0,
-          "participantId": 67
-        }
-      ],
-      "source": "Sportmonks"
-    },
-    {
-      "fixtureId": 19722095,
-      "home": "Newcastle United",
-      "away": "Arsenal",
-      "homeId": 20,
-      "awayId": 19,
-      "kickoff": "2026-11-21T18:30:00+01:00",
-      "date": "2026-11-21",
-      "time": "18:30",
-      "league": "Premier League",
-      "leagueId": 8,
-      "status": "Full Time",
-      "scores": [
-        {
-          "description": "1ST_HALF",
-          "participant": "away",
-          "goals": 1
-        },
-        {
-          "description": "1ST_HALF",
-          "participant": "home",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "away",
-          "goals": 2
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "home",
-          "goals": 2
-        },
-        {
-          "description": "CURRENT",
-          "participant": "away",
-          "goals": 2
-        },
-        {
-          "description": "CURRENT",
-          "participant": "home",
-          "goals": 2
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "away",
-          "goals": 1
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "home",
-          "goals": 2
-        }
-      ],
-      "statistics": [
-        {
-          "type": "Corners",
-          "value": 3,
-          "participantId": 19
-        },
-        {
-          "type": "Corners",
-          "value": 6,
-          "participantId": 20
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 66,
-          "participantId": 19
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 34,
-          "participantId": 20
-        },
-        {
-          "type": "Yellowcards",
-          "value": 3,
-          "participantId": 19
-        },
-        {
-          "type": "Yellowcards",
-          "value": 3,
-          "participantId": 20
-        }
-      ],
-      "source": "Sportmonks"
-    },
-    {
-      "fixtureId": 19722744,
-      "home": "Dundee",
-      "away": "Hearts",
-      "homeId": 284,
-      "awayId": 314,
-      "kickoff": "2026-11-21T18:45:00+01:00",
-      "date": "2026-11-21",
-      "time": "18:45",
-      "league": "Premiership",
-      "leagueId": 501,
-      "status": "Full Time",
-      "scores": [
-        {
-          "description": "1ST_HALF",
-          "participant": "home",
-          "goals": 0
-        },
-        {
-          "description": "1ST_HALF",
-          "participant": "away",
-          "goals": 4
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "home",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "away",
-          "goals": 8
-        },
-        {
-          "description": "CURRENT",
-          "participant": "home",
-          "goals": 0
-        },
-        {
-          "description": "CURRENT",
-          "participant": "away",
-          "goals": 8
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "home",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "away",
-          "goals": 4
-        }
-      ],
-      "statistics": [
-        {
-          "type": "Corners",
-          "value": 8,
-          "participantId": 314
-        },
-        {
-          "type": "Corners",
-          "value": 1,
-          "participantId": 284
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 64,
-          "participantId": 314
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 36,
-          "participantId": 284
-        },
-        {
-          "type": "Redcards",
-          "value": 0,
-          "participantId": 314
-        },
-        {
-          "type": "Redcards",
-          "value": 1,
-          "participantId": 284
-        },
-        {
-          "type": "Yellowcards",
-          "value": 0,
-          "participantId": 314
-        },
-        {
-          "type": "Yellowcards",
-          "value": 1,
-          "participantId": 284
-        }
-      ],
-      "source": "Sportmonks"
-    },
-    {
-      "fixtureId": 19722740,
-      "home": "Motherwell",
-      "away": "Rangers",
-      "homeId": 309,
-      "awayId": 62,
-      "kickoff": "2026-11-21T21:00:00+01:00",
-      "date": "2026-11-21",
-      "time": "21:00",
-      "league": "Premiership",
-      "leagueId": 501,
-      "status": "1st Half",
-      "scores": [
-        {
-          "description": "1ST_HALF",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "1ST_HALF",
-          "participant": "home",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "home",
-          "goals": 0
-        },
-        {
-          "description": "CURRENT",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "CURRENT",
-          "participant": "home",
-          "goals": 0
-        }
-      ],
-      "statistics": [
-        {
-          "type": "Corners",
-          "value": 1,
-          "participantId": 62
-        },
-        {
-          "type": "Corners",
-          "value": 0,
-          "participantId": 309
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 54,
-          "participantId": 62
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 46,
-          "participantId": 309
-        }
-      ],
-      "source": "Sportmonks"
-    },
     {
       "fixtureId": 19713845,
       "home": "Horsens",
@@ -1914,21 +242,217 @@
       "scores": [],
       "statistics": [],
       "source": "Sportmonks"
+    },
+    {
+      "fixtureId": 19735099,
+      "home": "Paderborn",
+      "away": "Schalke 04",
+      "homeId": 2642,
+      "awayId": 67,
+      "kickoff": "2026-11-28T15:30:00+01:00",
+      "date": "2026-11-28",
+      "time": "15:30",
+      "league": "Bundesliga",
+      "leagueId": 82,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
+    },
+    {
+      "fixtureId": 19735101,
+      "home": "FC Köln",
+      "away": "Elversberg",
+      "homeId": 3320,
+      "awayId": 3588,
+      "kickoff": "2026-11-28T15:30:00+01:00",
+      "date": "2026-11-28",
+      "time": "15:30",
+      "league": "Bundesliga",
+      "leagueId": 82,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
+    },
+    {
+      "fixtureId": 19735102,
+      "home": "Hamburger SV",
+      "away": "FC Bayern München",
+      "homeId": 2708,
+      "awayId": 503,
+      "kickoff": "2026-11-28T15:30:00+01:00",
+      "date": "2026-11-28",
+      "time": "15:30",
+      "league": "Bundesliga",
+      "leagueId": 82,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
+    },
+    {
+      "fixtureId": 19735103,
+      "home": "FSV Mainz 05",
+      "away": "FC Union Berlin",
+      "homeId": 794,
+      "awayId": 1079,
+      "kickoff": "2026-11-28T15:30:00+01:00",
+      "date": "2026-11-28",
+      "time": "15:30",
+      "league": "Bundesliga",
+      "leagueId": 82,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
+    },
+    {
+      "fixtureId": 19722086,
+      "home": "Manchester United",
+      "away": "Brentford",
+      "homeId": 14,
+      "awayId": 236,
+      "kickoff": "2026-11-28T16:00:00+01:00",
+      "date": "2026-11-28",
+      "time": "16:00",
+      "league": "Premier League",
+      "leagueId": 8,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
+    },
+    {
+      "fixtureId": 19722087,
+      "home": "Leeds United",
+      "away": "Coventry City",
+      "homeId": 71,
+      "awayId": 117,
+      "kickoff": "2026-11-28T16:00:00+01:00",
+      "date": "2026-11-28",
+      "time": "16:00",
+      "league": "Premier League",
+      "leagueId": 8,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
+    },
+    {
+      "fixtureId": 19722734,
+      "home": "St. Mirren",
+      "away": "Kilmarnock",
+      "homeId": 496,
+      "awayId": 180,
+      "kickoff": "2026-11-28T16:00:00+01:00",
+      "date": "2026-11-28",
+      "time": "16:00",
+      "league": "Premiership",
+      "leagueId": 501,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
+    },
+    {
+      "fixtureId": 19722735,
+      "home": "Rangers",
+      "away": "Falkirk",
+      "homeId": 62,
+      "awayId": 770,
+      "kickoff": "2026-11-28T16:00:00+01:00",
+      "date": "2026-11-28",
+      "time": "16:00",
+      "league": "Premiership",
+      "leagueId": 501,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
+    },
+    {
+      "fixtureId": 19722738,
+      "home": "Dundee United",
+      "away": "St. Johnstone",
+      "homeId": 282,
+      "awayId": 734,
+      "kickoff": "2026-11-28T16:00:00+01:00",
+      "date": "2026-11-28",
+      "time": "16:00",
+      "league": "Premiership",
+      "leagueId": 501,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
+    },
+    {
+      "fixtureId": 19722739,
+      "home": "Aberdeen",
+      "away": "Dundee",
+      "homeId": 273,
+      "awayId": 284,
+      "kickoff": "2026-11-28T16:00:00+01:00",
+      "date": "2026-11-28",
+      "time": "16:00",
+      "league": "Premiership",
+      "leagueId": 501,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
+    },
+    {
+      "fixtureId": 19735106,
+      "home": "VfB Stuttgart",
+      "away": "Eintracht Frankfurt",
+      "homeId": 3319,
+      "awayId": 366,
+      "kickoff": "2026-11-28T18:30:00+01:00",
+      "date": "2026-11-28",
+      "time": "18:30",
+      "league": "Bundesliga",
+      "leagueId": 82,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
+    },
+    {
+      "fixtureId": 19722088,
+      "home": "Ipswich Town",
+      "away": "Aston Villa",
+      "homeId": 116,
+      "awayId": 15,
+      "kickoff": "2026-11-28T18:30:00+01:00",
+      "date": "2026-11-28",
+      "time": "18:30",
+      "league": "Premier League",
+      "leagueId": 8,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
+    },
+    {
+      "fixtureId": 19722736,
+      "home": "Motherwell",
+      "away": "Hibernian",
+      "homeId": 309,
+      "awayId": 66,
+      "kickoff": "2026-11-28T18:45:00+01:00",
+      "date": "2026-11-28",
+      "time": "18:45",
+      "league": "Premiership",
+      "leagueId": 501,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
     }
   ],
   "diagnostics": [
-    {
-      "date": "2026-11-21",
-      "count": 19,
-      "parsed": 19,
-      "pages": [
-        {
-          "page": 1,
-          "count": 19
-        }
-      ],
-      "ok": true
-    },
     {
       "date": "2026-11-22",
       "count": 8,
@@ -1997,6 +521,18 @@
         {
           "page": 1,
           "count": 3
+        }
+      ],
+      "ok": true
+    },
+    {
+      "date": "2026-11-28",
+      "count": 13,
+      "parsed": 13,
+      "pages": [
+        {
+          "page": 1,
+          "count": 13
         }
       ],
       "ok": true
