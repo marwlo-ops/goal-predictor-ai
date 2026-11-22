@@ -1,173 +1,23 @@
 {
-  "updatedAt": "2026-11-21T22:13:52.139648+01:00",
+  "updatedAt": "2026-11-22T02:24:52.026050+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 11,
+  "count": 1,
   "matches": [
     {
-      "id": 561949,
-      "league": "ELC",
-      "leagueName": "Championship",
-      "home": "Lincoln City FC",
-      "away": "Wrexham AFC",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 0,
-        "away": 1
-      },
-      "utcDate": "2026-11-21T15:00:00Z",
-      "updatedAt": "2026-11-21T16:52:12Z"
-    },
-    {
-      "id": 555098,
+      "id": 555095,
       "league": "BSA",
       "leagueName": "Campeonato Brasileiro Série A",
-      "home": "SE Palmeiras",
-      "away": "CR Flamengo",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 1,
-        "away": 1
-      },
-      "utcDate": "2026-11-21T19:30:00Z",
-      "updatedAt": "2026-11-21T21:12:43Z"
-    },
-    {
-      "id": 559627,
-      "league": "FL1",
-      "leagueName": "Ligue 1",
-      "home": "RC Strasbourg Alsace",
-      "away": "Stade Brestois 29",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 0,
-        "away": 1
-      },
-      "utcDate": "2026-11-21T19:45:00Z",
-      "updatedAt": "2026-11-21T21:12:42Z"
-    },
-    {
-      "id": 559623,
-      "league": "FL1",
-      "leagueName": "Ligue 1",
-      "home": "Racing Club de Lens",
-      "away": "Toulouse FC",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 1,
-        "away": 1
-      },
-      "utcDate": "2026-11-21T19:45:00Z",
-      "updatedAt": "2026-11-21T21:12:42Z"
-    },
-    {
-      "id": 558527,
-      "league": "SA",
-      "leagueName": "Serie A",
-      "home": "SSC Napoli",
-      "away": "Torino FC",
+      "home": "Chapecoense AF",
+      "away": "Cruzeiro EC",
       "status": "IN_PLAY",
       "minute": null,
       "score": {
         "home": 0,
         "away": 0
       },
-      "utcDate": "2026-11-21T19:45:00Z",
-      "updatedAt": "2026-11-21T21:12:10Z"
-    },
-    {
-      "id": 559621,
-      "league": "FL1",
-      "leagueName": "Ligue 1",
-      "home": "AS Monaco FC",
-      "away": "AJ Auxerre",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 0,
-        "away": 1
-      },
-      "utcDate": "2026-11-21T19:45:00Z",
-      "updatedAt": "2026-11-21T21:12:42Z"
-    },
-    {
-      "id": 559624,
-      "league": "FL1",
-      "leagueName": "Ligue 1",
-      "home": "Lille OSC",
-      "away": "Olympique Lyonnais",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 0,
-        "away": 1
-      },
-      "utcDate": "2026-11-21T19:45:00Z",
-      "updatedAt": "2026-11-21T21:11:38Z"
-    },
-    {
-      "id": 564754,
-      "league": "PD",
-      "leagueName": "Primera Division",
-      "home": "Real Madrid CF",
-      "away": "RC Celta de Vigo",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 0,
-        "away": 1
-      },
-      "utcDate": "2026-11-21T20:00:00Z",
-      "updatedAt": "2026-11-21T21:00:59Z"
-    },
-    {
-      "id": 558832,
-      "league": "DED",
-      "leagueName": "Eredivisie",
-      "home": "Telstar 1963",
-      "away": "PEC Zwolle",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 1,
-        "away": 2
-      },
-      "utcDate": "2026-11-21T20:00:00Z",
-      "updatedAt": "2026-11-21T21:12:43Z"
-    },
-    {
-      "id": 558834,
-      "league": "DED",
-      "leagueName": "Eredivisie",
-      "home": "FC Groningen",
-      "away": "SC Heerenveen",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 0,
-        "away": 1
-      },
-      "utcDate": "2026-11-21T20:00:00Z",
-      "updatedAt": "2026-11-21T21:12:11Z"
-    },
-    {
-      "id": 555092,
-      "league": "BSA",
-      "leagueName": "Campeonato Brasileiro Série A",
-      "home": "EC Bahia",
-      "away": "Coritiba FBC",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 0,
-        "away": 0
-      },
-      "utcDate": "2026-11-21T20:30:00Z",
-      "updatedAt": "2026-11-21T21:12:11Z"
+      "utcDate": "2026-11-22T00:00:00Z",
+      "updatedAt": "2026-11-22T01:23:54Z"
     }
   ]
 }
