@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-22T16:40:10.038038+01:00",
+  "generatedAt": "2026-11-22T22:16:35.152056+01:00",
   "source": "Sportmonks Football API v3",
   "count": 28,
   "fixtures": [
@@ -200,7 +200,7 @@
       "time": "15:00",
       "league": "Premier League",
       "leagueId": 8,
-      "status": "2nd Half",
+      "status": "Full Time",
       "scores": [
         {
           "description": "1ST_HALF",
@@ -215,7 +215,7 @@
         {
           "description": "2ND_HALF",
           "participant": "home",
-          "goals": 0
+          "goals": 2
         },
         {
           "description": "2ND_HALF",
@@ -225,7 +225,7 @@
         {
           "description": "CURRENT",
           "participant": "home",
-          "goals": 0
+          "goals": 2
         },
         {
           "description": "CURRENT",
@@ -235,7 +235,7 @@
         {
           "description": "2ND_HALF_ONLY",
           "participant": "home",
-          "goals": 0
+          "goals": 2
         },
         {
           "description": "2ND_HALF_ONLY",
@@ -251,27 +251,47 @@
         },
         {
           "type": "Corners",
-          "value": 2,
+          "value": 3,
           "participantId": 22
         },
         {
           "type": "Ball Possession %",
-          "value": 71,
+          "value": 70,
           "participantId": 78
         },
         {
           "type": "Ball Possession %",
-          "value": 29,
+          "value": 30,
+          "participantId": 22
+        },
+        {
+          "type": "Redcards",
+          "value": 1,
+          "participantId": 78
+        },
+        {
+          "type": "Redcards",
+          "value": 0,
           "participantId": 22
         },
         {
           "type": "Yellowcards",
-          "value": 2,
+          "value": 4,
           "participantId": 78
         },
         {
           "type": "Yellowcards",
           "value": 2,
+          "participantId": 22
+        },
+        {
+          "type": "Yellowred Cards",
+          "value": 1,
+          "participantId": 78
+        },
+        {
+          "type": "Yellowred Cards",
+          "value": 0,
           "participantId": 22
         }
       ],
@@ -288,7 +308,7 @@
       "time": "15:30",
       "league": "Bundesliga",
       "leagueId": 82,
-      "status": "2nd Half",
+      "status": "Full Time",
       "scores": [
         {
           "description": "1ST_HALF",
@@ -308,7 +328,7 @@
         {
           "description": "2ND_HALF",
           "participant": "away",
-          "goals": 0
+          "goals": 1
         },
         {
           "description": "CURRENT",
@@ -318,7 +338,7 @@
         {
           "description": "CURRENT",
           "participant": "away",
-          "goals": 0
+          "goals": 1
         },
         {
           "description": "2ND_HALF_ONLY",
@@ -328,7 +348,7 @@
         {
           "description": "2ND_HALF_ONLY",
           "participant": "away",
-          "goals": 0
+          "goals": 1
         }
       ],
       "statistics": [
@@ -339,22 +359,22 @@
         },
         {
           "type": "Corners",
-          "value": 4,
+          "value": 6,
           "participantId": 90
         },
         {
           "type": "Ball Possession %",
-          "value": 36,
+          "value": 50,
           "participantId": 794
         },
         {
           "type": "Ball Possession %",
-          "value": 64,
+          "value": 50,
           "participantId": 90
         },
         {
           "type": "Yellowcards",
-          "value": 1,
+          "value": 3,
           "participantId": 794
         },
         {
@@ -376,7 +396,7 @@
       "time": "16:00",
       "league": "Superliga",
       "leagueId": 271,
-      "status": "1st Half",
+      "status": "Full Time",
       "scores": [
         {
           "description": "1ST_HALF",
@@ -391,43 +411,63 @@
         {
           "description": "2ND_HALF",
           "participant": "home",
-          "goals": 0
+          "goals": 1
         },
         {
           "description": "2ND_HALF",
           "participant": "away",
-          "goals": 0
+          "goals": 2
         },
         {
           "description": "CURRENT",
           "participant": "home",
-          "goals": 0
+          "goals": 1
         },
         {
           "description": "CURRENT",
           "participant": "away",
-          "goals": 0
+          "goals": 2
+        },
+        {
+          "description": "2ND_HALF_ONLY",
+          "participant": "home",
+          "goals": 1
+        },
+        {
+          "description": "2ND_HALF_ONLY",
+          "participant": "away",
+          "goals": 2
         }
       ],
       "statistics": [
         {
           "type": "Corners",
-          "value": 3,
+          "value": 7,
           "participantId": 1789
         },
         {
           "type": "Corners",
-          "value": 2,
+          "value": 6,
           "participantId": 390
         },
         {
           "type": "Ball Possession %",
-          "value": 64,
+          "value": 61,
           "participantId": 1789
         },
         {
           "type": "Ball Possession %",
-          "value": 36,
+          "value": 39,
+          "participantId": 390
+        },
+        {
+          "type": "Yellowcards",
+          "value": 1,
+          "participantId": 1789
+        },
+        {
+          "type": "Yellowcards",
+          "value": 2,
           "participantId": 390
         }
       ],
@@ -444,7 +484,7 @@
       "time": "17:30",
       "league": "Bundesliga",
       "leagueId": 82,
-      "status": "Not Started",
+      "status": "Full Time",
       "scores": [
         {
           "description": "1ST_HALF",
@@ -459,7 +499,7 @@
         {
           "description": "2ND_HALF",
           "participant": "home",
-          "goals": 0
+          "goals": 4
         },
         {
           "description": "2ND_HALF",
@@ -469,15 +509,56 @@
         {
           "description": "CURRENT",
           "participant": "home",
-          "goals": 0
+          "goals": 4
         },
         {
           "description": "CURRENT",
           "participant": "away",
           "goals": 0
+        },
+        {
+          "description": "2ND_HALF_ONLY",
+          "participant": "home",
+          "goals": 4
+        },
+        {
+          "description": "2ND_HALF_ONLY",
+          "participant": "away",
+          "goals": 0
         }
       ],
-      "statistics": [],
+      "statistics": [
+        {
+          "type": "Corners",
+          "value": 8,
+          "participantId": 2708
+        },
+        {
+          "type": "Corners",
+          "value": 1,
+          "participantId": 82
+        },
+        {
+          "type": "Ball Possession %",
+          "value": 47,
+          "participantId": 2708
+        },
+        {
+          "type": "Ball Possession %",
+          "value": 53,
+          "participantId": 82
+        },
+        {
+          "type": "Yellowcards",
+          "value": 3,
+          "participantId": 2708
+        },
+        {
+          "type": "Yellowcards",
+          "value": 3,
+          "participantId": 82
+        }
+      ],
       "source": "Sportmonks"
     },
     {
@@ -491,12 +572,12 @@
       "time": "17:30",
       "league": "Premier League",
       "leagueId": 8,
-      "status": "Not Started",
+      "status": "Full Time",
       "scores": [
         {
           "description": "1ST_HALF",
           "participant": "home",
-          "goals": 0
+          "goals": 2
         },
         {
           "description": "1ST_HALF",
@@ -506,7 +587,7 @@
         {
           "description": "2ND_HALF",
           "participant": "home",
-          "goals": 0
+          "goals": 4
         },
         {
           "description": "2ND_HALF",
@@ -516,15 +597,66 @@
         {
           "description": "CURRENT",
           "participant": "home",
-          "goals": 0
+          "goals": 4
         },
         {
           "description": "CURRENT",
           "participant": "away",
           "goals": 0
+        },
+        {
+          "description": "2ND_HALF_ONLY",
+          "participant": "home",
+          "goals": 2
+        },
+        {
+          "description": "2ND_HALF_ONLY",
+          "participant": "away",
+          "goals": 0
         }
       ],
-      "statistics": [],
+      "statistics": [
+        {
+          "type": "Corners",
+          "value": 5,
+          "participantId": 14
+        },
+        {
+          "type": "Corners",
+          "value": 15,
+          "participantId": 8
+        },
+        {
+          "type": "Ball Possession %",
+          "value": 36,
+          "participantId": 14
+        },
+        {
+          "type": "Ball Possession %",
+          "value": 64,
+          "participantId": 8
+        },
+        {
+          "type": "Redcards",
+          "value": 1,
+          "participantId": 14
+        },
+        {
+          "type": "Redcards",
+          "value": 0,
+          "participantId": 8
+        },
+        {
+          "type": "Yellowcards",
+          "value": 0,
+          "participantId": 14
+        },
+        {
+          "type": "Yellowcards",
+          "value": 1,
+          "participantId": 8
+        }
+      ],
       "source": "Sportmonks"
     },
     {
@@ -538,9 +670,91 @@
       "time": "18:00",
       "league": "Superliga",
       "leagueId": 271,
-      "status": "Not Started",
-      "scores": [],
-      "statistics": [],
+      "status": "Full Time",
+      "scores": [
+        {
+          "description": "1ST_HALF",
+          "participant": "away",
+          "goals": 0
+        },
+        {
+          "description": "1ST_HALF",
+          "participant": "home",
+          "goals": 1
+        },
+        {
+          "description": "2ND_HALF",
+          "participant": "away",
+          "goals": 0
+        },
+        {
+          "description": "2ND_HALF",
+          "participant": "home",
+          "goals": 5
+        },
+        {
+          "description": "CURRENT",
+          "participant": "away",
+          "goals": 0
+        },
+        {
+          "description": "CURRENT",
+          "participant": "home",
+          "goals": 5
+        },
+        {
+          "description": "2ND_HALF_ONLY",
+          "participant": "away",
+          "goals": 0
+        },
+        {
+          "description": "2ND_HALF_ONLY",
+          "participant": "home",
+          "goals": 4
+        }
+      ],
+      "statistics": [
+        {
+          "type": "Corners",
+          "value": 4,
+          "participantId": 85
+        },
+        {
+          "type": "Corners",
+          "value": 4,
+          "participantId": 2394
+        },
+        {
+          "type": "Ball Possession %",
+          "value": 45,
+          "participantId": 85
+        },
+        {
+          "type": "Ball Possession %",
+          "value": 55,
+          "participantId": 2394
+        },
+        {
+          "type": "Redcards",
+          "value": 1,
+          "participantId": 85
+        },
+        {
+          "type": "Redcards",
+          "value": 0,
+          "participantId": 2394
+        },
+        {
+          "type": "Yellowcards",
+          "value": 1,
+          "participantId": 85
+        },
+        {
+          "type": "Yellowcards",
+          "value": 1,
+          "participantId": 2394
+        }
+      ],
       "source": "Sportmonks"
     },
     {
