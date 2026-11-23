@@ -1,762 +1,8 @@
 {
-  "generatedAt": "2026-11-22T22:16:35.152056+01:00",
+  "generatedAt": "2026-11-23T02:57:45.225818+01:00",
   "source": "Sportmonks Football API v3",
-  "count": 28,
+  "count": 34,
   "fixtures": [
-    {
-      "fixtureId": 19713845,
-      "home": "Horsens",
-      "away": "Silkeborg IF",
-      "homeId": 211,
-      "awayId": 86,
-      "kickoff": "2026-11-22T14:00:00+01:00",
-      "date": "2026-11-22",
-      "time": "14:00",
-      "league": "Superliga",
-      "leagueId": 271,
-      "status": "Full Time",
-      "scores": [
-        {
-          "description": "1ST_HALF",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "1ST_HALF",
-          "participant": "home",
-          "goals": 1
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "away",
-          "goals": 1
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "home",
-          "goals": 3
-        },
-        {
-          "description": "CURRENT",
-          "participant": "away",
-          "goals": 1
-        },
-        {
-          "description": "CURRENT",
-          "participant": "home",
-          "goals": 3
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "away",
-          "goals": 1
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "home",
-          "goals": 2
-        }
-      ],
-      "statistics": [
-        {
-          "type": "Corners",
-          "value": 1,
-          "participantId": 86
-        },
-        {
-          "type": "Corners",
-          "value": 1,
-          "participantId": 211
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 47,
-          "participantId": 86
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 53,
-          "participantId": 211
-        },
-        {
-          "type": "Redcards",
-          "value": 1,
-          "participantId": 86
-        },
-        {
-          "type": "Redcards",
-          "value": 0,
-          "participantId": 211
-        },
-        {
-          "type": "Yellowcards",
-          "value": 1,
-          "participantId": 86
-        },
-        {
-          "type": "Yellowcards",
-          "value": 2,
-          "participantId": 211
-        }
-      ],
-      "source": "Sportmonks"
-    },
-    {
-      "fixtureId": 19713851,
-      "home": "Viborg FF",
-      "away": "Randers FC",
-      "homeId": 2447,
-      "awayId": 2356,
-      "kickoff": "2026-11-22T14:00:00+01:00",
-      "date": "2026-11-22",
-      "time": "14:00",
-      "league": "Superliga",
-      "leagueId": 271,
-      "status": "Full Time",
-      "scores": [
-        {
-          "description": "1ST_HALF",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "1ST_HALF",
-          "participant": "home",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "home",
-          "goals": 0
-        },
-        {
-          "description": "CURRENT",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "CURRENT",
-          "participant": "home",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "home",
-          "goals": 0
-        }
-      ],
-      "statistics": [
-        {
-          "type": "Corners",
-          "value": 4,
-          "participantId": 2356
-        },
-        {
-          "type": "Corners",
-          "value": 2,
-          "participantId": 2447
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 40,
-          "participantId": 2356
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 60,
-          "participantId": 2447
-        },
-        {
-          "type": "Yellowcards",
-          "value": 2,
-          "participantId": 2356
-        },
-        {
-          "type": "Yellowcards",
-          "value": 1,
-          "participantId": 2447
-        }
-      ],
-      "source": "Sportmonks"
-    },
-    {
-      "fixtureId": 19722098,
-      "home": "Hull City",
-      "away": "Brighton & Hove Albion",
-      "homeId": 22,
-      "awayId": 78,
-      "kickoff": "2026-11-22T15:00:00+01:00",
-      "date": "2026-11-22",
-      "time": "15:00",
-      "league": "Premier League",
-      "leagueId": 8,
-      "status": "Full Time",
-      "scores": [
-        {
-          "description": "1ST_HALF",
-          "participant": "home",
-          "goals": 0
-        },
-        {
-          "description": "1ST_HALF",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "home",
-          "goals": 2
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "CURRENT",
-          "participant": "home",
-          "goals": 2
-        },
-        {
-          "description": "CURRENT",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "home",
-          "goals": 2
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "away",
-          "goals": 0
-        }
-      ],
-      "statistics": [
-        {
-          "type": "Corners",
-          "value": 4,
-          "participantId": 78
-        },
-        {
-          "type": "Corners",
-          "value": 3,
-          "participantId": 22
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 70,
-          "participantId": 78
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 30,
-          "participantId": 22
-        },
-        {
-          "type": "Redcards",
-          "value": 1,
-          "participantId": 78
-        },
-        {
-          "type": "Redcards",
-          "value": 0,
-          "participantId": 22
-        },
-        {
-          "type": "Yellowcards",
-          "value": 4,
-          "participantId": 78
-        },
-        {
-          "type": "Yellowcards",
-          "value": 2,
-          "participantId": 22
-        },
-        {
-          "type": "Yellowred Cards",
-          "value": 1,
-          "participantId": 78
-        },
-        {
-          "type": "Yellowred Cards",
-          "value": 0,
-          "participantId": 22
-        }
-      ],
-      "source": "Sportmonks"
-    },
-    {
-      "fixtureId": 19735113,
-      "home": "FC Augsburg",
-      "away": "FSV Mainz 05",
-      "homeId": 90,
-      "awayId": 794,
-      "kickoff": "2026-11-22T15:30:00+01:00",
-      "date": "2026-11-22",
-      "time": "15:30",
-      "league": "Bundesliga",
-      "leagueId": 82,
-      "status": "Full Time",
-      "scores": [
-        {
-          "description": "1ST_HALF",
-          "participant": "home",
-          "goals": 2
-        },
-        {
-          "description": "1ST_HALF",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "home",
-          "goals": 3
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "away",
-          "goals": 1
-        },
-        {
-          "description": "CURRENT",
-          "participant": "home",
-          "goals": 3
-        },
-        {
-          "description": "CURRENT",
-          "participant": "away",
-          "goals": 1
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "home",
-          "goals": 1
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "away",
-          "goals": 1
-        }
-      ],
-      "statistics": [
-        {
-          "type": "Corners",
-          "value": 0,
-          "participantId": 794
-        },
-        {
-          "type": "Corners",
-          "value": 6,
-          "participantId": 90
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 50,
-          "participantId": 794
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 50,
-          "participantId": 90
-        },
-        {
-          "type": "Yellowcards",
-          "value": 3,
-          "participantId": 794
-        },
-        {
-          "type": "Yellowcards",
-          "value": 1,
-          "participantId": 90
-        }
-      ],
-      "source": "Sportmonks"
-    },
-    {
-      "fixtureId": 19713855,
-      "home": "Sønderjyske Fodbold",
-      "away": "Odense BK",
-      "homeId": 390,
-      "awayId": 1789,
-      "kickoff": "2026-11-22T16:00:00+01:00",
-      "date": "2026-11-22",
-      "time": "16:00",
-      "league": "Superliga",
-      "leagueId": 271,
-      "status": "Full Time",
-      "scores": [
-        {
-          "description": "1ST_HALF",
-          "participant": "home",
-          "goals": 0
-        },
-        {
-          "description": "1ST_HALF",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "home",
-          "goals": 1
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "away",
-          "goals": 2
-        },
-        {
-          "description": "CURRENT",
-          "participant": "home",
-          "goals": 1
-        },
-        {
-          "description": "CURRENT",
-          "participant": "away",
-          "goals": 2
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "home",
-          "goals": 1
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "away",
-          "goals": 2
-        }
-      ],
-      "statistics": [
-        {
-          "type": "Corners",
-          "value": 7,
-          "participantId": 1789
-        },
-        {
-          "type": "Corners",
-          "value": 6,
-          "participantId": 390
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 61,
-          "participantId": 1789
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 39,
-          "participantId": 390
-        },
-        {
-          "type": "Yellowcards",
-          "value": 1,
-          "participantId": 1789
-        },
-        {
-          "type": "Yellowcards",
-          "value": 2,
-          "participantId": 390
-        }
-      ],
-      "source": "Sportmonks"
-    },
-    {
-      "fixtureId": 19735110,
-      "home": "Werder Bremen",
-      "away": "Hamburger SV",
-      "homeId": 82,
-      "awayId": 2708,
-      "kickoff": "2026-11-22T17:30:00+01:00",
-      "date": "2026-11-22",
-      "time": "17:30",
-      "league": "Bundesliga",
-      "leagueId": 82,
-      "status": "Full Time",
-      "scores": [
-        {
-          "description": "1ST_HALF",
-          "participant": "home",
-          "goals": 0
-        },
-        {
-          "description": "1ST_HALF",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "home",
-          "goals": 4
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "CURRENT",
-          "participant": "home",
-          "goals": 4
-        },
-        {
-          "description": "CURRENT",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "home",
-          "goals": 4
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "away",
-          "goals": 0
-        }
-      ],
-      "statistics": [
-        {
-          "type": "Corners",
-          "value": 8,
-          "participantId": 2708
-        },
-        {
-          "type": "Corners",
-          "value": 1,
-          "participantId": 82
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 47,
-          "participantId": 2708
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 53,
-          "participantId": 82
-        },
-        {
-          "type": "Yellowcards",
-          "value": 3,
-          "participantId": 2708
-        },
-        {
-          "type": "Yellowcards",
-          "value": 3,
-          "participantId": 82
-        }
-      ],
-      "source": "Sportmonks"
-    },
-    {
-      "fixtureId": 19722097,
-      "home": "Liverpool",
-      "away": "Manchester United",
-      "homeId": 8,
-      "awayId": 14,
-      "kickoff": "2026-11-22T17:30:00+01:00",
-      "date": "2026-11-22",
-      "time": "17:30",
-      "league": "Premier League",
-      "leagueId": 8,
-      "status": "Full Time",
-      "scores": [
-        {
-          "description": "1ST_HALF",
-          "participant": "home",
-          "goals": 2
-        },
-        {
-          "description": "1ST_HALF",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "home",
-          "goals": 4
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "CURRENT",
-          "participant": "home",
-          "goals": 4
-        },
-        {
-          "description": "CURRENT",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "home",
-          "goals": 2
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "away",
-          "goals": 0
-        }
-      ],
-      "statistics": [
-        {
-          "type": "Corners",
-          "value": 5,
-          "participantId": 14
-        },
-        {
-          "type": "Corners",
-          "value": 15,
-          "participantId": 8
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 36,
-          "participantId": 14
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 64,
-          "participantId": 8
-        },
-        {
-          "type": "Redcards",
-          "value": 1,
-          "participantId": 14
-        },
-        {
-          "type": "Redcards",
-          "value": 0,
-          "participantId": 8
-        },
-        {
-          "type": "Yellowcards",
-          "value": 0,
-          "participantId": 14
-        },
-        {
-          "type": "Yellowcards",
-          "value": 1,
-          "participantId": 8
-        }
-      ],
-      "source": "Sportmonks"
-    },
-    {
-      "fixtureId": 19713848,
-      "home": "Nordsjælland",
-      "away": "FC København",
-      "homeId": 2394,
-      "awayId": 85,
-      "kickoff": "2026-11-22T18:00:00+01:00",
-      "date": "2026-11-22",
-      "time": "18:00",
-      "league": "Superliga",
-      "leagueId": 271,
-      "status": "Full Time",
-      "scores": [
-        {
-          "description": "1ST_HALF",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "1ST_HALF",
-          "participant": "home",
-          "goals": 1
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "home",
-          "goals": 5
-        },
-        {
-          "description": "CURRENT",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "CURRENT",
-          "participant": "home",
-          "goals": 5
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "home",
-          "goals": 4
-        }
-      ],
-      "statistics": [
-        {
-          "type": "Corners",
-          "value": 4,
-          "participantId": 85
-        },
-        {
-          "type": "Corners",
-          "value": 4,
-          "participantId": 2394
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 45,
-          "participantId": 85
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 55,
-          "participantId": 2394
-        },
-        {
-          "type": "Redcards",
-          "value": 1,
-          "participantId": 85
-        },
-        {
-          "type": "Redcards",
-          "value": 0,
-          "participantId": 2394
-        },
-        {
-          "type": "Yellowcards",
-          "value": 1,
-          "participantId": 85
-        },
-        {
-          "type": "Yellowcards",
-          "value": 1,
-          "participantId": 2394
-        }
-      ],
-      "source": "Sportmonks"
-    },
     {
       "fixtureId": 19713853,
       "home": "Brøndby IF",
@@ -1076,21 +322,233 @@
       "scores": [],
       "statistics": [],
       "source": "Sportmonks"
+    },
+    {
+      "fixtureId": 19722090,
+      "home": "Everton",
+      "away": "Liverpool",
+      "homeId": 13,
+      "awayId": 8,
+      "kickoff": "2026-11-29T13:00:00+01:00",
+      "date": "2026-11-29",
+      "time": "13:00",
+      "league": "Premier League",
+      "leagueId": 8,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
+    },
+    {
+      "fixtureId": 19713835,
+      "home": "Lyngby Boldklub",
+      "away": "Viborg FF",
+      "homeId": 2650,
+      "awayId": 2447,
+      "kickoff": "2026-11-29T14:00:00+01:00",
+      "date": "2026-11-29",
+      "time": "14:00",
+      "league": "Superliga",
+      "leagueId": 271,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
+    },
+    {
+      "fixtureId": 19713837,
+      "home": "Randers FC",
+      "away": "Horsens",
+      "homeId": 2356,
+      "awayId": 211,
+      "kickoff": "2026-11-29T14:00:00+01:00",
+      "date": "2026-11-29",
+      "time": "14:00",
+      "league": "Superliga",
+      "leagueId": 271,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
+    },
+    {
+      "fixtureId": 19722084,
+      "home": "Sunderland",
+      "away": "Tottenham Hotspur",
+      "homeId": 3,
+      "awayId": 6,
+      "kickoff": "2026-11-29T15:05:00+01:00",
+      "date": "2026-11-29",
+      "time": "15:05",
+      "league": "Premier League",
+      "leagueId": 8,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
+    },
+    {
+      "fixtureId": 19722089,
+      "home": "Fulham",
+      "away": "AFC Bournemouth",
+      "homeId": 11,
+      "awayId": 52,
+      "kickoff": "2026-11-29T15:05:00+01:00",
+      "date": "2026-11-29",
+      "time": "15:05",
+      "league": "Premier League",
+      "leagueId": 8,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
+    },
+    {
+      "fixtureId": 19722091,
+      "home": "Crystal Palace",
+      "away": "Hull City",
+      "homeId": 51,
+      "awayId": 22,
+      "kickoff": "2026-11-29T15:05:00+01:00",
+      "date": "2026-11-29",
+      "time": "15:05",
+      "league": "Premier League",
+      "leagueId": 8,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
+    },
+    {
+      "fixtureId": 19722092,
+      "home": "Brighton & Hove Albion",
+      "away": "Newcastle United",
+      "homeId": 78,
+      "awayId": 20,
+      "kickoff": "2026-11-29T15:05:00+01:00",
+      "date": "2026-11-29",
+      "time": "15:05",
+      "league": "Premier League",
+      "leagueId": 8,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
+    },
+    {
+      "fixtureId": 19735104,
+      "home": "SC Freiburg",
+      "away": "RB Leipzig",
+      "homeId": 3543,
+      "awayId": 277,
+      "kickoff": "2026-11-29T15:30:00+01:00",
+      "date": "2026-11-29",
+      "time": "15:30",
+      "league": "Bundesliga",
+      "leagueId": 82,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
+    },
+    {
+      "fixtureId": 19722737,
+      "home": "Hearts",
+      "away": "Celtic",
+      "homeId": 314,
+      "awayId": 53,
+      "kickoff": "2026-11-29T16:00:00+01:00",
+      "date": "2026-11-29",
+      "time": "16:00",
+      "league": "Premiership",
+      "leagueId": 501,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
+    },
+    {
+      "fixtureId": 19713839,
+      "home": "FC København",
+      "away": "FC Midtjylland",
+      "homeId": 85,
+      "awayId": 939,
+      "kickoff": "2026-11-29T16:00:00+01:00",
+      "date": "2026-11-29",
+      "time": "16:00",
+      "league": "Superliga",
+      "leagueId": 271,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
+    },
+    {
+      "fixtureId": 19735105,
+      "home": "TSG Hoffenheim",
+      "away": "FC Augsburg",
+      "homeId": 2726,
+      "awayId": 90,
+      "kickoff": "2026-11-29T17:30:00+01:00",
+      "date": "2026-11-29",
+      "time": "17:30",
+      "league": "Bundesliga",
+      "leagueId": 82,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
+    },
+    {
+      "fixtureId": 19722093,
+      "home": "Arsenal",
+      "away": "Manchester City",
+      "homeId": 19,
+      "awayId": 9,
+      "kickoff": "2026-11-29T17:30:00+01:00",
+      "date": "2026-11-29",
+      "time": "17:30",
+      "league": "Premier League",
+      "leagueId": 8,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
+    },
+    {
+      "fixtureId": 19713833,
+      "home": "Silkeborg IF",
+      "away": "AGF",
+      "homeId": 86,
+      "awayId": 2905,
+      "kickoff": "2026-11-29T18:00:00+01:00",
+      "date": "2026-11-29",
+      "time": "18:00",
+      "league": "Superliga",
+      "leagueId": 271,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
+    },
+    {
+      "fixtureId": 19735107,
+      "home": "Borussia Dortmund",
+      "away": "Bayer 04 Leverkusen",
+      "homeId": 68,
+      "awayId": 3321,
+      "kickoff": "2026-11-29T19:30:00+01:00",
+      "date": "2026-11-29",
+      "time": "19:30",
+      "league": "Bundesliga",
+      "leagueId": 82,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
     }
   ],
   "diagnostics": [
-    {
-      "date": "2026-11-22",
-      "count": 8,
-      "parsed": 8,
-      "pages": [
-        {
-          "page": 1,
-          "count": 8
-        }
-      ],
-      "ok": true
-    },
     {
       "date": "2026-11-23",
       "count": 2,
@@ -1159,6 +617,18 @@
         {
           "page": 1,
           "count": 13
+        }
+      ],
+      "ok": true
+    },
+    {
+      "date": "2026-11-29",
+      "count": 14,
+      "parsed": 14,
+      "pages": [
+        {
+          "page": 1,
+          "count": 14
         }
       ],
       "ok": true
