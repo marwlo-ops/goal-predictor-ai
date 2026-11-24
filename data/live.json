@@ -1,23 +1,23 @@
 {
-  "updatedAt": "2026-11-23T23:50:25.373167+01:00",
+  "updatedAt": "2026-11-24T07:48:16.730208+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
   "count": 1,
   "matches": [
     {
-      "id": 555097,
+      "id": 555099,
       "league": "BSA",
       "leagueName": "Campeonato Brasileiro Série A",
-      "home": "SC Internacional",
-      "away": "EC Vitória",
-      "status": "IN_PLAY",
+      "home": "Santos FC",
+      "away": "Grêmio FBPA",
+      "status": "PAUSED",
       "minute": null,
       "score": {
         "home": 0,
         "away": 1
       },
-      "utcDate": "2026-11-23T22:30:00Z",
-      "updatedAt": "2026-11-23T22:49:14Z"
+      "utcDate": "2026-11-24T00:00:00Z",
+      "updatedAt": "2026-11-24T02:06:38Z"
     }
   ]
 }
