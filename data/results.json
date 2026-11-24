@@ -1,10 +1,76 @@
 {
-  "updatedAt": "2026-11-23T17:17:15.757021+01:00",
-  "dateFrom": "2026-11-16",
-  "dateTo": "2026-11-23",
+  "updatedAt": "2026-11-24T17:04:06.158919+01:00",
+  "dateFrom": "2026-11-17",
+  "dateTo": "2026-11-24",
   "source": "football-data.org",
-  "count": 398,
+  "count": 404,
   "matches": [
+    {
+      "id": 555099,
+      "date": "2026-11-24T00:00:00Z",
+      "league": "BSA",
+      "leagueName": "Campeonato Brasileiro Série A",
+      "home": "Santos FC",
+      "away": "Grêmio FBPA",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "status": "FINISHED"
+    },
+    {
+      "id": 555093,
+      "date": "2026-11-23T23:00:00Z",
+      "league": "BSA",
+      "leagueName": "Campeonato Brasileiro Série A",
+      "home": "Botafogo FR",
+      "away": "São Paulo FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "status": "FINISHED"
+    },
+    {
+      "id": 555097,
+      "date": "2026-11-23T22:30:00Z",
+      "league": "BSA",
+      "leagueName": "Campeonato Brasileiro Série A",
+      "home": "SC Internacional",
+      "away": "EC Vitória",
+      "homeGoals": 2,
+      "awayGoals": 5,
+      "status": "FINISHED"
+    },
+    {
+      "id": 564757,
+      "date": "2026-11-23T20:00:00Z",
+      "league": "PD",
+      "leagueName": "Primera Division",
+      "home": "Levante UD",
+      "away": "Elche CF",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "status": "FINISHED"
+    },
+    {
+      "id": 560649,
+      "date": "2026-11-23T20:00:00Z",
+      "league": "PL",
+      "leagueName": "Premier League",
+      "home": "Brentford FC",
+      "away": "Everton FC",
+      "homeGoals": 4,
+      "awayGoals": 0,
+      "status": "FINISHED"
+    },
+    {
+      "id": 558519,
+      "date": "2026-11-23T19:45:00Z",
+      "league": "SA",
+      "leagueName": "Serie A",
+      "home": "AC Monza",
+      "away": "ACF Fiorentina",
+      "homeGoals": 3,
+      "awayGoals": 0,
+      "status": "FINISHED"
+    },
     {
       "id": 555094,
       "date": "2026-11-22T22:30:00Z",
