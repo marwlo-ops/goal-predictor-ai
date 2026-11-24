@@ -1,23 +1,38 @@
 {
-  "updatedAt": "2026-11-24T07:48:16.730208+01:00",
+  "updatedAt": "2026-11-24T19:24:15.336681+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 1,
+  "count": 2,
   "matches": [
     {
-      "id": 555099,
-      "league": "BSA",
-      "leagueName": "Campeonato Brasileiro Série A",
-      "home": "Santos FC",
-      "away": "Grêmio FBPA",
-      "status": "PAUSED",
+      "id": 575395,
+      "league": "CL",
+      "leagueName": "UEFA Champions League",
+      "home": "Galatasaray SK",
+      "away": "Aston Villa FC",
+      "status": "IN_PLAY",
       "minute": null,
       "score": {
         "home": 0,
-        "away": 1
+        "away": 0
       },
-      "utcDate": "2026-11-24T00:00:00Z",
-      "updatedAt": "2026-11-24T02:06:38Z"
+      "utcDate": "2026-11-24T17:45:00Z",
+      "updatedAt": "2026-11-24T18:23:38Z"
+    },
+    {
+      "id": 575396,
+      "league": "CL",
+      "leagueName": "UEFA Champions League",
+      "home": "FK Bodø/Glimt",
+      "away": "LASK Linz",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-11-24T17:45:00Z",
+      "updatedAt": "2026-11-24T18:23:38Z"
     }
   ]
 }
