@@ -1,194 +1,8 @@
 {
-  "generatedAt": "2026-11-23T23:35:43.405660+01:00",
+  "generatedAt": "2026-11-24T07:22:41.339054+01:00",
   "source": "Sportmonks Football API v3",
-  "count": 34,
+  "count": 33,
   "fixtures": [
-    {
-      "fixtureId": 19713853,
-      "home": "Brøndby IF",
-      "away": "FC Midtjylland",
-      "homeId": 293,
-      "awayId": 939,
-      "kickoff": "2026-11-23T19:00:00+01:00",
-      "date": "2026-11-23",
-      "time": "19:00",
-      "league": "Superliga",
-      "leagueId": 271,
-      "status": "Full Time",
-      "scores": [
-        {
-          "description": "1ST_HALF",
-          "participant": "home",
-          "goals": 0
-        },
-        {
-          "description": "1ST_HALF",
-          "participant": "away",
-          "goals": 1
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "home",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "away",
-          "goals": 2
-        },
-        {
-          "description": "CURRENT",
-          "participant": "home",
-          "goals": 0
-        },
-        {
-          "description": "CURRENT",
-          "participant": "away",
-          "goals": 2
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "home",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "away",
-          "goals": 1
-        }
-      ],
-      "statistics": [
-        {
-          "type": "Corners",
-          "value": 1,
-          "participantId": 939
-        },
-        {
-          "type": "Corners",
-          "value": 7,
-          "participantId": 293
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 46,
-          "participantId": 939
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 54,
-          "participantId": 293
-        },
-        {
-          "type": "Yellowcards",
-          "value": 3,
-          "participantId": 939
-        },
-        {
-          "type": "Yellowcards",
-          "value": 3,
-          "participantId": 293
-        }
-      ],
-      "source": "Sportmonks"
-    },
-    {
-      "fixtureId": 19722101,
-      "home": "Brentford",
-      "away": "Everton",
-      "homeId": 236,
-      "awayId": 13,
-      "kickoff": "2026-11-23T21:00:00+01:00",
-      "date": "2026-11-23",
-      "time": "21:00",
-      "league": "Premier League",
-      "leagueId": 8,
-      "status": "Full Time",
-      "scores": [
-        {
-          "description": "1ST_HALF",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "1ST_HALF",
-          "participant": "home",
-          "goals": 2
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF",
-          "participant": "home",
-          "goals": 4
-        },
-        {
-          "description": "CURRENT",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "CURRENT",
-          "participant": "home",
-          "goals": 4
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "away",
-          "goals": 0
-        },
-        {
-          "description": "2ND_HALF_ONLY",
-          "participant": "home",
-          "goals": 2
-        }
-      ],
-      "statistics": [
-        {
-          "type": "Corners",
-          "value": 3,
-          "participantId": 13
-        },
-        {
-          "type": "Corners",
-          "value": 6,
-          "participantId": 236
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 28,
-          "participantId": 13
-        },
-        {
-          "type": "Ball Possession %",
-          "value": 72,
-          "participantId": 236
-        },
-        {
-          "type": "Redcards",
-          "value": 1,
-          "participantId": 13
-        },
-        {
-          "type": "Redcards",
-          "value": 0,
-          "participantId": 236
-        },
-        {
-          "type": "Yellowcards",
-          "value": 1,
-          "participantId": 13
-        },
-        {
-          "type": "Yellowcards",
-          "value": 0,
-          "participantId": 236
-        }
-      ],
-      "source": "Sportmonks"
-    },
     {
       "fixtureId": 19722755,
       "home": "Hibernian",
@@ -700,21 +514,25 @@
       "scores": [],
       "statistics": [],
       "source": "Sportmonks"
+    },
+    {
+      "fixtureId": 19713843,
+      "home": "Odense BK",
+      "away": "Nordsjælland",
+      "homeId": 1789,
+      "awayId": 2394,
+      "kickoff": "2026-11-30T19:00:00+01:00",
+      "date": "2026-11-30",
+      "time": "19:00",
+      "league": "Superliga",
+      "leagueId": 271,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
     }
   ],
   "diagnostics": [
-    {
-      "date": "2026-11-23",
-      "count": 2,
-      "parsed": 2,
-      "pages": [
-        {
-          "page": 1,
-          "count": 2
-        }
-      ],
-      "ok": true
-    },
     {
       "date": "2026-11-24",
       "count": 2,
@@ -783,6 +601,18 @@
         {
           "page": 1,
           "count": 14
+        }
+      ],
+      "ok": true
+    },
+    {
+      "date": "2026-11-30",
+      "count": 1,
+      "parsed": 1,
+      "pages": [
+        {
+          "page": 1,
+          "count": 1
         }
       ],
       "ok": true
