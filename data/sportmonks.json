@@ -1,40 +1,8 @@
 {
-  "generatedAt": "2026-11-24T19:17:08.900162+01:00",
+  "generatedAt": "2026-11-25T03:46:16.977705+01:00",
   "source": "Sportmonks Football API v3",
-  "count": 33,
+  "count": 32,
   "fixtures": [
-    {
-      "fixtureId": 19722755,
-      "home": "Hibernian",
-      "away": "Dundee",
-      "homeId": 66,
-      "awayId": 284,
-      "kickoff": "2026-11-24T20:45:00+01:00",
-      "date": "2026-11-24",
-      "time": "20:45",
-      "league": "Premiership",
-      "leagueId": 501,
-      "status": "Not Started",
-      "scores": [],
-      "statistics": [],
-      "source": "Sportmonks"
-    },
-    {
-      "fixtureId": 19722752,
-      "home": "Rangers",
-      "away": "Aberdeen",
-      "homeId": 62,
-      "awayId": 273,
-      "kickoff": "2026-11-24T21:00:00+01:00",
-      "date": "2026-11-24",
-      "time": "21:00",
-      "league": "Premiership",
-      "leagueId": 501,
-      "status": "Not Started",
-      "scores": [],
-      "statistics": [],
-      "source": "Sportmonks"
-    },
     {
       "fixtureId": 19713841,
       "home": "Sønderjyske Fodbold",
@@ -530,21 +498,25 @@
       "scores": [],
       "statistics": [],
       "source": "Sportmonks"
+    },
+    {
+      "fixtureId": 19722079,
+      "home": "Coventry City",
+      "away": "Ipswich Town",
+      "homeId": 117,
+      "awayId": 116,
+      "kickoff": "2026-12-01T21:00:00+01:00",
+      "date": "2026-12-01",
+      "time": "21:00",
+      "league": "Premier League",
+      "leagueId": 8,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
     }
   ],
   "diagnostics": [
-    {
-      "date": "2026-11-24",
-      "count": 2,
-      "parsed": 2,
-      "pages": [
-        {
-          "page": 1,
-          "count": 2
-        }
-      ],
-      "ok": true
-    },
     {
       "date": "2026-11-25",
       "count": 0,
@@ -607,6 +579,18 @@
     },
     {
       "date": "2026-11-30",
+      "count": 1,
+      "parsed": 1,
+      "pages": [
+        {
+          "page": 1,
+          "count": 1
+        }
+      ],
+      "ok": true
+    },
+    {
+      "date": "2026-12-01",
       "count": 1,
       "parsed": 1,
       "pages": [
