@@ -1,38 +1,7 @@
 {
-  "updatedAt": "2026-11-24T19:24:15.336681+01:00",
+  "updatedAt": "2026-11-25T03:43:01.612976+01:00",
   "source": "football-data.org",
   "refreshIntervalMinutes": 10,
-  "count": 2,
-  "matches": [
-    {
-      "id": 575395,
-      "league": "CL",
-      "leagueName": "UEFA Champions League",
-      "home": "Galatasaray SK",
-      "away": "Aston Villa FC",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 0,
-        "away": 0
-      },
-      "utcDate": "2026-11-24T17:45:00Z",
-      "updatedAt": "2026-11-24T18:23:38Z"
-    },
-    {
-      "id": 575396,
-      "league": "CL",
-      "leagueName": "UEFA Champions League",
-      "home": "FK Bodø/Glimt",
-      "away": "LASK Linz",
-      "status": "IN_PLAY",
-      "minute": null,
-      "score": {
-        "home": 0,
-        "away": 0
-      },
-      "utcDate": "2026-11-24T17:45:00Z",
-      "updatedAt": "2026-11-24T18:23:38Z"
-    }
-  ]
+  "count": 0,
+  "matches": []
 }
