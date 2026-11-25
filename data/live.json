@@ -1,1 +1,173 @@
-{"updatedAt":"2026-11-25T12:47:28.337976+01:00","source":"football-data.org","refreshIntervalMinutes":10,"count":0,"matches":[]}
+{
+  "updatedAt": "2026-11-25T21:43:00.657540+01:00",
+  "source": "football-data.org",
+  "refreshIntervalMinutes": 10,
+  "count": 11,
+  "matches": [
+    {
+      "id": 561964,
+      "league": "ELC",
+      "leagueName": "Championship",
+      "home": "Burnley FC",
+      "away": "Birmingham City FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "utcDate": "2026-11-25T19:45:00Z",
+      "updatedAt": "2026-11-25T20:37:59Z"
+    },
+    {
+      "id": 561963,
+      "league": "ELC",
+      "leagueName": "Championship",
+      "home": "Bolton Wanderers FC",
+      "away": "West Bromwich Albion FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "utcDate": "2026-11-25T19:45:00Z",
+      "updatedAt": "2026-11-25T20:36:24Z"
+    },
+    {
+      "id": 561961,
+      "league": "ELC",
+      "leagueName": "Championship",
+      "home": "Watford FC",
+      "away": "Blackburn Rovers FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-11-25T19:45:00Z",
+      "updatedAt": "2026-11-25T20:37:17Z"
+    },
+    {
+      "id": 575411,
+      "league": "CL",
+      "leagueName": "UEFA Champions League",
+      "home": "Sporting Clube de Portugal",
+      "away": "Manchester United FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "utcDate": "2026-11-25T20:00:00Z",
+      "updatedAt": "2026-11-25T20:41:47Z"
+    },
+    {
+      "id": 575407,
+      "league": "CL",
+      "leagueName": "UEFA Champions League",
+      "home": "Club Atlético de Madrid",
+      "away": "Viking FK",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "utcDate": "2026-11-25T20:00:00Z",
+      "updatedAt": "2026-11-25T20:41:46Z"
+    },
+    {
+      "id": 575409,
+      "league": "CL",
+      "leagueName": "UEFA Champions League",
+      "home": "Club Brugge KV",
+      "away": "Liverpool FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "utcDate": "2026-11-25T20:00:00Z",
+      "updatedAt": "2026-11-25T20:41:46Z"
+    },
+    {
+      "id": 561962,
+      "league": "ELC",
+      "leagueName": "Championship",
+      "home": "Stoke City FC",
+      "away": "Millwall FC",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "utcDate": "2026-11-25T20:00:00Z",
+      "updatedAt": "2026-11-25T20:41:18Z"
+    },
+    {
+      "id": 575412,
+      "league": "CL",
+      "leagueName": "UEFA Champions League",
+      "home": "FK Shakhtar Donetsk",
+      "away": "Fenerbahçe SK",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "utcDate": "2026-11-25T20:00:00Z",
+      "updatedAt": "2026-11-25T20:41:15Z"
+    },
+    {
+      "id": 575408,
+      "league": "CL",
+      "leagueName": "UEFA Champions League",
+      "home": "Paris Saint-Germain FC",
+      "away": "AS Roma",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "utcDate": "2026-11-25T20:00:00Z",
+      "updatedAt": "2026-11-25T20:41:14Z"
+    },
+    {
+      "id": 575410,
+      "league": "CL",
+      "leagueName": "UEFA Champions League",
+      "home": "Lille OSC",
+      "away": "FC Bayern München",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "utcDate": "2026-11-25T20:00:00Z",
+      "updatedAt": "2026-11-25T20:41:46Z"
+    },
+    {
+      "id": 575406,
+      "league": "CL",
+      "leagueName": "UEFA Champions League",
+      "home": "FC Internazionale Milano",
+      "away": "VfB Stuttgart",
+      "status": "IN_PLAY",
+      "minute": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "utcDate": "2026-11-25T20:00:00Z",
+      "updatedAt": "2026-11-25T20:41:15Z"
+    }
+  ]
+}
