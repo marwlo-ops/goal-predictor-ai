@@ -1,7 +1,1 @@
-{
-  "updatedAt": "2026-11-25T12:47:28.337976+01:00",
-  "source": "football-data.org",
-  "refreshIntervalMinutes": 10,
-  "count": 0,
-  "matches": []
-}
+{"updatedAt":"2026-11-25T12:47:28.337976+01:00","source":"football-data.org","refreshIntervalMinutes":10,"count":0,"matches":[]}
