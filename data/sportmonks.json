@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-26T15:25:32.367934+01:00",
+  "generatedAt": "2026-11-27T00:16:51.370334+01:00",
   "source": "Sportmonks Football API v3",
-  "count": 46,
+  "count": 47,
   "fixtures": [
     {
       "fixtureId": 19713841,
@@ -738,21 +738,25 @@
       "scores": [],
       "statistics": [],
       "source": "Sportmonks"
+    },
+    {
+      "fixtureId": 19722074,
+      "home": "Tottenham Hotspur",
+      "away": "Fulham",
+      "homeId": 6,
+      "awayId": 11,
+      "kickoff": "2026-12-03T21:00:00+01:00",
+      "date": "2026-12-03",
+      "time": "21:00",
+      "league": "Premier League",
+      "leagueId": 8,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
     }
   ],
   "diagnostics": [
-    {
-      "date": "2026-11-26",
-      "count": 0,
-      "parsed": 0,
-      "pages": [
-        {
-          "page": 1,
-          "count": 0
-        }
-      ],
-      "ok": true
-    },
     {
       "date": "2026-11-27",
       "count": 3,
@@ -821,6 +825,18 @@
         {
           "page": 1,
           "count": 14
+        }
+      ],
+      "ok": true
+    },
+    {
+      "date": "2026-12-03",
+      "count": 1,
+      "parsed": 1,
+      "pages": [
+        {
+          "page": 1,
+          "count": 1
         }
       ],
       "ok": true
