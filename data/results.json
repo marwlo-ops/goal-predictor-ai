@@ -1,10 +1,21 @@
 {
-  "updatedAt": "2026-11-26T16:31:56.356111+01:00",
-  "dateFrom": "2026-11-19",
-  "dateTo": "2026-11-26",
+  "updatedAt": "2026-11-27T16:25:07.377235+01:00",
+  "dateFrom": "2026-11-20",
+  "dateTo": "2026-11-27",
   "source": "football-data.org",
-  "count": 436,
+  "count": 437,
   "matches": [
+    {
+      "id": 555108,
+      "date": "2026-11-26T23:00:00Z",
+      "league": "BSA",
+      "leagueName": "Campeonato Brasileiro Série A",
+      "home": "São Paulo FC",
+      "away": "Clube do Remo",
+      "homeGoals": 3,
+      "awayGoals": 1,
+      "status": "FINISHED"
+    },
     {
       "id": 555091,
       "date": "2026-11-25T23:00:00Z",
