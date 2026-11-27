@@ -1,56 +1,8 @@
 {
-  "generatedAt": "2026-11-27T16:33:59.130425+01:00",
+  "generatedAt": "2026-11-28T00:43:51.032549+01:00",
   "source": "Sportmonks Football API v3",
-  "count": 47,
+  "count": 45,
   "fixtures": [
-    {
-      "fixtureId": 19713841,
-      "home": "Sønderjyske Fodbold",
-      "away": "Brøndby IF",
-      "homeId": 390,
-      "awayId": 293,
-      "kickoff": "2026-11-27T19:00:00+01:00",
-      "date": "2026-11-27",
-      "time": "19:00",
-      "league": "Superliga",
-      "leagueId": 271,
-      "status": "Not Started",
-      "scores": [],
-      "statistics": [],
-      "source": "Sportmonks"
-    },
-    {
-      "fixtureId": 19735100,
-      "home": "Werder Bremen",
-      "away": "Borussia Mönchengladbach",
-      "homeId": 82,
-      "awayId": 683,
-      "kickoff": "2026-11-27T20:30:00+01:00",
-      "date": "2026-11-27",
-      "time": "20:30",
-      "league": "Bundesliga",
-      "leagueId": 82,
-      "status": "Not Started",
-      "scores": [],
-      "statistics": [],
-      "source": "Sportmonks"
-    },
-    {
-      "fixtureId": 19722085,
-      "home": "Nottingham Forest",
-      "away": "Chelsea",
-      "homeId": 63,
-      "awayId": 18,
-      "kickoff": "2026-11-27T21:00:00+01:00",
-      "date": "2026-11-27",
-      "time": "21:00",
-      "league": "Premier League",
-      "leagueId": 8,
-      "status": "Not Started",
-      "scores": [],
-      "statistics": [],
-      "source": "Sportmonks"
-    },
     {
       "fixtureId": 19735099,
       "home": "Paderborn",
@@ -754,21 +706,25 @@
       "scores": [],
       "statistics": [],
       "source": "Sportmonks"
+    },
+    {
+      "fixtureId": 19735098,
+      "home": "FC Bayern München",
+      "away": "Paderborn",
+      "homeId": 503,
+      "awayId": 2642,
+      "kickoff": "2026-12-04T20:30:00+01:00",
+      "date": "2026-12-04",
+      "time": "20:30",
+      "league": "Bundesliga",
+      "leagueId": 82,
+      "status": "Not Started",
+      "scores": [],
+      "statistics": [],
+      "source": "Sportmonks"
     }
   ],
   "diagnostics": [
-    {
-      "date": "2026-11-27",
-      "count": 3,
-      "parsed": 3,
-      "pages": [
-        {
-          "page": 1,
-          "count": 3
-        }
-      ],
-      "ok": true
-    },
     {
       "date": "2026-11-28",
       "count": 13,
@@ -831,6 +787,18 @@
     },
     {
       "date": "2026-12-03",
+      "count": 1,
+      "parsed": 1,
+      "pages": [
+        {
+          "page": 1,
+          "count": 1
+        }
+      ],
+      "ok": true
+    },
+    {
+      "date": "2026-12-04",
       "count": 1,
       "parsed": 1,
       "pages": [
